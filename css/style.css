@@ -1,0 +1,177 @@
+:root {
+  color-scheme: dark light;
+  --font-stack: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* Adaptation of Rose Pine Dawn theme: https://rosepinetheme.com/palette/ingredients */
+:root,
+:root[data-theme="light"] {
+  --base: #faf4ed;
+  --surface: #fffaf3;
+  --overlay: #f2e9e1;
+  --muted: #9893a5;
+  --subtle: #797593;
+  --text: #575279;
+  --accent-red: #b4637a;
+  --accent-gold: #ea9d34;
+  --accent-orange: #d7827e;
+  --accent-teal: #286983;
+  --accent-foam: #56949f;
+  --accent-violet: #907aa9;
+  --highlight-low: #f4ede8;
+  --highlight-med: #dfdad9;
+  --highlight-high: #cecacd;
+}
+
+/* Adaptation of Rose Pine Moon theme: https://rosepinetheme.com/palette/ingredients */
+:root[data-theme="dark"] {
+  --base: #232136;
+  --surface: #2a273f;
+  --overlay: #393552;
+  --muted: #6e6a86;
+  --subtle: #908caa;
+  --text: #e0def4;
+  --accent-red: #eb6f92;
+  --accent-gold: #f6c177;
+  --accent-orange: #ea9a97;
+  --accent-teal: #3e8fb0;
+  --accent-foam: #9ccfd8;
+  --accent-violet: #c4a7e7;
+  --highlight-low: #2a283e;
+  --highlight-med: #44415a;
+  --highlight-high: #56526e;
+}
+
+/* I have not found a (non-js) way to avoid repeating one of the theme specs 
+ in order to use prefers-color-scheme automatically 
+ Here we redefine :root such that the dark theme is default */
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --base: #232136;
+    --surface: #2a273f;
+    --overlay: #393552;
+    --muted: #6e6a86;
+    --subtle: #908caa;
+    --text: #e0def4;
+    --accent-red: #eb6f92;
+    --accent-gold: #f6c177;
+    --accent-orange: #ea9a97;
+    --accent-teal: #3e8fb0;
+    --accent-foam: #9ccfd8;
+    --accent-violet: #c4a7e7;
+    --highlight-low: #2a283e;
+    --highlight-med: #44415a;
+    --highlight-high: #56526e;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-teal);
+}
+
+a:visited {
+  color: var(--accent-violet);
+}
+
+body {
+  font-family: var(--font-stack);
+  background-color: var(--base);
+  color: var(--text);
+}
+
+header,
+nav,
+main,
+aside,
+footer {
+  background-color: var(--surface);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+header {
+  grid-area: hd;
+}
+
+nav {
+  grid-area: nv;
+}
+
+main {
+  grid-area: mn;
+}
+
+.sidebar {
+  grid-area: sd;
+}
+
+footer {
+  grid-area: ft;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+nav li {
+  text-align: center;
+}
+
+h2,
+p {
+  margin: 1rem 0;
+}
+
+body {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "hd"
+    "nv"
+    "mn"
+    "sd"
+    "sd"
+    "ft";
+  gap: 0.75rem;
+}
+
+@media only screen and (min-width: 500px) {
+  body {
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+      "hd hd"
+      "nv nv"
+      "sd mn"
+      "sd ft";
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  body {
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas:
+      "hd hd hd"
+      "nv mn sd"
+      "nv mn sd"
+      "ft ft ft";
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+}
