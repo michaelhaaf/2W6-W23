@@ -4,15 +4,20 @@
     <title>2W6-W23: User Interfaces</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="dark light">
+    <meta name="color-scheme" content="dark light" />
     <link href="css/style.css" rel="stylesheet" />
     <script src="js/main.js" defer></script>
   </head>
   <body>
-    <header>Header</header>
-    <nav>
+    <header>
+      <span
+        >420-2W6 | Winter 2023 | Taught by <a href="#">Michael Haaf</a></span
+      >
+      <h1>User Interfaces</h1>
+    </header>
+    <nav aria-label="course-nav" class="course-nav">
       <ul>
-        <li><a href="#">Home</a></li>
+        <li><a class="active" href="#">Home</a></li>
         <li><a href="#">Syllabus</a></li>
         <li><a href="#">Calendar</a></li>
         <li><a href="#">Readings</a></li>
@@ -31,7 +36,9 @@
         eveniet tempora?
       </p>
     </main>
-    <aside class="sidebar">Sidebar</aside>
+
+    <nav aria-label="page-nav" class="page-nav">
+    </nav>
     <footer>Footer</footer>
   </body>
 </html>
