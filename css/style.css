@@ -130,6 +130,7 @@ p {
   position: sticky;
   top: 2rem;
   align-self: start;
+  font-size: 0.8rem;
 }
 
 .course-container {
