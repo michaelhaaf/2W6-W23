@@ -74,7 +74,7 @@
 }
 
 a {
-  color: var(--accent-teal);
+  color: var(--accent-foam);
 }
 
 a:visited {
@@ -179,6 +179,17 @@ p {
 
 .section-break {
   margin: .2rem 0 0.6rem 0;
+}
+
+.page-content table thead {
+  background-color: var(--accent-teal);
+  color: var(--surface);
+  text-transform: uppercase;
+}
+
+.page-content table td, table th {
+  padding: 0.5em;
+  border: 1px solid var(--accent-teal);
 }
 
 .course-footer {
