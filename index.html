@@ -8,37 +8,80 @@
     <link href="css/style.css" rel="stylesheet" />
     <script src="js/main.js" defer></script>
   </head>
-  <body>
-    <header>
-      <span
-        >420-2W6 | Winter 2023 | Taught by <a href="#">Michael Haaf</a></span
-      >
-      <h1>User Interfaces</h1>
+  <body class="course-container">
+    <header class="course-header">
+      <span class="course-detail">
+        420-2W6 | Winter 2023 | Taught by <a href="#">Michael Haaf</a>
+      </span>
+      <h1 class="course-title">User Interfaces</h1>
     </header>
-    <nav aria-label="course-nav" class="course-nav">
+    <nav aria-label="course-navigation" class="course-nav">
       <ul>
-        <li><a class="active" href="#">Home</a></li>
-        <li><a href="#">Syllabus</a></li>
-        <li><a href="#">Calendar</a></li>
-        <li><a href="#">Readings</a></li>
-        <li><a href="#">Lectures</a></li>
-        <li><a href="#">Assignments</a></li>
-        <li><a href="#">Exams</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Resources</a></li>
+        <li><a class="active" class="nav-link" href="#">Home</a></li>
+        <li><a class="nav-link" href="#">Syllabus</a></li>
+        <li><a class="nav-link" href="#">Calendar</a></li>
+        <li><a class="nav-link" href="#">Readings</a></li>
+        <li><a class="nav-link" href="#">Lectures</a></li>
+        <li><a class="nav-link" href="#">Assignments</a></li>
+        <li><a class="nav-link" href="#">Exams</a></li>
+        <li><a class="nav-link" href="#">Blog</a></li>
+        <li><a class="nav-link" href="#">Resources</a></li>
       </ul>
     </nav>
-    <main>
-      <h2>Main Article</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
-        commodi illo asperiores dolore officiis nihil assumenda beatae, dolor
-        eveniet tempora?
-      </p>
+
+    <nav aria-label="page-navigation" class="page-nav">
+      <h3 class="page-nav-header">Contents</h3>
+      <ul>
+        <li>
+          <a class="page-link" href="#general-information">
+            General Information
+          </a>
+        </li>
+        <li><a class="page-link" href="#introduction">Introduction</a></li>
+        <li>
+          <a class="page-link" href="#college-policies">College Policies</a>
+          <ul>
+            <li>
+              <a class="page-link" href="#college-policies--cheating">
+                Cheating
+              </a>
+            </li>
+            <li>
+              <a class="page-link" href="#college-policies--plagiarism">
+                Plagiarism
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="page-content">
+      <section id="general-information">
+        <h2>General Information</h2>
+        <p>…</p>
+      </section>
+
+      <section id="introduction">
+        <h2>Introduction</h2>
+        <p>…</p>
+      </section>
+
+      <section id="college-policies">
+        <h2>College Policies</h2>
+
+        <section id="college-policies--cheating">
+          <h3>Cheating</h3>
+          <p>…</p>
+        </section>
+
+        <section id="college-policies--plagiarism">
+          <h3>Plagiarism</h3>
+          <p>…</p>
+        </section>
+      </section>
     </main>
 
-    <nav aria-label="page-nav" class="page-nav">
-    </nav>
-    <footer>Footer</footer>
+    <footer class="course-footer">Footer</footer>
   </body>
 </html>
