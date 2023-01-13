@@ -170,6 +170,10 @@ ul, li {
   align-self: center;
 }
 
+.page-nav a {
+  transition: all 100ms ease-in-out;
+}
+
 nav li a,
 nav li a:visited {
   text-decoration: none;
