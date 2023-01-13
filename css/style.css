@@ -1,6 +1,7 @@
 :root {
   color-scheme: dark light;
   scroll-behavior: smooth;
+  line-height: 1.5;
   --font-stack: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
@@ -72,10 +73,6 @@
   margin: 0;
 }
 
-main section p {
-  margin-bottom: 400px;
-}
-
 a {
   color: var(--accent-teal);
 }
@@ -84,8 +81,14 @@ a:visited {
   color: var(--accent-violet);
 }
 
-ul, li {
+ul,
+li {
   list-style-type: none;
+}
+
+p {
+  margin-bottom: 1rem;
+  margin-top: 0;
 }
 
 .course-container {
@@ -172,6 +175,10 @@ ul, li {
 
 .page-nav a {
   transition: all 100ms ease-in-out;
+}
+
+.section-break {
+  margin: .2rem 0 0.6rem 0;
 }
 
 .course-footer {
