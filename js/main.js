@@ -1,7 +1,3 @@
-const tocElements = Array.from(
-  document.querySelectorAll(".page-nav a")
-);
-
 let currentTheme = window.matchMedia("(prefers-color-scheme: light)").matches
   ? "light"
   : "dark";
@@ -14,37 +10,30 @@ function toggleTheme() {
   localStorage.setItem("currentTheme", newTheme);
 }
 
-const getTop = (entry) => Math.abs(entry.boundingClientRect.top);
+// Side-scroller Table of Contents with "active" section.
+// Adapted from https://benfrain.com/building-a-table-of-contents-with-active-indicator-using-javascript-intersection-observers/
+const pageContent = document.querySelector(".main-page-content");
+const pageToc = document.querySelector(".main-page-toc");
 
-const setActive = (element) => {
-  element.classList.add("active");
+const tocLinks = pageToc.querySelectorAll(":scope a");
+const allHeaders = pageContent.querySelectorAll(":scope > h1, :scope > h2");
+
+const observerOptions = {
+  root: null,
+  rootMargin: "0px",
+  threshold: [1],
 };
 
-const setInactive = (element) => {
-  element.classList.remove("active");
-};
+const observeHeaders = new IntersectionObserver(setActive, observerOptions);
+allHeaders.forEach((header) => observeHeaders.observe(header));
 
-window.addEventListener("DOMContentLoaded", () => {
-  const observer = new IntersectionObserver((entries) => {
-    console.log(observer);
-    let activeEntry = entries.reduce((e, c) => (getTop(e) < getTop(c) ? e : c));
-
-    if (!activeEntry.isIntersecting) return;
-    let activeSectionId = activeEntry.target.getAttribute("id");
-    let activeSection = document.querySelector(
-      `nav li a[href="#${activeSectionId}"]`
-    );
-    tocElements.filter((elem) => elem !== activeSection).map(setInactive);
-    setActive(activeSection);
-  });
-
-  // Track all elements in the page content
-  //   - that have an `id` applied
-  //   - that have a corresponding entry in the table of contents
-  // Adapted from www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/index.html
-  document.querySelectorAll("main *[id]").forEach((element) => {
-    if (document.querySelector(`nav li a[href="#${element.id}"]`)) {
-      observer.observe(element);
+function setActive(entries) {
+  entries.map((e) => {
+    if (e.isIntersecting === true) {
+      tocLinks.forEach((link) => link.classList.remove("active"));
+      document
+        .querySelector(`nav li a[href="#${e.target.id}"]`)
+        .classList.add("active");
     }
   });
-});
+}
