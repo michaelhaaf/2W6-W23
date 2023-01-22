@@ -1,8 +1,7 @@
+/* || Themes */
+
 :root {
   color-scheme: dark light;
-  scroll-behavior: smooth;
-  line-height: 1.5;
-  --font-stack: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
@@ -68,9 +67,19 @@
   }
 }
 
-* {
-  padding: 0;
-  margin: 0;
+/* || General styles */
+
+:root {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+/* 
+* Universal Box Sizing best practise, for max flexibility and :pseudo support.
+* See https://css-tricks.com/box-sizing/
+* */
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 a {
@@ -81,60 +90,47 @@ a:visited {
   color: var(--accent-violet);
 }
 
-ul,
-li {
-  list-style-type: none;
-}
-
-p {
-  margin-bottom: 1rem;
-  margin-top: 0;
-}
-
-.course-container {
-  background-color: var(--base);
+nav a, nav a:visited {
+  text-decoration: none;
   color: var(--text);
-  font-family: var(--font-stack);
-  font-size: 1rem;
 }
 
-.course-header,
-.page-nav,
-.page-content,
-.course-nav,
-.course-footer {
-  background-color: var(--surface);
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
-  border-radius: 5px;
-  padding: 1rem;
+/* … */
+
+
+/* || Typography */
+
+:root {
+  line-height: 1.5;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
 }
 
-.course-header {
+/* || Layout */
+
+.page-header {
   grid-area: hd;
 }
 
-.page-content {
+.page-main {
   grid-area: mn;
 }
 
-.course-footer {
+.page-footer {
   grid-area: ft;
 }
 
-.course-nav {
+.site-nav {
   grid-area: nv;
+  display: flex;
+  flex-direction: row; /* to fix: should be horizontal */
 }
 
-.page-nav {
+.article-nav {
   grid-area: sd;
-  position: sticky;
-  top: 2rem;
-  align-self: start;
-  font-size: 0.8rem;
+  display: none;
 }
 
-.course-container {
-  margin: 1rem;
+.page-container {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
@@ -147,78 +143,68 @@ p {
   margin: 0 auto;
 }
 
-.course-nav > ul {
+
+
+/* || Container Styles */
+
+.site-nav > ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.course-header {
-  padding: 1.2rem;
+.site-nav > h2 {
+  display: none;
 }
 
-.course-detail {
-  font-size: 0.8rem;
-  color: var(--subtle);
-}
-
-.page-nav {
-  display: flex;
-  flex-direction: column;
+.article-nav {
   position: sticky;
   top: 2rem;
   align-self: start;
+  font-size: 0.8rem;
 }
 
-.page-nav-header {
-  align-self: center;
-}
-
-.page-nav a {
-  transition: all 100ms ease-in-out;
-}
-
-.section-break {
-  margin: .2rem 0 0.6rem 0;
-}
-
-.page-content table thead {
-  background-color: var(--accent-teal);
-  color: var(--surface);
-  text-transform: uppercase;
-}
-
-.page-content table td, table th {
-  padding: 0.5em;
-  border: 1px solid var(--accent-teal);
-}
-
-.course-footer {
+.page-footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* || Style Utilities */
+
+.base {
+  background-color: var(--base);
+  color: var(--text);
+}
+
+.surface {
+  background-color: var(--surface);
+  color: var(--text);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.note-text {
   font-size: 0.8rem;
   color: var(--subtle);
 }
 
-nav li a,
-nav li a:visited {
-  text-decoration: none;
-  color: var(--text);
+.transitional {
+  transition: all 100ms ease-in-out;
 }
 
-nav li a.active {
+a.active, a.active:visited {
   color: var(--accent-red);
   font-weight: bold;
 }
 
-nav li,
-nav ul {
-  padding: 0.5rem;
+.no-bullets {
+  list-style: none;
 }
 
 @media only screen and (min-width: 500px) {
-  .course-container {
+  .page-container {
     grid-template-columns: 3fr 1fr;
     grid-template-areas:
       "hd hd"
@@ -226,10 +212,14 @@ nav ul {
       "mn sd"
       "ft sd";
   }
+
+  .article-nav {
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 900px) {
-  .course-container {
+  .page-container {
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-areas:
       "hd hd hd"
@@ -238,7 +228,7 @@ nav ul {
       "ft ft ft";
   }
 
-  .course-nav > ul {
+  .site-nav > ul {
     flex-direction: column;
   }
 }

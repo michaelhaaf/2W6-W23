@@ -12,8 +12,8 @@ function toggleTheme() {
 
 // Side-scroller Table of Contents with "active" section.
 // Adapted from https://benfrain.com/building-a-table-of-contents-with-active-indicator-using-javascript-intersection-observers/
-const pageContent = document.querySelector(".main-page-content");
-const pageToc = document.querySelector(".main-page-toc");
+const pageContent = document.querySelector("article.page-main-article");
+const pageToc = document.querySelector(".article-nav");
 
 const tocLinks = pageToc.querySelectorAll(":scope a");
 const allHeaders = pageContent.querySelectorAll(":scope > h1, :scope > h2");
