@@ -1,14 +1,21 @@
-let currentTheme = window.matchMedia("(prefers-color-scheme: light)").matches
-  ? "light"
-  : "dark";
-localStorage.setItem("currentTheme", currentTheme);
+if (!localStorage.getItem("selectedTheme")) {
+  let currentTheme = window.matchMedia("(prefers-color-scheme: light)").matches
+    ? "light"
+    : "dark";
+  localStorage.setItem("selectedTheme", currentTheme);
+} else {
+  document.querySelector(":root").setAttribute("data-theme", localStorage.getItem("selectedTheme"));
+}
 
 function toggleTheme() {
   let newTheme =
-    localStorage.getItem("currentTheme") === "light" ? "dark" : "light";
+    localStorage.getItem("selectedTheme") === "light" ? "dark" : "light";
   document.querySelector(":root").setAttribute("data-theme", newTheme);
-  localStorage.setItem("currentTheme", newTheme);
+  localStorage.setItem("selectedTheme", newTheme);
 }
+
+const themeToggleIcon = document.querySelector("#theme-toggle-icon");
+themeToggleIcon.addEventListener("click", toggleTheme)
 
 // Side-scroller Table of Contents with "active" section.
 // Adapted from https://benfrain.com/building-a-table-of-contents-with-active-indicator-using-javascript-intersection-observers/
