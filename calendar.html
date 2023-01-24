@@ -1,163 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  lang="en"
+  xml:lang="en"
+  >
   <head>
-    <title>2W6-W23: User Interfaces</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="dark light" />
-    <link href="css/style.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      sizes="any"
+      href="images/favicon.svg"
+    />
     <script src="js/main.js" defer></script>
+    <meta name="color-scheme" content="dark light" />
+    <meta charset="utf-8" />
+
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+           <title>2W6-W23: Calendar</title>
+    <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      div.columns{display: flex; gap: min(4vw, 1.5em);}
+      div.column{flex: auto; overflow-x: auto;}
+      div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+      ul.task-list{list-style: none;}
+      ul.task-list li input[type="checkbox"] {
+        width: 0.8em;
+        margin: 0 0.8em 0.2em -1.6em;
+        vertical-align: middle;
+      }
+      .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+        <link rel="stylesheet" href="css/style.css" />
+      
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
   </head>
-  <body class="course-container">
-    <header class="course-header">
-      <span class="course-detail">
-        420-2W6 | Winter 2023 | Taught by <a href="#">Michael Haaf</a>
-      </span>
-      <h1 class="course-title">User Interfaces</h1>
+
+  <body class="page-container base">
+    <header class="page-header surface background-gradient">
+      <div class="text-shadow">
+        <h1 id="theme-toggle-icon">User Interfaces</h1>
+        <span class="note-text">
+          420-2W6 | Winter 2023 | Taught by <a href="#">Michael Haaf</a>
+        </span>
+      </div>
+      <div class="text-shadow">
+        <span class="note-text">
+        <a href="https://www.pexels.com/photo/blue-orange-and-yellow-triangle-illustration-4965816/">Photo by cottonbro studio from Pexels</a>
+        </span>
+      </div>
     </header>
-    <nav aria-label="course-navigation" class="course-nav">
+
+    <nav aria-labelledby="site-nav-title" class="site-nav surface">
+      <h2 id="site-nav-title">Site Navigation</h2>
       <ul>
-        <li><a class="nav-link" href="index.html">Home</a></li>
-        <li><a class="nav-link" href="syllabus.html">Course Outline</a></li>
-        <li><a class="active" class="nav-link" href="calendar.html">Calendar</a></li>
-        <li><a class="nav-link" href="blog.html">Course Blog</a></li>
-        <li><a class="nav-link" href="lectures">Lectures</a></li>
-        <li><a class="nav-link" href="assignments">Assignments</a></li>
-        <li><a class="nav-link" href="exams">Practise Exams</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="course-outline.html">Course Outline</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="resources">Resources</a></li>
+        <li><a href="assignments">Assignments</a></li>
+        <li><a href="lectures">Lectures</a></li>
       </ul>
     </nav>
 
-    <nav aria-label="page-navigation" class="page-nav">
-      <h3 class="page-nav-header">Contents</h3>
-      <ul>
-        <li><a class="page-link" href="#assignment-1">Assignment 1</a></li>
-        <li><a class="page-link" href="#assignment-1">Assignment 2</a></li>
-        <li><a class="page-link" href="#assignment-1">Assignment 3</a></li>
-        <li><a class="page-link" href="#assignment-1">Assignment 4</a></li>
-        <li><a class="page-link" href="#assignment-1">Assignment 5</a></li>
-        <li><a class="page-link" href="#assignment-1">Assignment 6</a></li>
-        <li><a class="page-link" href="#test-1">Test 1</a></li>
-        <li><a class="page-link" href="#test-2">Test 2</a></li>
-      </ul>
-    </nav>
-
-    <main class="page-content">
-      <section id="schedule">
-        <h2 class="section-header">Tentative Schedule</h2>
-        <hr class="section-break" />
-      </section>
-
-      <table>
-        <thead>
-          <tr>
-            <th>WEEK #</th>
-            <th>TOPIC</th>
-            <th>COURSE CONTENT</th>
-          </tr>
-        </thead>
-
-        <tr>
-          <td>Week 1</td>
-          <td>Tools: Visual Studio, Git, CodePen</td>
-          <td>
-            <section id="assignment-1">Assignment 1 Released</section>
-          </td>
-        </tr>
-
-        <tr>
-          <td>Week 2</td>
-          <td>Introduction to HTML</td>
-          <td></td>
-        </tr>
-
-        <tr>
-          <td>Week 3</td>
-          <td>HTML: Document Object Model</td>
-          <td>
-            <section id="assignment-2">Assignment 2 Released</section>
-          </td>
-        </tr>
-
-        <tr>
-          <td>Week 4</td>
-          <td>Semantic HTML</td>
-          <td>Assignment 1 Due</td>
-        </tr>
-
-        <tr>
-          <td>Week 5</td>
-          <td>Introduction to CSS:</td>
-          <td></td>
-        </tr>
-
-        <tr>
-          <td>Week 6</td>
-          <td>Introduction to CSS:</td>
-          <td></td>
-        </tr>
-
-        <tr>
-          <td>Week 7</td>
-          <td>Advanced CSS:</td>
-          <td></td>
-        </tr>
-
-        <tr>
-          <td>Week 8</td>
-          <td>Advanced CSS:</td>
-          <td><section id="test-1">Test 1</section></td>
-        </tr>
-
-        <tr>
-          <td>Week 9</td>
-          <td>Responsive Web Design</td>
-          <td></td>
-        </tr>
-
-        <tr>
-          <td>Week 10</td>
-          <td>HTML Forms</td>
-          <td></td>
-        </tr>
-
-        <tr>
-          <td>Week 11</td>
-          <td>HTML Forms -- Introduction to Javascript</td>
-          <td></td>
-        </tr>
-
-        <tr>
-          <td>Week 12</td>
-          <td>JavaScript</td>
-          <td></td>
-        </tr>
-
-        <tr>
-          <td>Week 13</td>
-          <td>JavaScript</td>
-          <td></td>
-        </tr>
-
-        <tr>
-          <td>Week 14</td>
-          <td>Content Management Systems</td>
-          <td>
-            <section id="test-2">Test 2</section>
-          </td>
-        </tr>
-
-        <tr>
-          <td>Week 15</td>
-          <td>Content Management Systems</td>
-          <td></td>
-        </tr>
-      </table>
+    
+    <main class="page-main base">
+      <article class="page-main-article">
+                 <header id="title-block-header">
+          <h1 class="title">2W6-W23: Calendar</h1>
+                     </header>
+         <p>Currently, this is just a copy of the calendar from the <a
+href="">Tentative Schedule</a> in the course outline.</p>
+<p><strong>Stay tuned!</strong> I will soon link lecture notes,
+recommended readings, and other updates in this calendar as we progress
+through the course.</p>
+<table style="width:97%;">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 85%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Week 1</td>
+<td style="text-align: left;">UI fundamentals; Tools: VS Code, Browser
+Dev Tools, Codepen</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Week 2</td>
+<td style="text-align: left;">HTML – Syntax, Elements, Structure
+vs. Content</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Week 3</td>
+<td style="text-align: left;">HTML – DOM Model, Semantic HTML</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Week 4</td>
+<td style="text-align: left;">Introduction to CSS – Syntax, Selectors,
+Styles</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Week 5</td>
+<td style="text-align: left;">Introduction to CSS – Layouts, Box
+model</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Week 6</td>
+<td style="text-align: left;">Introduction to CSS – Flexbox</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Week 7</td>
+<td style="text-align: left;">Introduction to JavaScript – Manipulating
+the DOM, Dynamic styling</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Week 8</td>
+<td style="text-align: left;"><strong>Test 1</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Week 9</td>
+<td style="text-align: left;">Responsive Web Design</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Week 10</td>
+<td style="text-align: left;">Intermediate CSS – Layouts, Grid</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Week 11</td>
+<td style="text-align: left;">Intermediate CSS – The Cascade, Best
+Practises</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Week 12</td>
+<td style="text-align: left;">Putting it all together: HTML Forms</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Week 13</td>
+<td style="text-align: left;">HTML Forms with Event-driven UI</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Week 14</td>
+<td style="text-align: left;">Content Management Systems, <strong>Test
+2</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Week 15</td>
+<td style="text-align: left;">Content Management Systems</td>
+</tr>
+</tbody>
+</table> 
+      </article>
     </main>
 
-    <footer class="course-footer">
-      <span>
-        &copy Copyright 2023 <a href="#">Michael Haaf</a>. All rights reserved.
-      </span>
+    <footer class="page-footer surface">
+      <span class="note-text">
+        &copy Copyright 2023 <a href="#">Michael Haaf</a>. All rights
+        reserved.</span
+      >
     </footer>
   </body>
 </html>
