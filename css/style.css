@@ -272,15 +272,14 @@ article li {
   color: var(--subtle);
 }
 
-article p + p {
-  text-indent: 1.5rem;
-}
+/* article p + p { */
+/*   text-indent: 1.5rem; */
+/* } */
 
-/* this should probably be particular to article or smth */
-h2 + p:first-letter {
-  font-size: 2rem;
-  line-height: 0; /* The line-height must be adjusted to compensate for the increased font size, otherwise the leading for the overall line is disrupted. I find that any values below 0.4 work. */
-}
+/* h2 + p:first-letter { */
+/*   font-size: 2rem; */
+/*   line-height: 0; /* The line-height must be adjusted to compensate for the increased font size, otherwise the leading for the overall line is disrupted. I find that any values below 0.4 work. */ */
+/* } */
 
 article li,
 article ol,
