@@ -1,8 +1,29 @@
+/* || Page Styles
+*
+* Resources used in creating this design cited inline.
+* 
+* Document structure inspired by: https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing
+*/
+
 /* || Themes */
 
 :root {
   color-scheme: dark light;
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  /* Colors common to both themes */
+  --shadow: #232136AA;
+  --light-fg-high: #f4ede8;
+  --light-fg-med: #dfdad9;
+  --light-fg-low: #cecacd;
+  --dark-fg-high: #2a283e;
+  --dark-fg-med: #44415a;
+  --dark-fg-low: #56526e;
+
+  --filter-black: brightness(0) saturate(100%);
+  --filter-dark: invert(9%) sepia(8%) saturate(3970%) hue-rotate(206deg)
+    brightness(95%) contrast(88%);
+  --filter-light: invert(97%) sepia(58%) saturate(986%) hue-rotate(180deg)
+    brightness(100%) contrast(92%);
 }
 
 /* Adaptation of Rose Pine Dawn theme: https://rosepinetheme.com/palette/ingredients */
@@ -23,6 +44,8 @@
   --highlight-low: #f4ede8;
   --highlight-med: #dfdad9;
   --highlight-high: #cecacd;
+
+  --gradient-opacity: 0.7;
 }
 
 /* Adaptation of Rose Pine Moon theme: https://rosepinetheme.com/palette/ingredients */
@@ -42,10 +65,11 @@
   --highlight-low: #2a283e;
   --highlight-med: #44415a;
   --highlight-high: #56526e;
+
+  --gradient-opacity: 0.9;
 }
 
-/* I have not found a (non-js) way to avoid repeating one of the theme specs 
- in order to use prefers-color-scheme automatically 
+/* I have not found a (non-js) way to avoid repeating one of the theme specs in order to use prefers-color-scheme automatically 
  Here we redefine :root such that the dark theme is default */
 @media screen and (prefers-color-scheme: dark) {
   :root {
@@ -64,21 +88,26 @@
     --highlight-low: #2a283e;
     --highlight-med: #44415a;
     --highlight-high: #56526e;
+
+    --gradient-opacity: 0.9;
   }
 }
 
 /* || General styles */
 
-:root {
+:root, html, body {
   scroll-behavior: smooth;
   box-sizing: border-box;
+  max-width: 100%;
 }
 
 /* 
 * Universal Box Sizing best practise, for max flexibility and :pseudo support.
 * See https://css-tricks.com/box-sizing/
 * */
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -90,20 +119,172 @@ a:visited {
   color: var(--accent-violet);
 }
 
-nav a, nav a:visited {
+nav a,
+nav a:visited {
   text-decoration: none;
   color: var(--text);
 }
-
-/* … */
-
-
-/* || Typography */
-
-:root {
-  line-height: 1.5;
-  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+nav a:hover {
+  background-color: var(--overlay);
 }
+
+nav ul, 
+nav li {
+  list-style-type: none;
+}
+
+a.active,
+a.active:visited {
+  background-color: var(--overlay);
+  color: var(--accent-red);
+  font-weight: bold;
+}
+
+/*
+* <img> tag fallback.
+* See https://bitsofco.de/styling-broken-images/
+* */
+img {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: center;
+
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+}
+
+img:before {
+  content: "There should be an image here... very suspicious.";
+  display: block;
+  margin-bottom: 1.5rem; 
+}
+
+img:after {
+  content: "(url: " attr(src) ")";
+  display: block;
+}
+
+/* 
+* || Typography 
+* Borrowed heavily from the following:
+* - "The Perfect Paragraph" and "Applying Macrotypography" https://www.smashingmagazine.com/2011/11/the-perfect-paragraph
+* - https://vanseodesign.com/web-design/baseline-grid/
+* */
+
+/* @font-face { */
+/*    font-family: 'MyWebfont';  /* Change this to whatever you like. */ */
+/*    src: url('mywebfont-regular.ttf') format('truetype');  /* The "regular" font resource. */ */
+/*    font-style: normal;  /* Associates values of "normal" with this resource. */ */
+/*    font-weight: normal;  /* As above for weight. */ */
+/* } */
+/* @font-face { */
+/*    font-family: 'MyWebfont';  /* Importantly, the same as in the above block; the family name. */ */
+/*    src: url('mywebfont-italic.ttf') format('truetype'); */
+/*    font-style: italic;  /* Associates values of "italic" with this resource. */ */
+/*    font-weight: normal;  /* ... It's not a bold-italic font style. */ */
+/* } */
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-style: bold;
+}
+
+body {
+  font-family: system-ui, georgia, serif;
+  word-spacing: -0.05rem;
+  line-height: 1.5;
+
+  overflow-y: visible;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+* Based on: https://topfunky.com/baseline-rhythm-calculator/ 
+* */
+
+article h1 {
+	margin: 0;
+	font-size: 1.5rem;
+	line-height: 1;
+	margin-bottom: 1em;
+}
+h2 {
+	margin: 0;
+	font-size: 1.375rem;
+	line-height: 1.0909090909090908;
+	margin-bottom: 1.0909090909090908em;
+}
+h3 {
+	margin: 0;
+	font-size: 1.25rem;
+	line-height: 1.2;
+	margin-bottom: 1.2em;
+}
+h4 {
+	margin: 0;
+	font-size: 1.125rem;
+	line-height: 1.3333333333333333;
+	margin-bottom: 1.3333333333333333em;
+}
+h5 {
+  text-transform: uppercase;
+}
+h5, p, ul, blockquote, pre, td, th, label {
+	margin: 0;
+	font-size: 1rem;
+	line-height: 1.5;
+  padding-top: 0.375rem;
+  margin-bottom: 1.125rem;
+}
+p.small {
+	margin: 0;
+	font-size: 0.875rem;
+	line-height: 1.7142857142857142;
+	margin-bottom: 1.7142857142857142rem;
+}
+table {
+	border-collapse: collapse;
+	margin-bottom: 1.5rem;
+}
+
+/* */
+
+article {
+  padding-top: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 3rem;
+  padding-left: 1.5rem;
+}
+
+article p, 
+article li {
+  color: var(--subtle);
+}
+
+article p + p {
+  text-indent: 1.5rem;
+}
+
+/* this should probably be particular to article or smth */
+h2 + p:first-letter {
+  font-size: 2rem;
+  line-height: 0; /* The line-height must be adjusted to compensate for the increased font size, otherwise the leading for the overall line is disrupted. I find that any values below 0.4 work. */
+}
+
+/*
+* Add measure (max/min char width) in here somehow...
+* */
 
 /* || Layout */
 
@@ -121,8 +302,6 @@ nav a, nav a:visited {
 
 .site-nav {
   grid-area: nv;
-  display: flex;
-  flex-direction: row; /* to fix: should be horizontal */
 }
 
 .article-nav {
@@ -138,31 +317,122 @@ nav a, nav a:visited {
     "nv"
     "mn"
     "ft";
-  gap: 0.75rem;
-  max-width: 1500px;
   margin: 0 auto;
+  width: min(100vw, 1500px);
 }
 
-
-
 /* || Container Styles */
+/* || Header */
 
-.site-nav > ul {
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(35, 33, 54, 0.0),
+      rgba(35, 33, 54, var(--gradient-opacity))
+    ), url("../images/header-eg.jpg");
+
+  padding-top: 3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; 
+}
+
+.page-header > div {
+  text-shadow: 0.125em 0.125em 2px var(--shadow);
+  color: var(--light-fg-low);
+}
+
+.page-header h1 {
+  margin-bottom: -0.875rem;
+  padding-top: 0.875rem;
+  color: var(--light-fg-high);
+}
+
+/* || Site Navigation */
+
+.site-nav ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav li {
+  flex: 1;
+  display: flex;
+}
+
+.site-nav a {
+  flex: 1;
+  display: inline-block;
+
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  text-align: center;
+
+  font-size: 0.875rem;
+  line-height: 1.5rem;
 }
 
 .site-nav > h2 {
   display: none;
 }
 
-.article-nav {
-  position: sticky;
-  top: 2rem;
-  align-self: start;
-  font-size: 0.8rem;
+/* || Article Navigation */
+
+.article-nav * {
+  text-align: left;
+  text-indent: 0.5rem;
 }
+
+.article-nav h2 {
+  padding-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.article-nav ul {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  margin: 0;
+  padding: 0;
+}
+
+.article-nav a {
+  display: block;
+  border-left: 2px solid var(--muted);
+  border-radius: 0.5px;
+
+  width: 30ch;
+  white-space: nowrap;
+  text-align: left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  font-size: 0.875em;
+  line-height: 1.5rem;
+}
+
+.article-nav a.active {
+  border-left: 3px solid var(--accent-red);
+}
+
+/* this code stinks! */
+.article-nav li > ul > li > a {
+  text-indent: 1.5rem;  
+}
+
+.article-nav li > ul > li > ul > li > a {
+  text-indent: 2.5rem;
+}
+
+/* || Footer */
 
 .page-footer {
   display: flex;
@@ -172,38 +442,30 @@ nav a, nav a:visited {
 
 /* || Style Utilities */
 
+/* body {  */
+/*   background-image: url("../images/baseline-grid.svg");  */
+/* }  */
+
 .base {
   background-color: var(--base);
   color: var(--text);
+  max-width: 100vw;
 }
 
 .surface {
   background-color: var(--surface);
   color: var(--text);
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
-  border-radius: 5px;
-  padding: 1rem;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.16);
+  max-width: 100vw;
 }
 
 .note-text {
-  font-size: 0.8rem;
-  color: var(--subtle);
+	font-size: 0.625rem;
+  line-height: 1.5rem;
 }
 
-.transitional {
-  transition: all 100ms ease-in-out;
-}
 
-a.active, a.active:visited {
-  color: var(--accent-red);
-  font-weight: bold;
-}
-
-.no-bullets {
-  list-style: none;
-}
-
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 40rem) {
   .page-container {
     grid-template-columns: 3fr 1fr;
     grid-template-areas:
@@ -214,11 +476,12 @@ a.active, a.active:visited {
   }
 
   .article-nav {
-    display: block;
+    display: flex;
   }
+
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 60rem) {
   .page-container {
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-areas:
@@ -231,4 +494,11 @@ a.active, a.active:visited {
   .site-nav > ul {
     flex-direction: column;
   }
+
+  .site-nav a {
+    padding-left: 0.75rem;
+    text-align: left;
+  }
+
+
 }

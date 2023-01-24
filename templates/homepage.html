@@ -45,30 +45,37 @@
   </head>
 
   <body class="page-container base">
-    <header class="page-header surface">
-      <span class="note-text">
-        420-2W6 | Winter 2023 | Taught by <a href="#">Michael Haaf</a>
-      </span>
-      <h1>User Interfaces</h1>
+    <header class="page-header surface background-gradient">
+      <div class="text-shadow">
+        <h1>User Interfaces</h1>
+        <span class="note-text">
+          420-2W6 | Winter 2023 | Taught by <a href="#">Michael Haaf</a>
+        </span>
+      </div>
+      <div class="text-shadow">
+        <span class="note-text">
+        <a href="https://www.pexels.com/photo/blue-orange-and-yellow-triangle-illustration-4965816/">Photo by cottonbro studio from Pexels</a>
+        </span>
+      </div>
     </header>
 
     <nav aria-labelledby="site-nav-title" class="site-nav surface">
       <h2 id="site-nav-title">Site Navigation</h2>
-      <ul class="no-bullets">
+      <ul>
         <li><a class="active" href="index.html">Home</a></li>
         <li><a href="syllabus.html">Course Outline</a></li>
         <li><a href="calendar.html">Calendar</a></li>
-        <li><a href="blog.html">Course Blog</a></li>
-        <li><a href="lectures">Lectures</a></li>
+        <li><a href="resources">Resources</a></li>
         <li><a href="assignments">Assignments</a></li>
-        <li><a href="exams">Practise Exams</a></li>
+        <li><a href="lectures">Lectures</a></li>
       </ul>
     </nav>
 
     $if(toc)$
-    <aside 
-      aria-label="Article Navigation" 
-      class="article-nav surface no-bullets transitional">
+    <aside
+      aria-label="Article Navigation"
+      class="article-nav surface"
+    >
       <nav id="$idprefix$TOC" role="doc-toc">
         $if(toc-title)$
         <h2 id="$idprefix$toc-title">$toc-title$</h2>
@@ -77,7 +84,7 @@
     </aside>
     $endif$
 
-    <main class="page-main surface">
+    <main class="page-main base">
       <article class="page-main-article">
         $for(include-before)$ $include-before$ $endfor$ $if(title)$
         <header id="title-block-header">
@@ -99,7 +106,7 @@
       </article>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer surface">
       <span class="note-text">
         &copy Copyright 2023 <a href="#">Michael Haaf</a>. All rights
         reserved.</span
