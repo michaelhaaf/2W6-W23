@@ -1,10 +1,11 @@
 
 ---
-title: '2W6-W23: Lecture 0'
+title: "2W6-W23: Lecture 0"
 author: Michael Haaf
 date: 2023-01-17
 theme: solarized
 highlight: default
+toc-title: "On this page"
 ---
 
 # Introduction

@@ -4,6 +4,7 @@ title: '2W6-W23: Lecture 1'
 author: Michael Haaf
 date: 2023-01-18
 theme: solarized
+toc-title: "In this article"
 ---
 
 # HTML Fundamentals
