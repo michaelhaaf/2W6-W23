@@ -1,31 +1,46 @@
-let currentTheme = window.matchMedia("(prefers-color-scheme: light)").matches
-  ? "light"
-  : "dark";
-localStorage.setItem("currentTheme", currentTheme);
-
-function toggleTheme() {
-  let newTheme = localStorage.getItem("currentTheme") === "light" ? "dark" : "light";
-  document.querySelector(":root").setAttribute("data-theme", newTheme);
-  localStorage.setItem("currentTheme", newTheme);
+if (!localStorage.getItem("selectedTheme")) {
+  let currentTheme = window.matchMedia("(prefers-color-scheme: light)").matches
+    ? "light"
+    : "dark";
+  localStorage.setItem("selectedTheme", currentTheme);
+} else {
+  document.querySelector(":root").setAttribute("data-theme", localStorage.getItem("selectedTheme"));
 }
 
-// Adapted from www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/index.html
-window.addEventListener('DOMContentLoaded', () => {
+function toggleTheme() {
+  let newTheme =
+    localStorage.getItem("selectedTheme") === "light" ? "dark" : "light";
+  document.querySelector(":root").setAttribute("data-theme", newTheme);
+  localStorage.setItem("selectedTheme", newTheme);
+}
 
-	const observer = new IntersectionObserver(entries => {
-		entries.forEach(entry => {
-			const id = entry.target.getAttribute('id');
-			if (entry.intersectionRatio > 0) {
-				document.querySelector(`nav li a[href="#${id}"]`).classList.add('active');
-			} else {
-				document.querySelector(`nav li a[href="#${id}"]`).classList.remove('active');
-			}
-		});
-	});
+const themeToggleIcon = document.querySelector("#theme-toggle-icon");
+themeToggleIcon.addEventListener("click", toggleTheme)
 
-	// Track all sections that have an `id` applied
-	document.querySelectorAll('section[id]').forEach((section) => {
-		observer.observe(section);
-	});
-	
-});
+// Side-scroller Table of Contents with "active" section.
+// Adapted from https://benfrain.com/building-a-table-of-contents-with-active-indicator-using-javascript-intersection-observers/
+const pageContent = document.querySelector("article.page-main-article");
+const pageToc = document.querySelector(".article-nav");
+
+const tocLinks = pageToc.querySelectorAll(":scope a");
+const allHeaders = pageContent.querySelectorAll(":scope > h1, :scope > h2");
+
+const observerOptions = {
+  root: null,
+  rootMargin: "0px",
+  threshold: [1],
+};
+
+const observeHeaders = new IntersectionObserver(setActive, observerOptions);
+allHeaders.forEach((header) => observeHeaders.observe(header));
+
+function setActive(entries) {
+  entries.map((e) => {
+    if (e.isIntersecting === true) {
+      tocLinks.forEach((link) => link.classList.remove("active"));
+      document
+        .querySelector(`nav li a[href="#${e.target.id}"]`)
+        .classList.add("active");
+    }
+  });
+}

@@ -1,0 +1,21 @@
+.reveal p {
+  text-align: left;
+}
+.reveal ul {
+  display: block;
+}
+.reveal ol {
+  display: block;
+}
+.reveal #title-slide > h1 {
+  margin-bottom: 4rem;
+}
+.reveal #title-slide > p {
+  margin: 0.25rem;
+  font-size: 2rem;
+}
+.reveal #TOC ul {
+  font-size: 1.5rem;
+  height: 100%;
+  list-style: none;
+}
