@@ -282,6 +282,17 @@ h2 + p:first-letter {
   line-height: 0; /* The line-height must be adjusted to compensate for the increased font size, otherwise the leading for the overall line is disrupted. I find that any values below 0.4 work. */
 }
 
+article li,
+article ol,
+article ul {
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+article ul {
+  padding-left: 2rem;
+}
+
 /*
 * Add measure (max/min char width) in here somehow...
 * */
