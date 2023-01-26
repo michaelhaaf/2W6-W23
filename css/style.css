@@ -46,6 +46,7 @@
   --highlight-high: #cecacd;
 
   --gradient-opacity: 0.7;
+  --header-image: url("../images/light-theme/guggenheim-books.jpg");
 }
 
 /* Adaptation of Rose Pine Moon theme: https://rosepinetheme.com/palette/ingredients */
@@ -67,6 +68,7 @@
   --highlight-high: #56526e;
 
   --gradient-opacity: 0.9;
+  --header-image: url("../images/dark-theme/guggenheim-brown.jpg");
 }
 
 /* I have not found a (non-js) way to avoid repeating one of the theme specs in order to use prefers-color-scheme automatically 
@@ -90,6 +92,7 @@
     --highlight-high: #56526e;
 
     --gradient-opacity: 0.9;
+    --header-image: url("../images/dark-theme/guggenheim-brown.jpg");
   }
 }
 
@@ -356,7 +359,7 @@ article ul {
       rgba(35, 33, 54, 0),
       rgba(35, 33, 54, var(--gradient-opacity))
     ),
-    url("../images/header-eg.jpg");
+    var(--header-image);
 
   padding-top: 3rem;
   padding-left: 0.5rem;
@@ -365,7 +368,7 @@ article ul {
 
 .page-header > div {
   text-shadow: 0.125em 0.125em 2px var(--shadow);
-  color: var(--light-fg-low);
+  color: var(--light-fg-med);
 }
 
 .page-header h1 {
