@@ -1,4 +1,19 @@
-all:
-	tree -H '.' -L 1 --noreport -T 'Lectures' --si -D --charset utf-8 -I index.html -o './lectures/index.html' './lectures/'
-	tree -H '.' -L 1 --noreport -T 'Assignments' --si -D --charset utf-8 -I index.html -o './assignments/index.html' './assignments/'
-	tree -H '.' -L 1 --noreport -T 'Resources' --si -D --charset utf-8 -I index.html -o './resources/index.html' './resources/'
+SITE_MD := $(wildcard md/site/*.md)
+LECTURES_MD := $(wildcard md/lectures/*.md)
+
+SITE_HTML := $(SITE_MD:md/site/%.md=%.html)
+LECTURES_HTML := $(LECTURES_MD:md/lectures/%.md=lectures/%.html)
+
+TEMPLATE := ./templates/web.html
+
+all : $(SITE_HTML) $(LECTURES_HTML)
+
+lectures/%.html: md/lectures/%.md
+	pandoc $(PANDOC_OPTIONS) \
+		--css ../css/style.css \
+		-o $@ $<
+
+%.html: md/site/%.md
+	pandoc $(PANDOC_OPTIONS) \
+		--css ./css/style.css \
+		-o $@ $<
