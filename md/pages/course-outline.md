@@ -7,7 +7,7 @@ toc-title: "On this page"
 lang: "en"
 ---
 
-This article was converted to html for presentation on this website using [pandoc](https://pandoc.org/). The course outline is also available for download as a [.pdf file](../documents/course_outline.pdf).
+This article was converted to html for presentation on this website using [pandoc](https://pandoc.org/). The course outline is also available for download as a [.pdf file](../assets/documents/course_outline.pdf).
 
 # GENERAL INFORMATION
 
