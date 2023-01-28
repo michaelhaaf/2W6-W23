@@ -23,7 +23,7 @@ I may update this slide with more exciting information soon. For now, here are t
 
 <div style="display: flex; justify-content: space-between;">
 <div style="width: 20%">
-![Reynard](images/reynard_studious.jpg){style=""}\ 
+![Reynard](../assets/images/reynard_studious.jpg){style=""}\ 
 </div>
 <div style="width: 80%;">
 
