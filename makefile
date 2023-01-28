@@ -1,19 +1,29 @@
-SITE_MD := $(wildcard md/site/*.md)
+PAGES_MD := $(wildcard md/pages/*.md)
 LECTURES_MD := $(wildcard md/lectures/*.md)
 
-SITE_HTML := $(SITE_MD:md/site/%.md=%.html)
+PAGES_HTML := $(PAGES_MD:md/pages/%.md=pages/%.html)
 LECTURES_HTML := $(LECTURES_MD:md/lectures/%.md=lectures/%.html)
 
-TEMPLATE := ./templates/web.html
+# Path relative to makefile
+PAGE_TEMPLATE := ./assets/templates/page.html
 
-all : $(SITE_HTML) $(LECTURES_HTML)
+# Path relative to output
+PAGE_STYLE := ../assets/css/style.css
+
+PANDOC_OPTIONS = --standalone \
+								 --table-of-contents \
+								 --css $(PAGE_STYLE) \
+								 --template $(PAGE_TEMPLATE)
+
+all: $(PAGES_HTML) $(LECTURES_HTML)
 
 lectures/%.html: md/lectures/%.md
-	pandoc $(PANDOC_OPTIONS) \
-		--css ../css/style.css \
-		-o $@ $<
+	pandoc $(PANDOC_OPTIONS) -o $@ $<
 
-%.html: md/site/%.md
-	pandoc $(PANDOC_OPTIONS) \
-		--css ./css/style.css \
-		-o $@ $<
+pages/%.html: md/pages/%.md
+	pandoc $(PANDOC_OPTIONS) -o $@ $<
+
+
+clean:
+	rm lectures/*.html
+	rm pages/*.html
