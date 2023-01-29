@@ -387,12 +387,15 @@ article ul {
   padding: 0;
 }
 
-.site-nav li {
+.site-nav li,
+.dropdown-content li {
   flex: 1;
   display: flex;
 }
 
-.site-nav a {
+.site-nav a,
+.site-nav .dropbtn,
+.dropdown-content li a{
   flex: 1;
   display: inline-block;
 
@@ -402,6 +405,37 @@ article ul {
 
   font-size: 0.875rem;
   line-height: 1.5rem;
+}
+
+.dropdown-content li a {
+  padding-left: 1rem;
+  padding-right: 3rem;
+}
+
+.site-nav .dropbtn {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  color: inherit;
+}
+
+.site-nav .dropbtn:hover {
+  background-color: var(--overlay);
+}
+
+.site-nav .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--surface);
+  box-shadow: 0.25rem 0.25rem 0.5rem 0 var(--shadow);
+  
+  margin-top: 3rem;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
 }
 
 .site-nav > h2 {
@@ -517,7 +551,8 @@ article ul {
     flex-direction: column;
   }
 
-  .site-nav a {
+  .site-nav a, 
+  .dropdown .dropbtn {
     padding-left: 0.75rem;
     text-align: left;
   }
