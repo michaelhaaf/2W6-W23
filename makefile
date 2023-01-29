@@ -21,22 +21,25 @@ PANDOC_OPTIONS = --standalone \
 
 ## MAKE RULES
 
-all: listings $(PAGE_TEMPLATE) $(PAGES_HTML) $(LECTURES_HTML)
+all: $(PAGE_TEMPLATE) $(PAGES_HTML) $(LECTURES_HTML)
 
+clean:
+	rm lectures/*.html
+	rm pages/*.html
+
+# Run this if a new file has been added to a dynamic contect directory 
 listings:
 	tree lectures -H ../lectures | htmlq "body p a" | grep html > ./assets/listings/lecture-listing.html
 	tree assignments -H ../assignments | htmlq "body p a" | grep pdf > ./assets/listings/assignment-listing.html
 
+# If dynamic contect directories changed, update template and mark all targets for update
 $(PAGE_TEMPLATE): assets/listings/*.html
 	cp $(PAGE_TEMPLATE) ./assets/templates/page.html.backup 
 	python ./assets/build-scripts/update-listings.py > $(PAGE_TEMPLATE)
+	touch $(PAGES_MD) $(LECTURES_MD)
 
 lectures/%.html: md/lectures/%.md
 	pandoc $(PANDOC_OPTIONS) -o $@ $<
 
 pages/%.html: md/pages/%.md
 	pandoc $(PANDOC_OPTIONS) -o $@ $<
-
-clean:
-	rm lectures/*.html
-	rm pages/*.html
