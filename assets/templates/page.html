@@ -55,7 +55,7 @@
       </div>
       <div class="text-shadow">
         <span class="note-text">
-        <a href=""></a>
+          <a href=""></a>
         </span>
       </div>
     </header>
@@ -67,16 +67,33 @@
         <li><a href="course-outline.html">Course Outline</a></li>
         <li><a href="calendar.html">Calendar</a></li>
         <li><a href="#">Resources</a></li>
-        <li><a href="#">Assignments</a></li>
-        <li><a href="#">Lectures</a></li>
+        <li class="dropdown">
+          <button class="dropbtn">
+            Lectures
+            <i class="fa-caret-down"></i>
+          </button>
+          <ul id="lecture-listing" class="dropdown-content">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <button class="dropbtn">
+            Assignments
+            <i class="fa-caret-down"></i>
+          </button>
+          <ul id="assignment-listing" class="dropdown-content">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
 
     $if(toc)$
-    <aside
-      aria-label="Article Navigation"
-      class="article-nav surface"
-    >
+    <aside aria-label="Article Navigation" class="article-nav surface">
       <nav id="$idprefix$TOC" role="doc-toc">
         $if(toc-title)$
         <h2 id="$idprefix$toc-title">$toc-title$</h2>
@@ -109,8 +126,7 @@
 
     <footer class="page-footer surface">
       <span class="note-text">
-        &copy Copyright 2023 <a href="#">Michael Haaf</a>. All rights
-        reserved.
+        &copy Copyright 2023 <a href="#">Michael Haaf</a>. All rights reserved.
       </span>
     </footer>
   </body>
