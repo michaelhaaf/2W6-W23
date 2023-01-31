@@ -1,16 +1,52 @@
-/* || Page Styles
+/* ------------------------------------------ *\
+  || Table of Contents
+\* ------------------------------------------ */
+
+/* 
+* || Themes
 *
-* Resources used in creating this design cited inline.
+* || Global
+*   - margin, padding, box-sizing
+*
+* || Typography
+*   - text elements redefined for vertical rythm, measure
+*   - p, h1-6, 
+*
+* || Utilities
+*   - .hidden, .text-shadow, etc.
+*
+* || Objects
+*   - .nav links, buttons, and dropdowns
+*
+* || Containers
+*   - .header, .main, .footer, .aside--site, .aside--page
+*
+* || Layout
+*   - .page-container grid definition
+*
+* || Overrides
+*   - @media responsive design
 * 
-* Document structure inspired by: https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing
+* || Acknowledgements:
+*   Resources used in creating this design cited inline.
+* 
+*   Document structure inspired by: 
+*     - https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing
+*     - https://cssguidelin.es/
 */
 
-/* || Themes */
+
+
+
+
+/* ------------------------------------------ *\
+  || Themes
+\* ------------------------------------------ */
 
 :root {
+  /* Colors, filters, and properties common to both themes */
   color-scheme: dark light;
 
-  /* Colors common to both themes */
   --shadow: #232136aa;
   --light-fg-high: #f4ede8;
   --light-fg-med: #dfdad9;
@@ -26,9 +62,11 @@
     brightness(100%) contrast(92%);
 }
 
-/* Adaptation of Rose Pine Dawn theme: https://rosepinetheme.com/palette/ingredients */
 :root,
 :root[data-theme="light"] {
+/* Adaptation of Rose Pine Dawn theme: 
+* https://rosepinetheme.com/palette/ingredients 
+*/
   --base: #faf4ed;
   --surface: #fffaf3;
   --overlay: #f2e9e1;
@@ -49,8 +87,10 @@
   --header-image: url("../images/light-theme/guggenheim-books.jpg");
 }
 
-/* Adaptation of Rose Pine Moon theme: https://rosepinetheme.com/palette/ingredients */
 :root[data-theme="dark"] {
+/* Adaptation of Rose Pine Moon theme: 
+* https://rosepinetheme.com/palette/ingredients 
+*/
   --base: #232136;
   --surface: #2a273f;
   --overlay: #393552;
@@ -71,9 +111,11 @@
   --header-image: url("../images/dark-theme/guggenheim-brown.jpg");
 }
 
-/* I have not found a (non-js) way to avoid repeating one of the theme specs in order to use prefers-color-scheme automatically 
- Here we redefine :root such that the dark theme is default */
 @media screen and (prefers-color-scheme: dark) {
+/* Media theme preference query
+* I have not yet found a (non-js) way to avoid repeating one theme spec in order to use prefers-color-scheme automatically.
+* Here we redefine :root such that the dark theme is default when the user has specified it should be using their browser/OS configuration.
+*/
   :root {
     --base: #232136;
     --surface: #2a273f;
@@ -96,60 +138,47 @@
   }
 }
 
-/* || General styles */
 
-:root,
-html,
-body {
+
+
+
+/* ------------------------------------------ *\
+  || Global
+\* ------------------------------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
   scroll-behavior: smooth;
   box-sizing: border-box;
   max-width: 100%;
 }
 
+*,
+*::before,
+*::after {
 /* 
 * Universal Box Sizing best practise, for max flexibility and :pseudo support.
 * See https://css-tricks.com/box-sizing/
-* */
-*,
-*:before,
-*:after {
+*/
   box-sizing: inherit;
 }
 
-/* || Text defaults */
-
-a {
+a:link {
   color: var(--accent-foam);
 }
 a:visited {
   color: var(--accent-violet);
 }
-a.active,
-a.active:visited {
-  background-color: var(--overlay);
-  color: var(--accent-red);
-  font-weight: bold;
-}
 
-nav a,
-nav a:visited {
-  text-decoration: none;
-  color: var(--text);
-}
-nav a:hover {
-  background-color: var(--overlay);
-}
-nav ul,
-nav li {
-  list-style-type: none;
-}
-
+img {
 /*
 * <img> tag fallback.
 * See https://bitsofco.de/styling-broken-images/
 * */
-img {
-  font-size: 1rem;
   font-weight: 300;
   line-height: 1.5;
   text-align: center;
@@ -160,42 +189,35 @@ img {
   position: relative;
 }
 
-img:before {
+img::before {
   content: "There should be an image here... very suspicious.";
   display: block;
   margin-bottom: 1.5rem;
 }
 
-img:after {
+img::after {
   content: "(url: " attr(src) ")";
   display: block;
 }
 
-/* 
-* || Typography 
-* Borrowed heavily from the following:
-* - "The Perfect Paragraph" and "Applying Macrotypography" https://www.smashingmagazine.com/2011/11/the-perfect-paragraph
-* - https://vanseodesign.com/web-design/baseline-grid/
-* */
 
-/* @font-face { */
-/*    font-family: 'MyWebfont';  /* Change this to whatever you like. */
+
+
+
+/* ------------------------------------------ *\
+  || Typography
+\* ------------------------------------------ */
+
+/* 
+* Choices and approach borrowed heavily from the following:
+*   - "The Perfect Paragraph" and "Applying Macrotypography" https://www.smashingmagazine.com/2011/11/the-perfect-paragraph
+*   - https://vanseodesign.com/web-design/baseline-grid/
+*   - https://topfunky.com/baseline-rhythm-calculator/ 
 */
-/*    src: url('mywebfont-regular.ttf') format('truetype');  /* The "regular" font resource. */ */
-/*    font-style: normal;  /* Associates values of "normal" with this resource. */ */
-/*    font-weight: normal;  /* As above for weight. */ */
-/* } */
-/* @font-face { */
-/*    font-family: 'MyWebfont';  /* Importantly, the same as in the above block; the family name. */ */
-/*    src: url('mywebfont-italic.ttf') format('truetype'); */
-/*    font-style: italic;  /* Associates values of "italic" with this resource. */ */
-/*    font-weight: normal;  /* ... It's not a bold-italic font style. */ */
-/* } */
 
 em {
   font-style: italic;
 }
-
 strong {
   font-style: bold;
 }
@@ -203,20 +225,12 @@ strong {
 body {
   font-family: system-ui, georgia, serif;
   word-spacing: -0.05rem;
+
   line-height: 1.5;
 
   overflow-y: visible;
   overflow-x: hidden;
 }
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-/* 
-* Based on: https://topfunky.com/baseline-rhythm-calculator/ 
-* */
 
 article h1 {
   margin: 0;
@@ -227,8 +241,8 @@ article h1 {
 h2 {
   margin: 0;
   font-size: 1.375rem;
-  line-height: 1.0909090909090908;
-  margin-bottom: 1.0909090909090908em;
+  line-height: 1.0909;
+  margin-bottom: 1.0909em;
 }
 h3 {
   margin: 0;
@@ -239,8 +253,8 @@ h3 {
 h4 {
   margin: 0;
   font-size: 1.125rem;
-  line-height: 1.3333333333333333;
-  margin-bottom: 1.3333333333333333em;
+  line-height: 1.3333;
+  margin-bottom: 1.3333em;
 }
 h5 {
   text-transform: uppercase;
@@ -253,24 +267,20 @@ pre,
 td,
 th,
 label {
-  margin: 0;
   font-size: 1rem;
   line-height: 1.5;
   padding-top: 0.375rem;
   margin-bottom: 1.125rem;
 }
 p.small {
-  margin: 0;
   font-size: 0.875rem;
-  line-height: 1.7142857142857142;
-  margin-bottom: 1.7142857142857142rem;
+  line-height: 1.7142;
+  margin-bottom: 1.7142rem;
 }
 table {
   border-collapse: collapse;
   margin-bottom: 1.5rem;
 }
-
-/* */
 
 article {
   padding-top: 1.5rem;
@@ -284,16 +294,6 @@ article li {
   color: var(--subtle);
 }
 
-/* article p + p { */
-/*   text-indent: 1.5rem; */
-/* } */
-
-/* h2 + p:first-letter { */
-/*   font-size: 2rem; */
-/*   line-height: 0; /* The line-height must be adjusted to compensate for the increased font size, otherwise the leading for the overall line is disrupted. I find that any values below 0.4 work. */
-
-/* } */
-
 article li,
 article ol,
 article ul {
@@ -305,49 +305,230 @@ article ul {
   padding-left: 2rem;
 }
 
+.note-text {
+  font-size: 0.625rem;
+  line-height: 1.5rem;
+}
+
+
+
+
+
+/* ------------------------------------------ *\
+  || Utilities
+\* ------------------------------------------ */
+
+.hidden {
+  /* !important required for this utility, I think it's appropriate */
+  display: none !important;
+}
+
+.text-shadow {
+  text-shadow: 0.125em 0.125em 2px var(--shadow);
+  color: var(--light-fg-med);
+}
+
+.baseline-grid {  
+  background-image: url("../assets/images/baseline-grid.svg"); 
+}  
+
+/* ------------------------------------------ *\
+  || Objects
+\* ------------------------------------------ */
+
+.base {
+  background-color: var(--base);
+  color: var(--text);
+}
+
+.surface {
+  background-color: var(--surface);
+  color: var(--text);
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 16%);
+}
+
+.overlay {
+  background-color: var(--overlay);
+  color: var(--text);
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 16%);
+}
+
+.dropbtn {
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+/* 
+* ||| nav objects 
+*
+* Design choice: <nav> is classed; <ul>, <li> and <a> modified within scope
+* Reasoning: I'm using autogenerated HTML lists of <a> for page/site and placing them within a classed nav in my pandoc template. It is easier/more flexible to class one ancestor than all decendants.
+* Cons: couples CSS to specific HTML structure. I think it's a principled choice but I may refactor in the future.
+*/
+
 /*
-* Add measure (max/min char width) in here somehow...
-* */
+*
+* Assumed structure:
+*   - .nav > ul > li > a 
+* Subclass additions:
+*   - .nav.nav--site > ul > li > button.dropbtn + ul.dropdown > li > a
+*   - .nav.nav--page > ul > li > ul > li > a (etc.)
+*
+* Object behavior:
+*   - <ul>, <li>, <a>, <button>: reset style
+*   - <a>, <button>: takes up available space so entirety can be clicked
+*   - <ul>.dropdown: display toggle, drops at parent width
+* Subclass additions:
+*   - .nav--site ul: 
+*   - .nav--page ul:
+*/
 
-/* || Layout */
+/*
+* ||| .nav <a> 
+*/
 
-.page-header {
-  grid-area: hd;
+.nav a:link,
+.nav a:visited,
+.nav .dropbtn {
+  background-color: var(--surface);
+  color: var(--subtle);
+  font-size: 0.875em;
+  line-height: 1.5rem;
+
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} 
+
+.nav a:hover,
+.nav .dropbtn:hover {
+  background-color: var(--overlay);
+  cursor: pointer;
 }
 
-.page-main {
-  grid-area: mn;
+.nav a.active:link,
+.nav a.active:visited,
+.nav .dropbtn.active {
+  background-color: var(--overlay);
+  color: var(--accent-red);
+  font-weight: bold;
 }
 
-.page-footer {
-  grid-area: ft;
+/* 
+* ||| nav <ul> and <li> 
+*/
+.nav ul,
+.nav li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.site-nav {
-  grid-area: nv;
+/* 
+* |||| .nav--page <a>
+*/
+
+.nav--page a {
+  display: block;
+  border-left: 2px solid var(--muted);
+  border-radius: 0.5px;
+  width: 30ch;
+  text-align: left;
 }
 
-.article-nav {
-  grid-area: sd;
-  display: none;
+.nav--page a.active {
+  border-left: 3px solid var(--accent-red);
 }
 
-.page-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "hd"
-    "nv"
-    "mn"
-    "ft";
-  margin: 0 auto;
-  width: min(100vw, 1500px);
+/* 
+* |||| nav--site <a> and <button> 
+*/
+
+.nav--site a,
+.nav--site .dropbtn {
+  flex: 1;
+  display: inline-block;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  text-align: center;
 }
 
-/* || Container Styles */
-/* || Header */
+/* 
+* |||| nav--site .dropdown
+*/
 
-.page-header {
+.nav--site .dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-top: 3rem;
+  z-index: 1;
+  background-color: var(--overlay);
+}
+
+.nav .dropdown a {
+  background-color: var(--overlay);
+  padding-left: 2rem;
+  padding-right: 3rem;
+}
+
+.nav--site .dropdown a:hover {
+  background-color: var(--accent-foam);
+  color: var(--base);
+  font-weight: bold;
+}
+
+/* 
+* |||| nav--site <ul> <li> and <a>
+*/
+
+.nav--site > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.nav--site li {
+  flex: 1;
+  display: flex;
+}
+
+/*
+* |||| nav--page <ul> <li> and <a>
+*/
+
+.nav--page h2 {
+  padding-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.nav--page ul {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  margin: 0;
+  padding: 0;
+}
+
+/* this code stinks! */
+.nav--page li > ul > li > a {
+  text-indent: 1.5rem;  
+}
+
+.nav--page li > ul > li > ul > li > a {
+  text-indent: 2.5rem;
+}
+
+
+
+
+
+/* ------------------------------------------ *\
+  || Containers
+\* ------------------------------------------ */
+
+.header {
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -356,7 +537,7 @@ article ul {
   background-size: cover;
   background-image: linear-gradient(
       to bottom,
-      rgba(35, 33, 54, 0),
+      rgba(35, 33, 54, 0%),
       rgba(35, 33, 54, var(--gradient-opacity))
     ),
     var(--header-image);
@@ -366,165 +547,80 @@ article ul {
   padding-right: 0.5rem;
 }
 
-.page-header > div {
-  text-shadow: 0.125em 0.125em 2px var(--shadow);
-  color: var(--light-fg-med);
-}
-
-.page-header h1 {
+.header h1 {
   margin-bottom: -0.875rem;
   padding-top: 0.875rem;
   color: var(--light-fg-high);
 }
 
-/* || Site Navigation */
-
-.site-nav ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: 0;
-  padding: 0;
-}
-
-.site-nav li,
-.dropdown-content li {
-  flex: 1;
-  display: flex;
-}
-
-.site-nav a,
-.site-nav .dropbtn,
-.dropdown-content li a{
-  flex: 1;
-  display: inline-block;
-
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  text-align: center;
-
-  font-size: 0.875rem;
-  line-height: 1.5rem;
-}
-
-.dropdown-content li a {
-  padding-left: 1rem;
-  padding-right: 3rem;
-}
-
-.site-nav .dropbtn {
-  border: none;
-  outline: none;
-  background-color: inherit;
-  color: inherit;
-}
-
-.site-nav .dropbtn:hover {
-  background-color: var(--overlay);
-}
-
-.site-nav .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: var(--surface);
-  box-shadow: 0.25rem 0.25rem 0.5rem 0 var(--shadow);
-  
-  margin-top: 3rem;
-  z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: flex;
-  flex-direction: column;
-}
-
-.site-nav > h2 {
-  display: none;
-}
-
-/* || Article Navigation */
-
-.article-nav * {
+.aside--page * {
   text-align: left;
   text-indent: 0.75rem;
 }
 
-.article-nav h2 {
-  padding-top: 0.75rem;
-  margin-bottom: 0.75rem;
+.aside--site h2 {
+  display: none;
 }
 
-.article-nav ul {
-  position: sticky;
-  top: 0;
-  align-self: start;
-  margin: 0;
-  padding: 0;
-}
-
-.article-nav a {
-  display: block;
-  border-left: 2px solid var(--muted);
-  border-radius: 0.5px;
-
-  width: 30ch;
-  white-space: nowrap;
-  text-align: left;
-  text-overflow: ellipsis;
-  overflow: hidden;
-
-  font-size: 0.875em;
-  line-height: 1.5rem;
-}
-
-.article-nav a.active {
-  border-left: 3px solid var(--accent-red);
-}
-
-/* this code stinks! */
-.article-nav li > ul > li > a {
-  text-indent: 1.5rem;
-}
-
-.article-nav li > ul > li > ul > li > a {
-  text-indent: 3.25rem;
-}
-
-/* || Footer */
-
-.page-footer {
+.footer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* || Style Utilities */
 
-/* body {  */
-/*   background-image: url("../images/baseline-grid.svg");  */
-/* }  */
 
-.base {
-  background-color: var(--base);
-  color: var(--text);
-  max-width: 100vw;
+
+
+
+/* ------------------------------------------ *\
+  || Layout
+\* ------------------------------------------ */
+
+.header {
+  grid-area: hd;
 }
 
-.surface {
-  background-color: var(--surface);
-  color: var(--text);
-  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.16);
-  max-width: 100vw;
+.main {
+  grid-area: mn;
 }
 
-.note-text {
-  font-size: 0.625rem;
-  line-height: 1.5rem;
+.footer {
+  grid-area: ft;
 }
+
+.aside--site {
+  grid-area: nv;
+}
+
+.aside--page {
+  grid-area: sd;
+  display: none;
+}
+
+.page-container {
+  display: grid;
+  grid-template-columns: minmax(20rem, 1fr);
+  grid-template-areas:
+    "hd"
+    "nv"
+    "mn"
+    "ft";
+  margin: 0 auto;
+  width: min(100vw, 1500px);
+}
+
+
+
+
+
+/* ------------------------------------------ *\
+  || Overrides
+\* ------------------------------------------ */
 
 @media only screen and (min-width: 40rem) {
   .page-container {
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: minmax(20rem, 3fr) 1fr;
     grid-template-areas:
       "hd hd"
       "nv nv"
@@ -532,14 +628,14 @@ article ul {
       "ft sd";
   }
 
-  .article-nav {
+  .aside--page {
     display: flex;
   }
 }
 
 @media only screen and (min-width: 60rem) {
   .page-container {
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-columns: 1fr minmax(20rem, 4fr) 1fr;
     grid-template-areas:
       "hd hd hd"
       "nv mn sd"
@@ -547,12 +643,12 @@ article ul {
       "ft ft ft";
   }
 
-  .site-nav > ul {
+  .nav--site ul {
     flex-direction: column;
   }
 
-  .site-nav a, 
-  .dropdown .dropbtn {
+  .nav--site a, 
+  .nav--site .dropbtn {
     padding-left: 0.75rem;
     text-align: left;
   }
