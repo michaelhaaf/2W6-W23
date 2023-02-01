@@ -25,7 +25,7 @@ themeToggleIcon.addEventListener("click", toggleTheme);
 const pageContent = document.querySelector("article.article");
 const pageToc = document.querySelector(".nav--page");
 
-const tocLinks = pageToc.querySelectorAll(":scope a");
+const tocLinks = pageToc ? pageToc.querySelectorAll(":scope a") : [];
 const allHeaders = pageContent.querySelectorAll(":scope > h1, :scope > h2");
 
 const observerOptions = {
