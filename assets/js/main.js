@@ -5,7 +5,9 @@ if (!localStorage.getItem("selectedTheme")) {
     : "dark";
   localStorage.setItem("selectedTheme", currentTheme);
 } else {
-  document.querySelector(":root").setAttribute("data-theme", localStorage.getItem("selectedTheme"));
+  document
+    .querySelector(":root")
+    .setAttribute("data-theme", localStorage.getItem("selectedTheme"));
 }
 
 function toggleTheme() {
@@ -16,7 +18,7 @@ function toggleTheme() {
 }
 
 const themeToggleIcon = document.querySelector("#theme-toggle-icon");
-themeToggleIcon.addEventListener("click", toggleTheme)
+themeToggleIcon.addEventListener("click", toggleTheme);
 
 // Side-scroller Table of Contents with "active" section.
 // Adapted from https://benfrain.com/building-a-table-of-contents-with-active-indicator-using-javascript-intersection-observers/
@@ -46,15 +48,15 @@ function setActive(entries) {
   });
 }
 
-// Clickable dropdown: 
+// Clickable dropdown:
 // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar_click
 
 const dropbtns = Array.from(document.querySelectorAll(".dropbtn"));
 const dropdowns = Array.from(document.querySelectorAll(".dropdown"));
-dropbtns.forEach(btn => { 
+dropbtns.forEach((btn) => {
   btn.addEventListener("click", toggleDropdown);
 });
-  
+
 function toggleVisible(elem) {
   elem.classList.toggle("hidden");
 }
@@ -92,20 +94,18 @@ function toggleDropdown(event) {
   let activeDropdown = dropbtn.nextElementSibling;
 
   dropdowns
-    .filter(dropdown => dropdown !== activeDropdown)
-    .forEach(dropdown => hide(dropdown));
-  dropbtns
-    .filter(btn => btn !== dropbtn)
-    .forEach(btn => turnInactive(btn));
+    .filter((dropdown) => dropdown !== activeDropdown)
+    .forEach((dropdown) => hide(dropdown));
+  dropbtns.filter((btn) => btn !== dropbtn).forEach((btn) => turnInactive(btn));
 
   toggleVisible(activeDropdown);
   toggleActive(dropbtn);
 }
 
 // Close the dropdowns if the user clicks outside of them
-window.onclick = function(e) {
-  if (!e.target.matches('.dropbtn') && !e.target.matches('.dropdown')) {
-    dropdowns.forEach(dropdown => hide(dropdown));
-    dropbtns.forEach(dropbtn => turnInactive(dropbtn));
+window.onclick = function (e) {
+  if (!e.target.matches(".dropbtn") && !e.target.matches(".dropdown")) {
+    dropdowns.forEach((dropdown) => hide(dropdown));
+    dropbtns.forEach((dropbtn) => turnInactive(dropbtn));
   }
-}
+};
