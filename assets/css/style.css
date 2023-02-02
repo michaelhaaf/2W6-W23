@@ -359,6 +359,20 @@ article ul, ol {
 }
 
 
+/* Table styles inspired by:
+* https://pencilandpaper.io/articles/ux-pattern-analysis-enterprise-data-tables/
+*/
+
+th {
+  text-align: left;
+  padding-right: 0.75rem;
+}
+
+td {
+  vertical-align: top; 
+  padding-right: 0.75rem;
+}
+
 
 
 
@@ -576,7 +590,7 @@ article ul, ol {
   || Containers
 \* ------------------------------------------ */
 
-.header {
+header.header {
   display: flex;
   justify-content: space-between;
   align-items: end;

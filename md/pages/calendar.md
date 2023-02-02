@@ -7,41 +7,15 @@ toc-title: "On this page"
 lang: "en"
 ---
 
-Currently, this is just a copy of the calendar from the [Tentative Schedule]() in the course outline. 
+This is the authoritative calendar for content covered in this class. It is live, up-to-date, and retroactively maintained to contain all of the lecture/tuturial/reading/assignment/test material covered in this course. 
 
-**Stay tuned!** I will soon link lecture notes, recommended readings, and other updates in this calendar as we progress through the course.
+You can compare this calendar with the calendar from the [Course Outline](../pages/course-outline.html#tentative-schedule) to see where this course has deviated from the original outline.
 
-  -------- --------------------------------------------------------------
-  Week 1   UI fundamentals; Tools: VS Code, Browser Dev Tools, Codepen
+**Stay tuned:** Throughout the semester I will update this calendar with each week's resources. I will make corresponding updates on **LEA** so that you continue to get notifications through the regular college channels; however, these links will usually just take you to this page unless I indicate otherwise.
 
-  Week 2   HTML -- Syntax, Elements, Structure vs. Content
-
-  Week 3   HTML -- DOM Model, Semantic HTML
-
-  Week 4   Introduction to CSS -- Syntax, Selectors, Styles
-
-  Week 5   Introduction to CSS -- Layouts, Box model
-
-  Week 6   Introduction to CSS -- Flexbox
-
-  Week 7   Introduction to JavaScript -- Manipulating the DOM, Dynamic
-           styling
-
-  Week 8   **Test 1**
-
-  Week 9   Responsive Web Design
-
-  Week 10  Intermediate CSS -- Layouts, Grid
-
-  Week 11  Intermediate CSS -- The Cascade, Best Practises
-
-  Week 12  Putting it all together: HTML Forms
-
-  Week 13  HTML Forms with Event-driven UI
-
-  Week 14  Content Management Systems, **Test 2**
-
-  Week 15  Content Management Systems
-  -------- --------------------------------------------------------------
-
-
++------+-----------------------------+----------------------------------+-----------------------------------+
+| Week | Topics/Assessements         | Lectures                         | Readings/Resources                |
++======+=============================+==================================+===================================+
+| 1    | Introduction to HTML        | [Week 1](../lectures/week1.html) | - [Odin Project: Intro to HTML]() |
+|      |                             |                                  | - [W3Schools: HTML attributes]()  |
++------+-----------------------------+----------------------------------+-----------------------------------+
