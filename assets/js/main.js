@@ -26,7 +26,7 @@ const pageContent = document.querySelector("article.article");
 const pageToc = document.querySelector(".nav--page");
 
 const tocLinks = pageToc ? pageToc.querySelectorAll(":scope a") : [];
-const allHeaders = pageContent.querySelectorAll(":scope > h1, :scope > h2");
+const allHeaders = pageContent.querySelectorAll(":scope > h1, :scope > h2, :scope > h3");
 
 const observerOptions = {
   root: null,
