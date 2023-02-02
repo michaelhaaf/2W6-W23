@@ -17,8 +17,6 @@ toc-title: "In this article"
 
 > Semantic html elements clearly describe their **purpose to both the browser and the developer**, allowing the information to be consumed in the correct format **according to the user**.
 
-<br>
-
 ![page_talking](https://web.archive.org/web/20190712210225im_/https://internetingishard.com/html-and-css/icons/social/semantic-markup-096a41.png ':size=400')
 
 
@@ -32,7 +30,6 @@ You have already been using basic semantic elements:
 - &lt;p>
 - &lt;h1>, &lt;h2>, etc  
 
-
 ## Semantics: Page Structure
 
 There are [many html semantic elements](https://learn-the-web.algonquindesign.ca/topics/html-semantics-cheat-sheet/) which are part of HTML5.
@@ -40,30 +37,18 @@ There are [many html semantic elements](https://learn-the-web.algonquindesign.ca
 From here on, we will incorporate the following html elements into our sites:
 
 - `<header>`
-
 - `<nav>`
-
 - `<article>`
-
 - `<section>`
-
 - `<aside>`
-
 - `<footer>`
-
 - `<figure>` and `<figcaption>`
-
 - `<time>`
-
 - `<address>`
-
-  <br>
 
 Let's understand the purpose of each element:
 
-<br>
-
-**`<header>`**
+### `<header>`
 
 Found at the top of a document, a section, or an article and  usually contains the main heading. It may contain some navigation and search tools.
 
@@ -72,9 +57,8 @@ Found at the top of a document, a section, or an article and  usually contains t
     <h1>My Amazing Company</h1>
 </header>
 ```
-<br>
 
-**`<nav>`**
+### `<nav>`
 
 The navigation bar. Defines the navigation functionality for the page.
 
@@ -87,9 +71,8 @@ The navigation bar. Defines the navigation functionality for the page.
   </ul>
 </nav>
 ```
-<br>
 
-**`<main>`**
+### `<main>`
 
 Specifies a big area in the center that contains most of content unique to a page. Used only once on a page.  
 
@@ -97,7 +80,7 @@ Use `<main>` only once per page, and put it directly inside `<body>`. Ideally th
 
 <br>
 
-**`<article>`**
+### `<article>`
 
  A block of related content that makes sense on its own without the rest of the page (e.g., a single blog post or a sales item in an e-commerce website).
 
@@ -105,7 +88,7 @@ Use `<main>` only once per page, and put it directly inside `<body>`. Ideally th
 
 <br>
 
-**`<section>`**
+### `<section>`
 
  A thematic grouping of content that constitutes one single piece of functionality. (e.g., a set of article headlines, blog posts or summaries). Often used to group  `<article>` elements.
 
@@ -133,7 +116,7 @@ Use `<main>` only once per page, and put it directly inside `<body>`. Ideally th
 ```
 <br>
 
-**`<aside>`**
+### `<aside>`
 
 Defines content that is not directly related to the main content but can provide additional information indirectly related to it (glossary entries,  author biography, , quotes, stats, related links, etc.). Also commonly used for advertisement blocks or images.
 
@@ -141,7 +124,7 @@ Defines content that is not directly related to the main content but can provide
 
 <br>
 
-**`<footer>`**
+### `<footer>`
 
 Generally found at the bottom of a document or section.  Typically contains the author of the document, copyright  information, links to terms of use, contact information, etc.
 
@@ -154,7 +137,7 @@ Generally found at the bottom of a document or section.  Typically contains the 
 ```
 <br>
 
-**`<figure>`** and **`<figcaption>`**
+### `<figure>` and `<figcaption>`
 
 Used together in order to add information or a visual explanation to an image. Wrap your image content around `<figure>` and use `<figcaption>` to add  captions. 
 
@@ -166,7 +149,7 @@ Used together in order to add information or a visual explanation to an image. W
 ```
 <br>
 
-**`<time>`**
+### `<time>`
 
 Used to define a time and a date as human-readable text and/or as unambiguous machine-readable information.
 
@@ -176,20 +159,18 @@ Particularly useful for search engines (ex.: return only pages published after a
 
 ```html
 <p>We open at <time>10:00</time> every morning.</p>
-
 <p>By Troy McClure. Published <time datetime='2017-1-3'>January 3rd</time></p> 
 ```
 
 *Result*
 
-<div style="background-color: rgb(248, 248, 246)">
+<div>
 	<p>We open at <time>10:00</time> every morning.</p>
   <p>By Troy McClure. Published <time datetime='2017-1-3'>January 3rd</time></p>
 </div>
-<br>
 
 
-**`<address>`**
+### `<address>`
 
 Defines contact information for the author of the article or web page. Should not be used for arbitrary physical addresses.
 
