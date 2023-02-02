@@ -5,6 +5,15 @@ author: Michael Haaf
 date: 2023-01-18
 theme: solarized
 toc-title: "In this article"
+abstract-title: "Lesson Overview"
+abstract: |
+  This is markdown. Multiple pargraphs are possible? 
+
+  Hmm....
+
+  - list
+  - another list item
+  - [Section link](#html-content-elements)
 ---
 
 # HTML Fundamentals

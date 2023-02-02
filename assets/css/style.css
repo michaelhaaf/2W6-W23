@@ -1,0 +1,724 @@
+/* ------------------------------------------ *\
+  || Table of Contents
+\* ------------------------------------------ */
+
+/* 
+* || Themes
+*
+* || Global
+*   - margin, padding, box-sizing
+*
+* || Typography
+*   - text elements redefined for vertical rythm, measure
+*   - p, h1-6, 
+*
+* || Utilities
+*   - .hidden, .text-shadow, etc.
+*
+* || Objects
+*   - .nav links, buttons, and dropdowns
+*
+* || Containers
+*   - .header, .main, .footer, .aside--site, .aside--page
+*
+* || Layout
+*   - .page-container grid definition
+*
+* || Overrides
+*   - @media responsive design
+* 
+* || Acknowledgements:
+*   Resources used in creating this design cited inline.
+* 
+*   Document structure inspired by: 
+*     - https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing
+*     - https://cssguidelin.es/
+*/
+
+
+
+
+
+/* ------------------------------------------ *\
+  || Themes
+\* ------------------------------------------ */
+
+:root {
+  /* Colors, filters, and properties common to both themes */
+  color-scheme: dark light;
+
+  --shadow: #232136aa;
+  --light-fg-high: #f4ede8;
+  --light-fg-med: #dfdad9;
+  --light-fg-low: #cecacd;
+  --dark-fg-high: #2a283e;
+  --dark-fg-med: #44415a;
+  --dark-fg-low: #56526e;
+
+  --filter-black: brightness(0) saturate(100%);
+  --filter-dark: invert(9%) sepia(8%) saturate(3970%) hue-rotate(206deg)
+    brightness(95%) contrast(88%);
+  --filter-light: invert(97%) sepia(58%) saturate(986%) hue-rotate(180deg)
+    brightness(100%) contrast(92%);
+}
+
+:root,
+:root[data-theme="light"] {
+/* Adaptation of Rose Pine Dawn theme: 
+* https://rosepinetheme.com/palette/ingredients 
+*/
+  --base: #faf4ed;
+  --surface: #fffaf3;
+  --overlay: #f2e9e1;
+  --muted: #9893a5;
+  --subtle: #797593;
+  --text: #575279;
+  --accent-red: #b4637a;
+  --accent-gold: #ea9d34;
+  --accent-orange: #d7827e;
+  --accent-teal: #286983;
+  --accent-foam: #56949f;
+  --accent-violet: #907aa9;
+  --highlight-low: #f4ede8;
+  --highlight-med: #dfdad9;
+  --highlight-high: #cecacd;
+
+  --gradient-opacity: 0.7;
+  --header-image: url("../images/light-theme/guggenheim-books.jpg");
+}
+
+:root[data-theme="dark"] {
+/* Adaptation of Rose Pine Moon theme: 
+* https://rosepinetheme.com/palette/ingredients 
+*/
+  --base: #232136;
+  --surface: #2a273f;
+  --overlay: #393552;
+  --muted: #6e6a86;
+  --subtle: #908caa;
+  --text: #e0def4;
+  --accent-red: #eb6f92;
+  --accent-gold: #f6c177;
+  --accent-orange: #ea9a97;
+  --accent-teal: #3e8fb0;
+  --accent-foam: #9ccfd8;
+  --accent-violet: #c4a7e7;
+  --highlight-low: #2a283e;
+  --highlight-med: #44415a;
+  --highlight-high: #56526e;
+
+  --gradient-opacity: 0.9;
+  --header-image: url("../images/dark-theme/guggenheim-brown.jpg");
+}
+
+@media screen and (prefers-color-scheme: dark) {
+/* Media theme preference query
+* I have not yet found a (non-js) way to avoid repeating one theme spec in order to use prefers-color-scheme automatically.
+* Here we redefine :root such that the dark theme is default when the user has specified it should be using their browser/OS configuration.
+*/
+  :root {
+    --base: #232136;
+    --surface: #2a273f;
+    --overlay: #393552;
+    --muted: #6e6a86;
+    --subtle: #908caa;
+    --text: #e0def4;
+    --accent-red: #eb6f92;
+    --accent-gold: #f6c177;
+    --accent-orange: #ea9a97;
+    --accent-teal: #3e8fb0;
+    --accent-foam: #9ccfd8;
+    --accent-violet: #c4a7e7;
+    --highlight-low: #2a283e;
+    --highlight-med: #44415a;
+    --highlight-high: #56526e;
+
+    --gradient-opacity: 0.9;
+    --header-image: url("../images/dark-theme/guggenheim-brown.jpg");
+  }
+}
+
+
+
+
+
+/* ------------------------------------------ *\
+  || Global
+\* ------------------------------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+*,
+*::before,
+*::after {
+/* 
+* Universal Box Sizing best practise, for max flexibility and :pseudo support.
+* See https://css-tricks.com/box-sizing/
+*/
+  box-sizing: inherit;
+}
+
+a:link {
+  color: var(--accent-foam);
+}
+a:visited {
+  color: var(--accent-violet);
+}
+
+img {
+/*
+* <img> tag fallback.
+* See https://bitsofco.de/styling-broken-images/
+* */
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: center;
+
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+}
+
+img::before {
+  content: "There should be an image here... very suspicious.";
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+img::after {
+  content: "(url: " attr(src) ")";
+  display: block;
+}
+
+
+
+
+
+/* ------------------------------------------ *\
+  || Typography
+\* ------------------------------------------ */
+
+/* 
+* Choices and approach borrowed heavily from the following:
+*   - "The Perfect Paragraph" and "Applying Macrotypography" https://www.smashingmagazine.com/2011/11/the-perfect-paragraph
+*   - https://vanseodesign.com/web-design/baseline-grid/
+*   - https://topfunky.com/baseline-rhythm-calculator/ 
+*/
+
+em {
+  font-style: italic;
+}
+strong {
+  font-style: bold;
+}
+
+body {
+  font-family: system-ui, georgia, serif;
+  word-spacing: -0.05rem;
+
+  line-height: 1.5;
+
+  overflow-y: visible;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+h1.title {
+  margin-top: 0;
+}
+
+h2 {
+  margin-top: 1.5rem;
+  font-size: 1.375rem;
+  line-height: 1.0909;
+  padding-top: 0.7500em;
+  margin-bottom: 0.3409em;
+}
+h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  padding-top: 0.75em;
+  margin-bottom: 0.45em;
+}
+h4 {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.3333;
+  margin-bottom: 1.3333em;
+}
+h5,h6 {
+  text-transform: uppercase;
+}
+
+h5,
+p,
+ol,
+ul,
+code,
+td,
+th,
+label {
+  font-size: 1rem;
+  line-height: 1.5;
+  padding-top: 0.375rem;
+  margin-bottom: 1.125rem;
+}
+
+.caption,
+figcaption {
+  font-size: 0.875rem;
+  margin: 0;
+  padding-top: 0.625rem;
+}
+
+code,
+pre {
+  white-space: pre-wrap;
+}
+
+h6.sourceCode,
+div.sourceCode {
+  background-color: var(--overlay);
+  border-left: 0.25rem solid var(--accent-orange);
+  padding: 0.75rem;
+  padding-bottom: 1.5rem;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+h6.sourceCode {
+  margin-bottom:0;
+  padding: 0;
+  padding-right: 0.25rem;
+  padding-top: 0.25rem;
+  text-align: right;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+blockquote {
+  margin-bottom: 1.5rem;
+  padding-inline-start: 1rem;
+  border-left: 0.25rem solid var(--highlight-med);
+  border-radius: 0.25rem;
+}
+
+p.small {
+  font-size: 0.875rem;
+  line-height: 1.7142;
+  margin-bottom: 1.7142rem;
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+article {
+  padding-top: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 3rem;
+  padding-left: 1.5rem;
+}
+
+article p,
+article li {
+  color: var(--subtle);
+}
+
+article li,
+article ol,
+article ul {
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+article ul, ol {
+  padding-left: 2rem;
+}
+
+.note-text {
+  font-size: 0.625rem;
+  line-height: 1.5rem;
+}
+
+
+/* Table styles inspired by:
+* https://pencilandpaper.io/articles/ux-pattern-analysis-enterprise-data-tables/
+*/
+
+th {
+  text-align: left;
+  padding-right: 0.75rem;
+}
+
+td {
+  vertical-align: top; 
+  padding-right: 0.75rem;
+}
+
+
+
+
+/* ------------------------------------------ *\
+  || Utilities
+\* ------------------------------------------ */
+
+.hidden {
+  /* !important required for this utility, I think it's appropriate */
+  display: none !important;
+}
+
+.text-shadow {
+  text-shadow: 0.125em 0.125em 2px var(--shadow);
+  color: var(--light-fg-med);
+}
+
+.baseline-grid {  
+  background-image: url("../assets/images/baseline-grid.svg"); 
+}  
+
+/* ------------------------------------------ *\
+  || Objects
+\* ------------------------------------------ */
+
+.base {
+  background-color: var(--base);
+  color: var(--text);
+}
+
+.surface {
+  background-color: var(--surface);
+  color: var(--text);
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 16%);
+}
+
+.overlay {
+  background-color: var(--overlay);
+  color: var(--text);
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 16%);
+}
+
+.dropbtn {
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+/* 
+* ||| nav objects 
+*
+* Design choice: <nav> is classed; <ul>, <li> and <a> modified within scope
+* Reasoning: I'm using autogenerated HTML lists of <a> for page/site and placing them within a classed nav in my pandoc template. It is easier/more flexible to class one ancestor than all decendants.
+* Cons: couples CSS to specific HTML structure. I think it's a principled choice but I may refactor in the future.
+*/
+
+/*
+*
+* Assumed structure:
+*   - .nav > ul > li > a 
+* Subclass additions:
+*   - .nav.nav--site > ul > li > button.dropbtn + ul.dropdown > li > a
+*   - .nav.nav--page > ul > li > ul > li > a (etc.)
+*
+* Object behavior:
+*   - <ul>, <li>, <a>, <button>: reset style
+*   - <a>, <button>: takes up available space so entirety can be clicked
+*   - <ul>.dropdown: display toggle, drops at parent width
+* Subclass additions:
+*   - .nav--site ul: 
+*   - .nav--page ul:
+*/
+
+/*
+* ||| .nav <a> 
+*/
+
+.nav a:link,
+.nav a:visited,
+.nav .dropbtn {
+  background-color: var(--surface);
+  color: var(--subtle);
+  font-size: 0.875em;
+  line-height: 1.5rem;
+
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} 
+
+.nav a:hover,
+.nav .dropbtn:hover {
+  background-color: var(--overlay);
+  cursor: pointer;
+}
+
+.nav a.active:link,
+.nav a.active:visited,
+.nav .dropbtn.active {
+  background-color: var(--overlay);
+  color: var(--accent-red);
+  font-weight: bold;
+}
+
+/* 
+* ||| nav <ul> and <li> 
+*/
+.nav ul,
+.nav li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+* |||| .nav--page <a>
+*/
+
+.nav--page a {
+  display: block;
+  border-left: 2px solid var(--muted);
+  border-radius: 0.5px;
+  width: 30ch;
+  text-align: left;
+}
+
+.nav--page a.active {
+  border-left: 3px solid var(--accent-red);
+}
+
+/* 
+* |||| nav--site <a> and <button> 
+*/
+
+.nav--site a,
+.nav--site .dropbtn {
+  flex: 1;
+  display: inline-block;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  text-align: center;
+}
+
+/* 
+* |||| nav--site .dropdown
+*/
+
+.nav--site .dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-top: 3rem;
+  z-index: 1;
+  background-color: var(--overlay);
+}
+
+.nav .dropdown a {
+  background-color: var(--overlay);
+  padding-left: 2rem;
+  padding-right: 3rem;
+}
+
+.nav--site .dropdown a:hover {
+  background-color: var(--accent-foam);
+  color: var(--base);
+  font-weight: bold;
+}
+
+/* 
+* |||| nav--site <ul> <li> and <a>
+*/
+
+.nav--site > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.nav--site li {
+  flex: 1;
+  display: flex;
+}
+
+/*
+* |||| nav--page <ul> <li> and <a>
+*/
+
+.nav--page h2 {
+  padding-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.nav--page ul {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  margin: 0;
+  padding: 0;
+}
+
+/* this code stinks! */
+.nav--page li > ul > li > a {
+  text-indent: 1.5rem;  
+}
+
+.nav--page li > ul > li > ul > li > a {
+  text-indent: 2.5rem;
+}
+
+
+
+
+
+/* ------------------------------------------ *\
+  || Containers
+\* ------------------------------------------ */
+
+header.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(35, 33, 54, 0%),
+      rgba(35, 33, 54, var(--gradient-opacity))
+    ),
+    var(--header-image);
+
+  padding-top: 3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.header h1 {
+  margin-bottom: -0.625rem;
+  padding-top: 0.875rem;
+  color: var(--light-fg-high);
+}
+
+.aside--page * {
+  text-align: left;
+  text-indent: 0.75rem;
+}
+
+.aside--site h2 {
+  display: none;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+/* ------------------------------------------ *\
+  || Layout
+\* ------------------------------------------ */
+
+.header {
+  grid-area: hd;
+}
+
+.main {
+  grid-area: mn;
+}
+
+.footer {
+  grid-area: ft;
+}
+
+.aside--site {
+  grid-area: nv;
+}
+
+.aside--page {
+  grid-area: sd;
+  display: none;
+}
+
+.page-container {
+  display: grid;
+  grid-template-columns: minmax(20rem, 1fr);
+  grid-template-areas:
+    "hd"
+    "nv"
+    "mn"
+    "ft";
+  margin: 0 auto;
+  width: min(100vw, 1500px);
+}
+
+
+
+
+
+/* ------------------------------------------ *\
+  || Overrides
+\* ------------------------------------------ */
+
+
+
+#title-block-header p {
+/* Generated by Pandoc */
+  display: inline-block;
+}
+
+@media only screen and (min-width: 40rem) {
+  .page-container {
+    grid-template-columns: minmax(20rem, 3fr) 1fr;
+    grid-template-areas:
+      "hd hd"
+      "nv nv"
+      "mn sd"
+      "ft sd";
+  }
+
+  .aside--page {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 60rem) {
+  .page-container {
+    grid-template-columns: 1fr minmax(20rem, 4fr) 1fr;
+    grid-template-areas:
+      "hd hd hd"
+      "nv mn sd"
+      "nv mn sd"
+      "ft ft ft";
+  }
+
+  .nav--site ul {
+    flex-direction: column;
+  }
+
+  .nav--site a, 
+  .nav--site .dropbtn {
+    padding-left: 0.75rem;
+    text-align: left;
+  }
+}
