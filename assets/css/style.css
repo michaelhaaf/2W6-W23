@@ -328,6 +328,7 @@ p.small {
 table {
   border-collapse: collapse;
   margin-bottom: 1.5rem;
+  width: 100%;
 }
 
 article {
@@ -371,6 +372,7 @@ th {
 td {
   vertical-align: top; 
   padding-right: 0.75rem;
+  font-size: 0.75rem;
 }
 
 
@@ -532,8 +534,8 @@ td {
 
 .nav .dropdown a {
   background-color: var(--overlay);
-  padding-left: 2rem;
-  padding-right: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 7rem;
 }
 
 .nav--site .dropdown a:hover {
@@ -697,6 +699,16 @@ header.header {
       "ft sd";
   }
 
+  /* Note: duplication with this implementation. Needs refactor */
+  .page-container[data-layout="column"] {
+    grid-template-columns: minmax(20rem, 1fr);
+    grid-template-areas:
+      "hd"
+      "nv"
+      "mn"
+      "ft";
+  }
+
   .aside--page {
     display: flex;
   }
@@ -710,6 +722,16 @@ header.header {
       "nv mn sd"
       "nv mn sd"
       "ft ft ft";
+  }
+
+  /* Note: duplication with this implementation. Needs refactor */
+  .page-container[data-layout="column"] {
+    grid-template-columns: 1fr minmax(20rem, 5fr);
+    grid-template-areas:
+      "hd hd"
+      "nv mn"
+      "nv mn"
+      "ft ft";
   }
 
   .nav--site ul {
