@@ -375,6 +375,12 @@ td {
   font-size: 0.75rem;
 }
 
+/* Unclear semantics, needs refactor */
+td h5 {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
 
 
 
