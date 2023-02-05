@@ -22,15 +22,16 @@ You can compare this calendar with the calendar from the [Course Outline](../pag
 |                  | HTML - boilerplate HTML5, content elements <br>                 | Activity: [Writing HTML Boilerplate][actBoilerplate]  <br>         |
 |                  | HTML - fundamentals, syntax, elements <br>                      |                                                                    |
 +------------------+-----------------------------------------------------------------+--------------------------------------------------------------------+
-| [Week 2][lec2]   | HTML - element attributes, document markup <br>                 | Tutorial: [Marking up a letter][tut1] <br>                         |
+| [Week 2][lec2]   | HTML - element attributes, document markup <br>                 | Tutorial: [Marking up a letter][tutDocument] <br>                  |
 |                  | HTML - normal flow, block vs inline elements <br>               | Activity: VS Code shortcuts, editting, Emmet <br>                  |
 |                  | Tools - VS Code skills for efficient web development <br>       | * [Part 1][actVSCode1]                                             |
 |                  |                                                                 | * [Part 2][actVSCode2]                                             |
 +------------------+-----------------------------------------------------------------+--------------------------------------------------------------------+
 | [Week 3][lec3]   | HTML - semantic elements, website markup <br>                   | **Lab 2 (11%, due Feb 14):** [Website layout and style][lab2] <br> |
+|                  | Tools - browser dev tools for CSS/DOM inspection <br>           | Tutorial: [Document and Website Structure][tutWebsite] <br>        |
 |                  | CSS - inline vs internal vs external <br>                       | Activity: [CSS Diner][actDiner] <br>                               |
 |                  | CSS - fundamentals, syntax, selectors <br>                      | Activity: How to use the Browser Dev Tools <br>                    |
-|                  | Tools - using the Browser Dev Tools for CSS/DOM inspection      | * [Part 1][actBrowser1]                                            |
+|                  |                                                                 | * [Part 1][actBrowser1]                                            |
 |                  |                                                                 | * [Part 2][actBrowser2]                                            |
 +------------------+-----------------------------------------------------------------+--------------------------------------------------------------------+
 | [Week 4][lec4]   | CSS - element properties: images, icons, fonts <br>             |                                                                    |
@@ -85,7 +86,8 @@ You can compare this calendar with the calendar from the [Course Outline](../pag
 [pm1]: ../assignments/milestone1 "Project Milestone 1: worth 15%, due TBD"
 [pm2]: ../assignments/milestone2 "Project Milestone 2: worth 15%, due TBD"
 
-[tut1]: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter "MDN: Marking up a Letter. Make sure you are familiar with all of the HTML elements covered in this tut."
+[tutDocument]: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter "MDN: Marking up a Letter. Make sure you are familiar with all of the HTML elements covered in this tut."
+[tutWebsite]: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure "MDN: Document and website structure. This is a very helpful tutorial for getting started on Lab2."
 
 [actBoilerplate]: ../tutorials/boilerplate.html "Completed Boilerplate HTML file, with all elements commented."
 [actVSCode1]: https://www.youtube.com/watch?v=V8vizNQKtx0 "Web Dev Simplified (YouTube): This video shows how to use 'Emmets' in VS Code to generate HTML tags and boilerplate automatically." 

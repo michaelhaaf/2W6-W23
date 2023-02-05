@@ -9,11 +9,9 @@ lang: "en"
 
 This article was converted to html for presentation on this website using [pandoc](https://pandoc.org/). The course outline is also available for download as a [.pdf file](../assets/documents/course_outline.pdf).
 
-# GENERAL INFORMATION
-
 +-------------------+--------------------------------------------------+
 | Program           | Computer Science Technology 420.B0               |
-+-------------------+--------------------------------------------------+
++===================+==================================================+
 | Course Title      | **User Interfaces**                              |
 +-------------------+--------------------------------------------------+
 | Course Number     | **420-2W6-AB**                                   |
@@ -31,8 +29,7 @@ This article was converted to html for presentation on this website using [pando
 | Competency and    | Develop transactional Web applications. 00SU.    |
 | Code              |                                                  |
 +-------------------+--------------------------------------------------+
-| Prerequisites     | 420-1P6-AB                                       |
-+-------------------+--------------------------------------------------+
+| Prerequisites     | 420-1P6-AB \                                     |
 |                   | This course is a prerequisite for 420-3W5-AB and |
 |                   | 420-4A8-AB                                       |
 +-------------------+--------------------------------------------------+
@@ -83,21 +80,20 @@ Competency 00SU. Develop transactional Web applications. Achievement Context:
 
 # EVALUATION PLAN
 
-+--------------------------------------------------------------+-------+
-| ### **Objective:**                                           | ###   |
-|                                                              | **00S |
-|                                                              | U.4** |
-+--------------------------------------------------------------+-------+
-| **Assignments Labs & Quizzes** 40%                           | x     |
-+--------------------------------------------------------------+-------+
-| **Test 1 (Week 8)** 15%                                      | x     |
-+--------------------------------------------------------------+-------+
-| **Test 2 (Week 14)** 15%                                     | x     |
-+--------------------------------------------------------------+-------+
-| **Project Milestone 1** 15%                                  | x     |
-+--------------------------------------------------------------+-------+
-| **Project Milestone 2** 15%                                  | x     |
-+--------------------------------------------------------------+-------+
++------------------------------------+-------+
+| **Objective:**                     | **00S |
+|                                    | U.4** |
++------------------------------------+-------+
+| **Assignments Labs & Quizzes** 40% | x     |
++------------------------------------+-------+
+| **Test 1 (Week 8)** 15%            | x     |
++------------------------------------+-------+
+| **Test 2 (Week 14)** 15%           | x     |
++------------------------------------+-------+
+| **Project Milestone 1** 15%        | x     |
++------------------------------------+-------+
+| **Project Milestone 2** 15%        | x     |
++------------------------------------+-------+
 
 (Note: Weeks indicated for Tests and Project are tentative. Final evaluation consists of the tests, the project, and the
 assignments).
