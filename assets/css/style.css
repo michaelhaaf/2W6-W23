@@ -36,10 +36,6 @@
 *     - https://cssguidelin.es/
 */
 
-
-
-
-
 /* ------------------------------------------ *\
   || Themes
 \* ------------------------------------------ */
@@ -65,7 +61,7 @@
 
 :root,
 :root[data-theme="light"] {
-/* Adaptation of Rose Pine Dawn theme: 
+  /* Adaptation of Rose Pine Dawn theme: 
 * https://rosepinetheme.com/palette/ingredients 
 */
   --base: #faf4ed;
@@ -89,7 +85,7 @@
 }
 
 :root[data-theme="dark"] {
-/* Adaptation of Rose Pine Moon theme: 
+  /* Adaptation of Rose Pine Moon theme: 
 * https://rosepinetheme.com/palette/ingredients 
 */
   --base: #232136;
@@ -113,7 +109,7 @@
 }
 
 @media screen and (prefers-color-scheme: dark) {
-/* Media theme preference query
+  /* Media theme preference query
 * I have not yet found a (non-js) way to avoid repeating one theme spec in order to use prefers-color-scheme automatically.
 * Here we redefine :root such that the dark theme is default when the user has specified it should be using their browser/OS configuration.
 */
@@ -139,10 +135,6 @@
   }
 }
 
-
-
-
-
 /* ------------------------------------------ *\
   || Global
 \* ------------------------------------------ */
@@ -161,7 +153,7 @@ html {
 *,
 *::before,
 *::after {
-/* 
+  /* 
 * Universal Box Sizing best practise, for max flexibility and :pseudo support.
 * See https://css-tricks.com/box-sizing/
 */
@@ -176,7 +168,7 @@ a:visited {
 }
 
 img {
-/*
+  /*
 * <img> tag fallback.
 * See https://bitsofco.de/styling-broken-images/
 * */
@@ -201,10 +193,6 @@ img::after {
   display: block;
 }
 
-
-
-
-
 /* ------------------------------------------ *\
   || Typography
 \* ------------------------------------------ */
@@ -217,39 +205,67 @@ img::after {
 @charset "UTF-8";
 
 @font-face {
-    font-family: "et-book";
-    src: url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
-    src: url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"), url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff"), url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf") format("truetype"), url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "et-book";
+  src: url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
+  src: url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff")
+      format("woff"),
+    url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf")
+      format("truetype"),
+    url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "et-book";
-    src: url("../fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
-    src: url("../fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"), url("../fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff"), url("../fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf") format("truetype"), url("../fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf") format("svg");
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
+  font-family: "et-book";
+  src: url("../fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
+  src: url("../fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff")
+      format("woff"),
+    url("../fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf")
+      format("truetype"),
+    url("../fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf")
+      format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "et-book";
-    src: url("../fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
-    src: url("../fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"), url("../fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff"), url("../fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf") format("truetype"), url("../fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+  font-family: "et-book";
+  src: url("../fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
+  src: url("../fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff")
+      format("woff"),
+    url("../fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf")
+      format("truetype"),
+    url("../fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf")
+      format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "et-book-roman-old-style";
-    src: url("../fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot");
-    src: url("../fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot?#iefix") format("embedded-opentype"), url("../fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff") format("woff"), url("../fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf") format("truetype"), url("../fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.svg#etbookromanosf") format("svg");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "et-book-roman-old-style";
+  src: url("../fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot");
+  src: url("../fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff")
+      format("woff"),
+    url("../fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf")
+      format("truetype"),
+    url("../fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.svg#etbookromanosf")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* 
@@ -268,7 +284,8 @@ strong {
 }
 
 body {
-  font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD",
+    "Book Antiqua", Georgia, serif;
   word-spacing: -0.05rem;
   line-height: 1.5;
   overflow-y: visible;
@@ -292,7 +309,7 @@ h2 {
   margin-bottom: 0.3409em;
   font-size: 1.375rem;
   line-height: 1.0909;
-  padding-top: 0.7500em;
+  padding-top: 0.75em;
   font-style: italic;
   font-weight: 400;
 }
@@ -322,13 +339,13 @@ h6 {
 }
 
 hr {
-    display: block;
-    height: 1px;
-    width: 55%;
-    border: 0;
-    border-top: 1px solid var(--text);
-    margin: 1.5rem 0;
-    padding: 0;
+  display: block;
+  height: 1px;
+  width: 55%;
+  border: 0;
+  border-top: 1px solid var(--text);
+  margin: 1.5rem 0;
+  padding: 0;
 }
 
 h5,
@@ -368,7 +385,7 @@ div.sourceCode {
 }
 
 h6.sourceCode {
-  margin-bottom:0;
+  margin-bottom: 0;
   padding: 0;
   padding-right: 0.25rem;
   padding-top: 0.25rem;
@@ -409,7 +426,8 @@ article ul {
   font-size: 1rem;
 }
 
-article ul, ol {
+article ul,
+ol {
   padding-left: 2rem;
 }
 
@@ -417,7 +435,6 @@ article ul, ol {
   font-size: 0.625rem;
   line-height: 1.5rem;
 }
-
 
 /* Table styles inspired by:
 * https://pencilandpaper.io/articles/ux-pattern-analysis-enterprise-data-tables/
@@ -436,7 +453,7 @@ th {
 }
 
 td {
-  vertical-align: top; 
+  vertical-align: top;
   padding-right: 0.875rem;
   font-size: 0.875rem;
 }
@@ -445,9 +462,6 @@ td {
 td h5 {
   margin-bottom: 0;
 }
-
-
-
 
 /* ------------------------------------------ *\
   || Utilities
@@ -463,9 +477,9 @@ td h5 {
   color: var(--light-fg-med);
 }
 
-.baseline-grid {  
-  background-image: url("../assets/images/baseline-grid.svg"); 
-}  
+.baseline-grid {
+  background-image: url("../assets/images/baseline-grid.svg");
+}
 
 /* ------------------------------------------ *\
   || Objects
@@ -535,7 +549,7 @@ td h5 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-} 
+}
 
 .nav a:hover,
 .nav .dropbtn:hover {
@@ -648,16 +662,12 @@ td h5 {
 
 /* this code stinks! */
 .nav--page li > ul > li > a {
-  text-indent: 1.5rem;  
+  text-indent: 1.5rem;
 }
 
 .nav--page li > ul > li > ul > li > a {
   text-indent: 2.5rem;
 }
-
-
-
-
 
 /* ------------------------------------------ *\
   || Containers
@@ -703,11 +713,6 @@ header.header {
   align-items: center;
 }
 
-
-
-
-
-
 /* ------------------------------------------ *\
   || Layout
 \* ------------------------------------------ */
@@ -745,18 +750,12 @@ header.header {
   width: min(100vw, 1500px);
 }
 
-
-
-
-
 /* ------------------------------------------ *\
   || Overrides
 \* ------------------------------------------ */
 
-
-
 #title-block-header p {
-/* Generated by Pandoc */
+  /* Generated by Pandoc */
   display: inline-block;
 }
 
@@ -809,7 +808,7 @@ header.header {
     flex-direction: column;
   }
 
-  .nav--site a, 
+  .nav--site a,
   .nav--site .dropbtn {
     padding-left: 0.75rem;
     text-align: left;
