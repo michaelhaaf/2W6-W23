@@ -32,7 +32,7 @@ clean:
 # Run this if a new file has been added to a dynamic contect directory 
 listings:
 	tree lectures -H ../lectures | htmlq "body p a" | grep html > ./assets/listings/lecture-listing.html
-	tree assignments -H ../assignments | htmlq "body p a" | grep pdf > ./assets/listings/assignment-listing.html
+	tree assignments -L 1 -H ../assignments | htmlq "body p a" | tail -n +2 > ./assets/listings/assignment-listing.html
 
 # If dynamic contect directories changed, update template and mark all targets for update
 $(PAGE_TEMPLATE): assets/listings/*.html
