@@ -57,9 +57,9 @@ You can compare this calendar with the calendar from the [Course Outline](../pag
 | [Week 13][lec13] | HTML Forms with Event-driven UI <br>                            |                                                                    |
 +------------------+-----------------------------------------------------------------+--------------------------------------------------------------------+
 | [Week 14][lec14] | **Test Review**: Review all material covered so far <br>        | **Test 2 (15%, TBD)** <br>                                         |
-|                  | Content Management Systems - Introduction to Wordpress          | Project Milestone 1 (15%, due end of classes): TBD                 |
+|                  | Content Management Systems - Introduction to Wordpress          | **Project Milestone 1 (15%, due end of classes):** TBD             |
 +------------------+-----------------------------------------------------------------+--------------------------------------------------------------------+
-| [Week 15][lec15] | Content Management Systems - Creating/Modifying a Wordpress CMS | Project Milestone 2 (15%, due end of exams): TBD                   |
+| [Week 15][lec15] | Content Management Systems - Creating/Modifying a Wordpress CMS | **Project Milestone 2 (15%, due end of exams):** TBD               |
 +------------------+-----------------------------------------------------------------+--------------------------------------------------------------------+
 
 [lec1]: ../lectures/week1.html "Week 1 Lecture notes"
