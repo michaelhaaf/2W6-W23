@@ -325,12 +325,6 @@ p.small {
   margin-bottom: 1.7142rem;
 }
 
-table {
-  border-collapse: collapse;
-  margin-bottom: 1.5rem;
-  width: 100%;
-}
-
 article {
   padding-top: 1.5rem;
   padding-right: 1.5rem;
@@ -364,6 +358,13 @@ article ul, ol {
 * https://pencilandpaper.io/articles/ux-pattern-analysis-enterprise-data-tables/
 */
 
+table {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 1.5rem;
+}
+
 th {
   text-align: left;
   padding-right: 0.75rem;
@@ -371,13 +372,12 @@ th {
 
 td {
   vertical-align: top; 
-  padding-right: 0.75rem;
-  font-size: 0.75rem;
+  padding-right: 0.875rem;
+  font-size: 0.875rem;
 }
 
 /* Unclear semantics, needs refactor */
 td h5 {
-  margin-top: 1.5rem;
   margin-bottom: 0;
 }
 
