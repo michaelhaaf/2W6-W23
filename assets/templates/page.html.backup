@@ -46,70 +46,80 @@
    </div>
   </header>
   <aside class="aside--site surface">
-    <nav class="nav nav--site">
+   <nav class="nav nav--site">
     <h2>
-      Site Navigation
-     </h2>
-     <ul>
-      <li>
-       <a href="../pages/home.html">
-        Home
-       </a>
-      </li>
-      <li>
-       <a href="../pages/course-outline.html">
-        Course Outline
-       </a>
-      </li>
-      <li>
-       <a href="../pages/calendar.html">
-        Calendar
-       </a>
-      </li>
-      <li>
-       <a href="../pages/resources.html">
-        Resources
-       </a>
-      </li>
-      <li>
-       <button class="dropbtn">
-        Lectures
-        <i class="fa-caret-down">
-        </i>
-       </button>
-       <ul class="dropdown hidden" id="lecture-listing">
-        <li>
-         <a href="../lectures/week1.html">
-          Week 1
-         </a>
-        </li>
-        <li>
-         <a href="../lectures/week2.html">
-          Week 2
-         </a>
-        </li>
-       </ul>
-      </li>
-      <li>
-       <button class="dropbtn">
-        Assignments
-        <i class="fa-caret-down">
-        </i>
-       </button>
-       <ul class="dropdown hidden" id="assignment-listing">
-        <li>
-         <a href="../assignments/lab1.pdf">
-          Lab 1
-         </a>
-        </li>
-       </ul>
-      </li>
-     </ul>
-    </nav>
+     Site Navigation
+    </h2>
+    <ul>
+     <li>
+      <a href="../pages/home.html">
+       Home
+      </a>
+     </li>
+     <li>
+      <a href="../pages/course-outline.html">
+       Course Outline
+      </a>
+     </li>
+     <li>
+      <a href="../pages/calendar.html">
+       Calendar
+      </a>
+     </li>
+     <li>
+      <button class="dropbtn">
+       Lectures
+       <i class="fa-caret-down">
+       </i>
+      </button>
+      <ul class="dropdown hidden" id="lecture-listing">
+       <li>
+        <a href="../lectures/week1.html">
+         Week 1
+        </a>
+       </li>
+       <li>
+        <a href="../lectures/week2.html">
+         Week 2
+        </a>
+       </li>
+       <li>
+        <a href="../lectures/week3.html">
+         Week 3
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <button class="dropbtn">
+       Assignments
+       <i class="fa-caret-down">
+       </i>
+      </button>
+      <ul class="dropdown hidden" id="assignment-listing">
+       <li>
+        <a href="../assignments/">
+         ../assignments
+        </a>
+       </li>
+       <li>
+        <a href="../assignments/lab1/">
+         Lab 1
+        </a>
+       </li>
+       <li>
+        <a href="../assignments/lab2/">
+         Lab 2
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </nav>
   </aside>
   $if(toc)$
   <aside class="aside--page surface">
-   <nav id="$idprefix$TOC" role="doc-toc" class="nav nav--page">
+   <nav class="nav nav--page" id="$idprefix$TOC" role="doc-toc">
     $if(toc-title)$
     <h2 id="$idprefix$toc-title">
      $toc-title$

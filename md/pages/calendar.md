@@ -78,12 +78,12 @@ You can compare this calendar with the calendar from the [Course Outline](../pag
 [lec14]: ../lectures/week14.html "Week 14 Lecture notes"
 [lec15]: ../lectures/week15.html "Week 15 Lecture notes"
 
-[lab1]: ../assignments/lab1.pdf "Lab 1: worth 5%, due Jan 27"
-[lab2]: ../assignments/lab2.pdf "Lab 2: worth 11%, due Feb 14"
-[lab3]: ../assignments/lab3.pdf "Lab 3: worth 12%, due TBD"
-[lab4]: ../assignments/lab4.pdf "Lab 4: worth 12%, due TBD"
-[pm1]: ../assignments/milestone1.pdf "Project Milestone 1: worth 15%, due TBD"
-[pm2]: ../assignments/milestone2.pdf "Project Milestone 2: worth 15%, due TBD"
+[lab1]: ../assignments/lab1 "Lab 1: worth 5%, due Jan 27"
+[lab2]: ../assignments/lab2 "Lab 2: worth 11%, due Feb 14"
+[lab3]: ../assignments/lab3 "Lab 3: worth 12%, due TBD"
+[lab4]: ../assignments/lab4 "Lab 4: worth 12%, due TBD"
+[pm1]: ../assignments/milestone1 "Project Milestone 1: worth 15%, due TBD"
+[pm2]: ../assignments/milestone2 "Project Milestone 2: worth 15%, due TBD"
 
 [tut1]: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter "MDN: Marking up a Letter. Make sure you are familiar with all of the HTML elements covered in this tut."
 
