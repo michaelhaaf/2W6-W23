@@ -9,7 +9,7 @@ lang: "en"
 
 User Interface development is the art and technique of creating content, style, and behavior in computer applications. This course will focus on web application development using HTML, CSS, and JavaScript.
 
-## Logistics
+## Course Logistics
 
 - Course webpage: [michaelhaaf.github.io/2W6-W23/](https://michaelhaaf.github.io/2W6-W23/). **LEA** will also contain all course information.
 - Classroom: Penfield 327
