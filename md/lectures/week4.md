@@ -38,16 +38,30 @@ awlkdjalwkjd
 
 ## Font Families
 
+It's time to learn about **Font Families**. What are those?
+
+> A **typeface** (or  **font family**) is the design of <a href="https://en.wikipedia.org/wiki/Lettering" title="Lettering">lettering</a> that can include variations in size, weight (e.g. bold), slope (e.g. italic), width (e.g. condensed), and so on. Each of these variations of the typeface is a <a href="https://en.wikipedia.org/wiki/Font" title="Font">font</a>.
+>
+> <footer>
+>   [Typeface][quote-cite], Wikipedia
+> </footer>
+
+[quote-cite]: https://en.wikipedia.org/wiki/Typeface
+
 In CSS, there are two types of font family names:
 
-- **Generic family** - a group of font families with a similar look ("Serif", "Sans Serif", and "Monospace"). 
+- **Generic family** - a group of font families with  similar look ("Serif", "Sans Serif", and "Monospace"). 
 - **Font family** - a specific font family (like "Times New Roman"  or "Arial")
 
-Examples of each can be seen in the table below.
+![The three **generic families** are *serif*, *sans-serif*, and *monospace*. Every **font family** belongs to a particular **generic family**. ](../assets/content/wk4/font-family-egs.png "Table of fonts"){ style="width: 50%; height: auto; margin: auto;"}
 
-![Fig caption (NB: aria-hidden) and alt text at the same time??](../assets/content/wk4/font-family-egs.png "Title")
+<figcaption>
 
-![*Serif* typefaces are characterized by the precense of small pointed strokes at the end of each main stroke that comprises the characters in that typeface. *Sans-serif* typefaces lack these extra strokes (*sans* is French for *without*).](https://drrkwomack.com/images/serif-vs-sans-serif.png)
+This is a figcaption, which hopefully will indicate the [source of the image](https://example.com).
+
+</figcaption>
+
+![*Serif* typefaces are characterized by the precense of small pointed strokes at the end of each main stroke that comprises the characters in that typeface. *Sans-serif* typefaces lack these extra strokes (*sans* is French for *without*).](https://drmarkwomack.com/images/serif-vs-sans-serif.png)
 
 <p align="center"><a href="https://drmarkwomack.com/a-writing-handbook/style/typography/"><em>What Font Should I Use?</em></a></p>
 

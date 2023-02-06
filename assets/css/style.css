@@ -405,8 +405,12 @@ h6.sourceCode {
 blockquote {
   margin-bottom: 1.5rem;
   padding-inline-start: 1rem;
-  border-left: 0.25rem solid var(--highlight-med);
+  border-left: 0.25rem solid var(--highlight-high);
   border-radius: 0.25rem;
+}
+
+blockquote footer {
+  text-align: right;
 }
 
 p.small {
