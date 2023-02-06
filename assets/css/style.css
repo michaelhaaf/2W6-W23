@@ -554,7 +554,15 @@ td h5 {
 .nav a:hover,
 .nav .dropbtn:hover {
   background-color: var(--overlay);
+  color: var(--text);
   cursor: pointer;
+}
+
+.nav a:focus, 
+.nav .dropbtn:focus {
+  outline: dotted;
+  background-color: var(--overlay);
+  color: var(--text);
 }
 
 .nav a.active:link,
@@ -624,8 +632,15 @@ td h5 {
 }
 
 .nav--site .dropdown a:hover {
-  background-color: var(--accent-foam);
-  color: var(--base);
+  background-color: var(--overlay);
+  color: var(--text);
+  font-weight: bold;
+}
+
+.nav--site .dropdown a:focus {
+  outline: dotted;
+  background-color: var(--overlay);
+  color: var(--text);
   font-weight: bold;
 }
 
