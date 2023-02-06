@@ -295,8 +295,8 @@ body {
 h1 {
   margin-top: 3rem;
   margin-bottom: 1.5rem;
-  font-size: 1.5rem;
-  line-height: 1;
+  font-size: 2rem;
+  line-height: 0.75;
   font-weight: 400;
 }
 
@@ -307,6 +307,16 @@ h1.title {
 h2 {
   margin-top: 1.5rem;
   margin-bottom: 0.3409em;
+  font-size: 1.5rem;
+  line-height: 1;
+  padding-top: 0.75em;
+  font-style: italic;
+  font-weight: 400;
+}
+
+h3, th {
+  margin-top: 1.5rem;
+  margin-bottom: 0.3409em;
   font-size: 1.375rem;
   line-height: 1.0909;
   padding-top: 0.75em;
@@ -314,21 +324,12 @@ h2 {
   font-weight: 400;
 }
 
-h3 {
+h4 {
   margin: 0;
   margin-bottom: 0.45em;
   font-size: 1.25rem;
   line-height: 1.2;
   padding-top: 0.75em;
-  font-style: italic;
-  font-weight: 400;
-}
-
-h4 {
-  margin: 0;
-  font-size: 1.125rem;
-  line-height: 1.3333;
-  margin-bottom: 1.3333em;
   font-style: italic;
   font-weight: 400;
 }
@@ -354,7 +355,6 @@ ol,
 ul,
 code,
 td,
-th,
 label {
   font-size: 1rem;
   line-height: 1.5;
@@ -432,8 +432,13 @@ ol {
 }
 
 .note-text {
-  font-size: 0.625rem;
+  font-size: 0.75rem;
+  font-weight: bold;
   line-height: 1.5rem;
+}
+
+.abstract p {
+  font-style: italic;
 }
 
 /* Table styles inspired by:
@@ -664,6 +669,7 @@ td h5 {
 */
 
 .nav--page h2 {
+  margin-top: 0;
   padding-top: 0.75rem;
   margin-bottom: 0.75rem;
 }
@@ -708,7 +714,7 @@ header.header {
 }
 
 .header h1 {
-  margin-bottom: -0.625rem;
+  margin-bottom: -0.325rem;
   padding-top: 0.875rem;
   color: var(--light-fg-high);
 }
