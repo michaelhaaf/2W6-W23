@@ -314,7 +314,7 @@ h2 {
   font-weight: 400;
 }
 
-h3, th {
+h3, th, .abstract-title {
   margin-top: 1.5rem;
   margin-bottom: 0.3409em;
   font-size: 1.375rem;
