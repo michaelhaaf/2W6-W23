@@ -552,7 +552,8 @@ td h5 {
 
 .nav a:link,
 .nav a:visited,
-.nav .dropbtn {
+.nav .dropbtn,
+.nav code {
   background-color: var(--surface);
   color: var(--subtle);
   font-size: 0.875em;

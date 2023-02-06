@@ -17,6 +17,7 @@ PAGE_STYLE := ../assets/css/style.css
 # Common options
 PANDOC_OPTIONS = --standalone \
 								 --table-of-contents \
+								 --toc-depth=2 \
 								 --css $(PAGE_STYLE) \
 								 --template $(PAGE_TEMPLATE) \
 								 --highlight-style $(HIGHLIGHT_STYLE)
