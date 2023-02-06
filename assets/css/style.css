@@ -622,11 +622,11 @@ td h5 {
   position: absolute;
   margin-top: 3rem;
   z-index: 1;
-  background-color: var(--overlay);
+  background-color: var(--surface);
 }
 
 .nav .dropdown a {
-  background-color: var(--overlay);
+  background-color: var(--surface);
   padding-left: 1.5rem;
   padding-right: 7rem;
 }
