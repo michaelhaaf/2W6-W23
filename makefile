@@ -34,7 +34,7 @@ listings:
 	tree lectures -H ../lectures | htmlq "body p a" | grep html > ./assets/listings/lecture-listing.html
 	tree assignments -L 1 -H ../assignments | htmlq "body p a" | tail -n +2 > ./assets/listings/assignment-listing.html
 
-# If dynamic contect directories changed, update template and mark all targets for update
+# If dynamic content directories changed, update template and mark all targets for update
 $(PAGE_TEMPLATE): assets/listings/*.html
 	cp $(PAGE_TEMPLATE) ./assets/templates/page.html.backup 
 	python ./assets/build-scripts/update-listings.py > $(PAGE_TEMPLATE)
