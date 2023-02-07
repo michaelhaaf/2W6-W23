@@ -323,9 +323,7 @@ body {
 
 ### Font Shorthand Live Demo
 
-This live demo illustrates how the `font` shorthand property affects a paragraph element.
-
-Try the live demo below to see all of the `font` properties that can be set, and their effect on the sample text.
+This [live demo (MDN)](https://developer.mozilla.org/en-US/docs/Web/CSS/font#frame_live_sample) illustrates how the `font` shorthand property affects a paragraph element. Try toggling the various options in the form to see all of the `font` properties that can be set, and to preview their effect on the sample text.
 
 <iframe width="100%" height="425px" frameborder="0" id="frame_live_sample" src="https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/CSS/font/_sample_.live_sample.html"></iframe>
 
