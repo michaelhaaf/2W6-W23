@@ -142,6 +142,8 @@ Two common relative units for `font-size` are:
 >
 > The root `<html>` element has a default `font-size` of 16px (set in your browser settings).
 
+### Example
+
 ###### CSS{.sourceCode}
 
 ```css
@@ -157,6 +159,15 @@ h1 {
   font-size: 0.7rem;
   color: blue;
 }
+```
+
+###### HTML{.sourceCode}
+```html
+<section class="sourceCode">
+    <h1>Relative sizes</h1>
+    <p class="p1">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p class="p2">Aliquam repellendus, debitis perspiciatis asperiores aut deleniti maxime totam neque dolores enim labore placeat facilis expedita iure!</p>
+</section>
 ```
 
 ###### Result{.sourceCode}
@@ -329,6 +340,9 @@ Try the live demo below to see all of the `font` properties that can be set, and
 # Exercises
 
 - Odin Project: CSS Foundations Practise Exercises [(.zip)][tutCSSFoundations]
+- MDN: Typesetting a Homepage [(instructions)][tutStylingTextInstructions] [(starter files .zip)][tutStylingTextFiles]
 
 [tutCSSFoundations]: ../tutorials/css-exercises-foundations.zip "Odin Project: CSS Foundations Exercises. There are 6 exercises total in this set. You should be able to complete them all with what you have learned during Week 3."
+[tutStylingTextInstructions]: https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage "MDN: Typesetting a homepage tutorial instructions."
+[tutStylingTextFiles]: ../tutorials/css-styling-text.zip "MDN: Typesetting a homepage tutorial starter files."
 [tutCSSBoxModel]: ../tutorials/css-exercises-box-model.zip "Odin Project: CSS Box Model Exercises. There are 2 exercises total in this set. You should be able to complete them all with what you have learned during Week 4."

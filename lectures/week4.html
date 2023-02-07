@@ -431,6 +431,7 @@ the parent element.</li>
 <p>The root <code>&lt;html&gt;</code> element has a default
 <code>font-size</code> of 16px (set in your browser settings).</p>
 </blockquote>
+<h3 id="example">Example</h3>
 <h6 class="sourceCode" id="css-2">CSS</h6>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>h1 {</span>
@@ -445,6 +446,13 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#c
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-size</span>: <span class="dv">0.7</span><span class="dt">rem</span><span class="op">;</span></span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">blue</span><span class="op">;</span></span>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h6 class="sourceCode" id="html">HTML</h6>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;section</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;sourceCode&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;h1&gt;</span>Relative sizes<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;p1&quot;</span><span class="kw">&gt;</span>Lorem, ipsum dolor sit amet consectetur adipisicing elit.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;p2&quot;</span><span class="kw">&gt;</span>Aliquam repellendus, debitis perspiciatis asperiores aut deleniti maxime totam neque dolores enim labore placeat facilis expedita iure!<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/section&gt;</span></span></code></pre></div>
 <h6 class="sourceCode" id="result">Result</h6>
 <section class="sourceCode">
 <h1 style="font-size:1.8rem; margin-top: 0;">
@@ -480,9 +488,9 @@ Device, and Document Size</a></figcaption>
 viewport &amp; IE compatibility</h2>
 <p>Earlier in class we have seen that the <code>!</code> Emmet shortcut
 in VS Code provides a new <code>&lt;meta&gt;</code> attribute:</p>
-<h6 class="sourceCode" id="html">HTML</h6>
-<div class="sourceCode" id="cb4"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;viewport&quot;</span> <span class="er">content</span><span class="ot">=</span><span class="st">&quot;width=device-width, initial-scale=1.0&quot;</span> <span class="kw">/&gt;</span></span></code></pre></div>
+<h6 class="sourceCode" id="html-1">HTML</h6>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;viewport&quot;</span> <span class="er">content</span><span class="ot">=</span><span class="st">&quot;width=device-width, initial-scale=1.0&quot;</span> <span class="kw">/&gt;</span></span></code></pre></div>
 <p>The <code>&lt;meta&gt;</code> viewport element tells the browser how
 to control the page’s dimensions and scaling.</p>
 <p>The <code>width=</code> property controls the size of the viewport.
@@ -517,19 +525,19 @@ font to add to a project.</figcaption>
 </figure>
 <p>Include the provided link in the head section of your HTML file, just
 like you would link a CSS Style sheet.</p>
-<h6 class="sourceCode" id="html-1">HTML</h6>
-<div class="sourceCode" id="cb5"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ot">  href=</span><span class="st">&quot;https://fonts.googleapis.com/css?family=Roboto</span><span class="er">&amp;</span><span class="st">display=swap&quot;</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ot">  rel=</span><span class="st">&quot;stylesheet&quot;</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">/&gt;</span></span></code></pre></div>
+<h6 class="sourceCode" id="html-2">HTML</h6>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ot">  href=</span><span class="st">&quot;https://fonts.googleapis.com/css?family=Roboto</span><span class="er">&amp;</span><span class="st">display=swap&quot;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ot">  rel=</span><span class="st">&quot;stylesheet&quot;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="kw">/&gt;</span></span></code></pre></div>
 <p>Add the <code>font-family</code> property to your CSS. <strong>Don’t
 forget to add a fall-back font</strong>.</p>
 <h6 class="sourceCode" id="css-3">CSS</h6>
-<div class="sourceCode" id="cb6"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>p {</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-family</span>: <span class="st">&quot;Roboto&quot;</span><span class="op">,</span> <span class="dv">sans-serif</span><span class="op">;</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>p {</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-family</span>: <span class="st">&quot;Roboto&quot;</span><span class="op">,</span> <span class="dv">sans-serif</span><span class="op">;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <h2 id="font-weight">Font Weight</h2>
 <p>The <a
 href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight"><code>font-weight</code></a>
@@ -553,12 +561,12 @@ provide finer grained control than the above keywords.
 href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight">font-weight
 by MDN</a> web docs for more information.</p>
 <h6 class="sourceCode" id="css-4">CSS</h6>
-<div class="sourceCode" id="cb7"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>font-weight<span class="in">: bold</span>;</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>font-weight<span class="in">: lighter</span>;</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>font-weight<span class="in">: 200;</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>font-weight<span class="in">: bold</span>;</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>font-weight<span class="in">: lighter</span>;</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>font-weight<span class="in">: 200;</span></span></code></pre></div>
 <h2 id="text-decorations">Text Decorations</h2>
 <p>The <a
 href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration"><code>text-decoration</code></a>
@@ -627,10 +635,10 @@ href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height"><code>line-h
 href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family"><code>font-family</code></a></li>
 </ul>
 <h6 class="sourceCode" id="css-5">CSS</h6>
-<div class="sourceCode" id="cb8"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>body {</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font</span>: <span class="dv">italic</span> <span class="dv">small-caps</span> <span class="dv">bold</span> <span class="dv">16</span><span class="dt">px</span>/<span class="dv">2</span> <span class="dv">cursive</span><span class="op">;</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>body {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font</span>: <span class="dv">italic</span> <span class="dv">small-caps</span> <span class="dv">bold</span> <span class="dv">16</span><span class="dt">px</span>/<span class="dv">2</span> <span class="dv">cursive</span><span class="op">;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <h3 id="font-shorthand-live-demo">Font Shorthand Live Demo</h3>
 <p>This live demo illustrates how the <code>font</code> shorthand
 property affects a paragraph element.</p>
@@ -647,6 +655,12 @@ properties that can be set, and their effect on the sample text.</p>
 <li>Odin Project: CSS Foundations Practise Exercises <a
 href="../tutorials/css-exercises-foundations.zip"
 title="Odin Project: CSS Foundations Exercises. There are 6 exercises total in this set. You should be able to complete them all with what you have learned during Week 3.">(.zip)</a></li>
+<li>MDN: Typesetting a Homepage <a
+href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage"
+title="MDN: Typesetting a homepage tutorial instructions.">(instructions)</a>
+<a href="../tutorials/css-styling-text.zip"
+title="MDN: Typesetting a homepage tutorial starter files.">(starter
+files .zip)</a></li>
 </ul> 
    </article>
   </main>

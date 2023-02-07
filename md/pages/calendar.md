@@ -34,8 +34,9 @@ You can compare this calendar with the calendar from the [Course Outline](../pag
 |                  |                                                                 | * [Part 1][actBrowser1]                                                   |
 |                  |                                                                 | * [Part 2][actBrowser2]                                                   |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
-| [Week 4][lec4]   | CSS - element properties: fonts, images, icons                  | Tutorial: [CSS Foundations Exercises][tutCSSFoundations] <br>             |
-|                  | CSS - layouts: the box model                                    | Tutorial: [CSS Box Model Exercises][tutCSSBoxModel]                       |
+| [Week 4][lec4]   | CSS - element properties: fonts, images, icons <br>             | Tutorial: [CSS Foundations Exercises][tutCSSFoundations] <br>             |
+|                  | CSS - layouts: the box model                                    | Tutorial: [CSS Box Model Exercises][tutCSSBoxModel] <br>                  |
+|                  |                                                                 | Tutorial: MDN: [Typesetting a Homepage][tutMdnText] [(.zip)][tutMdnText]  |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | ##### NOTE:      | ##### the weeks below are tentative                             |                                                                           |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
@@ -91,6 +92,8 @@ You can compare this calendar with the calendar from the [Course Outline](../pag
 [tutWebsite]: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure "MDN: Document and website structure. This is a very helpful tutorial for getting started on Lab2."
 [tutCSSFoundations]: ../tutorials/css-exercises-foundations.zip "Odin Project: CSS Foundations Exercises. There are 6 exercises total in this set. You should be able to complete them all with what you have learned during Week 3."
 [tutCSSBoxModel]: ../tutorials/css-exercises-box-model.zip "Odin Project: CSS Box Model Exercises. There are 2 exercises total in this set. You should be able to complete them all with what you have learned during Week 4."
+[tutMdnText]: https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage "MDN: Typesetting a homepage tutorial instructions."
+[tutMdnTextFiles]: ../tutorials/css-styling-text.zip "MDN: Typesetting a homepage tutorial starter files."
 
 [actBoilerplate]: ../tutorials/boilerplate.html "Completed Boilerplate HTML file, with all elements commented."
 [actVSCode1]: https://www.youtube.com/watch?v=V8vizNQKtx0 "Web Dev Simplified (YouTube): This video shows how to use 'Emmets' in VS Code to generate HTML tags and boilerplate automatically." 
