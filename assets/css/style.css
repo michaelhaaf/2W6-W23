@@ -375,6 +375,7 @@ figcaption {
   font-size: 0.875rem;
   margin: 0;
   padding-top: 0.625rem;
+  text-align: center;
 }
 
 code,
