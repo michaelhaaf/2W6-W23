@@ -395,7 +395,8 @@ pre {
 }
 
 h6.sourceCode,
-div.sourceCode {
+div.sourceCode,
+section.sourceCode {
   background-color: var(--overlay);
   border-left: 0.25rem solid var(--accent-orange);
   padding: 0.75rem;

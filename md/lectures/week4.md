@@ -1,18 +1,25 @@
 ---
 title: "2W6-W23: Week 4 Lecture Notes"
 toc-title: "In this article"
-abstract-title: "Intermediate CSS Styling"
+abstract-title: "Styling HTML content with CSS"
 abstract: |
-  This week, we will learn how to do some pretty neat stuff. I think there's too much margin below these paragraphs and too much above the section header.
+  Last week, we learned the fundamentals of CSS; in particular: how CSS is inserted into HTML files, how CSS is used to select HTML elements, and how to inspect CSS properties and make changes using Browser Development tools. 
+
+  There are hundreds, if not thousands, of different CSS properties. We will not learn them all at once -- over the next few weeks, we will add the foundational properties to our toolbelt and build confidence in our ability to use CSS to select and alter HTML elements as we require.
+
+  This week, we will learn how to make use of the CSS properties for fonts, images, and icons; we will also learn more about how HTML and CSS create website layouts.
 ---
+
+Last update: Tuesday, Feb 7, 2023.
 
 ---
 
 # Lesson Overview
 
-- How to style 
-- Why is a CSS?
-- How is a CSS?
+- How to style fonts
+- How to style images
+- How to style icons
+- The Box Model
 
 ---
 
@@ -52,7 +59,7 @@ There are two categories of font families in CSS: **Generic Font Families**, whi
 
 Broadly speaking, the generic families have the following properties:
 
-- `serif` - Letters are drawn with *serifs*, which are small extra strokes at the ends of the letter's defining strokes.
+- `serif` - Letters are drawn with _serifs_, which are small extra strokes at the ends of the letter's defining strokes.
 - `sans-serif` - Letters are drawn without serifs.
 
 ![Figure from Mark Womack: [What Font Should I Use?][womack-source]][womack-img]
@@ -60,7 +67,7 @@ Broadly speaking, the generic families have the following properties:
 [womack-img]: ../assets/content/wk4/serif-vs-sans-serif.png "A Serif font has serifs (extra strokes) drawn on the edges of the letter, while a Sans-serif font does not."
 [womack-source]: https://drmarkwomack.com/a-writing-handbook/style/typography/
 
-- Fonts in the `monospace` family force all letters to take the same amount of horizontal space, independent of the width of the strokes defining the letter. 
+- Fonts in the `monospace` family force all letters to take the same amount of horizontal space, independent of the width of the strokes defining the letter.
 
 ![Figure from Wikipedia: [Typeface][wiki-typeface]][mono-img]
 
@@ -68,7 +75,7 @@ Broadly speaking, the generic families have the following properties:
 
 **Proportional** fonts are the opposite of `monospace` fonts: letters that are narrow take less horizontal space than letters that are wide. Fonts in the the `serif` and `sans-serif` families are typically proportional fonts.
 
-## Changing fonts with `font-family:`
+## Changing fonts with `font-family`
 
 The fonts available to the browser depend largely on the fonts installed in the operating system.
 
@@ -84,11 +91,13 @@ p {
 }
 ```
 
-Here is a [list of fonts considered to be **Web Safe Fonts**](https://www.w3schools.com/cssref/css_websafe_fonts.asp), meaning you can count on them being available in most browsers.
+[This link leads to a list of fonts considered to be **Web Safe Fonts**](https://www.w3schools.com/cssref/css_websafe_fonts.asp), meaning you can count on them being available in most browsers.
 
 > Font names composed of more than one word need to be written between quotations, such as "Times New Roman" above.
 
 Fonts styles are normally applied to the entire page, so you can add them to the body selector:
+
+###### CSS{.sourceCode}
 
 ```css
 body {
@@ -105,7 +114,7 @@ Font size can be set with the `font-size` property.
 **Absolute size:**
 
 - Sets the text to a fixed size.
-- User cannot adjust it (eg. increase font size in the browser).
+- User cannot adjust it (eg. increase font size using browser or operating system settings).
 
 **Relative size:**
 
@@ -129,11 +138,11 @@ Two common relative units for `font-size` are:
 
 - 1 `rem` is equal to the font size **set on the root element of the document** ( the `<html>`), not the parent element.
 
-> It is recommended to use rem units for setting `font-size`
+> It is recommended to use `rem` units for setting `font-size`
 >
 > The root `<html>` element has a default `font-size` of 16px (set in your browser settings).
 
-_Code_
+###### CSS{.sourceCode}
 
 ```css
 h1 {
@@ -150,17 +159,17 @@ h1 {
 }
 ```
 
-_Result_
+###### Result{.sourceCode}
 
-<section style="background-color: rgb(248, 248, 246)">
-    <h1 style="font-size:1.8rem;">Relative sizes</h1>
+<section class="sourceCode">
+    <h1 style="font-size:1.8rem; margin-top: 0;">Relative sizes</h1>
     <p style="font-size:1.2rem; color:red;">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
     <p style="font-size:0.7rem; color:blue;">Aliquam repellendus, debitis perspiciatis asperiores aut deleniti maxime totam neque dolores enim labore placeat facilis expedita iure!</p>
 </section>
 
 ## CSS Units
 
-!> For this section we will refer to the page [CSS Units by W3Schools](https://www.w3schools.com/CSSref/css_units.asp).
+_For this section refer to the page [CSS Units by W3Schools](https://www.w3schools.com/CSSref/css_units.asp)._
 
 ### Responsive units
 
@@ -170,41 +179,20 @@ Use the `vw` unit to scale the `font-size` according to the browser's window siz
 
 **Viewport stands for the size of your browser's window.**
 
-![browser](https://www.kirupa.com/html5/images/browser_size.png)
+![Figure from Kirupa.com: [Viewport, Device, and Document Size][viewport-source]][viewport-img]
 
-<p align="center"><a href="https://www.kirupa.com/html5/viewport_device_document_size.htm"><em>Viewport, Device, and Document Size</em></a></p>
-
-## VS Code Power-ups:
-
-Now that you know what the viewport is you can unlock the `!` [Emmet](https://code.visualstudio.com/docs/editor/emmet) shortcut:
-
-![Peek 2020-02-06 10-48](./wk3/assets/../../assets/vscodeemmet.gif)
-
-### Disabling Emmet
-
-If you don't like Emmet's auto-complete, you can disable it:
-
-1. File -> Preferences -> Settings
-2. Search for Emmet
-3. Disable settings as required (play around until you get the desirable behaviour)
+[viewport-img]: https://www.kirupa.com/html5/images/browser_size.png "A Serif font has serifs (extra strokes) drawn on the edges of the letter, while a Sans-serif font does not."
+[viewport-source]: https://www.kirupa.com/html5/viewport_device_document_size.html
 
 ## Meta Attributes: viewport & IE compatibility
 
-If you use the `!` Emmet shortcut shown above you will notice it comes with two new `<meta>` attributes:
+Earlier in class we have seen that the `!` Emmet shortcut in VS Code provides a new `<meta>` attribute:
+
+###### HTML{.sourceCode}
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 ```
-
-<!-- and
-
-```html
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-```
-
--->
-
-### Viewport device-width and initial-scale
 
 The `<meta>` viewport element tells the browser how to control the page's dimensions and scaling.
 
@@ -214,31 +202,21 @@ The `initial-scale=` property controls the zoom level when the page is first loa
 
 See [_Using the viewport meta tag to control layout on mobile browsers_](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) for more info.
 
-<!-- ## IE compatibility mode
-
->When a browser encounters html code it cannot understand it will fallback to its "compatibility mode", where unexpected things might happen.
-
-Internet Explorer (IE) supports the use of a document compatibility `<meta>` tag to specify what version of IE the page should be rendered as a fallback plan.
-
-`content="ie=edge"` instructs IE to use the latest supported mode by using edge mode.
-
-**Thanks to the recent obsolescence of Windows 7 (which shipped with old versions of IE) this compatibility meta tag will no longer be required.**
-
-See this [Stack Overflow article](https://stackoverflow.com/questions/6771258/what-does-meta-http-equiv-x-ua-compatible-content-ie-edge-do) for more information.
-
--->
-
 ## Using Web Fonts
 
-You can include external fonts in your CSS.
+So far, all of the fonts that we have seen are commonly available on most operating systems, meaning that we can specify them (as well as a few fallbacks) without needing to worry whether the end user has that font installed.
 
-A popular location to get external fonts is **Google Fonts:** https://fonts.google.com/
+There are many thousands of fonts available to choose, and there could be a wide variety of reasons for selecting fonts other than the most commonly available ones. How do we ensure that those fonts render correctly when accessed from machines that do not have those fonts installed?
 
-![adding google font animation](./wk3/../assets/add_google_font.gif)
+We can include **external fonts** in our CSS.
 
-![image-20200206101124091](assets/image-20200206101124091.png)
+A popular location to get external fonts is [Google Fonts](https://fonts.google.com/):
+
+![Gif: step-by step for choosing a google font to add to a project.](../assets/content/wk4/add_google_font.gif "On Google Fonts, font families and properties can be selected and configured before downloading or embedding on your webpage."){.full-width}
 
 Include the provided link in the head section of your HTML file, just like you would link a CSS Style sheet.
+
+###### HTML{.sourceCode}
 
 ```html
 <link
@@ -247,7 +225,9 @@ Include the provided link in the head section of your HTML file, just like you w
 />
 ```
 
-Add the f`font-family` property in your CSS. **Don't forget to add a fall-back font**
+Add the `font-family` property to your CSS. **Don't forget to add a fall-back font**.
+
+###### CSS{.sourceCode}
 
 ```css
 p {
@@ -263,11 +243,13 @@ Common values are:
 
 - `normal`, `bold`: Normal and **bold** font weight
 - `lighter`, `bolder`: Relative values. Sets the element's boldness to be one step lighter or heavier than its parent element.
-- `100`–`900`: Numeric boldness values that provide finer grained control than the above keywords.
+- `100`–`1000`: Numeric boldness values that provide finer grained control than the above keywords.
   - `400` is equivalent to `normal`
   - `700` is equivalent to `bold`
 
-See [font-weight by MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight) web docs for more information
+See [font-weight by MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight) web docs for more information.
+
+###### CSS{.sourceCode}
 
 ```css
 font-weight: bold;
@@ -289,7 +271,7 @@ Common values are:
 
 ## Text Layout & Alignment
 
-!> For this section we will refer to the **section "Text layout"** of the [Fundamental text and font styling](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Text_layout) by MDN web docs.
+_For this section refer to the "Text layout" section of [Fundamental text and font styling](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Text_layout) by MDN web docs._
 
 Using the reference above, look at the following properties:
 
@@ -297,14 +279,6 @@ Using the reference above, look at the following properties:
 - [`line-height`](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height)
 - [`letter-spacing`](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
 - [`word-spacing`](https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing)
-
-### Which units: Em or Unitless ?
-
-`line-height` defined in length or percentage units can have bad inheritance behaviour.
-
-> Avoid unexpected results by using unitless line-height.
-
-See [_Prefer unitless numbers for line-height values_](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height) by MDN Web Docs for more info.
 
 ## Other text styling
 
@@ -316,7 +290,7 @@ There are many other text styling properties, some more used than others:
 
 ## Shorthand Properties Notation
 
-You can set multiple font values in one shoot by using the shorthand `<font>` property (many CSS properties have a shorthand version):
+You can set multiple font values in one shot by using the shorthand `<font>` property (many CSS properties have a shorthand version):
 
 > Refer to the MDN web doc page on the [**`<font>` property**](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
 
@@ -328,6 +302,8 @@ In the example below the following font properties are set at the same time:
 - [`font-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) / [`line-height`](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height)
 - [`font-family`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family)
 
+###### CSS{.sourceCode}
+
 ```css
 body {
   font: italic small-caps bold 16px/2 cursive;
@@ -338,26 +314,21 @@ body {
 
 This live demo illustrates how the `font` shorthand property affects a paragraph element.
 
-[_This live demo is provided by MDN web docs_](https://developer.mozilla.org/en-US/docs/Web/CSS/font#frame_live_sample)
+Try the live demo below to see all of the `font` properties that can be set, and their effect on the sample text.
 
-<div style="background-color: rgb(248, 248, 246)">
-	<iframe class="live-sample-frame sample-code-frame" frameborder="0" height="450px" id="frame_live_sample" src="https://mdn.mozillademos.org/en-US/docs/Web/CSS/font$samples/live_sample?revision=1569828" width="100%"></iframe>
-</div>
+<iframe width="100%" height="425px" frameborder="0" id="frame_live_sample" src="https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/CSS/font/_sample_.live_sample.html"></iframe>
 
 # The Box Model
 
-## Other Models
-
-## Margin, Border, Padding
-
-## sejlkajd
-
-## sjeklfjse
+*This section will be updatated in the near future!*
 
 # Knowledge Check
 
-- [Does this section link work?](#lesson-overview)
+*This section will be updatated in the near future!*
 
 # Exercises
 
-# Acknowledgements
+- Odin Project: CSS Foundations Practise Exercises [(.zip)][tutCSSFoundations]
+
+[tutCSSFoundations]: ../tutorials/css-exercises-foundations.zip "Odin Project: CSS Foundations Exercises. There are 6 exercises total in this set. You should be able to complete them all with what you have learned during Week 3."
+[tutCSSBoxModel]: ../tutorials/css-exercises-box-model.zip "Odin Project: CSS Box Model Exercises. There are 2 exercises total in this set. You should be able to complete them all with what you have learned during Week 4."
