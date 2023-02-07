@@ -1,23 +1,27 @@
 -- Problem:
---    while the implicit-figure extension is useful, it conflates image alt tag and figcaptions. This is semantically inappropriate (will cause screen readers to read the same information twice. will cause screen readers to read the same information twice.)
+--    while the implicit-figure extension is useful, it conflates image alt tag and figcaptions. 
+--    This is semantically inappropriate (will cause screen readers to read the same information twice. will cause screen readers to read the same information twice.)
 --
 -- Solution:
 --    In lieu of real solution (see https://github.com/jgm/pandoc-types/pull/83)...
 --    custom lua HTML writer that manages alt, figcaption, and title elems explicitly
 --
 -- Procedure:
---    Figure elements that contain defined alt and title attributes:
---      - place title content in figcaption
+--    Figure elements with defined alt, caption, and title attributes:
+--      - sets alt= the same content as title (therefore use the title string to specify alt text) 
 --      - set title to empty
---      - leave alt-text as-is
+--      - leave figcaption as is (the figcaption no longer is the same as the alt text)
 --
 -- The code that follows is copied/adapted from pandoc's sample.lua custom writer (see man pandoc(1)). 
 --
--- It was certainly more involved than I was expecting. I ultimately could not figure out how to serialize the img.caption element without rewriting the entirety of sample.luas methods. 
+-- It was certainly more involved than I was expecting. I ultimately could not figure out how to serialize the img.caption 
+-- element without rewriting the entirety of sample.luas methods. 
 --
--- sample.lua methods are scoped inside a filter (element_filter) which I can use to process the img.caption (a list of inlines) using the inlines.walk(filter) api.
+-- The sample.lua methods are scoped inside a filter (element_filter) which I can use to process the img.caption (a list of inlines)
+--  using the inlines.walk(filter) api.
 --
--- The sample.lua methods needed extra stringifying (the pandoc element nesting goes deep) in order to ultimately result in a well-formatted html string.
+-- The sample.lua methods needed extra stringifying (the pandoc element nesting goes deep) 
+-- in order to ultimately result in a well-formatted html string.
 
 local stringify = (require("pandoc.utils")).stringify
 
