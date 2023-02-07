@@ -12,6 +12,7 @@ LECTURES_HTML := $(LECTURES_MD:md/lectures/%.md=lectures/%.html)
 # Path relative to makefile
 PAGE_TEMPLATE := ./assets/templates/page.html
 HIGHLIGHT_STYLE := ./assets/css/code-highlight.theme
+HTML_WRITER := ./assets/filters/separate-alt-figcaption.lua
 # Path relative to output
 PAGE_STYLE := ../assets/css/style.css
 # Common options
@@ -20,7 +21,8 @@ PANDOC_OPTIONS = --standalone \
 								 --toc-depth=2 \
 								 --css $(PAGE_STYLE) \
 								 --template $(PAGE_TEMPLATE) \
-								 --highlight-style $(HIGHLIGHT_STYLE)
+								 --highlight-style $(HIGHLIGHT_STYLE) \
+								 --to $(HTML_WRITER)
 
 ## MAKE RULES
 
