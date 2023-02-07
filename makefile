@@ -12,14 +12,17 @@ LECTURES_HTML := $(LECTURES_MD:md/lectures/%.md=lectures/%.html)
 # Path relative to makefile
 PAGE_TEMPLATE := ./assets/templates/page.html
 HIGHLIGHT_STYLE := ./assets/css/code-highlight.theme
+HTML_WRITER := ./assets/filters/separate-alt-figcaption.lua
 # Path relative to output
 PAGE_STYLE := ../assets/css/style.css
 # Common options
 PANDOC_OPTIONS = --standalone \
 								 --table-of-contents \
+								 --toc-depth=2 \
 								 --css $(PAGE_STYLE) \
 								 --template $(PAGE_TEMPLATE) \
-								 --highlight-style $(HIGHLIGHT_STYLE)
+								 --highlight-style $(HIGHLIGHT_STYLE) \
+								 --to $(HTML_WRITER)
 
 ## MAKE RULES
 
@@ -32,9 +35,9 @@ clean:
 # Run this if a new file has been added to a dynamic contect directory 
 listings:
 	tree lectures -H ../lectures | htmlq "body p a" | grep html > ./assets/listings/lecture-listing.html
-	tree assignments -H ../assignments | htmlq "body p a" | grep pdf > ./assets/listings/assignment-listing.html
+	tree assignments -L 1 -H ../assignments | htmlq "body p a" | tail -n +2 > ./assets/listings/assignment-listing.html
 
-# If dynamic contect directories changed, update template and mark all targets for update
+# If dynamic content directories changed, update template and mark all targets for update
 $(PAGE_TEMPLATE): assets/listings/*.html
 	cp $(PAGE_TEMPLATE) ./assets/templates/page.html.backup 
 	python ./assets/build-scripts/update-listings.py > $(PAGE_TEMPLATE)
