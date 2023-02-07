@@ -179,10 +179,16 @@ img {
   line-height: 1.5;
   text-align: center;
 
-  width: 100%;
+  max-width: 69%;
+  margin-left: auto;
+  margin-right: auto;
   height: auto;
   display: block;
   position: relative;
+}
+
+.full-width {
+  max-width: 100%;
 }
 
 img::before {
@@ -378,6 +384,11 @@ figcaption {
   text-align: center;
 }
 
+figure {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 code,
 pre {
   white-space: pre-wrap;
@@ -408,6 +419,9 @@ blockquote {
   padding-inline-start: 1rem;
   border-left: 0.25rem solid var(--highlight-high);
   border-radius: 0.25rem;
+  max-width: 96%;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 blockquote footer {
@@ -459,10 +473,11 @@ ol {
 */
 
 table {
-  margin-bottom: 1.5rem;
-  width: 100%;
   border-collapse: separate;
   border-spacing: 0 1.5rem;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 th {
@@ -472,8 +487,8 @@ th {
 
 td {
   vertical-align: top;
-  padding-right: 0.875rem;
-  font-size: 0.875rem;
+  padding-right: 1rem;
+  font-size: 1rem;
 }
 
 /* Unclear semantics, needs refactor */
@@ -586,7 +601,9 @@ td h5 {
 
 .nav a.active:link,
 .nav a.active:visited,
-.nav .dropbtn.active {
+.nav .dropbtn.active,
+.nav a.active:link code,
+.nav a.active:visited code {
   background-color: var(--overlay);
   color: var(--accent-red);
   font-weight: bold;
