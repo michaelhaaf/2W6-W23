@@ -1,10 +1,11 @@
-
 ---
-title: '2W6-W23: Week 4 Lecture Notes'
+title: "2W6-W23: Week 4 Lecture Notes"
 toc-title: "In this article"
 abstract-title: "Intermediate CSS Styling"
 abstract: |
   This week, we will learn how to do some pretty neat stuff. I think there's too much margin below these paragraphs and too much above the section header.
+---
+
 ---
 
 # Lesson Overview
@@ -12,6 +13,8 @@ abstract: |
 - What is a CSS?
 - Why is a CSS?
 - How is a CSS?
+
+---
 
 # The Box Model
 
@@ -29,69 +32,63 @@ awlkdjalwkjd
 - j
 - jjj
 
-
 # Image Styling
 
 # Fonts
 
-*This section was adapted by [Mauricio Buschinelli](https://maujac.github.io/2W6-UI/#/./wk/../wk3/wk3_3_text_units?id=fonts) from [CSS Fonts](https://www.w3schools.com/css/css_font.asp) by w3schools.com and [Fundamental text and font styling](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals) by MDN Web Docs*.
+_This section was adapted from [Mauricio Buschinelli's](https://maujac.github.io/2W6-UI/#/./wk/../wk3/wk3_3_text_units?id=fonts) course notes, which in turn were adapted from [CSS Fonts](https://www.w3schools.com/css/css_font.asp) by w3schools.com and [Fundamental text and font styling](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals) by MDN Web Docs_.
 
 ## Font Families
 
 It's time to learn about **Font Families**. What are those?
 
-> A **typeface** (or  **font family**) is the design of <a href="https://en.wikipedia.org/wiki/Lettering" title="Lettering">lettering</a> that can include variations in size, weight (e.g. bold), slope (e.g. italic), width (e.g. condensed), and so on. Each of these variations of the typeface is a <a href="https://en.wikipedia.org/wiki/Font" title="Font">font</a>.
+> A **typeface** (or **font family**) is the design of <a href="https://en.wikipedia.org/wiki/Lettering" title="Lettering">lettering</a> that can include variations in size, weight (e.g. bold), slope (e.g. italic), width (e.g. condensed), and so on. Each of these variations of the typeface is a <a href="https://en.wikipedia.org/wiki/Font" title="Font">font</a>.
 >
 > <footer>
->   [Typeface][quote-cite], Wikipedia
+>   [Wikipedia article, "Typeface"][wiki-typeface]
 > </footer>
 
-[quote-cite]: https://en.wikipedia.org/wiki/Typeface
+[wiki-typeface]: https://en.wikipedia.org/wiki/Typeface
 
 In CSS, there are two types of font family names:
 
-- **Generic family** - a group of font families with  similar look ("Serif", "Sans Serif", and "Monospace"). 
-- **Font family** - a specific font family (like "Times New Roman"  or "Arial")
+- **Generic family** - a group of font families with similar look
+- **Font family** - a specific font family 
 
-![The three **generic families** are *serif*, *sans-serif*, and *monospace*. Every **font family** belongs to a particular **generic family**. ](../assets/content/wk4/font-family-egs.png "Table of fonts"){ style="width: 50%; height: auto; margin: auto;"}
+![](../assets/content/wk4/font-family-egs.png "The three generic families are Serif, Sans-serif, and Monospace. Times New Roman, Arial, and Courier New are examples of Serif, Sans-serif, and Monospace font families respectively"){ style="width: 50%; height: auto; margin: auto;"}
 
-<figcaption>
+![From Mark Womack: [What Font Should I Use?][womack-source]][womack-img]
 
-This is a figcaption, which hopefully will indicate the [source of the image](https://example.com).
-
-</figcaption>
-
-![*Serif* typefaces are characterized by the precense of small pointed strokes at the end of each main stroke that comprises the characters in that typeface. *Sans-serif* typefaces lack these extra strokes (*sans* is French for *without*).](https://drmarkwomack.com/images/serif-vs-sans-serif.png)
-
-<p align="center"><a href="https://drmarkwomack.com/a-writing-handbook/style/typography/"><em>What Font Should I Use?</em></a></p>
-
+[womack-img]: ../assets/content/wk4/serif-vs-sans-serif.png "*Serif* typefaces are characterized by the precense of small pointed strokes at the end of each main stroke that comprises the characters in that typeface. *Sans-serif* typefaces lack these extra strokes (*sans* is French for without)."
+[womack-source]: https://drmarkwomack.com/a-writing-handbook/style/typography/
 
 ## Changing fonts with `font-family:`
 
-The fonts available to the browser depend largely on the fonts installed in the  operating system.
+The fonts available to the browser depend largely on the fonts installed in the operating system.
 
->  When selecting a font, make sure to include a series of fallback fonts, **from most specific to least specific**. 
+> When selecting a font, make sure to include a series of fallback fonts, from most specific to least specific\*\*.
 
 This is also known as a **font stack**:
 
 ###### CSS{.sourceCode}
+
 ```css
 p {
   font-family: "Times New Roman", Times, serif;
 }
 ```
+
 <br>
 
 Here is a [list of fonts considered to be **Web Safe Fonts**](https://www.w3schools.com/cssref/css_websafe_fonts.asp), meaning you can count on them being available in most browsers.
 
 > Font names composed of more than one word need to be written between quotations, such as "Times New Roman" above.
 
-
 Fonts styles are normally applied to the entire page, so you can add them to the body selector:
 
 ```css
 body {
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 ```
 
@@ -106,12 +103,10 @@ Font size can be set with the `font-size` property.
 - Sets the text to a fixed size.
 - User cannot adjust it (eg. increase font size in the browser).
 
-
 **Relative size:**
 
 - Size relative to another element in the page (see CSS Units below).
 - User can adjust it.
-
 
 ### Recommendation & inheritance
 
@@ -131,30 +126,28 @@ Two common relative units for `font-size` are:
 
 - 1 `rem` is equal to the font size **set on the root element of the document** ( the `<html>`), not the parent element.
 
-
 > It is recommended to use rem units for setting `font-size`
 >
 > The root `<html>` element has a default `font-size` of 16px (set in your browser settings).
 
-
-*Code*
+_Code_
 
 ```css
 h1 {
-	font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
 .p1 {
-	font-size: 1.2rem;
-	color: red;
+  font-size: 1.2rem;
+  color: red;
 }
 .p2 {
-	font-size: 0.7rem;
-	color: blue;
+  font-size: 0.7rem;
+  color: blue;
 }
 ```
 
-*Result*
+_Result_
 
 <section style="background-color: rgb(248, 248, 246)">
     <h1 style="font-size:1.8rem;">Relative sizes</h1>
@@ -162,10 +155,9 @@ h1 {
     <p style="font-size:0.7rem; color:blue;">Aliquam repellendus, debitis perspiciatis asperiores aut deleniti maxime totam neque dolores enim labore placeat facilis expedita iure!</p>
 </section>
 
-
 ## CSS Units
 
-!>  For this section we will refer to the page [CSS Units by W3Schools](https://www.w3schools.com/CSSref/css_units.asp).
+!> For this section we will refer to the page [CSS Units by W3Schools](https://www.w3schools.com/CSSref/css_units.asp).
 
 ### Responsive units
 
@@ -189,8 +181,6 @@ Now that you know what the viewport is you can unlock the `!` [Emmet](https://co
 
 ![Peek 2020-02-06 10-48](./wk3/assets/../../assets/vscodeemmet.gif)
 
-
-
 <br>
 
 ### Disabling Emmet
@@ -201,17 +191,15 @@ If you don't like Emmet's auto-complete, you can disable it:
 2. Search for Emmet
 3. Disable settings as required (play around until you get the desirable behaviour)
 
-
-
-
 ## Meta Attributes: viewport & IE compatibility
 
 If you use the `!` Emmet shortcut shown above you will notice it comes with two new `<meta>` attributes:
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 ```
-<!-- and 
+
+<!-- and
 
 ```html
 <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -229,9 +217,7 @@ The `width=` property controls the size of the viewport. It can be set to a spec
 
 The `initial-scale=` property controls the zoom level when the page is first loaded.
 
-See [*Using the viewport meta tag to control layout on mobile browsers*](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) for more info.
-
-
+See [_Using the viewport meta tag to control layout on mobile browsers_](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) for more info.
 
 <br>
 
@@ -249,6 +235,7 @@ See this [Stack Overflow article](https://stackoverflow.com/questions/6771258/wh
 
 <br>
 -->
+
 ## Using Web Fonts
 
 You can include external fonts in your CSS.
@@ -266,7 +253,10 @@ A popular location to get external fonts is **Google Fonts:** https://fonts.goog
 Include the provided link in the head section of your HTML file, just like you would link a CSS Style sheet.
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+  rel="stylesheet"
+/>
 ```
 
 <br>
@@ -275,11 +265,9 @@ Add the f`font-family` property in your CSS. **Don't forget to add a fall-back f
 
 ```css
 p {
-	font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 ```
-
-
 
 <br>
 
@@ -295,7 +283,7 @@ Common values are:
   - `400` is equivalent to `normal`
   - `700` is equivalent to `bold`
 
-See [font-weight by MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight) web docs for more information 
+See [font-weight by MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight) web docs for more information
 
 ```css
 font-weight: bold;
@@ -309,7 +297,7 @@ font-weight: 200;
 
 The [`text-decoration`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration) sets the decorations on fonts (mainly used to change default underline on links).
 
-Common values are: 
+Common values are:
 
 - `none`: Unsets any text decorations already present.
 - `underline`: <u>Underlines the text</u>.
@@ -317,18 +305,16 @@ Common values are:
 
 ## Text Layout & Alignment
 
-!>  For this section we will refer to the **section "Text layout"** of the [Fundamental text and font styling](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Text_layout) by MDN web docs.
+!> For this section we will refer to the **section "Text layout"** of the [Fundamental text and font styling](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Text_layout) by MDN web docs.
 
 <br>
 
 Using the reference above, look at the following properties:
 
-- [`text-align`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align) 
+- [`text-align`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align)
 - [`line-height`](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height)
-- [`letter-spacing`](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing) 
-- [`word-spacing`](https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing) 
-
-
+- [`letter-spacing`](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
+- [`word-spacing`](https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing)
 
 ### Which units: Em or Unitless ?
 
@@ -336,34 +322,33 @@ Using the reference above, look at the following properties:
 
 > Avoid unexpected results by using unitless line-height.
 
-See [*Prefer unitless numbers for line-height values*](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height) by MDN Web Docs for more info.
-
+See [_Prefer unitless numbers for line-height values_](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height) by MDN Web Docs for more info.
 
 ## Other text styling
 
 There are many other text styling properties, some more used than others:
 
-- [`font-style`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-style): Used to turn italic text on and off. 
+- [`font-style`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-style): Used to turn italic text on and off.
 - [`text-transform`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform): Transform you font to upper case, capitalised, full-width, etc.
 - [`text-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow): Applies drop shadows to your text.
 
 ## Shorthand Properties Notation
+
 You can set multiple font values in one shoot by using the shorthand `<font>` property (many CSS properties have a shorthand version):
 
 > Refer to the MDN web doc page on the [**`<font>` property**](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
 
 In the example below the following font properties are set at the same time:
 
--  [`font-style`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-style)
--  [`font-variant`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant)
--  [`font-weight`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight)
--  [`font-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) / [`line-height`](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height)
--    [`font-family`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family)
-
+- [`font-style`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-style)
+- [`font-variant`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant)
+- [`font-weight`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight)
+- [`font-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) / [`line-height`](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height)
+- [`font-family`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family)
 
 ```css
-body{
-	font: italic small-caps bold 16px/2 cursive;    
+body {
+  font: italic small-caps bold 16px/2 cursive;
 }
 ```
 
@@ -371,12 +356,11 @@ body{
 
 This live demo illustrates how the `font` shorthand property affects a paragraph element.
 
-[*This live demo is provided by MDN web docs*](https://developer.mozilla.org/en-US/docs/Web/CSS/font#frame_live_sample)
+[_This live demo is provided by MDN web docs_](https://developer.mozilla.org/en-US/docs/Web/CSS/font#frame_live_sample)
 
 <div style="background-color: rgb(248, 248, 246)">
 	<iframe class="live-sample-frame sample-code-frame" frameborder="0" height="450px" id="frame_live_sample" src="https://mdn.mozillademos.org/en-US/docs/Web/CSS/font$samples/live_sample?revision=1569828" width="100%"></iframe>
 </div>
-
 
 ## Hands-on
 
@@ -385,7 +369,7 @@ This live demo illustrates how the `font` shorthand property affects a paragraph
 Complete the following exercises from W3Schools:
 
 1. [CSS Text](https://www.w3schools.com/css/exercise.asp?filename=exercise_text1)
-2
+   2
 
 # Knowledge Check
 
