@@ -10,7 +10,7 @@ abstract: |
 
 # Lesson Overview
 
-- What is a CSS?
+- How to style 
 - Why is a CSS?
 - How is a CSS?
 

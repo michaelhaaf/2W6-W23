@@ -15,53 +15,53 @@ You can compare this calendar with the calendar from the [Course Outline](../pag
 
 > **NOTE:** All hyperlinks have a defined `<title>` attribute. **Hover** over the links with your mouse to view more information about each :) 
 
-+------------------+-----------------------------------------------------------------+--------------------------------------------------------------------+
-| Lectures         | Topics                                                          | Activities/Assessments                                             |
-+==================+=================================================================+====================================================================+
-| [Week 1][lec1]   | Tools - VS Code <br>                                            | **Lab 1 (5%, due Jan 27):** [Creating a website][lab1] <br>        |
-|                  | HTML - boilerplate HTML5, content elements <br>                 | Activity: [Writing HTML Boilerplate][actBoilerplate]  <br>         |
-|                  | HTML - fundamentals, syntax, elements <br>                      |                                                                    |
-+------------------+-----------------------------------------------------------------+--------------------------------------------------------------------+
-| [Week 2][lec2]   | HTML - element attributes, document markup <br>                 | Tutorial: [Marking up a letter][tutDocument] <br>                  |
-|                  | HTML - normal flow, block vs inline elements <br>               | Activity: VS Code shortcuts, editting, Emmet <br>                  |
-|                  | Tools - VS Code skills for efficient web development <br>       | * [Part 1][actVSCode1]                                             |
-|                  |                                                                 | * [Part 2][actVSCode2]                                             |
-+------------------+-----------------------------------------------------------------+--------------------------------------------------------------------+
-| [Week 3][lec3]   | HTML - semantic elements, website markup <br>                   | **Lab 2 (11%, due Feb 14):** [Website layout and style][lab2] <br> |
-|                  | Tools - browser dev tools for CSS/DOM inspection <br>           | Tutorial: [Document and Website Structure][tutWebsite] <br>        |
-|                  | CSS - inline vs internal vs external <br>                       | Activity: [CSS Diner][actDiner] <br>                               |
-|                  | CSS - fundamentals, syntax, selectors <br>                      | Activity: How to use the Browser Dev Tools <br>                    |
-|                  |                                                                 | * [Part 1][actBrowser1]                                            |
-|                  |                                                                 | * [Part 2][actBrowser2]                                            |
-+------------------+-----------------------------------------------------------------+--------------------------------------------------------------------+
-| [Week 4][lec4]   | CSS - element properties: images, icons, fonts <br>             |                                                                    |
-+------------------+-----------------------------------------------------------------+--------------------------------------------------------------------+
-| ##### NOTE:      | ##### the weeks below are tentative                             |                                                                    |
-+------------------+-----------------------------------------------------------------+--------------------------------------------------------------------+
-| [Week 5][lec5]   | CSS - layouts: the box model, floats <br>                       |                                                                    |
-|                  | CSS - advanced styling: typography, accessibility <br>          |                                                                    |
-+------------------+-----------------------------------------------------------------+--------------------------------------------------------------------+
-| [Week 6][lec6]   | CSS - Flexbox                                                   |                                                                    |
-+------------------+-----------------------------------------------------------------+--------------------------------------------------------------------+
-| [Week 7][lec7]   | JavaScript - Manipulating the DOM, Dynamic styling              |                                                                    |
-+------------------+-----------------------------------------------------------------+--------------------------------------------------------------------+
-| [Week 8][lec8]   | **Test Review**: Review all material covered so far <br>        | **Test 1 (15%, March 13)** <br>                                    |
-+------------------+-----------------------------------------------------------------+--------------------------------------------------------------------+
-| [Week 9][lec9]   | Responsive Web Design <br>                                      |                                                                    |
-+------------------+-----------------------------------------------------------------+--------------------------------------------------------------------+
-| [Week 10][lec10] | Intermediate CSS - Layouts, Grid <br>                           |                                                                    |
-+------------------+-----------------------------------------------------------------+--------------------------------------------------------------------+
-| [Week 11][lec11] | Intermediate CSS - The Cascade, best practises <br>             |                                                                    |
-+------------------+-----------------------------------------------------------------+--------------------------------------------------------------------+
-| [Week 12][lec12] | Putting it all together: HTML Forms <br>                        |                                                                    |
-+------------------+-----------------------------------------------------------------+--------------------------------------------------------------------+
-| [Week 13][lec13] | HTML Forms with Event-driven UI <br>                            |                                                                    |
-+------------------+-----------------------------------------------------------------+--------------------------------------------------------------------+
-| [Week 14][lec14] | **Test Review**: Review all material covered so far <br>        | **Test 2 (15%, TBD)** <br>                                         |
-|                  | Content Management Systems - Introduction to Wordpress          | **Project Milestone 1 (15%, due end of classes):** TBD             |
-+------------------+-----------------------------------------------------------------+--------------------------------------------------------------------+
-| [Week 15][lec15] | Content Management Systems - Creating/Modifying a Wordpress CMS | **Project Milestone 2 (15%, due end of exams):** TBD               |
-+------------------+-----------------------------------------------------------------+--------------------------------------------------------------------+
++------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
+| Lectures         | Topics                                                          | Activities/Assessments                                                    |
++==================+=================================================================+===========================================================================+
+| [Week 1][lec1]   | Tools - VS Code <br>                                            | **Lab 1 (5%, due Jan 27):** [Creating a website (.pdf)][lab1] <br>        |
+|                  | HTML - boilerplate HTML5, content elements <br>                 | Activity: [Writing HTML Boilerplate (.html)][actBoilerplate]  <br>        |
+|                  | HTML - fundamentals, syntax, elements <br>                      |                                                                           |
++------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
+| [Week 2][lec2]   | HTML - element attributes, document markup <br>                 | Tutorial: [Marking up a letter][tutDocument] <br>                         |
+|                  | HTML - normal flow, block vs inline elements <br>               | Activity: VS Code shortcuts, editting, Emmet <br>                         |
+|                  | Tools - VS Code skills for efficient web development <br>       | * [Part 1 (Youtube)][actVSCode1]                                          |
+|                  |                                                                 | * [Part 2 (Youtube)][actVSCode2]                                          |
++------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
+| [Week 3][lec3]   | HTML - semantic elements, website markup <br>                   | **Lab 2 (11%, due Feb 14):** [Website layout and style (.pdf)][lab2] <br> |
+|                  | Tools - browser dev tools for CSS/DOM inspection <br>           | Tutorial: [Document and Website Structure][tutWebsite] <br>               |
+|                  | CSS - inline vs internal vs external <br>                       | Activity: [CSS Diner][actDiner] <br>                                      |
+|                  | CSS - fundamentals, syntax, selectors <br>                      | Activity: How to use the Browser Dev Tools <br>                           |
+|                  |                                                                 | * [Part 1][actBrowser1]                                                   |
+|                  |                                                                 | * [Part 2][actBrowser2]                                                   |
++------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
+| [Week 4][lec4]   | CSS - element properties: fonts, images, icons                  | Tutorial: [CSS Exercises][tutCSSFoundations]                              |
++------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
+| ##### NOTE:      | ##### the weeks below are tentative                             |                                                                           |
++------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
+| [Week 5][lec5]   | CSS - layouts: the box model, floats <br>                       |                                                                           |
+|                  | CSS - advanced styling: typography, accessibility <br>          |                                                                           |
++------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
+| [Week 6][lec6]   | CSS - Flexbox                                                   |                                                                           |
++------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
+| [Week 7][lec7]   | JavaScript - Manipulating the DOM, Dynamic styling              |                                                                           |
++------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
+| [Week 8][lec8]   | **Test Review**: Review all material covered so far <br>        | **Test 1 (15%, March 13)** <br>                                           |
++------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
+| [Week 9][lec9]   | Responsive Web Design <br>                                      |                                                                           |
++------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
+| [Week 10][lec10] | Intermediate CSS - Layouts, Grid <br>                           |                                                                           |
++------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
+| [Week 11][lec11] | Intermediate CSS - The Cascade, best practises <br>             |                                                                           |
++------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
+| [Week 12][lec12] | Putting it all together: HTML Forms <br>                        |                                                                           |
++------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
+| [Week 13][lec13] | HTML Forms with Event-driven UI <br>                            |                                                                           |
++------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
+| [Week 14][lec14] | **Test Review**: Review all material covered so far <br>        | **Test 2 (15%, TBD)** <br>                                                |
+|                  | Content Management Systems - Introduction to Wordpress          | **Project Milestone 1 (15%, due end of classes):** TBD                    |
++------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
+| [Week 15][lec15] | Content Management Systems - Creating/Modifying a Wordpress CMS | **Project Milestone 2 (15%, due end of exams):** TBD                      |
++------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 
 [lec1]: ../lectures/week1.html "Week 1 Lecture notes"
 [lec2]: ../lectures/week2.html "Week 2 Lecture notes"
@@ -88,6 +88,7 @@ You can compare this calendar with the calendar from the [Course Outline](../pag
 
 [tutDocument]: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter "MDN: Marking up a Letter. Make sure you are familiar with all of the HTML elements covered in this tut."
 [tutWebsite]: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure "MDN: Document and website structure. This is a very helpful tutorial for getting started on Lab2."
+[tutCSSFoundations]: ../tutorials/css-exercises-foundations.zip "Odin Project: CSS Foundations Exercises. There are 6 exercises total in this set. You should be able to complete them all with what you have learned during Week 3."
 
 [actBoilerplate]: ../tutorials/boilerplate.html "Completed Boilerplate HTML file, with all elements commented."
 [actVSCode1]: https://www.youtube.com/watch?v=V8vizNQKtx0 "Web Dev Simplified (YouTube): This video shows how to use 'Emmets' in VS Code to generate HTML tags and boilerplate automatically." 
