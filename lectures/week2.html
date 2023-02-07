@@ -8,10 +8,8 @@
   <meta charset="utf-8"/>
   <meta content="pandoc" name="generator"/>
   <meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
-    <meta content="Michael Haaf" name="author"/>
-     <meta content="2023-01-25" name="dcterms.date"/>
-      <title>
-   2W6-W23: Lecture 2
+       <title>
+   2W6-W23: Week 2 Lecture Notes
   </title>
   <style>
    code{white-space: pre-wrap;}
@@ -25,70 +23,6 @@
      margin: 0 0.8em 0.2em -1.6em;
      vertical-align: middle;
    }
-   pre > code.sourceCode { white-space: pre; position: relative; }
-   pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-   pre > code.sourceCode > span:empty { height: 1.2em; }
-   .sourceCode { overflow: visible; }
-   code.sourceCode > span { color: inherit; text-decoration: inherit; }
-   div.sourceCode { margin: 1em 0; }
-   pre.sourceCode { margin: 0; }
-   @media screen {
-   div.sourceCode { overflow: auto; }
-   }
-   @media print {
-   pre > code.sourceCode { white-space: pre-wrap; }
-   pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-   }
-   pre.numberSource code
-     { counter-reset: source-line 0; }
-   pre.numberSource code > span
-     { position: relative; left: -4em; counter-increment: source-line; }
-   pre.numberSource code > span > a:first-child::before
-     { content: counter(source-line);
-       position: relative; left: -1em; text-align: right; vertical-align: baseline;
-       border: none; display: inline-block;
-       -webkit-touch-callout: none; -webkit-user-select: none;
-       -khtml-user-select: none; -moz-user-select: none;
-       -ms-user-select: none; user-select: none;
-       padding: 0 4px; width: 4em;
-       background-color: #ea9a97;
-       color: #393552;
-     }
-   pre.numberSource { margin-left: 3em; border-left: 1px solid #393552;  padding-left: 4px; }
-   div.sourceCode
-     { color: #908caa; background-color: #393552; }
-   @media screen {
-   pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-   }
-   code span.al { color: #f6c177; } /* Alert */
-   code span.an { color: #9ccfd8; font-weight: bold; } /* Annotation */
-   code span.at { } /* Attribute */
-   code span.bn { color: #eb6f92; } /* BaseN */
-   code span.bu { } /* BuiltIn */
-   code span.cf { color: #3e8fb0; } /* ControlFlow */
-   code span.ch { color: #eb6f92; } /* Char */
-   code span.cn { color: #eb6f92; font-weight: bold; } /* Constant */
-   code span.co { color: #9ccfd8; } /* Comment */
-   code span.cv { color: #9ccfd8; font-weight: bold; } /* CommentVar */
-   code span.do { color: #9ccfd8; } /* Documentation */
-   code span.dt { color: #3e8fb0; } /* DataType */
-   code span.dv { color: #3e8fb0; } /* DecVal */
-   code span.er { color: #eb6f92; } /* Error */
-   code span.ex { } /* Extension */
-   code span.fl { color: #cecacd; } /* Float */
-   code span.fu { color: #c4a7e7; } /* Function */
-   code span.im { } /* Import */
-   code span.in { color: #9ccfd8; font-weight: bold; } /* Information */
-   code span.kw { color: #c4a7e7; } /* Keyword */
-   code span.op { color: #c4a7e7; } /* Operator */
-   code span.ot { color: #f6c177; } /* Other */
-   code span.pp { color: #f6c177; font-weight: bold; } /* Preprocessor */
-   code span.sc { color: #eb6f92; } /* SpecialChar */
-   code span.ss { color: #ea9a97; } /* SpecialString */
-   code span.st { color: #ea9a97; } /* String */
-   code span.va { } /* Variable */
-   code span.vs { color: #ea9a97; } /* VerbatimString */
-   code span.wa { color: #9ccfd8; font-weight: bold; } /* Warning */
    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
     <link href="../assets/css/style.css" rel="stylesheet"/>
@@ -189,22 +123,12 @@
      In this article
     </h2>
      <ul>
-<li><a href="#html-semantics" id="toc-html-semantics">HTML Semantics</a>
-<ul>
-<li><a href="#why-semantic-html-elements"
-id="toc-why-semantic-html-elements">Why Semantic HTML Elements
-?</a></li>
-<li><a href="#semantics-page-structure"
-id="toc-semantics-page-structure">Semantics: Page Structure</a></li>
-<li><a href="#recommended-semantics"
-id="toc-recommended-semantics">Recommended Semantics</a></li>
-<li><a href="#what-about-div" id="toc-what-about-div">What about
-<code>&lt;div&gt;</code> ?</a></li>
-<li><a href="#references-diving-deeper"
-id="toc-references-diving-deeper">References &amp; Diving
-Deeper</a></li>
-<li><a href="#hands-on" id="toc-hands-on">Hands-on</a></li>
-</ul></li>
+<li><a href="#lesson-overview" id="toc-lesson-overview">Lesson
+Overview</a></li>
+<li><a href="#introduction" id="toc-introduction">Introduction</a></li>
+<li><a href="#knowledge-check" id="toc-knowledge-check">Knowledge
+Check</a></li>
+<li><a href="#exercises" id="toc-exercises">Exercises</a></li>
 </ul>
    </nav>
   </aside>
@@ -212,306 +136,30 @@ Deeper</a></li>
    <article class="article">
          <header id="title-block-header">
      <h1 class="title">
-      2W6-W23: Lecture 2
+      2W6-W23: Week 2 Lecture Notes
      </h1>
-           <p class="author">
-      Michael Haaf
-     </p>
-           <p class="date">
-      2023-01-25
-     </p>
-          </header>
-     <h1 id="html-semantics">HTML Semantics</h1>
-<h2 id="why-semantic-html-elements">Why Semantic HTML Elements ?</h2>
-<p><strong>Semantic elements add meaning to the html tags</strong> so
-that search engines, screen readers, and web browsers can make sense of
-it.</p>
-<blockquote>
-<p>Semantic html elements clearly describe their <strong>purpose to both
-the browser and the developer</strong>, allowing the information to be
-consumed in the correct format <strong>according to the
-user</strong>.</p>
-</blockquote>
-<figure>
-<img
-src="https://web.archive.org/web/20190712210225im_/https://internetingishard.com/html-and-css/icons/social/semantic-markup-096a41.png"
-title=":size=400" alt="page_talking" />
-<figcaption aria-hidden="true">page_talking</figcaption>
-</figure>
-<p align="center">
-<a href="https://internetingishard.com/html-and-css/icons/social/semantic-markup-096a41.png"><em>Semantic
-HTML Tutorial</em></a> <em>- internetingishard.com</em>
-</p>
-<p>You have already been using basic semantic elements:</p>
+             <div class="abstract">
+      <div class="abstract-title">
+       HTML Fundamentals
+      </div>
+      <p>Lesson summary.</p>
+     </div>
+         </header>
+     <p>Last update: Tuesday, Feb 7, 2023.</p>
+<hr />
+<h1 id="lesson-overview">Lesson Overview</h1>
 <ul>
-<li>&lt;html&gt;</li>
-<li>&lt;head&gt;</li>
-<li>&lt;body&gt;</li>
-<li>&lt;img&gt;</li>
-<li>&lt;p&gt;</li>
-<li>&lt;h1&gt;, &lt;h2&gt;, etc</li>
+<li>To be updated</li>
+<li>To be updated</li>
+<li>To be updated</li>
 </ul>
-<h2 id="semantics-page-structure">Semantics: Page Structure</h2>
-<p>There are <a
-href="https://learn-the-web.algonquindesign.ca/topics/html-semantics-cheat-sheet/">many
-html semantic elements</a> which are part of HTML5.</p>
-<p>From here on, we will incorporate the following html elements into
-our sites:</p>
-<ul>
-<li><code>&lt;header&gt;</code></li>
-<li><code>&lt;nav&gt;</code></li>
-<li><code>&lt;article&gt;</code></li>
-<li><code>&lt;section&gt;</code></li>
-<li><code>&lt;aside&gt;</code></li>
-<li><code>&lt;footer&gt;</code></li>
-<li><code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code></li>
-<li><code>&lt;time&gt;</code></li>
-<li><code>&lt;address&gt;</code></li>
-</ul>
-<p>Let’s understand the purpose of each element:</p>
-<h3 id="header"><code>&lt;header&gt;</code></h3>
-<p>Found at the top of a document, a section, or an article and usually
-contains the main heading. It may contain some navigation and search
-tools.</p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;header&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;h1&gt;</span>My Amazing Company<span class="kw">&lt;/h1&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/header&gt;</span></span></code></pre></div>
-<h3 id="nav"><code>&lt;nav&gt;</code></h3>
-<p>The navigation bar. Defines the navigation functionality for the
-page.</p>
-<div class="sourceCode" id="cb2"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;nav&gt;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;ul&gt;</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;li&gt;&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;/home&quot;</span><span class="kw">&gt;</span>Home<span class="kw">&lt;/a&gt;&lt;/li&gt;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;li&gt;&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;/about&quot;</span><span class="kw">&gt;</span>About<span class="kw">&lt;/a&gt;&lt;/li&gt;</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;li&gt;&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;/contact&quot;</span><span class="kw">&gt;</span>Contact us<span class="kw">&lt;/a&gt;&lt;/li&gt;</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/ul&gt;</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/nav&gt;</span></span></code></pre></div>
-<h3 id="main"><code>&lt;main&gt;</code></h3>
-<p>Specifies a big area in the center that contains most of content
-unique to a page. Used only once on a page.</p>
-<p>Use <code>&lt;main&gt;</code> only once per page, and put it directly
-inside <code>&lt;body&gt;</code>. Ideally this shouldn’t be nested
-within other elements.</p>
-<p><br></p>
-<h3 id="article"><code>&lt;article&gt;</code></h3>
-<p>A block of related content that makes sense on its own without the
-rest of the page (e.g., a single blog post or a sales item in an
-e-commerce website).</p>
-<p>Think of an article as a stand-alone block of content. You should
-technically be able to rip it from your page, put it on another site or
-search engine and it should continue to flow and make sense on its
-own.</p>
-<p><br></p>
-<h3 id="section"><code>&lt;section&gt;</code></h3>
-<p>A thematic grouping of content that constitutes one single piece of
-functionality. (e.g., a set of article headlines, blog posts or
-summaries). Often used to group <code>&lt;article&gt;</code>
-elements.</p>
-<blockquote>
-<p>It’s recommended to start a <code>&lt;section&gt;</code> with a
-heading.</p>
-</blockquote>
-<div class="sourceCode" id="cb3"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;section&gt;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;h2&gt;</span>Top Stories<span class="kw">&lt;/h2&gt;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;section&gt;</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;h3&gt;</span>News<span class="kw">&lt;/h3&gt;</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;article&gt;</span>Story 1<span class="kw">&lt;/article&gt;</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;article&gt;</span>Story 2<span class="kw">&lt;/article&gt;</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;article&gt;</span>Story 3<span class="kw">&lt;/article&gt;</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/section&gt;</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;section&gt;</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;h3&gt;</span>Sport<span class="kw">&lt;/h3&gt;</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;article&gt;</span>Story 1<span class="kw">&lt;/article&gt;</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;article&gt;</span>Story 2<span class="kw">&lt;/article&gt;</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;article&gt;</span>Story 3<span class="kw">&lt;/article&gt;</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/section&gt;</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/section&gt;</span></span></code></pre></div>
-<p><br></p>
-<h3 id="aside"><code>&lt;aside&gt;</code></h3>
-<p>Defines content that is not directly related to the main content but
-can provide additional information indirectly related to it (glossary
-entries, author biography, , quotes, stats, related links, etc.). Also
-commonly used for advertisement blocks or images.</p>
-<p><code>&lt;aside&gt;</code> is typically related to the surrounding
-content.</p>
-<p><br></p>
-<h3 id="footer"><code>&lt;footer&gt;</code></h3>
-<p>Generally found at the bottom of a document or section. Typically
-contains the author of the document, copyright information, links to
-terms of use, contact information, etc.</p>
-<div class="sourceCode" id="cb4"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a> <span class="kw">&lt;footer&gt;</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;p&gt;</span>Author: Mauricio Buschinelli<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;p&gt;</span>Contact information: <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;mailto:someone@example.com&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  someone@example.com<span class="kw">&lt;/a&gt;</span>.<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/footer&gt;</span> </span></code></pre></div>
-<p><br></p>
-<h3 id="figure-and-figcaption"><code>&lt;figure&gt;</code> and
-<code>&lt;figcaption&gt;</code></h3>
-<p>Used together in order to add information or a visual explanation to
-an image. Wrap your image content around <code>&lt;figure&gt;</code> and
-use <code>&lt;figcaption&gt;</code> to add captions.</p>
-<div class="sourceCode" id="cb5"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;figure&gt;</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;pic_trulli.jpg&quot;</span> <span class="er">alt</span><span class="ot">=</span><span class="st">&quot;Trulli&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;figcaption&gt;</span>Fig1. - Trulli, Puglia, Italy.<span class="kw">&lt;/figcaption&gt;</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/figure&gt;</span> </span></code></pre></div>
-<p><br></p>
-<h3 id="time"><code>&lt;time&gt;</code></h3>
-<p>Used to define a time and a date as human-readable text and/or as
-unambiguous machine-readable information.</p>
-<p>Particularly useful for search engines (ex.: return only pages
-published after a certain date).</p>
-<p><em>Code</em></p>
-<div class="sourceCode" id="cb6"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p&gt;</span>We open at <span class="kw">&lt;time&gt;</span>10:00<span class="kw">&lt;/time&gt;</span> every morning.<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p&gt;</span>By Troy McClure. Published <span class="kw">&lt;time</span> <span class="er">datetime</span><span class="ot">=</span><span class="st">&#39;2017-1-3&#39;</span><span class="kw">&gt;</span>January 3rd<span class="kw">&lt;/time&gt;&lt;/p&gt;</span> </span></code></pre></div>
-<p><em>Result</em></p>
-<div>
-<pre><code>&lt;p&gt;We open at &lt;time&gt;10:00&lt;/time&gt; every morning.&lt;/p&gt;</code></pre>
-<p>
-By Troy McClure. Published <time datetime='2017-1-3'>January 3rd</time>
-</p>
-</div>
-<h3 id="address"><code>&lt;address&gt;</code></h3>
-<p>Defines contact information for the author of the article or web
-page. Should not be used for arbitrary physical addresses.</p>
-<div class="sourceCode" id="cb8"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;address&gt;</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    Please contact <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&#39;mailto:troymcclure@example.com&#39;</span><span class="kw">&gt;</span>Troy</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    McClure<span class="kw">&lt;/a&gt;</span> for questions about this article.</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/address&gt;</span></span></code></pre></div>
-<p><br></p>
-<h2 id="recommended-semantics">Recommended Semantics</h2>
-<blockquote>
-<p>There is no single way to organize the semantic elements in a page.
-As long as you use elements for their intended purpose your semantics
-will be correct</p>
-</blockquote>
-<p><strong>Below is a recommendation for a semantic structure that will
-work for basic webpages:</strong></p>
-<p><br></p>
-<figure>
-<img src="assets/semantic_html_recommendation.png%20&#39;:size=500&#39;"
-alt="semantic_html_recommendation" />
-<figcaption aria-hidden="true">semantic_html_recommendation</figcaption>
-</figure>
-<p><br></p>
-<h3 id="other-semantic-layouts">Other Semantic Layouts</h3>
-<p>As mentioned, there is no single way of applying semantic elements.
-Below are other options.</p>
-<p>**Before using these layouts, make sure you understand the difference
-between <code>article</code>*and <code>section</code>**.</p>
-<figure>
-<img
-src="./assets/html-sectioning-elements-00c3fd.png%20&#39;:size=300&#39;"
-alt="Wireframe example of semantic elements in a page" />
-<figcaption aria-hidden="true">Wireframe example of semantic elements in
-a page</figcaption>
-</figure>
-<p align="center">
-<a href="https://internetingishard.com/html-and-css/semantic-html/"><em>Semantic
-HTML</em></a> <em>- internetingishard.com</em>
-</p>
-<p><br></p>
-<figure>
-<img
-src="https://www.w3schools.com/html/img_sem_elements.gif%20&#39;:size=250&#39;"
-alt="HTML5 Semantic Elements" />
-<figcaption aria-hidden="true">HTML5 Semantic Elements</figcaption>
-</figure>
-<p align="center">
-<a href="https://www.w3schools.com/html/html5_semantic_elements.asp"><em>HTML
-Semantic Elements</em></a> <em>- w3schools.org</em>
-</p>
-<p><br></p>
-<h2 id="what-about-div">What about <code>&lt;div&gt;</code> ?</h2>
-<p>Divs are still useful as containers for layout purposes or when no
-other elements make sense, however, they are meaningless
-semantically.</p>
-<p><strong>Avoiding using divs in favour of semantic elements whenever
-possible.</strong></p>
-<p>For machines (browsers, screen readers and search engines) <strong>a
-div means a generic container</strong>, even if it has been labeled with
-an id.</p>
-<blockquote>
-<p><strong>Semantic elements are better because they are:</strong> -
-Cleaner for developers - Understandable to machines</p>
-</blockquote>
-<p>Below is a comparison of a website organized with divs vs semantic
-elements (from <a
-href="https://www.springboardseo.com/resources/what-is/semantic-html.html">springboardseo.com</a>).</p>
-<p><br></p>
-<figure>
-<img
-src="https://www.springboardseo.com/img/html5-semantic-page-layout.jpg"
-alt="Semantic HTML5 layout, with structural HTML elements" />
-<figcaption aria-hidden="true">Semantic HTML5 layout, with structural
-HTML elements</figcaption>
-</figure>
-<p align="center">
-<em>Using Semantic Elements</em>
-</p>
-<p><br></p>
-<figure>
-<img
-src="https://www.springboardseo.com/img/non-semantic-html-layout.jpg"
-alt="Non-semantic HTML layout, with generic divs" />
-<figcaption aria-hidden="true">Non-semantic HTML layout, with generic
-divs</figcaption>
-</figure>
-<p align="center">
-<em>Using Divs</em>
-</p>
-<p><br></p>
-<h2 id="references-diving-deeper">References &amp; Diving Deeper</h2>
-<blockquote>
-<p>The article <a
-href="https://internetingishard.com/html-and-css/semantic-html/"><strong>Semantic
-HTML</strong></a> by internetingishard.com does a great job explaining
-this topic in mode is an</p>
-</blockquote>
-<p>Other useful references:</p>
-<ul>
-<li><p><a
-href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure">Document
-and website structure</a> by MDN Web Docs</p></li>
-<li><p><a
-href="https://www.w3schools.com/html/html5_semantic_elements.asp">HTML5
-Semantic Elements</a> by W3Schools</p></li>
-<li><p><a
-href="https://learn-the-web.algonquindesign.ca/topics/html-semantics-cheat-sheet/"><strong>HTML
-semantics cheat sheet</strong></a> by algonquindesign.ca</p></li>
-</ul>
-<h2 id="hands-on">Hands-on</h2>
-<h3 id="lab-2">Lab 2</h3>
-<p>Refactor the HTML page done in the <a
-href="https://mau-jac.github.io/2W6-UI/#/./wk3/wk03_Intro_CSS?id=lab-1">Lab
-for wk3.1 Hands-on activity</a> in order to use semantic HTML elements
-in your html file.</p>
-<blockquote>
-<p><a
-href="https://drive.google.com/file/d/12Fw-UXRhTsmuF5cejv4xIYQqvUxEDZGS/view?usp=sharing">Download
-the solution from here</a>.</p>
-</blockquote>
-<h3 id="lab-3">Lab 3</h3>
-<p>For this lab we will use the project <a
-href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content"><strong>Structuring
-a page of content</strong></a> by MDN Web docs.</p>
-<p>Please complete the instructions as described in the <strong>Starting
-point</strong> and <strong>Project brief</strong> section of the page
-above.</p>
-<blockquote>
-<p><a
-href="https://drive.google.com/file/d/1zEVoYjac0oJFXptgNvePpM6n7PMTyf9o/view?usp=sharing">Download
-the solution from here</a>.</p>
-</blockquote> 
+<hr />
+<h1 id="introduction">Introduction</h1>
+<p>This section will be backfilled <em>at the latest</em> by the week we
+start reviewing for Test 1 (Week 7/8). For now, refer to
+<strong>LEA</strong> for all course notes for Week 2 content.</p>
+<h1 id="knowledge-check">Knowledge Check</h1>
+<h1 id="exercises">Exercises</h1> 
    </article>
   </main>
   <footer class="footer surface">

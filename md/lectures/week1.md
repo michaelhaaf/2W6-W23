@@ -1,60 +1,28 @@
 
 ---
-title: '2W6-W23: Lecture 1'
-author: Michael Haaf
-date: 2023-01-18
-theme: solarized
+title: '2W6-W23: Week 1 Lecture Notes'
 toc-title: "In this article"
-abstract-title: "Lesson Overview"
+abstract-title: "Introduction to User Interface Development"
 abstract: |
-  This is markdown. Multiple pargraphs are possible? 
-
-  Hmm....
-
-  - list
-  - another list item
-  - [Section link](#html-content-elements)
+  Lesson summary.
 ---
 
-# HTML Fundamentals
+Last update: Tuesday, Feb 7, 2023.
 
-## Some section
+---
 
-I may update this slide with more exciting information soon. For now, here are the ways you can contact me during this course.
+# Lesson Overview
 
-# HTML Boilerplate
+- To be updated
+- To be updated
+- To be updated
 
-## Boilerplate?
+---
 
-This is an expression meaning: "something you have to prepare pretty much the same way every time you do it". 
+# Introduction
 
-It originates from the newspaepr industry, where rolled steel text templates were used to test the display properties of newspapers before printing. The science of user interfaces is much older than us!
+This section will be backfilled *at the latest* by the week we start reviewing for Test 1 (Week 7/8). For now, refer to **LEA** for all course notes for Week 1 content.
 
-## The `<DOCTYPE>` tag
+# Knowledge Check
 
-## The `<html>` tag
-
-## The `<head>` tag
-
-### The `<meta>` tag
-
-### The `<title>` tag
-
-## The `<body>` tag
-
-
-# HTML Content Elements
-
-## Content elements?
-
-## The `<p>` tag
-
-## The `<h1>` - `<h6>` tags
-
-## The `<a>` tag
-
-## The `<img>` tag
-
-## The `<ul>` `<ol>` and `<li>` tags
-
-# Fin
+# Exercises
