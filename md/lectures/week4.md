@@ -16,57 +16,63 @@ abstract: |
 
 ---
 
-# The Box Model
-
-## Other Models
-
-## Margin, Border, Padding
-
-## sejlkajd
-
-## sjeklfjse
-
-lkjdlakjwdlkajwd
-awlkdjalwkjd
-
-- j
-- jjj
-
-# Image Styling
-
 # Fonts
 
 _This section was adapted from [Mauricio Buschinelli's](https://maujac.github.io/2W6-UI/#/./wk/../wk3/wk3_3_text_units?id=fonts) course notes, which in turn were adapted from [CSS Fonts](https://www.w3schools.com/css/css_font.asp) by w3schools.com and [Fundamental text and font styling](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals) by MDN Web Docs_.
 
 ## Font Families
 
-It's time to learn about **Font Families**. What are those?
+In CSS, fonts are organized into groups of **Font Families**. In fact, the font family concept (also known as **typeface**) extends beyond CSS to typography in general:
 
 > A **typeface** (or **font family**) is the design of <a href="https://en.wikipedia.org/wiki/Lettering" title="Lettering">lettering</a> that can include variations in size, weight (e.g. bold), slope (e.g. italic), width (e.g. condensed), and so on. Each of these variations of the typeface is a <a href="https://en.wikipedia.org/wiki/Font" title="Font">font</a>.
 >
 > <footer>
->   [Wikipedia article, "Typeface"][wiki-typeface]
+>   Wikipedia, [Typeface][wiki-typeface]
 > </footer>
 
 [wiki-typeface]: https://en.wikipedia.org/wiki/Typeface
 
-In CSS, there are two types of font family names:
+There are two categories of font families in CSS: **Generic Font Families**, which describe the basic font categories in general, and **Specfic Font Families** (usually just called **Font Families**), each of which belongs to one of the Generic Family categories.
 
-- **Generic family** - a group of font families with similar look
-- **Font family** - a specific font family 
+<figure style="">
++--------------------------------------------------+-------------------------------------------------------------------------------------------------------+
+| Generic Family                                   | Font Family                                                                                           |
++==================================================+=======================================================================================================+
+| `serif`                                          | <span style="font-family: 'Times New Roman';">This sentence is written in Times New Roman</span> <br> |
+|                                                  | <span style="font-family: 'Georgia';">This sentence is written in Georgia</span>                      |
++--------------------------------------------------+-------------------------------------------------------------------------------------------------------+
+| `sans-serif`                                     | <span style="font-family: 'Arial';">This sentence is written in Arial</span> <br>                     |
+|                                                  | <span style="font-family: 'Verdana';">This sentence is written in Verdana</span>                      |
++--------------------------------------------------+-------------------------------------------------------------------------------------------------------+
+| `monospace                                     ` | <span style="font-family: 'Courier';">This sentence is written in Courier New</span> <br>             |
+|                                                  | <span style="font-family: 'Consolas';">This sentence is written in Consolas</span>                    |
++--------------------------------------------------+-------------------------------------------------------------------------------------------------------+
+<figcaption>Font Family table: Each font family in CSS belongs to one of the generic families.</figcaption>
+</figure>
 
-![](../assets/content/wk4/font-family-egs.png "The three generic families are Serif, Sans-serif, and Monospace. Times New Roman, Arial, and Courier New are examples of Serif, Sans-serif, and Monospace font families respectively"){ style="width: 50%; height: auto; margin: auto;"}
+Broadly speaking, the generic families have the following properties:
 
-![From Mark Womack: [What Font Should I Use?][womack-source]][womack-img]
+- `serif` - Letters are drawn with *serifs*, which are small extra strokes at the ends of the letter's defining strokes.
+- `sans-serif` - Letters are drawn without serifs.
 
-[womack-img]: ../assets/content/wk4/serif-vs-sans-serif.png "*Serif* typefaces are characterized by the precense of small pointed strokes at the end of each main stroke that comprises the characters in that typeface. *Sans-serif* typefaces lack these extra strokes (*sans* is French for without)."
+![Figure from Mark Womack: [What Font Should I Use?][womack-source]][womack-img]
+
+[womack-img]: ../assets/content/wk4/serif-vs-sans-serif.png "A Serif font has serifs (extra strokes) drawn on the edges of the letter, while a Sans-serif font does not."
 [womack-source]: https://drmarkwomack.com/a-writing-handbook/style/typography/
+
+- Fonts in the `monospace` family force all letters to take the same amount of horizontal space, independent of the width of the strokes defining the letter. 
+
+![Figure from Wikipedia: [Typeface][wiki-typeface]][mono-img]
+
+[mono-img]: ../assets/content/wk4/Proportional-vs-monospace.jpg "A Serif font has serifs drawn on the "
+
+**Proportional** fonts are the opposite of `monospace` fonts: letters that are narrow take less horizontal space than letters that are wide. Fonts in the the `serif` and `sans-serif` families are typically proportional fonts.
 
 ## Changing fonts with `font-family:`
 
 The fonts available to the browser depend largely on the fonts installed in the operating system.
 
-> When selecting a font, make sure to include a series of fallback fonts, from most specific to least specific\*\*.
+> When selecting a font, make sure to include a series of fallback fonts, from most specific to least specific.
 
 This is also known as a **font stack**:
 
@@ -77,8 +83,6 @@ p {
   font-family: "Times New Roman", Times, serif;
 }
 ```
-
-<br>
 
 Here is a [list of fonts considered to be **Web Safe Fonts**](https://www.w3schools.com/cssref/css_websafe_fonts.asp), meaning you can count on them being available in most browsers.
 
@@ -114,7 +118,6 @@ Font size can be set with the `font-size` property.
 >
 > You need to be aware of where you HTML element is inheriting these units from
 
-<br>
 Two common relative units for `font-size` are:
 
 **em:**
@@ -167,21 +170,15 @@ Use the `vw` unit to scale the `font-size` according to the browser's window siz
 
 **Viewport stands for the size of your browser's window.**
 
-<br>
-
 ![browser](https://www.kirupa.com/html5/images/browser_size.png)
 
 <p align="center"><a href="https://www.kirupa.com/html5/viewport_device_document_size.htm"><em>Viewport, Device, and Document Size</em></a></p>
-
-<br>
 
 ## VS Code Power-ups:
 
 Now that you know what the viewport is you can unlock the `!` [Emmet](https://code.visualstudio.com/docs/editor/emmet) shortcut:
 
 ![Peek 2020-02-06 10-48](./wk3/assets/../../assets/vscodeemmet.gif)
-
-<br>
 
 ### Disabling Emmet
 
@@ -207,8 +204,6 @@ If you use the `!` Emmet shortcut shown above you will notice it comes with two 
 
 -->
 
-<br>
-
 ### Viewport device-width and initial-scale
 
 The `<meta>` viewport element tells the browser how to control the page's dimensions and scaling.
@@ -218,8 +213,6 @@ The `width=` property controls the size of the viewport. It can be set to a spec
 The `initial-scale=` property controls the zoom level when the page is first loaded.
 
 See [_Using the viewport meta tag to control layout on mobile browsers_](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) for more info.
-
-<br>
 
 <!-- ## IE compatibility mode
 
@@ -233,7 +226,6 @@ Internet Explorer (IE) supports the use of a document compatibility `<meta>` tag
 
 See this [Stack Overflow article](https://stackoverflow.com/questions/6771258/what-does-meta-http-equiv-x-ua-compatible-content-ie-edge-do) for more information.
 
-<br>
 -->
 
 ## Using Web Fonts
@@ -244,11 +236,7 @@ A popular location to get external fonts is **Google Fonts:** https://fonts.goog
 
 ![adding google font animation](./wk3/../assets/add_google_font.gif)
 
-<br>
-
 ![image-20200206101124091](assets/image-20200206101124091.png)
-
-<br>
 
 Include the provided link in the head section of your HTML file, just like you would link a CSS Style sheet.
 
@@ -259,8 +247,6 @@ Include the provided link in the head section of your HTML file, just like you w
 />
 ```
 
-<br>
-
 Add the f`font-family` property in your CSS. **Don't forget to add a fall-back font**
 
 ```css
@@ -268,8 +254,6 @@ p {
   font-family: "Roboto", sans-serif;
 }
 ```
-
-<br>
 
 ## Font Weight
 
@@ -306,8 +290,6 @@ Common values are:
 ## Text Layout & Alignment
 
 !> For this section we will refer to the **section "Text layout"** of the [Fundamental text and font styling](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Text_layout) by MDN web docs.
-
-<br>
 
 Using the reference above, look at the following properties:
 
@@ -362,17 +344,20 @@ This live demo illustrates how the `font` shorthand property affects a paragraph
 	<iframe class="live-sample-frame sample-code-frame" frameborder="0" height="450px" id="frame_live_sample" src="https://mdn.mozillademos.org/en-US/docs/Web/CSS/font$samples/live_sample?revision=1569828" width="100%"></iframe>
 </div>
 
-## Hands-on
+# The Box Model
 
-### Exercises
+## Other Models
 
-Complete the following exercises from W3Schools:
+## Margin, Border, Padding
 
-1. [CSS Text](https://www.w3schools.com/css/exercise.asp?filename=exercise_text1)
-   2
+## sejlkajd
+
+## sjeklfjse
 
 # Knowledge Check
 
 - [Does this section link work?](#lesson-overview)
+
+# Exercises
 
 # Acknowledgements
