@@ -1,0 +1,13 @@
+# Website
+   - sidebar dropdown level logic (i.e. only expand when in the section... will be tough)
+   - compare tufte.css source with mine
+   - learn parcel and package properly, refactor
+   - search bar
+   - mobile:
+    - site navbar font/padding looks terrible
+    - Heading wrapping looks terrible
+    - course calendar table does not fit
+
+# Course
+  - different ways to add color
+  - selectors : grouping, chaining

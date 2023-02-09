@@ -32,21 +32,33 @@
     <![endif]-->
  </head>
  <body class="page-container base">
-  <header class="header surface background-gradient">
-   <div class="text-shadow">
-    <h1 id="theme-toggle-icon">
+  <header class="primary-header surface background-gradient">
+   <div class="container text-shadow">
+    <button id="theme-toggle-btn" style="display: none;">
+      <svg id="theme-toggle-icon"></svg>
+    </button>
+    <h1 class="banner-title">
      User Interfaces
     </h1>
-    <span class="note-text">
+    <span class="banner-subtitle">
      420-2W6 | Winter 2023 | as taught by
      <a href="https://github.com/michaelhaaf/2W6-W23">
       Michael Haaf
      </a>
     </span>
    </div>
+    <div id="search-bar" class="container text-shadow hidden">
+      <input class="hidden" type="search" name="" value="">
+      <button id="search-btn" class="hidden"><button>
+      <hr class="hidden">
+    </div>
+    <div id="search-results" class="container hidden">
+      <p></p> 
+      <ul class=""></ul>
+    </div>
   </header>
   <aside class="aside--site surface">
-   <nav class="nav nav--site">
+   <nav class="nav--site">
     <h2>
      Site Navigation
     </h2>
