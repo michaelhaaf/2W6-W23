@@ -215,10 +215,27 @@ styling</a></li>
 id="toc-shorthand-properties-notation">Shorthand Properties
 Notation</a></li>
 </ul></li>
-<li><a href="#the-box-model" id="toc-the-box-model">The Box
+<li><a href="#the-box-model" id="toc-the-box-model">The Box Model</a>
+<ul>
+<li><a href="#block-and-inline-boxes"
+id="toc-block-and-inline-boxes">Block and inline boxes</a></li>
+<li><a href="#outer-display-type" id="toc-outer-display-type">Outer
+display type</a></li>
+<li><a href="#inner-display-type" id="toc-inner-display-type">Inner
+display type</a></li>
+<li><a href="#the-anatomy-of-the-box-model"
+id="toc-the-anatomy-of-the-box-model">The Anatomy of the Box
 Model</a></li>
+<li><a href="#margins-padding-and-borders"
+id="toc-margins-padding-and-borders">Margins, padding, and
+borders</a></li>
+</ul></li>
 <li><a href="#knowledge-check" id="toc-knowledge-check">Knowledge
-Check</a></li>
+Check</a>
+<ul>
+<li><a href="#the-box-model-1" id="toc-the-box-model-1">The Box
+Model</a></li>
+</ul></li>
 <li><a href="#exercises" id="toc-exercises">Exercises</a></li>
 </ul>
    </nav>
@@ -247,7 +264,7 @@ Check</a></li>
       HTML and CSS create website layouts.</p>
      </div>
          </header>
-     <p>Last update: Tuesday, Feb 7, 2023.</p>
+     <p>Last update: Friday, Feb 10, 2023.</p>
 <hr />
 <h1 id="lesson-overview">Lesson Overview</h1>
 <ul>
@@ -258,13 +275,13 @@ Check</a></li>
 </ul>
 <hr />
 <h1 id="fonts">Fonts</h1>
-<p><em>This section was adapted from <a
+<p>This section was adapted from <a
 href="https://maujac.github.io/2W6-UI/#/./wk/../wk3/wk3_3_text_units?id=fonts">Mauricio
 Buschinelli’s</a> course notes, which in turn were adapted from <a
 href="https://www.w3schools.com/css/css_font.asp">CSS Fonts</a> by
 w3schools.com and <a
 href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental
-text and font styling</a> by MDN Web Docs</em>.</p>
+text and font styling</a> by MDN Web Docs_.</p>
 <h2 id="font-families">Font Families</h2>
 <p>In CSS, fonts are organized into groups of <strong>Font
 Families</strong>. In fact, the font family concept (also known as
@@ -649,9 +666,158 @@ to preview their effect on the sample text.</p>
 <iframe width="100%" height="425px" frameborder="0" id="frame_live_sample" src="https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/CSS/font/_sample_.live_sample.html">
 </iframe>
 <h1 id="the-box-model">The Box Model</h1>
-<p><em>This section will be updatated in the near future!</em></p>
+<p><em>This section was adapted from <a
+href="https://www.theodinproject.com/lessons/foundations-the-box-model">The
+Odin Project</a> and <a
+href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model">MDN
+Web Docs</a> course notes.</em></p>
+<p>In HTML, we have learned that every element is either
+<strong>block</strong> or <strong>inline</strong>. The introduction of
+CSS into this equation both gives us the tools to change default HML
+behavior (for instance, changing <code>&lt;img&gt;</code> from inline to
+block) while at the same time introducing more complications to the
+basic box model.</p>
+<p>Understanding the model behind how elements are laid out on the web
+is key to being able to create more complex layouts with CSS, or to
+align items with other items. In this lesson, we will take a look at the
+CSS Box Model. You’ll get an understanding of how it works and the
+terminology that relates to it.</p>
+<h2 id="block-and-inline-boxes">Block and inline boxes</h2>
+<p>Whether an element is <strong>block</strong> or
+<strong>inline</strong>, ALL elements have well defined box behavior
+that determines how the box behaves in terms of page flow and in
+relation to other boxes on the page. This is easy to see when elements
+are surrounded in by borders. The code below shows the two basic cases:
+a block-level <code>&lt;p&gt;</code> element containing an inline
+<code>&lt;a&gt;</code> element:</p>
+<h6 class="sourceCode" id="html-3">HTML</h6>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;p</span> <span class="er">style</span><span class="ot">=</span><span class="st">&quot;border: 1px solid red&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    Lorem, ipsum</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;a</span> <span class="er">style</span><span class="ot">=</span><span class="st">&quot;border: 1px solid blue&quot;</span><span class="kw">&gt;</span>dolor sit amet<span class="kw">&lt;/a&gt;</span> </span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    consectetur adipisicing elit.</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<h6 class="sourceCode" id="result-1">Result</h6>
+<section class="sourceCode">
+<p style="border: 1px solid red">
+Lorem, ipsum <a style="border: 1px solid blue">dolor sit amet</a>
+consectetur adipisicing elit.
+</p>
+</section>
+<p><br> In CSS, you can set various values for the display type using
+the <code>display</code> property, which can have various values.</p>
+<h6 class="sourceCode" id="css-6">CSS</h6>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Custom class for setting display type to block */</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.block</span> {</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">display</span>: <span class="dv">block</span><span class="op">;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>} </span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co">/* Custom class for setting display type to inline */</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="fu">.inline</span> {</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">display</span>: <span class="dv">inline</span><span class="op">;</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h2 id="outer-display-type">Outer display type</h2>
+<p>In CSS, all boxes have an <strong>inner display type</strong> and an
+<strong>outer display type</strong>.</p>
+<p>If a box has an outer display type of <code>block</code>, then:</p>
+<ul>
+<li>The box will break onto a new line.</li>
+<li>The <code>width</code> and <code>height</code> properties are
+respected.</li>
+<li>Padding, margin and border will cause other elements to be pushed
+away from the box.</li>
+<li>If <code>width</code> is not specified, the box will extend in the
+inline direction to fill the space available in its container. In most
+cases, the box will become as wide as its container, filling up 100% of
+the space available.</li>
+</ul>
+<p>Some HTML elements, such as <code>&lt;h1&gt;</code> and
+<code>&lt;p&gt;,</code> use block as their outer display type by
+default.</p>
+<p>If a box has an outer display type of <code>inline</code>, then:</p>
+<ul>
+<li>The box will not break onto a new line.</li>
+<li>The <code>width</code> and <code>height</code> properties will not
+apply.</li>
+<li>Vertical padding, margins, and borders will apply but will not cause
+other inline boxes to move away from the box.</li>
+<li>Horizontal padding, margins, and borders will apply and will cause
+other inline boxes to move away from the box.</li>
+</ul>
+<p>Some HTML elements, such as <code>&lt;a&gt;</code>,
+<code>&lt;span&gt;</code>, <code>&lt;em&gt;</code> and
+<code>&lt;strong&gt;</code> use <code>inline</code> as their outer
+display type by default.</p>
+<h2 id="inner-display-type">Inner display type</h2>
+<p>Boxes also have an inner display type, which dictates how elements
+<strong>inside</strong> that box (i.e., the children of the box) are
+laid out.</p>
+<p>Block and inline layout is the default way things behave on the web.
+By default and without any other instruction, the elements inside a box
+are also laid out in <a
+href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow">normal
+flow</a> and behave as block or inline boxes.</p>
+<p>In the coming weeks, we will learn how to change this behavior to
+take advantage of <strong>very</strong> powerful CSS concepts like
+<code>grid</code>, <code>flex</code>, and more. For now, it’s enough to
+know that there is a difference between the <em>outer</em> (behavior of
+element itself) and <em>inner</em> (behavior of element’s children)
+display types.</p>
+<h2 id="the-anatomy-of-the-box-model">The Anatomy of the Box Model</h2>
+<p>It’s cool and fine that all HTML elements are boxes. But, how do you
+change the behavior of those boxes themselves? We need to know the
+strucure, or anatomy, of the CSS box model:</p>
+<ul>
+<li>Content box: The area where your content is displayed; size it using
+properties like <code>inline-size</code> and <code>block-size</code> or
+<code>width</code> and <code>height</code></li>
+<li>Padding box: The padding sits around the content as white space;
+size it using <code>padding</code> and related properties.</li>
+<li>Border box: The border box wraps the content and any padding; size
+it using <code>border</code> and related properties.</li>
+<li>Margin box: The margin is the outermost layer, wrapping the content,
+padding, and border as whitespace between this box and other elements;
+size it using <code>margin</code> and related properties.</li>
+</ul>
+<p>The below diagram shows these layers:</p>
+<figure>
+<img src="../assets/content/wk4/box-model.png"
+alt="Figure from MDN: The Box Model" />
+<figcaption aria-hidden="true">Figure from MDN: <a
+href="https://www.kirupa.com/html5/viewport_device_document_size.html">The
+Box Model</a></figcaption>
+</figure>
+<h2 id="margins-padding-and-borders">Margins, padding, and borders</h2>
+<h3 id="margin">Margin</h3>
+<h3 id="margin-collapsing">Margin Collapsing</h3>
+<h3 id="padding">Padding</h3>
+<h3 id="borders">Borders</h3>
 <h1 id="knowledge-check">Knowledge Check</h1>
-<p><em>This section will be updatated in the near future!</em></p>
+<p>j ## Fonts</p>
+<ul>
+<li>What are the differences between the main Generic font
+families?</li>
+<li>Why and how do we assign multiple font families in CSS?</li>
+<li>What is the difference between absolute and relative font
+sizes?</li>
+<li>What is a “Web Safe” font? What are the ways that we use fonts that
+are not “web safe” in our designs?</li>
+</ul>
+<h2 id="the-box-model-1">The Box Model</h2>
+<ul>
+<li>From inside to outside, what is the order of box-model
+properties?</li>
+<li>What does the box-sizing CSS property do?</li>
+<li>What is the difference between the standard and alternative box
+model?</li>
+<li>Would you use margin or padding to create more space between 2
+elements?</li>
+<li>Would you use margin or padding to create more space between the
+contents of an element and its border?</li>
+<li>Would you use margin or padding if you wanted two elements to
+overlap each other?</li>
+</ul>
 <h1 id="exercises">Exercises</h1>
 <ul>
 <li>Odin Project: CSS Foundations Practise Exercises <a
@@ -663,6 +829,9 @@ title="MDN: Typesetting a homepage tutorial instructions.">(instructions)</a>
 <a href="../tutorials/css-styling-text.zip"
 title="MDN: Typesetting a homepage tutorial starter files.">(starter
 files .zip)</a></li>
+<li>Odin Project: CSS Box Model Practise Exercises <a
+href="../tutorials/css-exercises-box-model.zip"
+title="Odin Project: CSS Box Model Exercises. There are 2 exercises total in this set. You should be able to complete them all with what you have learned during Week 4.">(.zip)</a></li>
 </ul> 
    </article>
   </main>

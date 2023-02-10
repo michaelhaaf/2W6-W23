@@ -10,7 +10,7 @@ abstract: |
   This week, we will learn how to make use of the CSS properties for fonts, images, and icons; we will also learn more about how HTML and CSS create website layouts.
 ---
 
-Last update: Tuesday, Feb 7, 2023.
+Last update: Friday, Feb 10, 2023.
 
 ---
 
@@ -25,7 +25,7 @@ Last update: Tuesday, Feb 7, 2023.
 
 # Fonts
 
-_This section was adapted from [Mauricio Buschinelli's](https://maujac.github.io/2W6-UI/#/./wk/../wk3/wk3_3_text_units?id=fonts) course notes, which in turn were adapted from [CSS Fonts](https://www.w3schools.com/css/css_font.asp) by w3schools.com and [Fundamental text and font styling](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals) by MDN Web Docs_.
+This section was adapted from [Mauricio Buschinelli's](https://maujac.github.io/2W6-UI/#/./wk/../wk3/wk3_3_text_units?id=fonts) course notes, which in turn were adapted from [CSS Fonts](https://www.w3schools.com/css/css_font.asp) by w3schools.com and [Fundamental text and font styling](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals) by MDN Web Docs_.
 
 ## Font Families
 
@@ -329,16 +329,133 @@ This [live demo (MDN)](https://developer.mozilla.org/en-US/docs/Web/CSS/font#fra
 
 # The Box Model
 
-*This section will be updatated in the near future!*
+*This section was adapted from [The Odin Project](https://www.theodinproject.com/lessons/foundations-the-box-model) and [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model) course notes.*
+
+
+In HTML, we have learned that every element is either **block** or **inline**. The introduction of CSS into this equation both gives us the tools to change default HML behavior (for instance, changing `<img>` from inline to block) while at the same time introducing more complications to the basic box model.
+
+Understanding the model behind how elements are laid out on the web is key to being able to create more complex layouts with CSS, or to align items with other items. In this lesson, we will take a look at the CSS Box Model. You'll get an understanding of how it works and the terminology that relates to it.
+
+## Block and inline boxes
+
+Whether an element is **block** or **inline**, ALL elements have well defined box behavior that determines how the box behaves in terms of page flow and in relation to other boxes on the page. This is easy to see when elements are surrounded in by borders. The code below shows the two basic cases: a block-level `<p>` element containing an inline `<a>` element:
+
+###### HTML{.sourceCode}
+```html
+  <p style="border: 1px solid red">
+    Lorem, ipsum
+    <a style="border: 1px solid blue">dolor sit amet</a> 
+    consectetur adipisicing elit.
+  </p>
+```
+
+###### Result{.sourceCode}
+<section class="sourceCode">
+    <p style="border: 1px solid red">
+      Lorem, ipsum
+      <a style="border: 1px solid blue">dolor sit amet</a> 
+      consectetur adipisicing elit.
+    </p>
+</section>
+
+<br>
+In CSS, you can set various values for the display type using the `display` property, which can have various values.
+
+
+###### CSS{.sourceCode}
+```css
+/* Custom class for setting display type to block */
+.block {
+    display: block;
+} 
+
+/* Custom class for setting display type to inline */
+.inline {
+    display: inline;
+}
+```
+
+## Outer display type
+
+In CSS, all boxes have an **inner display type** and an **outer display type**.
+
+If a box has an outer display type of `block`, then:
+
+- The box will break onto a new line.
+- The `width` and `height` properties are respected.
+- Padding, margin and border will cause other elements to be pushed away from the box.
+- If `width` is not specified, the box will extend in the inline direction to fill the space available in its container. In most cases, the box will become as wide as its container, filling up 100% of the space available.
+
+Some HTML elements, such as `<h1>` and `<p>,` use block as their outer display type by default.
+
+If a box has an outer display type of `inline`, then:
+
+- The box will not break onto a new line.
+- The `width` and `height` properties will not apply.
+- Vertical padding, margins, and borders will apply but will not cause other inline boxes to move away from the box.
+- Horizontal padding, margins, and borders will apply and will cause other inline boxes to move away from the box.
+
+Some HTML elements, such as `<a>`, `<span>`, `<em>` and `<strong>` use `inline` as their outer display type by default.
+
+## Inner display type
+
+Boxes also have an inner display type, which dictates how elements **inside** that box (i.e., the children of the box) are laid out.
+
+Block and inline layout is the default way things behave on the web. By default and without any other instruction, the elements inside a box are also laid out in [normal flow](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow) and behave as block or inline boxes.
+
+In the coming weeks, we will learn how to change this behavior to take advantage of **very** powerful CSS concepts like `grid`, `flex`, and more. For now, it's enough to know that there is a difference between the *outer* (behavior of element itself) and *inner* (behavior of element's children) display types.
+
+## The Anatomy of the Box Model
+
+It's cool and fine that all HTML elements are boxes. But, how do you change the behavior of those boxes themselves? We need to know the strucure, or anatomy, of the CSS box model:
+
+- Content box: The area where your content is displayed; size it using properties like `inline-size` and `block-size` or `width` and `height`
+- Padding box: The padding sits around the content as white space; size it using `padding` and related properties.
+- Border box: The border box wraps the content and any padding; size it using `border` and related properties.
+- Margin box: The margin is the outermost layer, wrapping the content, padding, and border as whitespace between this box and other elements; size it using `margin` and related properties.
+
+The below diagram shows these layers:
+
+![Figure from MDN: [The Box Model][bm-source]][bm-img]
+
+[bm-img]: ../assets/content/wk4/box-model.png
+[bm-source]: https://www.kirupa.com/html5/viewport_device_document_size.html
+
+## Margins, padding, and borders
+
+### Margin
+
+### Margin Collapsing
+
+### Padding
+
+### Borders
+
 
 # Knowledge Check
+j
+## Fonts
 
-*This section will be updatated in the near future!*
+- What are the differences between the main Generic font families?
+- Why and how do we assign multiple font families in CSS?
+- What is the difference between absolute and relative font sizes?
+- What is a "Web Safe" font? What are the ways that we use fonts that are not "web safe" in our designs?
+
+## The Box Model
+
+- From inside to outside, what is the order of box-model properties?
+- What does the box-sizing CSS property do?
+- What is the difference between the standard and alternative box model?
+- Would you use margin or padding to create more space between 2 elements?
+- Would you use margin or padding to create more space between the contents of an element and its border?
+- Would you use margin or padding if you wanted two elements to overlap each other?
+
 
 # Exercises
 
 - Odin Project: CSS Foundations Practise Exercises [(.zip)][tutCSSFoundations]
 - MDN: Typesetting a Homepage [(instructions)][tutStylingTextInstructions] [(starter files .zip)][tutStylingTextFiles]
+- Odin Project: CSS Box Model Practise Exercises [(.zip)][tutCSSBoxModel]
 
 [tutCSSFoundations]: ../tutorials/css-exercises-foundations.zip "Odin Project: CSS Foundations Exercises. There are 6 exercises total in this set. You should be able to complete them all with what you have learned during Week 3."
 [tutStylingTextInstructions]: https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage "MDN: Typesetting a homepage tutorial instructions."
