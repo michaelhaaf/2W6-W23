@@ -25,7 +25,7 @@ Last update: Friday, Feb 10, 2023.
 
 # Fonts
 
-This section was adapted from [Mauricio Buschinelli's](https://maujac.github.io/2W6-UI/#/./wk/../wk3/wk3_3_text_units?id=fonts) course notes, which in turn were adapted from [CSS Fonts](https://www.w3schools.com/css/css_font.asp) by w3schools.com and [Fundamental text and font styling](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals) by MDN Web Docs_.
+*This section was adapted from [Mauricio Buschinelli's](https://maujac.github.io/2W6-UI/#/./wk/../wk3/wk3_3_text_units?id=fonts) course notes, which in turn were adapted from [CSS Fonts](https://www.w3schools.com/css/css_font.asp) by w3schools.com and [Fundamental text and font styling](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals) by MDN Web Docs.*
 
 ## Font Families
 
@@ -75,7 +75,7 @@ Broadly speaking, the generic families have the following properties:
 
 **Proportional** fonts are the opposite of `monospace` fonts: letters that are narrow take less horizontal space than letters that are wide. Fonts in the the `serif` and `sans-serif` families are typically proportional fonts.
 
-## Changing fonts with `font-family`
+### Changing fonts with `font-family`
 
 The fonts available to the browser depend largely on the fonts installed in the operating system.
 
@@ -95,7 +95,7 @@ p {
 
 > Font names composed of more than one word need to be written between quotations, such as "Times New Roman" above.
 
-Fonts styles are normally applied to the entire page, so you can add them to the body selector:
+**Pro tip:** Typographic properties (`color`, `font-size`, `font-family`, etc.) are **inherited** by descendent elements. This means we do not need to apply these styles to evrey single element in the HTML markup; instead we can apply them to a root element like the `<body>` and those properties are inherited by descendant elements (like `<p>`, `<a>`, etc.) automatically.
 
 ###### CSS{.sourceCode}
 
@@ -105,121 +105,15 @@ body {
 }
 ```
 
-## Font size
+We can see some examples of this in the CodePen (link) below. We will learn more about **inheritance** in CSS as it applies to non-typographic elements next week.
 
-Font size can be set with the `font-size` property.
+## Using Web Font Families
 
-`font-size` value can be set as absolute or relative:
+So far, all of the fonts that we have seen (Verdana, Times New Roman, etc.) are [**Web Safe**](https://www.w3schools.com/cssref/css_websafe_fonts.asp) -- fonts that are commonly available on most operating systems. This is good, because we can use them (as well as a few fallbacks and the generic font family fallback) without needing to worry whether every single person who uses our website has those fonts installed on their computer.
 
-**Absolute size:**
+But there are many thousands of font families in this world (including the font of this website) -- the web would be a very boring place if we could only use a few dozen or so web safe fonts.
 
-- Sets the text to a fixed size.
-- User cannot adjust it (eg. increase font size using browser or operating system settings).
-
-**Relative size:**
-
-- Size relative to another element in the page (see CSS Units below).
-- User can adjust it.
-
-### Recommendation & inheritance
-
-> For `font-size` **it is recommended that you use relative CSS units over fixed units.**
->
-> You need to be aware of where you HTML element is inheriting these units from
-
-Two common relative units for `font-size` are:
-
-**em:**
-
-- 1 `em` is equal to the font size **set on the parent element of the current element** we are styling.
-- Be careful when styling nested elements.
-
-**rem:**
-
-- 1 `rem` is equal to the font size **set on the root element of the document** ( the `<html>`), not the parent element.
-
-> It is recommended to use `rem` units for setting `font-size`
->
-> The root `<html>` element has a default `font-size` of 16px (set in your browser settings).
-
-### Example
-
-###### CSS{.sourceCode}
-
-```css
-h1 {
-  font-size: 1.8rem;
-}
-
-.p1 {
-  font-size: 1.2rem;
-  color: red;
-}
-.p2 {
-  font-size: 0.7rem;
-  color: blue;
-}
-```
-
-###### HTML{.sourceCode}
-```html
-<section class="sourceCode">
-    <h1>Relative sizes</h1>
-    <p class="p1">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-    <p class="p2">Aliquam repellendus, debitis perspiciatis asperiores aut deleniti maxime totam neque dolores enim labore placeat facilis expedita iure!</p>
-</section>
-```
-
-###### Result{.sourceCode}
-
-<section class="sourceCode">
-    <h1 style="font-size:1.8rem; margin-top: 0;">Relative sizes</h1>
-    <p style="font-size:1.2rem; color:red;">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-    <p style="font-size:0.7rem; color:blue;">Aliquam repellendus, debitis perspiciatis asperiores aut deleniti maxime totam neque dolores enim labore placeat facilis expedita iure!</p>
-</section>
-
-## CSS Units
-
-_For this section refer to the page [CSS Units by W3Schools](https://www.w3schools.com/CSSref/css_units.asp)._
-
-### Responsive units
-
-Use the `vw` unit to scale the `font-size` according to the browser's window size.
-
-`vw` stands for "viewport width".
-
-**Viewport stands for the size of your browser's window.**
-
-![Figure from Kirupa.com: [Viewport, Device, and Document Size][viewport-source]][viewport-img]
-
-[viewport-img]: https://www.kirupa.com/html5/images/browser_size.png "A Serif font has serifs (extra strokes) drawn on the edges of the letter, while a Sans-serif font does not."
-[viewport-source]: https://www.kirupa.com/html5/viewport_device_document_size.html
-
-## Meta Attributes: viewport & IE compatibility
-
-Earlier in class we have seen that the `!` Emmet shortcut in VS Code provides a new `<meta>` attribute:
-
-###### HTML{.sourceCode}
-
-```html
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-```
-
-The `<meta>` viewport element tells the browser how to control the page's dimensions and scaling.
-
-The `width=` property controls the size of the viewport. It can be set to a specific number of pixels or to the device-width, which is the width of the screen at a scale of 100%.
-
-The `initial-scale=` property controls the zoom level when the page is first loaded.
-
-See [_Using the viewport meta tag to control layout on mobile browsers_](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) for more info.
-
-## Using Web Fonts
-
-So far, all of the fonts that we have seen are commonly available on most operating systems, meaning that we can specify them (as well as a few fallbacks) without needing to worry whether the end user has that font installed.
-
-There are many thousands of fonts available to choose, and there could be a wide variety of reasons for selecting fonts other than the most commonly available ones. How do we ensure that those fonts render correctly when accessed from machines that do not have those fonts installed?
-
-We can include **external fonts** in our CSS.
+Fortunately, there are techniques that allow us to include **external fonts** in our CSS.
 
 A popular location to get external fonts is [Google Fonts](https://fonts.google.com/):
 
@@ -245,6 +139,51 @@ p {
   font-family: "Roboto", sans-serif;
 }
 ```
+
+
+## Font size
+
+Font size can be set with the `font-size` property.
+
+`font-size` value can be set as absolute or relative:
+
+**Absolute size:**
+
+- Sets the text to a fixed size.
+- User cannot adjust it (eg. increase font size using browser or operating system settings).
+
+**Relative size:**
+
+- Size relative to another element in the page (see CSS Units below).
+- User can adjust it.
+
+### Recommendation & inheritance
+
+> For `font-size` **it is recommended that you use relative CSS units over fixed units.**
+>
+> You need to be aware of where your HTML element is inheriting these units from
+
+Two common relative units for `font-size` are:
+
+**em:**
+
+- 1 `em` is equal to the font size **set on the parent element of the current element** we are styling.
+- Be careful when styling nested elements.
+
+**rem:**
+
+- 1 `rem` is equal to the font size **set on the root element of the document** ( the `<html>`), not the parent element.
+
+> It is recommended to use `rem` units for setting `font-size`
+>
+> The root `<html>` element has a default `font-size` of 16px (set in your browser settings).
+
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="qByeqVa" data-user="michaelhaaf" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/michaelhaaf/pen/qByeqVa">
+  Untitled</a> by Michael Haaf (<a href="https://codepen.io/michaelhaaf">@michaelhaaf</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ## Font Weight
 
@@ -321,12 +260,6 @@ body {
 }
 ```
 
-### Font Shorthand Live Demo
-
-This [live demo (MDN)](https://developer.mozilla.org/en-US/docs/Web/CSS/font#frame_live_sample) illustrates how the `font` shorthand property affects a paragraph element. Try toggling the various options in the form to see all of the `font` properties that can be set, and to preview their effect on the sample text.
-
-<iframe width="100%" height="425px" frameborder="0" id="frame_live_sample" src="https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/CSS/font/_sample_.live_sample.html"></iframe>
-
 # The Box Model
 
 *This section was adapted from [The Odin Project](https://www.theodinproject.com/lessons/foundations-the-box-model) and [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model) course notes.*
@@ -338,42 +271,17 @@ Understanding the model behind how elements are laid out on the web is key to be
 
 ## Block and inline boxes
 
-Whether an element is **block** or **inline**, ALL elements have well defined box behavior that determines how the box behaves in terms of page flow and in relation to other boxes on the page. This is easy to see when elements are surrounded in by borders. The code below shows the two basic cases: a block-level `<p>` element containing an inline `<a>` element:
+Whether an element is **block** or **inline**, ALL elements have well defined box behavior that determines how the box behaves in terms of page flow and in relation to other boxes on the page. This is easy to see when elements are surrounded in by borders. 
 
-###### HTML{.sourceCode}
-```html
-  <p style="border: 1px solid red">
-    Lorem, ipsum
-    <a style="border: 1px solid blue">dolor sit amet</a> 
-    consectetur adipisicing elit.
-  </p>
-```
+The CodePen snippet below shows the two basic cases: a block-level `<p>` element containing an inline `<a>` element. The example also shows that in CSS, we can override the default HTML flow for block and inline elements using the `display` property:
 
-###### Result{.sourceCode}
-<section class="sourceCode">
-    <p style="border: 1px solid red">
-      Lorem, ipsum
-      <a style="border: 1px solid blue">dolor sit amet</a> 
-      consectetur adipisicing elit.
-    </p>
-</section>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="yLqmVMr" data-user="michaelhaaf" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/michaelhaaf/pen/yLqmVMr">
+  Untitled</a> by Michael Haaf (<a href="https://codepen.io/michaelhaaf">@michaelhaaf</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
-<br>
-In CSS, you can set various values for the display type using the `display` property, which can have various values.
-
-
-###### CSS{.sourceCode}
-```css
-/* Custom class for setting display type to block */
-.block {
-    display: block;
-} 
-
-/* Custom class for setting display type to inline */
-.inline {
-    display: inline;
-}
-```
 
 ## Outer display type
 
@@ -409,10 +317,10 @@ In the coming weeks, we will learn how to change this behavior to take advantage
 
 It's cool and fine that all HTML elements are boxes. But, how do you change the behavior of those boxes themselves? We need to know the strucure, or anatomy, of the CSS box model:
 
-- Content box: The area where your content is displayed; size it using properties like `inline-size` and `block-size` or `width` and `height`
-- Padding box: The padding sits around the content as white space; size it using `padding` and related properties.
-- Border box: The border box wraps the content and any padding; size it using `border` and related properties.
-- Margin box: The margin is the outermost layer, wrapping the content, padding, and border as whitespace between this box and other elements; size it using `margin` and related properties.
+- **Content box:** The area where your content is displayed; size it using properties like `inline-size` and `block-size` or `width` and `height`
+- **Padding box:** The padding sits around the content as white space; size it using `padding` and related properties.
+- **Border box:** The border box wraps the content and any padding; size it using `border` and related properties.
+- **Margin box:** The margin is the outermost layer, wrapping the content, padding, and border as whitespace between this box and other elements; size it using `margin` and related properties.
 
 The below diagram shows these layers:
 
@@ -433,7 +341,7 @@ The below diagram shows these layers:
 
 
 # Knowledge Check
-j
+
 ## Fonts
 
 - What are the differences between the main Generic font families?

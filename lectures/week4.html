@@ -194,16 +194,9 @@ Overview</a></li>
 <ul>
 <li><a href="#font-families" id="toc-font-families">Font
 Families</a></li>
-<li><a href="#changing-fonts-with-font-family"
-id="toc-changing-fonts-with-font-family">Changing fonts with
-<code>font-family</code></a></li>
+<li><a href="#using-web-font-families"
+id="toc-using-web-font-families">Using Web Font Families</a></li>
 <li><a href="#font-size" id="toc-font-size">Font size</a></li>
-<li><a href="#css-units" id="toc-css-units">CSS Units</a></li>
-<li><a href="#meta-attributes-viewport-ie-compatibility"
-id="toc-meta-attributes-viewport-ie-compatibility">Meta Attributes:
-viewport &amp; IE compatibility</a></li>
-<li><a href="#using-web-fonts" id="toc-using-web-fonts">Using Web
-Fonts</a></li>
 <li><a href="#font-weight" id="toc-font-weight">Font Weight</a></li>
 <li><a href="#text-decorations" id="toc-text-decorations">Text
 Decorations</a></li>
@@ -233,6 +226,7 @@ borders</a></li>
 <li><a href="#knowledge-check" id="toc-knowledge-check">Knowledge
 Check</a>
 <ul>
+<li><a href="#fonts-1" id="toc-fonts-1">Fonts</a></li>
 <li><a href="#the-box-model-1" id="toc-the-box-model-1">The Box
 Model</a></li>
 </ul></li>
@@ -275,13 +269,13 @@ Model</a></li>
 </ul>
 <hr />
 <h1 id="fonts">Fonts</h1>
-<p>This section was adapted from <a
+<p><em>This section was adapted from <a
 href="https://maujac.github.io/2W6-UI/#/./wk/../wk3/wk3_3_text_units?id=fonts">Mauricio
 Buschinelli’s</a> course notes, which in turn were adapted from <a
 href="https://www.w3schools.com/css/css_font.asp">CSS Fonts</a> by
 w3schools.com and <a
 href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental
-text and font styling</a> by MDN Web Docs_.</p>
+text and font styling</a> by MDN Web Docs.</em></p>
 <h2 id="font-families">Font Families</h2>
 <p>In CSS, fonts are organized into groups of <strong>Font
 Families</strong>. In fact, the font family concept (also known as
@@ -377,8 +371,8 @@ href="https://en.wikipedia.org/wiki/Typeface">Typeface</a></figcaption>
 horizontal space than letters that are wide. Fonts in the the
 <code>serif</code> and <code>sans-serif</code> families are typically
 proportional fonts.</p>
-<h2 id="changing-fonts-with-font-family">Changing fonts with
-<code>font-family</code></h2>
+<h3 id="changing-fonts-with-font-family">Changing fonts with
+<code>font-family</code></h3>
 <p>The fonts available to the browser depend largely on the fonts
 installed in the operating system.</p>
 <blockquote>
@@ -399,13 +393,61 @@ most browsers.</p>
 <p>Font names composed of more than one word need to be written between
 quotations, such as “Times New Roman” above.</p>
 </blockquote>
-<p>Fonts styles are normally applied to the entire page, so you can add
-them to the body selector:</p>
+<p><strong>Pro tip:</strong> Typographic properties (<code>color</code>,
+<code>font-size</code>, <code>font-family</code>, etc.) are
+<strong>inherited</strong> by descendent elements. This means we do not
+need to apply these styles to evrey single element in the HTML markup;
+instead we can apply them to a root element like the
+<code>&lt;body&gt;</code> and those properties are inherited by
+descendant elements (like <code>&lt;p&gt;</code>,
+<code>&lt;a&gt;</code>, etc.) automatically.</p>
 <h6 class="sourceCode" id="css-1">CSS</h6>
 <div class="sourceCode" id="cb2"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>body {</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-family</span>: <span class="st">&quot;Segoe UI&quot;</span><span class="op">,</span> Tahoma<span class="op">,</span> Geneva<span class="op">,</span> Verdana<span class="op">,</span> <span class="dv">sans-serif</span><span class="op">;</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>We can see some examples of this in the CodePen (link) below. We will
+learn more about <strong>inheritance</strong> in CSS as it applies to
+non-typographic elements next week.</p>
+<h2 id="using-web-font-families">Using Web Font Families</h2>
+<p>So far, all of the fonts that we have seen (Verdana, Times New Roman,
+etc.) are <a
+href="https://www.w3schools.com/cssref/css_websafe_fonts.asp"><strong>Web
+Safe</strong></a> – fonts that are commonly available on most operating
+systems. This is good, because we can use them (as well as a few
+fallbacks and the generic font family fallback) without needing to worry
+whether every single person who uses our website has those fonts
+installed on their computer.</p>
+<p>But there are many thousands of font families in this world
+(including the font of this website) – the web would be a very boring
+place if we could only use a few dozen or so web safe fonts.</p>
+<p>Fortunately, there are techniques that allow us to include
+<strong>external fonts</strong> in our CSS.</p>
+<p>A popular location to get external fonts is <a
+href="https://fonts.google.com/">Google Fonts</a>:</p>
+<figure>
+<img src="../assets/content/wk4/add_google_font.gif"
+title="On Google Fonts, font families and properties can be selected and configured before downloading or embedding on your webpage."
+class="full-width"
+alt="Gif: step-by step for choosing a google font to add to a project." />
+<figcaption aria-hidden="true">Gif: step-by step for choosing a google
+font to add to a project.</figcaption>
+</figure>
+<p>Include the provided link in the head section of your HTML file, just
+like you would link a CSS Style sheet.</p>
+<h6 class="sourceCode" id="html">HTML</h6>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ot">  href=</span><span class="st">&quot;https://fonts.googleapis.com/css?family=Roboto</span><span class="er">&amp;</span><span class="st">display=swap&quot;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ot">  rel=</span><span class="st">&quot;stylesheet&quot;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">/&gt;</span></span></code></pre></div>
+<p>Add the <code>font-family</code> property to your CSS. <strong>Don’t
+forget to add a fall-back font</strong>.</p>
+<h6 class="sourceCode" id="css-2">CSS</h6>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>p {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-family</span>: <span class="st">&quot;Roboto&quot;</span><span class="op">,</span> <span class="dv">sans-serif</span><span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <h2 id="font-size">Font size</h2>
 <p>Font size can be set with the <code>font-size</code> property.</p>
 <p><code>font-size</code> value can be set as absolute or relative:</p>
@@ -426,7 +468,7 @@ inheritance</h3>
 <blockquote>
 <p>For <code>font-size</code> <strong>it is recommended that you use
 relative CSS units over fixed units.</strong></p>
-<p>You need to be aware of where you HTML element is inheriting these
+<p>You need to be aware of where your HTML element is inheriting these
 units from</p>
 </blockquote>
 <p>Two common relative units for <code>font-size</code> are:</p>
@@ -448,113 +490,14 @@ the parent element.</li>
 <p>The root <code>&lt;html&gt;</code> element has a default
 <code>font-size</code> of 16px (set in your browser settings).</p>
 </blockquote>
-<h3 id="example">Example</h3>
-<h6 class="sourceCode" id="css-2">CSS</h6>
-<div class="sourceCode" id="cb3"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>h1 {</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-size</span>: <span class="dv">1.8</span><span class="dt">rem</span><span class="op">;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">.p1</span> {</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-size</span>: <span class="dv">1.2</span><span class="dt">rem</span><span class="op">;</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">.p2</span> {</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-size</span>: <span class="dv">0.7</span><span class="dt">rem</span><span class="op">;</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">blue</span><span class="op">;</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<h6 class="sourceCode" id="html">HTML</h6>
-<div class="sourceCode" id="cb4"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;section</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;sourceCode&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;h1&gt;</span>Relative sizes<span class="kw">&lt;/h1&gt;</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;p1&quot;</span><span class="kw">&gt;</span>Lorem, ipsum dolor sit amet consectetur adipisicing elit.<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;p2&quot;</span><span class="kw">&gt;</span>Aliquam repellendus, debitis perspiciatis asperiores aut deleniti maxime totam neque dolores enim labore placeat facilis expedita iure!<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/section&gt;</span></span></code></pre></div>
-<h6 class="sourceCode" id="result">Result</h6>
-<section class="sourceCode">
-<h1 style="font-size:1.8rem; margin-top: 0;">
-Relative sizes
-</h1>
-<p style="font-size:1.2rem; color:red;">
-Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="qByeqVa" data-user="michaelhaaf" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+<span>See the Pen <a href="https://codepen.io/michaelhaaf/pen/qByeqVa">
+Untitled</a> by Michael Haaf
+(<a href="https://codepen.io/michaelhaaf"><span class="citation"
+data-cites="michaelhaaf">@michaelhaaf</span></a>) on
+<a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<p style="font-size:0.7rem; color:blue;">
-Aliquam repellendus, debitis perspiciatis asperiores aut deleniti maxime
-totam neque dolores enim labore placeat facilis expedita iure!
-</p>
-</section>
-<h2 id="css-units">CSS Units</h2>
-<p><em>For this section refer to the page <a
-href="https://www.w3schools.com/CSSref/css_units.asp">CSS Units by
-W3Schools</a>.</em></p>
-<h3 id="responsive-units">Responsive units</h3>
-<p>Use the <code>vw</code> unit to scale the <code>font-size</code>
-according to the browser’s window size.</p>
-<p><code>vw</code> stands for “viewport width”.</p>
-<p><strong>Viewport stands for the size of your browser’s
-window.</strong></p>
-<figure>
-<img src="https://www.kirupa.com/html5/images/browser_size.png"
-title="A Serif font has serifs (extra strokes) drawn on the edges of the letter, while a Sans-serif font does not."
-alt="Figure from Kirupa.com: Viewport, Device, and Document Size" />
-<figcaption aria-hidden="true">Figure from Kirupa.com: <a
-href="https://www.kirupa.com/html5/viewport_device_document_size.html">Viewport,
-Device, and Document Size</a></figcaption>
-</figure>
-<h2 id="meta-attributes-viewport-ie-compatibility">Meta Attributes:
-viewport &amp; IE compatibility</h2>
-<p>Earlier in class we have seen that the <code>!</code> Emmet shortcut
-in VS Code provides a new <code>&lt;meta&gt;</code> attribute:</p>
-<h6 class="sourceCode" id="html-1">HTML</h6>
-<div class="sourceCode" id="cb5"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;meta</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;viewport&quot;</span> <span class="er">content</span><span class="ot">=</span><span class="st">&quot;width=device-width, initial-scale=1.0&quot;</span> <span class="kw">/&gt;</span></span></code></pre></div>
-<p>The <code>&lt;meta&gt;</code> viewport element tells the browser how
-to control the page’s dimensions and scaling.</p>
-<p>The <code>width=</code> property controls the size of the viewport.
-It can be set to a specific number of pixels or to the device-width,
-which is the width of the screen at a scale of 100%.</p>
-<p>The <code>initial-scale=</code> property controls the zoom level when
-the page is first loaded.</p>
-<p>See <a
-href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag"><em>Using
-the viewport meta tag to control layout on mobile browsers</em></a> for
-more info.</p>
-<h2 id="using-web-fonts">Using Web Fonts</h2>
-<p>So far, all of the fonts that we have seen are commonly available on
-most operating systems, meaning that we can specify them (as well as a
-few fallbacks) without needing to worry whether the end user has that
-font installed.</p>
-<p>There are many thousands of fonts available to choose, and there
-could be a wide variety of reasons for selecting fonts other than the
-most commonly available ones. How do we ensure that those fonts render
-correctly when accessed from machines that do not have those fonts
-installed?</p>
-<p>We can include <strong>external fonts</strong> in our CSS.</p>
-<p>A popular location to get external fonts is <a
-href="https://fonts.google.com/">Google Fonts</a>:</p>
-<figure>
-<img src="../assets/content/wk4/add_google_font.gif"
-title="On Google Fonts, font families and properties can be selected and configured before downloading or embedding on your webpage."
-class="full-width"
-alt="Gif: step-by step for choosing a google font to add to a project." />
-<figcaption aria-hidden="true">Gif: step-by step for choosing a google
-font to add to a project.</figcaption>
-</figure>
-<p>Include the provided link in the head section of your HTML file, just
-like you would link a CSS Style sheet.</p>
-<h6 class="sourceCode" id="html-2">HTML</h6>
-<div class="sourceCode" id="cb6"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ot">  href=</span><span class="st">&quot;https://fonts.googleapis.com/css?family=Roboto</span><span class="er">&amp;</span><span class="st">display=swap&quot;</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ot">  rel=</span><span class="st">&quot;stylesheet&quot;</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="kw">/&gt;</span></span></code></pre></div>
-<p>Add the <code>font-family</code> property to your CSS. <strong>Don’t
-forget to add a fall-back font</strong>.</p>
-<h6 class="sourceCode" id="css-3">CSS</h6>
-<div class="sourceCode" id="cb7"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>p {</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-family</span>: <span class="st">&quot;Roboto&quot;</span><span class="op">,</span> <span class="dv">sans-serif</span><span class="op">;</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 <h2 id="font-weight">Font Weight</h2>
 <p>The <a
 href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight"><code>font-weight</code></a>
@@ -577,13 +520,13 @@ provide finer grained control than the above keywords.
 <p>See <a
 href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight">font-weight
 by MDN</a> web docs for more information.</p>
-<h6 class="sourceCode" id="css-4">CSS</h6>
-<div class="sourceCode" id="cb8"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>font-weight<span class="in">: bold</span>;</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>font-weight<span class="in">: lighter</span>;</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>font-weight<span class="in">: 200;</span></span></code></pre></div>
+<h6 class="sourceCode" id="css-3">CSS</h6>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>font-weight<span class="in">: bold</span>;</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>font-weight<span class="in">: lighter</span>;</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>font-weight<span class="in">: 200;</span></span></code></pre></div>
 <h2 id="text-decorations">Text Decorations</h2>
 <p>The <a
 href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration"><code>text-decoration</code></a>
@@ -651,20 +594,11 @@ href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height"><code>line-h
 <li><a
 href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family"><code>font-family</code></a></li>
 </ul>
-<h6 class="sourceCode" id="css-5">CSS</h6>
-<div class="sourceCode" id="cb9"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>body {</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font</span>: <span class="dv">italic</span> <span class="dv">small-caps</span> <span class="dv">bold</span> <span class="dv">16</span><span class="dt">px</span>/<span class="dv">2</span> <span class="dv">cursive</span><span class="op">;</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<h3 id="font-shorthand-live-demo">Font Shorthand Live Demo</h3>
-<p>This <a
-href="https://developer.mozilla.org/en-US/docs/Web/CSS/font#frame_live_sample">live
-demo (MDN)</a> illustrates how the <code>font</code> shorthand property
-affects a paragraph element. Try toggling the various options in the
-form to see all of the <code>font</code> properties that can be set, and
-to preview their effect on the sample text.</p>
-<iframe width="100%" height="425px" frameborder="0" id="frame_live_sample" src="https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/CSS/font/_sample_.live_sample.html">
-</iframe>
+<h6 class="sourceCode" id="css-4">CSS</h6>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>body {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font</span>: <span class="dv">italic</span> <span class="dv">small-caps</span> <span class="dv">bold</span> <span class="dv">16</span><span class="dt">px</span>/<span class="dv">2</span> <span class="dv">cursive</span><span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <h1 id="the-box-model">The Box Model</h1>
 <p><em>This section was adapted from <a
 href="https://www.theodinproject.com/lessons/foundations-the-box-model">The
@@ -687,36 +621,20 @@ terminology that relates to it.</p>
 <strong>inline</strong>, ALL elements have well defined box behavior
 that determines how the box behaves in terms of page flow and in
 relation to other boxes on the page. This is easy to see when elements
-are surrounded in by borders. The code below shows the two basic cases:
-a block-level <code>&lt;p&gt;</code> element containing an inline
-<code>&lt;a&gt;</code> element:</p>
-<h6 class="sourceCode" id="html-3">HTML</h6>
-<div class="sourceCode" id="cb10"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;p</span> <span class="er">style</span><span class="ot">=</span><span class="st">&quot;border: 1px solid red&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    Lorem, ipsum</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;a</span> <span class="er">style</span><span class="ot">=</span><span class="st">&quot;border: 1px solid blue&quot;</span><span class="kw">&gt;</span>dolor sit amet<span class="kw">&lt;/a&gt;</span> </span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    consectetur adipisicing elit.</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/p&gt;</span></span></code></pre></div>
-<h6 class="sourceCode" id="result-1">Result</h6>
-<section class="sourceCode">
-<p style="border: 1px solid red">
-Lorem, ipsum <a style="border: 1px solid blue">dolor sit amet</a>
-consectetur adipisicing elit.
+are surrounded in by borders.</p>
+<p>The CodePen snippet below shows the two basic cases: a block-level
+<code>&lt;p&gt;</code> element containing an inline
+<code>&lt;a&gt;</code> element. The example also shows that in CSS, we
+can override the default HTML flow for block and inline elements using
+the <code>display</code> property:</p>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="yLqmVMr" data-user="michaelhaaf" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+<span>See the Pen <a href="https://codepen.io/michaelhaaf/pen/yLqmVMr">
+Untitled</a> by Michael Haaf
+(<a href="https://codepen.io/michaelhaaf"><span class="citation"
+data-cites="michaelhaaf">@michaelhaaf</span></a>) on
+<a href="https://codepen.io">CodePen</a>.</span>
 </p>
-</section>
-<p><br> In CSS, you can set various values for the display type using
-the <code>display</code> property, which can have various values.</p>
-<h6 class="sourceCode" id="css-6">CSS</h6>
-<div class="sourceCode" id="cb11"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Custom class for setting display type to block */</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.block</span> {</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">display</span>: <span class="dv">block</span><span class="op">;</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>} </span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co">/* Custom class for setting display type to inline */</span></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="fu">.inline</span> {</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">display</span>: <span class="dv">inline</span><span class="op">;</span></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 <h2 id="outer-display-type">Outer display type</h2>
 <p>In CSS, all boxes have an <strong>inner display type</strong> and an
 <strong>outer display type</strong>.</p>
@@ -769,16 +687,20 @@ display types.</p>
 change the behavior of those boxes themselves? We need to know the
 strucure, or anatomy, of the CSS box model:</p>
 <ul>
-<li>Content box: The area where your content is displayed; size it using
-properties like <code>inline-size</code> and <code>block-size</code> or
-<code>width</code> and <code>height</code></li>
-<li>Padding box: The padding sits around the content as white space;
-size it using <code>padding</code> and related properties.</li>
-<li>Border box: The border box wraps the content and any padding; size
-it using <code>border</code> and related properties.</li>
-<li>Margin box: The margin is the outermost layer, wrapping the content,
-padding, and border as whitespace between this box and other elements;
-size it using <code>margin</code> and related properties.</li>
+<li><strong>Content box:</strong> The area where your content is
+displayed; size it using properties like <code>inline-size</code> and
+<code>block-size</code> or <code>width</code> and
+<code>height</code></li>
+<li><strong>Padding box:</strong> The padding sits around the content as
+white space; size it using <code>padding</code> and related
+properties.</li>
+<li><strong>Border box:</strong> The border box wraps the content and
+any padding; size it using <code>border</code> and related
+properties.</li>
+<li><strong>Margin box:</strong> The margin is the outermost layer,
+wrapping the content, padding, and border as whitespace between this box
+and other elements; size it using <code>margin</code> and related
+properties.</li>
 </ul>
 <p>The below diagram shows these layers:</p>
 <figure>
@@ -794,7 +716,7 @@ Box Model</a></figcaption>
 <h3 id="padding">Padding</h3>
 <h3 id="borders">Borders</h3>
 <h1 id="knowledge-check">Knowledge Check</h1>
-<p>j ## Fonts</p>
+<h2 id="fonts-1">Fonts</h2>
 <ul>
 <li>What are the differences between the main Generic font
 families?</li>
