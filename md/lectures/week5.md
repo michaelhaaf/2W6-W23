@@ -43,6 +43,52 @@ Float-based layouts have mostly been replaced with [Flexbox](#flexbox) in modern
 
 Perhaps more importantly, the limited nature of floats makes them a gentler introduction to CSS layouts than Flexbox. Instead of being overwhelmed with all the possibilities of Flexbox, we’ll get a chance to focus more on the process of building up a sophisticated web page layout.
 
+## Default HTML Layout Behavior
+
+Floats alter the default layout of a web page, so we should probably start by reviewing what exactly that “default” behavior is. Default HTML flow was covered in Week 2 and 3, you can currently find our class notes about this on **LEA**.
+
+Below is a simple codepen demonstrating the default HTML flow. We can see that each block-level element (that's all of the `<div>` elements) fills 100% of its parent elements’s width (`<div class='page'>` in this case), and they appear vertically one after another. 
+
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="yLxygJZ" data-user="michaelhaaf" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/michaelhaaf/pen/yLxygJZ">
+  wk5-float-layout</a> by Michael Haaf (<a href="https://codepen.io/michaelhaaf">@michaelhaaf</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+We can see a single column layout with one element stacked on top of another in the flow. 
+
+Typically, you’d want to let the height of these boxes be determined automatically based on the content they contain; however, we’re more concerned with controlling layouts this chapter, so we won’t be dealing with much real content. This is the reason for setting explicit `height` properties in the CSS.
+
+It’s worth taking a look at what happens when we shrink an element’s width. Try opening the CodePen (click the "Edit on Codepen" button) and update the .sidebar rule to match the following:
+
+###### CSS{.sourceCode}
+```css
+.sidebar {
+  width: 200px;                 /* Add this */
+  height: 300px;
+  background-color: #F09A9D;
+}
+```
+
+The sidebar element gets narrower, but the rest of the boxes stay in the exact same position. All the blocks are still rendered vertically one after another. This is the behavior we’ll be changing with floats.
+
+## Floating an Element
+
+The CSS float property gives us control over the horizontal position of an element. By “floating” the sidebar to the left, we’re telling the browser to align it to the left side of the page. Go ahead and float our sidebar with the following line:
+
+###### CSS{.sourceCode}
+```css
+.sidebar {
+  float: left;                  /* Add this */
+  width: 200px;
+  height: 300px;
+  background-color: #F09A9D;
+}
+```
+
+However, this doesn’t just align the sidebar—it also tells surrounding elements that they can flow around the sidebar instead of beginning underneath it. It’s as if the sidebar is inside the .content block, so any HTML markup in .content would wrap around the sidebar’s box. This gives us a magazine-style layout:
+
 # Flexbox
 
 *This lesson was adapted from the online HTML/CSS learning resource, [The Odin Project](https://www.theodinproject.com/lessons/foundations-introduction-to-flexbox).*
