@@ -71,7 +71,7 @@ It’s worth taking a look at what happens when we shrink an element’s width. 
 }
 ```
 
-The sidebar element gets narrower, but the rest of the boxes stay in the exact same position. All the blocks are still rendered vertically one after another. This is the behavior we’ll be changing with floats.
+The sidebar element gets narrower, but the rest of the boxes stay in the same position. All the blocks are still rendered vertically one after another. This is the behavior we’ll be changing with floats.
 
 ## Floating an Element
 
@@ -87,7 +87,34 @@ The CSS float property gives us control over the horizontal position of an eleme
 }
 ```
 
-However, this doesn’t just align the sidebar—it also tells surrounding elements that they can flow around the sidebar instead of beginning underneath it. It’s as if the sidebar is inside the .content block, so any HTML markup in .content would wrap around the sidebar’s box. This gives us a magazine-style layout:
+However, this doesn’t just align the sidebar — it also tells surrounding elements that they can flow around the sidebar instead of beginning underneath it. It’s as if the sidebar is inside the .content block, so any HTML markup in .content would wrap around the sidebar’s box. This gives us a magazine-style layout:
+
+<div class="half-width">
+![Our sample layout without `display` property set][nofloat-img]
+</div>
+<div class="half-width">
+![The same layout with `display: float` property added.][float-img]
+</div>
+
+[float-img]: ../assets/content/wk5/iih-width-float.png  "ajlkwdja"
+[nofloat-img]: ../assets/content/wk5/iih-width-nofloat.png  "ajlkwdja"
+[float-source]: https://www.internetingishard.com/html-and-css/floats/
+
+**Try changing the CodePen above** until you can see the results shown in these figures!
+
+We are not constrained to floating elements to the left as in the above example. Try experimenting with the following properties as well:
+
+###### CSS{.sourceCode}
+```css
+/* styles for block-level elements */
+float: left;   /* left-aligned */
+float: right;   /* Right-aligned */
+float: none;   /* Reset to default flow */
+margin: 0 auto;   /* Use margins for centering elements (do not need float property for this) */
+
+/* styles for inline elements */
+text-align: center; 
+```
 
 # Flexbox
 

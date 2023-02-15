@@ -312,9 +312,8 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#c
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span>: <span class="cn">#F09A9D</span><span class="op">;</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>The sidebar element gets narrower, but the rest of the boxes stay in
-the exact same position. All the blocks are still rendered vertically
-one after another. This is the behavior we’ll be changing with
-floats.</p>
+the same position. All the blocks are still rendered vertically one
+after another. This is the behavior we’ll be changing with floats.</p>
 <h2 id="floating-an-element">Floating an Element</h2>
 <p>The CSS float property gives us control over the horizontal position
 of an element. By “floating” the sidebar to the left, we’re telling the
@@ -328,11 +327,42 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#c
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">height</span>: <span class="dv">300</span><span class="dt">px</span><span class="op">;</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span>: <span class="cn">#F09A9D</span><span class="op">;</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<p>However, this doesn’t just align the sidebar—it also tells
+<p>However, this doesn’t just align the sidebar — it also tells
 surrounding elements that they can flow around the sidebar instead of
 beginning underneath it. It’s as if the sidebar is inside the .content
 block, so any HTML markup in .content would wrap around the sidebar’s
 box. This gives us a magazine-style layout:</p>
+<div class="half-width">
+<figure>
+<img src="../assets/content/wk5/iih-width-nofloat.png" title="ajlkwdja"
+alt="Our sample layout without display property set" />
+<figcaption aria-hidden="true">Our sample layout without
+<code>display</code> property set</figcaption>
+</figure>
+</div>
+<div class="half-width">
+<figure>
+<img src="../assets/content/wk5/iih-width-float.png" title="ajlkwdja"
+alt="The same layout with display: float property added." />
+<figcaption aria-hidden="true">The same layout with
+<code>display: float</code> property added.</figcaption>
+</figure>
+</div>
+<p><strong>Try changing the CodePen above</strong> until you can see the
+results shown in these figures!</p>
+<p>We are not constrained to floating elements to the left as in the
+above example. Try experimenting with the following properties as
+well:</p>
+<h6 class="sourceCode" id="css-2">CSS</h6>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* styles for block-level elements */</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>float<span class="in">: left</span>;   <span class="co">/* left-aligned */</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>float<span class="in">: right</span>;   <span class="co">/* Right-aligned */</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>float<span class="in">: none</span>;   <span class="co">/* Reset to default flow */</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>margin<span class="in">: 0 auto</span>;   <span class="co">/* Use margins for centering elements (do not need float property for this) */</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">/* styles for inline elements */</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>text-align<span class="in">: center</span>; </span></code></pre></div>
 <h1 id="flexbox">Flexbox</h1>
 <p><em>This lesson was adapted from the online HTML/CSS learning
 resource, <a
