@@ -38,10 +38,9 @@ You can compare this calendar with the calendar from the [Course Outline](../pag
 |                  | CSS - layouts: the box model                                    | Tutorial: [CSS Box Model Exercises][tutCSSBoxModel] <br>                  |
 |                  |                                                                 | Tutorial: MDN: [Typesetting a Homepage][tutMdnText] [(.zip)][tutMdnText]  |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
-| ##### NOTE:      | ##### the weeks below are tentative                             |                                                                           |
+| [Week 5][lec5]   | CSS - layouts: the box model, floats <br>                       | [Week 5 Exercises](../lectures/week5.html#exercises) <br>                 |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
-| [Week 5][lec5]   | CSS - layouts: the box model, floats <br>                       |                                                                           |
-|                  | CSS - advanced styling: typography, accessibility <br>          |                                                                           |
+| ##### NOTE:      | ##### the weeks below are tentative                             |                                                                           |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | [Week 6][lec6]   | CSS - Flexbox                                                   |                                                                           |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
