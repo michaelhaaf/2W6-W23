@@ -202,6 +202,19 @@ id="toc-default-html-layout-behavior">Default HTML Layout
 Behavior</a></li>
 <li><a href="#floating-an-element" id="toc-floating-an-element">Floating
 an Element</a></li>
+<li><a href="#nested-floating-elements"
+id="toc-nested-floating-elements">Nested floating elements</a></li>
+<li><a href="#multiple-floats" id="toc-multiple-floats">Multiple
+floats</a></li>
+<li><a href="#after-a-float" id="toc-after-a-float">After a
+Float</a></li>
+<li><a href="#clearing-floats" id="toc-clearing-floats">Clearing
+Floats</a></li>
+<li><a href="#hiding-overflow" id="toc-hiding-overflow">Hiding
+Overflow</a></li>
+<li><a href="#example-float-based-layouts"
+id="toc-example-float-based-layouts">Example Float-based
+Layouts</a></li>
 </ul></li>
 <li><a href="#flexbox" id="toc-flexbox">Flexbox</a></li>
 <li><a href="#knowledge-check" id="toc-knowledge-check">Knowledge
@@ -335,17 +348,17 @@ box. This gives us a magazine-style layout:</p>
 <div class="half-width">
 <figure>
 <img src="../assets/content/wk5/iih-width-nofloat.png" title="ajlkwdja"
-alt="Our sample layout without display property set" />
+alt="Our sample layout without float property set" />
 <figcaption aria-hidden="true">Our sample layout without
-<code>display</code> property set</figcaption>
+<code>float</code> property set</figcaption>
 </figure>
 </div>
 <div class="half-width">
 <figure>
 <img src="../assets/content/wk5/iih-width-float.png" title="ajlkwdja"
-alt="The same layout with display: float property added." />
+alt="The same layout with float: left property added." />
 <figcaption aria-hidden="true">The same layout with
-<code>display: float</code> property added.</figcaption>
+<code>float: left</code> property added.</figcaption>
 </figure>
 </div>
 <p><strong>Try changing the CodePen above</strong> until you can see the
@@ -363,6 +376,120 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#c
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">/* styles for inline elements */</span></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>text-align<span class="in">: center</span>; </span></code></pre></div>
+<h2 id="nested-floating-elements">Nested floating elements</h2>
+<p>Floated boxes always align to the left or right of their
+<strong>parent</strong> element – not their grandparent, not the
+<code>&lt;body&gt;</code> element, but their immediate parent.</p>
+<p>In our example, the sidebar’s parent is
+<code>&lt;div class='page'&gt;</code>, which is as wide as the browser
+window. This is why our sidebar floats to the far left of the page.</p>
+<p>If instead we had a fixed width for our
+<code>&lt;div class='page'&gt;</code> element, the floated boxes inside
+of this element will float to the far left of <strong>its parent
+element</strong>. Try inserting the code below into the CodePen we have
+been practising with.</p>
+<h6 class="sourceCode" id="css-3">CSS</h6>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.page</span> {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">900</span><span class="dt">px</span><span class="op">;</span> <span class="co">/* Add this line */</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin</span>: <span class="dv">0</span> <span class="bu">auto</span><span class="op">;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Does the <code>sidebar</code> hug the left hand of the browser
+window, or of its parent? You may need to zoom out in your browser
+window to observe the effect.</p>
+<p>Positioning nested container divs like this is how you build up
+sophisticated website layouts. Here, we started with <code>.page</code>
+to center <em>everything</em>, then we left-aligned a sidebar
+<em>inside</em> that centered page. Things can get way more complex, but
+our simple example demonstrates the universal truth of CSS layouts:
+<em>everything is a box, inside of another box, inside of another box,
+etc.</em></p>
+<h2 id="multiple-floats">Multiple floats</h2>
+<p>Let’s examine our current magazine-style float a little bit more by
+adding an explicit width to our .content block:</p>
+<h6 class="sourceCode" id="css-4">CSS</h6>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.content</span> {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">650</span><span class="dt">px</span><span class="op">;</span>                 <span class="co">/* Add this */</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">height</span>: <span class="dv">500</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span>: <span class="cn">#F5CF8E</span><span class="op">;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>This clearly demonstrates that our sidebar is in fact inside the
+<code>.content</code> block: if you take a screenshot of them, you’ll
+have an image that’s 650 pixels wide opposed to 850 pixels (our sidebar
+is 200 pixels wide). You can see the outcome of these changes in the
+CodePen below (**you will probably need to use 0.5x or 0.25x zoom).</p>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="yLxNZGp" data-user="michaelhaaf" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+<span>See the Pen <a href="https://codepen.io/michaelhaaf/pen/yLxNZGp">
+wk5-float-2</a> by Michael Haaf
+(<a href="https://codepen.io/michaelhaaf"><span class="citation"
+data-cites="michaelhaaf">@michaelhaaf</span></a>) on
+<a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<p>This kind of float behavior is nice for images (which we’ll see <a
+href="#floats-for-content">later on</a>), but for page layout, we
+actually want the content block to be next to the sidebar, rather than
+having the sidebar float on-top of it.</p>
+<p>Remember that assigning the <code>float</code> property
+<strong>changes the default flow behavior, allowing horizontal flow, for
+just that element</strong>. In order for other elements to ALSO have
+different/horizontal flow, we need to make THOSE elements have the
+<code>float</code> property set as well. Add one more line to the
+<code>.content</code> rule:</p>
+<h6 class="sourceCode" id="css-5">CSS</h6>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.content</span> {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">float</span>: <span class="dv">left</span><span class="op">;</span>            <span class="co">/* Add this line */</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">650</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">height</span>: <span class="dv">500</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span>: <span class="cn">#F5CF8E</span><span class="op">;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>When you float multiple elements in the same direction, they’ll stack
+horizontally, much like the default vertical layout algorithm, except
+rotated 90 degrees. The above code causes our entire content block to
+appear on the right of the sidebar instead of wrapping around it.</p>
+<p>This gives us true control over the horizontal alignment of our block
+boxes. Try playing with the float values for both <code>.sidebar</code>
+and <code>.content,</code> and you’ll find that we already have a couple
+of distinct layouts at our disposal: You probably noticed that our
+footer shows up in the top right, directly below .menu. That’s because
+floated boxes are removed from the normal flow of the page. The height
+of our floated elements don’t contribute to the vertical position of the
+footer, so it simply sticks itself below the last element that wasn’t
+floated. <img
+src="../assets/content/wk5/iih-float-layout-combinations.png"
+title="Changing the value of the `float` property for the `.sidebar` and `content` elements allows us at least four different distinct and useful layout combinations."
+alt="Figure from Interneting is Hard: Floats" /></p>
+<h2 id="after-a-float">After a Float</h2>
+<p>You probably noticed that our footer shows up in the top right,
+directly below <code>.menu</code>. That’s because floated boxes are
+removed from the normal flow of the page; therefore, <strong>the height
+of our floated elements do not contribute to the vertical position of
+the footer</strong>, so it simply sticks itself below the last element
+that wasn’t floated (i.e., the <code>.menu</code>).</p>
+<p>We can see this more clearly by adding a red border around our .page
+element:</p>
+<h6 class="sourceCode" id="css-6">CSS</h6>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.page</span> {</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">900</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin</span>: <span class="dv">0</span> <span class="bu">auto</span><span class="op">;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border</span>: <span class="dv">1</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">red</span><span class="op">;</span>  <span class="co">/* Add this */</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Notice how the border is only around the <code>.menu</code> and
+<code>.footer</code> elements. It’s as if the floated elements weren’t
+even there. There are two ways to fix this: <strong>clearing a
+float</strong> and <strong>hiding overflow</strong>.</p>
+<h2 id="clearing-floats">Clearing Floats</h2>
+<p>This lesson (and those below it) is under construction! I will post
+an update on LEA when there is content here to see.</p>
+<h2 id="hiding-overflow">Hiding Overflow</h2>
+<h2 id="example-float-based-layouts">Example Float-based Layouts</h2>
+<h3 id="floats-for-equal-width-columns">Floats for Equal-Width
+Columns</h3>
+<h3 id="floats-for-grids">Floats for Grids</h3>
+<h3 id="floats-for-content">Floats for Content</h3>
 <h1 id="flexbox">Flexbox</h1>
 <p><em>This lesson was adapted from the online HTML/CSS learning
 resource, <a
@@ -380,8 +507,8 @@ we need to create sidebars, grids, an magazine-style layouts.</p>
 <ul>
 <li>What is the default layout behavior for block-level HTML
 elements?</li>
-<li>What layout control does the <code>display: float</code> property
-give web developers?</li>
+<li>How does the default block-level layout behavior change for elements
+with the <code>float</code> property set?</li>
 <li>What are the two techniques we have for preventing float elements
 from overlapping?</li>
 </ul>

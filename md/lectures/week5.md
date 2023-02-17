@@ -90,10 +90,10 @@ The CSS float property gives us control over the horizontal position of an eleme
 However, this doesn’t just align the sidebar — it also tells surrounding elements that they can flow around the sidebar instead of beginning underneath it. It’s as if the sidebar is inside the .content block, so any HTML markup in .content would wrap around the sidebar’s box. This gives us a magazine-style layout:
 
 <div class="half-width">
-![Our sample layout without `display` property set][nofloat-img]
+![Our sample layout without `float` property set][nofloat-img]
 </div>
 <div class="half-width">
-![The same layout with `display: float` property added.][float-img]
+![The same layout with `float: left` property added.][float-img]
 </div>
 
 [float-img]: ../assets/content/wk5/iih-width-float.png  "ajlkwdja"
@@ -116,6 +116,105 @@ margin: 0 auto;   /* Use margins for centering elements (do not need float prope
 text-align: center; 
 ```
 
+## Nested floating elements
+
+
+Floated boxes always align to the left or right of their **parent** element -- not their grandparent, not the `<body>` element, but their immediate parent. 
+
+In our example, the sidebar's parent is `<div class='page'>`, which is as wide as the browser window. This is why our sidebar floats to the far left of the page.
+
+If instead we had a fixed width for our `<div class='page'>` element, the floated boxes inside of this element will float to the far left of **its parent element**. Try inserting the code below into the CodePen we have been practising with. 
+
+###### CSS{.sourceCode}
+```CSS
+.page {
+  width: 900px; /* Add this line */
+  margin: 0 auto;
+}
+```
+
+Does the `sidebar` hug the left hand of the browser window, or of its parent? You may need to zoom out in your browser window to observe the effect.
+
+Positioning nested container divs like this is how you build up
+sophisticated website layouts. Here, we started with `.page` to center *everything*, then we left-aligned a sidebar *inside* that centered page. Things can get way more complex, but our simple example demonstrates the universal truth of CSS layouts: *everything is a box, inside of another box, inside of another box, etc.*
+
+
+## Multiple floats
+
+Let’s examine our current magazine-style float a little bit more by adding an explicit width to our .content block:
+
+###### CSS{.sourceCode}
+```css
+.content {
+  width: 650px;                 /* Add this */
+  height: 500px;
+  background-color: #F5CF8E;
+}
+```
+
+This clearly demonstrates that our sidebar is in fact inside the `.content` block: if you take a screenshot of them, you’ll have an image that’s 650 pixels wide opposed to 850 pixels (our sidebar is 200 pixels wide). You can see the outcome of these changes in the CodePen below (**you will probably need to use 0.5x or 0.25x zoom).
+
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="yLxNZGp" data-user="michaelhaaf" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/michaelhaaf/pen/yLxNZGp">
+  wk5-float-2</a> by Michael Haaf (<a href="https://codepen.io/michaelhaaf">@michaelhaaf</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+This kind of float behavior is nice for images (which we’ll see [later on](#floats-for-content)), but for page layout, we actually want the content block to be next to the sidebar, rather than having the sidebar float on-top of it. 
+
+Remember that assigning the `float` property **changes the default flow behavior, allowing horizontal flow, for just that element**. In order for other elements to ALSO have different/horizontal flow, we need to make THOSE elements have the `float` property set as well. Add one more line to the `.content` rule:
+
+###### CSS{.sourceCode}
+```css
+.content {
+  float: left;            /* Add this line */
+  width: 650px;
+  height: 500px;
+  background-color: #F5CF8E;
+}
+```
+
+When you float multiple elements in the same direction, they’ll stack horizontally, much like the default vertical layout algorithm, except rotated 90 degrees. The above code causes our entire content block to appear on the right of the sidebar instead of wrapping around it.
+
+This gives us true control over the horizontal alignment of our block boxes. Try playing with the float values for both `.sidebar` and `.content,` and you’ll find that we already have a couple of distinct layouts at our disposal:
+You probably noticed that our footer shows up in the top right, directly below .menu. That’s because floated boxes are removed from the normal flow of the page. The height of our floated elements don’t contribute to the vertical position of the footer, so it simply sticks itself below the last element that wasn’t floated.
+![Figure from Interneting is Hard: [Floats][layouts-source]][layouts-img]
+
+[layouts-img]: ../assets/content/wk5/iih-float-layout-combinations.png  "Changing the value of the `float` property for the `.sidebar` and `content` elements allows us at least four different distinct and useful layout combinations."
+[layouts-source]: https://www.internetingishard.com/html-and-css/floats/
+
+
+## After a Float
+
+You probably noticed that our footer shows up in the top right, directly below `.menu`. That’s because floated boxes are removed from the normal flow of the page; therefore, **the height of our floated elements do not contribute to the vertical position of the footer**, so it simply sticks itself below the last element that wasn’t floated (i.e., the `.menu`).
+
+We can see this more clearly by adding a red border around our .page element:
+
+###### CSS{.sourceCode}
+```css
+.page {
+  width: 900px;
+  margin: 0 auto;
+  border: 1px solid red;  /* Add this */
+}
+```
+Notice how the border is only around the `.menu` and `.footer` elements. It’s as if the floated elements weren’t even there. There are two ways to fix this: **clearing a float** and **hiding overflow**.
+
+## Clearing Floats
+
+This lesson (and those below it) is under construction! I will post an update on LEA when there is content here to see.
+
+## Hiding Overflow
+
+## Example Float-based Layouts
+
+### Floats for Equal-Width Columns
+
+### Floats for Grids
+
+### Floats for Content
+
 # Flexbox
 
 *This lesson was adapted from the online HTML/CSS learning resource, [The Odin Project](https://www.theodinproject.com/lessons/foundations-introduction-to-flexbox).*
@@ -129,7 +228,7 @@ This lesson is under construction! I will post an update on LEA when there is co
 This chapter was our first encounter with realistic web page layouts. We learned how to float divs to the left and right, how to deal with content after a float, and how to combine floats with the auto-margin centering technique from the CSS Box Model chapter. These are the tools we need to create sidebars, grids, an magazine-style layouts.
 
 - What is the default layout behavior for block-level HTML elements?
-- What layout control does the `display: float` property give web developers?
+- How does the default block-level layout behavior change for elements with the `float` property set?
 - What are the two techniques we have for preventing float elements from overlapping?
 
 ## Flexbox
