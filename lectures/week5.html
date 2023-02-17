@@ -206,8 +206,6 @@ an Element</a></li>
 id="toc-nested-floating-elements">Nested floating elements</a></li>
 <li><a href="#multiple-floats" id="toc-multiple-floats">Multiple
 floats</a></li>
-<li><a href="#after-a-float" id="toc-after-a-float">After a
-Float</a></li>
 <li><a href="#clearing-floats" id="toc-clearing-floats">Clearing
 Floats</a></li>
 <li><a href="#hiding-overflow" id="toc-hiding-overflow">Hiding
@@ -247,7 +245,7 @@ Check</a>
       two this week: Floats and Flexbox.</p>
      </div>
          </header>
-     <p>Last update: Wednesday, Feb 15, 2023.</p>
+     <p>Last update: Friday, Feb 17, 2023.</p>
 <hr />
 <h1 id="lesson-overview">Lesson Overview</h1>
 <ul>
@@ -461,7 +459,6 @@ floated. <img
 src="../assets/content/wk5/iih-float-layout-combinations.png"
 title="Changing the value of the `float` property for the `.sidebar` and `content` elements allows us at least four different distinct and useful layout combinations."
 alt="Figure from Interneting is Hard: Floats" /></p>
-<h2 id="after-a-float">After a Float</h2>
 <p>You probably noticed that our footer shows up in the top right,
 directly below <code>.menu</code>. That’s because floated boxes are
 removed from the normal flow of the page; therefore, <strong>the height
@@ -482,10 +479,102 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb7-1"><a href="#c
 even there. There are two ways to fix this: <strong>clearing a
 float</strong> and <strong>hiding overflow</strong>.</p>
 <h2 id="clearing-floats">Clearing Floats</h2>
-<p>This lesson (and those below it) is under construction! I will post
-an update on LEA when there is content here to see.</p>
+<p>“Clearing” a float is when we tell a block to ignore any floats that
+appear before it. <strong>A cleared element always appears after any
+floats</strong>, instead of flowing around floated boxes. It’s like
+forcing a box back into the default vertical flow of the page.</p>
+<p>We can use the clear property to make our <code>.footer</code> drop
+down to the bottom of the page:</p>
+<h6 class="sourceCode" id="css-7">CSS</h6>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.footer</span> {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">clear</span>: <span class="dv">both</span><span class="op">;</span>            <span class="co">/* Add this */</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">height</span>: <span class="dv">200</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span>: <span class="cn">#D6E9FE</span><span class="op">;</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Usually, you want to clear both left and right floats as we did here
+(using <code>clear: both</code>), but you can choose to clear only one
+or the other using <code>clear: left</code> or
+<code>clear: right</code>.</p>
+<p>If you added a red border around the <code>.page</code> element (see
+previous section CodePen if not) then you should see that the red border
+now wraps all the way around the footer, inidicating that thte floated
+elements indeed count towards the height of the <code>.page</code>
+container.</p>
+<figure>
+<img src="../assets/content/wk5/iih-clear.png"
+title="Using the `clear` property on an element allows it to stack underneath clearing elements, returning the document to normal vertical flow."
+alt="Figure from Interneting is Hard: Floats" />
+<figcaption aria-hidden="true">Figure from Interneting is Hard: <a
+href="https://www.internetingishard.com/html-and-css/clears/">Floats</a></figcaption>
+</figure>
+<p>Depending on the type of layout you’re trying to create, this is a
+perfectly acceptable solution. We could stop here, but we’re going to
+explore float behavior more by transforming our page into a <a
+href="#full-bleed-layout">full-bleed layout</a> that has background
+colors filling the entire browser window.</p>
+<p>Watch what happens when we take the menu and footer out of the
+<code>.page</code> element. Change the <code>HTML</code> in the CodePen
+to match the following:</p>
+<h6 class="sourceCode" id="html">HTML</h6>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;menu&#39;</span><span class="kw">&gt;</span>Menu<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;page&#39;</span><span class="kw">&gt;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;sidebar&#39;</span><span class="kw">&gt;</span>Sidebar<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;content&#39;</span><span class="kw">&gt;</span>Content<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;footer&#39;</span><span class="kw">&gt;</span>Footer<span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+<p>Since <code>.menu</code> and <code>.footer</code> are outside our
+fixed-width <code>.page,</code> they’re the full width of the window,
+which is exactly what we want for a full-bleed layout. However, notice
+how <code>.page</code> has zero height again despite the fact that the
+footer still clears the sidebar and content blocks.</p>
+<p>Once again, the only elements in <code>.page</code> are floated, so
+they don’t count towards its height. In other words, moving the footer
+outside of the <code>.page</code> container broke our clear fix.</p>
 <h2 id="hiding-overflow">Hiding Overflow</h2>
+<p>Clearing floats only fixes the height issue when there’s an element
+<strong>inside</strong> the container element that we can add a
+<code>clear</code> property to. Now that our footer is outside
+<code>.page</code>, we need a new way to make floated elements
+contribute to the height of their container.</p>
+<figure>
+<img src="../assets/content/wk5/iih-overflow.png"
+title="There are two properties for addressing block-height issues with float-based layouts: `clear` and `overflow`."
+alt="Figure from Interneting is Hard: Floats" />
+<figcaption aria-hidden="true">Figure from Interneting is Hard: <a
+href="https://www.internetingishard.com/html-and-css/clears/">Floats</a></figcaption>
+</figure>
+<p>The solution is the <a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow">CSS
+overflow property</a>. The setting the property
+<code>overflow: hidden</code> on a container div tells the browser to
+<strong>recognize the height of any floated elements within that
+container div</strong>. This is how we can add a background color to our
+.page element and have it actually render:</p>
+<h6 class="sourceCode" id="css-8">CSS</h6>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.page</span> {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">900</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin</span>: <span class="dv">0</span> <span class="bu">auto</span><span class="op">;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">overflow</span>: <span class="dv">hidden</span><span class="op">;</span>             <span class="co">/* Add this */</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span>: <span class="cn">#EAEDF0</span><span class="op">;</span>    <span class="co">/* Add this */</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>You should now be able to see a light gray background in .page
+instead of the default white. This isn’t full bleed yet (we’ll address
+that in the next section). The important part here is the behavior of
+<code>overflow: hidden</code>. Without it, we wouldn’t be able to see
+the <code>.page</code> container’s background because it would have zero
+height.</p>
+<p><strong>Summary</strong>: When you have an extra unfloated HTML
+element at the bottom of a container div, use the <code>clear</code>
+solution. Otherwise, add an <code>overflow: hidden</code> declaration to
+the container element. The underlying idea for both options is that you
+need a way to tell the browser to incorporate floats into the height of
+their container element in order for their backgrounds to show up.</p>
 <h2 id="example-float-based-layouts">Example Float-based Layouts</h2>
+<h3 id="floats-for-full-bleed-layout">Floats for “Full-Bleed”
+Layout</h3>
 <h3 id="floats-for-equal-width-columns">Floats for Equal-Width
 Columns</h3>
 <h3 id="floats-for-grids">Floats for Grids</h3>

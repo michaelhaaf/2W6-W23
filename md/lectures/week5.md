@@ -10,7 +10,7 @@ abstract: |
   There are many techniques for layout in CSS. We will focus on two this week: Floats and Flexbox.
 ---
 
-Last update: Wednesday, Feb 15, 2023.
+Last update: Friday, Feb 17, 2023.
 
 ---
 
@@ -185,8 +185,6 @@ You probably noticed that our footer shows up in the top right, directly below .
 [layouts-source]: https://www.internetingishard.com/html-and-css/floats/
 
 
-## After a Float
-
 You probably noticed that our footer shows up in the top right, directly below `.menu`. That’s because floated boxes are removed from the normal flow of the page; therefore, **the height of our floated elements do not contribute to the vertical position of the footer**, so it simply sticks itself below the last element that wasn’t floated (i.e., the `.menu`).
 
 We can see this more clearly by adding a red border around our .page element:
@@ -203,11 +201,73 @@ Notice how the border is only around the `.menu` and `.footer` elements. It’s 
 
 ## Clearing Floats
 
-This lesson (and those below it) is under construction! I will post an update on LEA when there is content here to see.
+“Clearing” a float is when we tell a block to ignore any floats that appear before it. **A cleared element always appears after any floats**, instead of flowing around floated boxes. It’s like forcing a box back into the default vertical flow of the page.
+
+We can use the clear property to make our `.footer` drop down to the bottom of the page:
+
+###### CSS{.sourceCode}
+```css
+.footer {
+  clear: both;            /* Add this */
+  height: 200px;
+  background-color: #D6E9FE;
+}
+```
+
+Usually, you want to clear both left and right floats as we did here (using `clear: both`), but you can choose to clear only one or the other using `clear: left` or `clear: right`. 
+
+If you added a red border around the `.page` element (see previous section CodePen if not) then you should see that the red border now wraps all the way around the footer, inidicating that thte floated elements indeed count towards the height of the `.page` container.
+
+![Figure from Interneting is Hard: [Floats][clear-source]][clear-img]
+
+[clear-img]: ../assets/content/wk5/iih-clear.png "Using the `clear` property on an element allows it to stack underneath clearing elements, returning the document to normal vertical flow."
+[clear-source]: https://www.internetingishard.com/html-and-css/clears/
+
+Depending on the type of layout you’re trying to create, this is a perfectly acceptable solution. We could stop here, but we’re going to explore float behavior more by transforming our page into a [full-bleed layout](#full-bleed-layout) that has background colors filling the entire browser window.
+
+Watch what happens when we take the menu and footer out of the `.page` element. Change the `HTML` in the CodePen to match the following:
+
+###### HTML{.sourceCode}
+```html
+  <div class='menu'>Menu</div>
+  <div class='page'>
+    <div class='sidebar'>Sidebar</div>
+    <div class='content'>Content</div>
+  </div>
+  <div class='footer'>Footer</div>
+```
+Since `.menu` and `.footer` are outside our fixed-width `.page,` they’re the full width of the window, which is exactly what we want for a full-bleed layout. However, notice how `.page` has zero height again despite the fact that the footer still clears the sidebar and content blocks.
+
+Once again, the only elements in `.page` are floated, so they don’t count towards its height. In other words, moving the footer outside of the `.page` container broke our clear fix.
 
 ## Hiding Overflow
 
+Clearing floats only fixes the height issue when there’s an element **inside** the container element that we can add a `clear` property to. Now that our footer is outside `.page`, we need a new way to make floated elements contribute to the height of their container.
+
+![Figure from Interneting is Hard: [Floats][overflow-source]][overflow-img]
+
+[overflow-img]: ../assets/content/wk5/iih-overflow.png "There are two properties for addressing block-height issues with float-based layouts: `clear` and `overflow`."
+[overflow-source]: https://www.internetingishard.com/html-and-css/clears/
+
+The solution is the [CSS overflow property](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow). The setting the property `overflow: hidden` on a container div tells the browser to **recognize the height of any floated elements within that container div**. This is how we can add a background color to our .page element and have it actually render:
+
+###### CSS{.sourceCode}
+```css
+.page {
+  width: 900px;
+  margin: 0 auto;
+  overflow: hidden;             /* Add this */
+  background-color: #EAEDF0;    /* Add this */
+}
+```
+
+You should now be able to see a light gray background in .page instead of the default white. This isn’t full bleed yet (we’ll address that in the next section). The important part here is the behavior of `overflow: hidden`. Without it, we wouldn’t be able to see the `.page` container’s background because it would have zero height.
+
+**Summary**: When you have an extra unfloated HTML element at the bottom of a container div, use the `clear` solution. Otherwise, add an `overflow: hidden` declaration to the container element. The underlying idea for both options is that you need a way to tell the browser to incorporate floats into the height of their container element in order for their backgrounds to show up.
+
 ## Example Float-based Layouts
+
+### Floats for "Full-Bleed" Layout
 
 ### Floats for Equal-Width Columns
 
