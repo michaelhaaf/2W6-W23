@@ -163,6 +163,11 @@
          Week 5
         </a>
        </li>
+       <li>
+        <a href="../lectures/week6.html">
+         Week 6
+        </a>
+       </li>
       </ul>
      </li>
      <li>
@@ -214,12 +219,10 @@ Overflow</a></li>
 id="toc-example-float-based-layouts">Example Float-based
 Layouts</a></li>
 </ul></li>
-<li><a href="#flexbox" id="toc-flexbox">Flexbox</a></li>
 <li><a href="#knowledge-check" id="toc-knowledge-check">Knowledge
 Check</a>
 <ul>
 <li><a href="#floats-1" id="toc-floats-1">Floats</a></li>
-<li><a href="#flexbox-1" id="toc-flexbox-1">Flexbox</a></li>
 </ul></li>
 <li><a href="#exercises" id="toc-exercises">Exercises</a></li>
 </ul>
@@ -573,19 +576,183 @@ the container element. The underlying idea for both options is that you
 need a way to tell the browser to incorporate floats into the height of
 their container element in order for their backgrounds to show up.</p>
 <h2 id="example-float-based-layouts">Example Float-based Layouts</h2>
+<p>The following subsections show some of the common web layouts that
+can be achieved using what we’ve learned about Floats so far.</p>
 <h3 id="floats-for-full-bleed-layout">Floats for “Full-Bleed”
 Layout</h3>
+<p>In a few of the previous sections, the term <a
+href="https://www.joshwcomeau.com/css/full-bleed/">Full-bleed</a> layout
+was used. This is jargon that comes from print (i.e., layout design
+before the Web) where the printed content “bleeds” all the way to the
+edge of the paper – that is, a layout with no visible margin no matter
+the number of elements in the layout.</p>
+<figure>
+<img src="../assets/content/wk5/iih-full-bleed-layout.png"
+alt="Figure from Interneting is Hard: Floats" />
+<figcaption aria-hidden="true">Figure from Interneting is Hard: <a
+href="https://www.internetingishard.com/html-and-css/clears/">Floats</a></figcaption>
+</figure>
+<p>The full-bleed layout can be attained using the following
+techniques:</p>
 <h3 id="floats-for-equal-width-columns">Floats for Equal-Width
 Columns</h3>
+<p>So far, we’ve seen a sidebar layout, a fixed-width layout, and a
+full-bleed layout. Floats can also be used to create multi-column
+layouts. This works just like our <code>.sidebar</code> and
+<code>.content</code> floats; we just have more of them.</p>
+<figure>
+<img src="../assets/content/wk5/iih-equal-columns.png"
+alt="Figure from Interneting is Hard: Floats" />
+<figcaption aria-hidden="true">Figure from Interneting is Hard: <a
+href="https://www.internetingishard.com/html-and-css/clears/">Floats</a></figcaption>
+</figure>
+<p>Next we’re going to add three equal-width columns to our footer.
+Update the <code>&lt;footer&gt;</code> element, like so:</p>
+<h6 class="sourceCode" id="html-1">HTML</h6>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;footer&#39;</span><span class="kw">&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;column&#39;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;column&#39;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;column&#39;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+<p>We can style each of these columns just like we laid out the rest of
+our page. Add a new rule to styles.css:</p>
+<h6 class="sourceCode" id="css-9">CSS</h6>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.column</span> {</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">float</span>: <span class="dv">left</span><span class="op">;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">31</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin</span>: <span class="dv">20</span><span class="dt">px</span> <span class="dv">1.15</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">height</span>: <span class="dv">160</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span>: <span class="cn">#B2D6FF</span><span class="op">;</span>    <span class="co">/* Medium blue */</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>This is the first time we’ve used percentage values instead of
+explicit pixel values. Percentages in CSS are relative to the width of
+the parent element. The result is three columns that automatically
+resize to one-third of the browser window. Resize the browser window,
+and you’ll see our columns grow and shrink accordingly. This is the
+beginning of responsive design. Web page with footer that has three
+equal-width child elements</p>
+<p>Anyhoo, let’s not lose sight of the central thesis of this lesson:
+floats let us stack things horizontally instead of vertically. By
+changing the widths of the elements we’re floating, we can get all kinds
+of different layouts, from sidebars to multiple columns to grids.</p>
 <h3 id="floats-for-grids">Floats for Grids</h3>
+<p>Want a grid in the footer instead of 3 columns? No problem! When
+there isn’t enough room to stack a floated element horizontally, it pops
+down to the next line. All we need to do is add some more
+<code>.column</code> elements:</p>
+<figure>
+<img src="../assets/content/wk5/iih-grids.png"
+alt="Figure from Interneting is Hard: Floats" />
+<figcaption aria-hidden="true">Figure from Interneting is Hard: <a
+href="https://www.internetingishard.com/html-and-css/clears/">Floats</a></figcaption>
+</figure>
+<h6 class="sourceCode" id="html-2">HTML</h6>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;footer&#39;</span><span class="kw">&gt;</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;column&#39;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;column&#39;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;column&#39;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;column&#39;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;column&#39;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;column&#39;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+<p>Unfortunately, our footer background is too short. Fortunately, we
+already know how to fix that. Let’s replace the footer’s explicit height
+with another overflow: hidden so it can accommodate any number of grid
+items:</p>
+<h6 class="sourceCode" id="css-10">CSS</h6>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.footer</span> {</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">overflow</span>: <span class="dv">hidden</span><span class="op">;</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span>: <span class="cn">#D6E9FE</span><span class="op">;</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>You can use this same technique to make grids of any size. For
+example, creating a photo gallery with a bunch of thumbnails is simply a
+matter of putting the grid items in .page instead of the footer and
+adding <code>&lt;img/&gt;</code> elements to them. But, again, remember
+that flexbox is a more modern way to create these kinds of layouts.</p>
+<h3 id="a-brief-note-on-naming-conventions">A Brief Note on Naming
+Conventions</h3>
+<p>The <code>.column</code> class name isn’t exactly accurate anymore.
+This scenario is a good example of why we want to avoid class names that
+refer to appearance. “Column” isn’t so great because the content it
+contains doesn’t necessarily need to be rendered in multiple columns
+(e.g., for a mobile layout, there would likely only be one column). A
+better name would be something like .footer-item, but we’ll leave that
+for you to fix.</p>
 <h3 id="floats-for-content">Floats for Content</h3>
-<h1 id="flexbox">Flexbox</h1>
-<p><em>This lesson was adapted from the online HTML/CSS learning
-resource, <a
-href="https://www.theodinproject.com/lessons/foundations-introduction-to-flexbox">The
-Odin Project</a>.</em></p>
-<p>This lesson is under construction! I will post an update on LEA when
-there is content here to see.</p>
+<p>There’s two aspects to defining a web page layout. You have your
+overall page structure, which is what we’ve been focussing on throughout
+this lesson. This is stuff like where you sidebar goes, how big your
+navigation menu is, etc. The other aspect of layouts is styling the
+individual HTML components (your actual content) that go inside this
+overarching page structure.</p>
+<figure>
+<img src="../assets/content/wk5/iih-content-floats.png"
+alt="Figure from Interneting is Hard: Floats" />
+<figcaption aria-hidden="true">Figure from Interneting is Hard: <a
+href="https://www.internetingishard.com/html-and-css/clears/">Floats</a></figcaption>
+</figure>
+<p>The process for the latter is the same, it’s just nested inside the
+former. Let’s add some dummy content to our .content element so we have
+something to play with:</p>
+<h6 class="sourceCode" id="html-3">HTML</h6>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;container&#39;</span><span class="kw">&gt;</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;page&#39;</span><span class="kw">&gt;</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;sidebar&#39;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;content&#39;</span><span class="kw">&gt;</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">&#39;?&#39;</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;article-image&#39;</span><span class="kw">/&gt;</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;p&gt;</span>Ad netus sagittis velit orci est non ut urna taciti metus donec magnis</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>      hendrerit adipiscing mauris sit a proin ultrices nibh.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;p&gt;</span>Enim suspendisse ac scelerisque nascetur vestibulum parturient sed mi a</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>      dolor eu non adipiscing non neque scelerisque netus ullamcorper sed</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>      parturient integer.Eros dui risus non sodales ullamcorper libero a dis</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>      cubilia a orci iaculis cursus.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;p&gt;</span>Egestas at aliquam a egestas accumsan cum elementum consectetur conubia</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>      tristique eu et vitae condimentum in ante consectetur suscipit a a duis</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>      vestibulum gravida morbi sagittis.Parturient scelerisque facilisis</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>      ullamcorper a a pretium a nisl parturient semper senectus accumsan ipsum</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>      mus scelerisque eget ridiculus.Accumsan dolor a.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;p&gt;</span>Ligula taciti vel primis sit a tincidunt habitant parturient parturient</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>      in parturient ante nulla consectetur sem.Facilisis parturient litora.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+<p>We’ve got an image and several paragraphs that we can style just like
+our structural divs. For example, let’s create a magazine-style layout
+by floating the image and letting the text flow around it. Add a couple
+more rules to our stylesheet:</p>
+<h6 class="sourceCode" id="css-11">CSS</h6>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.content</span> {</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding</span>: <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="fu">.article-image</span> {</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">float</span>: <span class="dv">left</span><span class="op">;</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">300</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">height</span>: <span class="dv">200</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-right</span>: <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-bottom</span>: <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>p {</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-bottom</span>: <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Notice how we have a float inside of a float, and everything works
+just fine. Laying out a website is a recursive process: you build a
+high-level structure to work in, then you fill it with your actual
+content. More complex layouts may need another layer or two of nesting,
+but the idea is the same.</p>
 <h1 id="knowledge-check">Knowledge Check</h1>
 <h2 id="floats-1">Floats</h2>
 <p>This chapter was our first encounter with realistic web page layouts.
@@ -600,12 +767,6 @@ elements?</li>
 with the <code>float</code> property set?</li>
 <li>What are the two techniques we have for preventing float elements
 from overlapping?</li>
-</ul>
-<h2 id="flexbox-1">Flexbox</h2>
-<ul>
-<li>What’s the difference between a flex container and a flex item?</li>
-<li>How do you create a flex item?</li>
-<li>More to come…</li>
 </ul>
 <h1 id="exercises">Exercises</h1>
 <ul>

@@ -267,19 +267,161 @@ You should now be able to see a light gray background in .page instead of the de
 
 ## Example Float-based Layouts
 
+The following subsections show some of the common web layouts that can be achieved using what we've learned about Floats so far.
+
 ### Floats for "Full-Bleed" Layout
+
+In a few of the previous sections, the term [Full-bleed](https://www.joshwcomeau.com/css/full-bleed/) layout was used. This is jargon that comes from print (i.e., layout design before the Web) where the printed content "bleeds" all the way to the edge of the paper -- that is, a layout with no visible margin no matter the number of elements in the layout.
+
+![Figure from Interneting is Hard: [Floats][fullbleed-source]][fullbleed-img]
+
+[fullbleed-img]: ../assets/content/wk5/iih-full-bleed-layout.png
+[fullbleed-source]: https://www.internetingishard.com/html-and-css/clears/
+
+The full-bleed layout can be attained using the following techniques:
+
+
 
 ### Floats for Equal-Width Columns
 
+So far, we've seen a sidebar layout, a fixed-width layout, and a full-bleed layout. Floats can also be used to create multi-column layouts. This works just like our `.sidebar` and `.content` floats; we just have more of them.
+
+![Figure from Interneting is Hard: [Floats][equalwidth-source]][equalwidth-img]
+
+[equalwidth-img]: ../assets/content/wk5/iih-equal-columns.png
+[equalwidth-source]: https://www.internetingishard.com/html-and-css/clears/
+
+Next we're going to add three equal-width columns to our footer. Update the `<footer>` element, like so:
+
+###### HTML{.sourceCode}
+```html
+<div class='footer'>
+  <div class='column'></div>
+  <div class='column'></div>
+  <div class='column'></div>
+</div>
+```
+
+We can style each of these columns just like we laid out the rest of our page. Add a new rule to styles.css:
+
+###### CSS{.sourceCode}
+```css
+.column {
+  float: left;
+  width: 31%;
+  margin: 20px 1.15%;
+  height: 160px;
+  background-color: #B2D6FF;    /* Medium blue */
+}
+```
+
+This is the first time we've used percentage values instead of explicit pixel values. Percentages in CSS are relative to the width of the parent element. The result is three columns that automatically resize to one-third of the browser window. Resize the browser window, and you'll see our columns grow and shrink accordingly. This is the beginning of responsive design.
+Web page with footer that has three equal-width child elements
+
+Anyhoo, let's not lose sight of the central thesis of this lesson: floats let us stack things horizontally instead of vertically. By changing the widths of the elements we're floating, we can get all kinds of different layouts, from sidebars to multiple columns to grids.
+
 ### Floats for Grids
+
+Want a grid in the footer instead of 3 columns? No problem! When there isn't enough room to stack a floated element horizontally, it pops down to the next line. All we need to do is add some more `.column` elements:
+
+![Figure from Interneting is Hard: [Floats][grid-source]][grid-img]
+
+[grid-img]: ../assets/content/wk5/iih-grids.png
+[grid-source]: https://www.internetingishard.com/html-and-css/clears/
+
+###### HTML{.sourceCode}
+```html
+<div class='footer'>
+  <div class='column'></div>
+  <div class='column'></div>
+  <div class='column'></div>
+  <div class='column'></div>
+  <div class='column'></div>
+  <div class='column'></div>
+</div>
+```
+
+Unfortunately, our footer background is too short. Fortunately, we already know how to fix that. Let's replace the footer's explicit height with another overflow: hidden so it can accommodate any number of grid items:
+
+###### CSS{.sourceCode}
+```css
+.footer {
+  overflow: hidden;
+  background-color: #D6E9FE;
+}
+```
+You can use this same technique to make grids of any size. For example, creating a photo gallery with a bunch of thumbnails is simply a matter of putting the grid items in .page instead of the footer and adding `<img/>` elements to them. But, again, remember that flexbox is a more modern way to create these kinds of layouts.
+
+### A Brief Note on Naming Conventions
+
+The `.column` class name isn't exactly accurate anymore. This scenario is a good example of why we want to avoid class names that refer to appearance. "Column" isn't so great because the content it contains doesn't necessarily need to be rendered in multiple columns (e.g., for a mobile layout, there would likely only be one column). A better name would be something like .footer-item, but we'll leave that for you to fix.
+
 
 ### Floats for Content
 
-# Flexbox
+There's two aspects to defining a web page layout. You have your overall page structure, which is what we've been focussing on throughout this lesson. This is stuff like where you sidebar goes, how big your navigation menu is, etc. The other aspect of layouts is styling the individual HTML components (your actual content) that go inside this overarching page structure.
 
-*This lesson was adapted from the online HTML/CSS learning resource, [The Odin Project](https://www.theodinproject.com/lessons/foundations-introduction-to-flexbox).*
+![Figure from Interneting is Hard: [Floats][content-source]][content-img]
 
-This lesson is under construction! I will post an update on LEA when there is content here to see.
+[content-img]: ../assets/content/wk5/iih-content-floats.png
+[content-source]: https://www.internetingishard.com/html-and-css/clears/
+
+The process for the latter is the same, it's just nested inside the former. Let's add some dummy content to our .content element so we have something to play with:
+
+###### HTML{.sourceCode}
+```html
+<div class='container'>
+  <div class='page'>
+    <div class='sidebar'></div>
+    <div class='content'>
+      
+      <img src='?' class='article-image'/>
+
+      <p>Ad netus sagittis velit orci est non ut urna taciti metus donec magnis
+      hendrerit adipiscing mauris sit a proin ultrices nibh.</p>
+
+      <p>Enim suspendisse ac scelerisque nascetur vestibulum parturient sed mi a
+      dolor eu non adipiscing non neque scelerisque netus ullamcorper sed
+      parturient integer.Eros dui risus non sodales ullamcorper libero a dis
+      cubilia a orci iaculis cursus.</p>
+
+      <p>Egestas at aliquam a egestas accumsan cum elementum consectetur conubia
+      tristique eu et vitae condimentum in ante consectetur suscipit a a duis
+      vestibulum gravida morbi sagittis.Parturient scelerisque facilisis
+      ullamcorper a a pretium a nisl parturient semper senectus accumsan ipsum
+      mus scelerisque eget ridiculus.Accumsan dolor a.</p>
+
+      <p>Ligula taciti vel primis sit a tincidunt habitant parturient parturient
+      in parturient ante nulla consectetur sem.Facilisis parturient litora.</p>
+
+    </div>
+  </div>
+</div>
+```
+
+We've got an image and several paragraphs that we can style just like our structural divs. For example, let's create a magazine-style layout by floating the image and letting the text flow around it. Add a couple more rules to our stylesheet:
+
+###### CSS{.sourceCode}
+```css
+.content {
+  padding: 20px;
+}
+
+.article-image {
+  float: left;
+  width: 300px;
+  height: 200px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+```
+
+Notice how we have a float inside of a float, and everything works just fine. Laying out a website is a recursive process: you build a high-level structure to work in, then you fill it with your actual content. More complex layouts may need another layer or two of nesting, but the idea is the same.
+
 
 # Knowledge Check
 
@@ -290,12 +432,6 @@ This chapter was our first encounter with realistic web page layouts. We learned
 - What is the default layout behavior for block-level HTML elements?
 - How does the default block-level layout behavior change for elements with the `float` property set?
 - What are the two techniques we have for preventing float elements from overlapping?
-
-## Flexbox
-
-- What’s the difference between a flex container and a flex item?
-- How do you create a flex item?
-- More to come...
 
 # Exercises
 
