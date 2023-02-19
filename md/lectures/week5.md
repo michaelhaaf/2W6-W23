@@ -422,6 +422,61 @@ p {
 
 Notice how we have a float inside of a float, and everything works just fine. Laying out a website is a recursive process: you build a high-level structure to work in, then you fill it with your actual content. More complex layouts may need another layer or two of nesting, but the idea is the same.
 
+### Hiding Overflow (For Content)
+
+You'll find examples of nested layouts all over the place. For our final example, consider a basic user-comment thread. You have an image that's floated left with a heading and some text next to it:
+
+![Figure from Interneting is Hard: [Floats][hidden-overflow-source]][hidden-overflow-img]
+
+[hidden-overflow-img]: ../assets/content/wk5/iih-hidden-overflow.png
+[hidden-overflow-source]: https://www.internetingishard.com/html-and-css/clears/
+
+Let's try creating this in our footer. In your favorite `.column` element, add the following:
+
+###### HTML{.sourceCode}
+```html
+<div class='column'>
+  <div class='avatar'></div>
+  <h3 class='username'>Bob Smith</h3>
+  <p class='comment'>Aptent vel egestas vestibulum aliquam ullamcorper volutpat
+  ullamcorper pharetra hac posuere a rhoncus purus molestie torquent. Scelerisque
+  purus cursus dictum ornare a phasellus. A augue venenatis adipiscing.</p>
+</div>
+```
+
+And the corresponding CSS rules:
+
+###### CSS{.sourceCode}
+```css
+.avatar {
+  float: left;
+  width: 60px;
+  height: 60px;
+  margin: 25px;
+  border-radius: 40px;
+  background-color: #D6E9FE;
+}
+
+.username {
+  margin-top: 30px;
+}
+
+.comment {
+  margin: 10px;
+  overflow: hidden;  /* This is important */
+}
+```
+
+This highlights another use case for our overflow: hidden trick. Sticking it on our `.comment` box made sure that the text "horizontally cleared" (that's not a technical term) the floated image. Without it, the last line of the `.comment` text would hang underneath the image.
+Web pages showing with hidden overflow (text left-aligned) and without hidden overflow (text flowing around icon)
+
+![Figure from Interneting is Hard: [Floats][hidden-overflow-2source]][hidden-overflow-2img]
+
+[hidden-overflow-2img]: ../assets/content/wk5/iih-hidden-overflow-2.png
+[hidden-overflow-2source]: https://www.internetingishard.com/html-and-css/clears/
+
+In other words, overflow: hidden breaks the magazine-style layout from the previous section, but in a very useful way.
+
 
 # Knowledge Check
 
@@ -435,6 +490,4 @@ This chapter was our first encounter with realistic web page layouts. We learned
 
 # Exercises
 
-- Odin Project: CSS Flexbox Practise Exercises [(.zip)][tutCSSFlexbox]
-
-[tutCSSFlexbox]: ../tutorials/css-exercises-flexbox.zip "Odin Project: CSS Flexbox Exercises. There are 7 exercises total in this set. You should be able to complete them all with what you have learned during Week 5 and 6."
+- Recreate each of the Example Float-based Layouts in your own CodePen

@@ -753,6 +753,61 @@ just fine. Laying out a website is a recursive process: you build a
 high-level structure to work in, then you fill it with your actual
 content. More complex layouts may need another layer or two of nesting,
 but the idea is the same.</p>
+<h3 id="hiding-overflow-for-content">Hiding Overflow (For Content)</h3>
+<p>You’ll find examples of nested layouts all over the place. For our
+final example, consider a basic user-comment thread. You have an image
+that’s floated left with a heading and some text next to it:</p>
+<figure>
+<img src="../assets/content/wk5/iih-hidden-overflow.png"
+alt="Figure from Interneting is Hard: Floats" />
+<figcaption aria-hidden="true">Figure from Interneting is Hard: <a
+href="https://www.internetingishard.com/html-and-css/clears/">Floats</a></figcaption>
+</figure>
+<p>Let’s try creating this in our footer. In your favorite
+<code>.column</code> element, add the following:</p>
+<h6 class="sourceCode" id="html-4">HTML</h6>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;column&#39;</span><span class="kw">&gt;</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;avatar&#39;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;h3</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;username&#39;</span><span class="kw">&gt;</span>Bob Smith<span class="kw">&lt;/h3&gt;</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;comment&#39;</span><span class="kw">&gt;</span>Aptent vel egestas vestibulum aliquam ullamcorper volutpat</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  ullamcorper pharetra hac posuere a rhoncus purus molestie torquent. Scelerisque</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  purus cursus dictum ornare a phasellus. A augue venenatis adipiscing.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+<p>And the corresponding CSS rules:</p>
+<h6 class="sourceCode" id="css-12">CSS</h6>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.avatar</span> {</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">float</span>: <span class="dv">left</span><span class="op">;</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">60</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">height</span>: <span class="dv">60</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin</span>: <span class="dv">25</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-radius</span>: <span class="dv">40</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span>: <span class="cn">#D6E9FE</span><span class="op">;</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="fu">.username</span> {</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-top</span>: <span class="dv">30</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="fu">.comment</span> {</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin</span>: <span class="dv">10</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">overflow</span>: <span class="dv">hidden</span><span class="op">;</span>  <span class="co">/* This is important */</span></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>This highlights another use case for our overflow: hidden trick.
+Sticking it on our <code>.comment</code> box made sure that the text
+“horizontally cleared” (that’s not a technical term) the floated image.
+Without it, the last line of the <code>.comment</code> text would hang
+underneath the image. Web pages showing with hidden overflow (text
+left-aligned) and without hidden overflow (text flowing around icon)</p>
+<figure>
+<img src="../assets/content/wk5/iih-hidden-overflow-2.png"
+alt="Figure from Interneting is Hard: Floats" />
+<figcaption aria-hidden="true">Figure from Interneting is Hard: <a
+href="https://www.internetingishard.com/html-and-css/clears/">Floats</a></figcaption>
+</figure>
+<p>In other words, overflow: hidden breaks the magazine-style layout
+from the previous section, but in a very useful way.</p>
 <h1 id="knowledge-check">Knowledge Check</h1>
 <h2 id="floats-1">Floats</h2>
 <p>This chapter was our first encounter with realistic web page layouts.
@@ -770,9 +825,8 @@ from overlapping?</li>
 </ul>
 <h1 id="exercises">Exercises</h1>
 <ul>
-<li>Odin Project: CSS Flexbox Practise Exercises <a
-href="../tutorials/css-exercises-flexbox.zip"
-title="Odin Project: CSS Flexbox Exercises. There are 7 exercises total in this set. You should be able to complete them all with what you have learned during Week 5 and 6.">(.zip)</a></li>
+<li>Recreate each of the Example Float-based Layouts in your own
+CodePen</li>
 </ul> 
    </article>
   </main>
