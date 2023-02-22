@@ -1,23 +1,25 @@
 ---
 title: "2W6-W23: Week 5 Lecture Notes"
 toc-title: "In this article"
-abstract-title: "Intro to Layouts in CSS: Floats and Flexbox"
+abstract-title: "Intro to Layouts and Floats in CSS"
 abstract: |
   Last week, we learned a large set of CSS properties for applying styles to text, image, and other content elements.
 
   Now that we have a decent amount of practise selecting and styling CSS elements individually, it's time to learn strategies for styling groups of elements -- that is, controlling the layout of HTML elements using CSS.
 
-  There are many techniques for layout in CSS. We will focus on two this week: Floats and Flexbox.
+  There are many techniques for layout in CSS. We will focus on the technique most commonly used for the first two decades of web development: "Floating" elements.
 ---
 
-Last update: Friday, Feb 17, 2023.
+Last update: Sunday, Feb 19, 2023.
 
 ---
 
 # Lesson Overview
 
-- How to use Floats to distrupt HTML block-level flow
-- Introduction to Flexbox
+- How to achieve horizontal positioning in CSS using the `float` property
+- The behavior of floating elements when nested/in groups
+- How to control vertical and horizontal flow with floating elements
+- Example layouts that can be achieved using floats 
 
 ---
 
@@ -60,7 +62,7 @@ We can see a single column layout with one element stacked on top of another in 
 
 Typically, you’d want to let the height of these boxes be determined automatically based on the content they contain; however, we’re more concerned with controlling layouts this chapter, so we won’t be dealing with much real content. This is the reason for setting explicit `height` properties in the CSS.
 
-It’s worth taking a look at what happens when we shrink an element’s width. Try opening the CodePen (click the "Edit on Codepen" button) and update the .sidebar rule to match the following:
+It’s worth taking a look at what happens when we shrink an element’s width. Try opening the CodePen (click the "Edit on Codepen" button) and update the `.sidebar` rule to match the following:
 
 ###### CSS{.sourceCode}
 ```css
@@ -87,7 +89,7 @@ The CSS float property gives us control over the horizontal position of an eleme
 }
 ```
 
-However, this doesn’t just align the sidebar — it also tells surrounding elements that they can flow around the sidebar instead of beginning underneath it. It’s as if the sidebar is inside the .content block, so any HTML markup in .content would wrap around the sidebar’s box. This gives us a magazine-style layout:
+However, this doesn’t just align the sidebar — it also tells surrounding elements that they can flow around the sidebar instead of beginning underneath it. It’s as if the sidebar is inside the `.content` block, so any HTML markup in `.content` would wrap around the sidebar’s box. This gives us a magazine-style layout:
 
 <div class="half-width">
 ![Our sample layout without `float` property set][nofloat-img]
@@ -141,7 +143,7 @@ sophisticated website layouts. Here, we started with `.page` to center *everythi
 
 ## Multiple floats
 
-Let’s examine our current magazine-style float a little bit more by adding an explicit width to our .content block:
+Let’s examine our current magazine-style float a little bit more by adding an explicit width to our `.content` block:
 
 ###### CSS{.sourceCode}
 ```css
@@ -187,7 +189,7 @@ You probably noticed that our footer shows up in the top right, directly below .
 
 You probably noticed that our footer shows up in the top right, directly below `.menu`. That’s because floated boxes are removed from the normal flow of the page; therefore, **the height of our floated elements do not contribute to the vertical position of the footer**, so it simply sticks itself below the last element that wasn’t floated (i.e., the `.menu`).
 
-We can see this more clearly by adding a red border around our .page element:
+We can see this more clearly by adding a red border around our `.page` element:
 
 ###### CSS{.sourceCode}
 ```css
@@ -249,7 +251,7 @@ Clearing floats only fixes the height issue when there’s an element **inside**
 [overflow-img]: ../assets/content/wk5/iih-overflow.png "There are two properties for addressing block-height issues with float-based layouts: `clear` and `overflow`."
 [overflow-source]: https://www.internetingishard.com/html-and-css/clears/
 
-The solution is the [CSS overflow property](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow). The setting the property `overflow: hidden` on a container div tells the browser to **recognize the height of any floated elements within that container div**. This is how we can add a background color to our .page element and have it actually render:
+The solution is the [CSS overflow property](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow). The setting the property `overflow: hidden` on a container div tells the browser to **recognize the height of any floated elements within that container div**. This is how we can add a background color to our `.page` element and have it actually render:
 
 ###### CSS{.sourceCode}
 ```css
@@ -261,7 +263,7 @@ The solution is the [CSS overflow property](https://developer.mozilla.org/en-US/
 }
 ```
 
-You should now be able to see a light gray background in .page instead of the default white. This isn’t full bleed yet (we’ll address that in the next section). The important part here is the behavior of `overflow: hidden`. Without it, we wouldn’t be able to see the `.page` container’s background because it would have zero height.
+You should now be able to see a light gray background in `.page` instead of the default white. This isn’t full bleed yet (we’ll address that in the next section). The important part here is the behavior of `overflow: hidden`. Without it, we wouldn’t be able to see the `.page` container’s background because it would have zero height.
 
 **Summary**: When you have an extra unfloated HTML element at the bottom of a container div, use the `clear` solution. Otherwise, add an `overflow: hidden` declaration to the container element. The underlying idea for both options is that you need a way to tell the browser to incorporate floats into the height of their container element in order for their backgrounds to show up.
 
@@ -271,7 +273,7 @@ The following subsections show some of the common web layouts that can be achiev
 
 ### Floats for "Full-Bleed" Layout
 
-In a few of the previous sections, the term [Full-bleed](https://www.joshwcomeau.com/css/full-bleed/) layout was used. This is jargon that comes from print (i.e., layout design before the Web) where the printed content "bleeds" all the way to the edge of the paper -- that is, a layout with no visible margin no matter the number of elements in the layout.
+In a few of the previous sections, the term [Full-bleed](https://www.joshwcomeau.com/css/full-bleed/) layout was used. This is jargon that comes from the print industry, where content "bleeds" all the way to the edge of the paper -- that is, a layout with no visible margin no matter the number of elements in the layout.
 
 ![Figure from Interneting is Hard: [Floats][fullbleed-source]][fullbleed-img]
 
@@ -350,11 +352,11 @@ Unfortunately, our footer background is too short. Fortunately, we already know 
   background-color: #D6E9FE;
 }
 ```
-You can use this same technique to make grids of any size. For example, creating a photo gallery with a bunch of thumbnails is simply a matter of putting the grid items in .page instead of the footer and adding `<img/>` elements to them. But, again, remember that flexbox is a more modern way to create these kinds of layouts.
+You can use this same technique to make grids of any size. For example, creating a photo gallery with a bunch of thumbnails is simply a matter of putting the grid items in `.page` instead of the footer and adding `<img/>` elements to them. But, again, remember that flexbox is a more modern way to create these kinds of layouts.
 
 ### A Brief Note on Naming Conventions
 
-The `.column` class name isn't exactly accurate anymore. This scenario is a good example of why we want to avoid class names that refer to appearance. "Column" isn't so great because the content it contains doesn't necessarily need to be rendered in multiple columns (e.g., for a mobile layout, there would likely only be one column). A better name would be something like .footer-item, but we'll leave that for you to fix.
+The `.column` class name isn't exactly accurate anymore. This scenario is a good example of why we want to avoid class names that refer to appearance. "Column" isn't so great because the content it contains doesn't necessarily need to be rendered in multiple columns (e.g., for a mobile layout, there would likely only be one column). A better name would be something like `.footer-item,` but we'll leave that for you to fix.
 
 
 ### Floats for Content
@@ -366,7 +368,7 @@ There's two aspects to defining a web page layout. You have your overall page st
 [content-img]: ../assets/content/wk5/iih-content-floats.png
 [content-source]: https://www.internetingishard.com/html-and-css/clears/
 
-The process for the latter is the same, it's just nested inside the former. Let's add some dummy content to our .content element so we have something to play with:
+The process for the latter is the same, it's just nested inside the former. Let's add some dummy content to our `.content` element so we have something to play with:
 
 ###### HTML{.sourceCode}
 ```html
@@ -467,22 +469,21 @@ And the corresponding CSS rules:
 }
 ```
 
-This highlights another use case for our overflow: hidden trick. Sticking it on our `.comment` box made sure that the text "horizontally cleared" (that's not a technical term) the floated image. Without it, the last line of the `.comment` text would hang underneath the image.
+This highlights another use case for the `overflow: hidden` trick. Sticking it on our `.comment` box made sure that the text "horizontally cleared" the floated image. Without it, the last line of the `.comment` text would hang underneath the image.
+
 Web pages showing with hidden overflow (text left-aligned) and without hidden overflow (text flowing around icon)
 
-![Figure from Interneting is Hard: [Floats][hidden-overflow-2source]][hidden-overflow-2img]
+![Setting `overflow: hidden`  Figure from Interneting is Hard: [Floats][hidden-overflow-2source]][hidden-overflow-2img]
 
 [hidden-overflow-2img]: ../assets/content/wk5/iih-hidden-overflow-2.png
 [hidden-overflow-2source]: https://www.internetingishard.com/html-and-css/clears/
 
-In other words, overflow: hidden breaks the magazine-style layout from the previous section, but in a very useful way.
+In other words, `overflow: hidden` prevents magazine-style overflow by ensuring that the `.comment` content DOES NOT overflow underneath the floated image.
 
 
 # Knowledge Check
 
-## Floats
-
-This chapter was our first encounter with realistic web page layouts. We learned how to float divs to the left and right, how to deal with content after a float, and how to combine floats with the auto-margin centering technique from the CSS Box Model chapter. These are the tools we need to create sidebars, grids, an magazine-style layouts.
+This chapter was our first encounter with realistic web page layouts. We learned how to float divs to the left and right, how to deal with content after a float, and how to combine floats with the auto-margin centering technique from the CSS Box Model chapter. These are the tools we need to create sidebars, grids, and magazine-style layouts.
 
 - What is the default layout behavior for block-level HTML elements?
 - How does the default block-level layout behavior change for elements with the `float` property set?
@@ -490,4 +491,9 @@ This chapter was our first encounter with realistic web page layouts. We learned
 
 # Exercises
 
-- Recreate each of the Example Float-based Layouts in your own CodePen
+If you have been coding along with the CodePens given in this article, then you are already done the exercise! Otherwise, start with the base CodePen given [here](). Then:
+
+- Add the lines of CSS required to implement the [Float for Full-Bleed layout](#floats-for-content)
+- Add the lines of CSS required to implement the [Float for Equal-Width Columns](#floats-for-content)
+- Add the lines of CSS required to implement the [Floats for Grids](#floats-for-content)
+- Add the lines of CSS required to implement the [Floats for Content](#floats-for-content)

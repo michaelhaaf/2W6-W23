@@ -220,10 +220,7 @@ id="toc-example-float-based-layouts">Example Float-based
 Layouts</a></li>
 </ul></li>
 <li><a href="#knowledge-check" id="toc-knowledge-check">Knowledge
-Check</a>
-<ul>
-<li><a href="#floats-1" id="toc-floats-1">Floats</a></li>
-</ul></li>
+Check</a></li>
 <li><a href="#exercises" id="toc-exercises">Exercises</a></li>
 </ul>
    </nav>
@@ -236,7 +233,7 @@ Check</a>
      </h1>
              <div class="abstract">
       <div class="abstract-title">
-       Intro to Layouts in CSS: Floats and Flexbox
+       Intro to Layouts and Floats in CSS
       </div>
       <p>Last week, we learned a large set of CSS properties for
       applying styles to text, image, and other content elements.</p>
@@ -245,15 +242,20 @@ Check</a>
       for styling groups of elements – that is, controlling the layout
       of HTML elements using CSS.</p>
       <p>There are many techniques for layout in CSS. We will focus on
-      two this week: Floats and Flexbox.</p>
+      the technique most commonly used for the first two decades of web
+      development: “Floating” elements.</p>
      </div>
          </header>
-     <p>Last update: Friday, Feb 17, 2023.</p>
+     <p>Last update: Sunday, Feb 19, 2023.</p>
 <hr />
 <h1 id="lesson-overview">Lesson Overview</h1>
 <ul>
-<li>How to use Floats to distrupt HTML block-level flow</li>
-<li>Introduction to Flexbox</li>
+<li>How to achieve horizontal positioning in CSS using the
+<code>float</code> property</li>
+<li>The behavior of floating elements when nested/in groups</li>
+<li>How to control vertical and horizontal flow with floating
+elements</li>
+<li>Example layouts that can be achieved using floats</li>
 </ul>
 <hr />
 <h1 id="floats">Floats</h1>
@@ -317,7 +319,7 @@ with much real content. This is the reason for setting explicit
 <code>height</code> properties in the CSS.</p>
 <p>It’s worth taking a look at what happens when we shrink an element’s
 width. Try opening the CodePen (click the “Edit on Codepen” button) and
-update the .sidebar rule to match the following:</p>
+update the <code>.sidebar</code> rule to match the following:</p>
 <h6 class="sourceCode" id="css">CSS</h6>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.sidebar</span> {</span>
@@ -343,9 +345,10 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#c
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>However, this doesn’t just align the sidebar — it also tells
 surrounding elements that they can flow around the sidebar instead of
-beginning underneath it. It’s as if the sidebar is inside the .content
-block, so any HTML markup in .content would wrap around the sidebar’s
-box. This gives us a magazine-style layout:</p>
+beginning underneath it. It’s as if the sidebar is inside the
+<code>.content</code> block, so any HTML markup in <code>.content</code>
+would wrap around the sidebar’s box. This gives us a magazine-style
+layout:</p>
 <div class="half-width">
 <figure>
 <img src="../assets/content/wk5/iih-width-nofloat.png" title="ajlkwdja"
@@ -407,7 +410,7 @@ our simple example demonstrates the universal truth of CSS layouts:
 etc.</em></p>
 <h2 id="multiple-floats">Multiple floats</h2>
 <p>Let’s examine our current magazine-style float a little bit more by
-adding an explicit width to our .content block:</p>
+adding an explicit width to our <code>.content</code> block:</p>
 <h6 class="sourceCode" id="css-4">CSS</h6>
 <div class="sourceCode" id="cb5"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.content</span> {</span>
@@ -468,8 +471,8 @@ removed from the normal flow of the page; therefore, <strong>the height
 of our floated elements do not contribute to the vertical position of
 the footer</strong>, so it simply sticks itself below the last element
 that wasn’t floated (i.e., the <code>.menu</code>).</p>
-<p>We can see this more clearly by adding a red border around our .page
-element:</p>
+<p>We can see this more clearly by adding a red border around our
+<code>.page</code> element:</p>
 <h6 class="sourceCode" id="css-6">CSS</h6>
 <div class="sourceCode" id="cb7"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.page</span> {</span>
@@ -554,7 +557,7 @@ overflow property</a>. The setting the property
 <code>overflow: hidden</code> on a container div tells the browser to
 <strong>recognize the height of any floated elements within that
 container div</strong>. This is how we can add a background color to our
-.page element and have it actually render:</p>
+<code>.page</code> element and have it actually render:</p>
 <h6 class="sourceCode" id="css-8">CSS</h6>
 <div class="sourceCode" id="cb10"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.page</span> {</span>
@@ -563,12 +566,12 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb10-1"><a href="#
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">overflow</span>: <span class="dv">hidden</span><span class="op">;</span>             <span class="co">/* Add this */</span></span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span>: <span class="cn">#EAEDF0</span><span class="op">;</span>    <span class="co">/* Add this */</span></span>
 <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<p>You should now be able to see a light gray background in .page
-instead of the default white. This isn’t full bleed yet (we’ll address
-that in the next section). The important part here is the behavior of
-<code>overflow: hidden</code>. Without it, we wouldn’t be able to see
-the <code>.page</code> container’s background because it would have zero
-height.</p>
+<p>You should now be able to see a light gray background in
+<code>.page</code> instead of the default white. This isn’t full bleed
+yet (we’ll address that in the next section). The important part here is
+the behavior of <code>overflow: hidden</code>. Without it, we wouldn’t
+be able to see the <code>.page</code> container’s background because it
+would have zero height.</p>
 <p><strong>Summary</strong>: When you have an extra unfloated HTML
 element at the bottom of a container div, use the <code>clear</code>
 solution. Otherwise, add an <code>overflow: hidden</code> declaration to
@@ -582,10 +585,10 @@ can be achieved using what we’ve learned about Floats so far.</p>
 Layout</h3>
 <p>In a few of the previous sections, the term <a
 href="https://www.joshwcomeau.com/css/full-bleed/">Full-bleed</a> layout
-was used. This is jargon that comes from print (i.e., layout design
-before the Web) where the printed content “bleeds” all the way to the
-edge of the paper – that is, a layout with no visible margin no matter
-the number of elements in the layout.</p>
+was used. This is jargon that comes from the print industry, where
+content “bleeds” all the way to the edge of the paper – that is, a
+layout with no visible margin no matter the number of elements in the
+layout.</p>
 <figure>
 <img src="../assets/content/wk5/iih-full-bleed-layout.png"
 alt="Figure from Interneting is Hard: Floats" />
@@ -670,9 +673,10 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb14-1"><a href="#
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>You can use this same technique to make grids of any size. For
 example, creating a photo gallery with a bunch of thumbnails is simply a
-matter of putting the grid items in .page instead of the footer and
-adding <code>&lt;img/&gt;</code> elements to them. But, again, remember
-that flexbox is a more modern way to create these kinds of layouts.</p>
+matter of putting the grid items in <code>.page</code> instead of the
+footer and adding <code>&lt;img/&gt;</code> elements to them. But,
+again, remember that flexbox is a more modern way to create these kinds
+of layouts.</p>
 <h3 id="a-brief-note-on-naming-conventions">A Brief Note on Naming
 Conventions</h3>
 <p>The <code>.column</code> class name isn’t exactly accurate anymore.
@@ -680,8 +684,8 @@ This scenario is a good example of why we want to avoid class names that
 refer to appearance. “Column” isn’t so great because the content it
 contains doesn’t necessarily need to be rendered in multiple columns
 (e.g., for a mobile layout, there would likely only be one column). A
-better name would be something like .footer-item, but we’ll leave that
-for you to fix.</p>
+better name would be something like <code>.footer-item,</code> but we’ll
+leave that for you to fix.</p>
 <h3 id="floats-for-content">Floats for Content</h3>
 <p>There’s two aspects to defining a web page layout. You have your
 overall page structure, which is what we’ve been focussing on throughout
@@ -696,8 +700,8 @@ alt="Figure from Interneting is Hard: Floats" />
 href="https://www.internetingishard.com/html-and-css/clears/">Floats</a></figcaption>
 </figure>
 <p>The process for the latter is the same, it’s just nested inside the
-former. Let’s add some dummy content to our .content element so we have
-something to play with:</p>
+former. Let’s add some dummy content to our <code>.content</code>
+element so we have something to play with:</p>
 <h6 class="sourceCode" id="html-3">HTML</h6>
 <div class="sourceCode" id="cb15"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;container&#39;</span><span class="kw">&gt;</span></span>
@@ -794,27 +798,29 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb18-1"><a href="#
 <span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin</span>: <span class="dv">10</span><span class="dt">px</span><span class="op">;</span></span>
 <span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">overflow</span>: <span class="dv">hidden</span><span class="op">;</span>  <span class="co">/* This is important */</span></span>
 <span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<p>This highlights another use case for our overflow: hidden trick.
-Sticking it on our <code>.comment</code> box made sure that the text
-“horizontally cleared” (that’s not a technical term) the floated image.
-Without it, the last line of the <code>.comment</code> text would hang
-underneath the image. Web pages showing with hidden overflow (text
-left-aligned) and without hidden overflow (text flowing around icon)</p>
+<p>This highlights another use case for the
+<code>overflow: hidden</code> trick. Sticking it on our
+<code>.comment</code> box made sure that the text “horizontally cleared”
+the floated image. Without it, the last line of the
+<code>.comment</code> text would hang underneath the image.</p>
+<p>Web pages showing with hidden overflow (text left-aligned) and
+without hidden overflow (text flowing around icon)</p>
 <figure>
 <img src="../assets/content/wk5/iih-hidden-overflow-2.png"
-alt="Figure from Interneting is Hard: Floats" />
-<figcaption aria-hidden="true">Figure from Interneting is Hard: <a
+alt="Setting overflow: hidden Figure from Interneting is Hard: Floats" />
+<figcaption aria-hidden="true">Setting <code>overflow: hidden</code>
+Figure from Interneting is Hard: <a
 href="https://www.internetingishard.com/html-and-css/clears/">Floats</a></figcaption>
 </figure>
-<p>In other words, overflow: hidden breaks the magazine-style layout
-from the previous section, but in a very useful way.</p>
+<p>In other words, <code>overflow: hidden</code> prevents magazine-style
+overflow by ensuring that the <code>.comment</code> content DOES NOT
+overflow underneath the floated image.</p>
 <h1 id="knowledge-check">Knowledge Check</h1>
-<h2 id="floats-1">Floats</h2>
 <p>This chapter was our first encounter with realistic web page layouts.
 We learned how to float divs to the left and right, how to deal with
 content after a float, and how to combine floats with the auto-margin
 centering technique from the CSS Box Model chapter. These are the tools
-we need to create sidebars, grids, an magazine-style layouts.</p>
+we need to create sidebars, grids, and magazine-style layouts.</p>
 <ul>
 <li>What is the default layout behavior for block-level HTML
 elements?</li>
@@ -824,9 +830,18 @@ with the <code>float</code> property set?</li>
 from overlapping?</li>
 </ul>
 <h1 id="exercises">Exercises</h1>
+<p>If you have been coding along with the CodePens given in this
+article, then you are already done the exercise! Otherwise, start with
+the base CodePen given <a href="">here</a>. Then:</p>
 <ul>
-<li>Recreate each of the Example Float-based Layouts in your own
-CodePen</li>
+<li>Add the lines of CSS required to implement the <a
+href="#floats-for-content">Float for Full-Bleed layout</a></li>
+<li>Add the lines of CSS required to implement the <a
+href="#floats-for-content">Float for Equal-Width Columns</a></li>
+<li>Add the lines of CSS required to implement the <a
+href="#floats-for-content">Floats for Grids</a></li>
+<li>Add the lines of CSS required to implement the <a
+href="#floats-for-content">Floats for Content</a></li>
 </ul> 
    </article>
   </main>
