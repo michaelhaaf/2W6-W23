@@ -27,7 +27,7 @@ You can compare this calendar with the calendar from the [Course Outline](../pag
 |                  | Tools - VS Code skills for efficient web development <br>       | * [Part 1 (Youtube)][actVSCode1]                                          |
 |                  |                                                                 | * [Part 2 (Youtube)][actVSCode2]                                          |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
-| [Week 3][lec3]   | HTML - semantic elements, website markup <br>                   | **Lab 2 (11%, due Feb 14):** [Website layout and style (.pdf)][lab2] <br> |
+| [Week 3][lec3]   | HTML - semantic elements, website markup <br>                   | **Lab 2 (10%, due Feb 16):** [Website layout and style (.pdf)][lab2] <br> |
 |                  | Tools - browser dev tools for CSS/DOM inspection <br>           | Tutorial: [Document and Website Structure][tutWebsite] <br>               |
 |                  | CSS - inline vs internal vs external <br>                       | Activity: [CSS Diner][actDiner] <br>                                      |
 |                  | CSS - fundamentals, syntax, selectors <br>                      | Activity: How to use the Browser Dev Tools <br>                           |
@@ -40,9 +40,10 @@ You can compare this calendar with the calendar from the [Course Outline](../pag
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | [Week 5][lec5]   | CSS - layouts: the box model, floats <br>                       | [Week 5 Exercises](../lectures/week5.html#exercises) <br>                 |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
-| ##### NOTE:      | ##### the weeks below are tentative                             |                                                                           |
+| [Week 6][lec6]   | CSS - Flexbox <br>                                              | **Lab 3 (12.5%, due Mar 17)** [Landing page][lab3] <br>                   |
+|                  |                                                                 | [Week 6 Exercises](../lectures/week6.html#exercises) <br>                 |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
-| [Week 6][lec6]   | CSS - Flexbox                                                   |                                                                           |
+| ##### NOTE:      | ##### the weeks below are tentative                             |                                                                           |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | [Week 7][lec7]   | JavaScript - Manipulating the DOM, Dynamic styling              |                                                                           |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
@@ -81,9 +82,9 @@ You can compare this calendar with the calendar from the [Course Outline](../pag
 [lec15]: ../lectures/week15.html "Week 15 Lecture notes"
 
 [lab1]: ../assignments/lab1 "Lab 1: worth 5%, due Jan 27"
-[lab2]: ../assignments/lab2 "Lab 2: worth 11%, due Feb 14"
-[lab3]: ../assignments/lab3 "Lab 3: worth 12%, due TBD"
-[lab4]: ../assignments/lab4 "Lab 4: worth 12%, due TBD"
+[lab2]: ../assignments/lab2 "Lab 2: worth 10%, due Feb 16"
+[lab3]: ../assignments/lab3 "Lab 3: worth 12.5%, due Mar 17"
+[lab4]: ../assignments/lab4 "Lab 4: worth 12.5%, due TBD"
 [pm1]: ../assignments/milestone1 "Project Milestone 1: worth 15%, due TBD"
 [pm2]: ../assignments/milestone2 "Project Milestone 2: worth 15%, due TBD"
 
