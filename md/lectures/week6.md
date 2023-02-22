@@ -20,6 +20,8 @@ Last update: Saturday, Feb 18, 2023.
 
 # Flexbox
 
+This lecture (will be) based on [this internetingishard lecture](https://www.internetingishard.com/html-and-css/flexbox/). For now, if you are stuck on class exercises, read through this document for explanations about how flexbox works.
+
 # Knowledge Check
 
 This chapter was our first encounter with realistic web page layouts. We learned how to float divs to the left and right, how to deal with content after a float, and how to combine floats with the auto-margin centering technique from the CSS Box Model chapter. These are the tools we need to create sidebars, grids, an magazine-style layouts.
