@@ -23,7 +23,9 @@ Last update: Tuesday, Feb 28, 2023.
 
 # Browsers
 
-Stay tuned for more information!
+More notes will appear here soon. For now (Tuesday Feb 28), check out [this Odin Project tutorial][odin-devtools] for the content we will be covering.
+
+[odin-devtools]: https://www.theodinproject.com/lessons/foundations-javscript-developer-tools
 
 # Javascript
 
