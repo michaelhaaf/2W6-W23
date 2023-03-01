@@ -23,13 +23,22 @@ Last update: Tuesday, Feb 28, 2023.
 
 # Browsers
 
-More notes will appear here soon. For now (Tuesday Feb 28), check out [this Odin Project tutorial][odin-devtools] for the content we will be covering.
+A web browser is an integral part of a web developer's toolkit. Not only does the browser render HTML and CSS, all modern browsers are essentially IDEs that contain a suite of tools for inspecting, modifying, and debugging HTML, CSS, and JavaScript.
 
-[odin-devtools]: https://www.theodinproject.com/lessons/foundations-javscript-developer-tools
+No matter which browser you use, the following tutorial (covered in class on Feb 28) will be useful to you: [Chrome Developer Tools][chrome-devtools].
+
+Due to [circumstances beyond the scope of this course](https://en.wikipedia.org/wiki/Monopoly_(game)), almost all modern browsers are based on Chromium -- unless you use Firefox, the above tutorial will be directly relevant to your browser. Make sure you understand all of the techniques shown here!
+
+[chrome-devtools]: https://developer.chrome.com/docs/devtools/dom/
+
+If you (like me) use Firefox, I currently do not have a tutorial available for you. You can pay close attention to my demonstrations in class to see where Firefox differs from Chromium-based browsers (the differences, for our purposes, are pretty small).
 
 # Javascript
 
-Stay tuned for more information!
+More notes will appear here soon. For now (Wednesday Mar 1), check out [this Odin Project tutorial][odin-js-1] and [the follow up tutorial][odin-js-2] for the content we will be covering. This is more javascript than you need to know for this course -- we will just be getting a taste. But feel free to explore more if you like!
+
+[odin-js-1]: https://www.theodinproject.com/lessons/foundations-fundamentals-part-1
+[odin-js-2]: https://www.theodinproject.com/lessons/foundations-fundamentals-part-2
 
 # The DOM
 
