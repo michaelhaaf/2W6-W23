@@ -42,7 +42,39 @@ More notes will appear here soon. For now (Wednesday Mar 1), check out [this Odi
 
 # The DOM
 
-Stay tuned for more information!
+More notes will appear here soon. For now (Friday Mar 3), check out the following resources:
+
+- [MDN Web Docs: Introduction to the DOM][mdn-web-docs-DOM] (Article)
+
+For this article, focus in particular on understanding the big picture: what is the difference between HTML and the DOM? What are the properties (things that are part of) and methods (behaviors) of the ```document``` and ```window``` objects? How can they be useful for finding other elements on your webpage? Try coding along with the [Active learning](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#active_learning_a_dynamic_shopping_list) portion of the article in particular to ge the hang of what Javascript is capable of.
+
+- [Web Dev Simplified: Learn DOM Traversal in 15 Minutes][web-dev-simp-dom-trav] (Youtube video)
+
+  The most important methods to learn from this video are:
+
+  - ```getElementById(String id)```: returns the element which has the ```id``` provided as an argument
+  - ```getElementsByClassName(String className)```: returns a ```NodeList``` of elements which have the ```className``` in their list of classes
+  - ```querySelector(String cssSelector)```: returns the single element which matches the CSS selector provided
+  - ```querySelectorAll(String cssSelector)```: returns a ```NodeList``` of elements which match the CSS selector provided
+
+- [Web Dev Simplified: Learn DOM Manipulation in 18 Minutes][web-dev-simp-dom-manip] (Youtube video)
+
+[web-dev-simp-dom-trav]: https://www.youtube.com/watch?v=v7rSSy8CaYE
+[web-dev-simp-dom-manip]: https://www.youtube.com/watch?v=y17RuWkWdn8
+[mdn-web-docs-DOM]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+
+# Skills needed for Lab 3
+
+## Theme toggling
+
+You should now be able to understand a bit better the theme toggling button we used in assignment 2: [CodePen link](https://codepen.io/michaelhaaf/pen/gOdWqpN). You can adapt this for the last parts of Lab 3 in order to add theme toggling behavior.
+
+## SVG Icons
+
+One other thing I haven't covered that you need for Lab 3: getting SVGs to use as icons, and changing their colour. More information to come soon.
+
+
+
 
 # Knowledge Check
 
