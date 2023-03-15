@@ -282,7 +282,44 @@ In a few of the previous sections, the term [Full-bleed](https://www.joshwcomeau
 
 The full-bleed layout can be attained using the following techniques:
 
+Our goal is to make the `.page` background fill the entire browser window, **without changing the alignment** of our sidebar or content blocks. The problem is our `.page` is busy centering everything. The `.page` container has too many jobs at the same time: it cannot be the background of our webpage at the same time as having a defined width that our `.sidebar` and `.content` blocks use for centering.
 
+Whenever we want to rearrange the boxes of our webpage, we can consider adding *another* box. That is, another `<div>`. This way, we can separate the background of our webpage from the `.page` element and control their properties separately. Putting a box around `.page` lets `.page` continue centering stuff while giving us a different `<div>` to define a background-color property. Change our `<body>` element to match the following:
+
+###### HTML{.sourceCode}
+```html
+<body>
+  <div class='menu'>Menu</div>
+
+  <div class='container'>                 <!-- Add this -->
+    <div class='page'>
+      <div class='sidebar'>Sidebar</div>
+      <div class='content'>Content</div>
+    </div>
+  </div>                                  <!-- Add this -->
+
+  <div class='footer'>Footer</div>
+</body>
+```
+
+Remember that the default block-rendering behavior is for elements to fill the width of their container. So, we should be able to move our `background-color` declaration to a `.container` rule to get a full-bleed background:
+
+###### CSS{.sourceCode}
+```css
+.page {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.container {
+  overflow: hidden;
+  background-color: #EAEDF0;
+}
+```
+
+As in the previous section, we still need the `overflow: hidden` line to force the `.container` to pay attention to the height of the floated elements. Without it, we wouldn’t see our background color because `.container` would have zero height.
+
+This gives us three nested `<div>` elements just for laying out our page: a `.container` wrapper for full-bleed background color, a fixed-width `.page` for centering everything, and finally left-aligned `.sidebar` and `.content` blocks. This kind of nesting and aligning is pretty typical of most website layouts.
 
 ### Floats for Equal-Width Columns
 
@@ -317,8 +354,7 @@ We can style each of these columns just like we laid out the rest of our page. A
 }
 ```
 
-This is the first time we've used percentage values instead of explicit pixel values. Percentages in CSS are relative to the width of the parent element. The result is three columns that automatically resize to one-third of the browser window. Resize the browser window, and you'll see our columns grow and shrink accordingly. This is the beginning of responsive design.
-Web page with footer that has three equal-width child elements
+This is the first time we've used percentage values instead of explicit pixel values. Percentages in CSS are relative to the width of the parent element. The result is three columns that automatically resize to one-third of the browser window. Resize the browser window, and you'll see our columns grow and shrink accordingly. This is the beginning of [responsive design](https://www.internetingishard.com/html-and-css/responsive-design/): a topic we'll cover in more detail in Lab 4.
 
 Anyhoo, let's not lose sight of the central thesis of this lesson: floats let us stack things horizontally instead of vertically. By changing the widths of the elements we're floating, we can get all kinds of different layouts, from sidebars to multiple columns to grids.
 
@@ -343,7 +379,7 @@ Want a grid in the footer instead of 3 columns? No problem! When there isn't eno
 </div>
 ```
 
-Unfortunately, our footer background is too short. Fortunately, we already know how to fix that. Let's replace the footer's explicit height with another overflow: hidden so it can accommodate any number of grid items:
+Unfortunately, our footer background is too short. Fortunately, we already know how to fix that. Let's replace the footer's explicit height with another `overflow: hidden` so it can accommodate any number of grid items:
 
 ###### CSS{.sourceCode}
 ```css
@@ -352,11 +388,12 @@ Unfortunately, our footer background is too short. Fortunately, we already know 
   background-color: #D6E9FE;
 }
 ```
+
 You can use this same technique to make grids of any size. For example, creating a photo gallery with a bunch of thumbnails is simply a matter of putting the grid items in `.page` instead of the footer and adding `<img/>` elements to them. But, again, remember that flexbox is a more modern way to create these kinds of layouts.
 
 ### A Brief Note on Naming Conventions
 
-The `.column` class name isn't exactly accurate anymore. This scenario is a good example of why we want to avoid class names that refer to appearance. "Column" isn't so great because the content it contains doesn't necessarily need to be rendered in multiple columns (e.g., for a mobile layout, there would likely only be one column). A better name would be something like `.footer-item,` but we'll leave that for you to fix.
+The `.column` class name isn't exactly accurate anymore. This scenario is a good example of why we want to **avoid class names that refer to appearance**. "Column" isn't so great because the content it contains doesn't necessarily need to be rendered in multiple columns (e.g., for a mobile layout, there would likely only be one column). A better name would be something like `.footer-item`, but we'll leave that for you to fix.
 
 
 ### Floats for Content
