@@ -271,7 +271,7 @@ You should now be able to see a light gray background in `.page` instead of the 
 
 The following subsections show some of the common web layouts that can be achieved using what we've learned about Floats so far.
 
-### Floats for "Full-Bleed" Layout
+### Floats for Full-Bleed Layout
 
 In a few of the previous sections, the term [Full-bleed](https://www.joshwcomeau.com/css/full-bleed/) layout was used. This is jargon that comes from the print industry, where content "bleeds" all the way to the edge of the paper -- that is, a layout with no visible margin no matter the number of elements in the layout.
 
@@ -491,9 +491,9 @@ This chapter was our first encounter with realistic web page layouts. We learned
 
 # Exercises
 
-If you have been coding along with the CodePens given in this article, then you are already done the exercise! Otherwise, start with the base CodePen given [here](). Then:
+If you have been coding along with the CodePens given in this article, then you are already done the exercise! Otherwise, start with the base CodePen given [here](#default-html-layout-behavior). Then:
 
-- Add the lines of CSS required to implement the [Float for Full-Bleed layout](#floats-for-content)
-- Add the lines of CSS required to implement the [Float for Equal-Width Columns](#floats-for-content)
-- Add the lines of CSS required to implement the [Floats for Grids](#floats-for-content)
+- Add the lines of CSS required to implement the [Float for Full-Bleed layout](#floats-for-full-bleed-layout)
+- Add the lines of CSS required to implement the [Float for Equal-Width Columns](#floats-for-equal-width-columns)
+- Add the lines of CSS required to implement the [Floats for Grids](#floats-for-grids)
 - Add the lines of CSS required to implement the [Floats for Content](#floats-for-content)
