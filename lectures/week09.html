@@ -24,6 +24,71 @@
      vertical-align: middle;
    }
    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+   /* CSS for syntax highlighting */
+   pre > code.sourceCode { white-space: pre; position: relative; }
+   pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+   pre > code.sourceCode > span:empty { height: 1.2em; }
+   .sourceCode { overflow: visible; }
+   code.sourceCode > span { color: inherit; text-decoration: inherit; }
+   div.sourceCode { margin: 1em 0; }
+   pre.sourceCode { margin: 0; }
+   @media screen {
+   div.sourceCode { overflow: auto; }
+   }
+   @media print {
+   pre > code.sourceCode { white-space: pre-wrap; }
+   pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+   }
+   pre.numberSource code
+     { counter-reset: source-line 0; }
+   pre.numberSource code > span
+     { position: relative; left: -4em; counter-increment: source-line; }
+   pre.numberSource code > span > a:first-child::before
+     { content: counter(source-line);
+       position: relative; left: -1em; text-align: right; vertical-align: baseline;
+       border: none; display: inline-block;
+       -webkit-touch-callout: none; -webkit-user-select: none;
+       -khtml-user-select: none; -moz-user-select: none;
+       -ms-user-select: none; user-select: none;
+       padding: 0 4px; width: 4em;
+       background-color: #ea9a97;
+       color: #393552;
+     }
+   pre.numberSource { margin-left: 3em; border-left: 1px solid #393552;  padding-left: 4px; }
+   div.sourceCode
+     { color: #908caa; background-color: #393552; }
+   @media screen {
+   pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+   }
+   code span.al { color: #f6c177; } /* Alert */
+   code span.an { color: #9ccfd8; font-weight: bold; } /* Annotation */
+   code span.at { } /* Attribute */
+   code span.bn { color: #eb6f92; } /* BaseN */
+   code span.bu { } /* BuiltIn */
+   code span.cf { color: #3e8fb0; } /* ControlFlow */
+   code span.ch { color: #eb6f92; } /* Char */
+   code span.cn { color: #eb6f92; font-weight: bold; } /* Constant */
+   code span.co { color: #9ccfd8; } /* Comment */
+   code span.cv { color: #9ccfd8; font-weight: bold; } /* CommentVar */
+   code span.do { color: #9ccfd8; } /* Documentation */
+   code span.dt { color: #3e8fb0; } /* DataType */
+   code span.dv { color: #3e8fb0; } /* DecVal */
+   code span.er { color: #eb6f92; } /* Error */
+   code span.ex { } /* Extension */
+   code span.fl { color: #cecacd; } /* Float */
+   code span.fu { color: #c4a7e7; } /* Function */
+   code span.im { } /* Import */
+   code span.in { color: #9ccfd8; font-weight: bold; } /* Information */
+   code span.kw { color: #c4a7e7; } /* Keyword */
+   code span.op { color: #c4a7e7; } /* Operator */
+   code span.ot { color: #f6c177; } /* Other */
+   code span.pp { color: #f6c177; font-weight: bold; } /* Preprocessor */
+   code span.sc { color: #eb6f92; } /* SpecialChar */
+   code span.ss { color: #ea9a97; } /* SpecialString */
+   code span.st { color: #ea9a97; } /* String */
+   code span.va { } /* Variable */
+   code span.vs { color: #ea9a97; } /* VerbatimString */
+   code span.wa { color: #9ccfd8; font-weight: bold; } /* Warning */
   </style>
     <link href="../assets/css/style.css" rel="stylesheet"/>
     
@@ -278,30 +343,180 @@ cascade uses to determine this, <strong>three</strong> of which we’ll
 cover in this class.</p>
 <h2 id="specificity">Specificity</h2>
 <p>A CSS declaration that is <strong>more specific</strong> will take
-precedence over less specific ones. Inline styles, which we will go over
-more in the Adding CSS to HTML section towards the end of the lesson,
-have the highest specificity compared to selectors, while each type of
-selector has its own specificity level that contributes to how specific
-a declaration is. Other selectors contribute to specificity, but we’re
-focusing only on the ones mentioned in this lesson:</p>
+precedence over less specific ones. What does it mean for a declaration
+to be more specific than another? There are a few basic rules to
+know:</p>
+<ul>
+<li>Inline CSS styles (applied directly to the HTML element) are more
+specific than internal <code>&lt;style&gt;</code> declarations AND
+external .css file declarations</li>
+<li>For all other declarations (internal and external), <strong>equally
+specific declarations</strong> are prioritized in the <strong>order they
+are read by the browser</strong> (top-to-bottom for the HTML file).</li>
+</ul>
+<p>These rules distinguish the basic differences between where CSS
+declarations are read by the browser (inline vs internal vs external).
+However, they do not tell us: which declarations are most specific?
+Which are least specific? The <strong>specificity</strong> of a CSS
+<strong>selector</strong> is dependent upon the components of that
+selector. This will make more sense when we see some concrete rules. The
+following selectors are ordered from most-specific to
+least-specific:</p>
 <ol type="1">
 <li>ID selectors (most specific selector)</li>
 <li>Class selectors</li>
 <li>Type selectors</li>
 </ol>
-<p>Specificity will only be taken into account when an element has
-multiple, conflicting declarations targeting it, sort of like a
-tie-breaker. An ID selector will always beat any number of class
-selectors, a class selector will always beat any number of type
+<p><strong>Specificity will only be taken into account when an element
+has multiple, conflicting declarations targeting it, sort of like a
+tie-breaker</strong>. An ID selector will always beat any number of
+class selectors, a class selector will always beat any number of type
 selectors, and a type selector will always beat any number of anything
-less specific than it. When no declaration has a selector with a higher
-specificity, a larger amount of a single selector will beat a smaller
-amount of that same selector.</p>
+less specific than it.</p>
+<p>Sounds good. But there are other ways to make selectors <strong>more
+specific</strong>, which is intuitive when you consider it: when no
+declaration has a selector with a higher specificity, <strong>a larger
+amount of a single selector will beat a smaller amount of that same
+selector</strong>.</p>
 <p>Let’s take a look at a few quick examples to visualize how
 specificity works. Consider the following HTML and CSS code:</p>
+<h6 class="sourceCode" id="html">HTML</h6>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- index.html --&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;main&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;list subsection&quot;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+<h6 class="sourceCode" id="css">CSS</h6>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* rule 1 */</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.subsection</span> {</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">blue</span><span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">/* rule 2 */</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">.main</span> <span class="fu">.list</span> {</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>In the example above, both rules are using only class selectors, but
+rule 2 is more specific because it is using more class selectors, so the
+<code>color: red;</code> declaration would take precedence.</p>
+<p>Now, let’s change things a little bit:</p>
+<h6 class="sourceCode" id="html-1">HTML</h6>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- index.html --&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;main&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;list&quot;</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;subsection&quot;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+<h6 class="sourceCode" id="css-1">CSS</h6>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* rule 1 */</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#subsection</span> {</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">blue</span><span class="op">;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">/* rule 2 */</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">.main</span> <span class="fu">.list</span> {</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>In the example above, despite rule 2 having more class selectors than
+ID selectors, rule 1 is more specific because ID beats class. In this
+case, the <code>color: blue;</code> declaration would take
+precedence.</p>
+<p>Let’s consider one final example:</p>
+<h6 class="sourceCode" id="html-2">HTML</h6>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- index.html --&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;main&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;list&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;subsection&quot;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+<h6 class="sourceCode" id="css-2">CSS</h6>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* rule 1 */</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.list</span> <span class="pp">#subsection</span> {</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span>: <span class="cn">yellow</span><span class="op">;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">blue</span><span class="op">;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co">/* rule 2 */</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">.main</span> <span class="fu">.list</span> <span class="pp">#subsection</span> {</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>In this example, both rules are using ID and class selectors, so
+neither rule is using a more specific selector than the other. The
+cascade then checks the amounts of each selector type. Both rules only
+have one ID selector, but rule 2 has more class selectors, so rule 2 has
+a higher specificity!</p>
+<p><strong>NOTE:</strong> While the <code>color: red</code> declaration
+would take precedence, the <code>background-color: yellow</code>
+declaration would still be applied <strong>because there’s no
+conflicting declaration for it</strong>.</p>
+<p>Note: When comparing selectors, you may come across special symbols
+for the universal selector <code>*</code> as well as combinators
+(<code>+</code>, <code>~</code>, <code>&gt;</code>, and an empty space).
+<strong>These symbols do not add any specificity in and of
+themselves</strong>.</p>
 <h2 id="inheritance">Inheritance</h2>
+<p>Inheritance refers to certain CSS properties that, when applied to an
+element, are inherited by that element’s descendants, even if we don’t
+explicitly write a rule for those descendants. Typography based
+properties (<code>color, font-size, font-family</code>, etc.) are
+<strong>usually inherited</strong>, while <strong>most other properties
+are not</strong>.</p>
+<p>The exception to this is when directly targeting an element, as this
+always beats inheritance:</p>
+<h6 class="sourceCode" id="html-3">HTML</h6>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- index.html --&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;parent&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;child&quot;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+<h6 class="sourceCode" id="css-3">CSS</h6>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* styles.css */</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#parent</span> {</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="fu">.child</span> {</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">blue</span><span class="op">;</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Despite the parent element having a higher specificity with an ID,
+the child element would have the <code>color: blue</code> style applied
+since that declaration directly targets it, while
+<code>color: red</code> from the parent is only inherited.</p>
 <h2 id="rule-order">Rule Order</h2>
+<p>The final factor, the end of the line, the tie-breaker of the
+tie-breaker. Let’s say that after every other factor has been taken into
+account, there are still multiple conflicting rules targeting an
+element. How does the cascade determine which rule to apply?</p>
+<p>Really simply, actually. Whichever rule was the last defined is the
+winner.</p>
+<h6 class="sourceCode" id="css-4">CSS</h6>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* styles.css */</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">.alert</span> {</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="fu">.warning</span> {</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">yellow</span><span class="op">;</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>For an element that has both the <code>alert</code> and
+<code>warning</code> classes, the cascade would run through every other
+factor, including inheritance (none here) and specificity (neither rule
+is more specific than the other). Since the <code>.warning</code> rule
+was the last one defined, and no other factor was able to determine
+which rule to apply, it’s the one that gets applied to the element.</p>
 <h1 id="other-new-css-mechanics">Other New CSS Mechanics</h1>
+<p>More to come soon!</p>
 <h2 id="variables">Variables</h2>
 <h2 id="scope">Scope</h2>
 <h1 id="knowledge-check">Knowledge Check</h1>
