@@ -38,10 +38,10 @@ You can compare this calendar with the calendar from the [Course Outline](../pag
 |                  | CSS - layouts: the box model                                    | Tutorial: [CSS Box Model Exercises][tutCSSBoxModel] <br>                  |
 |                  |                                                                 | Tutorial: MDN: [Typesetting a Homepage][tutMdnText] [(.zip)][tutMdnText]  |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
-| [Week 5][lec5]   | CSS - layouts: the box model, floats <br>                       | [Week 5 Exercises](../lectures/week5.html#exercises) <br>                 |
+| [Week 5][lec5]   | CSS - layouts: the box model, floats <br>                       | [Week 5 Exercises](../lectures/week05.html#exercises) <br>                |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | [Week 6][lec6]   | CSS - Flexbox <br>                                              | **Lab 3 (12.5%, due Mar 17)** [Landing page][lab3] <br>                   |
-|                  |                                                                 | [Week 6 Exercises](../lectures/week6.html#exercises) <br>                 |
+|                  |                                                                 | [Week 6 Exercises](../lectures/week06.html#exercises) <br>                |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | [Week 7][lec7]   | JavaScript - Manipulating the DOM, Dynamic styling              |                                                                           |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
@@ -50,8 +50,8 @@ You can compare this calendar with the calendar from the [Course Outline](../pag
 | Week 8           | CSS - Finishing flexbox, test review, lab time                  |                                                                           |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | [Week 9][lec9]   | CSS - CSS mechanics, the Cascade, specificity <br>              | **Test 1 (15%. March 22)** <br>                                           |
-|                  | **Test 1**                                                      | [Week 9 Exercises](../lectures/week9.html#exercises) <br>                 |
-|                  |                                                                 | [Week 9 Readings](../lectures/week9.html#readings) <br>                   |
+|                  | **Test 1**                                                      | [Week 9 Exercises](../lectures/week09.html#exercises) <br>                |
+|                  |                                                                 | [Week 9 Readings](../lectures/week09.html#readings-and-resources) <br>    |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | [Week 10][lec10] | CSS - Mastering 2D layouts with CSS Grid                        | **Lab 3 (12.5%, due April TBD)**: [TBD][lab4] <br>                        |
 |                  |                                                                 | [Week 10 Exercises](../lectures/week10.html#exercises) <br>               |

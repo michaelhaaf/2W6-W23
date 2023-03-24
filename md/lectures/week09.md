@@ -156,7 +156,7 @@ In this example, both rules are using ID and class selectors, so neither rule is
 
 **NOTE:** While the `color: red` declaration would take precedence, the `background-color: yellow` declaration would still be applied **because there’s no conflicting declaration for it**.
 
-Note: When comparing selectors, you may come across special symbols for the universal selector `*` as well as combinators (`+`, `~`, `>`, and an empty space). **These symbols do not add any specificity in and of themselves**.
+**NOTE:** When comparing selectors, you may come across special symbols for the universal selector `*` as well as combinators (`+`, `~`, `>`, and an empty space). **These symbols do not add any specificity in and of themselves**.
 
 ## Inheritance
 
@@ -208,6 +208,93 @@ Really simply, actually. Whichever rule was the last defined is the winner.
 ```
 
 For an element that has both the `alert` and `warning` classes, the cascade would run through every other factor, including inheritance (none here) and specificity (neither rule is more specific than the other). Since the `.warning` rule was the last one defined, and no other factor was able to determine which rule to apply, it’s the one that gets applied to the element.
+
+But, you might ask, aren't there multiple ways to add CSS to an HTML Element? In fact, aren't there **three** different ways? Yes: **inline**, **internal**, and **external** CSS each have specificity; we will learn how the three of them work just below.
+
+### Inline CSS
+
+Quick review: Inline CSS makes it possible to add styles directly to HTML elements:
+
+###### HTML{.sourceCode}
+```html
+<body>
+  <div style="color: white; background-color: black;">...</div>
+</body>
+```
+
+The first thing to note is that we don’t actually use any selectors here, since the styles are being added directly to the opening `<div>` tag itself. Next, we have the `style=` attribute, with its value within the pair of quotation marks being the declarations.
+
+If you need to add a unique style for a single element, this method can work just fine. Generally, though, this isn’t exactly a recommended way for adding CSS to HTML for a few reasons:
+
+- It can quickly become pretty messy once you start adding a lot of declarations to a single element, causing your HTML file to become unnecessarily bloated.
+- If you want many elements to have the same style, you would have to copy + paste the same style to each individual element, causing lots of unnecessary repetition and more bloat.
+- **Most crucially, for our lesson:** Any inline CSS will override internal/external CSS, which can cause unexpected results.
+
+Since there is no selector for inline CSS, there is no specificity to calculate; inline CSS rules automatically beat all other CSS rules for this reason. 
+
+There is only one way for internal/external CSS to beat inline css: using the `!important` keyword. We will dive into that in a [later section](other-new-css-mechanics).
+
+### Internal and External CSS
+
+Quick review: External CSS is the most common method you will come across. It involves creating a separate file for the CSS and linking it inside of an HTML’s opening and closing `<head>` tags with a self-closing `<link>` element.
+
+Internal CSS (or embedded CSS) involves adding the CSS within the HTML file itself instead of creating a completely separate file. With the internal method, you place all the rules inside of a pair of opening and closing `<style>` tags, which are then placed inside of the opening and closing `<head>` tags of your HTML file. Since the styles are being placed directly inside of the `<head>` tags, we no longer need a `<link>` element that the external method requires.
+
+Now: are internal CSS rules more specific, or external CSS rules?
+
+Answer: neither. For all rules from each source, **when all other specificity is equal between two rules**, the **order that the rules are encountered by the browser is what determines the resulting style**. 
+
+We can see examples of this below. First, an HTML file with two external `<link>` tags and one `<style>` tag. Pay attention to the order:
+
+###### HTML{.sourceCode}
+```html
+<head>
+  <link rel="stylesheet" href="style-file-1.css">    <!-- link to style-file-1.css -->
+  <style>                                                   /* internal CSS style tag */
+    div {
+      color: white;
+      background-color: black;
+    }
+    p {
+      color: red;
+    }
+  </style>
+  <link rel="stylesheet" href="style-file-1.css">    <!-- link to style-file-2.css -->
+</head>
+<body>
+  <div>
+    <p>Here is a paragraph!</p>
+  </div>
+</body>
+```
+
+Next, definitions for the .css files:
+
+###### CSS{.sourceCode}
+```css
+/* style-file-1.css */
+div {
+  color: black;
+  background-color: beige;
+}
+
+...
+
+/* style-file-2.css */
+div {
+  color: blue;
+}
+```
+
+So, will be the color of the `<div>` and the `<p>` after all of these rules are read by the browser? (Remember: we will have to take [Inheritance](#inheritance) into account). To summarize the situation after the HTML is read by the browser:
+
+1. `style-file-1.css` is read: `div` has the rules `color: black;` and `background-color: beige`.
+2. The internal `<style>` is read: `div` has the rules `color: white;` and `background-color: black`. `p` has the rule `color: red`
+3. `style-file-2.css` is read: `div` has the rules `color: blue;`
+
+So, what is the result of these rules? Which rules are overwritten? Does Inheritance matter here? Plug it into your own `index.html` and `style.css` files to find out!
+
+The main takeaway: the order of `<link>` and `<style>` tags in the `<head>` element is decisive for rules of equal specificity. A common pattern web developers use (especially with multiple stylesheets) is to place **more general** (i.e. website independent) sheets first, followed by **more specific** (i.e. style rules for a specific page in the website) rules later in the file -- this ensures that the more specific rules are not overwritten by more general rules.
 
 # Other New CSS Mechanics
 
