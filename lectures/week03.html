@@ -1,163 +1,129 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="" xmlns="http://www.w3.org/1999/xhtml">
- <head>
-  <link href="../assets/images/favicon.svg" rel="icon" sizes="any" type="image/svg+xml"/>
-  <script defer="" src="../assets/js/main.js">
-  </script>
-  <meta content="dark light" name="color-scheme"/>
-  <meta charset="utf-8"/>
-  <meta content="pandoc" name="generator"/>
-  <meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
-       <title>
-   2W6-W23: Week 3 Lecture Notes
-  </title>
-  <style>
-   code{white-space: pre-wrap;}
-   span.smallcaps{font-variant: small-caps;}
-   div.columns{display: flex; gap: min(4vw, 1.5em);}
-   div.column{flex: auto; overflow-x: auto;}
-   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-   ul.task-list{list-style: none;}
-   ul.task-list li input[type="checkbox"] {
-     width: 0.8em;
-     margin: 0 0.8em 0.2em -1.6em;
-     vertical-align: middle;
-   }
-   .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
-    <link href="../assets/css/style.css" rel="stylesheet"/>
-    
-  <!--[if lt IE 9]>
+  <head>
+    <link
+      href="../assets/images/favicon.svg"
+      rel="icon"
+      sizes="any"
+      type="image/svg+xml"
+    />
+    <script defer="" src="../assets/js/main.js"></script>
+    <meta content="dark light" name="color-scheme" />
+    <meta charset="utf-8" />
+    <meta content="pandoc" name="generator" />
+    <meta
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+      name="viewport"
+    />
+           <title>2W6-W23: Week 3 Lecture Notes</title>
+    <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      div.columns{display: flex; gap: min(4vw, 1.5em);}
+      div.column{flex: auto; overflow-x: auto;}
+      div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+      ul.task-list{list-style: none;}
+      ul.task-list li input[type="checkbox"] {
+        width: 0.8em;
+        margin: 0 0.8em 0.2em -1.6em;
+        vertical-align: middle;
+      }
+      .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+        <link href="../assets/css/style.css" rel="stylesheet" />
+      
+    <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
     <![endif]-->
- </head>
- <body class="page-container base">
-  <header class="header surface background-gradient">
-   <div class="text-shadow">
-    <h1 id="theme-toggle-icon">
-     User Interfaces
-    </h1>
-    <span class="note-text">
-     420-2W6 | Winter 2023 | as taught by
-     <a href="https://github.com/michaelhaaf/2W6-W23">
-      Michael Haaf
-     </a>
-    </span>
-   </div>
-  </header>
-  <aside class="aside--site surface">
-   <nav class="nav nav--site">
-    <h2>
-     Site Navigation
-    </h2>
-    <ul>
-     <li>
-      <a href="../pages/home.html">
-       Home
-      </a>
-     </li>
-     <li>
-      <a href="../pages/course-outline.html">
-       Course Outline
-      </a>
-     </li>
-     <li>
-      <a href="../pages/calendar.html">
-       Calendar
-      </a>
-     </li>
-     <li>
-      <button class="dropbtn" tabindex="0">
-       Lectures
-       <i class="fa-caret-down">
-       </i>
-      </button>
-      <ul class="dropdown hidden" id="lecture-listing">
-       <li>
-        <a href="../lectures/week01.html">
-         Week 01
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week02.html">
-         Week 02
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week03.html">
-         Week 03
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week04.html">
-         Week 04
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week05.html">
-         Week 05
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week06.html">
-         Week 06
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week07.html">
-         Week 07
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week09.html">
-         Week 09
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week10.html">
-         Week 10
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week11.html">
-         Week 11
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li>
-      <button class="dropbtn" tabindex="0">
-       Assignments
-       <i class="fa-caret-down">
-       </i>
-      </button>
-      <ul class="dropdown hidden" id="assignment-listing">
-       <li>
-        <a href="../assignments/lab1/">
-         Lab 1
-        </a>
-       </li>
-       <li>
-        <a href="../assignments/lab2/">
-         Lab 2
-        </a>
-       </li>
-       <li>
-        <a href="../assignments/lab3/">
-         Lab 3
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </nav>
-  </aside>
-    <aside class="aside--page surface">
-   <nav class="nav nav--page" id="TOC" role="doc-toc">
-        <h2 id="toc-title">
-     In this article
-    </h2>
-     <ul>
+  </head>
+  <body class="page-container base">
+    <header class="header surface background-gradient">
+      <div class="course-info-decoration text-shadow">
+        <button id="theme-toggle-icon" class="theme-toggle-icon"></button>
+        <div>
+          <h1>User Interfaces</h1>
+          <span class="note-text">
+            420-2W6 | Winter 2023 | as taught by
+            <a href="https://github.com/michaelhaaf/2W6-W23"> Michael Haaf </a>
+          </span>
+        </div>
+      </div>
+    </header>
+    <aside class="aside--site surface">
+      <nav class="nav nav--site">
+        <h2>Site Navigation</h2>
+        <ul>
+          <li>
+            <a href="../pages/home.html"> Home </a>
+          </li>
+          <li>
+            <a href="../pages/course-outline.html"> Course Outline </a>
+          </li>
+          <li>
+            <a href="../pages/calendar.html"> Calendar </a>
+          </li>
+          <li>
+            <button class="dropbtn" tabindex="0">
+              Lectures
+              <i class="fa-caret-down"> </i>
+            </button>
+            <ul class="dropdown hidden" id="lecture-listing">
+              <li>
+                <a href="../lectures/week01.html"> Week 01 </a>
+              </li>
+              <li>
+                <a href="../lectures/week02.html"> Week 02 </a>
+              </li>
+              <li>
+                <a href="../lectures/week03.html"> Week 03 </a>
+              </li>
+              <li>
+                <a href="../lectures/week04.html"> Week 04 </a>
+              </li>
+              <li>
+                <a href="../lectures/week05.html"> Week 05 </a>
+              </li>
+              <li>
+                <a href="../lectures/week06.html"> Week 06 </a>
+              </li>
+              <li>
+                <a href="../lectures/week07.html"> Week 07 </a>
+              </li>
+              <li>
+                <a href="../lectures/week09.html"> Week 09 </a>
+              </li>
+              <li>
+                <a href="../lectures/week10.html"> Week 10 </a>
+              </li>
+              <li>
+                <a href="../lectures/week11.html"> Week 11 </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <button class="dropbtn" tabindex="0">
+              Assignments
+              <i class="fa-caret-down"> </i>
+            </button>
+            <ul class="dropdown hidden" id="assignment-listing">
+              <li>
+                <a href="../assignments/lab1/"> Lab 1 </a>
+              </li>
+              <li>
+                <a href="../assignments/lab2/"> Lab 2 </a>
+              </li>
+              <li>
+                <a href="../assignments/lab3/"> Lab 3 </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+        <aside class="aside--page surface">
+      <nav class="nav nav--page" id="TOC" role="doc-toc">
+                <h2 id="toc-title">In this article</h2>
+         <ul>
 <li><a href="#lesson-overview" id="toc-lesson-overview">Lesson
 Overview</a></li>
 <li><a href="#introduction" id="toc-introduction">Introduction</a></li>
@@ -165,22 +131,18 @@ Overview</a></li>
 Check</a></li>
 <li><a href="#exercises" id="toc-exercises">Exercises</a></li>
 </ul>
-   </nav>
-  </aside>
-    <main class="main base">
-   <article class="article">
-         <header id="title-block-header">
-     <h1 class="title">
-      2W6-W23: Week 3 Lecture Notes
-     </h1>
-             <div class="abstract">
-      <div class="abstract-title">
-       CSS Fundamentals
-      </div>
-      <p>Lesson summary.</p>
-     </div>
-         </header>
-     <p>Last update: Tuesday, Feb 7, 2023.</p>
+      </nav>
+    </aside>
+        <main class="main base">
+      <article class="article">
+                 <header id="title-block-header">
+          <h1 class="title">2W6-W23: Week 3 Lecture Notes</h1>
+                       <div class="abstract">
+            <div class="abstract-title">CSS Fundamentals</div>
+            <p>Lesson summary.</p>
+          </div>
+                  </header>
+         <p>Last update: Tuesday, Feb 7, 2023.</p>
 <hr />
 <h1 id="lesson-overview">Lesson Overview</h1>
 <ul>
@@ -195,16 +157,16 @@ start reviewing for Test 1 (Week 7/8). For now, refer to
 <strong>LEA</strong> for all course notes for Week 3 content.</p>
 <h1 id="knowledge-check">Knowledge Check</h1>
 <h1 id="exercises">Exercises</h1> 
-   </article>
-  </main>
-  <footer class="footer surface">
-   <span class="note-text">
-    © Copyright 2023
-    <a href="https://github.com/michaelhaaf/2W6-W23/blob/main/LICENSE">
-     Michael Haaf
-    </a>
-    . All rights reserved.
-   </span>
-  </footer>
- </body>
+      </article>
+    </main>
+    <footer class="footer surface">
+      <span class="note-text">
+        © Copyright 2023
+        <a href="https://github.com/michaelhaaf/2W6-W23/blob/main/LICENSE">
+          Michael Haaf
+        </a>
+        . All rights reserved.
+      </span>
+    </footer>
+  </body>
 </html>
