@@ -83,10 +83,21 @@ Let’s take a look at a few quick examples to visualize how specificity works. 
 
 Stay tuned for more information!
 
-# Readings
+# Readings and Resources
 
-1. [The Odin Project: CSS Foundations][odin-foundations]
-2. [Amelia Wattenberger: The CSS Cascade][css-cascade]
+1. [The Odin Project: CSS Foundations][odin-foundations]. This article summarizes the most important CSS mechanics we have learned in class so far. The [Cascade of CSS](https://www.theodinproject.com/lessons/foundations-css-foundations#the-cascade-of-css) section in particular summarizes the most important components of the CSS Cascade behavior. My lecture notes are based directly on this article.
+
+2. [Amelia Wattenberger: The CSS Cascade][css-cascade]. This article is a longer, more detailed and thorough, explanation of the Cascade behavior described in the Odin Project article. My lecture notes are partially based on this article.
+
+3. [Kevin Powell: Specificity Explained][specificity-explained]. This is a 13 minute video that should be quite similar to what we covered in class together on Friday, March 24. This is not a replacement for attending class, but is helpful for reviewing the topics we covered on your own time.
+
+4. [MDN Web Docs: Specificity][mdn-specificity]. This is a longer, more detailed reference about CSS Specifity rules.
+
+4. [Online Specificity Calculator][specificity-calculator]. This is an online specificity calculator. You can copy-paste your own CSS selectors into this tool to compare which selector is more specific -- very useful for debugging when you cannot understand why one rule wins over another.
+
+[specificity-explained]: https://www.youtube.com/watch?v=c0kfcP_nD9E
+[specificity-calculator]: https://specificity.keegan.st/
+[mdn-specificity]: https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
 
 # Exercises
 
