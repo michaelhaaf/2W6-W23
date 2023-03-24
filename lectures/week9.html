@@ -9,7 +9,7 @@
   <meta content="pandoc" name="generator"/>
   <meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
        <title>
-   2W6-W23: Week 10 Lecture Notes
+   2W6-W23: Week 9 Lecture Notes
   </title>
   <style>
    code{white-space: pre-wrap;}
@@ -74,6 +74,16 @@
       </button>
       <ul class="dropdown hidden" id="lecture-listing">
        <li>
+        <a href="../lectures/week10.html">
+         Week 10
+        </a>
+       </li>
+       <li>
+        <a href="../lectures/week11.html">
+         Week 11
+        </a>
+       </li>
+       <li>
         <a href="../lectures/week1.html">
          Week 1
         </a>
@@ -106,6 +116,11 @@
        <li>
         <a href="../lectures/week7.html">
          Week 7
+        </a>
+       </li>
+       <li>
+        <a href="../lectures/week9.html">
+         Week 9
         </a>
        </li>
       </ul>
@@ -145,10 +160,23 @@
      <ul>
 <li><a href="#lesson-overview" id="toc-lesson-overview">Lesson
 Overview</a></li>
-<li><a href="#cascade" id="toc-cascade">Cascade</a></li>
+<li><a href="#css-mechanics-review" id="toc-css-mechanics-review">CSS
+Mechanics Review</a></li>
+<li><a href="#css-cascade" id="toc-css-cascade">CSS Cascade</a>
+<ul>
 <li><a href="#specificity" id="toc-specificity">Specificity</a></li>
+<li><a href="#inheritance" id="toc-inheritance">Inheritance</a></li>
+<li><a href="#rule-order" id="toc-rule-order">Rule Order</a></li>
+</ul></li>
+<li><a href="#other-new-css-mechanics"
+id="toc-other-new-css-mechanics">Other New CSS Mechanics</a>
+<ul>
+<li><a href="#variables" id="toc-variables">Variables</a></li>
+<li><a href="#scope" id="toc-scope">Scope</a></li>
+</ul></li>
 <li><a href="#knowledge-check" id="toc-knowledge-check">Knowledge
 Check</a></li>
+<li><a href="#readings" id="toc-readings">Readings</a></li>
 <li><a href="#exercises" id="toc-exercises">Exercises</a></li>
 </ul>
    </nav>
@@ -157,33 +185,134 @@ Check</a></li>
    <article class="article">
          <header id="title-block-header">
      <h1 class="title">
-      2W6-W23: Week 10 Lecture Notes
+      2W6-W23: Week 9 Lecture Notes
      </h1>
              <div class="abstract">
       <div class="abstract-title">
-       Cascading StyleSheets: What is the Cascade in CSS?
+       Cascading StyleSheets: What is the ‘Cascade’ of CSS?
       </div>
       <p>We have yet to learn in concrete detail a very important
-      mechanic of CSS: when two styles contradict, how does CSS
-      determine which style is applied?</p>
+      mechanic of CSS: when two styles contradict, how does the browser
+      determine which style to apply?</p>
       <p>In this lesson, we will learn how CSS rules cascade – that is,
       how browsers traverse CSS files top-down to determine which rules
       are most specific, and therefore chosen as the winning rules.</p>
      </div>
          </header>
-     <p>Last update: Tuesday, Mar 23, 2023.</p>
+     <p>Last update: Friday, Mar 24, 2023.</p>
 <hr />
 <h1 id="lesson-overview">Lesson Overview</h1>
 <ul>
-<li>Cascade</li>
-<li>Specificity</li>
-<li>More to come!</li>
+<li>Review/reference for important CSS mechanics we have learned so
+far</li>
+<li>Introduction to CSS Cascade: how browsers <em>resolve</em> the CSS
+rules we write for elements in our document.</li>
+<li>Introduction to <strong>specificity</strong> and
+<strong>inheritance</strong>, the two most important concepts for
+determining the result of CSS Cascade.</li>
+<li>Introduction to a few more CSS mechanics: variables, scope, and
+more.</li>
 </ul>
 <hr />
-<h1 id="cascade">Cascade</h1>
-<h1 id="specificity">Specificity</h1>
+<h1 id="css-mechanics-review">CSS Mechanics Review</h1>
+<p>It is worthwhile to double check that you have understood all of the
+CSS mechanics (i.e., the rules for CSS works and why) that we have
+learned in this class so far. These include:</p>
+<ul>
+<li><strong>Syntax</strong>: What are the <em>three</em> ways to add CSS
+styles to an HTML element? What are the basic syntax rules for CSS
+rules?</li>
+<li><strong>Selectors</strong>: How do we <em>select</em> HTML elements
+to apply CSS rules? You should know the differences between
+<code>type</code>, <code>id</code>, and <code>class</code> selectors.
+You should also know the difference between <strong>grouping</strong>,
+<strong>chaining</strong>, and <strong>descendent</strong>
+<strong>combinations</strong> of selectors.</li>
+<li><strong>Properties</strong>: You should know some of the CSS
+properties that are common to all elements and are being used in our
+class all the time: <code>color</code>, <code>background-color</code>,
+<code>font-family</code>, etc.</li>
+</ul>
+<p>I have assigned a new reading this class where you can review all of
+these topics: <a
+href="https://www.theodinproject.com/lessons/foundations-css-foundations">The
+Odin Project: CSS Foundations</a>.</p>
+<p>You can also review exercises from previous weeks, including
+particularly the <a href="https://flukeout.github.io/">CSS
+Diner</a>.</p>
+<h1 id="css-cascade">CSS Cascade</h1>
+<p><em>This section was adapted directly from the ‘The Cascade of CSS’
+section of the <a
+href="https://www.theodinproject.com/lessons/foundations-css-foundations">Odin
+CSS Foundations</a> article linked above, as well as a more detailed
+blog post describing the CSS Cascade directly by Amelia Wattenberger,
+which you can find <a
+href="https://wattenberger.com/blog/css-cascade">here</a>.</em></p>
+<p>Sometimes we may have rules that conflict with one another, and we
+end up with some unexpected results. “But I wanted these paragraphs to
+be blue, why are they red like these other paragraphs?!” As frustrating
+as this can be, it’s important to understand that CSS doesn’t just do
+things against our wishes. <strong>CSS only does what we tell it to
+do.</strong> What we need to understand more closely is the
+<strong>mechanics</strong> of <strong>how</strong> CSS does what we tell
+it, and for that, we need to understand the <strong>CSS
+Cascade</strong>.</p>
+<p>One exception to the above rule is the <a
+href="https://example.org">default styles</a> that are provided by a
+browser. These default styles vary from browser to browser, and they are
+why some elements create a large “gap” between themselves and other
+elements, or why buttons look the way they do, despite us not writing
+any CSS rules to style them that way.</p>
+<p>So if you are writing CSS, there are three possible reasons for
+“unexpected behavior”:</p>
+<ul>
+<li>A browser default style has not been overwritten by you</li>
+<li>You have not understood how a property you have written works</li>
+<li>You have not understood how the properties you wrote Cascade</li>
+</ul>
+<p>Happily, the procedure for determining why each CSS rule is applied
+to a document is <strong>well-defined</strong> by a procedure known as
+the <strong>CSS Cascade</strong>. There are different factors that the
+cascade uses to determine this, <strong>three</strong> of which we’ll
+cover in this class.</p>
+<h2 id="specificity">Specificity</h2>
+<p>A CSS declaration that is <strong>more specific</strong> will take
+precedence over less specific ones. Inline styles, which we will go over
+more in the Adding CSS to HTML section towards the end of the lesson,
+have the highest specificity compared to selectors, while each type of
+selector has its own specificity level that contributes to how specific
+a declaration is. Other selectors contribute to specificity, but we’re
+focusing only on the ones mentioned in this lesson:</p>
+<ol type="1">
+<li>ID selectors (most specific selector)</li>
+<li>Class selectors</li>
+<li>Type selectors</li>
+</ol>
+<p>Specificity will only be taken into account when an element has
+multiple, conflicting declarations targeting it, sort of like a
+tie-breaker. An ID selector will always beat any number of class
+selectors, a class selector will always beat any number of type
+selectors, and a type selector will always beat any number of anything
+less specific than it. When no declaration has a selector with a higher
+specificity, a larger amount of a single selector will beat a smaller
+amount of that same selector.</p>
+<p>Let’s take a look at a few quick examples to visualize how
+specificity works. Consider the following HTML and CSS code:</p>
+<h2 id="inheritance">Inheritance</h2>
+<h2 id="rule-order">Rule Order</h2>
+<h1 id="other-new-css-mechanics">Other New CSS Mechanics</h1>
+<h2 id="variables">Variables</h2>
+<h2 id="scope">Scope</h2>
 <h1 id="knowledge-check">Knowledge Check</h1>
 <p>Stay tuned for more information!</p>
+<h1 id="readings">Readings</h1>
+<ol type="1">
+<li><a
+href="https://www.theodinproject.com/lessons/foundations-css-foundations">The
+Odin Project: CSS Foundations</a></li>
+<li><a href="https://wattenberger.com/blog/css-cascade">Amelia
+Wattenberger: The CSS Cascade</a></li>
+</ol>
 <h1 id="exercises">Exercises</h1>
 <p>Stay tuned for more information!</p> 
    </article>

@@ -47,19 +47,24 @@ You can compare this calendar with the calendar from the [Course Outline](../pag
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 |                  | ##### STUDY BREAK (March 6 - 10)                                |                                                                           |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
-| N/A              | CSS - Finishing flexbox, test review, lab time                  |                                                                           |
+| Week 8           | CSS - Finishing flexbox, test review, lab time                  |                                                                           |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
-| N/A              | **Test Review**: review all material covered so far <br>        | **Test 1 (15%. March 22)**                                                |
+| [Week 9][lec9]   | CSS - CSS mechanics, the Cascade, specificity <br>              | **Test 1 (15%. March 22)** <br>                                           |
+|                  | **Test 1**                                                      | [Week 9 Exercises](../lectures/week9.html#exercises) <br>                 |
+|                  |                                                                 | [Week 9 Readings](../lectures/week9.html#readings) <br>                   |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
-| [Week 10][lec10] | Intermediate CSS - The Cascade, Specificity                     |                                                                           |
+| [Week 10][lec10] | CSS - Mastering 2D layouts with CSS Grid                        | **Lab 3 (12.5%, due April TBD)**: [TBD][lab4] <br>                        |
+|                  |                                                                 | [Week 10 Exercises](../lectures/week10.html#exercises) <br>               |
+|                  |                                                                 | [Week 10 Readings](../lectures/week10.html#readings) <br>                 |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | ##### NOTE:      | ##### the weeks below are tentative                             |                                                                           |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
-| [Week 11][lec11] | Intermediate CSS - CSS Grid, layouts <br>                       |                                                                           |
+| [Week 11][lec11] | Intermediate CSS - CSS Grid, Intro to Responsive Design         |                                                                           |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
-| [Week 12][lec12] | Intermediate CSS - CSS Grid, intro to Responsive Design         |                                                                           |
+| [Week 12][lec12] | Intermediate CSS - Responsive Design, Accessibility             |                                                                           |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
-| [Week 13][lec13] | Intermediate CSS - Best practise, accessibility                 |                                                                           |
+| [Week 13][lec13] | Intro to Advanced CSS and JS topics <br>                        |                                                                           |                    
+|                  | Intro to CMS (Content Management Systems)                       |                                                                           |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | [Week 14][lec14] | **Test Review**: Review all material covered so far <br>        | **Test 2 (15%, TBD)** <br>                                                |
 |                  | Content Management Systems - Introduction to Wordpress          | **Project Milestone 1 (15%, due end of classes):** TBD                    |

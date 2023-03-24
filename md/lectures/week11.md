@@ -9,7 +9,7 @@ abstract: |
 
 ---
 
-Last update: Tuesday, Mar 23, 2023.
+Last update: Friday, Mar 24, 2023.
 
 ---
 
@@ -24,32 +24,17 @@ Last update: Tuesday, Mar 23, 2023.
 
 # Responsive Web Design
 
-
-[chrome-devtools]: https://developer.chrome.com/docs/devtools/dom/
-
-# Javascript
-
-[odin-js-1]: https://www.theodinproject.com/lessons/foundations-fundamentals-part-1
-[odin-js-2]: https://www.theodinproject.com/lessons/foundations-fundamentals-part-2
-
-# The DOM
-
-- [MDN Web Docs: Introduction to the DOM][mdn-web-docs-DOM] (Article)
-
-- [Web Dev Simplified: Learn DOM Traversal in 15 Minutes][web-dev-simp-dom-trav] (Youtube video)
-
-- [Web Dev Simplified: Learn DOM Manipulation in 18 Minutes][web-dev-simp-dom-manip] (Youtube video)
-
-[web-dev-simp-dom-trav]: https://www.youtube.com/watch?v=v7rSSy8CaYE
-[web-dev-simp-dom-manip]: https://www.youtube.com/watch?v=y17RuWkWdn8
-[mdn-web-docs-DOM]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
-  The most important methods to learn from this video are:
-
+Stay tuned for more information!
 
 # Knowledge Check
+
+Stay tuned for more information!
+
+# Readings
 
 Stay tuned for more information!
 
 # Exercises
 
 Stay tuned for more information!
+

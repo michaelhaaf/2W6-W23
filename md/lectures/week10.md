@@ -9,25 +9,25 @@ abstract: |
 
 ---
 
-Last update: Tuesday, Mar 23, 2023.
+Last update: Friday, Mar 24, 2023.
 
 ---
 
 # Lesson Overview
 
-- Grid
 - More to come!
 
 ---
 
 # Grid
 
-[chrome-devtools]: https://developer.chrome.com/docs/devtools/dom/
-
-[odin-js-1]: https://www.theodinproject.com/lessons/foundations-fundamentals-part-1
-[odin-js-2]: https://www.theodinproject.com/lessons/foundations-fundamentals-part-2
+Stay tuned for more information!
 
 # Knowledge Check
+
+Stay tuned for more information!
+
+# Readings
 
 Stay tuned for more information!
 
