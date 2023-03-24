@@ -46,7 +46,7 @@ Sometimes we may have rules that conflict with one another, and we end up with s
 
 One exception to the above rule is the [default styles][default-styles] that are provided by a browser. These default styles vary from browser to browser, and they are why some elements create a large “gap” between themselves and other elements, or why buttons look the way they do, despite us not writing any CSS rules to style them that way.
 
-[default-styles]: https://example.org
+[default-styles]: https://www.w3schools.com/cssref/css_default_values.php
 
 So if you are writing CSS, there are three possible reasons for "unexpected behavior": 
 
