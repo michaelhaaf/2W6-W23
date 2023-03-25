@@ -633,8 +633,7 @@ td h5 {
 /* 
 * ||| nav <ul> and <li> 
 */
-.nav ul,
-.nav li {
+.nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -680,6 +679,9 @@ td h5 {
   margin-top: 3rem;
   z-index: 1;
   background-color: var(--surface);
+
+  overflow-y: auto;
+  max-height: 18rem;
 }
 
 .nav .dropdown a {
@@ -728,9 +730,6 @@ td h5 {
 .nav--page ul {
   position: sticky;
   top: 0;
-  align-self: start;
-  margin: 0;
-  padding: 0;
 }
 
 /* this code stinks! */
@@ -883,8 +882,10 @@ header.header {
       "ft ft";
   }
 
-  .nav--site ul {
+  .nav--site > ul {
     flex-direction: column;
+    position: sticky;
+    top: 0;
   }
 
   .nav--site a,
@@ -892,4 +893,9 @@ header.header {
     padding-left: 0.75rem;
     text-align: left;
   }
+
+  .nav--site {
+    display: unset;
+  }
+
 }
