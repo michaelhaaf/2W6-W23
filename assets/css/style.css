@@ -53,10 +53,6 @@
   --dark-fg-low: #56526e;
 
   --filter-black: brightness(0) saturate(100%);
-  --filter-light: invert(9%) sepia(8%) saturate(3970%) hue-rotate(206deg)
-    brightness(95%) contrast(88%);
-  --filter-dark: invert(97%) sepia(58%) saturate(986%) hue-rotate(180deg)
-    brightness(100%) contrast(92%);
 }
 
 :root,
@@ -81,7 +77,8 @@
   --highlight-med: #dfdad9;
   --highlight-high: #cecacd;
 
-  --svg-filter-default: var(--filter-black) var(--filter-light);
+  /* Hex color to CSS filter calculator: https://isotropic.co/tool/hex-color-to-css-filter/ */
+  --svg-filter-default: var(--filter-black) invert(41%) sepia(7%) saturate(1400%) hue-rotate(209deg) brightness(91%) contrast(83%);
   --svg-filter-accent-red: var(--filter-black) invert(37%) sepia(11%) saturate(2106%) hue-rotate(291deg) brightness(97%) contrast(97%); 
   --gradient-opacity: 0.7;
   --header-image: url("../images/light-theme/guggenheim-books.jpg");
@@ -109,7 +106,8 @@
   --highlight-med: #44415a;
   --highlight-high: #56526e;
 
-  --svg-filter-default: var(--filter-black) var(--filter-dark);
+  /* Hex color to CSS filter calculator: https://isotropic.co/tool/hex-color-to-css-filter/ */
+  --svg-filter-default: var(--filter-black) invert(73%) sepia(10%) saturate(469%) hue-rotate(208deg) brightness(91%) contrast(84%);
   --svg-filter-accent-red: var(--filter-black) invert(87%) sepia(22%) saturate(3499%) hue-rotate(291deg) brightness(91%) contrast(105%);
   --gradient-opacity: 0.9;
   --header-image: url("../images/dark-theme/guggenheim-brown.jpg");
@@ -140,7 +138,8 @@
     --highlight-med: #44415a;
     --highlight-high: #56526e;
 
-    --svg-filter-default: var(--filter-black) var(--filter-dark);
+    /* Hex color to CSS filter calculator: https://isotropic.co/tool/hex-color-to-css-filter/ */
+    --svg-filter-default: var(--filter-black) invert(73%) sepia(10%) saturate(469%) hue-rotate(208deg) brightness(91%) contrast(84%);
     --svg-filter-accent-red: var(--filter-black) invert(87%) sepia(22%) saturate(3499%) hue-rotate(291deg) brightness(91%) contrast(105%);
     --gradient-opacity: 0.9;
     --header-image: url("../images/dark-theme/guggenheim-brown.jpg");
