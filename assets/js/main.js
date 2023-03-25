@@ -93,7 +93,8 @@ function turnActive(elem) {
 }
 
 function toggleDropdown(event) {
-  let dropbtn = event.target;
+  event.stopPropagation();
+  let dropbtn = event.currentTarget;
   let activeDropdown = dropbtn.nextElementSibling;
 
   dropdowns
