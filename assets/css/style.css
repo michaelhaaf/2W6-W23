@@ -53,9 +53,9 @@
   --dark-fg-low: #56526e;
 
   --filter-black: brightness(0) saturate(100%);
-  --filter-dark: invert(9%) sepia(8%) saturate(3970%) hue-rotate(206deg)
+  --filter-light: invert(9%) sepia(8%) saturate(3970%) hue-rotate(206deg)
     brightness(95%) contrast(88%);
-  --filter-light: invert(97%) sepia(58%) saturate(986%) hue-rotate(180deg)
+  --filter-dark: invert(97%) sepia(58%) saturate(986%) hue-rotate(180deg)
     brightness(100%) contrast(92%);
 }
 
@@ -81,6 +81,7 @@
   --highlight-med: #dfdad9;
   --highlight-high: #cecacd;
 
+  --svg-filter-default: var(--filter-black) var(--filter-light);
   --gradient-opacity: 0.7;
   --header-image: url("../images/light-theme/guggenheim-books.jpg");
   --theme-toggle-icon: url("../images/light-theme/theme-toggle-icon.svg");
@@ -107,6 +108,7 @@
   --highlight-med: #44415a;
   --highlight-high: #56526e;
 
+  --svg-filter-default: var(--filter-black) var(--filter-dark);
   --gradient-opacity: 0.9;
   --header-image: url("../images/dark-theme/guggenheim-brown.jpg");
   --theme-toggle-icon: url("../images/dark-theme/theme-toggle-icon.svg");
@@ -562,6 +564,17 @@ td h5 {
   height: 3rem;
 }
 
+.icon {
+  width: 1.5em;
+  height: auto;
+  margin: 0;
+  filter: var(--svg-filter-default);
+}
+
+.icon-text {
+  display: none;
+}
+
 /* 
 * ||| nav objects 
 *
@@ -662,10 +675,14 @@ td h5 {
 .nav--site a,
 .nav--site .dropbtn {
   flex: 1;
-  display: inline-block;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
 }
 
 /* 
@@ -860,6 +877,10 @@ header.header {
   .aside--page {
     display: flex;
   }
+
+  .icon-text {
+    display: inline;
+  }
 }
 
 @media only screen and (min-width: 60rem) {
@@ -892,6 +913,7 @@ header.header {
   .nav--site .dropbtn {
     padding-left: 0.75rem;
     text-align: left;
+    justify-content: flex-start;
   }
 
   .nav--site {
