@@ -82,7 +82,7 @@
   --highlight-high: #cecacd;
 
   --svg-filter-default: var(--filter-black) var(--filter-light);
-  --svg-filter-accent-red: var(--filter-black) invert(87%) sepia(22%) saturate(3499%) hue-rotate(291deg) brightness(91%) contrast(105%);
+  --svg-filter-accent-red: var(--filter-black) invert(37%) sepia(11%) saturate(2106%) hue-rotate(291deg) brightness(97%) contrast(97%); 
   --gradient-opacity: 0.7;
   --header-image: url("../images/light-theme/guggenheim-books.jpg");
   --theme-toggle-icon: url("../images/light-theme/theme-toggle-icon.svg");
