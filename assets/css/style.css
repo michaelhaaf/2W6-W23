@@ -345,7 +345,7 @@ h2 {
 
 /* Will be better when I introduce <section>s to markup */
 article > * {
-  max-width: clamp(27rem, 69%, 42rem);
+  max-width: clamp(30rem, 69%, 42rem);
 }
 
 article h2, th {
@@ -554,13 +554,11 @@ td h5 {
 .surface {
   background-color: var(--surface);
   color: var(--text);
-  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 16%);
 }
 
 .overlay {
   background-color: var(--overlay);
   color: var(--text);
-  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 16%);
 }
 
 .dropbtn {
@@ -908,7 +906,7 @@ header.header {
   }
 }
 
-@media only screen and (min-width: 72rem) {
+@media only screen and (min-width: 80rem) {
   .page-container {
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-areas:
