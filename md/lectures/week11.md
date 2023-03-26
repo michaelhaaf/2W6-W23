@@ -26,6 +26,18 @@ Last update: Friday, Mar 24, 2023.
 
 Stay tuned for more information!
 
+## Techniques
+
+### Heights vs. Padding
+
+Overflow vs. natural dimensions of container
+
+### Percentages vs. Pixels
+
+### Max-width
+
+Large screens, things get too big,
+
 # Knowledge Check
 
 Stay tuned for more information!

@@ -708,7 +708,6 @@ td h5 {
   flex-direction: column;
   position: absolute;
   margin-top: 3rem;
-  z-index: 1;
   background-color: var(--surface);
 
   overflow-y: auto;
@@ -758,9 +757,12 @@ td h5 {
   padding-top: 0.75rem;
   margin-bottom: 0.75rem;
 }
-.nav--page ul {
+
+.nav--page {
   position: sticky;
-  top: 0;
+  top: 3rem;
+  align-self: flex-start;
+  height: auto;
 }
 
 /* this code stinks! */
@@ -814,6 +816,11 @@ header.header {
   display: none;
 }
 
+.aside--site {
+  position: sticky;
+  top: 0;
+}
+
 .footer {
   display: flex;
   justify-content: center;
@@ -838,11 +845,13 @@ header.header {
 
 .aside--site {
   grid-area: nv;
+  z-index: 1;
 }
 
 .aside--page {
   grid-area: sd;
   display: none;
+  z-index: -1;
 }
 
 .page-container {
@@ -934,6 +943,10 @@ header.header {
 
   html {
     font-size: 125%;
+  }
+
+  .nav--page {
+    top: 0;
   }
 
 }
