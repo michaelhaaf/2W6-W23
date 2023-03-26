@@ -934,4 +934,8 @@ header.header {
     display: unset;
   }
 
+  html {
+    font-size: 125%;
+  }
+
 }

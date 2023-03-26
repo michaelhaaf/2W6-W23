@@ -100,16 +100,26 @@ function toggleDropdown(event) {
   dropdowns
     .filter((dropdown) => dropdown !== activeDropdown)
     .forEach((dropdown) => hide(dropdown));
-  dropbtns.filter((btn) => btn !== dropbtn).forEach((btn) => turnInactive(btn));
 
   toggleVisible(activeDropdown);
-  toggleActive(dropbtn);
 }
 
 // Close the dropdowns if the user clicks outside of them
 window.onclick = function (e) {
   if (!e.target.matches(".dropbtn") && !e.target.matches(".dropdown")) {
     dropdowns.forEach((dropdown) => hide(dropdown));
-    dropbtns.forEach((dropbtn) => turnInactive(dropbtn));
   }
+};
+
+// Set current site section to active
+const siteLinks = document.querySelectorAll('[id^="site-"]:is(a, button)');
+
+window.onload = function (e) {
+  let currentPath = window.location.pathname
+    .substring(0, window.location.pathname.lastIndexOf('.'))
+    .split("/")
+    .filter((leaf) => leaf !== "");
+  let currentLink = currentPath.includes("lectures") ? "lectures" : currentPath[1];
+  let currentLinkElem = document.querySelector(`#site-${currentLink}`);
+  turnActive(currentLinkElem);
 };
