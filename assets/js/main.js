@@ -118,8 +118,7 @@ window.onload = function (e) {
   let currentPath = window.location.pathname
     .substring(0, window.location.pathname.lastIndexOf('.'))
     .split("/")
-    .filter((leaf) => leaf !== "");
-  let currentLink = currentPath.includes("lectures") ? "lectures" : currentPath[1];
+  let currentLink = currentPath.includes("lectures") ? "lectures" : currentPath.at(-1);
   let currentLinkElem = document.querySelector(`#site-${currentLink}`);
   turnActive(currentLinkElem);
 };
