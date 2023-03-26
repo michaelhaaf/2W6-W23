@@ -36,7 +36,8 @@ You can compare this calendar with the calendar from the [Course Outline](../pag
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | [Week 4][lec4]   | CSS - element properties: fonts, images, icons <br>             | Tutorial: [CSS Foundations Exercises][tutCSSFoundations] <br>             |
 |                  | CSS - layouts: the box model                                    | Tutorial: [CSS Box Model Exercises][tutCSSBoxModel] <br>                  |
-|                  |                                                                 | Tutorial: MDN: [Typesetting a Homepage][tutMdnText] [(.zip)][tutMdnText]  |
+|                  |                                                                 | Tutorial: [Typesetting a Homepage][tutMdnText] [(.zip)][tutMdnText]  <br> |
+|                  |                                                                 | [Week 4 Exercises](../lectures/week04.html#exercises) <br>                |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | [Week 5][lec5]   | CSS - layouts: the box model, floats <br>                       | [Week 5 Exercises](../lectures/week05.html#exercises) <br>                |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
