@@ -707,6 +707,7 @@ td h5 {
   display: flex;
   flex-direction: column;
   position: absolute;
+  z-index: 2;
   margin-top: 3rem;
   background-color: var(--surface);
 
