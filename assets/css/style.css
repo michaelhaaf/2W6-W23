@@ -828,9 +828,7 @@ header.header {
 }
 
 .footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 0 1.5rem;
 }
 
 /* ------------------------------------------ *\
@@ -917,7 +915,7 @@ header.header {
       "hd hd hd"
       "nv mn sd"
       "nv mn sd"
-      "ft ft ft";
+      "nv ft ft";
   }
 
   /* Note: duplication with this implementation. Needs refactor */
