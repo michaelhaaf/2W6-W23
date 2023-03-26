@@ -10,7 +10,7 @@ abstract: |
   This week, we will learn how to make use of the CSS properties for fonts, images, and icons; we will also learn more about how HTML and CSS create website layouts.
 ---
 
-Last update: Friday, Feb 10, 2023.
+Last update: Sunday, March 26, 2023.
 
 ---
 
@@ -159,9 +159,7 @@ Font size can be set with the `font-size` property.
 
 ### Recommendation & inheritance
 
-> For `font-size` **it is recommended that you use relative CSS units over fixed units.**
->
-> You need to be aware of where your HTML element is inheriting these units from
+For `font-size` **it is recommended that you use relative CSS units over fixed units.** You need to be aware of where your HTML element is inheriting these units from.
 
 Two common relative units for `font-size` are:
 
@@ -173,10 +171,6 @@ Two common relative units for `font-size` are:
 **rem:**
 
 - 1 `rem` is equal to the font size **set on the root element of the document** ( the `<html>`), not the parent element.
-
-> It is recommended to use `rem` units for setting `font-size`
->
-> The root `<html>` element has a default `font-size` of 16px (set in your browser settings).
 
 <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="qByeqVa" data-user="michaelhaaf" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/michaelhaaf/pen/qByeqVa">
