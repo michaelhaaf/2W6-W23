@@ -343,6 +343,11 @@ h2 {
   font-weight: 400;
 }
 
+/* Will be better when I introduce <section>s to markup */
+article > * {
+  max-width: clamp(27rem, 69%, 42rem);
+}
+
 article h2, th {
   border-bottom: 1px solid var(--muted);
 }
@@ -376,10 +381,9 @@ h6 {
 hr {
   display: block;
   height: 1px;
-  width: 55%;
   border: 0;
   border-top: 1px solid var(--text);
-  margin: 1.5rem 0;
+  margin: 3rem 0 1.5rem 0;
   padding: 0;
 }
 
@@ -395,8 +399,12 @@ label {
   margin-bottom: 1.125rem;
 }
 
+p + ul {
+  margin-top: -1.125rem;
+}
+
 code {
-  font-size: 0.875em;
+  font-size: 0.875rem;
 }
 
 .caption,
@@ -421,7 +429,7 @@ h6.sourceCode,
 div.sourceCode,
 section.sourceCode {
   background-color: var(--overlay);
-  border-left: 0.25rem solid var(--accent-orange);
+  border-left: 1rem solid var(--accent-orange);
   padding: 0.75rem;
   padding-bottom: 1.5rem;
   padding-top: 0;
@@ -439,13 +447,9 @@ h6.sourceCode {
 }
 
 blockquote {
-  margin-bottom: 1.5rem;
+  margin: 0 -1.5rem 1.5rem 1.5rem;
   padding-inline-start: 1rem;
-  border-left: 0.25rem solid var(--highlight-high);
-  border-radius: 0.25rem;
-  max-width: 96%;
-  margin-left: auto;
-  margin-right: 0;
+  border-left: 0.875rem solid var(--accent-violet);
 }
 
 blockquote footer {
@@ -622,7 +626,6 @@ td h5 {
 .nav a:visited,
 .nav .dropbtn,
 .nav code {
-  background-color: var(--surface);
   color: var(--subtle);
   font-size: 0.875em;
   line-height: 1.5rem;
@@ -675,8 +678,8 @@ td h5 {
   display: block;
   border-left: 2px solid var(--muted);
   border-radius: 0.5px;
-  width: 30ch;
   text-align: left;
+  min-width: 30ch;
 }
 
 .nav--page a.active {
@@ -689,6 +692,7 @@ td h5 {
 
 .nav--site a,
 .nav--site .dropbtn {
+  background-color: var(--surface);
   flex: 1;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -708,7 +712,7 @@ td h5 {
   display: flex;
   flex-direction: column;
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   margin-top: 3rem;
   background-color: var(--surface);
 
@@ -847,13 +851,13 @@ header.header {
 
 .aside--site {
   grid-area: nv;
-  z-index: 1;
+  z-index: 2;
 }
 
 .aside--page {
   grid-area: sd;
   display: none;
-  z-index: -1;
+  z-index: 1;
 }
 
 .page-container {
@@ -865,7 +869,7 @@ header.header {
     "mn"
     "ft";
   margin: 0 auto;
-  width: min(100vw, 1500px);
+  width: min(100vw, 1920px);
 }
 
 /* ------------------------------------------ *\
@@ -877,9 +881,9 @@ header.header {
   display: inline-block;
 }
 
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 48rem) {
   .page-container {
-    grid-template-columns: minmax(20rem, 3fr) 1fr;
+    grid-template-columns: 4fr 1fr;
     grid-template-areas:
       "hd hd"
       "nv nv"
@@ -906,9 +910,9 @@ header.header {
   }
 }
 
-@media only screen and (min-width: 69rem) {
+@media only screen and (min-width: 72rem) {
   .page-container {
-    grid-template-columns: 1fr minmax(20rem, 4fr) 1fr;
+    grid-template-columns: 1fr 5fr 1fr;
     grid-template-areas:
       "hd hd hd"
       "nv mn sd"
@@ -937,6 +941,7 @@ header.header {
     padding-left: 0.75rem;
     text-align: left;
     justify-content: flex-start;
+    min-width: 24ch;
   }
 
   .nav--site {
@@ -951,4 +956,54 @@ header.header {
     top: 0;
   }
 
+}
+
+
+/* ------------------------------------------ *\
+  || Code
+\* ------------------------------------------ */
+
+pre.numberSource code > span > a:first-child::before { 
+  background-color: var(--accent-orange);
+  color: var(--overlay);
+}
+
+pre.numberSource { border-left: 1px solid var(--overlay); }
+
+div.sourceCode
+  { color: var(--muted-subtle); background-color: var(--overlay); }
+
+code span.al { color: var(--accent-gold); } /* Alert */
+code span.an { color: var(--accent-foam); font-weight: bold; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: var(--accent-red); } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: var(--accent-teal); } /* ControlFlow */
+code span.ch { color: var(--accent-red); } /* Char */
+code span.cn { color: var(--accent-red); font-weight: bold; } /* Constant */
+code span.co { color: var(--accent-foam); } /* Comment */
+code span.cv { color: var(--accent-foam); font-weight: bold; } /* CommentVar */
+code span.do { color: var(--accent-foam); } /* Documentation */
+code span.dt { color: var(--accent-teal); } /* DataType */
+code span.dv { color: var(--accent-teal); } /* DecVal */
+code span.er { color: var(--accent-red); } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: var(--subtle); } /* Float */
+code span.fu { color: var(--accent-violet); } /* Function */
+code span.im { } /* Import */
+code span.in { color: var(--accent-foam); font-weight: bold; } /* Information */
+code span.kw { color: var(--accent-violet); } /* Keyword */
+code span.op { color: var(--accent-violet); } /* Operator */
+code span.ot { color: var(--accent-gold); } /* Other */
+code span.pp { color: var(--accent-gold); font-weight: bold; } /* Preprocessor */
+code span.sc { color: var(--accent-red); } /* SpecialChar */
+code span.ss { color: var(--accent-orange); } /* SpecialString */
+code span.st { color: var(--accent-orange); } /* String */
+code span.va { } /* Variable */
+code span.vs { color: var(--accent-orange); } /* VerbatimString */
+code span.wa { color: var(--accent-foam); font-weight: bold; } /* Warning */
+
+.cp_embed_wrapper {
+  max-width: 90%;
+  margin: 1.5rem 0;
 }
