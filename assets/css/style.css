@@ -643,7 +643,7 @@ td h5 {
 .nav a:focus, 
 .nav .dropbtn:focus {
   outline: dotted;
-  outline-offset: -0.5rem;
+  outline-offset: -0.3em;
   background-color: var(--overlay);
   color: var(--text);
 }
