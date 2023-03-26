@@ -790,9 +790,7 @@ header.header {
     ),
     var(--header-image);
 
-  padding-top: 3rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding: 3rem 0.5rem 0.5rem;
 }
 
 .header h1 {
@@ -897,7 +895,7 @@ header.header {
   }
 }
 
-@media only screen and (min-width: 60rem) {
+@media only screen and (min-width: 69rem) {
   .page-container {
     grid-template-columns: 1fr minmax(20rem, 4fr) 1fr;
     grid-template-areas:
