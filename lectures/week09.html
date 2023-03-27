@@ -207,15 +207,33 @@ Mechanics Review</a></li>
 <li><a href="#specificity" id="toc-specificity">Specificity</a></li>
 <li><a href="#inheritance" id="toc-inheritance">Inheritance</a></li>
 <li><a href="#rule-order" id="toc-rule-order">Rule Order</a></li>
+<li><a href="#calculation" id="toc-calculation">Calculation</a></li>
+<li><a href="#using-the-inspector-to-debug"
+id="toc-using-the-inspector-to-debug">Using the Inspector to
+Debug</a></li>
 </ul></li>
-<li><a href="#other-new-css-mechanics"
-id="toc-other-new-css-mechanics">Other New CSS Mechanics</a>
+<li><a href="#css-custom-properties" id="toc-css-custom-properties">CSS
+Custom Properties</a>
 <ul>
-<li><a href="#variables" id="toc-variables">Variables</a></li>
+<li><a href="#custom-properties-as-variables"
+id="toc-custom-properties-as-variables">Custom Properties as
+Variables</a></li>
+<li><a href="#fallback-values" id="toc-fallback-values">Fallback
+Values</a></li>
 <li><a href="#scope" id="toc-scope">Scope</a></li>
+<li><a href="#the-.root-selector" id="toc-the-.root-selector">The
+<code>.root</code> selector</a></li>
+<li><a href="#themes-with-custom-properties"
+id="toc-themes-with-custom-properties">Themes with Custom
+Properties</a></li>
 </ul></li>
 <li><a href="#knowledge-check" id="toc-knowledge-check">Knowledge
-Check</a></li>
+Check</a>
+<ul>
+<li><a href="#css-cascade-1" id="toc-css-cascade-1">CSS Cascade</a></li>
+<li><a href="#css-custom-properties-1"
+id="toc-css-custom-properties-1">CSS Custom Properties</a></li>
+</ul></li>
 <li><a href="#readings-and-resources"
 id="toc-readings-and-resources">Readings and Resources</a></li>
 <li><a href="#exercises" id="toc-exercises">Exercises</a></li>
@@ -236,22 +254,23 @@ the ‘Cascade’ of CSS?</div>
             that is, how browsers traverse CSS files top-down to
             determine which rules are most specific, and therefore
             chosen as the winning rules.</p>
+            <p>We will also learn about CSS Custom Properties: these are
+            CSS ‘rules’ that we can define once and reuse many times
+            throughout our document to reduce code repetitio0n.</p>
           </div>
                   </header>
-         <p>Last update: Friday, Mar 24, 2023.</p>
+         <p>Last update: Monday, Mar 27, 2023.</p>
 <hr />
 <section id="lesson-overview" class="level1">
 <h1>Lesson Overview</h1>
 <ul>
-<li>Review/reference for important CSS mechanics we have learned so
-far</li>
-<li>Introduction to CSS Cascade: how browsers <em>resolve</em> the CSS
-rules we write for elements in our document.</li>
-<li>Introduction to <strong>specificity</strong> and
+<li>Review important CSS mechanics we have learned so far</li>
+<li>How browsers <em>resolve</em> the CSS rules we write for elements in
+our document using <strong>CSS Cascade</strong></li>
+<li>How to calculate CSS <strong>specificity</strong> and
 <strong>inheritance</strong>, the two most important concepts for
 determining the result of CSS Cascade.</li>
-<li>Introduction to a few more CSS mechanics: variables, scope, and
-more.</li>
+<li>How to declare and access CSS custom properties (variables)</li>
 </ul>
 <hr />
 </section>
@@ -455,6 +474,13 @@ themselves</strong>.</p>
 </section>
 <section id="inheritance" class="level2">
 <h2>Inheritance</h2>
+<p>One thing that you might have noticed already is that some CSS
+properties are <strong>automatically propagated</strong> from parents to
+children. A common example you will see in many websites is that most
+<code>font</code> properties are set in the <code>&lt;body&gt;</code>
+element, rather than explicitly defined for every single element in the
+page. However, not all CSS properties are inherited this way. How does
+this work?</p>
 <p>Inheritance refers to certain CSS properties that, when applied to an
 element, are inherited by that element’s descendants, even if we don’t
 explicitly write a rule for those descendants. Typography based
@@ -488,6 +514,17 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb8-1"><a href="#c
 the child element would have the <code>color: blue</code> style applied
 since that declaration directly targets it, while
 <code>color: red</code> from the parent is only inherited.</p>
+<p>Sometimes it can be difficult to determine if a CSS property is
+inherited or not. If you are curious about a property in particular, you
+can search for it in the <a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference">Mozilla
+CSS Properties Reference</a>: simply look for the
+<strong>Inherited</strong> field inside the <strong>Formal
+Definition</strong> section. <a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/color#formal_definition">Here’s
+an example</a> for the CSS <code>color</code> property (you can see
+<strong>Inheritance</strong> has the value <strong>yes</strong> for
+<code>color</code>).</p>
 </section>
 </section>
 <section id="rule-order" class="level2">
@@ -555,7 +592,7 @@ calculate; inline CSS rules automatically beat all other CSS rules for
 this reason.</p>
 <p>There is only one way for internal/external CSS to beat inline css:
 using the <code>!important</code> keyword. We will dive into that in a
-<a href="other-new-css-mechanics">later section</a>.</p>
+<a href="#calculation">later section</a>.</p>
 </section>
 </section>
 <section id="internal-and-external-css" class="level3">
@@ -650,20 +687,363 @@ rules.</p>
 </section>
 </section>
 </section>
+<section id="calculation" class="level2">
+<h2>Calculation</h2>
+<p><em>The examples in this section were adapted from <a
+href="https://www.w3schools.com/css/css_specificity.asp">CSS
+Specificity</a> by W3Schools</em></p>
+<p>Now that we know the three most important mechanics behind CSS rule
+resolution (these are: <a href="#specificity">specificity</a>, <a
+href="#inheritance">inheritance</a>, and <a href="#rule-order">rule
+order</a>), we should be able to know with certainty which CSS rules
+will apply in a given situation. The major principles to keep in mind
+are summarized below.</p>
+<p>The simplest case: if a property has a CSS rule defined (assuming
+there are no syntax errors), that rule is applied. This is fairly
+intuitive.</p>
+<p>Next, if a property does not have a CSS rule defined:</p>
+<ol type="1">
+<li>If that property can be inherited, check all ancestors to see if
+property is defined, and use that one. Else:</li>
+<li>Use the default browser style for that property.</li>
+</ol>
+<p>Finally, if a property has more than one CSS rule defined, we need to
+<strong>calculate</strong> its <strong>specificity</strong>. This is
+represented internally by a <strong>specificity score</strong>,
+calculated as follows:</p>
+<ol type="1">
+<li>Any rule with <code>!important</code> wins, adding
+<strong>10000</strong> to the specificity score. Two or more rules with
+<code>!important</code> cancel out, and normal specificity determination
+continues. Else:</li>
+<li>Any in-line rule wins, adding <strong>1000</strong> to the
+specificity score. Else:</li>
+<li>The property with the highest specificity wins. This is calculated
+according to the following rules:
+<ul>
+<li>Each <code>id</code> in the selector contributes
+<strong>100</strong> to the specificity score</li>
+<li>Each <code>class</code> in the selector contributes
+<strong>10</strong> to the specificity score</li>
+<li>Each <code>type</code> in the selector contributes
+<strong>1</strong> to the specificity score</li>
+</ul></li>
+</ol>
+<p>We can see that the examples we went over in the <a
+href="#specificity">Specificity</a> section follow this algorithm: a
+single <code>id</code> property will outweight many <code>class</code>
+properties; while many <code>class</code> properties are more specific
+than just one <code>class</code> property, and so on.</p>
+<p><strong>NOTE:</strong> The “specificity score” isn’t actually a
+base-10 number, it is a <a
+href="https://www.w3.org/TR/CSS2/cascade.html#specificity">number system
+with a “large base”</a>.</p>
+<p>In order words: 10 <code>type</code> selectors do not equal 1
+<code>class</code> selector, and 10 <code>class</code> selectors do not
+equal 1 <code>id</code> selector. Rather, each category is
+<strong>infinitely</strong> more specific than the next category.</p>
+<p>To see this in action, try using a <a
+href="https://specificity.keegan.st/">Specificity Calculator</a>. I’ve
+put some of the selectors we’ve seen so far into this calculator to show
+how this works below:</p>
+<figure>
+<img src="../assets/content/wk9/specificity-calc.png"
+alt="Figure: sample specificity calculations using Keegan Street’s online specificity calculator. The selectors above are organized in order from most specific to least specific selector. Note that the specificity score is given here using only 3 numbers; it is common to use either 3, 4, or 5 numbers to define the specificity score depending on the context." />
+<figcaption aria-hidden="true">Figure: sample specificity calculations
+using Keegan Street’s <a href="https://specificity.keegan.st/">online
+specificity calculator</a>. The selectors above are organized in order
+from most specific to least specific selector. Note that the specificity
+score is given here using only 3 numbers; it is common to use either 3,
+4, or 5 numbers to define the specificity score depending on the
+context.</figcaption>
+</figure>
+<p>We can see that even using <strong>16</strong>
+<code>&lt;div&gt;</code> selectors (that is: a <code>&lt;div&gt;</code>
+inside a <code>&lt;div&gt;</code> inside a <code>&lt;div&gt;</code>… 16
+times!) at once results in a <strong>less specific</strong> selector
+than having just one <code>class</code> in the selector.</p>
 </section>
-<section id="other-new-css-mechanics" class="level1">
-<h1>Other New CSS Mechanics</h1>
-<p>More to come soon!</p>
-<section id="variables" class="level2">
-<h2>Variables</h2>
+<section id="using-the-inspector-to-debug" class="level2">
+<h2>Using the Inspector to Debug</h2>
+<p>While knowing the underlying calculation is useful, it is rare that
+we need to actually do math to determine which CSS rules are applied. We
+can also use Developer tools like our browser’s Inspector Mode to see
+how the CSS Cascade has resolved the various style rules on a
+webpage.</p>
+<p>For example, here is the Firefox Inspector viewing an element on this
+course webpage (Monday, March 27, 2023).</p>
+<figure>
+<img src="../assets/content/wk9/style-pane.png"
+alt="Figure: Here we can see how the Table of Contents items in this website can be given an active color by taking advantage of CSS specificity. Take a look at the &lt;a&gt; element that has the class active. Since the selector .nav a.active:link is more specific than .nav a:link, the color property is updated to use var(--accent-red) instead of var(--subtle)." />
+<figcaption aria-hidden="true">Figure: Here we can see how the Table of
+Contents items in this website can be given an <code>active</code> color
+by taking advantage of CSS specificity. Take a look at the
+<code>&lt;a&gt;</code> element that has the class <code>active</code>.
+Since the selector <code>.nav a.active:link</code> is more specific than
+<code>.nav a:link</code>, the <code>color</code> property is updated to
+use <code>var(--accent-red)</code> instead of
+<code>var(--subtle)</code>.</figcaption>
+</figure>
+<p>We can see in the figure that table of contents
+<code>&lt;a&gt;</code> elements that have the <code>.active</code>
+classhave a <strong>more-specific</strong> rule defining their
+<code>color</code> than other table of content <code>&lt;a&gt;</code>
+elements.</p>
+<p>Properties are listed in order of specificity and inheritance in the
+Style pane. Properties that are <del>crossed out</del> have been
+<strong>overridden</strong> by more specific properties.</p>
+</section>
+</section>
+<section id="css-custom-properties" class="level1">
+<h1>CSS Custom Properties</h1>
+<p><em>This section was adapted directly from <a
+href="https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-custom-properties">Custom
+Properties</a> by the Odin Project.</em></p>
+<p>Custom properties (also known as CSS variables) are a powerful tool
+when writing our CSS files. In short, <strong>they allow us to reference
+a CSS value as many times we want throughout a file</strong>. This gives
+us similar advantages that we are used to in procedural programming
+languages like C#: we can place important data in variables which allows
+us to <strong>define once</strong> and <strong>reuse many
+times</strong>, making our data more robust and easier to change in the
+future.</p>
+<p>By using custom properties, instead of having to update every single
+instance of a specific value, we only need to update a single instance:
+the custom property itself. Not only that, but custom properties can
+help us keep colors consistent throughout a project, something that will
+be really helpful as projects get larger.</p>
+<section id="custom-properties-as-variables" class="level2">
+<h2>Custom Properties as Variables</h2>
+<p>The syntax for declaring and accessing a custom property is really
+simple and not too different from how we write normal rule
+declarations:</p>
+<section id="css-6" class="level6 sourceCode">
+<h6 class="sourceCode">CSS</h6>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.error-modal</span> {</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">/* the &#39;--&#39; characters signify a custom property */</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="va">--color-error-text</span>: <span class="cn">red</span><span class="op">;</span>          </span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="va">--modal-border</span>: <span class="dv">1</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">black</span><span class="op">;</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="va">--modal-font-size</span>: <span class="fu">calc(</span><span class="dv">2</span><span class="dt">rem</span> <span class="op">+</span> <span class="dv">5</span><span class="dt">vw</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">/* the &#39;var()&#39; function can reference custom properties */</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="fu">var(</span><span class="va">--color-error-text</span><span class="fu">)</span><span class="op">;</span>       </span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border</span>: <span class="fu">var(</span><span class="va">--modal-border</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-size</span>: <span class="fu">var(</span><span class="va">--modal-font-size</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>That’s it! First, we declare our custom property with a double hyphen
+followed by a <strong>case-sensitive,</strong>
+<strong>hyphen-separated</strong> property name
+(<code>--color-error-text</code> wouldn’t be the same as
+<code>--Color-Error-Text</code>).</p>
+<p>Like normal CSS rule declarations, the use of single hyphens to
+separate words is very important here because spaces are not valid
+(<code>--color error text</code> would not work). Then we can store
+<strong>any valid CSS value</strong> in our newly declared custom
+property: whether that be a simple color value, shorthand values, or
+even a more complex function. This is quite powerful!</p>
+<p>When we want to access a custom property, we use the
+<code>var()</code> function as the value of a CSS property, and then
+place our custom property inside of the parenthesis (including the
+double hyphen at the beginning).</p>
+</section>
+</section>
+<section id="fallback-values" class="level2">
+<h2>Fallback Values</h2>
+<p>The <code>var()</code> function actually accepts <strong>two</strong>
+parameters. The first parameter we’ve already seen: this is whichever
+custom property (variable) we are using
+(e.g. <code>--color-error-text</code>).</p>
+<p>The second parameter is an optional fallback value: when a fallback
+value is provided in addition to a custom property, the fallback value
+will be used if the custom property is invalid or hasn’t been declared
+yet. We can even pass in another custom property as a fallback, which
+can have its own fallback value as well!</p>
+<section id="css-7" class="level6 sourceCode">
+<h6 class="sourceCode">CSS</h6>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.fallback</span> {</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="va">--color-text</span>: <span class="cn">white</span><span class="op">;</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span>: <span class="fu">var(</span><span class="va">--undeclared-property</span><span class="op">,</span> <span class="cn">black</span><span class="fu">)</span><span class="op">;</span>        <span class="co">/* What will the background-color be? */</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="fu">var(</span><span class="va">--undeclared-again</span><span class="op">,</span> <span class="fu">var(</span><span class="va">--color-text</span><span class="op">,</span> <span class="cn">yellow</span><span class="fu">))</span><span class="op">;</span>  <span class="co">/* What will the color be? */</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>In the above example, our <code>background-color</code> property
+would have a value of <code>black</code> and our <code>color</code>
+property would have a value of <code>white.</code> If the
+<code>--color-text</code> custom property was invalid or didn’t exist,
+the fallback to our fallback would take over and the <code>color</code>
+property would have a value of <code>yellow</code>.</p>
+</section>
 </section>
 <section id="scope" class="level2">
 <h2>Scope</h2>
+<p>In the previous section, we saw that that we could declare and then
+access custom properties within the same selector (whether
+<code>.error-modal</code> or <code>.fallback</code>). This is because
+the <strong>scope</strong> of a custom property is determined by the
+<strong>selector</strong> (which is bound by curly braces
+‘<code>{</code>’ and ‘<code>}</code>’).</p>
+<p>Scope in CSS is somewhat similar in appearance to scope in C#:
+<strong>all properties defined within a selector are available for that
+selector, as well as any descendants of that selector.</strong></p>
+<p>In the example below, only the element with the cool-paragraph class
+would get styled with a red background since it’s a descendant of the
+element where our custom property is declared:</p>
+<section id="html-6" class="level6 sourceCode">
+<h6 class="sourceCode">HTML</h6>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;cool-div&#39;</span><span class="kw">&gt;</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;cool-p&#39;</span><span class="kw">&gt;</span>Check out my cool, red background!<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;boring-p&#39;</span><span class="kw">&gt;</span>I&#39;m not in scope so I&#39;m not cool.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;cool-p&#39;</span><span class="kw">&gt;</span>I&#39;m ALSO not in scope so I&#39;m ALSO not cool (despite my class name!).<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+</section>
+<section id="css-8" class="level6 sourceCode">
+<h6 class="sourceCode">CSS</h6>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.cool-div</span> {</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="va">--main-bg</span>: <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co">/* For the first .cool-p, --main-bg is defined (because it is a child of a .cool-div element) */</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co">/* For the second .cool-p, --main-bg is NOT defined, so background-color stays black */</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="fu">.cool-p</span> {</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span>: <span class="fu">var(</span><span class="va">--main-bg</span><span class="op">,</span> <span class="cn">black</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="co">/* The only .boring-p is not a descendent of a .cool-div, so background-color stays black */</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="fu">.boring-p</span> {</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span>: <span class="fu">var(</span><span class="va">--main-bg</span><span class="op">,</span> <span class="cn">black</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+</section>
+</section>
+<section id="the-.root-selector" class="level2">
+<h2>The <code>.root</code> selector</h2>
+<p>While there may be times where you will want to limit the scope of a
+custom property, you may want to be able to use other custom properties
+on many, unrelated selectors. One workaround would be declaring the same
+custom property on a bunch of selectors, but that defeats one of the
+purposes of using custom properties in the first place (the ease of
+changing multiple instances of a value at once).</p>
+<p>What about placing the custom properties at the root of your document
+hierarchy? That is, in your <code>&lt;body&gt;</code> or even your
+<code>&lt;html&gt;</code> tags? That way, since all other HTML elements
+descend from these tags, the properties should be accessible
+everywhere.</p>
+<p>This is essentially what is done in practise, with just a bit of
+extra fanciness: we can declare universal custom properties on the
+<code>:root</code> selector. The <a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/:root">:root
+selector</a> which is essentially the same thing as the html selector
+except it has a <strong>higher specificity</strong>.</p>
+<section id="html-7" class="level6 sourceCode">
+<h6 class="sourceCode">HTML</h6>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;cool-paragraph&#39;</span><span class="kw">&gt;</span>Lorem ipsum dolor sit amet.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;exciting-paragraph&#39;</span><span class="kw">&gt;</span>Lorem ipsum dolor sit amet.<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+</section>
+<section id="css-9" class="level6 sourceCode">
+<h6 class="sourceCode">CSS</h6>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="in">:root</span> {</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="va">--main-color</span>: <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="co">/* This is equivalent to using the root selector in scope</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="co">but since &lt;html&gt; has lower specificity than :root, --main-color will be red*/</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>html {</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>  <span class="va">--main-color</span>: <span class="cn">blue</span><span class="op">;</span> </span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="co">/* This time, all divs in the document have --main-color in their scope */</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="fu">.cool-paragraph</span> {</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="fu">var(</span><span class="va">--main-color</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a><span class="fu">.exciting-paragraph</span> {</span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span>: <span class="fu">var(</span><span class="va">--main-color</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>By declaring our custom property on the <code>:root</code> selector
+in the example above, we can access it on any other valid selector
+within our CSS file, since any other selector would be considered a
+descendant of the <code>:root</code> selector.</p>
+</section>
+</section>
+<section id="themes-with-custom-properties" class="level2">
+<h2>Themes with Custom Properties</h2>
+<p>There are plenty of applications for defining universal custom
+properties. One excellent application in particular is using the
+<code>:root</code> selector to define <strong>color themes</strong> on
+our webpages:</p>
+<p class="codepen" data-height="300" data-default-tab="css,result" data-slug-hash="PojVRMb" data-user="TheOdinProjectExamples" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+<span>See the Pen
+<a href="https://codepen.io/TheOdinProjectExamples/pen/PojVRMb"> Theme
+Toggle | CSS Custom Properties</a> by TheOdinProject
+(<a href="https://codepen.io/TheOdinProjectExamples"><span
+class="citation"
+data-cites="TheOdinProjectExamples">@TheOdinProjectExamples</span></a>)
+on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<p>Take a close look at the <strong>CSS</strong> tab in the above
+CodePen. There are <strong>two scopes</strong> for our custom properties
+on the :root selector:</p>
+<ul>
+<li>one for when the <code>&lt;html&gt;</code> (i.e. <code>:root</code>)
+element has a class of <code>dark</code> and</li>
+<li>one for when it has a class of <code>light</code>.</li>
+</ul>
+<p>Our other selectors then use the values of any custom properties
+depending on which class is currently present on our root element.</p>
+<p>Try pressing the <strong>Toggle Theme</strong> button in the CodePen,
+then take a close look at the first few lines of Javascript,
+particularly the <code>setTheme()</code> function. How is the theme
+actually being toggled on all of the elements in the page?</p>
+<p>This example shows the power of <em>well-defined</em> classes and
+custom properties in CSS. The problem of changing numerous element
+colors for numerous elements is reduced from having to query every
+element and every property to: just toggle the class on the
+<code>:root</code> element of the document, and the new property values
+naturally cascade to all selectors in your CSS.</p>
 </section>
 </section>
 <section id="knowledge-check" class="level1">
 <h1>Knowledge Check</h1>
-<p>Stay tuned for more information!</p>
+<section id="css-cascade-1" class="level2">
+<h2>CSS Cascade</h2>
+<ul>
+<li><a href="#specificity">Can you rank <code>id</code>,
+<code>class</code>, and <code>type</code> selectors by
+specificity?</a></li>
+<li><a href="#specificity">Between a rule that uses one <code>id</code>
+selector and a rule that uses 3 <code>class</code> selectors, which rule
+has the higher specificity?</a></li>
+<li><a href="#inline-css">Is there any <strong>specificity</strong>
+difference between external, internal, and inline CSS?</a></li>
+<li><a href="#inheritance">An element’s parent has a high specificity
+selector with <code>font-size: 2rem</code>, but also has a direct low
+specificity selector with <code>font-size: 1rem</code>. What is the
+result?</a></li>
+</ul>
+</section>
+<section id="css-custom-properties-1" class="level2">
+<h2>CSS Custom Properties</h2>
+<ul>
+<li><a href="#custom-properties-as-variables">How do you
+<strong>declare</strong> a custom property with a name of
+<code>text-color?</code></a></li>
+<li><a href="#custom-properties-as-variables">How do you
+<strong>access</strong> a custom property with a name of
+<code>background-color?</code></a></li>
+<li><a href="#fallback-values">What happens when you use a custom
+property that has not been defined?</a></li>
+<li><a href="#scope">Can custom properties defined in an element be used
+outside of that element?</a></li>
+<li><a href="#the-.root-selector">Where would you declare a custom
+property to have its scope be global and accessible by all other
+selectors?</a></li>
+</ul>
+</section>
 </section>
 <section id="readings-and-resources" class="level1">
 <h1>Readings and Resources</h1>
@@ -695,11 +1075,26 @@ Calculator</a>. This is an online specificity calculator. You can
 copy-paste your own CSS selectors into this tool to compare which
 selector is more specific – very useful for debugging when you cannot
 understand why one rule wins over another.</p></li>
+<li><p><a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">MDN
+Web Docs: Using CSS Custom Properties</a>: This is a more thorough
+explanation of CSS Custom Properties than given in the notes. This is
+recommended reading in any case, but especially if you are confused
+about the syntax or what kind of values that CSS Custom Properties can
+store and use, then check out this article for some helpful
+examples.</p></li>
 </ol>
 </section>
 <section id="exercises" class="level1">
 <h1>Exercises</h1>
-<p>Stay tuned for more information!</p>
+<ol type="1">
+<li>Open the Developer Tools inspector in your browser on this page. Can
+you see where the light and dark color schemes are defined?</li>
+<li>Read through <a href="https://wattenberger.com/blog/css-cascade">The
+CSS Cascade</a> article linked above – it contains 7 interactive
+questions you can try to answer make sure you are following the
+concepts.</li>
+</ol>
 </section> 
       </article>
     </main>
