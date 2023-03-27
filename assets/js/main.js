@@ -23,7 +23,7 @@ themeToggleIcon.addEventListener("click", toggleTheme);
 // Side-scroller Table of Contents with "active" section.
 // Adapted from https://benfrain.com/building-a-table-of-contents-with-active-indicator-using-javascript-intersection-observers/
 const pageContent = document.querySelector("article.article");
-const allHeaders = pageContent.querySelectorAll(":scope > h1, :scope > h2");
+const allSections = pageContent.querySelectorAll("section.level1, section.level2");
 
 const pageToc = document.querySelector(".nav--page");
 const tocLinks = pageToc ? pageToc.querySelectorAll(":scope a") : [];
@@ -34,22 +34,42 @@ if (!pageToc) document.body.setAttribute("data-layout", "column");
 const observerOptions = {
   root: null,
   rootMargin: "0px",
-  threshold: [1],
 };
 
-const observeHeaders = new IntersectionObserver(setActive, observerOptions);
-allHeaders.forEach((header) => observeHeaders.observe(header));
+const observeSections = new IntersectionObserver(setActive, observerOptions);
+allSections.forEach((section) => observeSections.observe(section));
 
+// New implementation: measure section intersectionRation
+// based on: https://css-tricks.com/table-of-contents-with-intersectionobserver/
 function setActive(entries) {
-  entries.map((e) => {
-    if (e.isIntersecting === true) {
-      tocLinks.forEach((link) => link.classList.remove("active"));
+  entries.forEach(entry => {
+    const id = entry.target.getAttribute('id');
+    if (entry.intersectionRatio > 0) {
       document
-        .querySelector(`nav li a[href="#${e.target.id}"]`)
+        .querySelector(`nav li a[href="#${id}"]`)
         .classList.add("active");
+    } else {
+      document
+        .querySelector(`nav li a[href="#${id}"]`)
+        .classList.remove("active");
     }
   });
 }
+
+// Old implementation: when header detected, remove active from all others
+// function setActive(entries) {
+//   entries.map((e) => {
+//     if (e.isIntersecting === true) {
+//       tocLinks.forEach((link) => link.classList.remove("active"));
+//       document
+//         .querySelector(`nav li a[href="#${e.target.id}"]`)
+//         .classList.add("active");
+//     }
+//   });
+// }
+
+
+
 
 // Clickable dropdown:
 // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar_click

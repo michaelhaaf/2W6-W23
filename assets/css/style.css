@@ -343,7 +343,7 @@ h2 {
   font-weight: 400;
 }
 
-/* Will be better when I introduce <section>s to markup */
+/* Now that I have <sections>, there has to be a better way than this... */
 article > * {
   max-width: clamp(30rem, 69%, 42rem);
 }
@@ -426,8 +426,7 @@ pre {
 }
 
 h6.sourceCode,
-div.sourceCode,
-section.sourceCode {
+div.sourceCode {
   background-color: var(--overlay);
   border-left: 1rem solid var(--accent-orange);
   padding: 0.75rem;
@@ -439,7 +438,7 @@ section.sourceCode {
 h6.sourceCode {
   margin-bottom: 0;
   padding: 0;
-  padding-right: 0.25rem;
+  padding-right: 0.75rem;
   padding-top: 0.25rem;
   text-align: right;
   color: var(--muted);

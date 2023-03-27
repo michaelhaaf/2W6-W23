@@ -240,7 +240,8 @@ the ‘Cascade’ of CSS?</div>
                   </header>
          <p>Last update: Friday, Mar 24, 2023.</p>
 <hr />
-<h1 id="lesson-overview">Lesson Overview</h1>
+<section id="lesson-overview" class="level1">
+<h1>Lesson Overview</h1>
 <ul>
 <li>Review/reference for important CSS mechanics we have learned so
 far</li>
@@ -253,7 +254,9 @@ determining the result of CSS Cascade.</li>
 more.</li>
 </ul>
 <hr />
-<h1 id="css-mechanics-review">CSS Mechanics Review</h1>
+</section>
+<section id="css-mechanics-review" class="level1">
+<h1>CSS Mechanics Review</h1>
 <p>It is worthwhile to double check that you have understood all of the
 CSS mechanics (i.e., the rules for CSS works and why) that we have
 learned in this class so far. These include:</p>
@@ -279,7 +282,9 @@ Odin Project: CSS Foundations</a>.</p>
 <p>You can also review exercises from previous weeks, including
 particularly the <a href="https://flukeout.github.io/">CSS
 Diner</a>.</p>
-<h1 id="css-cascade">CSS Cascade</h1>
+</section>
+<section id="css-cascade" class="level1">
+<h1>CSS Cascade</h1>
 <p><em>This section was adapted directly from the ‘The Cascade of CSS’
 section of the <a
 href="https://www.theodinproject.com/lessons/foundations-css-foundations">Odin
@@ -315,7 +320,8 @@ to a document is <strong>well-defined</strong> by a procedure known as
 the <strong>CSS Cascade</strong>. There are different factors that the
 cascade uses to determine this, <strong>three</strong> of which we’ll
 cover in this class.</p>
-<h2 id="specificity">Specificity</h2>
+<section id="specificity" class="level2">
+<h2>Specificity</h2>
 <p>A CSS declaration that is <strong>more specific</strong> will take
 precedence over less specific ones. What does it mean for a declaration
 to be more specific than another? There are a few basic rules to
@@ -354,14 +360,17 @@ amount of a single selector will beat a smaller amount of that same
 selector</strong>.</p>
 <p>Let’s take a look at a few quick examples to visualize how
 specificity works. Consider the following HTML and CSS code:</p>
-<h6 class="sourceCode" id="html">HTML</h6>
+<section id="html" class="level6 sourceCode">
+<h6 class="sourceCode">HTML</h6>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- index.html --&gt;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;main&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;list subsection&quot;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
-<h6 class="sourceCode" id="css">CSS</h6>
+</section>
+<section id="css" class="level6 sourceCode">
+<h6 class="sourceCode">CSS</h6>
 <div class="sourceCode" id="cb2"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* rule 1 */</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.subsection</span> {</span>
@@ -376,14 +385,18 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#c
 rule 2 is more specific because it is using more class selectors, so the
 <code>color: red;</code> declaration would take precedence.</p>
 <p>Now, let’s change things a little bit:</p>
-<h6 class="sourceCode" id="html-1">HTML</h6>
+</section>
+<section id="html-1" class="level6 sourceCode">
+<h6 class="sourceCode">HTML</h6>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- index.html --&gt;</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;main&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;list&quot;</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;subsection&quot;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
-<h6 class="sourceCode" id="css-1">CSS</h6>
+</section>
+<section id="css-1" class="level6 sourceCode">
+<h6 class="sourceCode">CSS</h6>
 <div class="sourceCode" id="cb4"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* rule 1 */</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#subsection</span> {</span>
@@ -399,7 +412,9 @@ ID selectors, rule 1 is more specific because ID beats class. In this
 case, the <code>color: blue;</code> declaration would take
 precedence.</p>
 <p>Let’s consider one final example:</p>
-<h6 class="sourceCode" id="html-2">HTML</h6>
+</section>
+<section id="html-2" class="level6 sourceCode">
+<h6 class="sourceCode">HTML</h6>
 <div class="sourceCode" id="cb5"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- index.html --&gt;</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -408,7 +423,9 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;subsection&quot;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/div&gt;</span></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
-<h6 class="sourceCode" id="css-2">CSS</h6>
+</section>
+<section id="css-2" class="level6 sourceCode">
+<h6 class="sourceCode">CSS</h6>
 <div class="sourceCode" id="cb6"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* rule 1 */</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.list</span> <span class="pp">#subsection</span> {</span>
@@ -434,7 +451,10 @@ special symbols for the universal selector <code>*</code> as well as
 combinators (<code>+</code>, <code>~</code>, <code>&gt;</code>, and an
 empty space). <strong>These symbols do not add any specificity in and of
 themselves</strong>.</p>
-<h2 id="inheritance">Inheritance</h2>
+</section>
+</section>
+<section id="inheritance" class="level2">
+<h2>Inheritance</h2>
 <p>Inheritance refers to certain CSS properties that, when applied to an
 element, are inherited by that element’s descendants, even if we don’t
 explicitly write a rule for those descendants. Typography based
@@ -443,14 +463,17 @@ properties (<code>color, font-size, font-family</code>, etc.) are
 are not</strong>.</p>
 <p>The exception to this is when directly targeting an element, as this
 always beats inheritance:</p>
-<h6 class="sourceCode" id="html-3">HTML</h6>
+<section id="html-3" class="level6 sourceCode">
+<h6 class="sourceCode">HTML</h6>
 <div class="sourceCode" id="cb7"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- index.html --&gt;</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;parent&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;child&quot;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
-<h6 class="sourceCode" id="css-3">CSS</h6>
+</section>
+<section id="css-3" class="level6 sourceCode">
+<h6 class="sourceCode">CSS</h6>
 <div class="sourceCode" id="cb8"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* styles.css */</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -465,14 +488,18 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb8-1"><a href="#c
 the child element would have the <code>color: blue</code> style applied
 since that declaration directly targets it, while
 <code>color: red</code> from the parent is only inherited.</p>
-<h2 id="rule-order">Rule Order</h2>
+</section>
+</section>
+<section id="rule-order" class="level2">
+<h2>Rule Order</h2>
 <p>The final factor, the end of the line, the tie-breaker of the
 tie-breaker. Let’s say that after every other factor has been taken into
 account, there are still multiple conflicting rules targeting an
 element. How does the cascade determine which rule to apply?</p>
 <p>Really simply, actually. Whichever rule was the last defined is the
 winner.</p>
-<h6 class="sourceCode" id="css-4">CSS</h6>
+<section id="css-4" class="level6 sourceCode">
+<h6 class="sourceCode">CSS</h6>
 <div class="sourceCode" id="cb9"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* styles.css */</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -494,10 +521,13 @@ Element? In fact, aren’t there <strong>three</strong> different ways?
 Yes: <strong>inline</strong>, <strong>internal</strong>, and
 <strong>external</strong> CSS each have specificity; we will learn how
 the three of them work just below.</p>
-<h3 id="inline-css">Inline CSS</h3>
+</section>
+<section id="inline-css" class="level3">
+<h3>Inline CSS</h3>
 <p>Quick review: Inline CSS makes it possible to add styles directly to
 HTML elements:</p>
-<h6 class="sourceCode" id="html-4">HTML</h6>
+<section id="html-4" class="level6 sourceCode">
+<h6 class="sourceCode">HTML</h6>
 <div class="sourceCode" id="cb10"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;body&gt;</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">style</span><span class="ot">=</span><span class="st">&quot;color: white; background-color: black;&quot;</span><span class="kw">&gt;</span>...<span class="kw">&lt;/div&gt;</span></span>
@@ -526,7 +556,10 @@ this reason.</p>
 <p>There is only one way for internal/external CSS to beat inline css:
 using the <code>!important</code> keyword. We will dive into that in a
 <a href="other-new-css-mechanics">later section</a>.</p>
-<h3 id="internal-and-external-css">Internal and External CSS</h3>
+</section>
+</section>
+<section id="internal-and-external-css" class="level3">
+<h3>Internal and External CSS</h3>
 <p>Quick review: External CSS is the most common method you will come
 across. It involves creating a separate file for the CSS and linking it
 inside of an HTML’s opening and closing <code>&lt;head&gt;</code> tags
@@ -547,7 +580,8 @@ resulting style</strong>.</p>
 <p>We can see examples of this below. First, an HTML file with two
 external <code>&lt;link&gt;</code> tags and one
 <code>&lt;style&gt;</code> tag. Pay attention to the order:</p>
-<h6 class="sourceCode" id="html-5">HTML</h6>
+<section id="html-5" class="level6 sourceCode">
+<h6 class="sourceCode">HTML</h6>
 <div class="sourceCode" id="cb11"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;head&gt;</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">&quot;stylesheet&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;style-file-1.css&quot;</span><span class="kw">&gt;</span>    <span class="co">&lt;!-- link to style-file-1.css --&gt;</span></span>
@@ -568,7 +602,9 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb11-1"><a href=
 <span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/div&gt;</span></span>
 <span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/body&gt;</span></span></code></pre></div>
 <p>Next, definitions for the .css files:</p>
-<h6 class="sourceCode" id="css-5">CSS</h6>
+</section>
+<section id="css-5" class="level6 sourceCode">
+<h6 class="sourceCode">CSS</h6>
 <div class="sourceCode" id="cb12"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* style-file-1.css */</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>div {</span>
@@ -611,13 +647,26 @@ followed by <strong>more specific</strong> (i.e. style rules for a
 specific page in the website) rules later in the file – this ensures
 that the more specific rules are not overwritten by more general
 rules.</p>
-<h1 id="other-new-css-mechanics">Other New CSS Mechanics</h1>
+</section>
+</section>
+</section>
+</section>
+<section id="other-new-css-mechanics" class="level1">
+<h1>Other New CSS Mechanics</h1>
 <p>More to come soon!</p>
-<h2 id="variables">Variables</h2>
-<h2 id="scope">Scope</h2>
-<h1 id="knowledge-check">Knowledge Check</h1>
+<section id="variables" class="level2">
+<h2>Variables</h2>
+</section>
+<section id="scope" class="level2">
+<h2>Scope</h2>
+</section>
+</section>
+<section id="knowledge-check" class="level1">
+<h1>Knowledge Check</h1>
 <p>Stay tuned for more information!</p>
-<h1 id="readings-and-resources">Readings and Resources</h1>
+</section>
+<section id="readings-and-resources" class="level1">
+<h1>Readings and Resources</h1>
 <ol type="1">
 <li><p><a
 href="https://www.theodinproject.com/lessons/foundations-css-foundations">The
@@ -647,8 +696,11 @@ copy-paste your own CSS selectors into this tool to compare which
 selector is more specific – very useful for debugging when you cannot
 understand why one rule wins over another.</p></li>
 </ol>
-<h1 id="exercises">Exercises</h1>
-<p>Stay tuned for more information!</p> 
+</section>
+<section id="exercises" class="level1">
+<h1>Exercises</h1>
+<p>Stay tuned for more information!</p>
+</section> 
       </article>
     </main>
     <footer class="footer">

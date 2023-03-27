@@ -268,7 +268,8 @@ CSS</div>
                   </header>
          <p>Last update: Sunday, March 26, 2023.</p>
 <hr />
-<h1 id="lesson-overview">Lesson Overview</h1>
+<section id="lesson-overview" class="level1">
+<h1>Lesson Overview</h1>
 <ul>
 <li>How to style fonts</li>
 <li>How to style images</li>
@@ -276,7 +277,9 @@ CSS</div>
 <li>The Box Model</li>
 </ul>
 <hr />
-<h1 id="fonts">Fonts</h1>
+</section>
+<section id="fonts" class="level1">
+<h1>Fonts</h1>
 <p><em>This section was adapted from <a
 href="https://maujac.github.io/2W6-UI/#/./wk/../wk3/wk3_3_text_units?id=fonts">Mauricio
 Buschinelli’s</a> course notes, which in turn were adapted from <a
@@ -284,7 +287,8 @@ href="https://www.w3schools.com/css/css_font.asp">CSS Fonts</a> by
 w3schools.com and <a
 href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental
 text and font styling</a> by MDN Web Docs.</em></p>
-<h2 id="font-families">Font Families</h2>
+<section id="font-families" class="level2">
+<h2>Font Families</h2>
 <p>In CSS, fonts are organized into groups of <strong>Font
 Families</strong>. In fact, the font family concept (also known as
 <strong>typeface</strong>) extends beyond CSS to typography in
@@ -379,8 +383,8 @@ href="https://en.wikipedia.org/wiki/Typeface">Typeface</a></figcaption>
 horizontal space than letters that are wide. Fonts in the the
 <code>serif</code> and <code>sans-serif</code> families are typically
 proportional fonts.</p>
-<h3 id="changing-fonts-with-font-family">Changing fonts with
-<code>font-family</code></h3>
+<section id="changing-fonts-with-font-family" class="level3">
+<h3>Changing fonts with <code>font-family</code></h3>
 <p>The fonts available to the browser depend largely on the fonts
 installed in the operating system.</p>
 <blockquote>
@@ -388,7 +392,8 @@ installed in the operating system.</p>
 fonts, from most specific to least specific.</p>
 </blockquote>
 <p>This is also known as a <strong>font stack</strong>:</p>
-<h6 class="sourceCode" id="css">CSS</h6>
+<section id="css" class="level6 sourceCode">
+<h6 class="sourceCode">CSS</h6>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>p {</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-family</span>: <span class="st">&quot;Times New Roman&quot;</span><span class="op">,</span> Times<span class="op">,</span> <span class="dv">serif</span><span class="op">;</span></span>
@@ -409,7 +414,9 @@ instead we can apply them to a root element like the
 <code>&lt;body&gt;</code> and those properties are inherited by
 descendant elements (like <code>&lt;p&gt;</code>,
 <code>&lt;a&gt;</code>, etc.) automatically.</p>
-<h6 class="sourceCode" id="css-1">CSS</h6>
+</section>
+<section id="css-1" class="level6 sourceCode">
+<h6 class="sourceCode">CSS</h6>
 <div class="sourceCode" id="cb2"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>body {</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-family</span>: <span class="st">&quot;Segoe UI&quot;</span><span class="op">,</span> Tahoma<span class="op">,</span> Geneva<span class="op">,</span> Verdana<span class="op">,</span> <span class="dv">sans-serif</span><span class="op">;</span></span>
@@ -417,7 +424,11 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#c
 <p>We can see some examples of this in the CodePen (link) below. We will
 learn more about <strong>inheritance</strong> in CSS as it applies to
 non-typographic elements next week.</p>
-<h2 id="using-web-font-families">Using Web Font Families</h2>
+</section>
+</section>
+</section>
+<section id="using-web-font-families" class="level2">
+<h2>Using Web Font Families</h2>
 <p>So far, all of the fonts that we have seen (Verdana, Times New Roman,
 etc.) are <a
 href="https://www.w3schools.com/cssref/css_websafe_fonts.asp"><strong>Web
@@ -443,7 +454,8 @@ font to add to a project.</figcaption>
 </figure>
 <p>Include the provided link in the head section of your HTML file, just
 like you would link a CSS Style sheet.</p>
-<h6 class="sourceCode" id="html">HTML</h6>
+<section id="html" class="level6 sourceCode">
+<h6 class="sourceCode">HTML</h6>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ot">  href=</span><span class="st">&quot;https://fonts.googleapis.com/css?family=Roboto</span><span class="er">&amp;</span><span class="st">display=swap&quot;</span></span>
@@ -451,12 +463,17 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">/&gt;</span></span></code></pre></div>
 <p>Add the <code>font-family</code> property to your CSS. <strong>Don’t
 forget to add a fall-back font</strong>.</p>
-<h6 class="sourceCode" id="css-2">CSS</h6>
+</section>
+<section id="css-2" class="level6 sourceCode">
+<h6 class="sourceCode">CSS</h6>
 <div class="sourceCode" id="cb4"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>p {</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-family</span>: <span class="st">&quot;Roboto&quot;</span><span class="op">,</span> <span class="dv">sans-serif</span><span class="op">;</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<h2 id="font-size">Font size</h2>
+</section>
+</section>
+<section id="font-size" class="level2">
+<h2>Font size</h2>
 <p>Font size can be set with the <code>font-size</code> property.</p>
 <p><code>font-size</code> value can be set as absolute or relative:</p>
 <p><strong>Absolute size:</strong></p>
@@ -471,8 +488,8 @@ operating system settings).</li>
 below).</li>
 <li>User can adjust it.</li>
 </ul>
-<h3 id="recommendation-inheritance">Recommendation &amp;
-inheritance</h3>
+<section id="recommendation-inheritance" class="level3">
+<h3>Recommendation &amp; inheritance</h3>
 <p>For <code>font-size</code> <strong>it is recommended that you use
 relative CSS units over fixed units.</strong> You need to be aware of
 where your HTML element is inheriting these units from.</p>
@@ -497,7 +514,10 @@ data-cites="michaelhaaf">@michaelhaaf</span></a>) on
 <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-<h2 id="font-weight">Font Weight</h2>
+</section>
+</section>
+<section id="font-weight" class="level2">
+<h2>Font Weight</h2>
 <p>The <a
 href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight"><code>font-weight</code></a>
 property sets how bold the text is, depending on the values supported by
@@ -519,14 +539,18 @@ provide finer grained control than the above keywords.
 <p>See <a
 href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight">font-weight
 by MDN</a> web docs for more information.</p>
-<h6 class="sourceCode" id="css-3">CSS</h6>
+<section id="css-3" class="level6 sourceCode">
+<h6 class="sourceCode">CSS</h6>
 <div class="sourceCode" id="cb5"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>font-weight<span class="in">: bold</span>;</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>font-weight<span class="in">: lighter</span>;</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>font-weight<span class="in">: 200;</span></span></code></pre></div>
-<h2 id="text-decorations">Text Decorations</h2>
+</section>
+</section>
+<section id="text-decorations" class="level2">
+<h2>Text Decorations</h2>
 <p>The <a
 href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration"><code>text-decoration</code></a>
 sets the decorations on fonts (mainly used to change default underline
@@ -538,7 +562,9 @@ on links).</p>
 <li><code>line-through</code>: Puts a <del>strikethrough over the
 text</del>.</li>
 </ul>
-<h2 id="text-layout-alignment">Text Layout &amp; Alignment</h2>
+</section>
+<section id="text-layout-alignment" class="level2">
+<h2>Text Layout &amp; Alignment</h2>
 <p><em>For this section refer to the “Text layout” section of <a
 href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Text_layout">Fundamental
 text and font styling</a> by MDN web docs.</em></p>
@@ -553,7 +579,9 @@ href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing"><code>let
 <li><a
 href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing"><code>word-spacing</code></a></li>
 </ul>
-<h2 id="other-text-styling">Other text styling</h2>
+</section>
+<section id="other-text-styling" class="level2">
+<h2>Other text styling</h2>
 <p>There are many other text styling properties, some more used than
 others:</p>
 <ul>
@@ -567,8 +595,9 @@ Transform you font to upper case, capitalised, full-width, etc.</li>
 href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow"><code>text-shadow</code></a>:
 Applies drop shadows to your text.</li>
 </ul>
-<h2 id="shorthand-properties-notation">Shorthand Properties
-Notation</h2>
+</section>
+<section id="shorthand-properties-notation" class="level2">
+<h2>Shorthand Properties Notation</h2>
 <p>You can set multiple font values in one shot by using the shorthand
 <code>&lt;font&gt;</code> property (many CSS properties have a shorthand
 version):</p>
@@ -593,12 +622,17 @@ href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height"><code>line-h
 <li><a
 href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family"><code>font-family</code></a></li>
 </ul>
-<h6 class="sourceCode" id="css-4">CSS</h6>
+<section id="css-4" class="level6 sourceCode">
+<h6 class="sourceCode">CSS</h6>
 <div class="sourceCode" id="cb6"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>body {</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font</span>: <span class="dv">italic</span> <span class="dv">small-caps</span> <span class="dv">bold</span> <span class="dv">16</span><span class="dt">px</span>/<span class="dv">2</span> <span class="dv">cursive</span><span class="op">;</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<h1 id="the-box-model">The Box Model</h1>
+</section>
+</section>
+</section>
+<section id="the-box-model" class="level1">
+<h1>The Box Model</h1>
 <p><em>This section was adapted from <a
 href="https://www.theodinproject.com/lessons/foundations-the-box-model">The
 Odin Project</a> and <a
@@ -615,7 +649,8 @@ is key to being able to create more complex layouts with CSS, or to
 align items with other items. In this lesson, we will take a look at the
 CSS Box Model. You’ll get an understanding of how it works and the
 terminology that relates to it.</p>
-<h2 id="block-and-inline-boxes">Block and inline boxes</h2>
+<section id="block-and-inline-boxes" class="level2">
+<h2>Block and inline boxes</h2>
 <p>Whether an element is <strong>block</strong> or
 <strong>inline</strong>, ALL elements have well defined box behavior
 that determines how the box behaves in terms of page flow and in
@@ -634,7 +669,9 @@ data-cites="michaelhaaf">@michaelhaaf</span></a>) on
 <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-<h2 id="outer-display-type">Outer display type</h2>
+</section>
+<section id="outer-display-type" class="level2">
+<h2>Outer display type</h2>
 <p>In CSS, all boxes have an <strong>inner display type</strong> and an
 <strong>outer display type</strong>.</p>
 <p>If a box has an outer display type of <code>block</code>, then:</p>
@@ -666,7 +703,9 @@ other inline boxes to move away from the box.</li>
 <code>&lt;span&gt;</code>, <code>&lt;em&gt;</code> and
 <code>&lt;strong&gt;</code> use <code>inline</code> as their outer
 display type by default.</p>
-<h2 id="inner-display-type">Inner display type</h2>
+</section>
+<section id="inner-display-type" class="level2">
+<h2>Inner display type</h2>
 <p>Boxes also have an inner display type, which dictates how elements
 <strong>inside</strong> that box (i.e., the children of the box) are
 laid out.</p>
@@ -681,7 +720,9 @@ take advantage of <strong>very</strong> powerful CSS concepts like
 know that there is a difference between the <em>outer</em> (behavior of
 element itself) and <em>inner</em> (behavior of element’s children)
 display types.</p>
-<h2 id="the-anatomy-of-the-box-model">The Anatomy of the Box Model</h2>
+</section>
+<section id="the-anatomy-of-the-box-model" class="level2">
+<h2>The Anatomy of the Box Model</h2>
 <p>It’s cool and fine that all HTML elements are boxes. But, how do you
 change the behavior of those boxes themselves? We need to know the
 strucure, or anatomy, of the CSS box model:</p>
@@ -709,13 +750,27 @@ alt="Figure from MDN: The Box Model" />
 href="https://www.kirupa.com/html5/viewport_device_document_size.html">The
 Box Model</a></figcaption>
 </figure>
-<h2 id="margins-padding-and-borders">Margins, padding, and borders</h2>
-<h3 id="margin">Margin</h3>
-<h3 id="margin-collapsing">Margin Collapsing</h3>
-<h3 id="padding">Padding</h3>
-<h3 id="borders">Borders</h3>
-<h1 id="knowledge-check">Knowledge Check</h1>
-<h2 id="fonts-1">Fonts</h2>
+</section>
+<section id="margins-padding-and-borders" class="level2">
+<h2>Margins, padding, and borders</h2>
+<section id="margin" class="level3">
+<h3>Margin</h3>
+</section>
+<section id="margin-collapsing" class="level3">
+<h3>Margin Collapsing</h3>
+</section>
+<section id="padding" class="level3">
+<h3>Padding</h3>
+</section>
+<section id="borders" class="level3">
+<h3>Borders</h3>
+</section>
+</section>
+</section>
+<section id="knowledge-check" class="level1">
+<h1>Knowledge Check</h1>
+<section id="fonts-1" class="level2">
+<h2>Fonts</h2>
 <ul>
 <li>What are the differences between the main Generic font
 families?</li>
@@ -725,7 +780,9 @@ sizes?</li>
 <li>What is a “Web Safe” font? What are the ways that we use fonts that
 are not “web safe” in our designs?</li>
 </ul>
-<h2 id="the-box-model-1">The Box Model</h2>
+</section>
+<section id="the-box-model-1" class="level2">
+<h2>The Box Model</h2>
 <ul>
 <li>From inside to outside, what is the order of box-model
 properties?</li>
@@ -739,7 +796,10 @@ contents of an element and its border?</li>
 <li>Would you use margin or padding if you wanted two elements to
 overlap each other?</li>
 </ul>
-<h1 id="exercises">Exercises</h1>
+</section>
+</section>
+<section id="exercises" class="level1">
+<h1>Exercises</h1>
 <ul>
 <li>Odin Project: CSS Foundations Practise Exercises <a
 href="../tutorials/css-exercises-foundations.zip"
@@ -753,7 +813,8 @@ files .zip)</a></li>
 <li>Odin Project: CSS Box Model Practise Exercises <a
 href="../tutorials/css-exercises-box-model.zip"
 title="Odin Project: CSS Box Model Exercises. There are 2 exercises total in this set. You should be able to complete them all with what you have learned during Week 4.">(.zip)</a></li>
-</ul> 
+</ul>
+</section> 
       </article>
     </main>
     <footer class="footer">
