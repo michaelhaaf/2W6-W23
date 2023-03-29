@@ -33,4 +33,6 @@ Stay tuned for more information!
 
 # Exercises
 
-Stay tuned for more information!
+1. Odin Project: CSS Grid Practise Exercises [(.zip)][tutCSSGrid]
+
+[tutCSSGrid]: ../tutorials/css-exercises-grid.zip "Odin Project: CSS Grid Exercises. There are 3 exercises total in this set."

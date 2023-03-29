@@ -48,5 +48,7 @@ Stay tuned for more information!
 
 # Exercises
 
-Stay tuned for more information!
+
+[tutCSSGrid]: ../tutorials/css-exercises-flexbox.zip "Odin Project: CSS Grid Exercises. There are 3 exercises total in this set."
+
 
