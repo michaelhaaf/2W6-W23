@@ -1,151 +1,198 @@
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <link
-      href="../assets/images/favicon.svg"
-      rel="icon"
-      sizes="any"
-      type="image/svg+xml"
-    />
-    <script defer="" src="../assets/js/main.js"></script>
-    <meta content="dark light" name="color-scheme" />
-    <meta charset="utf-8" />
-    <meta content="pandoc" name="generator" />
-    <meta
-      content="width=device-width, initial-scale=1.0, user-scalable=yes"
-      name="viewport"
-    />
-           <title>2W6-W23: User Interfaces</title>
-    <style>
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      div.columns{display: flex; gap: min(4vw, 1.5em);}
-      div.column{flex: auto; overflow-x: auto;}
-      div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-      ul.task-list{list-style: none;}
-      ul.task-list li input[type="checkbox"] {
-        width: 0.8em;
-        margin: 0 0.8em 0.2em -1.6em;
-        vertical-align: middle;
-      }
-      .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-    </style>
-        <link href="../assets/css/style.css" rel="stylesheet" />
-      
-    <!--[if lt IE 9]>
+ <head>
+  <link href="../assets/images/favicon.svg" rel="icon" sizes="any" type="image/svg+xml"/>
+  <script defer="" src="../assets/js/main.js">
+  </script>
+  <meta content="dark light" name="color-scheme"/>
+  <meta charset="utf-8"/>
+  <meta content="pandoc" name="generator"/>
+  <meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+       <title>
+   2W6-W23: User Interfaces
+  </title>
+  <style>
+   code{white-space: pre-wrap;}
+   span.smallcaps{font-variant: small-caps;}
+   div.columns{display: flex; gap: min(4vw, 1.5em);}
+   div.column{flex: auto; overflow-x: auto;}
+   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+   ul.task-list{list-style: none;}
+   ul.task-list li input[type="checkbox"] {
+     width: 0.8em;
+     margin: 0 0.8em 0.2em -1.6em;
+     vertical-align: middle;
+   }
+   .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+    <link href="../assets/css/style.css" rel="stylesheet"/>
+    
+  <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
     <![endif]-->
-  </head>
-  <body class="page-container base">
-    <header class="header background-gradient">
-      <div class="course-info-decoration text-shadow">
-        <button id="theme-toggle-icon" class="theme-toggle-icon"></button>
-        <div>
-          <h1>User Interfaces</h1>
-          <span class="note-text">
-            420-2W6 | Winter 2023 | as taught by
-            <a href="https://github.com/michaelhaaf/2W6-W23"> Michael Haaf </a>
-          </span>
-        </div>
-      </div>
-    </header>
-    <aside class="aside--site surface">
-      <nav id="site-navigation" class="nav nav--site">
-        <h2>Site Navigation</h2>
-        <ul>
-          <li>
-            <a id="site-home" href="../pages/home.html">
-              <img src="../assets/images/home.svg" alt="" class="icon" />
-              <span class="icon-text">Home</span>
-            </a>
-          </li>
-          <li>
-            <a id="site-course-outline" href="../pages/course-outline.html">
-              <img src="../assets/images/outline.svg" alt="" class="icon" />
-              <span class="icon-text">Course Outline</span>
-            </a>
-          </li>
-          <li>
-            <a id="site-calendar" href="../pages/calendar.html">
-              <img src="../assets/images/calendar.svg" alt="" class="icon" />
-              <span class="icon-text">Calendar</span>
-            </a>
-          </li>
-          <li>
-            <button id="site-lectures" class="dropbtn" tabindex="0">
-              <img src="../assets/images/lectures.svg" alt="" class="icon" />
-              <span class="icon-text">Lectures</span>
-            </button>
-            <ul class="dropdown hidden" id="lecture-listing">
-              <li>
-                <a href="../lectures/week01.html"> Week 01 </a>
-              </li>
-              <li>
-                <a href="../lectures/week02.html"> Week 02 </a>
-              </li>
-              <li>
-                <a href="../lectures/week03.html"> Week 03 </a>
-              </li>
-              <li>
-                <a href="../lectures/week04.html"> Week 04 </a>
-              </li>
-              <li>
-                <a href="../lectures/week05.html"> Week 05 </a>
-              </li>
-              <li>
-                <a href="../lectures/week06.html"> Week 06 </a>
-              </li>
-              <li>
-                <a href="../lectures/week07.html"> Week 07 </a>
-              </li>
-              <li>
-                <a href="../lectures/week09.html"> Week 09 </a>
-              </li>
-              <li>
-                <a href="../lectures/week10.html"> Week 10 </a>
-              </li>
-              <li>
-                <a href="../lectures/week11.html"> Week 11 </a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <button id="site-assignments" class="dropbtn" tabindex="0">
-              <img src="../assets/images/assignments.svg" alt="" class="icon" />
-              <span class="icon-text">Assignments</span>
-            </button>
-            <ul class="dropdown hidden" id="assignment-listing">
-              <li>
-                <a href="../assignments/lab1/"> Lab 1 </a>
-              </li>
-              <li>
-                <a href="../assignments/lab2/"> Lab 2 </a>
-              </li>
-              <li>
-                <a href="../assignments/lab3/"> Lab 3 </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </aside>
-        <aside class="aside--page">
-      <nav class="nav nav--page" id="TOC" role="doc-toc">
-                <h2 id="toc-title">On this page</h2>
-         <ul>
+ </head>
+ <body class="page-container base">
+  <header class="header background-gradient">
+   <div class="course-info-decoration text-shadow">
+    <button class="theme-toggle-icon" id="theme-toggle-icon">
+    </button>
+    <div>
+     <h1>
+      User Interfaces
+     </h1>
+     <span class="note-text">
+      420-2W6 | Winter 2023 | as taught by
+      <a href="https://github.com/michaelhaaf/2W6-W23">
+       Michael Haaf
+      </a>
+     </span>
+    </div>
+   </div>
+  </header>
+  <aside class="aside--site surface">
+   <nav class="nav nav--site" id="site-navigation">
+    <h2>
+     Site Navigation
+    </h2>
+    <ul>
+     <li>
+      <a href="../pages/home.html" id="site-home">
+       <img alt="" class="icon" src="../assets/images/home.svg"/>
+       <span class="icon-text">
+        Home
+       </span>
+      </a>
+     </li>
+     <li>
+      <a href="../pages/course-outline.html" id="site-course-outline">
+       <img alt="" class="icon" src="../assets/images/outline.svg"/>
+       <span class="icon-text">
+        Course Outline
+       </span>
+      </a>
+     </li>
+     <li>
+      <a href="../pages/calendar.html" id="site-calendar">
+       <img alt="" class="icon" src="../assets/images/calendar.svg"/>
+       <span class="icon-text">
+        Calendar
+       </span>
+      </a>
+     </li>
+     <li>
+      <button class="dropbtn" id="site-lectures" tabindex="0">
+       <img alt="" class="icon" src="../assets/images/lectures.svg"/>
+       <span class="icon-text">
+        Lectures
+       </span>
+      </button>
+      <ul class="dropdown hidden" id="lecture-listing">
+       <li>
+        <a href="../lectures/week01.html">
+         Week 01
+        </a>
+       </li>
+       <li>
+        <a href="../lectures/week02.html">
+         Week 02
+        </a>
+       </li>
+       <li>
+        <a href="../lectures/week03.html">
+         Week 03
+        </a>
+       </li>
+       <li>
+        <a href="../lectures/week04.html">
+         Week 04
+        </a>
+       </li>
+       <li>
+        <a href="../lectures/week05.html">
+         Week 05
+        </a>
+       </li>
+       <li>
+        <a href="../lectures/week06.html">
+         Week 06
+        </a>
+       </li>
+       <li>
+        <a href="../lectures/week07.html">
+         Week 07
+        </a>
+       </li>
+       <li>
+        <a href="../lectures/week09.html">
+         Week 09
+        </a>
+       </li>
+       <li>
+        <a href="../lectures/week10.html">
+         Week 10
+        </a>
+       </li>
+       <li>
+        <a href="../lectures/week11.html">
+         Week 11
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <button class="dropbtn" id="site-assignments" tabindex="0">
+       <img alt="" class="icon" src="../assets/images/assignments.svg"/>
+       <span class="icon-text">
+        Assignments
+       </span>
+      </button>
+      <ul class="dropdown hidden" id="assignment-listing">
+       <li>
+        <a href="../assignments/lab1/">
+         Lab 1
+        </a>
+       </li>
+       <li>
+        <a href="../assignments/lab2/">
+         Lab 2
+        </a>
+       </li>
+       <li>
+        <a href="../assignments/lab3/">
+         Lab 3
+        </a>
+       </li>
+       <li>
+        <a href="../assignments/lab4/">
+         Lab 4
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </nav>
+  </aside>
+    <aside class="aside--page">
+   <nav class="nav nav--page" id="TOC" role="doc-toc">
+        <h2 id="toc-title">
+     On this page
+    </h2>
+     <ul>
 <li><a href="#course-logistics" id="toc-course-logistics">Course
 Logistics</a></li>
 </ul>
-      </nav>
-    </aside>
-        <main class="main base">
-      <article class="article">
-                 <header id="title-block-header">
-          <h1 class="title">2W6-W23: User Interfaces</h1>
-                     </header>
-         <p>User Interface development is the art and technique of
-creating content, style, and behavior in computer applications. This
-course will focus on web application development using HTML, CSS, and
+   </nav>
+  </aside>
+    <main class="main base">
+   <article class="article">
+         <header id="title-block-header">
+     <h1 class="title">
+      2W6-W23: User Interfaces
+     </h1>
+            </header>
+     <p>User Interface development is the art and technique of creating
+content, style, and behavior in computer applications. This course will
+focus on web application development using HTML, CSS, and
 JavaScript.</p>
 <section id="course-logistics" class="level2">
 <h2>Course Logistics</h2>
@@ -167,16 +214,16 @@ href="https://michaelhaaf.github.io/2W6-W23/">michaelhaaf.github.io/2W6-W23/</a>
 <strong>LEA</strong> will also contain all course information.</li>
 </ul>
 </section> 
-      </article>
-    </main>
-    <footer class="footer">
-      <span class="note-text">
-        © Copyright 2023
-        <a href="https://github.com/michaelhaaf/2W6-W23/blob/main/LICENSE">
-          Michael Haaf
-        </a>
-        . All rights reserved.
-      </span>
-    </footer>
-  </body>
+   </article>
+  </main>
+  <footer class="footer">
+   <span class="note-text">
+    © Copyright 2023
+    <a href="https://github.com/michaelhaaf/2W6-W23/blob/main/LICENSE">
+     Michael Haaf
+    </a>
+    . All rights reserved.
+   </span>
+  </footer>
+ </body>
 </html>

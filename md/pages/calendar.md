@@ -54,7 +54,7 @@ You can compare this calendar with the calendar from the [Course Outline](../pag
 |                  | **Test 1**                                                      | [Week 9 Exercises](../lectures/week09.html#exercises) <br>                |
 |                  |                                                                 | [Week 9 Readings](../lectures/week09.html#readings-and-resources) <br>    |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
-| [Week 10][lec10] | CSS - Mastering 2D layouts with CSS Grid                        | **Lab 3 (12.5%, due April TBD)**: [TBD][lab4] <br>                        |
+| [Week 10][lec10] | CSS - Mastering 2D layouts with CSS Grid                        | **Lab 4 (12.5%, due April 14)**: [Grid Layouts][lab4] <br>                |
 |                  |                                                                 | [Week 10 Exercises](../lectures/week10.html#exercises) <br>               |
 |                  |                                                                 | [Week 10 Readings](../lectures/week10.html#readings) <br>                 |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
@@ -92,7 +92,7 @@ You can compare this calendar with the calendar from the [Course Outline](../pag
 [lab1]: ../assignments/lab1 "Lab 1: worth 5%, due Jan 27"
 [lab2]: ../assignments/lab2 "Lab 2: worth 10%, due Feb 16"
 [lab3]: ../assignments/lab3 "Lab 3: worth 12.5%, due Mar 17"
-[lab4]: ../assignments/lab4 "Lab 4: worth 12.5%, due TBD"
+[lab4]: ../assignments/lab4 "Lab 4: worth 12.5%, due April 14"
 [pm1]: ../assignments/milestone1 "Project Milestone 1: worth 15%, due TBD"
 [pm2]: ../assignments/milestone2 "Project Milestone 2: worth 15%, due TBD"
 
