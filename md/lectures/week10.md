@@ -35,7 +35,7 @@ For this week, the lectures will be based directly on CSS Grid notes from the Od
 
 In the first part of the Grid lessons, you will learn what CSS Grids are: an explicit mechanism for defining two dimensional layouts in CSS. Before Grids (and [Flexbox](../week06.html), complicated website layouts were defined using [Tables][table-layouts] -- terrible! 
 
-[table-layouts]: www.example.org
+[table-layouts]: https://www.hotdesign.com/seybold/
 
 By the end of this lesson, you should be able to:
 
