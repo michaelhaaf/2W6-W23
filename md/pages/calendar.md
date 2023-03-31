@@ -56,7 +56,7 @@ You can compare this calendar with the calendar from the [Course Outline](../pag
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | [Week 10][lec10] | CSS - Mastering 2D layouts with CSS Grid                        | **Lab 4 (12.5%, due April 14)**: [Grid Layouts][lab4] <br>                |
 |                  |                                                                 | [Week 10 Exercises](../lectures/week10.html#exercises) <br>               |
-|                  |                                                                 | [Week 10 Readings](../lectures/week10.html#readings) <br>                 |
+|                  |                                                                 | [Week 10 Readings](../lectures/week10.html#readings-and-resources) <br>   |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | ##### NOTE:      | ##### the weeks below are tentative                             |                                                                           |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+

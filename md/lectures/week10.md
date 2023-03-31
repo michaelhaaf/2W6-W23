@@ -137,10 +137,12 @@ This section contains questions for you to check your understanding of [automate
 1. [CSS Grid Garden][grid-garden]: Similar to Flexbox Froggy and CSS Diner, this is an interactive set of Grid puzzles to help you get used to the mechanics of CSS grid. While it's a bit easy, it is worthwhile to practise to remind yourself of the various CSS Grid properties.
 2. [CSS Grid Garden (solutions)][grid-garden-solutions]: Once you have tried your best to solve the 28 exercises in CSS Grid Garden, you can see reasonable explanations of most of the levels in this article -- in case there are any that you didn't quite understand on your own.
 3. [CSS Tricks: A Complete Guide to Grid][css-tricks-grid]: This article is a complete reference to all of the properties available to CSS Grid containers and items. It is an excellent reference (with visual demonstrations) for what grids are capable of in most situations.
+4. [Kevin Powell: Learn CSS Grid the easy way][kp-grid]: This YouTube tutorial (almost 40mins) is a reasonable introduction and demonstration of how CSS grid works. This is a good supplementary lecture to watch in case you would like additional visual demonstration beyond what we have covered in class.
 
 [grid-garden]: https://cssgridgarden.com/
 [grid-garden-solutions]: https://programmingmentor.com/post/playing-css-grid-garden/
 [css-tricks-grid]: https://css-tricks.com/snippets/css/complete-guide-grid/
+[kp-grid]: https://www.youtube.com/watch?v=rg7Fvvl3taU
 
 # Exercises
 
