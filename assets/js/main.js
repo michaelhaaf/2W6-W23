@@ -39,7 +39,7 @@ const observerOptions = {
 const observeSections = new IntersectionObserver(setActive, observerOptions);
 allSections.forEach((section) => observeSections.observe(section));
 
-// New implementation: measure section intersectionRation
+// implementation v2: measure section intersectionRatio
 // based on: https://css-tricks.com/table-of-contents-with-intersectionobserver/
 function setActive(entries) {
   entries.forEach(entry => {
@@ -56,7 +56,7 @@ function setActive(entries) {
   });
 }
 
-// Old implementation: when header detected, remove active from all others
+// implementation v1: when header detected, remove active from all others
 // function setActive(entries) {
 //   entries.map((e) => {
 //     if (e.isIntersecting === true) {
@@ -69,6 +69,36 @@ function setActive(entries) {
 // }
 
 
+// implementation v3: combine v2 and v1
+// This query defaults to selecting the first section (good). 
+let activeSection = pageContent.querySelector("article > section");
+let activeTocLink = pageToc.querySelector(`#${activeSection.getAttribute('id')}`)
+
+function setActive(observedSections) {
+  observedSections.forEach(section => {
+    const id = section.target.getAttribute('id');
+    const sectionTocLink = document.querySelector(`nav li a[href="#${id}"]`);
+    section.intersectionRatio > 0 ? 
+      sectionTocLink.classList.add("semi-active") : 
+      sectionTocLink.classList.remove("semi-active");
+  });
+  let minViewportDist = Number.MAX_VALUE;
+  let closestSection = activeSection;
+  let closestTocLink = activeTocLink;
+  allSections.forEach(section => {
+    const id = section.getAttribute('id');
+    const viewportDist = section.getBoundingClientRect().top;
+    if (viewportDist > 0 && viewportDist < minViewportDist) {
+      closestSection = pageContent.querySelector(`section#${id}`)
+      closestTocLink = pageToc.querySelector(`a[href="#${id}"]`)
+      minViewportDist = viewportDist;
+    }
+  });
+  tocLinks.forEach((link) => link.classList.remove("active"));
+  closestTocLink.classList.add("active");
+  activeSection = closestSection;
+  activeTocLink = closestTocLink;
+}
 
 
 // Clickable dropdown:

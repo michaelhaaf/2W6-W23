@@ -666,6 +666,16 @@ td h5 {
   color: var(--text);
 }
 
+.nav a.semi-active:link,
+.nav a.semi-active:visited,
+.nav .dropbtn.semi-active,
+.nav a.semi-active:link code,
+.nav a.semi-active:visited code {
+  background-color: var(--surface);
+  color: var(--accent-red);
+  filter: grayscale(15%);
+}
+
 .nav a.active:link,
 .nav a.active:visited,
 .nav .dropbtn.active,
@@ -674,6 +684,7 @@ td h5 {
   background-color: var(--overlay);
   color: var(--accent-red);
   font-weight: bold;
+  filter: none;
 }
 
 /* 
