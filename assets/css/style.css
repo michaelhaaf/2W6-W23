@@ -354,6 +354,14 @@ article > * :not(section, header) {
   flex-direction: column;
 }
 
+
+article section {
+  scroll-margin-top: 3rem;
+}
+article section.level1 {
+  scroll-margin-top: 4.5rem;
+}
+
 article h2, th {
   border-bottom: 1px solid var(--muted);
 }
@@ -959,6 +967,14 @@ header.header {
 
   .nav--page {
     top: 0;
+  }
+
+  article section {
+    scroll-margin-top: 0;
+  }
+
+  article section.level1 {
+    scroll-margin-top: 1.5rem;
   }
 
 }
