@@ -1,11 +1,9 @@
 ---
-title: "2W6-W23: Week 11 Lecture Notes"
+title: "2W6-W23: Week 12 Lecture Notes"
 toc-title: "In this article"
-abstract-title: "Responsive Web Development: Best Practise for Best User Experiences"
+abstract-title: "Intermediate User Interfaces: Forms, Positioning, and more"
 abstract: |
-  Throughout this course, we have learned a variety of techniques for performing particular useful interface tasks. We have focused on learning the mechanics of CSS and HTML in order understand fundamentally how web interfaces are structured.
-
-  This knowledge will pay great dividends in the following section. Here, we are applying our knowledge of HTML and CSS mechanics to learn best practises for creating universally userable, and enjoyable, user interfaces.
+  This will be a collection of topics we have not covered in HTML/CSS so far. In particular, we will learn about HTML Forms.
 
 ---
 
@@ -15,28 +13,10 @@ Last update: Friday, Mar 31, 2023.
 
 # Lesson Overview
 
-- Responsive Web Design Overview
-- Organic responsiveness of pure `HTML`
-- `width`, `height`, et al.: properties for sizing elements
-- More to come
+- HTML Forms
+- More to come!
 
 ---
-
-# Responsive Web Design
-
-Stay tuned for more information!
-
-## Techniques
-
-### Heights vs. Padding
-
-Overflow vs. natural dimensions of container
-
-### Percentages vs. Pixels
-
-### Max-width
-
-Large screens, things get too big,
 
 # HTML Forms
 
@@ -113,13 +93,9 @@ The [`<input>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 
 By default the `type` attribute is "text".
 
-<br>
-
 > The `<input>` element is very extensible and adaptable. There are dozens of properties available. We will only focus on a few.
 >
 > To learn more, visite the [MDN Web docs page on the `<input>` element.](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
-
-<br>
 
 ### &lt;input&gt; Type
 
@@ -130,11 +106,7 @@ There are many values that  `type=` can take, we will focus on the following:
 - Search
 - Submit Button
 
-<br>
-
 The input `type=` can take the following values:
-
-<br>
 
 | Value                                                        | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -163,19 +135,13 @@ The input `type=` can take the following values:
 
 
 
-<br>
-
 Example of radio and email inputs:
-
-<br>
 
 <iframe height="265" style="width: 100%;" scrolling="no" title="wk11-radio_email_search-ex2" src="https://codepen.io/maujac/embed/WNQRKpY?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/maujac/pen/WNQRKpY'>wk11-radio_email_search-ex2</a> by Mauricio Buschinelli
   (<a href='https://codepen.io/maujac'>@maujac</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-
-<br>
 
 ### &lt;label&gt; elements
 
@@ -185,74 +151,50 @@ The [`<label>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 >
 > The `<label>` then needs a `for` attribute whose value is the same as the input's `id`.
 
-<br>
-
 Using `<labels>` for `<inputs>` has two major advantages and is mandatory in this course:
 
 - Screen readers can read out the label when the user is focused on the form input.
 - Clicking on the label will focus/activate the input.
-
-<br>
 
 ```html
 <label for="username">Click me</label>
 <input type="text" id="username">
 ```
 
-<br>
-
 <label for="username">Click me</label>
 <input type="text" id="username">
-
-<br>
 
 ### &lt;input&gt; size & interaction
 
 The [`size` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/size) specifies how much of the input is shown. Has similar result as using CSS `width`, however, sizing is automatically adjusted to the input type.
 
-<br>
-
 There are also properties that will limit the user interaction with the `<input>`:
-
-<br>
 
 - [`disabled`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-disabled): Input value can't be modified and is never sent with the rest of the form data. Typically rendered with a dimmer color
 - [`readonly`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-readonly): User cannot modify the input value but it is still sent with the rest of the form data.
-
-<br>
 
 <iframe height="265" style="width: 100%;" scrolling="no" title="wk11-input-size" src="https://codepen.io/maujac/embed/oNBGWZP?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/maujac/pen/oNBGWZP'>wk11-input-size</a> by Mauricio Buschinelli
   (<a href='https://codepen.io/maujac'>@maujac</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-<br>
-
 ## &lt;textarea&gt; Element
 
 [The `<textare>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea) provides a multi-line text field for larger messages:
-
-<br>
 
 <iframe height="265" style="width: 100%;" scrolling="no" title="wk11-textarea-ex4" src="https://codepen.io/maujac/embed/yLYgRxx?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/maujac/pen/yLYgRxx'>wk11-textarea-ex4</a> by Mauricio Buschinelli
   (<a href='https://codepen.io/maujac'>@maujac</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-<br>
-
 ## Placeholder and default text
 
 To define the default value of an [`<input>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) element you have to use the `value` attribute:
-
-<br>
 
 <iframe height="265" style="width: 100%;" scrolling="no" title="wk11-placeholder_defaults-ex5" src="https://codepen.io/maujac/embed/BaopGZP?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/maujac/pen/BaopGZP'>wk11-placeholder_defaults-ex5</a> by Mauricio Buschinelli
   (<a href='https://codepen.io/maujac'>@maujac</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
-
-<br>
 
 ### &lt;select&gt; element
 
@@ -260,24 +202,14 @@ The [`<select>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Eleme
 
 The [`option`](https://www.w3schools.com/tags/tag_option.asp) tags inside the `<select>` element define the available options in  the drop-down list.
 
-<br>
-
 <iframe class="interactive tabbed-standard" src="https://interactive-examples.mdn.mozilla.net/pages/tabbed/select.html" title="MDN Web Docs Interactive Example" loading="lazy" width="100%" height="400"></iframe>
-
-<br>
-
-## Form submission
 
 There are two ways of triggering a form submission:
 
 - Immediately after an `<input>` of `type=button` is clicked inside a form;
 - Immediately after a `<button>` element is clicked inside a form;
 
-<br>
-
 As far as the form is concerned both methods are functionally the same.
-
-<br>
 
 Depending on the browser and the `action` attribute of the `<form>`, the page might quickly refresh, which can be hard to notice.
 
@@ -285,13 +217,9 @@ Depending on the browser and the `action` attribute of the `<form>`, the page mi
 >
 > This will be covered in the chapter about DOM Events.
 
-<br>
-
 #### Submission with input type="button"
 
 The `<input>` element can be used as a button in order to submit the form. This happens automatically as soon as the button is clicked.
-
-<br>
 
 <iframe height="265" style="width: 100%;" scrolling="no" title="wk11-input_button-ex3" src="https://codepen.io/maujac/embed/JjYEaLZ?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/maujac/pen/JjYEaLZ'>wk11-input_button-ex3</a> by Mauricio Buschinelli
@@ -300,22 +228,14 @@ The `<input>` element can be used as a button in order to submit the form. This 
 
 
 
-<br>
-
 #### Submission with button
 
 The [`<button>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) element can also be used to submit the form. The main difference between the `<button>` and the `<input type="submit">`  is that the `<button>` element can take other elements inside, such as icons or images.
-
-<br>
 
 <iframe height="265" style="width: 100%;" scrolling="no" title="Searchbar demo" src="https://codepen.io/maujac/embed/QWjjjda?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/maujac/pen/QWjjjda'>Searchbar demo</a> by Mauricio Buschinelli
   (<a href='https://codepen.io/maujac'>@maujac</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
-
-<br>
-
-
 
 ## Built-in form validation
 
@@ -334,19 +254,14 @@ This is done by using validation attributes on `<input>` elements:
 
 
 
-<br>
-
 <iframe height="265" style="width: 100%;" scrolling="no" title="wk11-required-ex6" src="https://codepen.io/maujac/embed/OJyWaoB?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/maujac/pen/OJyWaoB'>wk11-required-ex6</a> by Mauricio Buschinelli
   (<a href='https://codepen.io/maujac'>@maujac</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
-<br>
 
 >Note that **data validation only happens once the `<form>` elements experiences a `submit` event.**
 >
 >The `submit` event is only triggered after the button's click has been processed. See DOM Events for more.
-
-<br>
 
 It is also possible (and more common) to do form validation with JavaScript, which we will do later in the course.
 
@@ -366,12 +281,9 @@ Recommended readings:
 
 
 
-<br>
-
  Recommended video:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/E5MEzC0prd4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<br>
 
 ## Hands-on
 
@@ -386,11 +298,6 @@ Complete the following exercises from W3C Schools:
 3. [Input Types](https://www.w3schools.com/html/exercise.asp?filename=exercise_html_form_input_types1)
 4. [Form Attributes](https://www.w3schools.com/html/exercise.asp?filename=exercise_html_form_attributes1)
 
-
-
-
-
-
 # Knowledge Check
 
 Stay tuned for more information!
@@ -400,8 +307,5 @@ Stay tuned for more information!
 Stay tuned for more information!
 
 # Exercises
-
-
-[tutCSSGrid]: ../tutorials/css-exercises-flexbox.zip "Odin Project: CSS Grid Exercises. There are 3 exercises total in this set."
 
 
