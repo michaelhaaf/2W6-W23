@@ -344,8 +344,14 @@ h2 {
 }
 
 /* Now that I have <sections>, there has to be a better way than this... */
-article > * :not(section) {
+article > * :not(section, header) {
   max-width: clamp(30rem, 69%, 42rem);
+}
+
+.abstract, .title {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 article h2, th {
@@ -1003,10 +1009,11 @@ code span.vs { color: var(--accent-orange); } /* VerbatimString */
 code span.wa { color: var(--accent-foam); font-weight: bold; } /* Warning */
 
 .cp_embed_wrapper {
-  max-width: 100%;
+  max-width: 95%;
   margin: 1.5rem 0;
 }
 
+article iframe,
 .cp_embed_wrapper * {
-  max-width: 100%;
+  max-width: 95%;
 }
