@@ -22,39 +22,6 @@ themeToggleIcon.addEventListener("click", toggleTheme);
 
 // Side-scroller Table of Contents with "active" section.
 // Adapted from https://benfrain.com/building-a-table-of-contents-with-active-indicator-using-javascript-intersection-observers/
-const pageContent = document.querySelector("article.article");
-const allSections = pageContent.querySelectorAll("section.level1, section.level2");
-
-const pageToc = document.querySelector(".nav--page");
-const tocLinks = pageToc ? pageToc.querySelectorAll(":scope a") : [];
-
-// adjust overall grid if toc missing. I need to refactor these responsibilities soon.
-if (!pageToc) document.body.setAttribute("data-layout", "column");
-
-const observerOptions = {
-  root: null,
-  rootMargin: "0px",
-};
-
-const observeSections = new IntersectionObserver(setActive, observerOptions);
-allSections.forEach((section) => observeSections.observe(section));
-
-// implementation v2: measure section intersectionRatio
-// based on: https://css-tricks.com/table-of-contents-with-intersectionobserver/
-function setActive(entries) {
-  entries.forEach(entry => {
-    const id = entry.target.getAttribute('id');
-    if (entry.intersectionRatio > 0) {
-      document
-        .querySelector(`nav li a[href="#${id}"]`)
-        .classList.add("active");
-    } else {
-      document
-        .querySelector(`nav li a[href="#${id}"]`)
-        .classList.remove("active");
-    }
-  });
-}
 
 // implementation v1: when header detected, remove active from all others
 // function setActive(entries) {
@@ -68,11 +35,47 @@ function setActive(entries) {
 //   });
 // }
 
+// implementation v2: measure section intersectionRatio
+// based on: https://css-tricks.com/table-of-contents-with-intersectionobserver/
+// function setActive(entries) {
+//   entries.forEach(entry => {
+//     const id = entry.target.getAttribute('id');
+//     if (entry.intersectionRatio > 0) {
+//       document
+//         .querySelector(`nav li a[href="#${id}"]`)
+//         .classList.add("active");
+//     } else {
+//       document
+//         .querySelector(`nav li a[href="#${id}"]`)
+//         .classList.remove("active");
+//     }
+//   });
+// }
+
 
 // implementation v3: combine v2 and v1
-// This query defaults to selecting the first section (good). 
-let activeSection = pageContent.querySelector("article > section");
-let activeTocLink = pageToc.querySelector(`#${activeSection.getAttribute('id')}`)
+// This kinda sucks if we're being honest, but it works well for now.
+let activeSection; let activeTocLink;
+let observerOptions; let observedSections;
+
+const pageContent = document.querySelector("article.article");
+const allSections = pageContent.querySelectorAll("section.level1, section.level2");
+
+const pageToc = document.querySelector(".nav--page");
+const tocLinks = pageToc ? pageToc.querySelectorAll(":scope a") : [];
+
+if (!pageToc) {
+  document.body.setAttribute("data-layout", "column");
+} else {
+  observerOptions = {
+    root: null,
+    rootMargin: "0px",
+  };
+  observeSections = new IntersectionObserver(setActive, observerOptions);
+  allSections.forEach((section) => observeSections.observe(section));
+  activeSection = pageContent.querySelector("article > section");
+  activeTocLink = pageToc.querySelector(`#${activeSection.getAttribute('id')}`)
+}
 
 function setActive(observedSections) {
   observedSections.forEach(section => {
