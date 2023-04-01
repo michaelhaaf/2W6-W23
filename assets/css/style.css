@@ -344,12 +344,16 @@ h2 {
 }
 
 /* Now that I have <sections>, there has to be a better way than this... */
-article > * {
+article > * :not(section) {
   max-width: clamp(30rem, 69%, 42rem);
 }
 
 article h2, th {
   border-bottom: 1px solid var(--muted);
+}
+
+article table {
+  margin: 0 0 1.5rem;
 }
 
 h3, th, .abstract-title {
@@ -999,6 +1003,10 @@ code span.vs { color: var(--accent-orange); } /* VerbatimString */
 code span.wa { color: var(--accent-foam); font-weight: bold; } /* Warning */
 
 .cp_embed_wrapper {
-  max-width: 90%;
+  max-width: 100%;
   margin: 1.5rem 0;
+}
+
+.cp_embed_wrapper * {
+  max-width: 100%;
 }
