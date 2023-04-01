@@ -2,6 +2,8 @@
 ---
 title: '2W6-W23: Week 3 Lecture Notes'
 toc-title: "In this article"
+prev-page: "week02"
+next-page: "week04"
 abstract-title: "CSS Fundamentals"
 abstract: |
   Lesson summary.

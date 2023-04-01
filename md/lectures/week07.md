@@ -1,6 +1,8 @@
 ---
 title: "2W6-W23: Week 7 Lecture Notes"
 toc-title: "In this article"
+prev-page: "week06"
+next-page: "week09"
 abstract-title: "Intermediate Web Development: the Browser, Javascript, and the DOM"
 abstract: |
   In first half of this program, we learned a ton of HTML and CSS. You will continue to learn more about HTML and CSS in this course and in your life -- both are vast subjects.

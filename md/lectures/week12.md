@@ -2,7 +2,6 @@
 title: "2W6-W23: Week 12 Lecture Notes"
 toc-title: "In this article"
 prev-page: "week11"
-next-page: "week13"
 abstract-title: "Intermediate User Interfaces: Forms, Positioning, and more"
 abstract: |
   This will be a collection of topics we have not covered in HTML/CSS so far. In particular, we will learn about HTML Forms.

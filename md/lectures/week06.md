@@ -1,6 +1,8 @@
 ---
 title: "2W6-W23: Week 6 Lecture Notes"
 toc-title: "In this article"
+prev-page: "week05"
+next-page: "week07"
 abstract-title: "Intro to Layouts in CSS: Intro to Flexbox"
 abstract: |
   Last week, we learned how to control the horizontal position of HTML block elements using Floats. For a long time, Floats (and tables) were the gold-standard techniques for creating web layouts.
