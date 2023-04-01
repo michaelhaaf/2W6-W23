@@ -380,6 +380,10 @@ h3, th, .abstract-title {
   font-weight: 400;
 }
 
+.abstract-title {
+  margin-top: 0;
+}
+
 /* Margins/padding are off, needs revision */
 h4 {
   margin: 0;
