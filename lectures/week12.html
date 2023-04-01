@@ -184,26 +184,30 @@ Overview</a></li>
 <ul>
 <li><a href="#the-form-element" id="toc-the-form-element">The
 <code>&lt;form&gt;</code> Element</a></li>
-<li><a href="#input-element" id="toc-input-element">&lt;input&gt;
-Element</a></li>
-<li><a href="#textarea-element"
-id="toc-textarea-element">&lt;textarea&gt; Element</a></li>
+<li><a href="#the-input-element" id="toc-the-input-element">The
+<code>&lt;input&gt;</code> Element</a></li>
+<li><a href="#the-textarea-element" id="toc-the-textarea-element">The
+<code>&lt;textarea&gt;</code> Element</a></li>
 <li><a href="#placeholder-and-default-text"
 id="toc-placeholder-and-default-text">Placeholder and default
 text</a></li>
 <li><a href="#built-in-form-validation"
 id="toc-built-in-form-validation">Built-in form validation</a></li>
-<li><a href="#references-diving-deeper"
-id="toc-references-diving-deeper">References &amp; Diving
-Deeper</a></li>
-<li><a href="#hands-on" id="toc-hands-on">Hands-on</a></li>
 </ul></li>
 <li><a href="#knowledge-check" id="toc-knowledge-check">Knowledge
 Check</a></li>
 <li><a href="#readings" id="toc-readings">Readings</a></li>
-<li><a href="#exercises-1" id="toc-exercises-1">Exercises</a></li>
+<li><a href="#exercises" id="toc-exercises">Exercises</a></li>
 </ul>
-   </nav>
+        <a class="" href="../lectures/week11.html">
+          <img class="icon" src="../assets/images/feather-icons/chevron-left.svg" alt="">
+          <h3 class="icon-text">Previous page...</h3>
+    </a>
+            <a class="" href="../lectures/week13.html">
+      <h3 class="icon-text">Next page...</h3>
+      <img class="icon" src="../assets/images/feather-icons/chevron-right.svg" alt="">
+    </a>
+       </nav>
   </aside>
     <main class="main base">
    <article class="article">
@@ -382,8 +386,8 @@ data-cites="maujac">@maujac</span></a>) on
 element attributes <a
 href="https://www.w3schools.com/tags/tag_form.asp">here</a>.</p>
 </section>
-<section id="input-element" class="level2">
-<h2>&lt;input&gt; Element</h2>
+<section id="the-input-element" class="level2">
+<h2>The <code>&lt;input&gt;</code> Element</h2>
 <p>The <a
 href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code>
 element</a> can be displayed in several ways, depending on the
@@ -398,7 +402,7 @@ href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">MDN
 Web docs page on the <code>&lt;input&gt;</code> element.</a></p>
 </blockquote>
 <section id="input-type" class="level3">
-<h3>&lt;input&gt; Type</h3>
+<h3><code>&lt;input&gt;</code> Type</h3>
 <p>There are many values that <code>type=</code> can take, we will focus
 on the following:</p>
 <ul>
@@ -544,8 +548,8 @@ class="citation" data-cites="maujac">@maujac</span></a>) on
 <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 </section>
-<section id="label-elements" class="level3">
-<h3>&lt;label&gt; elements</h3>
+<section id="the-label-elements" class="level3">
+<h3>The <code>&lt;label&gt;</code> elements</h3>
 <p>The <a
 href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label"><code>&lt;label&gt;</code>
 element</a> associates a text caption with an <code>&lt;input&gt;</code>
@@ -566,7 +570,7 @@ the form input.</li>
 </ul>
 </section>
 <section id="input-size-interaction" class="level3">
-<h3>&lt;input&gt; size &amp; interaction</h3>
+<h3><code>&lt;input&gt;</code> size &amp; interaction</h3>
 <p>The <a
 href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/size"><code>size</code>
 attribute</a> specifies how much of the input is shown. Has similar
@@ -593,8 +597,8 @@ class="citation" data-cites="maujac">@maujac</span></a>) on
 </iframe>
 </section>
 </section>
-<section id="textarea-element" class="level2">
-<h2>&lt;textarea&gt; Element</h2>
+<section id="the-textarea-element" class="level2">
+<h2>The <code>&lt;textarea&gt;</code> Element</h2>
 <p><a
 href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">The
 <code>&lt;textare&gt;</code> element</a> provides a multi-line text
@@ -619,8 +623,8 @@ by Mauricio Buschinelli (<a href='https://codepen.io/maujac'><span
 class="citation" data-cites="maujac">@maujac</span></a>) on
 <a href='https://codepen.io'>CodePen</a>.
 </iframe>
-<section id="select-element" class="level3">
-<h3>&lt;select&gt; element</h3>
+<section id="the-select-element" class="level3">
+<h3>The <code>&lt;select&gt;</code> element</h3>
 <p>The <a
 href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code>
 element</a> is used to create a drop-down list of options.</p>
@@ -642,11 +646,6 @@ same.</p>
 <p>Depending on the browser and the <code>action</code> attribute of the
 <code>&lt;form&gt;</code>, the page might quickly refresh, which can be
 hard to notice.</p>
-<blockquote>
-<p><strong>If you do not want a form to submit immediately, then you
-must stop this default behaviour using JavaScript.</strong></p>
-<p>This will be covered in the chapter about DOM Events.</p>
-</blockquote>
 <section id="submission-with-input-typebutton" class="level4">
 <h4>Submission with input type=“button”</h4>
 <p>The <code>&lt;input&gt;</code> element can be used as a button in
@@ -684,7 +683,7 @@ data-cites="maujac">@maujac</span></a>) on
 <p>One of the most significant features of <a
 href="https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types">HTML5
 form controls</a> is the ability to validate most user data without
-relying on JavaScript.</p>
+relying onJavaScript.</p>
 <p>This is done by using validation attributes on
 <code>&lt;input&gt;</code> elements:</p>
 <ul>
@@ -718,15 +717,14 @@ event.</strong></p>
 <p>The <code>submit</code> event is only triggered after the button’s
 click has been processed. See DOM Events for more.</p>
 </blockquote>
-<p>It is also possible (and more common) to do form validation with
-JavaScript, which we will do later in the course.</p>
-<p>See <a
-href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation">Client-side
-form validation</a> by MDN web docs for more information.</p>
 </section>
-<section id="references-diving-deeper" class="level2">
-<h2>References &amp; Diving Deeper</h2>
-<p>Recommended readings:</p>
+</section>
+<section id="knowledge-check" class="level1">
+<h1>Knowledge Check</h1>
+<p>Stay tuned for more information!</p>
+</section>
+<section id="readings" class="level1">
+<h1>Readings</h1>
 <ul>
 <li><a
 href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Basic_native_form_controls">Basic
@@ -738,16 +736,14 @@ Magazine</li>
 <li><a
 href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation">Client-side
 form validation</a> by MDN web docs</li>
+<li><a href="https://www.youtube.com/E5MEzC0prd4">Youtube
+tutorial</a></li>
 </ul>
-<p>Recommended video:</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/E5MEzC0prd4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-</iframe>
 </section>
-<section id="hands-on" class="level2">
-<h2>Hands-on</h2>
-<section id="exercises" class="level3">
-<h3>Exercises</h3>
-<p>Complete the following exercises from W3C Schools:</p>
+<section id="exercises" class="level1">
+<h1>Exercises</h1>
+<p>(Not part of an assignment, just to study for Test 2) Complete the
+following exercises from W3C Schools:</p>
 <ol type="1">
 <li><a
 href="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_forms1">HTML
@@ -762,19 +758,6 @@ Types</a></li>
 href="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_form_attributes1">Form
 Attributes</a></li>
 </ol>
-</section>
-</section>
-</section>
-<section id="knowledge-check" class="level1">
-<h1>Knowledge Check</h1>
-<p>Stay tuned for more information!</p>
-</section>
-<section id="readings" class="level1">
-<h1>Readings</h1>
-<p>Stay tuned for more information!</p>
-</section>
-<section id="exercises-1" class="level1">
-<h1>Exercises</h1>
 </section> 
    </article>
   </main>

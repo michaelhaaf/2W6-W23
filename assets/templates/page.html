@@ -180,6 +180,18 @@
      $toc-title$
     </h2>
     $endif$ $table-of-contents$
+    $if(prev-page)$
+    <a class="" href="../lectures/$prev-page$.html">
+          <img class="icon" src="../assets/images/feather-icons/chevron-left.svg" alt="">
+          <h3 class="icon-text">Previous page...</h3>
+    </a>
+    $endif$
+    $if(next-page)$
+    <a class="" href="../lectures/$next-page$.html">
+      <h3 class="icon-text">Next page...</h3>
+      <img class="icon" src="../assets/images/feather-icons/chevron-right.svg" alt="">
+    </a>
+    $endif$
    </nav>
   </aside>
   $endif$
@@ -225,4 +237,3 @@
   </footer>
  </body>
 </html>
-
