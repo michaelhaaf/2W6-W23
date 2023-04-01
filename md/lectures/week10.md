@@ -27,11 +27,16 @@ By the end of these lessons, you will know:
 
 # CSS Grid Fundamentals
 
-**Lecture Notes:** [Grid Fundamentals (Introduction to Grid)](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-advanced-grid-properties).
+**Lecture Notes:** [Grid Fundamentals (Introduction to Grid)][odin-fundamentals]
 
 ## Overview
 
 For this week, the lectures will be based directly on CSS Grid notes from the Odin Project.
+
+[odin-fundamentals]: https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-introduction-to-grid
+[odin-creating-grid]: https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-creating-a-grid
+[odin-positioning-grid]: https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-positioning-grid-elements
+[odin-automated-grid]: https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-advanced-grid-properties
 
 In the first part of the Grid lessons, you will learn what CSS Grids are: an explicit mechanism for defining two dimensional layouts in CSS. Before Grids (and [Flexbox](../week06.html), complicated website layouts were defined using [Tables][table-layouts] -- terrible! 
 
@@ -52,7 +57,7 @@ This section contains questions for you to check your understanding of [grid fun
 
 # Creating a Grid
 
-**Lecture Notes:** [Creating a Grid](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-creating-a-grid)
+**Lecture Notes:** [Creating a Grid][odin-creating-grid]
 
 ## Overview
 
@@ -79,7 +84,7 @@ This section contains questions for you to check your understanding of [creating
 
 # Positioning Grid Items 
 
-**Lecture Notes:** [Positioning Grid Items](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-positioning-grid-elements)
+**Lecture Notes:** [Positioning Grid Items][odin-positioning-grid]
 
 ## Overview 
 
@@ -104,7 +109,7 @@ This section contains questions for you to check your understanding of [position
 
 # Automated Grids
 
-**Lecture Notes:** [Automated Grids (Advanced Grid Properties)](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-advanced-grid-properties)
+**Lecture Notes:** [Automated Grids (Advanced Grid Properties)][odin-automated-grid]
 
 ## Overview
 

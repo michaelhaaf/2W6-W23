@@ -7,7 +7,6 @@ abstract: |
 
 ---
 
-Last update: Friday, Mar 31, 2023.
 
 ---
 
@@ -15,6 +14,8 @@ Last update: Friday, Mar 31, 2023.
 
 - HTML Forms
 - More to come!
+
+Last update: Friday, Mar 31, 2023.
 
 ---
 
@@ -142,7 +143,6 @@ Example of radio and email inputs:
   (<a href='https://codepen.io/maujac'>@maujac</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-
 ### &lt;label&gt; elements
 
 The [`<label>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label) associates a text caption with an `<input>` field.
@@ -155,14 +155,6 @@ Using `<labels>` for `<inputs>` has two major advantages and is mandatory in thi
 
 - Screen readers can read out the label when the user is focused on the form input.
 - Clicking on the label will focus/activate the input.
-
-```html
-<label for="username">Click me</label>
-<input type="text" id="username">
-```
-
-<label for="username">Click me</label>
-<input type="text" id="username">
 
 ### &lt;input&gt; size & interaction
 
