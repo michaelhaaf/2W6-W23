@@ -345,7 +345,7 @@ h2 {
 
 /* Now that I have <sections>, there has to be a better way than this... */
 article > * :not(section, header) {
-  max-width: clamp(30rem, 69%, 42rem);
+  max-width: clamp(20rem, 69%, 42rem);
 }
 
 .abstract, .title {
@@ -641,6 +641,10 @@ td h5 {
 * ||| .nav <a> 
 */
 
+.nav {
+  overflow-y: auto;
+}
+
 .nav h3 {
   margin-top: 0;
 }
@@ -922,7 +926,7 @@ header.header {
 
 @media only screen and (min-width: 48rem) {
   .page-container {
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: minmax(20rem, 1fr) auto;
     grid-template-areas:
       "hd hd"
       "nv nv"
@@ -932,7 +936,7 @@ header.header {
 
   /* Note: duplication with this implementation. Needs refactor */
   .page-container[data-layout="column"] {
-    grid-template-columns: minmax(20rem, 1fr);
+    grid-template-columns: auto;
     grid-template-areas:
       "hd"
       "nv"
@@ -951,7 +955,7 @@ header.header {
 
 @media only screen and (min-width: 80rem) {
   .page-container {
-    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-columns: auto minmax(20rem, 1fr) auto;
     grid-template-areas:
       "hd hd hd"
       "nv mn sd"
@@ -961,7 +965,7 @@ header.header {
 
   /* Note: duplication with this implementation. Needs refactor */
   .page-container[data-layout="column"] {
-    grid-template-columns: 1fr minmax(20rem, 5fr);
+    grid-template-columns: minmax(20rem, 1fr) auto;
     grid-template-areas:
       "hd hd"
       "nv mn"
@@ -980,7 +984,7 @@ header.header {
     padding-left: 0.75rem;
     text-align: left;
     justify-content: flex-start;
-    min-width: 24ch;
+    min-width: 30ch;
   }
 
   .nav--site {
