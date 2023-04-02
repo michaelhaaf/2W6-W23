@@ -343,12 +343,15 @@ h2 {
   font-weight: 400;
 }
 
-/* Now that I have <sections>, there has to be a better way than this... */
-article > * :not(section, header) {
+article * {
   max-width: clamp(20rem, 69%, 42rem);
 }
+article section, 
+article header {
+  max-width: 100%;
+}
 
-.abstract, .title {
+.abstract, .title, #title-block-header {
   max-width: 100%;
   display: flex;
   flex-direction: column;

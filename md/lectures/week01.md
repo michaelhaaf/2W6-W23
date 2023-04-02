@@ -2,7 +2,7 @@
 ---
 title: '2W6-W23: Week 1 Lecture Notes'
 toc-title: "In this article"
-next-page: "week01"
+next-page: "week02"
 abstract-title: "Introduction to User Interface Development"
 abstract: |
   Lesson summary.
