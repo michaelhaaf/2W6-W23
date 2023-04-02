@@ -62,6 +62,7 @@
 */
   --base: #faf4ed;
   --surface: #fffaf3;
+  --surface-2: #f2e9e1;
   --overlay: #f2e9e1;
   --muted: #9893a5;
   --muted-subtle: #797593;
@@ -91,6 +92,7 @@
 */
   --base: #232136;
   --surface: #2a273f;
+  --surface-2: #2a273f;
   --overlay: #393552;
   --muted: #6e6a86;
   --muted-subtle: #908caa;
@@ -123,6 +125,7 @@
   :root {
     --base: #232136;
     --surface: #2a273f;
+    --surface-2: #2a273f;
     --overlay: #393552;
     --muted: #6e6a86;
     --muted-subtle: #908caa;
@@ -348,6 +351,10 @@ article * {
 }
 article section, 
 article header {
+  max-width: 100%;
+}
+
+article li {
   max-width: 100%;
 }
 
@@ -655,7 +662,6 @@ td h5 {
   color: var(--subtle);
   font-size: 0.875em;
   line-height: 1.5rem;
-
   text-decoration: none;
   white-space: nowrap;
   overflow: hidden;
@@ -682,7 +688,7 @@ td h5 {
 .nav .dropbtn.semi-active,
 .nav a.semi-active:link code,
 .nav a.semi-active:visited code {
-  background-color: var(--surface);
+  background-color: var(--surface-2);
   color: var(--accent-red);
   filter: grayscale(15%);
 }
@@ -705,6 +711,13 @@ td h5 {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+/*
+* ||| nav--page 
+*/
+.nav--page {
+  padding: 0.5rem 1.5rem 0 0;
 }
 
 /* 
@@ -930,7 +943,7 @@ header.header {
 
 @media only screen and (min-width: 48rem) {
   .page-container {
-    grid-template-columns: minmax(20rem, 1fr) auto;
+    grid-template-columns: minmax(20rem, 1fr) minmax(auto, 30ch);
     grid-template-areas:
       "hd hd"
       "nv nv"
@@ -940,7 +953,7 @@ header.header {
 
   /* Note: duplication with this implementation. Needs refactor */
   .page-container[data-layout="column"] {
-    grid-template-columns: auto;
+    grid-template-columns: minmax(20rem, 1fr);
     grid-template-areas:
       "hd"
       "nv"
@@ -959,7 +972,7 @@ header.header {
 
 @media only screen and (min-width: 80rem) {
   .page-container {
-    grid-template-columns: auto minmax(20rem, 1fr) auto;
+    grid-template-columns: minmax(auto, 30ch) minmax(20rem, 1fr) minmax(auto, 30ch);
     grid-template-areas:
       "hd hd hd"
       "nv mn sd"
@@ -969,7 +982,7 @@ header.header {
 
   /* Note: duplication with this implementation. Needs refactor */
   .page-container[data-layout="column"] {
-    grid-template-columns: minmax(20rem, 1fr) auto;
+    grid-template-columns: minmax(auto, 30ch) minmax(20rem, 1fr);
     grid-template-areas:
       "hd hd"
       "nv mn"
