@@ -1,6 +1,5 @@
 ---
 title: "2W6-W23: Week 11 Lecture Notes"
-toc-title: "In this article"
 prev-page: "week10"
 next-page: "week12"
 abstract-title: "Responsive Web Development: Best Practise for Best User Experiences"

@@ -1,6 +1,5 @@
 ---
 title: "2W6-W23: Week 10 Lecture Notes"
-toc-title: "In this article"
 prev-page: "week09"
 next-page: "week11"
 abstract-title: "Intermediate CSS: Mastering Layouts with CSS Grid"

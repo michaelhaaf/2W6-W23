@@ -1,6 +1,5 @@
 ---
 title: "2W6-W23: Week 7 Lecture Notes"
-toc-title: "In this article"
 prev-page: "week06"
 next-page: "week09"
 abstract-title: "Intermediate Web Development: the Browser, Javascript, and the DOM"

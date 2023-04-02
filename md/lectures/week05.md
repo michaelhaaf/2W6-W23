@@ -1,6 +1,5 @@
 ---
 title: "2W6-W23: Week 5 Lecture Notes"
-toc-title: "In this article"
 prev-page: "week04"
 next-page: "week06"
 abstract-title: "Intro to Layouts and Floats in CSS"

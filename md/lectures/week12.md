@@ -1,6 +1,5 @@
 ---
 title: "2W6-W23: Week 12 Lecture Notes"
-toc-title: "In this article"
 prev-page: "week11"
 abstract-title: "Intermediate User Interfaces: Forms, Positioning, and more"
 abstract: |

@@ -1,6 +1,5 @@
 ---
 title: "2W6-W23: Week 4 Lecture Notes"
-toc-title: "In this article"
 prev-page: "week03"
 next-page: "week05"
 abstract-title: "Styling HTML content with CSS"

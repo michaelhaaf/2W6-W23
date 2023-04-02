@@ -1,6 +1,5 @@
 ---
 title: "2W6-W23: Week 6 Lecture Notes"
-toc-title: "In this article"
 prev-page: "week05"
 next-page: "week07"
 abstract-title: "Intro to Layouts in CSS: Intro to Flexbox"
