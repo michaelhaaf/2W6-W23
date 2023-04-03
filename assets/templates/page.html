@@ -137,6 +137,11 @@
          Week 11
         </a>
        </li>
+       <li>
+        <a href="../lectures/week12.html">
+         Week 12
+        </a>
+       </li>
       </ul>
      </li>
      <li>
@@ -182,15 +187,19 @@
     $endif$ 
     $if(prev-page)$
     <a class="" href="$prev-page$">
-          <img class="icon" src="../assets/images/feather-icons/chevron-left.svg" alt="">
-          <h3 class="icon-text">Previous page...</h3>
+     <img alt="" class="icon" src="../assets/images/feather-icons/chevron-left.svg"/>
+     <h3 class="icon-text">
+      Previous page...
+     </h3>
     </a>
     $endif$
     $table-of-contents$
     $if(next-page)$
     <a class="" href="$next-page$">
-      <img class="icon" src="../assets/images/feather-icons/chevron-right.svg" alt="">
-      <h3 class="icon-text">Next page...</h3>
+     <img alt="" class="icon" src="../assets/images/feather-icons/chevron-right.svg"/>
+     <h3 class="icon-text">
+      Next page...
+     </h3>
     </a>
     $endif$
    </nav>
@@ -220,9 +229,12 @@
      </div>
      $endif$ $if(date)$
      <p class="date">
-      Last update: <time datetime="$datetime$">$date$</time>
+      Last update:
+      <time datetime="$datetime$">
+       $date$
+      </time>
      </p>
-     $endif$ 
+     $endif$
     </header>
     $endif$ $body$ $for(include-after)$ $include-after$ $endfor$
    </article>
@@ -230,7 +242,7 @@
   <footer class="footer">
    <span class="note-text">
     © Copyright 2023
-    <a href="https://github.com/michaelhaaf/2W6-W23/blob/main/LICENSE">
+    <a href="../pages/home.html#copyright">
      Michael Haaf
     </a>
     . All rights reserved.
@@ -238,3 +250,4 @@
   </footer>
  </body>
 </html>
+
