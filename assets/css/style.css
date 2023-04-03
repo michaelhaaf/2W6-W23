@@ -317,6 +317,7 @@ em {
 }
 strong {
   font-style: bold;
+  color: var(--text);
 }
 
 body {
@@ -360,7 +361,6 @@ article :is(section, header, li, blockquote) {
   flex-direction: column;
 }
 
-
 article section {
   scroll-margin-top: 3rem;
 }
@@ -374,7 +374,7 @@ article h2, th {
 
 article table {
   margin: 0 0 1.5rem;
-  max-width: 69%;
+  max-width: 90%;
 }
 
 h3, th, .abstract-title {
@@ -457,10 +457,8 @@ pre {
 h6.sourceCode,
 div.sourceCode {
   background-color: var(--overlay);
-  border-left: 1rem solid var(--accent-orange);
-  padding: 0.75rem;
-  padding-bottom: 1.5rem;
-  padding-top: 0;
+  border-left: 2px solid var(--accent-foam);
+  padding: 0 1.5rem 1.5rem;
   margin-top: 0;
 }
 
@@ -498,7 +496,8 @@ article {
 }
 
 article p,
-article li {
+article li,
+article td {
   color: var(--subtle);
 }
 
