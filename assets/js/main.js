@@ -60,6 +60,7 @@ let observerOptions; let observedSections;
 
 const pageContent = document.querySelector("article.article");
 const allSections = pageContent.querySelectorAll("section.level1, section.level2");
+const currentActiveSections = [];
 
 const pageToc = document.querySelector(".nav--page");
 const tocLinks = pageToc ? pageToc.querySelectorAll(":scope a") : [];
@@ -81,9 +82,16 @@ function setActive(observedSections) {
   observedSections.forEach(section => {
     const id = section.target.getAttribute('id');
     const sectionTocLink = document.querySelector(`nav li a[href="#${id}"]`);
-    section.intersectionRatio > 0 ? 
-      sectionTocLink.classList.add("semi-active") : 
+    if (section.intersectionRatio > 0) { 
+      sectionTocLink.classList.add("semi-active");
+      currentActiveSections.push(section.target);
+    } else {
       sectionTocLink.classList.remove("semi-active");
+      const index = currentActiveSections.indexOf(section.target);
+      if (index > -1) {
+        currentActiveSections.splice(index, 1);
+      }
+    }
   });
   let minViewportDist = Number.MAX_VALUE;
   let closestSection = activeSection;
