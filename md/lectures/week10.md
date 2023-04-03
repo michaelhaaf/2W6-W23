@@ -1,16 +1,15 @@
 ---
 title: "2W6-W23: Week 10 Lecture Notes"
-prev-page: "week09"
-next-page: "week11"
+date: 2023-03-31
+toc-title: "Lecture navigation"
+prev-page: "../lectures/week09.html"
+next-page: "../lectures/week11.html"
 abstract-title: "Intermediate CSS: Mastering Layouts with CSS Grid"
 abstract: |
   We are now reaching a point in our CSS skills that we can create almost any layout or structure that we can envision.
 
   This week, we will learn about CSS Grid. These lecture notes are summaries adapted directly from The Odin Project.
-
 ---
-
-Last update: Friday, March 31, 2023
 
 ---
 

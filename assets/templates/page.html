@@ -175,19 +175,20 @@
   $if(toc)$
   <aside class="aside--page">
    <nav class="nav nav--page" id="$idprefix$TOC" role="doc-toc">
-    $if(prev-page)$
-    <a class="" href="../lectures/$prev-page$.html">
-          <img class="icon" src="../assets/images/feather-icons/chevron-left.svg" alt="">
-          <h3 class="icon-text">Previous page...</h3>
-    </a>
-    $endif$
     $if(toc-title)$
     <h2 id="$idprefix$toc-title">
      $toc-title$
     </h2>
-    $endif$ $table-of-contents$
+    $endif$ 
+    $if(prev-page)$
+    <a class="" href="$prev-page$">
+          <img class="icon" src="../assets/images/feather-icons/chevron-left.svg" alt="">
+          <h3 class="icon-text">Previous page...</h3>
+    </a>
+    $endif$
+    $table-of-contents$
     $if(next-page)$
-    <a class="" href="../lectures/$next-page$.html">
+    <a class="" href="$next-page$">
       <img class="icon" src="../assets/images/feather-icons/chevron-right.svg" alt="">
       <h3 class="icon-text">Next page...</h3>
     </a>
@@ -210,18 +211,18 @@
      <p class="author">
       $author$
      </p>
-     $endfor$ $if(date)$
-     <p class="date">
-      $date$
-     </p>
-     $endif$ $if(abstract)$
+     $endfor$ $if(abstract)$
      <div class="abstract">
       <div class="abstract-title">
        $abstract-title$
       </div>
       $abstract$
      </div>
-     $endif$
+     $endif$ $if(date)$
+     <p class="date">
+      Last update: <time datetime="$datetime$">$date$</time>
+     </p>
+     $endif$ 
     </header>
     $endif$ $body$ $for(include-after)$ $include-after$ $endfor$
    </article>

@@ -1,16 +1,14 @@
 ---
 title: "2W6-W23: Week 11 Lecture Notes"
-prev-page: "week10"
-next-page: "week12"
+toc-title: "Lecture navigation"
+prev-page: "../lectures/week10.html"
+next-page: "../lectures/week12.html"
 abstract-title: "Responsive Web Development: Best Practise for Best User Experiences"
 abstract: |
   Throughout this course, we have learned a variety of techniques for performing particular useful interface tasks. We have focused on learning the mechanics of CSS and HTML in order understand fundamentally how web interfaces are structured.
 
   This knowledge will pay great dividends in the following section. Here, we are applying our knowledge of HTML and CSS mechanics to learn best practises for creating universally userable, and enjoyable, user interfaces.
-
 ---
-
-Last update: Friday, Mar 31, 2023.
 
 ---
 

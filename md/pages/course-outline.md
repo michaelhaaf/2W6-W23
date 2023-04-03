@@ -1,13 +1,14 @@
-
 ---
 title: "2W6-W23: Course Outline"
-theme: solarized
-highlight: default
-toc-title: "On this page"
+toc-title: "Page navigation"
+prev-page: "../pages/home.html"
+next-page: "../pages/calendar.html"
 lang: "en"
+abstract-title: "User Interfaces -- Computer Science Technology 420.B0"
+abstract: |
+  This document was converted to HTML for presentation on this website using [pandoc](https://pandoc.org/). The course outline is also available for download as a [.pdf file](../assets/documents/course_outline.pdf).
 ---
 
-This article was converted to html for presentation on this website using [pandoc](https://pandoc.org/). The course outline is also available for download as a [.pdf file](../assets/documents/course_outline.pdf).
 
 # GENERAL INFORMATION
 

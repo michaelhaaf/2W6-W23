@@ -3,6 +3,7 @@
 # Markdown source
 PAGES_MD := $(wildcard md/pages/*.md)
 LECTURES_MD := $(wildcard md/lectures/*.md)
+HOME_MD := ./md/pages/home.md
 
 # HTML target
 LISTINGS_HTML := $(wildcard assets/listings/*.html)
@@ -13,6 +14,7 @@ LECTURES_HTML := $(LECTURES_MD:md/lectures/%.md=lectures/%.html)
 PAGE_TEMPLATE := ./assets/templates/page.html
 HIGHLIGHT_STYLE := ./assets/css/code-highlight.theme
 HTML_WRITER := ./assets/filters/separate-alt-figcaption.lua
+DATE_WRITER := ./assets/filters/last-updated.lua
 # Path relative to output
 PAGE_STYLE := ../assets/css/style.css
 # Common options
@@ -20,6 +22,7 @@ PANDOC_OPTIONS = --standalone \
 	--table-of-contents \
 	--toc-depth=2 \
 	--section-divs \
+	--lua-filter=$(DATE_WRITER) \
 	--css $(PAGE_STYLE) \
 	--template $(PAGE_TEMPLATE) \
 	--highlight-style $(HIGHLIGHT_STYLE) \
@@ -45,7 +48,9 @@ $(PAGE_TEMPLATE): assets/listings/*.html
 	touch $(PAGES_MD) $(LECTURES_MD)
 
 lectures/%.html: md/lectures/%.md
+	touch $(HOME_MD)
 	pandoc $(PANDOC_OPTIONS) -o $@ $<
 
 pages/%.html: md/pages/%.md
+	touch $(HOME_MD)
 	pandoc $(PANDOC_OPTIONS) -o $@ $<

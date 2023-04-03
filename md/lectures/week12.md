@@ -1,12 +1,12 @@
 ---
 title: "2W6-W23: Week 12 Lecture Notes"
-prev-page: "week11"
+toc-title: "Lecture navigation"
+prev-page: "../lectures/week11.html"
+next-page: "../pages/calendar.html"
 abstract-title: "Intermediate User Interfaces: Forms, Positioning, and more"
 abstract: |
   This will be a collection of topics we have not covered in HTML/CSS so far. In particular, we will learn about HTML Forms.
-
 ---
-
 
 ---
 
@@ -14,8 +14,6 @@ abstract: |
 
 - HTML Forms
 - More to come!
-
-Last update: Friday, Mar 31, 2023.
 
 ---
 

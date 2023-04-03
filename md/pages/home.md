@@ -1,13 +1,12 @@
-
 ---
 title: "2W6-W23: User Interfaces"
-theme: solarized
-highlight: default
-toc-title: "On this page"
+toc-title: "Page navigation"
+next-page: "../pages/course-outline.html"
 lang: "en"
+abstract-title: "Introduction to Web Development"
+abstract: |
+  User Interface development is the art and technique of creating content, style, and behavior in computer applications. This course will focus on web application development using HTML, CSS, and JavaScript.
 ---
-
-User Interface development is the art and technique of creating content, style, and behavior in computer applications. This course will focus on web application development using HTML, CSS, and JavaScript.
 
 ## Course Logistics
 
