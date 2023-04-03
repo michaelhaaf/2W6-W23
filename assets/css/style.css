@@ -172,7 +172,7 @@ html:focus-within {
 html {
   box-sizing: border-box;
   height: 100%;
-  font-size: 87.5%;
+  font-size: 100%;
 }
 
 *,
@@ -209,10 +209,16 @@ img {
   position: relative;
 }
 
-.full-width {
-  max-width: 100%;
+iframe {
+  width: 100%;
 }
 
+.article .full-width,
+.full-width {
+  max-width: 90%;
+}
+
+.article .half-width,
 .half-width {
   display: inline-block;
   max-width: 45%;
@@ -351,14 +357,29 @@ h2 {
   font-weight: 400;
 }
 
-article :is(section, header, li, blockquote) {
+
+.article :is(section, header, table) {
   max-width: 100%;
+}
+
+.article :is(iframe, blockquote, table) {
+  max-width: 90%;
+  margin: 1.5rem auto;
 }
 
 .abstract, .title, #title-block-header {
   max-width: 100%;
   display: flex;
   flex-direction: column;
+
+}
+
+.cp_embed_wrapper {
+  margin: 1.5rem 0;
+}
+
+article iframe,
+.cp_embed_wrapper * {
 }
 
 article section {
@@ -445,8 +466,11 @@ figcaption {
 }
 
 figure {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+figure.full-width {
+  margin: 1.5rem auto;
 }
 
 code,
@@ -457,7 +481,7 @@ pre {
 h6.sourceCode,
 div.sourceCode {
   background-color: var(--overlay);
-  border-left: 2px solid var(--accent-foam);
+  border-left: 0.25rem solid var(--accent-foam);
   padding: 0 1.5rem 1.5rem;
   margin-top: 0;
 }
@@ -475,7 +499,7 @@ h6.sourceCode {
 blockquote {
   margin: 0 0 1.5rem 1.5rem;
   padding-inline-start: 1rem;
-  border-left: 0.875rem solid var(--accent-violet);
+  border-left: 0.5rem solid var(--accent-violet);
 }
 
 blockquote footer {
@@ -939,11 +963,15 @@ header.header {
 
 @media only screen and (min-width: 48rem) {
   html {
-    font-size: 100%;
+    font-size: 112.5%;
   }
 
-  article * {
-    max-width: clamp(50ch, 69%, 77ch);
+  /* leave room for right margin/TOC scroller for tablets/desktop */
+  .abstract > :is(p, ul),
+  .article > :is(p),
+  .article section > :is(p, ul, ol, figure), 
+  .article section > :is(div.sourceCode, h6.sourceCode) {
+    max-width: clamp(25rem, 100%, 40rem);
   }
 
   .page-container {
@@ -1095,12 +1123,3 @@ code span.va { } /* Variable */
 code span.vs { color: var(--accent-orange); } /* VerbatimString */
 code span.wa { color: var(--accent-foam); font-weight: bold; } /* Warning */
 
-.cp_embed_wrapper {
-  max-width: 95%;
-  margin: 1.5rem 0;
-}
-
-article iframe,
-.cp_embed_wrapper * {
-  max-width: 95%;
-}

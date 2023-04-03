@@ -134,7 +134,7 @@ The input `type=` can take the following values:
 
 Example of radio and email inputs:
 
-<iframe height="265" style="width: 100%;" scrolling="no" title="wk11-radio_email_search-ex2" src="https://codepen.io/maujac/embed/WNQRKpY?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" scrolling="no" title="wk11-radio_email_search-ex2" src="https://codepen.io/maujac/embed/WNQRKpY?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/maujac/pen/WNQRKpY'>wk11-radio_email_search-ex2</a> by Mauricio Buschinelli
   (<a href='https://codepen.io/maujac'>@maujac</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -161,7 +161,7 @@ There are also properties that will limit the user interaction with the `<input>
 - [`disabled`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-disabled): Input value can't be modified and is never sent with the rest of the form data. Typically rendered with a dimmer color
 - [`readonly`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-readonly): User cannot modify the input value but it is still sent with the rest of the form data.
 
-<iframe height="265" style="width: 100%;" scrolling="no" title="wk11-input-size" src="https://codepen.io/maujac/embed/oNBGWZP?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" scrolling="no" title="wk11-input-size" src="https://codepen.io/maujac/embed/oNBGWZP?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/maujac/pen/oNBGWZP'>wk11-input-size</a> by Mauricio Buschinelli
   (<a href='https://codepen.io/maujac'>@maujac</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -170,7 +170,7 @@ There are also properties that will limit the user interaction with the `<input>
 
 [The `<textare>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea) provides a multi-line text field for larger messages:
 
-<iframe height="265" style="width: 100%;" scrolling="no" title="wk11-textarea-ex4" src="https://codepen.io/maujac/embed/yLYgRxx?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" scrolling="no" title="wk11-textarea-ex4" src="https://codepen.io/maujac/embed/yLYgRxx?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/maujac/pen/yLYgRxx'>wk11-textarea-ex4</a> by Mauricio Buschinelli
   (<a href='https://codepen.io/maujac'>@maujac</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -179,10 +179,12 @@ There are also properties that will limit the user interaction with the `<input>
 
 To define the default value of an [`<input>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) element you have to use the `value` attribute:
 
-<iframe height="265" style="width: 100%;" scrolling="no" title="wk11-placeholder_defaults-ex5" src="https://codepen.io/maujac/embed/BaopGZP?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/maujac/pen/BaopGZP'>wk11-placeholder_defaults-ex5</a> by Mauricio Buschinelli
-  (<a href='https://codepen.io/maujac'>@maujac</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<figure class="full-width">
+  <iframe height="300" scrolling="no" title="wk11-placeholder_defaults-ex5" src="https://codepen.io/maujac/embed/BaopGZP?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+    See the Pen <a href='https://codepen.io/maujac/pen/BaopGZP'>wk11-placeholder_defaults-ex5</a> by Mauricio Buschinelli
+    (<a href='https://codepen.io/maujac'>@maujac</a>) on <a href='https://codepen.io'>CodePen</a>.
+  </iframe>
+</figure>
 
 ### The `<select>` element
 
@@ -205,7 +207,7 @@ Depending on the browser and the `action` attribute of the `<form>`, the page mi
 
 The `<input>` element can be used as a button in order to submit the form. This happens automatically as soon as the button is clicked.
 
-<iframe height="265" style="width: 100%;" scrolling="no" title="wk11-input_button-ex3" src="https://codepen.io/maujac/embed/JjYEaLZ?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" scrolling="no" title="wk11-input_button-ex3" src="https://codepen.io/maujac/embed/JjYEaLZ?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/maujac/pen/JjYEaLZ'>wk11-input_button-ex3</a> by Mauricio Buschinelli
   (<a href='https://codepen.io/maujac'>@maujac</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -214,7 +216,7 @@ The `<input>` element can be used as a button in order to submit the form. This 
 
 The [`<button>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) element can also be used to submit the form. The main difference between the `<button>` and the `<input type="submit">`  is that the `<button>` element can take other elements inside, such as icons or images.
 
-<iframe height="265" style="width: 100%;" scrolling="no" title="Searchbar demo" src="https://codepen.io/maujac/embed/QWjjjda?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" scrolling="no" title="Searchbar demo" src="https://codepen.io/maujac/embed/QWjjjda?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/maujac/pen/QWjjjda'>Searchbar demo</a> by Mauricio Buschinelli
   (<a href='https://codepen.io/maujac'>@maujac</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -232,7 +234,7 @@ This is done by using validation attributes on `<input>` elements:
 - `pattern`: Specifies a [regular expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) that defines a pattern the entered data needs to follow (advanced).
 - `step`: Only useful on an `<input>` of `type=number`. Specified the increment amounts. Defaults to 1 unit (integer).
 
-<iframe height="265" style="width: 100%;" scrolling="no" title="wk11-required-ex6" src="https://codepen.io/maujac/embed/OJyWaoB?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" scrolling="no" title="wk11-required-ex6" src="https://codepen.io/maujac/embed/OJyWaoB?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/maujac/pen/OJyWaoB'>wk11-required-ex6</a> by Mauricio Buschinelli
   (<a href='https://codepen.io/maujac'>@maujac</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
