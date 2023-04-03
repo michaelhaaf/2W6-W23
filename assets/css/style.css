@@ -547,6 +547,11 @@ ol {
   font-style: italic;
 }
 
+.footnote-back,
+.footnote-ref {
+  text-decoration: none;
+}
+
 /* Table styles inspired by:
 * https://pencilandpaper.io/articles/ux-pattern-analysis-enterprise-data-tables/
 */
