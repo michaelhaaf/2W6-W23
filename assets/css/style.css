@@ -810,6 +810,7 @@ td h5 {
 .nav--site .dropdown {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   position: absolute;
   z-index: 3;
   margin-top: 3rem;

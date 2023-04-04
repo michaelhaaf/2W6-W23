@@ -17,6 +17,7 @@ HTML_WRITER := ./assets/filters/separate-alt-figcaption.lua
 DATE_WRITER := ./assets/filters/last-updated.lua
 # Path relative to output
 PAGE_STYLE := ../assets/css/style.css
+
 # Common options
 PANDOC_OPTIONS = --standalone \
 	--table-of-contents \
@@ -27,6 +28,16 @@ PANDOC_OPTIONS = --standalone \
 	--template $(PAGE_TEMPLATE) \
 	--highlight-style $(HIGHLIGHT_STYLE) \
 	--to $(HTML_WRITER)
+TREE_OPTIONS = -H . \
+							 -L 1 \
+							 --noreport \
+							 --si \
+							 -D \
+							 --charset utf-8 \
+							 --I index.html
+FIND_OPTIONS = -maxdepth 1 \
+							 -type d \
+
 
 ## MAKE RULES
 
@@ -40,11 +51,14 @@ clean:
 listings:
 	tree lectures -H ../lectures | htmlq "body p a" | grep html > ./assets/listings/lecture-listing.html
 	tree assignments -L 1 -H ../assignments | htmlq "body p a" | tail -n +2 > ./assets/listings/assignment-listing.html
+	tree tutorials -L 1 -H ../tutorials | htmlq "body p a" | tail -n +2 > ./assets/listings/tutorial-listing.html
+	./assets/build-scripts/generate-index-files assignments
+	./assets/build-scripts/generate-index-files tutorials
 
 # If dynamic content directories changed, update template and mark all targets for update
 $(PAGE_TEMPLATE): assets/listings/*.html
 	cp $(PAGE_TEMPLATE) ./assets/templates/page.html.backup 
-	python ./assets/build-scripts/update-listings.py > $(PAGE_TEMPLATE)
+	python ./assets/build-scripts/insert-listings.py > $(PAGE_TEMPLATE)
 	touch $(PAGES_MD) $(LECTURES_MD)
 
 lectures/%.html: md/lectures/%.md
