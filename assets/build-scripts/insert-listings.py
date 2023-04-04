@@ -36,5 +36,6 @@ with open(TEMPLATE_PATH) as fh:
 
 insert_listing("lecture-listing", template_soup)
 insert_listing("assignment-listing", template_soup)
+insert_listing("tutorial-listing", template_soup)
 
 print(template_soup.prettify())

@@ -48,12 +48,16 @@ clean:
 	rm pages/*.html
 
 # Run this if a new file has been added to a dynamic contect directory 
-listings:
+indexes:
 	tree lectures -H ../lectures | htmlq "body p a" | grep html > ./assets/listings/lecture-listing.html
 	tree assignments -L 1 -H ../assignments | htmlq "body p a" | tail -n +2 > ./assets/listings/assignment-listing.html
-	tree tutorials -L 1 -H ../tutorials | htmlq "body p a" | tail -n +2 > ./assets/listings/tutorial-listing.html
+	tree tutorials -d -L 1 -H ../tutorials | htmlq "body p a" | tail -n +2 > ./assets/listings/tutorial-listing.html
 	./assets/build-scripts/generate-index-files assignments
 	./assets/build-scripts/generate-index-files tutorials
+
+listings:
+	cp $(PAGE_TEMPLATE) ./assets/templates/page.html.backup 
+	python ./assets/build-scripts/insert-listings.py > $(PAGE_TEMPLATE)
 
 # If dynamic content directories changed, update template and mark all targets for update
 $(PAGE_TEMPLATE): assets/listings/*.html
