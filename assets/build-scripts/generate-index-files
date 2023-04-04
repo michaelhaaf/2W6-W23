@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+TREE_OPTS=( --noreport --si -D --charset="utf-8" --metafirst )
+
+dirname=$1
+
+find "./$dirname" -mindepth 1 -maxdepth 1 -type d -print0 | 
+  while IFS= read -r -d '' dir; do 
+    tree -H "../../$dir" \
+         "${TREE_OPTS[@]}" \
+         -T "$(basename "$dir")" \
+         -o "${dir}/index.html" \
+         "$dir"
+  done

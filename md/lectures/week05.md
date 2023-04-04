@@ -1,6 +1,9 @@
 ---
 title: "2W6-W23: Week 5 Lecture Notes"
-toc-title: "In this article"
+date: 2023-02-19
+toc-title: "Lecture navigation"
+prev-page: "../lectures/week04.html"
+next-page: "../lectures/week06.html"
 abstract-title: "Intro to Layouts and Floats in CSS"
 abstract: |
   Last week, we learned a large set of CSS properties for applying styles to text, image, and other content elements.
@@ -9,8 +12,6 @@ abstract: |
 
   There are many techniques for layout in CSS. We will focus on the technique most commonly used for the first two decades of web development: "Floating" elements.
 ---
-
-Last update: Sunday, Feb 19, 2023.
 
 ---
 

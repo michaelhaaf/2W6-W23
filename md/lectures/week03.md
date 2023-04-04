@@ -1,13 +1,13 @@
-
 ---
 title: '2W6-W23: Week 3 Lecture Notes'
-toc-title: "In this article"
+date: 2023-02-07
+toc-title: "Lecture navigation"
+prev-page: "../lectures/week02.html"
+next-page: "../lectures/week04.html"
 abstract-title: "CSS Fundamentals"
 abstract: |
   Lesson summary.
 ---
-
-Last update: Tuesday, Feb 7, 2023.
 
 ---
 

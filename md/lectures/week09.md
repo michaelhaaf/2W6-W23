@@ -1,6 +1,9 @@
 ---
 title: "2W6-W23: Week 9 Lecture Notes"
-toc-title: "In this article"
+date: 2023-03-27
+toc-title: "Lecture navigation"
+prev-page: "../lectures/week07.html"
+next-page: "../lectures/week10.html"
 abstract-title: "Cascading StyleSheets: What is the 'Cascade' of CSS?"
 abstract: |
   We have yet to learn in concrete detail a very important mechanic of CSS: when two styles contradict, how does the browser determine which style to apply?
@@ -9,8 +12,6 @@ abstract: |
 
   We will also learn about CSS Custom Properties: these are CSS 'rules' that we can define once and reuse many times throughout our document to reduce code repetitio0n.
 ---
-
-Last update: Monday, Mar 27, 2023.
 
 ---
 
@@ -83,7 +84,7 @@ Let’s take a look at a few quick examples to visualize how specificity works. 
 <!-- index.html -->
 
 <div class="main">
-  <div class="list subsection"></div>
+  <div class="list subsection"> </div>
 </div>
 ```
 

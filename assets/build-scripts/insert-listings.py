@@ -16,7 +16,7 @@ def beautifyName(filename):
 
 
 # Scales linearly in number of listing categories
-def update_listing(listing_name, template_soup):
+def insert_listing(listing_name, template_soup):
     with open(f"{LISTINGS_PATH}/{listing_name}.html") as fh:
         listing_soup = BeautifulSoup(fh, "html.parser")
     listing_elem = template_soup.find(id=listing_name)
@@ -34,7 +34,8 @@ def update_listing(listing_name, template_soup):
 with open(TEMPLATE_PATH) as fh:
     template_soup = BeautifulSoup(fh, "html.parser")
 
-update_listing("lecture-listing", template_soup)
-update_listing("assignment-listing", template_soup)
+insert_listing("lecture-listing", template_soup)
+insert_listing("assignment-listing", template_soup)
+insert_listing("tutorial-listing", template_soup)
 
 print(template_soup.prettify())

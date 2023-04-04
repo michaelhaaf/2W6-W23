@@ -1,14 +1,15 @@
 ---
 title: "2W6-W23: Week 6 Lecture Notes"
-toc-title: "In this article"
+date: 2023-02-18
+toc-title: "Lecture navigation"
+prev-page: "../lectures/week05.html"
+next-page: "../lectures/week07.html"
 abstract-title: "Intro to Layouts in CSS: Intro to Flexbox"
 abstract: |
   Last week, we learned how to control the horizontal position of HTML block elements using Floats. For a long time, Floats (and tables) were the gold-standard techniques for creating web layouts.
 
   In 2009, CSS Flexibile Box Layout, otherwise known as [Flexbox](https://en.wikipedia.org/wiki/CSS_Flexible_Box_Layout) was introduced as a part of [CSS 3](https://en.wikipedia.org/wiki/CSS#CSS_3). As mobile devices became increasingly the most common interface for browsing web pages, Flexbox provided a framework superior to Float/Tables in responding to the viewport size of the user and arranging elements with precise developer control.
 ---
-
-Last update: Saturday, Feb 18, 2023.
 
 ---
 

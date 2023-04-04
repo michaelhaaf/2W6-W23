@@ -1,19 +1,23 @@
-
 ---
 title: "2W6-W23: Calendar"
-theme: solarized
-highlight: default
-toc-title: "On this page"
+toc-title: "Page navigation"
+prev-page: "../pages/course-outline.html"
+next-page: "../lectures/week01.html"
 lang: "en"
+abstract-title: "Where to find course material"
+abstract: |
+  This is the authoritative calendar for content covered in this class. It is live, up-to-date, and retroactively maintained to contain all of the lecture/tuturial/reading/assignment/test material covered in this course. 
+
+  You can compare this calendar with the calendar from the [Course Outline](../pages/course-outline.html#tentative-schedule) to see where this course has deviated from the original outline.
 ---
 
-This is the authoritative calendar for content covered in this class. It is live, up-to-date, and retroactively maintained to contain all of the lecture/tuturial/reading/assignment/test material covered in this course. 
-
-You can compare this calendar with the calendar from the [Course Outline](../pages/course-outline.html#tentative-schedule) to see where this course has deviated from the original outline.
+---
 
 **Stay tuned:** Throughout the semester I will update this calendar with each week's resources. I will make corresponding updates on **LEA** so that you continue to get notifications through the regular college channels; however, these links will usually just take you to this page unless I indicate otherwise.
 
-> **NOTE:** All hyperlinks have a defined `<title>` attribute. **Hover** over the links with your mouse to view more information about each :) 
+**NOTE:** All hyperlinks have a defined `<title>` attribute. **Hover** over the links with your mouse to view more information about each :) 
+
+# January
 
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | Lectures         | Topics                                                          | Activities/Assessments                                                    |
@@ -34,6 +38,11 @@ You can compare this calendar with the calendar from the [Course Outline](../pag
 |                  |                                                                 | * [Part 1][actBrowser1]                                                   |
 |                  |                                                                 | * [Part 2][actBrowser2]                                                   |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
+
+# February
++------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
+| Lectures         | Topics                                                          | Activities/Assessments                                                    |
++==================+=================================================================+===========================================================================+
 | [Week 4][lec4]   | CSS - element properties: fonts, images, icons <br>             | Tutorial: [CSS Foundations Exercises][tutCSSFoundations] <br>             |
 |                  | CSS - layouts: the box model                                    | Tutorial: [CSS Box Model Exercises][tutCSSBoxModel] <br>                  |
 |                  |                                                                 | Tutorial: [Typesetting a Homepage][tutMdnText] [(.zip)][tutMdnText]  <br> |
@@ -46,6 +55,11 @@ You can compare this calendar with the calendar from the [Course Outline](../pag
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | [Week 7][lec7]   | JavaScript - Manipulating the DOM, Dynamic styling              |                                                                           |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
+
+# March
++------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
+| Lectures         | Topics                                                          | Activities/Assessments                                                    |
++==================+=================================================================+===========================================================================+
 |                  | ##### STUDY BREAK (March 6 - 10)                                |                                                                           |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | Week 8           | CSS - Finishing flexbox, test review, lab time                  |                                                                           |
@@ -58,8 +72,11 @@ You can compare this calendar with the calendar from the [Course Outline](../pag
 |                  |                                                                 | [Week 10 Exercises](../lectures/week10.html#exercises) <br>               |
 |                  |                                                                 | [Week 10 Readings](../lectures/week10.html#readings-and-resources) <br>   |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
-| ##### NOTE:      | ##### the weeks below are tentative                             |                                                                           |
+
+# April
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
+| Lectures         | Topics                                                          | Activities/Assessments                                                    |
++==================+=================================================================+===========================================================================+
 | [Week 11][lec11] | Intermediate CSS - CSS Grid, Intro to Responsive Design         |                                                                           |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | [Week 12][lec12] | Intermediate CSS - Responsive Design, Accessibility             |                                                                           |
@@ -70,6 +87,13 @@ You can compare this calendar with the calendar from the [Course Outline](../pag
 | [Week 14][lec14] | **Test Review**: Review all material covered so far <br>        | **Test 2 (15%, TBD)** <br>                                                |
 |                  | Content Management Systems - Introduction to Wordpress          | **Project Milestone 1 (15%, due end of classes):** TBD                    |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
+| [Week 15][lec15] | Content Management Systems - Creating/Modifying a Wordpress CMS | **Project Milestone 2 (15%, due end of exams):** TBD                      |
++------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
+
+# May
++------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
+| Lectures         | Topics                                                          | Activities/Assessments                                                    |
++==================+=================================================================+===========================================================================+
 | [Week 15][lec15] | Content Management Systems - Creating/Modifying a Wordpress CMS | **Project Milestone 2 (15%, due end of exams):** TBD                      |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 
