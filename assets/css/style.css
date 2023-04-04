@@ -352,7 +352,13 @@ h1 {
 }
 
 h1.title {
-  margin-top: 0;
+  line-height: 1.5;
+  margin: -0.75rem 0 1.5rem;
+}
+
+article h1 {
+  line-height: 1.5;
+  margin-top: 2.25rem;
 }
 
 h2 {
