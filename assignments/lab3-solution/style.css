@@ -1,0 +1,79 @@
+/* Resets */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1440px;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+/* General */
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.page-header,
+.page-footer,
+.card {
+  padding: 36px 96px;
+}
+
+/* Specific */
+
+.page-header {
+  justify-content: space-between;
+}
+
+.page-header,
+.page-footer {
+  background-color: hsl(258 100% 35%);
+}
+
+.card:nth-of-type(even) {
+  background-color: hsl(174 97% 43% / 6%);
+}
+
+.card:nth-of-type(odd) {
+  background-color: hsl(265 100% 47% / 6%);
+}
+
+.guarantee-grid {
+  flex-flow: row wrap;
+  gap: 24px;
+}
+
+.guarantee-grid > div {
+  width: 300px;
+}
+
+.gallery > figure > img {
+  width: 250px;
+  height: 250px;
+}
+
+.nav-links {
+  list-style-type: none;
+  gap: 24px;
+}
