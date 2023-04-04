@@ -9,6 +9,7 @@ abstract: |
   This document was converted to HTML for presentation on this website using [pandoc](https://pandoc.org/). The course outline is also available for download as a [.pdf file](../assets/documents/course_outline.pdf).
 ---
 
+---
 
 # GENERAL INFORMATION
 

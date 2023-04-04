@@ -187,9 +187,17 @@ html {
 
 a:link {
   color: var(--accent-foam);
+
 }
 a:visited {
   color: var(--accent-violet);
+}
+
+.header a:link {
+  color: #9ccfd8;
+}
+.header a:visited {
+  color: #c4a7e7;
 }
 
 img {
@@ -435,6 +443,10 @@ hr {
   border-top: 1px solid var(--text);
   margin: 3rem 0 1.5rem 0;
   padding: 0;
+}
+
+.level2 hr:last-child {
+  margin-top: 9rem;
 }
 
 h5,

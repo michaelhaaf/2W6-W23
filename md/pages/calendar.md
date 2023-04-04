@@ -11,9 +11,11 @@ abstract: |
   You can compare this calendar with the calendar from the [Course Outline](../pages/course-outline.html#tentative-schedule) to see where this course has deviated from the original outline.
 ---
 
+---
+
 **Stay tuned:** Throughout the semester I will update this calendar with each week's resources. I will make corresponding updates on **LEA** so that you continue to get notifications through the regular college channels; however, these links will usually just take you to this page unless I indicate otherwise.
 
-> **NOTE:** All hyperlinks have a defined `<title>` attribute. **Hover** over the links with your mouse to view more information about each :) 
+**NOTE:** All hyperlinks have a defined `<title>` attribute. **Hover** over the links with your mouse to view more information about each :) 
 
 # January
 
