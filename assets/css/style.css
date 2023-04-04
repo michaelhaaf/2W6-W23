@@ -1015,10 +1015,6 @@ header.header {
     display: flex;
   }
 
-  .icon-text {
-    display: inline;
-  }
-
 }
 
 @media only screen and (min-width: 80rem) {
@@ -1039,6 +1035,10 @@ header.header {
       "nv mn"
       "nv mn"
       "nv ft";
+  }
+
+  .icon-text {
+    display: inline;
   }
 
   .nav--site > ul {
