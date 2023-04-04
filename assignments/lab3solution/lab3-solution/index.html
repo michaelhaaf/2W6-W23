@@ -1,799 +1,148 @@
 <!DOCTYPE html>
-<html>
-<head>
- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
- <meta name="Author" content="Made by 'tree'">
- <meta name="GENERATOR" content="tree v2.1.0 © 1996 - 2022 by Steve Baker, Thomas Moore, Francesc Rocher, Florian Sesser, Kyosuke Tokoro">
- <title>Directory Tree</title>
- <style type="text/css">
-  BODY { font-family : monospace, sans-serif;  color: black;}
-  P { font-family : monospace, sans-serif; color: black; margin:0px; padding: 0px;}
-  A:visited { text-decoration : none; margin : 0px; padding : 0px;}
-  A:link    { text-decoration : none; margin : 0px; padding : 0px;}
-  A:hover   { text-decoration: underline; background-color : yellow; margin : 0px; padding : 0px;}
-  A:active  { margin : 0px; padding : 0px;}
-  .VERSION { font-size: small; font-family : arial, sans-serif; }
-  .NORM  { color: black;  }
-  .FIFO  { color: purple; }
-  .CHAR  { color: yellow; }
-  .DIR   { color: blue;   }
-  .BLOCK { color: yellow; }
-  .LINK  { color: aqua;   }
-  .SOCK  { color: fuchsia;}
-  .EXEC  { color: green;  }
- </style>
-</head>
-<body>
-	<h1>Directory Tree</h1><p>
-	<a href="./assignments/lab3-solution/">./assignments/lab3-solution</a><br>
-	├── <a href="./assignments/lab3-solution/assets/">assets</a><br>
-	│   ├── <a href="./assignments/lab3-solution/assets/build-scripts/">build-scripts</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assets/build-scripts/__pycache__/">__pycache__</a><br>
-	│   │   │   └── <a href="./assignments/lab3-solution/assets/build-scripts/__pycache__/settings.cpython-310.pyc">settings.cpython-310.pyc</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assets/build-scripts/settings.py">settings.py</a><br>
-	│   │   └── <a href="./assignments/lab3-solution/assets/build-scripts/update-listings.py">update-listings.py</a><br>
-	│   ├── <a href="./assignments/lab3-solution/assets/content/">content</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assets/content/wk4/">wk4</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/content/wk4/add_google_font.gif">add_google_font.gif</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/content/wk4/box-model.png">box-model.png</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/content/wk4/font-family-egs.png">font-family-egs.png</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/content/wk4/Proportional-vs-monospace.jpg">Proportional-vs-monospace.jpg</a><br>
-	│   │   │   └── <a href="./assignments/lab3-solution/assets/content/wk4/serif-vs-sans-serif.png">serif-vs-sans-serif.png</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assets/content/wk5/">wk5</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/content/wk5/iih-clear.png">iih-clear.png</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/content/wk5/iih-content-floats.png">iih-content-floats.png</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/content/wk5/iih-equal-columns.png">iih-equal-columns.png</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/content/wk5/iih-float-layout-combinations.png">iih-float-layout-combinations.png</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/content/wk5/iih-full-bleed-layout.png">iih-full-bleed-layout.png</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/content/wk5/iih-grids.png">iih-grids.png</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/content/wk5/iih-hidden-overflow-2.png">iih-hidden-overflow-2.png</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/content/wk5/iih-hidden-overflow.png">iih-hidden-overflow.png</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/content/wk5/iih-overflow.png">iih-overflow.png</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/content/wk5/iih-vertical-horizontal-stacking.png">iih-vertical-horizontal-stacking.png</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/content/wk5/iih-width-float.png">iih-width-float.png</a><br>
-	│   │   │   └── <a href="./assignments/lab3-solution/assets/content/wk5/iih-width-nofloat.png">iih-width-nofloat.png</a><br>
-	│   │   └── <a href="./assignments/lab3-solution/assets/content/wk9/">wk9</a><br>
-	│   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/assets/content/wk9/specificity-calc.png">specificity-calc.png</a><br>
-	│   │   &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/assets/content/wk9/style-pane.png">style-pane.png</a><br>
-	│   ├── <a href="./assignments/lab3-solution/assets/css/">css</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assets/css/code-highlight.theme">code-highlight.theme</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assets/css/slides.css">slides.css</a><br>
-	│   │   └── <a href="./assignments/lab3-solution/assets/css/style.css">style.css</a><br>
-	│   ├── <a href="./assignments/lab3-solution/assets/documents/">documents</a><br>
-	│   │   └── <a href="./assignments/lab3-solution/assets/documents/course_outline.pdf">course_outline.pdf</a><br>
-	│   ├── <a href="./assignments/lab3-solution/assets/filters/">filters</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assets/filters/last-updated.lua">last-updated.lua</a><br>
-	│   │   └── <a href="./assignments/lab3-solution/assets/filters/separate-alt-figcaption.lua">separate-alt-figcaption.lua</a><br>
-	│   ├── <a href="./assignments/lab3-solution/assets/fonts/">fonts</a><br>
-	│   │   └── <a href="./assignments/lab3-solution/assets/fonts/et-book/">et-book</a><br>
-	│   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/assets/fonts/et-book/et-book-bold-line-figures/">et-book-bold-line-figures</a><br>
-	│   │   &nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/assets/fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot">et-book-bold-line-figures.eot</a><br>
-	│   │   &nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/assets/fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg">et-book-bold-line-figures.svg</a><br>
-	│   │   &nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/assets/fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf">et-book-bold-line-figures.ttf</a><br>
-	│   │   &nbsp;&nbsp;&nbsp; │   └── <a href="./assignments/lab3-solution/assets/fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff">et-book-bold-line-figures.woff</a><br>
-	│   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/assets/fonts/et-book/et-book-display-italic-old-style-figures/">et-book-display-italic-old-style-figures</a><br>
-	│   │   &nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/assets/fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot">et-book-display-italic-old-style-figures.eot</a><br>
-	│   │   &nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/assets/fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg">et-book-display-italic-old-style-figures.svg</a><br>
-	│   │   &nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/assets/fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf">et-book-display-italic-old-style-figures.ttf</a><br>
-	│   │   &nbsp;&nbsp;&nbsp; │   └── <a href="./assignments/lab3-solution/assets/fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff">et-book-display-italic-old-style-figures.woff</a><br>
-	│   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/assets/fonts/et-book/et-book-roman-line-figures/">et-book-roman-line-figures</a><br>
-	│   │   &nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/assets/fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot">et-book-roman-line-figures.eot</a><br>
-	│   │   &nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/assets/fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg">et-book-roman-line-figures.svg</a><br>
-	│   │   &nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/assets/fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf">et-book-roman-line-figures.ttf</a><br>
-	│   │   &nbsp;&nbsp;&nbsp; │   └── <a href="./assignments/lab3-solution/assets/fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff">et-book-roman-line-figures.woff</a><br>
-	│   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/assets/fonts/et-book/et-book-roman-old-style-figures/">et-book-roman-old-style-figures</a><br>
-	│   │   &nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/assets/fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot">et-book-roman-old-style-figures.eot</a><br>
-	│   │   &nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/assets/fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.svg">et-book-roman-old-style-figures.svg</a><br>
-	│   │   &nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/assets/fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf">et-book-roman-old-style-figures.ttf</a><br>
-	│   │   &nbsp;&nbsp;&nbsp; │   └── <a href="./assignments/lab3-solution/assets/fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff">et-book-roman-old-style-figures.woff</a><br>
-	│   │   &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/assets/fonts/et-book/et-book-semi-bold-old-style-figures/">et-book-semi-bold-old-style-figures</a><br>
-	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/assets/fonts/et-book/et-book-semi-bold-old-style-figures/et-book-semi-bold-old-style-figures.eot">et-book-semi-bold-old-style-figures.eot</a><br>
-	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/assets/fonts/et-book/et-book-semi-bold-old-style-figures/et-book-semi-bold-old-style-figures.svg">et-book-semi-bold-old-style-figures.svg</a><br>
-	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/assets/fonts/et-book/et-book-semi-bold-old-style-figures/et-book-semi-bold-old-style-figures.ttf">et-book-semi-bold-old-style-figures.ttf</a><br>
-	│   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/assets/fonts/et-book/et-book-semi-bold-old-style-figures/et-book-semi-bold-old-style-figures.woff">et-book-semi-bold-old-style-figures.woff</a><br>
-	│   ├── <a href="./assignments/lab3-solution/assets/images/">images</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assets/images/anchor.svg">anchor.svg</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assets/images/assignments.svg">assignments.svg</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assets/images/baseline-grid.svg">baseline-grid.svg</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assets/images/calendar.svg">calendar.svg</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assets/images/cc.logo.svg">cc.logo.svg</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assets/images/dark-theme/">dark-theme</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/dark-theme/guggenheim-brown.jpg">guggenheim-brown.jpg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/dark-theme/guggenheim-circles.jpg">guggenheim-circles.jpg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/dark-theme/guggenheim-green.jpg">guggenheim-green.jpg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/dark-theme/theme-toggle-icon.svg">theme-toggle-icon.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/dark-theme/wikimedia-florence-henri.jpg">wikimedia-florence-henri.jpg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/dark-theme/wikimedia-kandinsky-triangle.jpg">wikimedia-kandinsky-triangle.jpg</a><br>
-	│   │   │   └── <a href="./assignments/lab3-solution/assets/images/dark-theme/wikimedia-karol-hiller.jpg">wikimedia-karol-hiller.jpg</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assets/images/favicon.svg">favicon.svg</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/">feather-icons</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/activity.svg">activity.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/airplay.svg">airplay.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/alert-circle.svg">alert-circle.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/alert-octagon.svg">alert-octagon.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/alert-triangle.svg">alert-triangle.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/align-center.svg">align-center.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/align-justify.svg">align-justify.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/align-left.svg">align-left.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/align-right.svg">align-right.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/anchor.svg">anchor.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/aperture.svg">aperture.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/archive.svg">archive.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/arrow-down-circle.svg">arrow-down-circle.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/arrow-down-left.svg">arrow-down-left.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/arrow-down-right.svg">arrow-down-right.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/arrow-down.svg">arrow-down.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/arrow-left-circle.svg">arrow-left-circle.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/arrow-left.svg">arrow-left.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/arrow-right-circle.svg">arrow-right-circle.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/arrow-right.svg">arrow-right.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/arrow-up-circle.svg">arrow-up-circle.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/arrow-up-left.svg">arrow-up-left.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/arrow-up-right.svg">arrow-up-right.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/arrow-up.svg">arrow-up.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/at-sign.svg">at-sign.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/award.svg">award.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/bar-chart-2.svg">bar-chart-2.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/bar-chart.svg">bar-chart.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/battery-charging.svg">battery-charging.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/battery.svg">battery.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/bell-off.svg">bell-off.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/bell.svg">bell.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/bluetooth.svg">bluetooth.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/bold.svg">bold.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/bookmark.svg">bookmark.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/book-open.svg">book-open.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/book.svg">book.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/box.svg">box.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/briefcase.svg">briefcase.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/calendar.svg">calendar.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/camera-off.svg">camera-off.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/camera.svg">camera.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/cast.svg">cast.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/check-circle.svg">check-circle.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/check-square.svg">check-square.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/check.svg">check.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/chevron-down.svg">chevron-down.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/chevron-left.svg">chevron-left.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/chevron-right.svg">chevron-right.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/chevrons-down.svg">chevrons-down.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/chevrons-left.svg">chevrons-left.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/chevrons-right.svg">chevrons-right.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/chevrons-up.svg">chevrons-up.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/chevron-up.svg">chevron-up.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/chrome.svg">chrome.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/circle.svg">circle.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/clipboard.svg">clipboard.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/clock.svg">clock.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/cloud-drizzle.svg">cloud-drizzle.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/cloud-lightning.svg">cloud-lightning.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/cloud-off.svg">cloud-off.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/cloud-rain.svg">cloud-rain.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/cloud-snow.svg">cloud-snow.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/cloud.svg">cloud.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/codepen.svg">codepen.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/codesandbox.svg">codesandbox.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/code.svg">code.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/coffee.svg">coffee.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/columns.svg">columns.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/command.svg">command.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/compass.svg">compass.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/copy.svg">copy.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/corner-down-left.svg">corner-down-left.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/corner-down-right.svg">corner-down-right.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/corner-left-down.svg">corner-left-down.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/corner-left-up.svg">corner-left-up.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/corner-right-down.svg">corner-right-down.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/corner-right-up.svg">corner-right-up.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/corner-up-left.svg">corner-up-left.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/corner-up-right.svg">corner-up-right.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/cpu.svg">cpu.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/credit-card.svg">credit-card.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/crop.svg">crop.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/crosshair.svg">crosshair.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/database.svg">database.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/delete.svg">delete.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/disc.svg">disc.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/divide-circle.svg">divide-circle.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/divide-square.svg">divide-square.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/divide.svg">divide.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/dollar-sign.svg">dollar-sign.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/download-cloud.svg">download-cloud.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/download.svg">download.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/dribbble.svg">dribbble.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/droplet.svg">droplet.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/edit-2.svg">edit-2.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/edit-3.svg">edit-3.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/edit.svg">edit.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/external-link.svg">external-link.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/eye-off.svg">eye-off.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/eye.svg">eye.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/facebook.svg">facebook.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/fast-forward.svg">fast-forward.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/feather.svg">feather.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/figma.svg">figma.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/file-minus.svg">file-minus.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/file-plus.svg">file-plus.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/file.svg">file.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/file-text.svg">file-text.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/film.svg">film.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/filter.svg">filter.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/flag.svg">flag.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/folder-minus.svg">folder-minus.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/folder-plus.svg">folder-plus.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/folder.svg">folder.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/framer.svg">framer.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/frown.svg">frown.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/gift.svg">gift.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/git-branch.svg">git-branch.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/git-commit.svg">git-commit.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/github.svg">github.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/gitlab.svg">gitlab.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/git-merge.svg">git-merge.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/git-pull-request.svg">git-pull-request.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/globe.svg">globe.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/grid.svg">grid.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/hard-drive.svg">hard-drive.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/hash.svg">hash.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/headphones.svg">headphones.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/heart.svg">heart.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/help-circle.svg">help-circle.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/hexagon.svg">hexagon.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/home.svg">home.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/image.svg">image.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/inbox.svg">inbox.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/info.svg">info.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/instagram.svg">instagram.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/italic.svg">italic.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/key.svg">key.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/layers.svg">layers.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/layout.svg">layout.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/life-buoy.svg">life-buoy.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/link-2.svg">link-2.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/linkedin.svg">linkedin.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/link.svg">link.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/list.svg">list.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/loader.svg">loader.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/lock.svg">lock.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/log-in.svg">log-in.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/log-out.svg">log-out.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/mail.svg">mail.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/map-pin.svg">map-pin.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/map.svg">map.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/maximize-2.svg">maximize-2.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/maximize.svg">maximize.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/meh.svg">meh.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/menu.svg">menu.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/message-circle.svg">message-circle.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/message-square.svg">message-square.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/mic-off.svg">mic-off.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/mic.svg">mic.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/minimize-2.svg">minimize-2.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/minimize.svg">minimize.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/minus-circle.svg">minus-circle.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/minus-square.svg">minus-square.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/minus.svg">minus.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/monitor.svg">monitor.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/moon.svg">moon.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/more-horizontal.svg">more-horizontal.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/more-vertical.svg">more-vertical.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/mouse-pointer.svg">mouse-pointer.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/move.svg">move.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/music.svg">music.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/navigation-2.svg">navigation-2.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/navigation.svg">navigation.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/octagon.svg">octagon.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/package.svg">package.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/paperclip.svg">paperclip.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/pause-circle.svg">pause-circle.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/pause.svg">pause.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/pen-tool.svg">pen-tool.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/percent.svg">percent.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/phone-call.svg">phone-call.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/phone-forwarded.svg">phone-forwarded.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/phone-incoming.svg">phone-incoming.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/phone-missed.svg">phone-missed.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/phone-off.svg">phone-off.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/phone-outgoing.svg">phone-outgoing.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/phone.svg">phone.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/pie-chart.svg">pie-chart.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/play-circle.svg">play-circle.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/play.svg">play.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/plus-circle.svg">plus-circle.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/plus-square.svg">plus-square.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/plus.svg">plus.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/pocket.svg">pocket.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/power.svg">power.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/printer.svg">printer.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/radio.svg">radio.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/refresh-ccw.svg">refresh-ccw.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/refresh-cw.svg">refresh-cw.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/repeat.svg">repeat.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/rewind.svg">rewind.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/rotate-ccw.svg">rotate-ccw.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/rotate-cw.svg">rotate-cw.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/rss.svg">rss.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/save.svg">save.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/scissors.svg">scissors.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/search.svg">search.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/send.svg">send.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/server.svg">server.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/settings.svg">settings.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/share-2.svg">share-2.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/share.svg">share.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/shield-off.svg">shield-off.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/shield.svg">shield.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/shopping-bag.svg">shopping-bag.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/shopping-cart.svg">shopping-cart.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/shuffle.svg">shuffle.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/sidebar.svg">sidebar.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/skip-back.svg">skip-back.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/skip-forward.svg">skip-forward.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/slack.svg">slack.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/slash.svg">slash.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/sliders.svg">sliders.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/smartphone.svg">smartphone.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/smile.svg">smile.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/speaker.svg">speaker.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/square.svg">square.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/star.svg">star.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/stop-circle.svg">stop-circle.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/sunrise.svg">sunrise.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/sunset.svg">sunset.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/sun.svg">sun.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/table.svg">table.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/tablet.svg">tablet.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/tag.svg">tag.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/target.svg">target.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/terminal.svg">terminal.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/thermometer.svg">thermometer.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/thumbs-down.svg">thumbs-down.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/thumbs-up.svg">thumbs-up.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/toggle-left.svg">toggle-left.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/toggle-right.svg">toggle-right.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/tool.svg">tool.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/trash-2.svg">trash-2.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/trash.svg">trash.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/trello.svg">trello.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/trending-down.svg">trending-down.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/trending-up.svg">trending-up.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/triangle.svg">triangle.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/truck.svg">truck.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/tv.svg">tv.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/twitch.svg">twitch.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/twitter.svg">twitter.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/type.svg">type.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/umbrella.svg">umbrella.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/underline.svg">underline.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/unlock.svg">unlock.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/upload-cloud.svg">upload-cloud.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/upload.svg">upload.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/user-check.svg">user-check.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/user-minus.svg">user-minus.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/user-plus.svg">user-plus.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/users.svg">users.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/user.svg">user.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/user-x.svg">user-x.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/video-off.svg">video-off.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/video.svg">video.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/voicemail.svg">voicemail.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/volume-1.svg">volume-1.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/volume-2.svg">volume-2.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/volume.svg">volume.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/volume-x.svg">volume-x.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/watch.svg">watch.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/wifi-off.svg">wifi-off.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/wifi.svg">wifi.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/wind.svg">wind.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/x-circle.svg">x-circle.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/x-octagon.svg">x-octagon.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/x-square.svg">x-square.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/x.svg">x.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/youtube.svg">youtube.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/zap-off.svg">zap-off.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/zap.svg">zap.svg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/feather-icons/zoom-in.svg">zoom-in.svg</a><br>
-	│   │   │   └── <a href="./assignments/lab3-solution/assets/images/feather-icons/zoom-out.svg">zoom-out.svg</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assets/images/gplv3.svg">gplv3.svg</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assets/images/home.svg">home.svg</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assets/images/lectures.svg">lectures.svg</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assets/images/light-theme/">light-theme</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/light-theme/guggenheim-books.jpg">guggenheim-books.jpg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/light-theme/guggenheim-lines.jpg">guggenheim-lines.jpg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/light-theme/guggenheim-triangle.jpg">guggenheim-triangle.jpg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/light-theme/header-eg.jpg">header-eg.jpg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assets/images/light-theme/theme-toggle-icon.svg">theme-toggle-icon.svg</a><br>
-	│   │   │   └── <a href="./assignments/lab3-solution/assets/images/light-theme/wikimedia-circles.jpg">wikimedia-circles.jpg</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assets/images/outline.svg">outline.svg</a><br>
-	│   │   └── <a href="./assignments/lab3-solution/assets/images/reynard_studious.jpg">reynard_studious.jpg</a><br>
-	│   ├── <a href="./assignments/lab3-solution/assets/js/">js</a><br>
-	│   │   └── <a href="./assignments/lab3-solution/assets/js/main.js">main.js</a><br>
-	│   ├── <a href="./assignments/lab3-solution/assets/listings/">listings</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assets/listings/assignment-listing.html">assignment-listing.html</a><br>
-	│   │   └── <a href="./assignments/lab3-solution/assets/listings/lecture-listing.html">lecture-listing.html</a><br>
-	│   └── <a href="./assignments/lab3-solution/assets/templates/">templates</a><br>
-	│   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/assets/templates/page.html">page.html</a><br>
-	│   &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/assets/templates/page.html.backup">page.html.backup</a><br>
-	├── <a href="./assignments/lab3-solution/assignments/">assignments</a><br>
-	│   ├── <a href="./assignments/lab3-solution/assignments/index.html">index.html</a><br>
-	│   ├── <a href="./assignments/lab3-solution/assignments/lab1/">lab1</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assignments/lab1/index.html">index.html</a><br>
-	│   │   └── <a href="./assignments/lab3-solution/assignments/lab1/lab1.pdf">lab1.pdf</a><br>
-	│   ├── <a href="./assignments/lab3-solution/assignments/lab2/">lab2</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assignments/lab2/index.html">index.html</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assignments/lab2/lab2-starter.zip">lab2-starter.zip</a><br>
-	│   │   └── <a href="./assignments/lab3-solution/assignments/lab2/lab2-v2-feb5.pdf">lab2-v2-feb5.pdf</a><br>
-	│   ├── <a href="./assignments/lab3-solution/assignments/lab2-solution/">lab2-solution</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assignments/lab2-solution/css/">css</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assignments/lab2-solution/css/custom.css">custom.css</a><br>
-	│   │   │   └── <a href="./assignments/lab3-solution/assignments/lab2-solution/css/style.css">style.css</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assignments/lab2-solution/images/">images</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assignments/lab2-solution/images/favorite-1.jpg">favorite-1.jpg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assignments/lab2-solution/images/favorite-1_th.jpg">favorite-1_th.jpg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assignments/lab2-solution/images/favorite-2.jpg">favorite-2.jpg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assignments/lab2-solution/images/favorite-2_th.jpg">favorite-2_th.jpg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assignments/lab2-solution/images/favorite-3.jpg">favorite-3.jpg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assignments/lab2-solution/images/favorite-3_th.jpg">favorite-3_th.jpg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assignments/lab2-solution/images/favorite-4.jpg">favorite-4.jpg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assignments/lab2-solution/images/favorite-4_th.jpg">favorite-4_th.jpg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assignments/lab2-solution/images/icon.png">icon.png</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assignments/lab2-solution/images/turtle1.jpg">turtle1.jpg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assignments/lab2-solution/images/turtle2.jpg">turtle2.jpg</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assignments/lab2-solution/images/turtle3.jpg">turtle3.jpg</a><br>
-	│   │   │   └── <a href="./assignments/lab3-solution/assignments/lab2-solution/images/turtle4.jpg">turtle4.jpg</a><br>
-	│   │   └── <a href="./assignments/lab3-solution/assignments/lab2-solution/index.html">index.html</a><br>
-	│   ├── <a href="./assignments/lab3-solution/assignments/lab3/">lab3</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assignments/lab3/assets/">assets</a><br>
-	│   │   │   └── <a href="./assignments/lab3-solution/assignments/lab3/assets/placeholder.png">placeholder.png</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assignments/lab3/color-specification.png">color-specification.png</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assignments/lab3/design-specification.png">design-specification.png</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assignments/lab3/font-specification.png">font-specification.png</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assignments/lab3/index.html">index.html</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assignments/lab3/lab3.pdf">lab3.pdf</a><br>
-	│   │   └── <a href="./assignments/lab3-solution/assignments/lab3/lab3-v2.pdf">lab3-v2.pdf</a><br>
-	│   ├── <a href="./assignments/lab3-solution/assignments/lab3-solution/">lab3-solution</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assignments/lab3-solution/images/">images</a><br>
-	│   │   │   ├── <a href="./assignments/lab3-solution/assignments/lab3-solution/images/full-design.png">full-design.png</a><br>
-	│   │   │   └── <a href="./assignments/lab3-solution/assignments/lab3-solution/images/placeholder.png">placeholder.png</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/assignments/lab3-solution/index.html">index.html</a><br>
-	│   │   └── <a href="./assignments/lab3-solution/assignments/lab3-solution/style.css">style.css</a><br>
-	│   └── <a href="./assignments/lab3-solution/assignments/lab4/">lab4</a><br>
-	│   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/assignments/lab4/index.html">index.html</a><br>
-	│   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/assignments/lab4/lab4-grid-layout.pdf">lab4-grid-layout.pdf</a><br>
-	│   &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/assignments/lab4/layout-specifications/">layout-specifications</a><br>
-	│   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/assignments/lab4/layout-specifications/Breakpoints-layout.gif">Breakpoints-layout.gif</a><br>
-	│   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/assignments/lab4/layout-specifications/Full-site.png">Full-site.png</a><br>
-	│   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/assignments/lab4/layout-specifications/Hero.png">Hero.png</a><br>
-	│   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/assignments/lab4/layout-specifications/Navbar.png">Navbar.png</a><br>
-	│   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/assignments/lab4/layout-specifications/Tabs.png">Tabs.png</a><br>
-	│   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/assignments/lab4/layout-specifications/Trending.png">Trending.png</a><br>
-	├── <a href="./assignments/lab3-solution/favicon.ico">favicon.ico</a><br>
-	├── <a href="./assignments/lab3-solution/index.html">index.html</a><br>
-	├── <a href="./assignments/lab3-solution/lectures/">lectures</a><br>
-	│   ├── <a href="./assignments/lab3-solution/lectures/week01.html">week01.html</a><br>
-	│   ├── <a href="./assignments/lab3-solution/lectures/week02.html">week02.html</a><br>
-	│   ├── <a href="./assignments/lab3-solution/lectures/week03.html">week03.html</a><br>
-	│   ├── <a href="./assignments/lab3-solution/lectures/week04.html">week04.html</a><br>
-	│   ├── <a href="./assignments/lab3-solution/lectures/week05.html">week05.html</a><br>
-	│   ├── <a href="./assignments/lab3-solution/lectures/week06.html">week06.html</a><br>
-	│   ├── <a href="./assignments/lab3-solution/lectures/week07.html">week07.html</a><br>
-	│   ├── <a href="./assignments/lab3-solution/lectures/week09.html">week09.html</a><br>
-	│   ├── <a href="./assignments/lab3-solution/lectures/week10.html">week10.html</a><br>
-	│   ├── <a href="./assignments/lab3-solution/lectures/week11.html">week11.html</a><br>
-	│   └── <a href="./assignments/lab3-solution/lectures/week12.html">week12.html</a><br>
-	├── <a href="./assignments/lab3-solution/LICENSE">LICENSE</a><br>
-	├── <a href="./assignments/lab3-solution/makefile">makefile</a><br>
-	├── <a href="./assignments/lab3-solution/md/">md</a><br>
-	│   ├── <a href="./assignments/lab3-solution/md/lectures/">lectures</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/md/lectures/week01.md">week01.md</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/md/lectures/week02.md">week02.md</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/md/lectures/week03.md">week03.md</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/md/lectures/week04.md">week04.md</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/md/lectures/week05.md">week05.md</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/md/lectures/week06.md">week06.md</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/md/lectures/week07.md">week07.md</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/md/lectures/week09.md">week09.md</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/md/lectures/week10.md">week10.md</a><br>
-	│   │   ├── <a href="./assignments/lab3-solution/md/lectures/week11.md">week11.md</a><br>
-	│   │   └── <a href="./assignments/lab3-solution/md/lectures/week12.md">week12.md</a><br>
-	│   └── <a href="./assignments/lab3-solution/md/pages/">pages</a><br>
-	│   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/md/pages/calendar.md">calendar.md</a><br>
-	│   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/md/pages/course-outline.md">course-outline.md</a><br>
-	│   &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/md/pages/home.md">home.md</a><br>
-	├── <a href="./assignments/lab3-solution/pages/">pages</a><br>
-	│   ├── <a href="./assignments/lab3-solution/pages/calendar.html">calendar.html</a><br>
-	│   ├── <a href="./assignments/lab3-solution/pages/course-outline.html">course-outline.html</a><br>
-	│   └── <a href="./assignments/lab3-solution/pages/home.html">home.html</a><br>
-	├── <a href="./assignments/lab3-solution/public/">public</a><br>
-	├── <a href="./assignments/lab3-solution/README.md">README.md</a><br>
-	└── <a href="./assignments/lab3-solution/tutorials/">tutorials</a><br>
-	&nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week10-grid-exercises/">week10-grid-exercises</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week10-grid-exercises/01-grid-layout-1/">01-grid-layout-1</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week10-grid-exercises/01-grid-layout-1/desired-outcome.png">desired-outcome.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week10-grid-exercises/01-grid-layout-1/index.html">index.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week10-grid-exercises/01-grid-layout-1/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week10-grid-exercises/01-grid-layout-1/style.css">style.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week10-grid-exercises/02-grid-layout-2/">02-grid-layout-2</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week10-grid-exercises/02-grid-layout-2/desired-outcome-narrow.png">desired-outcome-narrow.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week10-grid-exercises/02-grid-layout-2/desired-outcome-wide.png">desired-outcome-wide.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week10-grid-exercises/02-grid-layout-2/index.html">index.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week10-grid-exercises/02-grid-layout-2/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week10-grid-exercises/02-grid-layout-2/style.css">style.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week10-grid-exercises/03-grid-layout-3/">03-grid-layout-3</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week10-grid-exercises/03-grid-layout-3/desired-outcome.png">desired-outcome.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week10-grid-exercises/03-grid-layout-3/desired-outcome-stretched.png">desired-outcome-stretched.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week10-grid-exercises/03-grid-layout-3/index.html">index.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week10-grid-exercises/03-grid-layout-3/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week10-grid-exercises/03-grid-layout-3/style.css">style.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week10-grid-exercises/LICENSE">LICENSE</a><br>
-	&nbsp;&nbsp;&nbsp; │   └── <a href="./assignments/lab3-solution/tutorials/week10-grid-exercises/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week10-grid-exercises.zip">week10-grid-exercises.zip</a><br>
-	&nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week10-grid-solutions/">week10-grid-solutions</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week10-grid-solutions/01-grid-layout-1/">01-grid-layout-1</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week10-grid-solutions/01-grid-layout-1/solution/">solution</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week10-grid-solutions/01-grid-layout-1/solution/solution.css">solution.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/tutorials/week10-grid-solutions/01-grid-layout-1/solution/solution.html">solution.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week10-grid-solutions/02-grid-layout-2/">02-grid-layout-2</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week10-grid-solutions/02-grid-layout-2/solution/">solution</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week10-grid-solutions/02-grid-layout-2/solution/solution.css">solution.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/tutorials/week10-grid-solutions/02-grid-layout-2/solution/solution.html">solution.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week10-grid-solutions/03-grid-layout-3/">03-grid-layout-3</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week10-grid-solutions/03-grid-layout-3/solution/">solution</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week10-grid-solutions/03-grid-layout-3/solution/solution.css">solution.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/tutorials/week10-grid-solutions/03-grid-layout-3/solution/solution.html">solution.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week10-grid-solutions/LICENSE">LICENSE</a><br>
-	&nbsp;&nbsp;&nbsp; │   └── <a href="./assignments/lab3-solution/tutorials/week10-grid-solutions/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week10-grid-solutions.zip">week10-grid-solutions.zip</a><br>
-	&nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week1-boilerplate.html">week1-boilerplate.html</a><br>
-	&nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-box-model-exercises/">week4-box-model-exercises</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-box-model-exercises/01-margin-and-padding-1/">01-margin-and-padding-1</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-box-model-exercises/01-margin-and-padding-1/desired-outcome.png">desired-outcome.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-box-model-exercises/01-margin-and-padding-1/index.html">index.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-box-model-exercises/01-margin-and-padding-1/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week4-box-model-exercises/01-margin-and-padding-1/style.css">style.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-box-model-exercises/02-margin-and-padding-2/">02-margin-and-padding-2</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-box-model-exercises/02-margin-and-padding-2/desired-outcome.png">desired-outcome.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-box-model-exercises/02-margin-and-padding-2/index.html">index.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-box-model-exercises/02-margin-and-padding-2/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week4-box-model-exercises/02-margin-and-padding-2/style.css">style.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-box-model-exercises/LICENSE">LICENSE</a><br>
-	&nbsp;&nbsp;&nbsp; │   └── <a href="./assignments/lab3-solution/tutorials/week4-box-model-exercises/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-box-model-exercises.zip">week4-box-model-exercises.zip</a><br>
-	&nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-box-model-solutions/">week4-box-model-solutions</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-box-model-solutions/01-margin-and-padding-1/">01-margin-and-padding-1</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week4-box-model-solutions/01-margin-and-padding-1/solution/">solution</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-box-model-solutions/01-margin-and-padding-1/solution/solution.css">solution.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/tutorials/week4-box-model-solutions/01-margin-and-padding-1/solution/solution.html">solution.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-box-model-solutions/02-margin-and-padding-2/">02-margin-and-padding-2</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week4-box-model-solutions/02-margin-and-padding-2/solution/">solution</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-box-model-solutions/02-margin-and-padding-2/solution/solution.css">solution.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/tutorials/week4-box-model-solutions/02-margin-and-padding-2/solution/solution.html">solution.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-box-model-solutions/LICENSE">LICENSE</a><br>
-	&nbsp;&nbsp;&nbsp; │   └── <a href="./assignments/lab3-solution/tutorials/week4-box-model-solutions/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-box-model-solutions.zip">week4-box-model-solutions.zip</a><br>
-	&nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/">week4-foundations-exercises</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/01-css-methods/">01-css-methods</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/01-css-methods/desired-outcome.png">desired-outcome.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/01-css-methods/index.html">index.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/01-css-methods/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/02-class-id-selectors/">02-class-id-selectors</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/02-class-id-selectors/desired-outcome.png">desired-outcome.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/02-class-id-selectors/index.html">index.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/02-class-id-selectors/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/02-class-id-selectors/style.css">style.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/03-grouping-selectors/">03-grouping-selectors</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/03-grouping-selectors/desired-outcome.png">desired-outcome.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/03-grouping-selectors/index.html">index.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/03-grouping-selectors/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/03-grouping-selectors/style.css">style.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/04-chaining-selectors/">04-chaining-selectors</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/04-chaining-selectors/desired-outcome.png">desired-outcome.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/04-chaining-selectors/index.html">index.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/04-chaining-selectors/pexels-andrea-piacquadio-3777931.jpg">pexels-andrea-piacquadio-3777931.jpg</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/04-chaining-selectors/pexels-katho-mutodo-8434791.jpg">pexels-katho-mutodo-8434791.jpg</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/04-chaining-selectors/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/04-chaining-selectors/style.css">style.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/05-descendant-combinator/">05-descendant-combinator</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/05-descendant-combinator/desired-outcome.png">desired-outcome.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/05-descendant-combinator/index.html">index.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/05-descendant-combinator/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/05-descendant-combinator/style.css">style.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/06-cascade-fix/">06-cascade-fix</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/06-cascade-fix/desired-outcome.png">desired-outcome.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/06-cascade-fix/index.html">index.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/06-cascade-fix/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/06-cascade-fix/style.css">style.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/LICENSE">LICENSE</a><br>
-	&nbsp;&nbsp;&nbsp; │   └── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-exercises.zip">week4-foundations-exercises.zip</a><br>
-	&nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions/">week4-foundations-solutions</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions/01-css-methods/">01-css-methods</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions/01-css-methods/solution/">solution</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions/01-css-methods/solution/solution.css">solution.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions/01-css-methods/solution/solution.html">solution.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions/02-class-id-selectors/">02-class-id-selectors</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions/02-class-id-selectors/solution/">solution</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions/02-class-id-selectors/solution/solution.css">solution.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions/02-class-id-selectors/solution/solution.html">solution.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions/03-grouping-selectors/">03-grouping-selectors</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions/03-grouping-selectors/solution/">solution</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions/03-grouping-selectors/solution/solution.css">solution.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions/03-grouping-selectors/solution/solution.html">solution.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions/04-chaining-selectors/">04-chaining-selectors</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions/04-chaining-selectors/solution/">solution</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions/04-chaining-selectors/solution/solution.css">solution.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions/04-chaining-selectors/solution/solution.html">solution.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions/05-descendant-combinator/">05-descendant-combinator</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions/05-descendant-combinator/solution/">solution</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions/05-descendant-combinator/solution/solution.css">solution.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions/05-descendant-combinator/solution/solution.html">solution.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions/06-cascade-fix/">06-cascade-fix</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions/06-cascade-fix/solution/">solution</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions/06-cascade-fix/solution/solution.css">solution.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions/06-cascade-fix/solution/solution.html">solution.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions/LICENSE">LICENSE</a><br>
-	&nbsp;&nbsp;&nbsp; │   └── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-foundations-solutions.zip">week4-foundations-solutions.zip</a><br>
-	&nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-exercises/">week4-styling-text-exercises</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-exercises/external-link-52.png">external-link-52.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-exercises/index.html">index.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-exercises/LICENSE">LICENSE</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-exercises/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; │   └── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-exercises/style.css">style.css</a><br>
-	&nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-exercises.zip">week4-styling-text-exercises.zip</a><br>
-	&nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/">week4-styling-text-solutions</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/external-link-52.png">external-link-52.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/fonts/">fonts</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/fonts/josefinslab-bold-webfont.eot">josefinslab-bold-webfont.eot</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/fonts/josefinslab-bold-webfont.svg">josefinslab-bold-webfont.svg</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/fonts/josefinslab-bold-webfont.ttf">josefinslab-bold-webfont.ttf</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/fonts/josefinslab-bold-webfont.woff">josefinslab-bold-webfont.woff</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/fonts/josefinslab-bold-webfont.woff2">josefinslab-bold-webfont.woff2</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/fonts/Lovato-Light-webfont.eot">Lovato-Light-webfont.eot</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/fonts/Lovato-Light-webfont.svg">Lovato-Light-webfont.svg</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/fonts/Lovato-Light-webfont.ttf">Lovato-Light-webfont.ttf</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/fonts/Lovato-Light-webfont.woff">Lovato-Light-webfont.woff</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/fonts/Lovato-Light-webfont.woff2">Lovato-Light-webfont.woff2</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/index.html">index.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/LICENSE">LICENSE</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/marking-guide.md">marking-guide.md</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/">original-font-files</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/josefin-slab/">josefin-slab</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/josefin-slab/JosefinSlab-BoldItalic.ttf">JosefinSlab-BoldItalic.ttf</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/josefin-slab/JosefinSlab-Bold.ttf">JosefinSlab-Bold.ttf</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/josefin-slab/JosefinSlab-Italic.ttf">JosefinSlab-Italic.ttf</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/josefin-slab/JosefinSlab-LightItalic.ttf">JosefinSlab-LightItalic.ttf</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/josefin-slab/JosefinSlab-Light.ttf">JosefinSlab-Light.ttf</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/josefin-slab/JosefinSlab-Regular.ttf">JosefinSlab-Regular.ttf</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/josefin-slab/JosefinSlab-SemiBoldItalic.ttf">JosefinSlab-SemiBoldItalic.ttf</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/josefin-slab/JosefinSlab-SemiBold.ttf">JosefinSlab-SemiBold.ttf</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/josefin-slab/JosefinSlab-ThinItalic.ttf">JosefinSlab-ThinItalic.ttf</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/josefin-slab/JosefinSlab-Thin.ttf">JosefinSlab-Thin.ttf</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   └── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/josefin-slab/SIL%20Open%20Font%20License.txt">SIL Open Font License.txt</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/Lovato%20Light-Webfont/">Lovato Light-Webfont</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/Lovato%20Light-Webfont/Licenses/">Licenses</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   │   └── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/Lovato%20Light-Webfont/Licenses/Webfont%20EULA%201.6.txt">Webfont EULA 1.6.txt</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/Lovato%20Light-Webfont/Reference/">Reference</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   │   └── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/Lovato%20Light-Webfont/Reference/How_to_use_webfonts.html">How_to_use_webfonts.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   └── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/Lovato%20Light-Webfont/Webfonts/">Webfonts</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/Lovato%20Light-Webfont/Webfonts/lovato_light_macroman/">lovato_light_macroman</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/Lovato%20Light-Webfont/Webfonts/lovato_light_macroman/Lovato-Light-demo.html">Lovato-Light-demo.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/Lovato%20Light-Webfont/Webfonts/lovato_light_macroman/Lovato-Light-webfont.eot">Lovato-Light-webfont.eot</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/Lovato%20Light-Webfont/Webfonts/lovato_light_macroman/Lovato-Light-webfont.svg">Lovato-Light-webfont.svg</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/Lovato%20Light-Webfont/Webfonts/lovato_light_macroman/Lovato-Light-webfont.ttf">Lovato-Light-webfont.ttf</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/Lovato%20Light-Webfont/Webfonts/lovato_light_macroman/Lovato-Light-webfont.woff">Lovato-Light-webfont.woff</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/Lovato%20Light-Webfont/Webfonts/lovato_light_macroman/Lovato-Light-webfont.woff2">Lovato-Light-webfont.woff2</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/Lovato%20Light-Webfont/Webfonts/lovato_light_macroman/specimen_files/">specimen_files</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/Lovato%20Light-Webfont/Webfonts/lovato_light_macroman/specimen_files/easytabs.js">easytabs.js</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/Lovato%20Light-Webfont/Webfonts/lovato_light_macroman/specimen_files/grid_12-825-55-15.css">grid_12-825-55-15.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   └── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/Lovato%20Light-Webfont/Webfonts/lovato_light_macroman/specimen_files/specimen_stylesheet.css">specimen_stylesheet.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/Lovato%20Light-Webfont/Webfonts/lovato_light_macroman/stylesheet.css">stylesheet.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/webfontkit-20160419-074110/">webfontkit-20160419-074110</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/webfontkit-20160419-074110/generator_config.txt">generator_config.txt</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/webfontkit-20160419-074110/josefinslab-bold-demo.html">josefinslab-bold-demo.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/webfontkit-20160419-074110/josefinslab-bold-webfont.eot">josefinslab-bold-webfont.eot</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/webfontkit-20160419-074110/josefinslab-bold-webfont.svg">josefinslab-bold-webfont.svg</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/webfontkit-20160419-074110/josefinslab-bold-webfont.ttf">josefinslab-bold-webfont.ttf</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/webfontkit-20160419-074110/josefinslab-bold-webfont.woff">josefinslab-bold-webfont.woff</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/webfontkit-20160419-074110/josefinslab-bold-webfont.woff2">josefinslab-bold-webfont.woff2</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/webfontkit-20160419-074110/specimen_files/">specimen_files</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/webfontkit-20160419-074110/specimen_files/grid_12-825-55-15.css">grid_12-825-55-15.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; │   └── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/webfontkit-20160419-074110/specimen_files/specimen_stylesheet.css">specimen_stylesheet.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/original-font-files/webfontkit-20160419-074110/stylesheet.css">stylesheet.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; │   └── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions/style.css">style.css</a><br>
-	&nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week4-styling-text-solutions.zip">week4-styling-text-solutions.zip</a><br>
-	&nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/">week6-flexbox-exercises</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/01-flex-center/">01-flex-center</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/01-flex-center/desired-outcome.png">desired-outcome.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/01-flex-center/index.html">index.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/01-flex-center/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/01-flex-center/style.css">style.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/02-flex-header/">02-flex-header</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/02-flex-header/desired-outcome-narrow.png">desired-outcome-narrow.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/02-flex-header/desired-outcome-wide.png">desired-outcome-wide.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/02-flex-header/index.html">index.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/02-flex-header/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/02-flex-header/style.css">style.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/03-flex-header-2/">03-flex-header-2</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/03-flex-header-2/desired-outcome.gif">desired-outcome.gif</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/03-flex-header-2/desired-outcome.png">desired-outcome.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/03-flex-header-2/index.html">index.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/03-flex-header-2/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/03-flex-header-2/style.css">style.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/04-flex-information/">04-flex-information</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/04-flex-information/desired-outcome.png">desired-outcome.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/04-flex-information/images/">images</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/04-flex-information/images/barberry.png">barberry.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/04-flex-information/images/chilli.png">chilli.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/04-flex-information/images/pepper.png">pepper.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   │   └── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/04-flex-information/images/saffron.png">saffron.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/04-flex-information/index.html">index.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/04-flex-information/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/04-flex-information/style.css">style.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/05-flex-modal/">05-flex-modal</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/05-flex-modal/desired-outcome.png">desired-outcome.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/05-flex-modal/index.html">index.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/05-flex-modal/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/05-flex-modal/style.css">style.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/06-flex-layout/">06-flex-layout</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/06-flex-layout/desired-outcome.png">desired-outcome.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/06-flex-layout/index.html">index.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/06-flex-layout/logo.png">logo.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/06-flex-layout/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/06-flex-layout/style.css">style.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/07-flex-layout-2/">07-flex-layout-2</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/07-flex-layout-2/desired-outcome.png">desired-outcome.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/07-flex-layout-2/desired-outcome-smaller.png">desired-outcome-smaller.png</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/07-flex-layout-2/index.html">index.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/07-flex-layout-2/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/07-flex-layout-2/style.css">style.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/LICENSE">LICENSE</a><br>
-	&nbsp;&nbsp;&nbsp; │   └── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-exercises.zip">week6-flexbox-exercises.zip</a><br>
-	&nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/">week6-flexbox-solutions</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/01-flex-center/">01-flex-center</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/01-flex-center/solution/">solution</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/01-flex-center/solution/solution.css">solution.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/01-flex-center/solution/solution.html">solution.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/02-flex-header/">02-flex-header</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/02-flex-header/solution/">solution</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/02-flex-header/solution/solution.css">solution.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/02-flex-header/solution/solution.html">solution.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/03-flex-header-2/">03-flex-header-2</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/03-flex-header-2/solution/">solution</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/03-flex-header-2/solution/solution.css">solution.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/03-flex-header-2/solution/solution.html">solution.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/04-flex-information/">04-flex-information</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/04-flex-information/solution/">solution</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/04-flex-information/solution/solution.css">solution.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/04-flex-information/solution/solution.html">solution.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/05-flex-modal/">05-flex-modal</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/05-flex-modal/solution/">solution</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/05-flex-modal/solution/solution.css">solution.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/05-flex-modal/solution/solution.html">solution.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/06-flex-layout/">06-flex-layout</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/06-flex-layout/solution/">solution</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/06-flex-layout/solution/solution.css">solution.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/06-flex-layout/solution/solution.html">solution.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/07-flex-layout-2/">07-flex-layout-2</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   └── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/07-flex-layout-2/solution/">solution</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/07-flex-layout-2/solution/solution.css">solution.css</a><br>
-	&nbsp;&nbsp;&nbsp; │   │   &nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/07-flex-layout-2/solution/solution.html">solution.html</a><br>
-	&nbsp;&nbsp;&nbsp; │   ├── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/LICENSE">LICENSE</a><br>
-	&nbsp;&nbsp;&nbsp; │   └── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions/README.md">README.md</a><br>
-	&nbsp;&nbsp;&nbsp; └── <a href="./assignments/lab3-solution/tutorials/week6-flexbox-solutions.zip">week6-flexbox-solutions.zip</a><br>
-<br><br><p>
-
-120 directories, 638 files
-
-</p>
-	<hr>
-	<p class="VERSION">
-		 tree v2.1.0 © 1996 - 2022 by Steve Baker and Thomas Moore <br>
-		 HTML output hacked and copyleft © 1998 by Francesc Rocher <br>
-		 JSON output hacked and copyleft © 2014 by Florian Sesser <br>
-		 Charsets / OS/2 support © 2001 by Kyosuke Tokoro
-	</p>
-</body>
+<html lang="en">
+  <head>
+    <title>Lab 3 Solution</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="page-header flex-container">
+      <img src="images/logo.svg" role="img" alt="logo" />
+      <nav>
+        <ul class="nav-links flex-container">
+          <li>Item first</li>
+          <li>Item two</li>
+          <li>Item three</li>
+          <li>Item four</li>
+          <li>Item five</li>
+        </ul>
+      </nav>
+      <img src="images/hamburger.svg" role="img" alt="hamburger" />
+    </header>
+    <section class="card flex-container">
+      <div class="flex-column flex-container">
+        <h1 class="page-title">We help you find the best animals</h1>
+        <p>
+          Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam
+          no suscipit quaerendum. At nam minimum ponderum. Est audiam animal
+          molestiae te. Ex duo eripuit mentitum.
+        </p>
+        <button>Learn More</button>
+      </div>
+      <img src="images/placeholder.png" alt="placeholder" />
+    </section>
+    <section class="card flex-column flex-container">
+      <h2 class="card-title">The Animal Guarantee</h2>
+      <div class="guarantee-grid flex-container">
+        <div>
+          <img src="../images/stores.svg" alt="" />
+          <h3>Animal Stores</h3>
+          <p>
+            Eos tota dicunt democritum no. Has natum gubergren ne. Est viris
+            soleat sadipscing cu. Legere epicuri insolens eu nec, dicit virtute
+            urbanitas id nam, qui in habeo semper eligendi.
+          </p>
+        </div>
+        <div>
+          <img src="../images/security.svg" alt="" />
+          <h3>Animal Security</h3>
+          <p>
+            Ne nam phaedrum consequat, adhuc aliquid ea pri, eum eligendi
+            incorrupte referrentur in. Vix ad senserit salutandi argumentum. Ei
+            eam definiebas reformidans, exerci persecuti no ius.
+          </p>
+        </div>
+        <div>
+          <img src="../images/categorization.svg" alt="" />
+          <h3>Animal Categorization</h3>
+          <p>
+            Assum suavitate ea vel, vero erat doming cu cum. Zril ornatus sea
+            cu. Pro ex integre pertinax. Cu cum harum paulo legendos, mei et
+            quod enim mnesarchum, habeo affert laoreet sea ei.
+          </p>
+        </div>
+        <div>
+          <img src="../images/communication.svg" alt="" />
+          <h3>Animal Communication</h3>
+          <p>
+            Assum suavitate ea vel, vero erat doming cu cum. Zril ornatus sea
+            cu. Pro ex integre pertinax. Cu cum harum paulo legendos, mei et
+            quod enim mnesarchum, habeo affert laoreet sea ei.
+          </p>
+        </div>
+        <div>
+          <img src="../images/networks.svg" alt="" />
+          <h3>Animal Networks</h3>
+          <p>
+            Eos tota dicunt democritum no. Has natum gubergren ne. Est viris
+            soleat sadipscing cu. Legere epicuri insolens eu nec, dicit virtute
+            urbanitas id nam, qui in habeo semper eligendi.
+          </p>
+        </div>
+        <div>
+          <img src="../images/storage.svg" alt="" />
+          <h3>Animal Storage</h3>
+          <p>
+            Ne nam phaedrum consequat, adhuc aliquid ea pri, eum eligendi
+            incorrupte referrentur in. Vix ad senserit salutandi argumentum. Ei
+            eam definiebas reformidans, exerci persecuti no ius
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="card flex-column flex-container">
+      <h2 class="card-title">We offer a comprehensive range of animals</h2>
+      <div class="gallery flex-container">
+        <figure>
+          <img src="images/placeholder.png" alt="placeholder" />
+          <figcaption>
+            <h3>Ad eos saepe lucilius</h3>
+            <p>
+              At eripuit signiferumque sea, vel ad mucius molestie, cu labitur.
+            </p>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/placeholder.png" alt="placeholder" />
+          <figcaption>
+            <h3>Ad eos saepe lucilius</h3>
+            <p>
+              At eripuit signiferumque sea, vel ad mucius molestie, cu labitur.
+            </p>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/placeholder.png" alt="placeholder" />
+          <figcaption>
+            <h3>Ad eos saepe lucilius</h3>
+            <p>
+              At eripuit signiferumque sea, vel ad mucius molestie, cu labitur.
+            </p>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/placeholder.png" alt="placeholder" />
+          <figcaption>
+            <h3>Ad eos saepe lucilius</h3>
+            <p>
+              At eripuit signiferumque sea, vel ad mucius molestie, cu labitur.
+            </p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="card flex-column flex-container">
+      <h2 class="card-title">Ready to get started?</h2>
+      <p>
+        Take control of your Animal Data today. Aliqua reprehenderit commodo ex
+        non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat
+        ullamco ut ea consectetur et est culpa et culpa duis.
+      </p>
+      <button type="">Get Started</button>
+    </section>
+    <footer class="page-footer flex-container">
+      <p>© BrandName. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
