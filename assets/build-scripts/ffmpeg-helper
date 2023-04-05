@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+# This script depends upon:
+# - reasonably recent version of ffmpeg in your path
+# - my secret ffmpeg helper functions (will fix this in the future)
+
+if [ -n "$BASH_LIBRARY" ]; then 
+  . "$BASH_LIBRARY/ffmpeg"; 
+  printf "%s\n" "Starting...";
+else 
+  printf "%s\n" "BASH_LIBRARY environment variable missing. Exiting." >&2; 
+  exit 1; 
+fi
+
+if [ ! -d "$1" ]; then
+  printf "%s\n" "Argument required: path to input directory. Exiting." >&2; 
+  exit 1; 
+fi
+
+if [ ! -d "$2" ]; then
+  printf "%s\n" "Argument required: path to output directory. Exiting." >&2; 
+  exit 1; 
+fi
+
+INPUT_DIR="$1"
+OUTPUT_DIR="$2"
+
+export OUTPUT_DIR
+export -f ffmpeg-to-webm
+export -f ffmpeg-to-mp4
+parallel -vv -j 4 'ffmpeg-to-webm 1280 720 realtime "{}" "${OUTPUT_DIR}${.}.webm"' ::: $(find "$INPUT_DIR" -type f -name '*.mkv');
+parallel -vv -j 4 'ffmpeg-to-webm 640 360 realtime "{}" "${OUTPUT_DIR}/${.}.webm"' ::: $(find "$INPUT_DIR" -type f -name '*.mkv');
+parallel -vv -j 4 'ffmpeg-to-mp4 1280 720 ultrafast "{}" "${OUTPUT_DIR}/${.}.mp4"' ::: $(find "$INPUT_DIR" -type f -name '*.mkv');
+parallel -vv -j 4 'ffmpeg-to-mp4 640 360 ultrafast "{}" "${OUTPUT_DIR}/${.}.mp4"' ::: $(find "$INPUT_DIR" -type f -name '*.mkv');
