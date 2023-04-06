@@ -81,8 +81,10 @@
   /* Hex color to CSS filter calculator: https://isotropic.co/tool/hex-color-to-css-filter/ */
   --svg-filter-default: var(--filter-black) invert(41%) sepia(7%) saturate(1400%) hue-rotate(209deg) brightness(91%) contrast(83%);
   --svg-filter-accent-red: var(--filter-black) invert(37%) sepia(11%) saturate(2106%) hue-rotate(291deg) brightness(97%) contrast(97%); 
-  --gradient-opacity: 0.7;
+  --gradient-opacity: 1;
   --header-image: url("../images/light-theme/guggenheim-books.jpg");
+  --header-position: 50% 20%;
+  --header-size: 66%;
   --theme-toggle-icon: url("../images/light-theme/theme-toggle-icon.svg");
 }
 
@@ -111,8 +113,10 @@
   /* Hex color to CSS filter calculator: https://isotropic.co/tool/hex-color-to-css-filter/ */
   --svg-filter-default: var(--filter-black) invert(73%) sepia(10%) saturate(469%) hue-rotate(208deg) brightness(91%) contrast(84%);
   --svg-filter-accent-red: var(--filter-black) invert(87%) sepia(22%) saturate(3499%) hue-rotate(291deg) brightness(91%) contrast(105%);
-  --gradient-opacity: 0.9;
+  --gradient-opacity: 1;
   --header-image: url("../images/dark-theme/guggenheim-brown.jpg");
+  --header-position: -70% 29%;
+  --header-size: 90%;
   --theme-toggle-icon: url("../images/dark-theme/theme-toggle-icon.svg");
 
 }
@@ -144,7 +148,9 @@
     /* Hex color to CSS filter calculator: https://isotropic.co/tool/hex-color-to-css-filter/ */
     --svg-filter-default: var(--filter-black) invert(73%) sepia(10%) saturate(469%) hue-rotate(208deg) brightness(91%) contrast(84%);
     --svg-filter-accent-red: var(--filter-black) invert(87%) sepia(22%) saturate(3499%) hue-rotate(291deg) brightness(91%) contrast(105%);
-    --gradient-opacity: 0.9;
+    --gradient-opacity: 1;
+    --header-position: -70% 29%;
+    --header-size: 90%;
     --header-image: url("../images/dark-theme/guggenheim-brown.jpg");
     --theme-toggle-icon: url("../images/dark-theme/theme-toggle-icon.svg");
   }
@@ -893,8 +899,8 @@ header.header {
   justify-content: space-between;
   align-items: end;
 
-  background-position: center;
-  background-size: cover;
+  background-position: var(--header-position);
+  background-size: var(--header-size);
   background-image: linear-gradient(
       to bottom,
       rgba(35, 33, 54, 0%),
@@ -902,7 +908,7 @@ header.header {
     ),
     var(--header-image);
 
-  padding: 3rem 0.5rem 0.5rem;
+  padding: 9rem 0.5rem 0.5rem;
 }
 
 .header h1 {
@@ -915,6 +921,7 @@ header.header {
 .course-info-decoration {
   display: flex;
   align-items: center;
+  gap: 0.375em;
 }
 
 .aside--page * {

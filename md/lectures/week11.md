@@ -417,3 +417,6 @@ Stay tuned for more information!
 # Exercises
 
 These exercises will be based on June's guest lecture (Wednesday, April 5)
+
+
+[semrush-html-review]: https://www.semrush.com/blog/semantic-html5-guide/ 
