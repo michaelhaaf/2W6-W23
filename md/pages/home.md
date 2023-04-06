@@ -1,5 +1,5 @@
 ---
-title: "2W6-W23: User Interfaces"
+title: "2W6-W23: Home"
 toc-title: "Page navigation"
 next-page: "../pages/course-outline.html"
 lang: "en"
