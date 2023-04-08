@@ -639,6 +639,9 @@ td h5 {
   color: var(--text);
 }
 
+.main {
+}
+
 .dropbtn {
   border: none;
   outline: none;
@@ -950,6 +953,7 @@ header.header {
 
 .header {
   grid-area: hd;
+  border-bottom: 0.2px solid var(--muted);
 }
 
 .main {
@@ -963,6 +967,8 @@ header.header {
 .aside--site {
   grid-area: nv;
   z-index: 2;
+  border-bottom: 0.2px solid var(--muted);
+  border-right: 0.2px solid var(--muted);
 }
 
 .aside--page {
