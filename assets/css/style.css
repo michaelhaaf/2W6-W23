@@ -432,7 +432,7 @@ h3, th, .abstract-title {
 }
 
 /* Margins/padding are off, needs revision */
-h4, .nav h3 {
+h4, .nav--page .icon-text {
   margin: 0;
   margin-bottom: 0.45em;
   font-size: 1.125rem;
@@ -656,6 +656,7 @@ td h5 {
   width: 3rem;
   height: 3rem;
   filter: var(--svg-filter-base);
+  font-size: 0;
 }
 
 .icon {
@@ -701,10 +702,6 @@ td h5 {
 /*
 * ||| .nav <a> 
 */
-
-.nav h3 {
-  margin-top: 0;
-}
 
 .nav a:link,
 .nav a:visited,
