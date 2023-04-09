@@ -22,33 +22,72 @@ abstract: |
 
 ---
 
-# Responsive Web Design
 
-What is responsive web design? Lab 4 as an example. Constrast with other examples.
-
-## Responsive HTML
+# HTML: Responsive by Default
 
 How vanilla HTML is already perfectly responsive. 
 
 Start Lab 4 by creating the HTML, ensure you have a coherent layout (the relationship between all webpage content makes sense)
 
-## Semantic HTML
+# Benefits of Semantic HTML
 
 How to use the Semantic HTML elements to further improve the accesibility of your website by default.
 
-## Using CSS like a Designer
+# Responsive CSS Techniques
 
-How to create classes that represent design patterns. How to organize rules in order of specificity to avoid bugs/achieve clarity.
+A list of other CSS techniques worth mentioning
 
-## Responsive design using Flexbox
+## Percentages vs. Pixels
+
+Fixed vs. dynamic sizing
+
+## Width vs. Max-width
+
+Large screens, things get too big,
+
+## Height vs. Padding
+
+Overflow vs. natural dimensions of container
+
+## Overriding the `position` property
+
+For adjusting specific elements.
+
+## Media queries
+
+If you define the grid layout with `grid-template-areas`  (technique above), it is very easy to modify the layout using media queries.
+
+Since the names for the areas have already been defined with `grid-area` we can just reuse them:
+
+
+###### CSS{.sourceCode}
+```css
+@media (min-width: 900px) {
+    .wrapper {
+      grid-template-rows: 1fr 4fr 1fr;      
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-areas: 
+        " hd   hd   hd   hd  hd"
+        "main main main main sd"
+        " ft   ft   ft   ft  ft";
+    }
+}
+```
+
+<iframe height="353" style="width: 100%;" scrolling="no" title="wk9-grid- mediaQ - Area - ex15" src="https://codepen.io/maujac/embed/ExjqXRb?height=353&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/maujac/pen/ExjqXRb'>wk9-grid- mediaQ - Area - ex15</a> by Mauricio Buschinelli
+  (<a href='https://codepen.io/maujac'>@maujac</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+# Flexbox
 
 The typical layout designs we can achieve in Flexbox
 
-## Responsive design using Grid
+# Responsive design using Grid
 
 This section is adapted directly from [Website Layouts with Grid](https://maujac.github.io/2W6-UI/#/./wk9/layouts_grid) from the Winter 2021 version of the course, in turn based on the page **[Basic Concepts of grid layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)** by MDN web docs, **[A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)** by CSS Tricks and [**CSS Grid Layout Module**](https://www.w3schools.com/css/css_grid.asp) by W3Schools.
 
-### Nested grids
+## Nested grids
 
 A grid item can also become a grid container
 
@@ -91,7 +130,7 @@ A grid item can also become a grid container
   (<a href='https://codepen.io/maujac'>@maujac</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-### Overlapping Grid Items
+## Overlapping Grid Items
 
 Grid items can overlap inside their grid container without any problems.
 
@@ -136,7 +175,7 @@ In the example below **.box2 overlaps on top of .box1** and **.box3 overlaps on 
   (<a href='https://codepen.io/maujac'>@maujac</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-### Layering Grid Items
+## Layering Grid Items
 
 Grid items can be layered/stacked by properly positioning them and assigning `z-index` when necessary. 
 
@@ -164,7 +203,7 @@ Considering the previous example, we will place .box2 on top of .box1 **and** .b
 
 
 
-### Grid area Property
+## Grid area Property
 
 It is possible to shorten the `grid-row` and `grid-column` notation even further by using `grid-area`
 
@@ -236,7 +275,7 @@ Example of `grid-area`:
 
 
 
-### Naming and Positioning by Grid Areas
+## Naming and Positioning by Grid Areas
 
 In the example above we defining an area by specifying the lines that enclose that area:
 
@@ -272,7 +311,7 @@ Consider the layout below with the following sections:
 
 
 
-### Assigning names with `grid-area` 
+## Assigning names with `grid-area` 
 
 You can assign any name to a HTML element with the `grid-area`  property.
 
@@ -296,7 +335,7 @@ main {
 
 Once the naming convention has been assigned, create the layout using the item names instead of line numbers. 
 
-### Templates with `grid-template-areas`
+## Templates with `grid-template-areas`
 
 The `grid-template-areas` property defines a grid template by referencing the names of the grid areas.
 
@@ -328,7 +367,7 @@ The `grid-template-areas` property defines a grid template by referencing the na
 
 
 
-## Using Grid vs Flexbox
+# Using Grid vs Flexbox
 
 When to use Grid rather than Flexbox? Ask yourself the following questions:
 
@@ -358,53 +397,13 @@ An example would be setting a percentage width on a flex item to make it line up
 > Flexbox and Grid are perfectly compatible and most powerful when used together
 
 
+# Semantic CSS?
 
-## Media queries
+## Organizing stylesheets
 
-If you define the grid layout with `grid-template-areas`  (technique above), it is very easy to modify the layout using media queries.
+## Choosing class names
 
-Since the names for the areas have already been defined with `grid-area` we can just reuse them:
-
-
-###### CSS{.sourceCode}
-```css
-@media (min-width: 900px) {
-    .wrapper {
-      grid-template-rows: 1fr 4fr 1fr;      
-      grid-template-columns: repeat(5, 1fr);
-      grid-template-areas: 
-        " hd   hd   hd   hd  hd"
-        "main main main main sd"
-        " ft   ft   ft   ft  ft";
-    }
-}
-```
-
-<iframe height="353" style="width: 100%;" scrolling="no" title="wk9-grid- mediaQ - Area - ex15" src="https://codepen.io/maujac/embed/ExjqXRb?height=353&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/maujac/pen/ExjqXRb'>wk9-grid- mediaQ - Area - ex15</a> by Mauricio Buschinelli
-  (<a href='https://codepen.io/maujac'>@maujac</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
-
-
-## Other Important CSS Techniques
-
-A list of other CSS techniques worth mentioning
-
-### Heights vs. Padding
-
-Overflow vs. natural dimensions of container
-
-### Percentages vs. Pixels
-
-Fixed vs. dynamic sizing
-
-### The `position` property
-
-For adjusting specific elements.
-
-### Max-width
-
-Large screens, things get too big,
+## Choosing the right selector
 
 # Knowledge Check
 

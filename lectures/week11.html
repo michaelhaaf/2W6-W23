@@ -334,28 +334,57 @@
      <ul>
 <li><a href="#lesson-overview" id="toc-lesson-overview">Lesson
 Overview</a></li>
-<li><a href="#responsive-web-design"
-id="toc-responsive-web-design">Responsive Web Design</a>
+<li><a href="#html-responsive-by-default"
+id="toc-html-responsive-by-default">HTML: Responsive by Default</a></li>
+<li><a href="#benefits-of-semantic-html"
+id="toc-benefits-of-semantic-html">Benefits of Semantic HTML</a></li>
+<li><a href="#responsive-css-techniques"
+id="toc-responsive-css-techniques">Responsive CSS Techniques</a>
 <ul>
-<li><a href="#responsive-html" id="toc-responsive-html">Responsive
-HTML</a></li>
-<li><a href="#semantic-html" id="toc-semantic-html">Semantic
-HTML</a></li>
-<li><a href="#using-css-like-a-designer"
-id="toc-using-css-like-a-designer">Using CSS like a Designer</a></li>
-<li><a href="#responsive-design-using-flexbox"
-id="toc-responsive-design-using-flexbox">Responsive design using
-Flexbox</a></li>
-<li><a href="#responsive-design-using-grid"
-id="toc-responsive-design-using-grid">Responsive design using
-Grid</a></li>
-<li><a href="#using-grid-vs-flexbox"
-id="toc-using-grid-vs-flexbox">Using Grid vs Flexbox</a></li>
+<li><a href="#percentages-vs.-pixels"
+id="toc-percentages-vs.-pixels">Percentages vs. Pixels</a></li>
+<li><a href="#width-vs.-max-width" id="toc-width-vs.-max-width">Width
+vs. Max-width</a></li>
+<li><a href="#height-vs.-padding" id="toc-height-vs.-padding">Height
+vs. Padding</a></li>
+<li><a href="#overriding-the-position-property"
+id="toc-overriding-the-position-property">Overriding the
+<code>position</code> property</a></li>
 <li><a href="#media-queries" id="toc-media-queries">Media
 queries</a></li>
-<li><a href="#other-important-css-techniques"
-id="toc-other-important-css-techniques">Other Important CSS
-Techniques</a></li>
+</ul></li>
+<li><a href="#flexbox" id="toc-flexbox">Flexbox</a></li>
+<li><a href="#responsive-design-using-grid"
+id="toc-responsive-design-using-grid">Responsive design using Grid</a>
+<ul>
+<li><a href="#nested-grids" id="toc-nested-grids">Nested grids</a></li>
+<li><a href="#overlapping-grid-items"
+id="toc-overlapping-grid-items">Overlapping Grid Items</a></li>
+<li><a href="#layering-grid-items" id="toc-layering-grid-items">Layering
+Grid Items</a></li>
+<li><a href="#grid-area-property" id="toc-grid-area-property">Grid area
+Property</a></li>
+<li><a href="#naming-and-positioning-by-grid-areas"
+id="toc-naming-and-positioning-by-grid-areas">Naming and Positioning by
+Grid Areas</a></li>
+<li><a href="#assigning-names-with-grid-area"
+id="toc-assigning-names-with-grid-area">Assigning names with
+<code>grid-area</code></a></li>
+<li><a href="#templates-with-grid-template-areas"
+id="toc-templates-with-grid-template-areas">Templates with
+<code>grid-template-areas</code></a></li>
+</ul></li>
+<li><a href="#using-grid-vs-flexbox"
+id="toc-using-grid-vs-flexbox">Using Grid vs Flexbox</a></li>
+<li><a href="#semantic-css" id="toc-semantic-css">Semantic CSS?</a>
+<ul>
+<li><a href="#organizing-stylesheets"
+id="toc-organizing-stylesheets">Organizing stylesheets</a></li>
+<li><a href="#choosing-class-names"
+id="toc-choosing-class-names">Choosing class names</a></li>
+<li><a href="#choosing-the-right-selector"
+id="toc-choosing-the-right-selector">Choosing the right
+selector</a></li>
 </ul></li>
 <li><a href="#knowledge-check" id="toc-knowledge-check">Knowledge
 Check</a></li>
@@ -391,7 +420,7 @@ Check</a></li>
      </div>
            <p class="date">
       Last update:
-      <time datetime="Sat Apr 8 18:28:36 2023">
+      <time datetime="Sat Apr 8 20:40:37 2023">
        Saturday, April 08, 2023
       </time>
      </p>
@@ -409,32 +438,72 @@ components?</li>
 </ul>
 <hr />
 </section>
-<section id="responsive-web-design" class="level1">
-<h1>Responsive Web Design</h1>
-<p>What is responsive web design? Lab 4 as an example. Constrast with
-other examples.</p>
-<section id="responsive-html" class="level2">
-<h2>Responsive HTML</h2>
+<section id="html-responsive-by-default" class="level1">
+<h1>HTML: Responsive by Default</h1>
 <p>How vanilla HTML is already perfectly responsive.</p>
 <p>Start Lab 4 by creating the HTML, ensure you have a coherent layout
 (the relationship between all webpage content makes sense)</p>
 </section>
-<section id="semantic-html" class="level2">
-<h2>Semantic HTML</h2>
+<section id="benefits-of-semantic-html" class="level1">
+<h1>Benefits of Semantic HTML</h1>
 <p>How to use the Semantic HTML elements to further improve the
 accesibility of your website by default.</p>
 </section>
-<section id="using-css-like-a-designer" class="level2">
-<h2>Using CSS like a Designer</h2>
-<p>How to create classes that represent design patterns. How to organize
-rules in order of specificity to avoid bugs/achieve clarity.</p>
+<section id="responsive-css-techniques" class="level1">
+<h1>Responsive CSS Techniques</h1>
+<p>A list of other CSS techniques worth mentioning</p>
+<section id="percentages-vs.-pixels" class="level2">
+<h2>Percentages vs. Pixels</h2>
+<p>Fixed vs. dynamic sizing</p>
 </section>
-<section id="responsive-design-using-flexbox" class="level2">
-<h2>Responsive design using Flexbox</h2>
+<section id="width-vs.-max-width" class="level2">
+<h2>Width vs. Max-width</h2>
+<p>Large screens, things get too big,</p>
+</section>
+<section id="height-vs.-padding" class="level2">
+<h2>Height vs. Padding</h2>
+<p>Overflow vs. natural dimensions of container</p>
+</section>
+<section id="overriding-the-position-property" class="level2">
+<h2>Overriding the <code>position</code> property</h2>
+<p>For adjusting specific elements.</p>
+</section>
+<section id="media-queries" class="level2">
+<h2>Media queries</h2>
+<p>If you define the grid layout with <code>grid-template-areas</code>
+(technique above), it is very easy to modify the layout using media
+queries.</p>
+<p>Since the names for the areas have already been defined with
+<code>grid-area</code> we can just reuse them:</p>
+<section id="css" class="level6 sourceCode">
+<h6 class="sourceCode">CSS</h6>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span> (<span class="kw">min-width</span>: <span class="dv">900</span><span class="dt">px</span>) {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.wrapper</span> {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>      <span class="kw">grid-template-rows</span>: <span class="dv">1</span><span class="dt">fr</span> <span class="dv">4</span><span class="dt">fr</span> <span class="dv">1</span><span class="dt">fr</span><span class="op">;</span>      </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>      <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">5</span><span class="op">,</span> <span class="dv">1</span><span class="dt">fr</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>      <span class="kw">grid-template-areas</span>: </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot; hd   hd   hd   hd  hd&quot;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;main main main main sd&quot;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot; ft   ft   ft   ft  ft&quot;</span><span class="op">;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<iframe height="353" style="width: 100%;" scrolling="no" title="wk9-grid- mediaQ - Area - ex15" src="https://codepen.io/maujac/embed/ExjqXRb?height=353&amp;theme-id=light&amp;default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+See the Pen <a href='https://codepen.io/maujac/pen/ExjqXRb'>wk9-grid-
+mediaQ - Area - ex15</a> by Mauricio Buschinelli
+(<a href='https://codepen.io/maujac'><span class="citation"
+data-cites="maujac">@maujac</span></a>) on
+<a href='https://codepen.io'>CodePen</a>.
+</iframe>
+</section>
+</section>
+</section>
+<section id="flexbox" class="level1">
+<h1>Flexbox</h1>
 <p>The typical layout designs we can achieve in Flexbox</p>
 </section>
-<section id="responsive-design-using-grid" class="level2">
-<h2>Responsive design using Grid</h2>
+<section id="responsive-design-using-grid" class="level1">
+<h1>Responsive design using Grid</h1>
 <p>This section is adapted directly from <a
 href="https://maujac.github.io/2W6-UI/#/./wk9/layouts_grid">Website
 Layouts with Grid</a> from the Winter 2021 version of the course, in
@@ -445,42 +514,42 @@ href="https://css-tricks.com/snippets/css/complete-guide-grid/">A
 Complete Guide to Grid</a></strong> by CSS Tricks and <a
 href="https://www.w3schools.com/css/css_grid.asp"><strong>CSS Grid
 Layout Module</strong></a> by W3Schools.</p>
-<section id="nested-grids" class="level3">
-<h3>Nested grids</h3>
+<section id="nested-grids" class="level2">
+<h2>Nested grids</h2>
 <p>A grid item can also become a grid container</p>
 <section id="html" class="level6 sourceCode">
 <h6 class="sourceCode">HTML</h6>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;wrapper&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box1&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;nested&quot;</span><span class="kw">&gt;</span>a<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;nested&quot;</span><span class="kw">&gt;</span>b<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;nested&quot;</span><span class="kw">&gt;</span>c<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/div&gt;</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box2&quot;</span><span class="kw">&gt;</span>Two<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box3&quot;</span><span class="kw">&gt;</span>Three<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box4&quot;</span><span class="kw">&gt;</span>Four<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
-</section>
-<section id="css" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
 <div class="sourceCode" id="cb2"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.wrapper</span> {</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">grid</span><span class="op">;</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">3</span><span class="op">,</span> <span class="dv">1</span><span class="dt">fr</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">.box1</span> {</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">1</span>/<span class="dv">4</span><span class="op">;</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-row</span>: <span class="dv">1</span>/<span class="dv">3</span><span class="op">;</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">grid</span><span class="op">;</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">4</span><span class="op">,</span> <span class="dv">1</span><span class="dt">fr</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">.nested</span><span class="in">:nth-child(2)</span>{</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">2</span>/<span class="dv">4</span><span class="op">;</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;wrapper&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box1&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;nested&quot;</span><span class="kw">&gt;</span>a<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;nested&quot;</span><span class="kw">&gt;</span>b<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;nested&quot;</span><span class="kw">&gt;</span>c<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box2&quot;</span><span class="kw">&gt;</span>Two<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box3&quot;</span><span class="kw">&gt;</span>Three<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box4&quot;</span><span class="kw">&gt;</span>Four<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+</section>
+<section id="css-1" class="level6 sourceCode">
+<h6 class="sourceCode">CSS</h6>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.wrapper</span> {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">grid</span><span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">3</span><span class="op">,</span> <span class="dv">1</span><span class="dt">fr</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">.box1</span> {</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">1</span>/<span class="dv">4</span><span class="op">;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-row</span>: <span class="dv">1</span>/<span class="dv">3</span><span class="op">;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">grid</span><span class="op">;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">4</span><span class="op">,</span> <span class="dv">1</span><span class="dt">fr</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="fu">.nested</span><span class="in">:nth-child(2)</span>{</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">2</span>/<span class="dv">4</span><span class="op">;</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <iframe height="287" style="width: 100%;" scrolling="no" title="wk9-layout_grid-ex10" src="https://codepen.io/maujac/embed/mdJNOpq?height=287&amp;theme-id=light&amp;default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
 See the Pen
 <a href='https://codepen.io/maujac/pen/mdJNOpq'>wk9-layout_grid-ex10</a>
@@ -490,45 +559,45 @@ class="citation" data-cites="maujac">@maujac</span></a>) on
 </iframe>
 </section>
 </section>
-<section id="overlapping-grid-items" class="level3">
-<h3>Overlapping Grid Items</h3>
+<section id="overlapping-grid-items" class="level2">
+<h2>Overlapping Grid Items</h2>
 <p>Grid items can overlap inside their grid container without any
 problems.</p>
 <p>In the example below <strong>.box2 overlaps on top of .box1</strong>
 and <strong>.box3 overlaps on top of .box2</strong>.</p>
 <section id="html-1" class="level6 sourceCode">
 <h6 class="sourceCode">HTML</h6>
-<div class="sourceCode" id="cb3"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;wrapper&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box box1&quot;</span><span class="kw">&gt;</span>One<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box box2&quot;</span><span class="kw">&gt;</span>Two<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box box3&quot;</span><span class="kw">&gt;</span>Three<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box box4&quot;</span><span class="kw">&gt;</span>Four<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
-</section>
-<section id="css-1" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
 <div class="sourceCode" id="cb4"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.wrapper</span> {</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">grid</span><span class="op">;</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">3</span><span class="op">,</span> <span class="dv">1</span><span class="dt">fr</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-auto-rows</span>: <span class="dv">75</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">.box1</span> {</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">1</span> / <span class="dv">4</span><span class="op">;</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-row</span>: <span class="dv">1</span> / <span class="dv">3</span><span class="op">;</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="fu">.box2</span> {</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">1</span> / <span class="dv">3</span><span class="op">;</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-row</span>: <span class="dv">2</span> / <span class="dv">4</span><span class="op">;</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="fu">.box3</span> {</span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">2</span> / <span class="dv">3</span><span class="op">;</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-row</span>: <span class="dv">3</span> / <span class="dv">4</span><span class="op">;</span></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;wrapper&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box box1&quot;</span><span class="kw">&gt;</span>One<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box box2&quot;</span><span class="kw">&gt;</span>Two<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box box3&quot;</span><span class="kw">&gt;</span>Three<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box box4&quot;</span><span class="kw">&gt;</span>Four<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+</section>
+<section id="css-2" class="level6 sourceCode">
+<h6 class="sourceCode">CSS</h6>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.wrapper</span> {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">grid</span><span class="op">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">3</span><span class="op">,</span> <span class="dv">1</span><span class="dt">fr</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-auto-rows</span>: <span class="dv">75</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">.box1</span> {</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">1</span> / <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-row</span>: <span class="dv">1</span> / <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="fu">.box2</span> {</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">1</span> / <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-row</span>: <span class="dv">2</span> / <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="fu">.box3</span> {</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">2</span> / <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-row</span>: <span class="dv">3</span> / <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <iframe height="336" style="width: 100%;" scrolling="no" title="wk9-z-overlap-ex11" src="https://codepen.io/maujac/embed/MWwNbNw?height=336&amp;theme-id=light&amp;default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
 See the Pen
 <a href='https://codepen.io/maujac/pen/MWwNbNw'>wk9-z-overlap-ex11</a>
@@ -538,8 +607,8 @@ class="citation" data-cites="maujac">@maujac</span></a>) on
 </iframe>
 </section>
 </section>
-<section id="layering-grid-items" class="level3">
-<h3>Layering Grid Items</h3>
+<section id="layering-grid-items" class="level2">
+<h2>Layering Grid Items</h2>
 <p>Grid items can be layered/stacked by properly positioning them and
 assigning <code>z-index</code> when necessary.</p>
 <blockquote>
@@ -550,14 +619,14 @@ order of the element.</p>
 <p>Considering the previous example, we will place .box2 on top of .box1
 <strong>and</strong> .box3 by setting it’s <code>z-index</code> to
 1.</p>
-<section id="css-2" class="level6 sourceCode">
+<section id="css-3" class="level6 sourceCode">
 <h6 class="sourceCode">CSS</h6>
-<div class="sourceCode" id="cb5"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.box2</span> {</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">1</span> / <span class="dv">3</span><span class="op">;</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-row</span>: <span class="dv">2</span> / <span class="dv">4</span><span class="op">;</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">z-index</span>: <span class="dv">1</span><span class="op">;</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.box2</span> {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">1</span> / <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-row</span>: <span class="dv">2</span> / <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">z-index</span>: <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <iframe height="337" style="width: 100%;" scrolling="no" title="wk9-z-index-ex12" src="https://codepen.io/maujac/embed/PoqMpzP?height=337&amp;theme-id=light&amp;default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
 See the Pen
 <a href='https://codepen.io/maujac/pen/PoqMpzP'>wk9-z-index-ex12</a> by
@@ -567,8 +636,8 @@ class="citation" data-cites="maujac">@maujac</span></a>) on
 </iframe>
 </section>
 </section>
-<section id="grid-area-property" class="level3">
-<h3>Grid area Property</h3>
+<section id="grid-area-property" class="level2">
+<h2>Grid area Property</h2>
 <p>It is possible to shorten the <code>grid-row</code> and
 <code>grid-column</code> notation even further by using
 <code>grid-area</code></p>
@@ -581,10 +650,10 @@ follows:</p>
 <li>grid-column-end number</li>
 </ol>
 <p><strong>Syntax</strong></p>
-<section id="css-3" class="level6 sourceCode">
+<section id="css-4" class="level6 sourceCode">
 <h6 class="sourceCode">CSS</h6>
-<div class="sourceCode" id="cb6"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>grid-area<span class="in">: &lt;row-start</span><span class="op">&gt;</span> / &lt;column-star<span class="op">&gt;</span> / &lt;row-end<span class="op">&gt;</span> / &lt;column-end<span class="op">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>grid-area<span class="in">: &lt;row-start</span><span class="op">&gt;</span> / &lt;column-star<span class="op">&gt;</span> / &lt;row-end<span class="op">&gt;</span> / &lt;column-end<span class="op">&gt;</span></span></code></pre></div>
 <blockquote>
 <p>Think of the order of declaration as the definition of two points,
 each defined by a set of row and line numbers in a coordinate
@@ -598,35 +667,35 @@ system.</p>
 </section>
 <section id="html-2" class="level6 sourceCode">
 <h6 class="sourceCode">HTML</h6>
-<div class="sourceCode" id="cb7"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;wrapper&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box1&quot;</span><span class="kw">&gt;</span>One<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box2&quot;</span><span class="kw">&gt;</span>Two<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box3&quot;</span><span class="kw">&gt;</span>Three<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box4&quot;</span><span class="kw">&gt;</span>Four<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
-</section>
-<section id="css-4" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
 <div class="sourceCode" id="cb8"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.wrapper</span> {</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">grid</span><span class="op">;</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">3</span><span class="op">,</span> <span class="dv">1</span><span class="dt">fr</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-template-rows</span>: <span class="fu">repeat(</span><span class="dv">3</span><span class="op">,</span> <span class="dv">75</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="fu">.box1</span> {</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>   <span class="kw">grid-area</span>: <span class="dv">1</span> / <span class="dv">1</span> / <span class="dv">4</span> / <span class="dv">2</span><span class="op">;</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="fu">.box2</span> {</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>   <span class="kw">grid-area</span>: <span class="dv">1</span> / <span class="dv">3</span> / <span class="dv">3</span> / <span class="dv">4</span><span class="op">;</span></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="fu">.box3</span> {</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>   <span class="kw">grid-area</span>: <span class="dv">1</span> / <span class="dv">2</span> / <span class="dv">2</span> / <span class="dv">3</span><span class="op">;</span></span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="fu">.box4</span> {</span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>   <span class="kw">grid-area</span>: <span class="dv">3</span> / <span class="dv">2</span> / <span class="dv">4</span> / <span class="dv">4</span><span class="op">;</span></span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+class="sourceCode html"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;wrapper&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box1&quot;</span><span class="kw">&gt;</span>One<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box2&quot;</span><span class="kw">&gt;</span>Two<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box3&quot;</span><span class="kw">&gt;</span>Three<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box4&quot;</span><span class="kw">&gt;</span>Four<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+</section>
+<section id="css-5" class="level6 sourceCode">
+<h6 class="sourceCode">CSS</h6>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.wrapper</span> {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">grid</span><span class="op">;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">3</span><span class="op">,</span> <span class="dv">1</span><span class="dt">fr</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-template-rows</span>: <span class="fu">repeat(</span><span class="dv">3</span><span class="op">,</span> <span class="dv">75</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="fu">.box1</span> {</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>   <span class="kw">grid-area</span>: <span class="dv">1</span> / <span class="dv">1</span> / <span class="dv">4</span> / <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="fu">.box2</span> {</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>   <span class="kw">grid-area</span>: <span class="dv">1</span> / <span class="dv">3</span> / <span class="dv">3</span> / <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="fu">.box3</span> {</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>   <span class="kw">grid-area</span>: <span class="dv">1</span> / <span class="dv">2</span> / <span class="dv">2</span> / <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="fu">.box4</span> {</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>   <span class="kw">grid-area</span>: <span class="dv">3</span> / <span class="dv">2</span> / <span class="dv">4</span> / <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <iframe height="389" style="width: 100%;" scrolling="no" title="wk9-grid-area-ex13" src="https://codepen.io/maujac/embed/XWbvRVW?height=389&amp;theme-id=light&amp;default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
 See the Pen
 <a href='https://codepen.io/maujac/pen/XWbvRVW'>wk9-grid-area-ex13</a>
@@ -636,16 +705,16 @@ class="citation" data-cites="maujac">@maujac</span></a>) on
 </iframe>
 </section>
 </section>
-<section id="naming-and-positioning-by-grid-areas" class="level3">
-<h3>Naming and Positioning by Grid Areas</h3>
+<section id="naming-and-positioning-by-grid-areas" class="level2">
+<h2>Naming and Positioning by Grid Areas</h2>
 <p>In the example above we defining an area by specifying the lines that
 enclose that area:</p>
-<section id="css-5" class="level6 sourceCode">
+<section id="css-6" class="level6 sourceCode">
 <h6 class="sourceCode">CSS</h6>
-<div class="sourceCode" id="cb9"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.box1</span> {</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">grid-area</span>: <span class="dv">1</span> / <span class="dv">1</span> / <span class="dv">4</span> / <span class="dv">2</span><span class="op">;</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.box1</span> {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">grid-area</span>: <span class="dv">1</span> / <span class="dv">1</span> / <span class="dv">4</span> / <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>It is also possible to define an area by giving it a name via <a
 href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-area"><code>grid-area</code></a>
 and then specify the location of that area with the <a
@@ -659,42 +728,42 @@ property.</p>
 <li>main content</li>
 </ul>
 </section>
-<section id="css-6" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
-<div class="sourceCode" id="cb10"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;wrapper&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;header&gt;</span>Header<span class="kw">&lt;/header&gt;</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;footer&gt;</span>Footer<span class="kw">&lt;/footer&gt;</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;main&gt;</span>Main<span class="kw">&lt;/main&gt;</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;aside</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;sidebar&quot;</span><span class="kw">&gt;</span>Sidebar<span class="kw">&lt;/aside&gt;</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
-</section>
-</section>
-<section id="assigning-names-with-grid-area" class="level3">
-<h3>Assigning names with <code>grid-area</code></h3>
-<p>You can assign any name to a HTML element with the
-<code>grid-area</code> property.</p>
 <section id="css-7" class="level6 sourceCode">
 <h6 class="sourceCode">CSS</h6>
 <div class="sourceCode" id="cb11"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>header {</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-area</span>: hd<span class="op">;</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>footer {</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-area</span>: ft<span class="op">;</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>main {</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-area</span>: main<span class="op">;</span></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="fu">.sidebar</span> {</span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-area</span>: sd<span class="op">;</span></span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+class="sourceCode html"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;wrapper&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;header&gt;</span>Header<span class="kw">&lt;/header&gt;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;footer&gt;</span>Footer<span class="kw">&lt;/footer&gt;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;main&gt;</span>Main<span class="kw">&lt;/main&gt;</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;aside</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;sidebar&quot;</span><span class="kw">&gt;</span>Sidebar<span class="kw">&lt;/aside&gt;</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+</section>
+</section>
+<section id="assigning-names-with-grid-area" class="level2">
+<h2>Assigning names with <code>grid-area</code></h2>
+<p>You can assign any name to a HTML element with the
+<code>grid-area</code> property.</p>
+<section id="css-8" class="level6 sourceCode">
+<h6 class="sourceCode">CSS</h6>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>header {</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-area</span>: hd<span class="op">;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>footer {</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-area</span>: ft<span class="op">;</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>main {</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-area</span>: main<span class="op">;</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="fu">.sidebar</span> {</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-area</span>: sd<span class="op">;</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>Once the naming convention has been assigned, create the layout using
 the item names instead of line numbers.</p>
 </section>
 </section>
-<section id="templates-with-grid-template-areas" class="level3">
-<h3>Templates with <code>grid-template-areas</code></h3>
+<section id="templates-with-grid-template-areas" class="level2">
+<h2>Templates with <code>grid-template-areas</code></h2>
 <p>The <code>grid-template-areas</code> property defines a grid template
 by referencing the names of the grid areas.</p>
 <ul>
@@ -704,19 +773,19 @@ cells.</li>
 <li>Each name must be separated by a whitespace.</li>
 <li>A period signifies an empty cell.</li>
 </ul>
-<section id="css-8" class="level6 sourceCode">
+<section id="css-9" class="level6 sourceCode">
 <h6 class="sourceCode">CSS</h6>
-<div class="sourceCode" id="cb12"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.wrapper</span> {</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">display</span>: <span class="dv">grid</span><span class="op">;</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">4</span><span class="op">,</span> <span class="dv">1</span><span class="dt">fr</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-template-rows</span>: <span class="fu">repeat(</span><span class="dv">3</span><span class="op">,</span> <span class="dv">75</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-template-areas</span>: </span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;hd  hd  hd   hd&quot;</span></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;sd  .  main main&quot;</span></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;sd  ft  ft   ft&quot;</span><span class="op">;</span></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.wrapper</span> {</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">display</span>: <span class="dv">grid</span><span class="op">;</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">4</span><span class="op">,</span> <span class="dv">1</span><span class="dt">fr</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-template-rows</span>: <span class="fu">repeat(</span><span class="dv">3</span><span class="op">,</span> <span class="dv">75</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-template-areas</span>: </span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;hd  hd  hd   hd&quot;</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;sd  .  main main&quot;</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;sd  ft  ft   ft&quot;</span><span class="op">;</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <iframe height="386" style="width: 100%;" scrolling="no" title="wk9-grid-area_names-ex14" src="https://codepen.io/maujac/embed/vYOomae?height=386&amp;theme-id=light&amp;default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
 See the Pen
 <a href='https://codepen.io/maujac/pen/vYOomae'>wk9-grid-area_names-ex14</a>
@@ -727,8 +796,8 @@ class="citation" data-cites="maujac">@maujac</span></a>) on
 </section>
 </section>
 </section>
-<section id="using-grid-vs-flexbox" class="level2">
-<h2>Using Grid vs Flexbox</h2>
+<section id="using-grid-vs-flexbox" class="level1">
+<h1>Using Grid vs Flexbox</h1>
 <p>When to use Grid rather than Flexbox? Ask yourself the following
 questions:</p>
 <section id="direction-vs-2-directions" class="level3">
@@ -763,54 +832,16 @@ together</p>
 </blockquote>
 </section>
 </section>
-<section id="media-queries" class="level2">
-<h2>Media queries</h2>
-<p>If you define the grid layout with <code>grid-template-areas</code>
-(technique above), it is very easy to modify the layout using media
-queries.</p>
-<p>Since the names for the areas have already been defined with
-<code>grid-area</code> we can just reuse them:</p>
-<section id="css-9" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
-<div class="sourceCode" id="cb13"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span> (<span class="kw">min-width</span>: <span class="dv">900</span><span class="dt">px</span>) {</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.wrapper</span> {</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>      <span class="kw">grid-template-rows</span>: <span class="dv">1</span><span class="dt">fr</span> <span class="dv">4</span><span class="dt">fr</span> <span class="dv">1</span><span class="dt">fr</span><span class="op">;</span>      </span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>      <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">5</span><span class="op">,</span> <span class="dv">1</span><span class="dt">fr</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>      <span class="kw">grid-template-areas</span>: </span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot; hd   hd   hd   hd  hd&quot;</span></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;main main main main sd&quot;</span></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot; ft   ft   ft   ft  ft&quot;</span><span class="op">;</span></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<iframe height="353" style="width: 100%;" scrolling="no" title="wk9-grid- mediaQ - Area - ex15" src="https://codepen.io/maujac/embed/ExjqXRb?height=353&amp;theme-id=light&amp;default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-See the Pen <a href='https://codepen.io/maujac/pen/ExjqXRb'>wk9-grid-
-mediaQ - Area - ex15</a> by Mauricio Buschinelli
-(<a href='https://codepen.io/maujac'><span class="citation"
-data-cites="maujac">@maujac</span></a>) on
-<a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<section id="semantic-css" class="level1">
+<h1>Semantic CSS?</h1>
+<section id="organizing-stylesheets" class="level2">
+<h2>Organizing stylesheets</h2>
 </section>
+<section id="choosing-class-names" class="level2">
+<h2>Choosing class names</h2>
 </section>
-<section id="other-important-css-techniques" class="level2">
-<h2>Other Important CSS Techniques</h2>
-<p>A list of other CSS techniques worth mentioning</p>
-<section id="heights-vs.-padding" class="level3">
-<h3>Heights vs. Padding</h3>
-<p>Overflow vs. natural dimensions of container</p>
-</section>
-<section id="percentages-vs.-pixels" class="level3">
-<h3>Percentages vs. Pixels</h3>
-<p>Fixed vs. dynamic sizing</p>
-</section>
-<section id="the-position-property" class="level3">
-<h3>The <code>position</code> property</h3>
-<p>For adjusting specific elements.</p>
-</section>
-<section id="max-width" class="level3">
-<h3>Max-width</h3>
-<p>Large screens, things get too big,</p>
-</section>
+<section id="choosing-the-right-selector" class="level2">
+<h2>Choosing the right selector</h2>
 </section>
 </section>
 <section id="knowledge-check" class="level1">
