@@ -22,10 +22,33 @@ abstract: |
 
 ---
 
+# What is Responsive Design?
+
+> *Responsive web design* is a web design approach to make web pages render well on all screen sizes and resolutions while ensuring good usability. 
+>
+> <footer>
+>   MDN Web Docs, [Responsive Design][mdn-responsive-design]
+> </footer>
+
+Responsive web design isn't a separate technology -- it is an approach. It is a term used to describe a set of **best practices** used to create a layout that can respond to any device being used to view the content.
+
+[mdn-responsive-design]: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
+
+## Examples
+
+Creating a non-resizable web page by setting a fixed width doesn't work either; that leads to scroll bars on narrow devices and too much empty space on wide screens.
+
+## Browser Dev Tools Responsive Mode
 
 # HTML: Responsive by Default
 
-How vanilla HTML is already perfectly responsive. 
+> HTML is fundamentally responsive, or *fluid*. If you create a web page containing only HTML, with no CSS, and resize the window, the browse will automatically reflow the text to fit the viewport.
+> 
+> <footer>
+>   MDN Web Docs, [Responsive Design][mdn-responsive-design]
+> </footer>
+
+While the default responsive behavior may sound like no solution is needed, long lines of text displayed full screen on a wide monitor can be difficult to read. If wide screen line length is reduced with CSS, such as by creating columns or adding significant padding, the site may look squashed for the user who narrows their browser window or opens the site on a mobile device.
 
 Start Lab 4 by creating the HTML, ensure you have a coherent layout (the relationship between all webpage content makes sense)
 
@@ -55,29 +78,37 @@ For adjusting specific elements.
 
 ## Media queries
 
-If you define the grid layout with `grid-template-areas`  (technique above), it is very easy to modify the layout using media queries.
+**Media queries** are a key component of responsive design that allow you to apply CSS styles depending properties of client-side device characteristics. In other words: using CSS, we can measure important information about a user's device and create new CSS rules to respond to that information.
 
-Since the names for the areas have already been defined with `grid-area` we can just reuse them:
-
+For example, the following media query tests to see if the current web page is being displayed as **screen** media (therefore not a printed document) and the viewport is at least `80rem` wide. The CSS for the `.container` selector will only be applied if these two things are true.
 
 ###### CSS{.sourceCode}
 ```css
-@media (min-width: 900px) {
-    .wrapper {
-      grid-template-rows: 1fr 4fr 1fr;      
-      grid-template-columns: repeat(5, 1fr);
-      grid-template-areas: 
-        " hd   hd   hd   hd  hd"
-        "main main main main sd"
-        " ft   ft   ft   ft  ft";
-    }
-}
+@media screen and (min-width: 80rem) {
+  .container {
+    margin: 1em 2em;
+  }
 ```
 
-<iframe height="353" style="width: 100%;" scrolling="no" title="wk9-grid- mediaQ - Area - ex15" src="https://codepen.io/maujac/embed/ExjqXRb?height=353&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/maujac/pen/ExjqXRb'>wk9-grid- mediaQ - Area - ex15</a> by Mauricio Buschinelli
-  (<a href='https://codepen.io/maujac'>@maujac</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+The syntax above is new: in CSS, the `@media` [at-rule][mdn-at-rule] to conditionally apply part of a style sheet based on the result of a media query. 
+
+Media queries allow us to run a series of tests on the user environment (on the [viewport size][mdn-viewport], on whether the ) -port(e.g. whether the user's screen is greater than a certain width, or a certain resolution) and apply CSS selectively to style the page appropriately for the user's needs.
+
+
+
+You can add multiple media queries within a stylesheet, tweaking your whole layout or parts of it to best suit the various screen sizes. The points at which a media query is introduced, and the layout changed, are known as **breakpoints.**
+
+A common approach when using media queries is to create a simple single-column layout for narrow-screen devices (e.g. mobile phones), then check for wider screens and implement a multiple-column layout when you know that you have enough screen width to handle it. Designing for mobile first is known as **mobile first design.**
+
+If using breakpoints, best practices encourage defining media query breakpoints with relative units rather than absolute sizes of an individual device.
+
+Find out more in the MDN documentation for [Media Queries][mdn-media-queries].
+
+[mdn-at-rule]: https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule
+[mdn-viewport]: https://developer.mozilla.org/en-US/docs/Glossary/Viewport
+[mdn-media-queries]: https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries
+
+Media queries can help with responsive web design, but are not a requirement: they should only be introduced when the web layout you are working with **breaks** (overlaps, overflows, becomes unusable) at small or large resolutions.
 
 # Flexbox
 

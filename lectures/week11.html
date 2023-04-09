@@ -334,6 +334,14 @@
      <ul>
 <li><a href="#lesson-overview" id="toc-lesson-overview">Lesson
 Overview</a></li>
+<li><a href="#what-is-responsive-design"
+id="toc-what-is-responsive-design">What is Responsive Design?</a>
+<ul>
+<li><a href="#examples" id="toc-examples">Examples</a></li>
+<li><a href="#browser-dev-tools-responsive-mode"
+id="toc-browser-dev-tools-responsive-mode">Browser Dev Tools Responsive
+Mode</a></li>
+</ul></li>
 <li><a href="#html-responsive-by-default"
 id="toc-html-responsive-by-default">HTML: Responsive by Default</a></li>
 <li><a href="#benefits-of-semantic-html"
@@ -420,8 +428,8 @@ Check</a></li>
      </div>
            <p class="date">
       Last update:
-      <time datetime="Sat Apr 8 20:40:37 2023">
-       Saturday, April 08, 2023
+      <time datetime="Sun Apr 9 01:01:51 2023">
+       Sunday, April 09, 2023
       </time>
      </p>
          </header>
@@ -438,9 +446,50 @@ components?</li>
 </ul>
 <hr />
 </section>
+<section id="what-is-responsive-design" class="level1">
+<h1>What is Responsive Design?</h1>
+<blockquote>
+<p><em>Responsive web design</em> is a web design approach to make web
+pages render well on all screen sizes and resolutions while ensuring
+good usability.</p>
+<footer>
+MDN Web Docs, <a
+href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">Responsive
+Design</a>
+</footer>
+</blockquote>
+<p>Responsive web design isn’t a separate technology – it is an
+approach. It is a term used to describe a set of <strong>best
+practices</strong> used to create a layout that can respond to any
+device being used to view the content.</p>
+<section id="examples" class="level2">
+<h2>Examples</h2>
+<p>Creating a non-resizable web page by setting a fixed width doesn’t
+work either; that leads to scroll bars on narrow devices and too much
+empty space on wide screens.</p>
+</section>
+<section id="browser-dev-tools-responsive-mode" class="level2">
+<h2>Browser Dev Tools Responsive Mode</h2>
+</section>
+</section>
 <section id="html-responsive-by-default" class="level1">
 <h1>HTML: Responsive by Default</h1>
-<p>How vanilla HTML is already perfectly responsive.</p>
+<blockquote>
+<p>HTML is fundamentally responsive, or <em>fluid</em>. If you create a
+web page containing only HTML, with no CSS, and resize the window, the
+browse will automatically reflow the text to fit the viewport.</p>
+<footer>
+MDN Web Docs, <a
+href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">Responsive
+Design</a>
+</footer>
+</blockquote>
+<p>While the default responsive behavior may sound like no solution is
+needed, long lines of text displayed full screen on a wide monitor can
+be difficult to read. If wide screen line length is reduced with CSS,
+such as by creating columns or adding significant padding, the site may
+look squashed for the user who narrows their browser window or opens the
+site on a mobile device.</p>
 <p>Start Lab 4 by creating the HTML, ensure you have a coherent layout
 (the relationship between all webpage content makes sense)</p>
 </section>
@@ -470,31 +519,52 @@ accesibility of your website by default.</p>
 </section>
 <section id="media-queries" class="level2">
 <h2>Media queries</h2>
-<p>If you define the grid layout with <code>grid-template-areas</code>
-(technique above), it is very easy to modify the layout using media
-queries.</p>
-<p>Since the names for the areas have already been defined with
-<code>grid-area</code> we can just reuse them:</p>
+<p><strong>Media queries</strong> are a key component of responsive
+design that allow you to apply CSS styles depending properties of
+client-side device characteristics. In other words: using CSS, we can
+measure important information about a user’s device and create new CSS
+rules to respond to that information.</p>
+<p>For example, the following media query tests to see if the current
+web page is being displayed as <strong>screen</strong> media (therefore
+not a printed document) and the viewport is at least <code>80rem</code>
+wide. The CSS for the <code>.container</code> selector will only be
+applied if these two things are true.</p>
 <section id="css" class="level6 sourceCode">
 <h6 class="sourceCode">CSS</h6>
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span> (<span class="kw">min-width</span>: <span class="dv">900</span><span class="dt">px</span>) {</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.wrapper</span> {</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>      <span class="kw">grid-template-rows</span>: <span class="dv">1</span><span class="dt">fr</span> <span class="dv">4</span><span class="dt">fr</span> <span class="dv">1</span><span class="dt">fr</span><span class="op">;</span>      </span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>      <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">5</span><span class="op">,</span> <span class="dv">1</span><span class="dt">fr</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>      <span class="kw">grid-template-areas</span>: </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot; hd   hd   hd   hd  hd&quot;</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;main main main main sd&quot;</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot; ft   ft   ft   ft  ft&quot;</span><span class="op">;</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<iframe height="353" style="width: 100%;" scrolling="no" title="wk9-grid- mediaQ - Area - ex15" src="https://codepen.io/maujac/embed/ExjqXRb?height=353&amp;theme-id=light&amp;default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-See the Pen <a href='https://codepen.io/maujac/pen/ExjqXRb'>wk9-grid-
-mediaQ - Area - ex15</a> by Mauricio Buschinelli
-(<a href='https://codepen.io/maujac'><span class="citation"
-data-cites="maujac">@maujac</span></a>) on
-<a href='https://codepen.io'>CodePen</a>.
-</iframe>
+class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span> <span class="dv">screen</span> <span class="kw">and</span> (<span class="kw">min-width</span>: <span class="dv">80</span><span class="dt">rem</span>) {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.container</span> {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">margin</span>: <span class="dv">1</span><span class="dt">em</span> <span class="dv">2</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  }</span></code></pre></div>
+<p>The syntax above is new: in CSS, the <code>@media</code> <a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule">at-rule</a>
+to conditionally apply part of a style sheet based on the result of a
+media query.</p>
+<p>Media queries allow us to run a series of tests on the user
+environment (on the <a
+href="https://developer.mozilla.org/en-US/docs/Glossary/Viewport">viewport
+size</a>, on whether the ) -port(e.g. whether the user’s screen is
+greater than a certain width, or a certain resolution) and apply CSS
+selectively to style the page appropriately for the user’s needs.</p>
+<p>You can add multiple media queries within a stylesheet, tweaking your
+whole layout or parts of it to best suit the various screen sizes. The
+points at which a media query is introduced, and the layout changed, are
+known as <strong>breakpoints.</strong></p>
+<p>A common approach when using media queries is to create a simple
+single-column layout for narrow-screen devices (e.g. mobile phones),
+then check for wider screens and implement a multiple-column layout when
+you know that you have enough screen width to handle it. Designing for
+mobile first is known as <strong>mobile first design.</strong></p>
+<p>If using breakpoints, best practices encourage defining media query
+breakpoints with relative units rather than absolute sizes of an
+individual device.</p>
+<p>Find out more in the MDN documentation for <a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries">Media
+Queries</a>.</p>
+<p>Media queries can help with responsive web design, but are not a
+requirement: they should only be introduced when the web layout you are
+working with <strong>breaks</strong> (overlaps, overflows, becomes
+unusable) at small or large resolutions.</p>
 </section>
 </section>
 </section>
