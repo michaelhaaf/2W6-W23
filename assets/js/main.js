@@ -75,7 +75,7 @@ if (!pageToc) {
   observeSections = new IntersectionObserver(setActive, observerOptions);
   allSections.forEach((section) => observeSections.observe(section));
   activeSection = pageContent.querySelector("article > section");
-  activeTocLink = pageToc.querySelector(`#${activeSection.getAttribute('id')}`)
+  activeTocLink = activeSection ? pageToc.querySelector(`#${activeSection.getAttribute('id')}`) : ""
 }
 
 function setActive(observedSections) {
