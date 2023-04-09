@@ -5,22 +5,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="style.css" rel="stylesheet" />
+
+    <!-- SOLUTION: Note that all three <link>s from google fonts are here.-->
+    <!-- Take a close look at the googleapi URL: I have selected and included three font weights -->
+    <!-- This will force CSS to download the font specs for EACH weight. They will AUTOMATICALLY apply when I set font weight property -->
+    <!-- i.e. I can just say "font-weight: 600" or "font-weight: bold" and the correct font will download and be applied. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+
   </head>
   <body>
-    <header class="page-header flex-container">
+    <header class="page-header narrow-card flex-container">
       <img src="images/logo.svg" role="img" alt="logo" />
       <nav>
         <ul class="nav-links flex-container">
-          <li>Item first</li>
-          <li>Item two</li>
-          <li>Item three</li>
-          <li>Item four</li>
-          <li>Item five</li>
+          <li>Home</li>
+          <li>Getting Started</li>
+          <li>Photos</li>
+          <li>Gear</li>
+          <li>Forum</li>
         </ul>
       </nav>
       <img src="images/hamburger.svg" role="img" alt="hamburger" />
     </header>
-    <section class="card flex-container">
+    <section class="hero card flex-row flex-container">
       <div class="flex-column flex-container">
         <h1 class="page-title">We help you find the best animals</h1>
         <p>
@@ -28,15 +37,15 @@
           no suscipit quaerendum. At nam minimum ponderum. Est audiam animal
           molestiae te. Ex duo eripuit mentitum.
         </p>
-        <button>Learn More</button>
+        <button class="btn">Learn More</button>
       </div>
       <img src="images/placeholder.png" alt="placeholder" />
     </section>
-    <section class="card flex-column flex-container">
-      <h2 class="card-title">The Animal Guarantee</h2>
+    <section class="guarantee card flex-column flex-container">
+      <h2>The Animal Guarantee</h2>
       <div class="guarantee-grid flex-container">
         <div>
-          <img src="../images/stores.svg" alt="" />
+          <img src="images/stores.svg" role="img" alt="" />
           <h3>Animal Stores</h3>
           <p>
             Eos tota dicunt democritum no. Has natum gubergren ne. Est viris
@@ -45,7 +54,7 @@
           </p>
         </div>
         <div>
-          <img src="../images/security.svg" alt="" />
+          <img src="images/security.svg" alt="" />
           <h3>Animal Security</h3>
           <p>
             Ne nam phaedrum consequat, adhuc aliquid ea pri, eum eligendi
@@ -54,7 +63,7 @@
           </p>
         </div>
         <div>
-          <img src="../images/categorization.svg" alt="" />
+          <img src="images/categorization.svg" alt="" />
           <h3>Animal Categorization</h3>
           <p>
             Assum suavitate ea vel, vero erat doming cu cum. Zril ornatus sea
@@ -63,7 +72,7 @@
           </p>
         </div>
         <div>
-          <img src="../images/communication.svg" alt="" />
+          <img src="images/communication.svg" alt="" />
           <h3>Animal Communication</h3>
           <p>
             Assum suavitate ea vel, vero erat doming cu cum. Zril ornatus sea
@@ -72,7 +81,7 @@
           </p>
         </div>
         <div>
-          <img src="../images/networks.svg" alt="" />
+          <img src="images/networks.svg" alt="" />
           <h3>Animal Networks</h3>
           <p>
             Eos tota dicunt democritum no. Has natum gubergren ne. Est viris
@@ -81,7 +90,7 @@
           </p>
         </div>
         <div>
-          <img src="../images/storage.svg" alt="" />
+          <img src="images/storage.svg" alt="" />
           <h3>Animal Storage</h3>
           <p>
             Ne nam phaedrum consequat, adhuc aliquid ea pri, eum eligendi
@@ -132,16 +141,16 @@
         </figure>
       </div>
     </section>
-    <section class="card flex-column flex-container">
+    <section class="getting-started card flex-column flex-container">
       <h2 class="card-title">Ready to get started?</h2>
       <p>
         Take control of your Animal Data today. Aliqua reprehenderit commodo ex
         non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat
         ullamco ut ea consectetur et est culpa et culpa duis.
       </p>
-      <button type="">Get Started</button>
+      <button class="btn">Get Started</button>
     </section>
-    <footer class="page-footer flex-container">
+    <footer class="page-footer narrow-card flex-container">
       <p>© BrandName. All rights reserved.</p>
     </footer>
   </body>
