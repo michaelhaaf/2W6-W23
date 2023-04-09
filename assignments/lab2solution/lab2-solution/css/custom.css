@@ -1,5 +1,58 @@
 /* Custom CSS solutions not yet complete */
 
-html {
-  background-color: black;
+/* SOLUTION: Make all headings use an external, serif webfont with `Georgia` and `serif` as fallbacks */
+h1,
+h2 {
+  font-family: Georgia, serif;
+}
+
+/* SOLUTION: Make all paragraphs use an external, sans-serif webfont with `Verdana` and `sans-serif` as fallbacks */
+p {
+  font-family: Verdana, sans-serif;
+}
+
+/* SOLUTION: Make the level one headings pink, using the CSS color keyword hotpink */
+h1 {
+  color: hotpink;
+}
+
+/* SOLUTION: Give level one headings a 10px dotted border-bottom with a color specified in the RGB format. */
+h1 {
+  border-bottom: 10px dotted rgb(100, 10, 10);
+}
+
+/* SOLUTION: Make level two headings italic */
+h2 {
+  font-style: italic;
+}
+
+/* SOLUTION: Make odd-numbered p elements have blue background / white foreground using HEX color codes */
+/* NOTE: it was not required to only have article p elements be affected, but I've added that for fun */
+/* NOTE: nth-child seems to be 1-indexed, so nth-child(2n) grabs elements 1, 3, 5, .. while nth-child(2n+1) grabs 0, 2, 4, .. */
+/* NOTE: I was willing to accept a variety of ways to solve this problem */
+article p:nth-child(2n) {
+  background-color: #0000ff;
+  color: #ffffff;
+}
+
+/* SOLUTION: Give all p elements that are descendants of the footer element a font-size of 10px */
+footer p {
+  font-size: 10px;
+}
+
+/* SOLUTION: Using the :hover pseudo-class, make links bold and red using HSL colors when hovered */
+a:hover {
+  color: hsl(0, 100%, 50%); /* Hue: 0 (red), Saturation: 100%, Lightness: 50% */
+  font-weight: bold;
+}
+
+/* SOLUTION: Using the :active pseudo-class, make nav links have a red background when clicked */
+nav a:active {
+  background-color: red;
+}
+
+/* SOLUTION: Create and use a class (here I've only applied it to the nav element) to use for applying text shadow */
+/* Notice how the text-shadow property is set on the <nav> element only, but this is inherited by default by all of the children of that elemetn (so all 5 links are styled) */
+.text-shadow {
+  text-shadow: 2px 2px 5px black; /* Horizontal shadow / Vertical shadow / Shadow blur radius / Shadow color */
 }
