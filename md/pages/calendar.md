@@ -32,6 +32,7 @@ abstract: |
 |                  |                                                                 | * [Part 2 (Youtube)][actVSCode2]                                          |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | [Week 3][lec3]   | HTML - semantic elements, website markup <br>                   | **Lab 2 (10%, due Feb 16):** [Website layout and style (.pdf)][lab2] <br> |
+|                  |                                                                 | **Lab 2 SOLUTION:** [solution directory][lab2solution] <br>               |
 |                  | Tools - browser dev tools for CSS/DOM inspection <br>           | Tutorial: [Document and Website Structure][tutWebsite] <br>               |
 |                  | CSS - inline vs internal vs external <br>                       | Activity: [CSS Diner][actDiner] <br>                                      |
 |                  | CSS - fundamentals, syntax, selectors <br>                      | Activity: How to use the Browser Dev Tools <br>                           |
@@ -51,6 +52,7 @@ abstract: |
 | [Week 5][lec5]   | CSS - layouts: the box model, floats <br>                       | [Week 5 Exercises](../lectures/week05.html#exercises) <br>                |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | [Week 6][lec6]   | CSS - Flexbox <br>                                              | **Lab 3 (12.5%, due Mar 17)** [Landing page][lab3] <br>                   |
+|                  |                                                                 | **Lab 3 SOLUTION:** [solution directory][lab3solution] <br>               |
 |                  |                                                                 | [Week 6 Exercises](../lectures/week06.html#exercises) <br>                |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | [Week 7][lec7]   | JavaScript - Manipulating the DOM, Dynamic styling              |                                                                           |
@@ -77,17 +79,16 @@ abstract: |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | Lectures         | Topics                                                          | Activities/Assessments                                                    |
 +==================+=================================================================+===========================================================================+
-| [Week 11][lec11] | Intermediate CSS - CSS Grid, Intro to Responsive Design         |                                                                           |
+| [Week 11][lec11] | Intermediate CSS - June's Guest Lecture, Responsive Design      | [Week 11 Exercises](../lectures/week11.html#exercises) <br>               |
+|                  |                                                                 | [Week 11 Readings](../lectures/week11.html#readings-and-resources) <br>   |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
-| [Week 12][lec12] | Intermediate CSS - Responsive Design, Accessibility             |                                                                           |
+| [Week 12][lec12] | Intermediate CSS - HTML Forms, Accessibility, CSS Best Practises| [Week 12 Exercises](../lectures/week12.html#exercises) <br>               |
+|                  |                                                                 | [Week 12 Readings](../lectures/week12.html#readings-and-resources) <br>   | 
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
-| [Week 13][lec13] | Intro to Advanced CSS and JS topics <br>                        |                                                                           |                    
-|                  | Intro to CMS (Content Management Systems)                       |                                                                           |
+| [Week 13][lec13] | Intro to CMS (Content Management Systems)                       |                                                                           |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | [Week 14][lec14] | **Test Review**: Review all material covered so far <br>        | **Test 2 (15%, TBD)** <br>                                                |
 |                  | Content Management Systems - Introduction to Wordpress          | **Project Milestone 1 (15%, due end of classes):** TBD                    |
-+------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
-| [Week 15][lec15] | Content Management Systems - Creating/Modifying a Wordpress CMS | **Project Milestone 2 (15%, due end of exams):** TBD                      |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 
 # May
@@ -119,6 +120,11 @@ abstract: |
 [lab4]: ../assignments/lab4 "Lab 4: worth 12.5%, due April 14"
 [pm1]: ../assignments/milestone1 "Project Milestone 1: worth 15%, due TBD"
 [pm2]: ../assignments/milestone2 "Project Milestone 2: worth 15%, due TBD"
+
+
+[lab2solution]: ../assignments/lab2solution "You can preview/download all solution files here."
+[lab3solution]: ../assignments/lab3solution "You can preview/download all solution files here."
+[lab4solution]: ../assignments/lab4solution "You can preview/download all solution files here."
 
 [tutDocument]: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter "MDN: Marking up a Letter. Make sure you are familiar with all of the HTML elements covered in this tut."
 [tutWebsite]: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure "MDN: Document and website structure. This is a very helpful tutorial for getting started on Lab2."
