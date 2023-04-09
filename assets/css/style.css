@@ -789,6 +789,30 @@ td h5 {
   border-left: 3px solid var(--accent-red);
 }
 
+.nav--page li > ul {
+  display: none;
+}
+
+.nav--page li > a:not(:only-child):before {
+  content: "(+) ";
+}
+
+.nav--page li > a.semi-active:not(:only-child):before {
+  content: "-- ";
+}
+
+.nav--page a.expanded,
+.nav--page a.semi-active + ul {
+  display: block;
+  text-indent: 1rem;
+}
+
+.nav--page a.expanded + ul > li > a, 
+.nav--page a.semi-active + ul > li > a {
+  text-indent: 1.5rem;
+  font-size: 0.75rem;
+}
+
 /* 
 * |||| nav--site <a> and <button> 
 */
@@ -881,15 +905,6 @@ td h5 {
   top: 3rem;
   align-self: flex-start;
   height: auto;
-}
-
-/* this code stinks! */
-.nav--page li > ul > li > a {
-  text-indent: 1.5rem;
-}
-
-.nav--page li > ul > li > ul > li > a {
-  text-indent: 2.5rem;
 }
 
 /* ------------------------------------------ *\
@@ -1041,7 +1056,15 @@ code span.wa { color: var(--accent-foam); font-weight: bold; } /* Warning */
   display: inline-block;
 }
 
+.header .note-text {
+  display: none;
+}
+
 @media only screen and (min-width: 48rem) {
+  .header .note-text {
+    display: inline;
+  }
+
   html {
     font-size: 112.5%;
   }
@@ -1075,6 +1098,10 @@ code span.wa { color: var(--accent-foam); font-weight: bold; } /* Warning */
 
   .aside--page {
     display: flex;
+  }
+
+  .nav--page .icon-text {
+    display: inline;
   }
 
 }
