@@ -334,8 +334,9 @@
      <ul>
 <li><a href="#lesson-overview" id="toc-lesson-overview">Lesson
 Overview</a></li>
-<li><a href="#what-is-responsive-design"
-id="toc-what-is-responsive-design">What is Responsive Design?</a>
+<li><a href="#what-is-responsive-designresponsive-design-attribution"
+id="toc-what-is-responsive-designresponsive-design-attribution">What is
+Responsive Design?</a>
 <ul>
 <li><a href="#examples" id="toc-examples">Examples</a></li>
 <li><a href="#browser-dev-tools-responsive-mode"
@@ -358,8 +359,8 @@ vs. Padding</a></li>
 <li><a href="#overriding-the-position-property"
 id="toc-overriding-the-position-property">Overriding the
 <code>position</code> property</a></li>
-<li><a href="#media-queries" id="toc-media-queries">Media
-queries</a></li>
+<li><a href="#media-queriesqueries-attribution"
+id="toc-media-queriesqueries-attribution">Media queries</a></li>
 </ul></li>
 <li><a href="#flexbox" id="toc-flexbox">Flexbox</a></li>
 <li><a href="#responsive-design-using-grid"
@@ -428,7 +429,7 @@ Check</a></li>
      </div>
            <p class="date">
       Last update:
-      <time datetime="Sun Apr 9 01:01:51 2023">
+      <time datetime="Sun Apr 9 02:34:01 2023">
        Sunday, April 09, 2023
       </time>
      </p>
@@ -446,8 +447,10 @@ components?</li>
 </ul>
 <hr />
 </section>
-<section id="what-is-responsive-design" class="level1">
-<h1>What is Responsive Design?</h1>
+<section id="what-is-responsive-designresponsive-design-attribution"
+class="level1">
+<h1>What is Responsive Design?<a href="#fn1" class="footnote-ref"
+id="fnref1" role="doc-noteref"><sup>1</sup></a></h1>
 <blockquote>
 <p><em>Responsive web design</em> is a web design approach to make web
 pages render well on all screen sizes and resolutions while ensuring
@@ -517,35 +520,49 @@ accesibility of your website by default.</p>
 <h2>Overriding the <code>position</code> property</h2>
 <p>For adjusting specific elements.</p>
 </section>
-<section id="media-queries" class="level2">
-<h2>Media queries</h2>
+<section id="media-queriesqueries-attribution" class="level2">
+<h2>Media queries<a href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a></h2>
 <p><strong>Media queries</strong> are a key component of responsive
 design that allow you to apply CSS styles depending properties of
-client-side device characteristics. In other words: using CSS, we can
-measure important information about a user’s device and create new CSS
-rules to respond to that information.</p>
-<p>For example, the following media query tests to see if the current
-web page is being displayed as <strong>screen</strong> media (therefore
-not a printed document) and the viewport is at least <code>80rem</code>
-wide. The CSS for the <code>.container</code> selector will only be
-applied if these two things are true.</p>
+client-side device characteristics.</p>
+<p>CSS Media queries are a way to identify important browser
+characteristics, features, and user preferences, then apply styles
+adapting to those things. Perhaps the most common media queries in the
+world are those that target particular <a
+href="https://developer.mozilla.org/en-US/docs/Glossary/Viewport">viewport</a>
+ranges and apply custom styles.</p>
+<p>For example, you may have a smaller font size for devices with small
+screens, increase the padding between paragraphs when a page is viewed
+in portrait mode, or increase the size of buttons on touchscreens.</p>
 <section id="css" class="level6 sourceCode">
 <h6 class="sourceCode">CSS</h6>
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span> <span class="dv">screen</span> <span class="kw">and</span> (<span class="kw">min-width</span>: <span class="dv">80</span><span class="dt">rem</span>) {</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.container</span> {</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">margin</span>: <span class="dv">1</span><span class="dt">em</span> <span class="dv">2</span><span class="dt">em</span><span class="op">;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  }</span></code></pre></div>
-<p>The syntax above is new: in CSS, the <code>@media</code> <a
-href="https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule">at-rule</a>
-to conditionally apply part of a style sheet based on the result of a
-media query.</p>
-<p>Media queries allow us to run a series of tests on the user
-environment (on the <a
-href="https://developer.mozilla.org/en-US/docs/Glossary/Viewport">viewport
-size</a>, on whether the ) -port(e.g. whether the user’s screen is
-greater than a certain width, or a certain resolution) and apply CSS
-selectively to style the page appropriately for the user’s needs.</p>
+class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Some default style: */</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>body {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span>: <span class="cn">blue</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">/* When the browser is AT LEAST (min-width) 600px and above */</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span> <span class="dv">screen</span> <span class="kw">and</span> (<span class="kw">min-width</span>: <span class="dv">600</span><span class="dt">px</span>) {</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.element</span> {</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* Apply some styles */</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">/* When the browser is AT MOST (max-width) 600px or below */</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span> <span class="dv">screen</span> <span class="kw">and</span> (<span class="kw">max-width</span>: <span class="dv">80</span><span class="dt">rem</span>) {</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.element</span> {</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* Apply some styles */</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">/* When the browser is BETWEEN 30em and 80em */</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span> (<span class="kw">min-width</span>: <span class="dv">30</span><span class="dt">em</span>) <span class="kw">and</span> (<span class="kw">max-width</span>: <span class="dv">80</span><span class="dt">em</span>) {</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  body {</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">background-color</span>: <span class="cn">purple</span><span class="op">;</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>You can add multiple media queries within a stylesheet, tweaking your
 whole layout or parts of it to best suit the various screen sizes. The
 points at which a media query is introduced, and the layout changed, are
@@ -555,16 +572,39 @@ single-column layout for narrow-screen devices (e.g. mobile phones),
 then check for wider screens and implement a multiple-column layout when
 you know that you have enough screen width to handle it. Designing for
 mobile first is known as <strong>mobile first design.</strong></p>
-<p>If using breakpoints, best practices encourage defining media query
-breakpoints with relative units rather than absolute sizes of an
-individual device.</p>
-<p>Find out more in the MDN documentation for <a
-href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries">Media
-Queries</a>.</p>
 <p>Media queries can help with responsive web design, but are not a
 requirement: they should only be introduced when the web layout you are
 working with <strong>breaks</strong> (overlaps, overflows, becomes
 unusable) at small or large resolutions.</p>
+</section>
+<section id="media-query-syntax-css-at-rules" class="level3">
+<h3>Media Query Syntax: CSS at-rules</h3>
+<p>The syntax above may seem strange – what is the <code>@</code> for?
+We haven’t seen it yet: in CSS, <a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule">at-rules</a>
+(rules starting with an <code>@</code> character) define a variety of
+high-level formatting and layout behaviors for the CSS engine. <a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media"><code>@media</code></a>
+is the only one we will focus on in this class, but there are a few
+others that are worth knowing:</p>
+<ul>
+<li><a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media"><code>@media</code></a>:
+Defines a conditional group of rules (nested inside curly braces) that
+apply only if the client device meets certain criteria.</li>
+<li><a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/@import"><code>@import</code></a>:
+Tells the CSS engine to include an external style sheet. This is often
+used to import fonts, as an alternative to HTML techniques we learned in
+<a href="../lectures/week04.html##using-web-font-families">week
+4</a>.</li>
+<li><a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/@namespace"><code>@namespace</code></a>:
+(Advanced) Allows us to write selectors for XML-based documents like SVG
+files (i.e.: you can write selectors for XML elements inside of SVG
+elements using <code>@namespace</code> – this is one way to control
+styles directly in CSS)</li>
+</ul>
 </section>
 </section>
 </section>
@@ -928,6 +968,22 @@ together</p>
 <h1>Exercises</h1>
 <p>These exercises will be based on June’s guest lecture (Wednesday,
 April 5)</p>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>This section was adapted directly from the article <a
+href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">“Responsive
+Design”</a> (MDN Web Docs)<a href="#fnref1" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>This section was adapted directly from the articles <a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries">“Media
+Queries”</a> (MDN Web Docs) and <a
+href="https://css-tricks.com/a-complete-guide-to-css-media-queries/">“A
+Complete Guide to CSS Media Queries”</a>(css-tricks).<a href="#fnref2"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section> 
    </article>
   </main>

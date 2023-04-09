@@ -22,7 +22,12 @@ abstract: |
 
 ---
 
-# What is Responsive Design?
+# What is Responsive Design?[^responsive-design-attribution]
+
+
+
+    
+[^responsive-design-attribution]: This section was adapted directly from the article ["Responsive Design"][mdn-responsive-design] (MDN Web Docs)
 
 > *Responsive web design* is a web design approach to make web pages render well on all screen sizes and resolutions while ensuring good usability. 
 >
@@ -76,39 +81,68 @@ Overflow vs. natural dimensions of container
 
 For adjusting specific elements.
 
-## Media queries
+## Media queries[^queries-attribution]
 
-**Media queries** are a key component of responsive design that allow you to apply CSS styles depending properties of client-side device characteristics. In other words: using CSS, we can measure important information about a user's device and create new CSS rules to respond to that information.
+[^queries-attribution]: This section was adapted directly from the articles ["Media Queries"][mdn-media-queries] (MDN Web Docs) and ["A Complete Guide to CSS Media Queries"][css-tricks-media-queries](css-tricks).
 
-For example, the following media query tests to see if the current web page is being displayed as **screen** media (therefore not a printed document) and the viewport is at least `80rem` wide. The CSS for the `.container` selector will only be applied if these two things are true.
+[css-tricks-media-queries]: https://css-tricks.com/a-complete-guide-to-css-media-queries/
+
+**Media queries** are a key component of responsive design that allow you to apply CSS styles depending properties of client-side device characteristics. 
+
+CSS Media queries are a way to identify important browser characteristics, features, and user preferences, then apply styles adapting to those things. Perhaps the most common media queries in the world are those that target particular [viewport][mdn-viewport] ranges and apply custom styles.
+
+For example, you may have a smaller font size for devices with small screens, increase the padding between paragraphs when a page is viewed in portrait mode, or increase the size of buttons on touchscreens.
 
 ###### CSS{.sourceCode}
 ```css
-@media screen and (min-width: 80rem) {
-  .container {
-    margin: 1em 2em;
+/* Some default style: */
+body {
+  background-color: blue;
+}
+
+/* When the browser is AT LEAST (min-width) 600px and above */
+@media screen and (min-width: 600px) {
+  .element {
+    /* Apply some styles */
   }
+}
+
+/* When the browser is AT MOST (max-width) 600px or below */
+@media screen and (max-width: 80rem) {
+  .element {
+    /* Apply some styles */
+  }
+}
+
+/* When the browser is BETWEEN 30em and 80em */
+@media (min-width: 30em) and (max-width: 80em) {
+  body {
+    background-color: purple;
+  }
+}
 ```
-
-The syntax above is new: in CSS, the `@media` [at-rule][mdn-at-rule] to conditionally apply part of a style sheet based on the result of a media query. 
-
-Media queries allow us to run a series of tests on the user environment (on the [viewport size][mdn-viewport], on whether the ) -port(e.g. whether the user's screen is greater than a certain width, or a certain resolution) and apply CSS selectively to style the page appropriately for the user's needs.
-
-
 
 You can add multiple media queries within a stylesheet, tweaking your whole layout or parts of it to best suit the various screen sizes. The points at which a media query is introduced, and the layout changed, are known as **breakpoints.**
 
 A common approach when using media queries is to create a simple single-column layout for narrow-screen devices (e.g. mobile phones), then check for wider screens and implement a multiple-column layout when you know that you have enough screen width to handle it. Designing for mobile first is known as **mobile first design.**
 
-If using breakpoints, best practices encourage defining media query breakpoints with relative units rather than absolute sizes of an individual device.
-
-Find out more in the MDN documentation for [Media Queries][mdn-media-queries].
+Media queries can help with responsive web design, but are not a requirement: they should only be introduced when the web layout you are working with **breaks** (overlaps, overflows, becomes unusable) at small or large resolutions. 
 
 [mdn-at-rule]: https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule
 [mdn-viewport]: https://developer.mozilla.org/en-US/docs/Glossary/Viewport
 [mdn-media-queries]: https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries
 
-Media queries can help with responsive web design, but are not a requirement: they should only be introduced when the web layout you are working with **breaks** (overlaps, overflows, becomes unusable) at small or large resolutions.
+### Media Query Syntax: CSS at-rules
+
+The syntax above may seem strange -- what is the `@` for? We haven't seen it yet: in CSS, [at-rules][mdn-at-rule] (rules starting with an `@` character) define a variety of high-level formatting and layout behaviors for the CSS engine. [`@media`][mdn-media] is the only one we will focus on in this class, but there are a few others that are worth knowing:
+
+- [`@media`][mdn-media]: Defines a conditional group of rules (nested inside curly braces) that apply only if the client device meets certain criteria.
+- [`@import`][mdn-import]: Tells the CSS engine to include an external style sheet. This is often used to import fonts, as an alternative to HTML techniques we learned in [week 4](../lectures/week04.html##using-web-font-families).
+- [`@namespace`][mdn-namespace]: (Advanced) Allows us to write selectors for XML-based documents like SVG files (i.e.: you can write selectors for XML elements inside of SVG elements using `@namespace` -- this is one way to control \texttt{.svg} styles directly in CSS)
+
+[mdn-import]: https://developer.mozilla.org/en-US/docs/Web/CSS/@import
+[mdn-namespace]: https://developer.mozilla.org/en-US/docs/Web/CSS/@namespace
+[mdn-media]: https://developer.mozilla.org/en-US/docs/Web/CSS/@media
 
 # Flexbox
 
