@@ -32,9 +32,10 @@
     <![endif]-->
  </head>
  <body class="page-container base">
-  <header class="header background-gradient">
-   <div class="course-info-decoration text-shadow">
+  <header class="header">
+   <div class="course-info-decoration">
     <button class="theme-toggle-icon" id="theme-toggle-icon">
+     Theme toggle icon
     </button>
     <div>
      <h1>
@@ -47,6 +48,13 @@
       </a>
      </span>
     </div>
+   </div>
+   <div>
+    <span class="header-description note-text">
+     Image:
+     <a href="https://www.guggenheim.org/artwork/movement/constructivism">
+     </a>
+    </span>
    </div>
   </header>
   <aside class="aside--site surface">
@@ -146,7 +154,7 @@
      </li>
      <li>
       <button class="dropbtn" id="site-tutorials" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/lectures.svg"/>
+       <img alt="" class="icon" src="../assets/images/tutorials.svg"/>
        <span class="icon-text">
         Tutorials
        </span>
@@ -257,16 +265,16 @@
     $endif$ $if(prev-page)$
     <a class="" href="$prev-page$">
      <img alt="" class="icon" src="../assets/images/feather-icons/chevron-left.svg"/>
-     <h3 class="icon-text">
+     <span class="icon-text">
       Previous page...
-     </h3>
+     </span>
     </a>
     $endif$ $table-of-contents$ $if(next-page)$
     <a class="" href="$next-page$">
      <img alt="" class="icon" src="../assets/images/feather-icons/chevron-right.svg"/>
-     <h3 class="icon-text">
+     <span class="icon-text">
       Next page...
-     </h3>
+     </span>
     </a>
     $endif$
    </nav>
@@ -308,11 +316,18 @@
   </main>
   <footer class="footer">
    <span class="note-text">
-    © Copyright 2023
-    <a href="../pages/home.html#copyright">
-     Michael Haaf
+    © 2023 Michael Haaf |
+    <a href="../pages/home.html#about-this-website">
+     About
     </a>
-    . All rights reserved.
+    |
+    <a href="../pages/home.html#course-logistics">
+     Contact
+    </a>
+    |
+    <a href="../pages/home.html#copyright">
+     Terms &amp; Conditions
+    </a>
    </span>
   </footer>
  </body>
