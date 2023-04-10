@@ -302,7 +302,7 @@ Solutions</a></li>
      </div>
            <p class="date">
       Last update:
-      <time datetime="Mon Apr 10 18:31:12 2023">
+      <time datetime="Mon Apr 10 18:39:02 2023">
        Monday, April 10, 2023
       </time>
      </p>
@@ -312,21 +312,41 @@ Solutions</a></li>
 <h1>Tutorials</h1>
 <section id="week-04-exercises" class="level2">
 <h2>Week 04 Exercises</h2>
-<pre id="week04-box-model-exercises-listing">
+<p><a href="#">lab1.zip</a></p>
+<button class="accordion">
+Lab 1
+</button>
+<pre id="week04-box-model-exercises-listing" class="collapsible">
 </pre>
-<pre id="week04-foundations-exercises-listing">
+<p><a href="#">lab1.zip</a></p>
+<button class="accordion">
+Lab 1
+</button>
+<pre id="week04-foundations-exercises-listing" class="collapsible">
 </pre>
-<pre id="week04-styling-text-exercises-listing">
+<p><a href="#">lab1.zip</a></p>
+<button class="accordion">
+Lab 1
+</button>
+<pre id="week04-styling-text-exercises-listing" class="collapsible">
 </pre>
 </section>
 <section id="week-06-exercises" class="level2">
 <h2>Week 06 Exercises</h2>
-<pre id="week06-flexbox-exercises-listing">
+<p><a href="#">lab1.zip</a></p>
+<button class="accordion">
+Lab 1
+</button>
+<pre id="week06-flexbox-exercises-listing" class="collapsible">
 </pre>
 </section>
 <section id="week-10-exercises" class="level2">
 <h2>Week 10 Exercises</h2>
-<pre id="week10-grid-exercises-listing">
+<p><a href="#">lab1.zip</a></p>
+<button class="accordion">
+Lab 1
+</button>
+<pre id="week10-grid-exercises-listing" class="collapsible">
 </pre>
 </section>
 </section>
@@ -334,21 +354,41 @@ Solutions</a></li>
 <h1>Solutions</h1>
 <section id="week-04-solutions" class="level2">
 <h2>Week 04 Solutions</h2>
-<pre id="week04-box-model-solutions-listing">
+<p><a href="#">lab1.zip</a></p>
+<button class="accordion">
+Lab 1
+</button>
+<pre id="week04-box-model-solutions-listing" class="collapsible">
 </pre>
-<pre id="week04-foundations-solutions-listing">
+<p><a href="#">lab1.zip</a></p>
+<button class="accordion">
+Lab 1
+</button>
+<pre id="week04-foundations-solutions-listing" class="collapsible">
 </pre>
-<pre id="week04-styling-text-solutions-listing">
+<p><a href="#">lab1.zip</a></p>
+<button class="accordion">
+Lab 1
+</button>
+<pre id="week04-styling-text-solutions-listing" class="collapsible">
 </pre>
 </section>
 <section id="week-06-solutions" class="level2">
 <h2>Week 06 Solutions</h2>
-<pre id="week06-flexbox-solutions-listing">
+<p><a href="#">lab1.zip</a></p>
+<button class="accordion">
+Lab 1
+</button>
+<pre id="week06-flexbox-solutions-listing" class="collapsible">
 </pre>
 </section>
 <section id="week-10-solutions" class="level2">
 <h2>Week 10 Solutions</h2>
-<pre id="week10-grid-solutions-listing">
+<p><a href="#">lab1.zip</a></p>
+<button class="accordion">
+Lab 1
+</button>
+<pre id="week10-grid-solutions-listing" class="collapsible">
 </pre>
 </section>
 </section> 
