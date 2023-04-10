@@ -1,14 +1,12 @@
-/* Custom CSS solutions not yet complete */
-
 /* SOLUTION: Make all headings use an external, serif webfont with `Georgia` and `serif` as fallbacks */
 h1,
 h2 {
-  font-family: Georgia, serif;
+  font-family: 'Libre Baskerville', Georgia, serif;
 }
 
 /* SOLUTION: Make all paragraphs use an external, sans-serif webfont with `Verdana` and `sans-serif` as fallbacks */
 p {
-  font-family: Verdana, sans-serif;
+  font-family: 'Ubuntu', Verdana, sans-serif;
 }
 
 /* SOLUTION: Make the level one headings pink, using the CSS color keyword hotpink */
