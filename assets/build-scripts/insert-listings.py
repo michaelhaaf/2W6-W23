@@ -6,12 +6,12 @@ import argparse
 from bs4 import BeautifulSoup
 
 from settings import (LISTINGS_PATH, TEMPLATE_PATH, LECTURES_PATH,
-                      ASSIGMENTS_PATH, TUTORIALS_PATH)
+                      ASSIGNMENTS_PATH, TUTORIALS_PATH)
 
 document_map = {
     "template": TEMPLATE_PATH,
     "lectures": LECTURES_PATH,
-    "assignments": ASSIGMENTS_PATH,
+    "assignments": ASSIGNMENTS_PATH,
     "tutorials": TUTORIALS_PATH
 }
 
@@ -26,7 +26,7 @@ def beautifyName(filename):
 
 
 def insert_listing(listing_path, document_soup):
-    listing_name = os.path.basename(listing_path)
+    listing_name = os.path.splitext(os.path.basename(listing_path))[0]
     with open(listing_path) as fh:
         listing_soup = BeautifulSoup(fh, "html.parser")
     listing_elem = document_soup.find(id=listing_name)
@@ -40,12 +40,13 @@ def insert_listing(listing_path, document_soup):
 
 
 def insert_raw_listing(listing_path, document_soup):
-    listing_name = os.path.basename(listing_path)
+    listing_name = os.path.splitext(os.path.basename(listing_path))[0]
     with open(listing_path) as fh:
         listing_soup = BeautifulSoup(fh, "html.parser")
     listing_elem = document_soup.find(id=listing_name)
-    listing_elem.clear()
-    listing_elem.append(listing_soup)
+    if listing_elem is not None:
+        listing_elem.clear()
+        listing_elem.append(listing_soup)
 
 
 # MAIN #
@@ -60,9 +61,9 @@ def main(args):
             f"{LISTINGS_PATH}/assignment-listing.html", document_soup)
         insert_listing(f"{LISTINGS_PATH}/tutorial-listing.html", document_soup)
 
-    else
-    for listing in glob.glob(f"{LISTINGS_PATH}/{args.document}-listing/*.html"):
-        insert_raw_listing(listing, document_soup)
+    else:
+        for listing in glob.glob(f"{LISTINGS_PATH}/{args.document}-listing/*.html"):
+            insert_raw_listing(listing, document_soup)
 
     print(document_soup.prettify())
 

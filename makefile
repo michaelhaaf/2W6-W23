@@ -54,7 +54,7 @@ indices:
 	./assets/build-scripts/generate-index-files assignments
 	./assets/build-scripts/generate-index-files tutorials
 
-$(PAGE_TEMPLATE): assets/listings/*.html assets/listings/assignments/*.html assets/listings/tutorials/*.html
+$(PAGE_TEMPLATE): assets/listings/*.html
 	cp $(PAGE_TEMPLATE) ./assets/templates/page.html.backup 
 	python ./assets/build-scripts/insert-listings.py --document template > $(PAGE_TEMPLATE)
 	python ./assets/build-scripts/insert-listings.py --document assignments > pages/assignments.html
