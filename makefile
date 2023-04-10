@@ -56,6 +56,8 @@ indices:
 
 $(PAGE_TEMPLATE): assets/listings/*.html
 	cp $(PAGE_TEMPLATE) ./assets/templates/page.html.backup 
+	cp pages/assignments.html pages/assignments.html.backup
+	cp pages/tutorials.html pages/tutorials.html.backup
 	python ./assets/build-scripts/insert-listings.py --document template > $(PAGE_TEMPLATE)
 	python ./assets/build-scripts/insert-listings.py --document assignments > pages/assignments.html
 	python ./assets/build-scripts/insert-listings.py --document tutorials > pages/tutorials.html

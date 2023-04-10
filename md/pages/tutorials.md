@@ -35,3 +35,24 @@ abstract: |
 </pre>
 
 # Solutions
+
+## Week 04 Solutions
+
+<pre id="week04-box-model-solutions-listing">
+</pre>
+
+<pre id="week04-foundations-solutions-listing">
+</pre>
+
+<pre id="week04-styling-text-solutions-listing">
+</pre>
+
+## Week 06 Solutions
+
+<pre id="week06-flexbox-solutions-listing">
+</pre>
+
+## Week 10 Solutions
+
+<pre id="week10-grid-solutions-listing">
+</pre>

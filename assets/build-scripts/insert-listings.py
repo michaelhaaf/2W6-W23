@@ -62,7 +62,7 @@ def main(args):
         insert_listing(f"{LISTINGS_PATH}/tutorial-listing.html", document_soup)
 
     else:
-        for listing in glob.glob(f"{LISTINGS_PATH}/{args.document}-listing/*.html"):
+        for listing in glob.glob(f"{LISTINGS_PATH}/{args.document}/*.html"):
             insert_raw_listing(listing, document_soup)
 
     print(document_soup.prettify())
