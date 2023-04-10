@@ -620,6 +620,36 @@ td h5 {
   background-image: url("../assets/images/baseline-grid.svg");
 }
 
+.accordion {
+  background: var(--surface);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 90%;
+  text-align: left;
+  padding: 1em;
+  font-size: 1rem;
+}
+
+.accordion::before {
+  content: "(+)";
+}
+
+.accordion.expanded::before {
+  content: "--";
+}
+
+.collapsible {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.collapsible.expanded {
+  max-height: inherit;
+  transition: max-height 0.3s ease-out;
+}
+
 /* ------------------------------------------ *\
   || Objects
 \* ------------------------------------------ */

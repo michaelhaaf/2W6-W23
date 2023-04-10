@@ -207,46 +207,45 @@ solutions
       </button>
       <ul class="dropdown hidden" id="assignment-listing">
        <li>
+        <a href="../pages/assignments.html#lab">
+         Lab
+        </a>
+       </li>
+       <li>
         <a href="../pages/assignments.html#lab-1">
-         Lab 1
+         Lab
         </a>
        </li>
        <li>
         <a href="../pages/assignments.html#lab-2">
-         Lab 2
+         Lab
         </a>
        </li>
        <li>
         <a href="../pages/assignments.html#lab-3">
-         Lab 3
+         Lab
         </a>
        </li>
        <li>
-        <a href="../pages/assignments.html#lab-4">
-         Lab 4
+        <a href="../pages/assignments.html#lab-solution">
+         Lab solution
         </a>
        </li>
        <li>
-        <a href="../pages/assignments.html#lab-1-solution">
-         Lab 1 
+        <a href="../pages/assignments.html#lab-solution-1">
+         Lab
 solution
         </a>
        </li>
        <li>
-        <a href="../pages/assignments.html#lab-2-solution">
-         Lab 2 
+        <a href="../pages/assignments.html#lab-solution-2">
+         Lab
 solution
         </a>
        </li>
        <li>
-        <a href="../pages/assignments.html#lab-3-solution">
-         Lab 3 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-4-solution">
-         Lab 4 
+        <a href="../pages/assignments.html#lab-solution-3">
+         Lab
 solution
         </a>
        </li>
@@ -302,7 +301,7 @@ Solution</a></li>
      </div>
            <p class="date">
       Last update:
-      <time datetime="Mon Apr 10 18:50:49 2023">
+      <time datetime="Mon Apr 10 19:13:04 2023">
        Monday, April 10, 2023
       </time>
      </p>
@@ -314,7 +313,7 @@ Solution</a></li>
 <h2>Lab 1</h2>
 <p><a href="#">lab1.zip</a></p>
 <button class="accordion">
-Lab 1
+Lab contents
 </button>
 <pre id="lab1-listing" class="collapsible">
 </pre>
@@ -323,7 +322,7 @@ Lab 1
 <h2>Lab 2</h2>
 <p><a href="#">lab2.zip</a></p>
 <button class="accordion">
-Lab 2
+Lab contents
 </button>
 <pre id="lab2-listing" class="collapsible">
 </pre>
@@ -332,7 +331,7 @@ Lab 2
 <h2>Lab 3</h2>
 <p><a href="#">lab3.zip</a></p>
 <button class="accordion">
-Lab 3
+Lab contents
 </button>
 <pre id="lab3-listing" class="collapsible">
 </pre>
@@ -341,7 +340,7 @@ Lab 3
 <h2>Lab 4</h2>
 <p><a href="#">lab4.zip</a></p>
 <button class="accordion">
-Lab 4
+Lab contents
 </button>
 <pre id="lab4-listing" class="collapsible">
 </pre>
@@ -353,7 +352,7 @@ Lab 4
 <h2>Lab 1 Solution</h2>
 <p><a href="#">lab1.zip</a></p>
 <button class="accordion">
-Lab 1
+Lab contents
 </button>
 <pre id="lab1solution-listing" class="collapsible">
 </pre>
@@ -362,7 +361,7 @@ Lab 1
 <h2>Lab 2 Solution</h2>
 <p><a href="#">lab2.zip</a></p>
 <button class="accordion">
-Lab 2
+Lab contents
 </button>
 <pre id="lab2solution-listing" class="collapsible">
 </pre>
@@ -371,7 +370,7 @@ Lab 2
 <h2>Lab 3 Solution</h2>
 <p><a href="#">lab3.zip</a></p>
 <button class="accordion">
-Lab 3
+Lab contents
 </button>
 <pre id="lab3solution-listing" class="collapsible">
 </pre>
@@ -380,7 +379,7 @@ Lab 3
 <h2>Lab 4 Solution</h2>
 <p><a href="#">lab4.zip</a></p>
 <button class="accordion">
-Lab 4
+Lab contents
 </button>
 <pre id="lab4solution-listing" class="collapsible">
 </pre>

@@ -183,3 +183,18 @@ window.onload = function (e) {
   let currentLinkElem = document.querySelector(`#site-${currentLink}`);
   turnActive(currentLinkElem);
 };
+
+
+// accordion pattern
+const accordions = Array.from(document.querySelectorAll(".accordion"));
+const collapsibles = Array.from(document.querySelectorAll(".collapsible")); 
+accordions.forEach(accordion => {
+  accordion.addEventListener("click", expandCollapsible);
+});
+
+function expandCollapsible(event) {
+  let elem = event.target;
+  let panel = elem.nextElementSibling;
+  elem.classList.toggle("expanded");
+  panel.classList.toggle("expanded");
+}

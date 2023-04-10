@@ -207,46 +207,45 @@ solutions
       </button>
       <ul class="dropdown hidden" id="assignment-listing">
        <li>
+        <a href="../pages/assignments.html#lab">
+         Lab
+        </a>
+       </li>
+       <li>
         <a href="../pages/assignments.html#lab-1">
-         Lab 1
+         Lab
         </a>
        </li>
        <li>
         <a href="../pages/assignments.html#lab-2">
-         Lab 2
+         Lab
         </a>
        </li>
        <li>
         <a href="../pages/assignments.html#lab-3">
-         Lab 3
+         Lab
         </a>
        </li>
        <li>
-        <a href="../pages/assignments.html#lab-4">
-         Lab 4
+        <a href="../pages/assignments.html#lab-solution">
+         Lab solution
         </a>
        </li>
        <li>
-        <a href="../pages/assignments.html#lab-1-solution">
-         Lab 1 
+        <a href="../pages/assignments.html#lab-solution-1">
+         Lab
 solution
         </a>
        </li>
        <li>
-        <a href="../pages/assignments.html#lab-2-solution">
-         Lab 2 
+        <a href="../pages/assignments.html#lab-solution-2">
+         Lab
 solution
         </a>
        </li>
        <li>
-        <a href="../pages/assignments.html#lab-3-solution">
-         Lab 3 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-4-solution">
-         Lab 4 
+        <a href="../pages/assignments.html#lab-solution-3">
+         Lab
 solution
         </a>
        </li>
@@ -302,7 +301,7 @@ Solutions</a></li>
      </div>
            <p class="date">
       Last update:
-      <time datetime="Mon Apr 10 18:50:51 2023">
+      <time datetime="Mon Apr 10 19:13:05 2023">
        Monday, April 10, 2023
       </time>
      </p>
@@ -314,19 +313,19 @@ Solutions</a></li>
 <h2>Week 04 Exercises</h2>
 <p><a href="#">lab1.zip</a></p>
 <button class="accordion">
-Lab 1
+Tutorial contents
 </button>
 <pre id="week04-box-model-exercises-listing" class="collapsible">
 </pre>
 <p><a href="#">lab1.zip</a></p>
 <button class="accordion">
-Lab 1
+Tutorial contents
 </button>
 <pre id="week04-foundations-exercises-listing" class="collapsible">
 </pre>
 <p><a href="#">lab1.zip</a></p>
 <button class="accordion">
-Lab 1
+Tutorial contents
 </button>
 <pre id="week04-styling-text-exercises-listing" class="collapsible">
 </pre>
@@ -335,7 +334,7 @@ Lab 1
 <h2>Week 06 Exercises</h2>
 <p><a href="#">lab1.zip</a></p>
 <button class="accordion">
-Lab 1
+Tutorial contents
 </button>
 <pre id="week06-flexbox-exercises-listing" class="collapsible">
 </pre>
@@ -344,7 +343,7 @@ Lab 1
 <h2>Week 10 Exercises</h2>
 <p><a href="#">lab1.zip</a></p>
 <button class="accordion">
-Lab 1
+Tutorial contents
 </button>
 <pre id="week10-grid-exercises-listing" class="collapsible">
 </pre>
@@ -356,19 +355,19 @@ Lab 1
 <h2>Week 04 Solutions</h2>
 <p><a href="#">lab1.zip</a></p>
 <button class="accordion">
-Lab 1
+Tutorial contents
 </button>
 <pre id="week04-box-model-solutions-listing" class="collapsible">
 </pre>
 <p><a href="#">lab1.zip</a></p>
 <button class="accordion">
-Lab 1
+Tutorial contents
 </button>
 <pre id="week04-foundations-solutions-listing" class="collapsible">
 </pre>
 <p><a href="#">lab1.zip</a></p>
 <button class="accordion">
-Lab 1
+Tutorial contents
 </button>
 <pre id="week04-styling-text-solutions-listing" class="collapsible">
 </pre>
@@ -377,7 +376,7 @@ Lab 1
 <h2>Week 06 Solutions</h2>
 <p><a href="#">lab1.zip</a></p>
 <button class="accordion">
-Lab 1
+Tutorial contents
 </button>
 <pre id="week06-flexbox-solutions-listing" class="collapsible">
 </pre>
@@ -386,7 +385,7 @@ Lab 1
 <h2>Week 10 Solutions</h2>
 <p><a href="#">lab1.zip</a></p>
 <button class="accordion">
-Lab 1
+Tutorial contents
 </button>
 <pre id="week10-grid-solutions-listing" class="collapsible">
 </pre>

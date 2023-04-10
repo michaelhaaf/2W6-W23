@@ -16,19 +16,19 @@ abstract: |
 
 [lab1.zip](#)
 
-<button class="accordion">Lab 1</button>
+<button class="accordion">Tutorial contents</button>
 <pre id="week04-box-model-exercises-listing" class="collapsible">
 </pre>
 
 [lab1.zip](#)
 
-<button class="accordion">Lab 1</button>
+<button class="accordion">Tutorial contents</button>
 <pre id="week04-foundations-exercises-listing" class="collapsible">
 </pre>
 
 [lab1.zip](#)
 
-<button class="accordion">Lab 1</button>
+<button class="accordion">Tutorial contents</button>
 <pre id="week04-styling-text-exercises-listing" class="collapsible">
 </pre>
 
@@ -36,7 +36,7 @@ abstract: |
 
 [lab1.zip](#)
 
-<button class="accordion">Lab 1</button>
+<button class="accordion">Tutorial contents</button>
 <pre id="week06-flexbox-exercises-listing" class="collapsible">
 </pre>
 
@@ -44,7 +44,7 @@ abstract: |
 
 [lab1.zip](#)
 
-<button class="accordion">Lab 1</button>
+<button class="accordion">Tutorial contents</button>
 <pre id="week10-grid-exercises-listing" class="collapsible">
 </pre>
 
@@ -54,19 +54,19 @@ abstract: |
 
 [lab1.zip](#)
 
-<button class="accordion">Lab 1</button>
+<button class="accordion">Tutorial contents</button>
 <pre id="week04-box-model-solutions-listing" class="collapsible">
 </pre>
 
 [lab1.zip](#)
 
-<button class="accordion">Lab 1</button>
+<button class="accordion">Tutorial contents</button>
 <pre id="week04-foundations-solutions-listing" class="collapsible">
 </pre>
 
 [lab1.zip](#)
 
-<button class="accordion">Lab 1</button>
+<button class="accordion">Tutorial contents</button>
 <pre id="week04-styling-text-solutions-listing" class="collapsible">
 </pre>
 
@@ -74,7 +74,7 @@ abstract: |
 
 [lab1.zip](#)
 
-<button class="accordion">Lab 1</button>
+<button class="accordion">Tutorial contents</button>
 <pre id="week06-flexbox-solutions-listing" class="collapsible">
 </pre>
 
@@ -82,6 +82,6 @@ abstract: |
 
 [lab1.zip](#)
 
-<button class="accordion">Lab 1</button>
+<button class="accordion">Tutorial contents</button>
 <pre id="week10-grid-solutions-listing" class="collapsible">
 </pre>

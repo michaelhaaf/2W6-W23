@@ -16,7 +16,7 @@ abstract: |
 
 [lab1.zip](#)
 
-<button class="accordion">Lab 1</button>
+<button class="accordion">Lab contents</button>
 
 <pre id="lab1-listing" class="collapsible">
 </pre>
@@ -25,7 +25,7 @@ abstract: |
 
 [lab2.zip](#)
 
-<button class="accordion">Lab 2</button>
+<button class="accordion">Lab contents</button>
 
 <pre id="lab2-listing" class="collapsible">
 </pre>
@@ -34,7 +34,7 @@ abstract: |
 
 [lab3.zip](#)
 
-<button class="accordion">Lab 3</button>
+<button class="accordion">Lab contents</button>
 
 <pre id="lab3-listing" class="collapsible">
 </pre>
@@ -43,7 +43,7 @@ abstract: |
 
 [lab4.zip](#)
 
-<button class="accordion">Lab 4</button>
+<button class="accordion">Lab contents</button>
 
 <pre id="lab4-listing" class="collapsible">
 </pre>
@@ -54,7 +54,7 @@ abstract: |
 
 [lab1.zip](#)
 
-<button class="accordion">Lab 1</button>
+<button class="accordion">Lab contents</button>
 
 <pre id="lab1solution-listing" class="collapsible">
 </pre>
@@ -63,7 +63,7 @@ abstract: |
 
 [lab2.zip](#)
 
-<button class="accordion">Lab 2</button>
+<button class="accordion">Lab contents</button>
 
 <pre id="lab2solution-listing" class="collapsible">
 </pre>
@@ -72,7 +72,7 @@ abstract: |
 
 [lab3.zip](#)
 
-<button class="accordion">Lab 3</button>
+<button class="accordion">Lab contents</button>
 
 <pre id="lab3solution-listing" class="collapsible">
 </pre>
@@ -81,7 +81,7 @@ abstract: |
 
 [lab4.zip](#)
 
-<button class="accordion">Lab 4</button>
+<button class="accordion">Lab contents</button>
 
 <pre id="lab4solution-listing" class="collapsible">
 </pre>
