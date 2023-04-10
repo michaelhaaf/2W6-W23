@@ -41,28 +41,24 @@ FIND_OPTIONS = -maxdepth 1 \
 
 ## MAKE RULES
 
-all: $(PAGE_TEMPLATE) $(PAGES_HTML) $(LECTURES_HTML)
+all: indices $(PAGE_TEMPLATE) $(PAGES_HTML) $(LECTURES_HTML)
 
 clean:
 	rm lectures/*.html
 	rm pages/*.html
 
-# Run this if a new file has been added to a dynamic contect directory 
-indexes:
+indices:
 	tree lectures -H ../lectures | htmlq "body p a" | grep html > ./assets/listings/lecture-listing.html
-	tree assignments -L 1 -H ../assignments | htmlq "body p a" | tail -n +2 > ./assets/listings/assignment-listing.html
-	tree tutorials -d -L 1 -H ../tutorials | htmlq "body p a" | tail -n +2 > ./assets/listings/tutorial-listing.html
+	htmlq -f pages/assignments.html "#TOC > ul > li > ul a" | sed 's/href="/href="..\/pages\/assignments\.html/' | sed 's/ id=".*"//' > ./assets/listings/assignment-listing.html
+	htmlq -f pages/tutorials.html "#TOC > ul > li > ul a" | sed 's/href="/href="..\/pages\/tutorials\.html/' | sed 's/ id=".*"//' > ./assets/listings/tutorial-listing.html
 	./assets/build-scripts/generate-index-files assignments
 	./assets/build-scripts/generate-index-files tutorials
 
-listings:
+$(PAGE_TEMPLATE): assets/listings/*.html assets/listings/assignments/*.html assets/listings/tutorials/*.html
 	cp $(PAGE_TEMPLATE) ./assets/templates/page.html.backup 
-	python ./assets/build-scripts/insert-listings.py > $(PAGE_TEMPLATE)
-
-# If dynamic content directories changed, update template and mark all targets for update
-$(PAGE_TEMPLATE): assets/listings/*.html
-	cp $(PAGE_TEMPLATE) ./assets/templates/page.html.backup 
-	python ./assets/build-scripts/insert-listings.py > $(PAGE_TEMPLATE)
+	python ./assets/build-scripts/insert-listings.py --document template > $(PAGE_TEMPLATE)
+	python ./assets/build-scripts/insert-listings.py --document assignments > pages/assignments.html
+	python ./assets/build-scripts/insert-listings.py --document tutorials > pages/tutorials.html
 	touch $(PAGES_MD) $(LECTURES_MD)
 
 lectures/%.html: md/lectures/%.md
