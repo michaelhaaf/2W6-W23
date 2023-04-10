@@ -13,4 +13,5 @@ find "./$dirname" -mindepth 1 -maxdepth 1 -type d -print0 |
          --hintro=/dev/null \
          --houtro=/dev/null \
          "$dir"
+    sed -i 's/<br>//g' "./assets/listings/${dir}-listing.html"
   done

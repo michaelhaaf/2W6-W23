@@ -41,7 +41,7 @@ FIND_OPTIONS = -maxdepth 1 \
 
 ## MAKE RULES
 
-all: indices $(PAGE_TEMPLATE) $(PAGES_HTML) $(LECTURES_HTML)
+all: $(PAGE_TEMPLATE) $(PAGES_HTML) $(LECTURES_HTML) 
 
 clean:
 	rm lectures/*.html
@@ -53,14 +53,14 @@ indices:
 	htmlq -f pages/tutorials.html "#TOC > ul > li > ul a" | sed 's/href="/href="..\/pages\/tutorials\.html/' | sed 's/ id=".*"//' > ./assets/listings/tutorial-listing.html
 	./assets/build-scripts/generate-index-files assignments
 	./assets/build-scripts/generate-index-files tutorials
+	cp pages/assignments.html pages/assignments.html.backup
+	python ./assets/build-scripts/insert-listings.py --document assignments > pages/assignments.html
+	cp pages/tutorials.html pages/tutorials.html.backup
+	python ./assets/build-scripts/insert-listings.py --document tutorials > pages/tutorials.html
 
 $(PAGE_TEMPLATE): assets/listings/*.html
 	cp $(PAGE_TEMPLATE) ./assets/templates/page.html.backup 
-	cp pages/assignments.html pages/assignments.html.backup
-	cp pages/tutorials.html pages/tutorials.html.backup
 	python ./assets/build-scripts/insert-listings.py --document template > $(PAGE_TEMPLATE)
-	python ./assets/build-scripts/insert-listings.py --document assignments > pages/assignments.html
-	python ./assets/build-scripts/insert-listings.py --document tutorials > pages/tutorials.html
 	touch $(PAGES_MD) $(LECTURES_MD)
 
 lectures/%.html: md/lectures/%.md
@@ -70,3 +70,4 @@ lectures/%.html: md/lectures/%.md
 pages/%.html: md/pages/%.md
 	touch $(HOME_MD)
 	pandoc $(PANDOC_OPTIONS) -o $@ $<
+

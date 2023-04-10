@@ -178,6 +178,24 @@ exercises
 exercises
         </a>
        </li>
+       <li>
+        <a href="../pages/tutorials.html#week-04-solutions">
+         Week 04 
+solutions
+        </a>
+       </li>
+       <li>
+        <a href="../pages/tutorials.html#week-06-solutions">
+         Week 06 
+solutions
+        </a>
+       </li>
+       <li>
+        <a href="../pages/tutorials.html#week-10-solutions">
+         Week 10 
+solutions
+        </a>
+       </li>
       </ul>
      </li>
      <li>
@@ -190,22 +208,46 @@ exercises
       <ul class="dropdown hidden" id="assignment-listing">
        <li>
         <a href="../pages/assignments.html#lab-1">
-         lab 1
+         Lab 1
         </a>
        </li>
        <li>
         <a href="../pages/assignments.html#lab-2">
-         lab 2
+         Lab 2
         </a>
        </li>
        <li>
         <a href="../pages/assignments.html#lab-3">
-         lab 3
+         Lab 3
         </a>
        </li>
        <li>
         <a href="../pages/assignments.html#lab-4">
-         lab 4
+         Lab 4
+        </a>
+       </li>
+       <li>
+        <a href="../pages/assignments.html#lab-1-solution">
+         Lab 1 
+solution
+        </a>
+       </li>
+       <li>
+        <a href="../pages/assignments.html#lab-2-solution">
+         Lab 2 
+solution
+        </a>
+       </li>
+       <li>
+        <a href="../pages/assignments.html#lab-3-solution">
+         Lab 3 
+solution
+        </a>
+       </li>
+       <li>
+        <a href="../pages/assignments.html#lab-4-solution">
+         Lab 4 
+solution
         </a>
        </li>
       </ul>
@@ -218,13 +260,7 @@ exercises
         <h2 id="toc-title">
      Page navigation
     </h2>
-         <a class="" href="../calendar.html">
-     <img alt="" class="icon" src="../assets/images/feather-icons/chevron-left.svg"/>
-     <span class="icon-text">
-      Previous page...
-     </span>
-    </a>
-     <ul>
+      <ul>
 <li><a href="#tutorials" id="toc-tutorials">Tutorials</a>
 <ul>
 <li><a href="#week-04-exercises" id="toc-week-04-exercises">Week 04
@@ -234,7 +270,15 @@ Exercises</a></li>
 <li><a href="#week-10-exercises" id="toc-week-10-exercises">Week 10
 Exercises</a></li>
 </ul></li>
-<li><a href="#solutions" id="toc-solutions">Solutions</a></li>
+<li><a href="#solutions" id="toc-solutions">Solutions</a>
+<ul>
+<li><a href="#week-04-solutions" id="toc-week-04-solutions">Week 04
+Solutions</a></li>
+<li><a href="#week-06-solutions" id="toc-week-06-solutions">Week 06
+Solutions</a></li>
+<li><a href="#week-10-solutions" id="toc-week-10-solutions">Week 10
+Solutions</a></li>
+</ul></li>
 </ul>     <a class="" href="../pages/assignments.html">
      <img alt="" class="icon" src="../assets/images/feather-icons/chevron-right.svg"/>
      <span class="icon-text">
@@ -258,7 +302,7 @@ Exercises</a></li>
      </div>
            <p class="date">
       Last update:
-      <time datetime="Mon Apr 10 17:32:28 2023">
+      <time datetime="Mon Apr 10 18:31:12 2023">
        Monday, April 10, 2023
       </time>
      </p>
@@ -288,6 +332,25 @@ Exercises</a></li>
 </section>
 <section id="solutions" class="level1">
 <h1>Solutions</h1>
+<section id="week-04-solutions" class="level2">
+<h2>Week 04 Solutions</h2>
+<pre id="week04-box-model-solutions-listing">
+</pre>
+<pre id="week04-foundations-solutions-listing">
+</pre>
+<pre id="week04-styling-text-solutions-listing">
+</pre>
+</section>
+<section id="week-06-solutions" class="level2">
+<h2>Week 06 Solutions</h2>
+<pre id="week06-flexbox-solutions-listing">
+</pre>
+</section>
+<section id="week-10-solutions" class="level2">
+<h2>Week 10 Solutions</h2>
+<pre id="week10-grid-solutions-listing">
+</pre>
+</section>
 </section> 
    </article>
   </main>

@@ -1,8 +1,7 @@
 ---
 title: "2W6-W23: Assignments"
 toc-title: "Page navigation"
-prev-page: "../tutorials.html"
-next-page: "../pages/home.html"
+next-page: "../pages/tutorials.html"
 lang: "en"
 abstract-title: "Assigned lab work and solutions"
 abstract: |
@@ -19,7 +18,7 @@ abstract: |
 
 <button class="accordion">Lab 1</button>
 
-<pre id="lab1-listing">
+<pre id="lab1-listing" class="collapsible">
 </pre>
 
 ## Lab 2
@@ -28,21 +27,25 @@ abstract: |
 
 <button class="accordion">Lab 2</button>
 
-<pre id="lab2-listing">
+<pre id="lab2-listing" class="collapsible">
 </pre>
 
 ## Lab 3
 
 [lab3.zip](#)
 
-<pre id="lab3-listing">
+<button class="accordion">Lab 3</button>
+
+<pre id="lab3-listing" class="collapsible">
 </pre>
 
 ## Lab 4
 
 [lab4.zip](#)
 
-<pre id="lab4-listing">
+<button class="accordion">Lab 4</button>
+
+<pre id="lab4-listing" class="collapsible">
 </pre>
 
 # Solutions
@@ -53,7 +56,7 @@ abstract: |
 
 <button class="accordion">Lab 1</button>
 
-<pre id="lab1-listing">
+<pre id="lab1solution-listing" class="collapsible">
 </pre>
 
 ## Lab 2 Solution
@@ -62,20 +65,24 @@ abstract: |
 
 <button class="accordion">Lab 2</button>
 
-<pre id="lab2-listing">
+<pre id="lab2solution-listing" class="collapsible">
 </pre>
 
 ## Lab 3 Solution
 
 [lab3.zip](#)
 
-<pre id="lab3-listing">
+<button class="accordion">Lab 3</button>
+
+<pre id="lab3solution-listing" class="collapsible">
 </pre>
 
 ## Lab 4 Solution
 
 [lab4.zip](#)
 
-<pre id="lab4-listing">
+<button class="accordion">Lab 4</button>
+
+<pre id="lab4solution-listing" class="collapsible">
 </pre>
 
