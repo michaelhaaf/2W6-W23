@@ -4,16 +4,35 @@
     <title>Lab 3 Solution</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--SOLUTION: links to external CSS-->
     <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" id="layout-css" href="layouts.css" />
 
     <!-- SOLUTION: Note that all three <link>s from google fonts are here.-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Take a close look at the googleapi URL: I have selected and included three font weights -->
     <!-- This will force CSS to download the font specs for EACH weight. They will AUTOMATICALLY apply when I set font weight property -->
     <!-- i.e. I can just say "font-weight: 600" or "font-weight: bold" and the correct font will download and be applied. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
 
+
+    <script>
+      const layoutCssSheet = document.querySelector("#layout-css");
+      window.onload = (event) => {
+        layoutCssSheet.disabled = true;
+      };
+
+      function swapcss() {
+        layoutCssSheet.disabled
+          ? (layoutCssSheet.disabled = false)
+          : (layoutCssSheet.disabled = true);
+      }
+    </script>
   </head>
   <body>
     <header class="page-header narrow-card flex-container">
@@ -27,7 +46,7 @@
           <li>Forum</li>
         </ul>
       </nav>
-      <img src="images/hamburger.svg" role="img" alt="hamburger" />
+      <img id="css-swapper" onclick="swapcss();" src="images/hamburger.svg" role="img" alt="hamburger" />
     </header>
     <section class="hero card flex-row flex-container">
       <div class="flex-column flex-container">

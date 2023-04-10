@@ -12,11 +12,12 @@
   --foreground: #000000;
 
   /* 
-  * Unfortunately, there's no quick CSS way to add opacity to hex colors (there should be soon!) 
-  * One way is to use 8-bit hex colors (RRGGBBAA, where the AA hexes encode the alpha-channel, i.e. the opacity)
+  * Unfortunately, there's no quick CSS way to add opacity to existing hex colors (there should be soon!) 
+  * One way is to define new 8-bit hex colors (RRGGBBAA, where the AA hexes encode the alpha-channel, i.e. the opacity)
   * i.e.:
-  *   - #6200EEFF 
-  *   - #6200EE00
+  *   - #6200EEFF (same as primary color, 100% opacity)
+  *   - #6200EE00 (completely transparent)
+  *   - #6200EE19 (primary with opacity 19/FF == 6% opacity)
   * */
 
   --card-bg-1: #6200EE19;
