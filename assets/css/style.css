@@ -631,6 +631,7 @@ td h5 {
   text-align: left;
   padding: 1em;
   font-size: 1rem;
+  font-family: inherit;
 }
 
 .accordion::before {
@@ -644,12 +645,10 @@ td h5 {
 .collapsible {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-out;
 }
 
 .collapsible.expanded {
-  max-height: inherit;
-  transition: max-height 0.3s ease-out;
+  max-height: none;
 }
 
 /* ------------------------------------------ *\

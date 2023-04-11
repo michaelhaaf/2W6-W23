@@ -187,7 +187,6 @@ window.onload = function (e) {
 
 // accordion pattern
 const accordions = Array.from(document.querySelectorAll(".accordion"));
-const collapsibles = Array.from(document.querySelectorAll(".collapsible")); 
 accordions.forEach(accordion => {
   accordion.addEventListener("click", expandCollapsible);
 });
