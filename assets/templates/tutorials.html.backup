@@ -263,6 +263,8 @@ solution
       <ul>
 <li><a href="#tutorials" id="toc-tutorials">Tutorials</a>
 <ul>
+<li><a href="#week-01-exercises" id="toc-week-01-exercises">Week 01
+Exercises</a></li>
 <li><a href="#week-04-exercises" id="toc-week-04-exercises">Week 04
 Exercises</a></li>
 <li><a href="#week-06-exercises" id="toc-week-06-exercises">Week 06
@@ -302,94 +304,167 @@ Solutions</a></li>
      </div>
            <p class="date">
       Last update:
-      <time datetime="Mon Apr 10 23:01:44 2023">
-       Monday, April 10, 2023
+      <time datetime="Tue Apr 11 00:06:21 2023">
+       Tuesday, April 11, 2023
       </time>
      </p>
          </header>
      <hr />
 <section id="tutorials" class="level1">
 <h1>Tutorials</h1>
+<p>For each tutorial, all relevant files (instructions, starter assets,
+etc.) can be found by downloading the <strong>.zip</strong> file
+associated with that lab.</p>
+<p>You can also preview lab files in the browser by expanding the
+<strong>(+) View files in browser</strong> tab from each section.</p>
+<section id="week-01-exercises" class="level2">
+<h2>Week 01 Exercises</h2>
+<p>In this tutorial, I demonstrated a few boilerplate HTML techniques.
+Refer back to this file if you forget the purpose of any of the
+fundamental HTML elements – the file is well-commented.</p>
+<p>Instructions: (no .zip, just preview the HTML below)</p>
+<button class="accordion">
+View files in browser
+</button>
+<pre id="week01-boilerplate-listing" class="collapsible">
+</pre>
+</section>
 <section id="week-04-exercises" class="level2">
 <h2>Week 04 Exercises</h2>
-<p><a href="#">lab1.zip</a></p>
+<p>The first two sets of <a
+href="https://www.theodinproject.com/lessons/foundations-css-foundations">Odin
+Project</a> exercises. They are great general review of CSS
+foundations/the box model if you ever feel the need to practise.</p>
+<p>The final set of exercises comes from a <a
+href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage">MDN
+Web Docs exercise set</a>. It is comprehensive practise for finding and
+using external web fonts, as well as perfecting typographic CSS
+skills.</p>
+<section id="css-foundations" class="level3">
+<h3>CSS Foundations</h3>
+<p>Each exercise set contains several README.md files explaining how to
+solve the problems.</p>
+<p>Instructions: <a
+href="../tutorials/week04-foundations-exercises.zip">foundations.zip</a></p>
 <button class="accordion">
-Tutorial contents
-</button>
-<pre id="week04-box-model-exercises-listing" class="collapsible">
-</pre>
-<p><a href="#">lab1.zip</a></p>
-<button class="accordion">
-Tutorial contents
+View files in browser
 </button>
 <pre id="week04-foundations-exercises-listing" class="collapsible">
 </pre>
-<p><a href="#">lab1.zip</a></p>
+</section>
+<section id="css-box-model" class="level3">
+<h3>CSS Box Model</h3>
+<p>Instructions: <a
+href="../tutorials/week04-box-model-exercises.zip">boxModel.zip</a></p>
 <button class="accordion">
-Tutorial contents
+View files in browser
+</button>
+<pre id="week04-box-model-exercises-listing" class="collapsible">
+</pre>
+</section>
+<section id="css-typesetting-typography" class="level3">
+<h3>CSS Typesetting &amp; Typography</h3>
+<p>Instructions: <a
+href="../tutorials/week04-styling-text-exercises.zip">stylingText.zip</a></p>
+<button class="accordion">
+View files in browser
 </button>
 <pre id="week04-styling-text-exercises-listing" class="collapsible">
 </pre>
 </section>
+</section>
 <section id="week-06-exercises" class="level2">
 <h2>Week 06 Exercises</h2>
-<p><a href="#">lab1.zip</a></p>
+<p>Another set of Odin Project exercises, focusing on the mechanics of
+Flexbox.</p>
+<section id="css-flexbox" class="level3">
+<h3>CSS Flexbox</h3>
+<p>Instructions: <a
+href="../tutorials/week06-flexbox-exercises.zip">flexbox.zip</a></p>
 <button class="accordion">
-Tutorial contents
+View files in browser
 </button>
 <pre id="week06-flexbox-exercises-listing" class="collapsible">
 </pre>
 </section>
+</section>
 <section id="week-10-exercises" class="level2">
 <h2>Week 10 Exercises</h2>
-<p><a href="#">lab1.zip</a></p>
+<p>Another set of Odin Project exercises, focusing on the mechanics of
+Grid.</p>
+<section id="css-grid" class="level3">
+<h3>CSS Grid</h3>
+<p>Instructions: <a
+href="../tutorials/week10-grid-exercises.zip">grids.zip</a></p>
 <button class="accordion">
-Tutorial contents
+View files in browser
 </button>
 <pre id="week10-grid-exercises-listing" class="collapsible">
 </pre>
+<hr />
+</section>
 </section>
 </section>
 <section id="solutions" class="level1">
 <h1>Solutions</h1>
 <section id="week-04-solutions" class="level2">
 <h2>Week 04 Solutions</h2>
-<p><a href="#">lab1.zip</a></p>
+<section id="css-foundations-1" class="level3">
+<h3>CSS Foundations</h3>
+<p>Foundations solutions: <a
+href="../tutorials/week04-foundations-solutions.zip">foundationsSolutions.zip</a></p>
 <button class="accordion">
-Tutorial contents
-</button>
-<pre id="week04-box-model-solutions-listing" class="collapsible">
-</pre>
-<p><a href="#">lab1.zip</a></p>
-<button class="accordion">
-Tutorial contents
+View files in browser
 </button>
 <pre id="week04-foundations-solutions-listing" class="collapsible">
 </pre>
-<p><a href="#">lab1.zip</a></p>
+</section>
+<section id="css-box-model-1" class="level3">
+<h3>CSS Box Model</h3>
+<p>Box Model solutions: <a
+href="../tutorials/week04-box-model-solutions.zip">boxModelSolutions.zip</a></p>
 <button class="accordion">
-Tutorial contents
+View files in browser
+</button>
+<pre id="week04-box-model-solutions-listing" class="collapsible">
+</pre>
+</section>
+<section id="css-typesetting-typography-1" class="level3">
+<h3>CSS Typesetting &amp; Typography</h3>
+<p>Styling Text solutions: <a
+href="../tutorials/week04-styling-text-solutions.zip">stylingTextSolutions.zip</a></p>
+<button class="accordion">
+View files in browser
 </button>
 <pre id="week04-styling-text-solutions-listing" class="collapsible">
 </pre>
 </section>
+</section>
 <section id="week-06-solutions" class="level2">
 <h2>Week 06 Solutions</h2>
-<p><a href="#">lab1.zip</a></p>
+<section id="css-flexbox-1" class="level3">
+<h3>CSS Flexbox</h3>
+<p>Flexbox solutions: <a
+href="../tutorials/week06-flexbox-solutions.zip">flexboxSolutions.zip</a></p>
 <button class="accordion">
-Tutorial contents
+View files in browser
 </button>
 <pre id="week06-flexbox-solutions-listing" class="collapsible">
 </pre>
 </section>
+</section>
 <section id="week-10-solutions" class="level2">
 <h2>Week 10 Solutions</h2>
-<p><a href="#">lab1.zip</a></p>
+<section id="css-grid-1" class="level3">
+<h3>CSS Grid</h3>
+<p>Grid solutions: <a
+href="../tutorials/week10-grid-solutions.zip">gridSolutions.zip</a></p>
 <button class="accordion">
-Tutorial contents
+View files in browser
 </button>
 <pre id="week10-grid-solutions-listing" class="collapsible">
 </pre>
+</section>
 </section>
 </section> 
    </article>
