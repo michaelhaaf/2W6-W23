@@ -1,43 +1,3 @@
-# Third revision
-
-## pres specs:
-
-whiteboard
-
-##  intro self (3m)
-
-Hi I'm June
-I took this DEC, graduated in 2016, and have done web programming for about 8 years
-I'm a friend of Michaels
-I host my own web servers from home to serve a couple websites for fun
-I wanna be a teacher
-
-For me personally, it's the server side stuff that's really interesting. Most recently I've worked as a PHP developer.
-Michael asked me if I could talk about CSS, since it's where you're at in the course calendar.
-I think you guys are doing a grid assignment, which is cool.
-
-web development is a class I took with Larry when I was about 17
-I don't remember covering CSS and I'm pretty sure Flex did not exist when I was growing up
-Web dev is something I'm very passionate about
-There's a lot going on when we use an internet browser, that goes on behind the scenes
-A lot of its pretty creative stuff
-
-So, at any point, if you guys have questions
-about anything involving web development in general, feel free to ask them
-not just css
-
-I have about two hours, for this class
-I hope you don't get bored 
-If you get bored put your hand up and ask me a stupid question or something
-
-So I'm gonna talk about
-i)  getting a job in web development
-ii) having fun with web development
-
-and we'll do a couple exercises time allowing
-
-
-
 ## jobs in web development
 
 "web v.s. internet"
@@ -70,29 +30,17 @@ Free web design tip: if you want a good website for everyone to use. Like a gove
 
 Especially in multi-team CSS files, the scripts for that can get pretty messy and big without any organization. The longer a websites been around and the more time the visuals are updated, that often results in messy CSS. What happens a lot is, updates are made to the design, a developer will add the CSS, but not remove the old, unused classes anymore (generally they are not sure if they are being used anywhere else). 
 
-More free tips: here's how to deal with a few tricky things that people ask for. cheat sheat
-
-MAKE EXAMPLES FOR EACH
-b) gradient overlays on pictures (5m)
-c) text on pictures (5m)
-d) "background-image" intricacies
-e) position: absolute intricacies
-
-will be tested somewhat
-
-
 Here are some other things, if you're interested in doing front end stuff full time, to look into
 
-* BEM
+* BEM (https://getbem.com/introduction/)
 	- you write your CSS in such a way that your class names tell you what element it represents
-* SASS
+* SASS (https://sass-lang.com/)
 	- a CSS pre-processor. Let's you write classes INSIDE other classes.. you compile your .sass or .scss files into regular CSS files which you link in your HTML
-* csstricks.com
+* csstricks.com (https://css-tricks.com/)
 	- some of their articles are funny but I hear its gone a little downhill recently
 
 "Optimal CSS development pattern"
-* bem
-* sass
+* conventions + preprocessors
 * minifiying & combining
 * caching, serving
 
@@ -102,18 +50,7 @@ What are the advantages to caching? disadvantages?
 When it comes to CSS in a professional setting, its the same as anything else code related...
 you can ALWAYS google it. But the more you understand how it generally works and what the more impactful features of it do, the less time you have to spend trying to understand what you're google. Or you can google it better
 
-
-
-EXERCISE:
-provided two pictures, mobile and desktop, of a website design, try to make them
-designs will be "professional"
-purpose: day in the job.
-OR
-provided a template (zip with HTML,css,JS), and given a list of "revisions", change the provided template css to match the requested revisions
-same purpose
-
 (can you chatgpt a website by visually describing it? be my guest)
-
 
 ## Art in web development
 
@@ -124,26 +61,11 @@ I want to show you some of the funkier things people have done in CSS
 
 Cool websites to look through:
 * http://old.reddit.com/r/ooer
-* shrimp
 * https://orteil.dashnet.org/cookieclicker/
 * https://www.pokeclicker.com/
 * css zengarden
 * CSS spinners copy and paste
 
-
 Open console & inspect some, explain how some properties work, walk through MDN google it
 
-Fun stuff happens with JavaScript. You can use it to add or remove classes from elements on user interactions.
-
-### JavaScript and CSS interaction
-- Creating elements
-- Adding/removing classes to elements in JavaScript
-- Adding/removing inline styles to elements JavaScript
-- HTML game hacks
-- JavaScript v.s. React
-
-Exercise:
-given simple idle game dev setup (click a text character to gain a point, two different upgrades with autoclick)
-barebones HTML and CSS given, all JavaScript provided with no need to change it (but recommend doing so)
-
-
+Fun stuff happens with JavaScript. You can use it to add or remove classes from elements on user interactions. See suplementary exercises.
