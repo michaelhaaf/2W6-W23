@@ -48,21 +48,44 @@ Answer: there's always more to learn. Have you ever been on a website that sucks
 
 ## Examples
 
-It's one thing to know in theory what Responsive web design is. Let's see some examples and learn how to assess how responsive a web design is by experimentation:
+It's one thing to know in theory what Responsive web design is. Let's see some examples and learn how to assess how responsive a web design is by experimentation.
 
-Bad examples:
+It turns out, our lab work so far this semester is a good starting point. We already have a few examples to work with:
 
-1. lab2
-2. lab3
+[lab1-eg]: ../assets/videos/wk11/lab1-eg.webm "Lab 1 demonstrates surprisingly strong responsive traits, realigning images (which are inline elements by default) and resizing text appropriately in response to increased zoom." 
+[lab2-eg]: ../assets/videos/wk11/lab2-eg.webm "Lab 2 shows how horizontal scrollbars are introduced when CSS layout forces the page layout to be wider than the viewport width" 
+[lab3-eg]: ../assets/videos/wk11/lab3-eg.webm "Lab 3 shows that information can even be LOST when CSS layouts force the page width to be wider than the viewport width. Lab 3 also shows how Flexbox row-wrap does adjust elegantly to decreased viewport width, automatically restacking its flex-items." 
+[lab4-eg]: ../assets/videos/wk11/lab4-eg.webm "Lab 4 shows that with careful CSS choices, our elements and our layout can be perfeclty responsive, even when that layout is complex." 
 
-Good examples:
+### Bad examples:
 
-1. lab1!
-2. lab4
+1. [Lab 2][lab2solution]: 
 
-### Bad examples
+In Lab 2, we can see one classic example of poor usability when the device width narrows. A **horizontal scrollbar** is introduced. On mobile phones, users will have to scroll sideways in order to see the full content.
+
+![Video: How my **Lab 2** solution responds to a variety of viewport widths. Ignore the weird resolution, I'll fix that later. Try to see where the website "breaks" as you change the preview size.][lab2-eg]
+
+2. [Lab 3][lab3solution]: 
+
+While it is possible to make Lab 3 work at a particular width, and even with clever use of `margin: 0 auto` we can center it at wide widths, there are quite a few issues that are introduced when we reduce the viewport width.
+
+We once again see the **horizontal scrollbar**, but not just that: at certain widths, we even **lose information**! This is a devastating result: it means that your `CSS` is preventing the browser from rendering your content at all, making it impossible for the user to recover without using developer tools.
+
+![Video: How my **Lab 3** solution responds to a variety of viewport widths. Try it yourself to see where the website "breaks" as you change the preview size.][lab3-eg]
 
 ### Good examples
+
+1. Lab 1 (!!): [(link to solution preview -- try it out yourself!)][lab1solution], 
+
+Surprisingly, our first lab is one of our best for demonstrating responsible design. We'll see in the [next section](#html-responsive-by-default) why this the case.
+
+![Video: How my **Lab 1** (partially complete) solution responds to a variety of viewport widths. Ignore the weird resolution, I'll fix that later. See how the website does not experience the same "breaks" as the previous examples.][lab1-eg]
+
+2. Lab 4: see below for a preview.
+
+Finally, we have Lab 4. When Lab 4 is finished, we should be able to combine the natural responsivity of simple websites like Lab 1, with the more complicated needs of modern web layout and styling demanded by websites like Lab 2 and Lab 3.
+
+![Video: How your **Lab 4** should (approximately) respond to a variety of viewport widths when complete. Pay attention to both how the the overall *layout*, as well as the individual *elements* like buttons and images, adjust as the viewport changes. NOTE: yours does not have to be exactly the same as mine, refer to the Lab 4 instructions for requirements.][lab4-eg]
 
 ## Browser Dev Tools Responsive Mode
 
@@ -85,7 +108,7 @@ On all browsers, you will be able to **change the viewport size** (click + drag 
 
 **Make sure you try using the tools yourself!** Head over to the [lab1][lab1solution], [lab2][lab2solution], and [lab3][lab3solution] solution files on this website to see if you can reproduce the videos I shared [above](#examples).
 
-Then, whenever you're on the internet, **try the tool out on other people's websites (mine included! let me know if it sucks!)**
+Then, whenever you're on the internet, **try the tool out on other people's websites** (mine included! let me know if it sucks!). 
 
 [firefox-designmode]: https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html
 [chrome-designmode]: https://developer.chrome.com/docs/devtools/device-mode/
@@ -147,6 +170,13 @@ On top of default `HTML` behavior, there are a few more improvements we can make
 
 By using **semantic**, that is, *meaningful* `HTML` tags, we significantly increase the usability and responsivity of our websites for free. How?
 
+Here is a (incomplete) list of ways:
+
+- Browser [reader mode][css-tricks-reader-mode] discards elements like `<aside>`, `<header>`, `<footer>` etc. to focus on the `<main>` and `<article>` content of a webpage, allowing users to easily get a distraction and advertisement (!) free experience of any website. Reader mode **is not available** when semantic markup is not present.
+- [Search Engine Optimization](https://en.wikipedia.org/wiki/Search_engine_optimization) relies on semantic HTML to determine the content of a webpage, making search results about your webpage more accurate.
+
+[css-tricks-reader-mode]: https://css-tricks.com/reader-mode-the-button-to-beat/
+
 <div class="half-width">
 ![Semantic elements are *composable*: combine them to create meaning.][iih-footer]
 </div>
@@ -156,6 +186,18 @@ By using **semantic**, that is, *meaningful* `HTML` tags, we significantly incre
 
 [iih-footer]: https://www.internetingishard.com/html-and-css/semantic-html/html-footer-element-0c927a.png "The HTML element 'footer' inside of both the 'body' and an 'article' element of the webpage. Semantic elements can be re-used and re-combined to make meaningful distinction between webpage sections."
 [iih-header]: https://www.internetingishard.com/html-and-css/semantic-html/html-header-element-7b4e01.png "The HTML element 'header' used much the same way as 'footer' in the previous image."
+
+Semantic HTML doesn't just improve the responsivity of your layout, it also also improves the responsivity of individual HTML elements. [You can find some ineresting examples at w3schools](https://www.w3schools.com/html/html_accessibility.asp), some highlights:
+
+- `<button>` elements (as opposed to using a restyled/javascripted `<div>`) are [clickable][w3schools-semantic-html], [focusable][w3schools-semantic-html] and [understood by screen-readers][w3schools-semantic-html] by default. `<a>` elements are very similar in this manner.
+- `<img>` tags with defined `alt` attributes allow you to automatically replace the content of an image in case the connection is bad/it cannot be rendered/some other issue -- on top of allowing non-sighted users to understand your content.
+- screenreaders (and other tools) automatically generate Tables of Contents from your (`<h1>, <h2>,` etc.) elements. See the *Lecture Navigation* section of my website for an example!
+
+[w3schools-semantic-html]: https://www.w3schools.com/html/html_accessibility.asp
+
+As we can see, there is a large overlap between **Responsive Design** and [Accessibility](../lectures/week12.html#accessibility) -- in fact, I would say that Responsive Design is a subset of the broader study of accessible web design. We will cover this all in more detail next week!
+
+### CSS: what is it good for?
 
 **NOTE**: Semantic markup does not directly improve the behavior of your webpage at different zoom levels.
 
@@ -177,21 +219,43 @@ You can test how your website `HTML` looks by [removing the Page Style from your
 
 A list of other CSS techniques worth mentioning
 
-## Percentages vs. Pixels
+## Height/Width vs. Padding
 
-Fixed vs. dynamic sizing
+Style vs. Content specified size
 
-## Width vs. Max-width
+Big picture:
 
-Large screens, things get too big,
+- avoid setting `width` and `height` directly as much as possible (forces overflow, changes the behavior of the element in surprising ways)
+- to set element height: add vertical padding (make content "taller")
+- to set element width: add horizontal padding (make content "wider")
 
-## Height vs. Padding
+
+## Pixels vs. Percentage/Relative Units
+
+Fixed vs. dynamic sizing. 
+
+Big picture:
+
+- percentages to divide containers into portions
+- `em` for element sizes (auto adjust to PARENT font size: small font button should not grow as fast as large font button) 
+- `rem` for text (user preference set at root, auto adjust all fonts to user prefence in proportion. `em` will use PARENT font size, which can cause deeply nested element font sizes to grow/shrink exponentially)
+
+## Max and Min Height/Width
 
 Overflow vs. natural dimensions of container
 
-## Overriding the `position` property
+Big picture:
 
-For adjusting specific elements.
+- in addition to the recommendations above:
+- to set limits on how much an element's size can grow/shrink, use `min-` and `max-` properties instead.
+
+See below.
+
+- `max-width`:
+- `min-width`:
+
+- `max-height`:
+- `min-height`:
 
 ## Media queries[^queries-attribution]
 
@@ -220,14 +284,14 @@ body {
 }
 
 /* When the browser is AT MOST (max-width) 600px or below */
-@media screen and (max-width: 80rem) {
+@media screen and (max-width: 600px) {
   .element {
     /* Apply some styles */
   }
 }
 
 /* When the browser is BETWEEN 30em and 80em */
-@media (min-width: 30em) and (max-width: 80em) {
+@media (min-width: 300px) and (max-width: 600px) {
   body {
     background-color: purple;
   }
@@ -256,15 +320,21 @@ The syntax above may seem strange -- what is the `@` for? We haven't seen it yet
 [mdn-namespace]: https://developer.mozilla.org/en-US/docs/Web/CSS/@namespace
 [mdn-media]: https://developer.mozilla.org/en-US/docs/Web/CSS/@media
 
-# Flexbox
+# CSS Flexbox and Grid
 
-The typical layout designs we can achieve in Flexbox
 
-# Responsive design using Grid
+## Flexbox techniques
 
-This section is adapted directly from [Website Layouts with Grid](https://maujac.github.io/2W6-UI/#/./wk9/layouts_grid) from the Winter 2021 version of the course, in turn based on the page **[Basic Concepts of grid layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)** by MDN web docs, **[A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)** by CSS Tricks and [**CSS Grid Layout Module**](https://www.w3schools.com/css/css_grid.asp) by W3Schools.
+Flexbox inherently allows for more precise control of how elements respond when their container width changes. Review [flexbox course content](../lectures/week06.html) for more information.
 
-## Nested grids
+## Grid techniques
+
+Similar to Flexbox, Grids allow for more precise control of how elements respond when their container width changes. The following examples[^grid-attribution] show some particularly useful situations:
+
+[^grid-attribution]: This section is adapted directly from [Website Layouts with Grid](https://maujac.github.io/2W6-UI/#/./wk9/layouts_grid) from the Winter 2021 version of the course, in turn based on the page [Basic Concepts of grid layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout) by MDN web docs, [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) by CSS Tricks and [CSS Grid Layout Module](https://www.w3schools.com/css/css_grid.asp) by W3Schools.
+
+### Nested grids
+
 
 A grid item can also become a grid container
 
@@ -307,7 +377,7 @@ A grid item can also become a grid container
   (<a href='https://codepen.io/maujac'>@maujac</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-## Overlapping Grid Items
+### Overlapping Grid Items
 
 Grid items can overlap inside their grid container without any problems.
 
@@ -352,7 +422,7 @@ In the example below **.box2 overlaps on top of .box1** and **.box3 overlaps on 
   (<a href='https://codepen.io/maujac'>@maujac</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-## Layering Grid Items
+### Layering Grid Items
 
 Grid items can be layered/stacked by properly positioning them and assigning `z-index` when necessary. 
 
@@ -380,7 +450,7 @@ Considering the previous example, we will place .box2 on top of .box1 **and** .b
 
 
 
-## Grid area Property
+### Grid area Property
 
 It is possible to shorten the `grid-row` and `grid-column` notation even further by using `grid-area`
 
@@ -452,7 +522,7 @@ Example of `grid-area`:
 
 
 
-## Naming and Positioning by Grid Areas
+### Naming and Positioning by Grid Areas
 
 In the example above we defining an area by specifying the lines that enclose that area:
 
@@ -488,7 +558,7 @@ Consider the layout below with the following sections:
 
 
 
-## Assigning names with `grid-area` 
+### Assigning names with `grid-area` 
 
 You can assign any name to a HTML element with the `grid-area`  property.
 
@@ -512,7 +582,7 @@ main {
 
 Once the naming convention has been assigned, create the layout using the item names instead of line numbers. 
 
-## Templates with `grid-template-areas`
+### Templates with `grid-template-areas`
 
 The `grid-template-areas` property defines a grid template by referencing the names of the grid areas.
 
@@ -544,7 +614,7 @@ The `grid-template-areas` property defines a grid template by referencing the na
 
 
 
-# Using Grid vs Flexbox
+## Grid vs Flexbox
 
 When to use Grid rather than Flexbox? Ask yourself the following questions:
 
@@ -574,25 +644,17 @@ An example would be setting a percentage width on a flex item to make it line up
 > Flexbox and Grid are perfectly compatible and most powerful when used together
 
 
-# Semantic CSS?
-
-## Organizing stylesheets
-
-## Choosing class names
-
-## Choosing the right selector
-
 # Knowledge Check
 
 Stay tuned for more information!
 
 # Readings
 
-1.
+Stay tuned for more information!
 
 # Exercises
 
-These exercises will be based on June's guest lecture (Wednesday, April 5)
+1. **`sup11.html`** in [June's guest lecture exercises](../pages/tutorials.html#week-11-exercises). 
 
 
 [semrush-html-review]: https://www.semrush.com/blog/semantic-html5-guide/ 

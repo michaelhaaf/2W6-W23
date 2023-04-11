@@ -151,6 +151,6 @@ This section contains questions for you to check your understanding of [automate
 
 # Exercises
 
-1. Odin Project: CSS Grid Practise Exercises [(.zip)][tutCSSGrid]
+1. Odin Project: [CSS Grid Practise Exercises][tutCSSGrid]
 
-[tutCSSGrid]: ../tutorials/css-exercises-grid.zip "Odin Project: CSS Grid Exercises. There are 3 exercises total in this set."
+[tutCSSGrid]: ../pages/tutorials.html#week-10-exercises "Odin Project: CSS Grid Exercises. There are 3 exercises total in this set."

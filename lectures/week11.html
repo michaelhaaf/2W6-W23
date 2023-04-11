@@ -361,50 +361,25 @@ id="toc-semantic-html-responsivity">Semantic HTML responsivity</a></li>
 <li><a href="#responsive-css-techniques"
 id="toc-responsive-css-techniques">Responsive CSS Techniques</a>
 <ul>
-<li><a href="#percentages-vs.-pixels"
-id="toc-percentages-vs.-pixels">Percentages vs. Pixels</a></li>
-<li><a href="#width-vs.-max-width" id="toc-width-vs.-max-width">Width
-vs. Max-width</a></li>
-<li><a href="#height-vs.-padding" id="toc-height-vs.-padding">Height
-vs. Padding</a></li>
-<li><a href="#overriding-the-position-property"
-id="toc-overriding-the-position-property">Overriding the
-<code>position</code> property</a></li>
+<li><a href="#heightwidth-vs.-padding"
+id="toc-heightwidth-vs.-padding">Height/Width vs. Padding</a></li>
+<li><a href="#pixels-vs.-percentagerelative-units"
+id="toc-pixels-vs.-percentagerelative-units">Pixels
+vs. Percentage/Relative Units</a></li>
+<li><a href="#max-and-min-heightwidth"
+id="toc-max-and-min-heightwidth">Max and Min Height/Width</a></li>
 <li><a href="#media-queriesqueries-attribution"
 id="toc-media-queriesqueries-attribution">Media queries</a></li>
 </ul></li>
-<li><a href="#flexbox" id="toc-flexbox">Flexbox</a></li>
-<li><a href="#responsive-design-using-grid"
-id="toc-responsive-design-using-grid">Responsive design using Grid</a>
+<li><a href="#css-flexbox-and-grid" id="toc-css-flexbox-and-grid">CSS
+Flexbox and Grid</a>
 <ul>
-<li><a href="#nested-grids" id="toc-nested-grids">Nested grids</a></li>
-<li><a href="#overlapping-grid-items"
-id="toc-overlapping-grid-items">Overlapping Grid Items</a></li>
-<li><a href="#layering-grid-items" id="toc-layering-grid-items">Layering
-Grid Items</a></li>
-<li><a href="#grid-area-property" id="toc-grid-area-property">Grid area
-Property</a></li>
-<li><a href="#naming-and-positioning-by-grid-areas"
-id="toc-naming-and-positioning-by-grid-areas">Naming and Positioning by
-Grid Areas</a></li>
-<li><a href="#assigning-names-with-grid-area"
-id="toc-assigning-names-with-grid-area">Assigning names with
-<code>grid-area</code></a></li>
-<li><a href="#templates-with-grid-template-areas"
-id="toc-templates-with-grid-template-areas">Templates with
-<code>grid-template-areas</code></a></li>
-</ul></li>
-<li><a href="#using-grid-vs-flexbox"
-id="toc-using-grid-vs-flexbox">Using Grid vs Flexbox</a></li>
-<li><a href="#semantic-css" id="toc-semantic-css">Semantic CSS?</a>
-<ul>
-<li><a href="#organizing-stylesheets"
-id="toc-organizing-stylesheets">Organizing stylesheets</a></li>
-<li><a href="#choosing-class-names"
-id="toc-choosing-class-names">Choosing class names</a></li>
-<li><a href="#choosing-the-right-selector"
-id="toc-choosing-the-right-selector">Choosing the right
-selector</a></li>
+<li><a href="#flexbox-techniques" id="toc-flexbox-techniques">Flexbox
+techniques</a></li>
+<li><a href="#grid-techniques" id="toc-grid-techniques">Grid
+techniques</a></li>
+<li><a href="#grid-vs-flexbox" id="toc-grid-vs-flexbox">Grid vs
+Flexbox</a></li>
 </ul></li>
 <li><a href="#knowledge-check" id="toc-knowledge-check">Knowledge
 Check</a></li>
@@ -440,7 +415,7 @@ Check</a></li>
      </div>
            <p class="date">
       Last update:
-      <time datetime="Tue Apr 11 16:35:35 2023">
+      <time datetime="Tue Apr 11 18:55:47 2023">
        Tuesday, April 11, 2023
       </time>
      </p>
@@ -500,22 +475,103 @@ practices</strong> used to create universally usable webpages.</p>
 <h2>Examples</h2>
 <p>It’s one thing to know in theory what Responsive web design is. Let’s
 see some examples and learn how to assess how responsive a web design is
-by experimentation:</p>
-<p>Bad examples:</p>
-<ol type="1">
-<li>lab2</li>
-<li>lab3</li>
-</ol>
-<p>Good examples:</p>
-<ol type="1">
-<li>lab1!</li>
-<li>lab4</li>
-</ol>
+by experimentation.</p>
+<p>It turns out, our lab work so far this semester is a good starting
+point. We already have a few examples to work with:</p>
 <section id="bad-examples" class="level3">
-<h3>Bad examples</h3>
+<h3>Bad examples:</h3>
+<ol type="1">
+<li><a href="../assignments/lab2solution/index.html">Lab 2</a>:</li>
+</ol>
+<p>In Lab 2, we can see one classic example of poor usability when the
+device width narrows. A <strong>horizontal scrollbar</strong> is
+introduced. On mobile phones, users will have to scroll sideways in
+order to see the full content.</p>
+<figure>
+<video src="../assets/videos/wk11/lab2-eg.webm"
+title="Lab 2 shows how horizontal scrollbars are introduced when CSS layout forces the page layout to be wider than the viewport width"
+controls=""><a href="../assets/videos/wk11/lab2-eg.webm">Video: How my
+Lab 2 solution responds to a variety of viewport widths. Ignore the
+weird resolution, I’ll fix that later. Try to see where the website
+“breaks” as you change the preview size.</a></video>
+<figcaption aria-hidden="true">Video: How my <strong>Lab 2</strong>
+solution responds to a variety of viewport widths. Ignore the weird
+resolution, I’ll fix that later. Try to see where the website “breaks”
+as you change the preview size.</figcaption>
+</figure>
+<ol start="2" type="1">
+<li><a href="../assignments/lab3solution/index.html">Lab 3</a>:</li>
+</ol>
+<p>While it is possible to make Lab 3 work at a particular width, and
+even with clever use of <code>margin: 0 auto</code> we can center it at
+wide widths, there are quite a few issues that are introduced when we
+reduce the viewport width.</p>
+<p>We once again see the <strong>horizontal scrollbar</strong>, but not
+just that: at certain widths, we even <strong>lose information</strong>!
+This is a devastating result: it means that your <code>CSS</code> is
+preventing the browser from rendering your content at all, making it
+impossible for the user to recover without using developer tools.</p>
+<figure>
+<video src="../assets/videos/wk11/lab3-eg.webm"
+title="Lab 3 shows that information can even be LOST when CSS layouts force the page width to be wider than the viewport width. Lab 3 also shows how Flexbox row-wrap does adjust elegantly to decreased viewport width, automatically restacking its flex-items."
+controls=""><a href="../assets/videos/wk11/lab3-eg.webm">Video: How my
+Lab 3 solution responds to a variety of viewport widths. Try it yourself
+to see where the website “breaks” as you change the preview
+size.</a></video>
+<figcaption aria-hidden="true">Video: How my <strong>Lab 3</strong>
+solution responds to a variety of viewport widths. Try it yourself to
+see where the website “breaks” as you change the preview
+size.</figcaption>
+</figure>
 </section>
 <section id="good-examples" class="level3">
 <h3>Good examples</h3>
+<ol type="1">
+<li>Lab 1 (!!): <a href="../assignments/lab1solution/index.html">(link
+to solution preview – try it out yourself!)</a>,</li>
+</ol>
+<p>Surprisingly, our first lab is one of our best for demonstrating
+responsible design. We’ll see in the <a
+href="#html-responsive-by-default">next section</a> why this the
+case.</p>
+<figure>
+<video src="../assets/videos/wk11/lab1-eg.webm"
+title="Lab 1 demonstrates surprisingly strong responsive traits, realigning images (which are inline elements by default) and resizing text appropriately in response to increased zoom."
+controls=""><a href="../assets/videos/wk11/lab1-eg.webm">Video: How my
+Lab 1 (partially complete) solution responds to a variety of viewport
+widths. Ignore the weird resolution, I’ll fix that later. See how the
+website does not experience the same “breaks” as the previous
+examples.</a></video>
+<figcaption aria-hidden="true">Video: How my <strong>Lab 1</strong>
+(partially complete) solution responds to a variety of viewport widths.
+Ignore the weird resolution, I’ll fix that later. See how the website
+does not experience the same “breaks” as the previous
+examples.</figcaption>
+</figure>
+<ol start="2" type="1">
+<li>Lab 4: see below for a preview.</li>
+</ol>
+<p>Finally, we have Lab 4. When Lab 4 is finished, we should be able to
+combine the natural responsivity of simple websites like Lab 1, with the
+more complicated needs of modern web layout and styling demanded by
+websites like Lab 2 and Lab 3.</p>
+<figure>
+<video src="../assets/videos/wk11/lab4-eg.webm"
+title="Lab 4 shows that with careful CSS choices, our elements and our layout can be perfeclty responsive, even when that layout is complex."
+controls=""><a href="../assets/videos/wk11/lab4-eg.webm">Video: How your
+Lab 4 should (approximately) respond to a variety of viewport widths
+when complete. Pay attention to both how the the overall layout, as well
+as the individual elements like buttons and images, adjust as the
+viewport changes. NOTE: yours does not have to be exactly the same as
+mine, refer to the Lab 4 instructions for requirements.</a></video>
+<figcaption aria-hidden="true">Video: How your <strong>Lab 4</strong>
+should (approximately) respond to a variety of viewport widths when
+complete. Pay attention to both how the the overall <em>layout</em>, as
+well as the individual <em>elements</em> like buttons and images, adjust
+as the viewport changes. NOTE: yours does not have to be exactly the
+same as mine, refer to the Lab 4 instructions for
+requirements.</figcaption>
+</figure>
 </section>
 </section>
 <section id="browser-dev-tools-responsive-mode" class="level2">
@@ -561,8 +617,8 @@ href="../assignments/lab3solution/index.html">lab3</a> solution files on
 this website to see if you can reproduce the videos I shared <a
 href="#examples">above</a>.</p>
 <p>Then, whenever you’re on the internet, <strong>try the tool out on
-other people’s websites (mine included! let me know if it
-sucks!)</strong></p>
+other people’s websites</strong> (mine included! let me know if it
+sucks!).</p>
 <hr />
 </section>
 </section>
@@ -651,6 +707,22 @@ HTML</a></figcaption>
 <p>By using <strong>semantic</strong>, that is, <em>meaningful</em>
 <code>HTML</code> tags, we significantly increase the usability and
 responsivity of our websites for free. How?</p>
+<p>Here is a (incomplete) list of ways:</p>
+<ul>
+<li>Browser <a
+href="https://css-tricks.com/reader-mode-the-button-to-beat/">reader
+mode</a> discards elements like <code>&lt;aside&gt;</code>,
+<code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code> etc. to focus
+on the <code>&lt;main&gt;</code> and <code>&lt;article&gt;</code>
+content of a webpage, allowing users to easily get a distraction and
+advertisement (!) free experience of any website. Reader mode <strong>is
+not available</strong> when semantic markup is not present.</li>
+<li><a
+href="https://en.wikipedia.org/wiki/Search_engine_optimization">Search
+Engine Optimization</a> relies on semantic HTML to determine the content
+of a webpage, making search results about your webpage more
+accurate.</li>
+</ul>
 <div class="half-width">
 <figure>
 <img
@@ -672,6 +744,37 @@ href="https://www.internetingishard.com/html-and-css/semantic-html/">Semantic
 HTML</a></figcaption>
 </figure>
 </div>
+<p>Semantic HTML doesn’t just improve the responsivity of your layout,
+it also also improves the responsivity of individual HTML elements. <a
+href="https://www.w3schools.com/html/html_accessibility.asp">You can
+find some ineresting examples at w3schools</a>, some highlights:</p>
+<ul>
+<li><code>&lt;button&gt;</code> elements (as opposed to using a
+restyled/javascripted <code>&lt;div&gt;</code>) are <a
+href="https://www.w3schools.com/html/html_accessibility.asp">clickable</a>,
+<a
+href="https://www.w3schools.com/html/html_accessibility.asp">focusable</a>
+and <a
+href="https://www.w3schools.com/html/html_accessibility.asp">understood
+by screen-readers</a> by default. <code>&lt;a&gt;</code> elements are
+very similar in this manner.</li>
+<li><code>&lt;img&gt;</code> tags with defined <code>alt</code>
+attributes allow you to automatically replace the content of an image in
+case the connection is bad/it cannot be rendered/some other issue – on
+top of allowing non-sighted users to understand your content.</li>
+<li>screenreaders (and other tools) automatically generate Tables of
+Contents from your (<code>&lt;h1&gt;, &lt;h2&gt;,</code> etc.) elements.
+See the <em>Lecture Navigation</em> section of my website for an
+example!</li>
+</ul>
+<p>As we can see, there is a large overlap between <strong>Responsive
+Design</strong> and <a
+href="../lectures/week12.html#accessibility">Accessibility</a> – in
+fact, I would say that Responsive Design is a subset of the broader
+study of accessible web design. We will cover this all in more detail
+next week!</p>
+<section id="css-what-is-it-good-for" class="level3">
+<h3>CSS: what is it good for?</h3>
 <p><strong>NOTE</strong>: Semantic markup does not directly improve the
 behavior of your webpage at different zoom levels.</p>
 <p>That means we still haven’t fixed problems like: the long lines of
@@ -685,6 +788,7 @@ make elements stack on each-other, or “flow” horizontally, with just
 <code>CSS</code>: it is to know when you actually need to do it, and
 what you could accidentally take away from the page design by adding it
 uncritically.</p>
+</section>
 </section>
 <section id="lab-4-tip-html" class="level2">
 <h2>Lab 4 Tip (HTML)</h2>
@@ -702,21 +806,50 @@ like:</p>
 <section id="responsive-css-techniques" class="level1">
 <h1>Responsive CSS Techniques</h1>
 <p>A list of other CSS techniques worth mentioning</p>
-<section id="percentages-vs.-pixels" class="level2">
-<h2>Percentages vs. Pixels</h2>
-<p>Fixed vs. dynamic sizing</p>
+<section id="heightwidth-vs.-padding" class="level2">
+<h2>Height/Width vs. Padding</h2>
+<p>Style vs. Content specified size</p>
+<p>Big picture:</p>
+<ul>
+<li>avoid setting <code>width</code> and <code>height</code> directly as
+much as possible (forces overflow, changes the behavior of the element
+in surprising ways)</li>
+<li>to set element height: add vertical padding (make content
+“taller”)</li>
+<li>to set element width: add horizontal padding (make content
+“wider”)</li>
+</ul>
 </section>
-<section id="width-vs.-max-width" class="level2">
-<h2>Width vs. Max-width</h2>
-<p>Large screens, things get too big,</p>
+<section id="pixels-vs.-percentagerelative-units" class="level2">
+<h2>Pixels vs. Percentage/Relative Units</h2>
+<p>Fixed vs. dynamic sizing.</p>
+<p>Big picture:</p>
+<ul>
+<li>percentages to divide containers into portions</li>
+<li><code>em</code> for element sizes (auto adjust to PARENT font size:
+small font button should not grow as fast as large font button)</li>
+<li><code>rem</code> for text (user preference set at root, auto adjust
+all fonts to user prefence in proportion. <code>em</code> will use
+PARENT font size, which can cause deeply nested element font sizes to
+grow/shrink exponentially)</li>
+</ul>
 </section>
-<section id="height-vs.-padding" class="level2">
-<h2>Height vs. Padding</h2>
+<section id="max-and-min-heightwidth" class="level2">
+<h2>Max and Min Height/Width</h2>
 <p>Overflow vs. natural dimensions of container</p>
-</section>
-<section id="overriding-the-position-property" class="level2">
-<h2>Overriding the <code>position</code> property</h2>
-<p>For adjusting specific elements.</p>
+<p>Big picture:</p>
+<ul>
+<li>in addition to the recommendations above:</li>
+<li>to set limits on how much an element’s size can grow/shrink, use
+<code>min-</code> and <code>max-</code> properties instead.</li>
+</ul>
+<p>See below.</p>
+<ul>
+<li><p><code>max-width</code>:</p></li>
+<li><p><code>min-width</code>:</p></li>
+<li><p><code>max-height</code>:</p></li>
+<li><p><code>min-height</code>:</p></li>
+</ul>
 </section>
 <section id="media-queriesqueries-attribution" class="level2">
 <h2>Media queries<a href="#fn1" class="footnote-ref" id="fnref1"
@@ -749,14 +882,14 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#c
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">/* When the browser is AT MOST (max-width) 600px or below */</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span> <span class="dv">screen</span> <span class="kw">and</span> (<span class="kw">max-width</span>: <span class="dv">80</span><span class="dt">rem</span>) {</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span> <span class="dv">screen</span> <span class="kw">and</span> (<span class="kw">max-width</span>: <span class="dv">600</span><span class="dt">px</span>) {</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.element</span> {</span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* Apply some styles */</span></span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">/* When the browser is BETWEEN 30em and 80em */</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span> (<span class="kw">min-width</span>: <span class="dv">30</span><span class="dt">em</span>) <span class="kw">and</span> (<span class="kw">max-width</span>: <span class="dv">80</span><span class="dt">em</span>) {</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span> (<span class="kw">min-width</span>: <span class="dv">300</span><span class="dt">px</span>) <span class="kw">and</span> (<span class="kw">max-width</span>: <span class="dv">600</span><span class="dt">px</span>) {</span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  body {</span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">background-color</span>: <span class="cn">purple</span><span class="op">;</span></span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  }</span>
@@ -806,24 +939,24 @@ styles directly in CSS)</li>
 </section>
 </section>
 </section>
-<section id="flexbox" class="level1">
-<h1>Flexbox</h1>
-<p>The typical layout designs we can achieve in Flexbox</p>
+<section id="css-flexbox-and-grid" class="level1">
+<h1>CSS Flexbox and Grid</h1>
+<section id="flexbox-techniques" class="level2">
+<h2>Flexbox techniques</h2>
+<p>Flexbox inherently allows for more precise control of how elements
+respond when their container width changes. Review <a
+href="../lectures/week06.html">flexbox course content</a> for more
+information.</p>
 </section>
-<section id="responsive-design-using-grid" class="level1">
-<h1>Responsive design using Grid</h1>
-<p>This section is adapted directly from <a
-href="https://maujac.github.io/2W6-UI/#/./wk9/layouts_grid">Website
-Layouts with Grid</a> from the Winter 2021 version of the course, in
-turn based on the page <strong><a
-href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basic
-Concepts of grid layout</a></strong> by MDN web docs, <strong><a
-href="https://css-tricks.com/snippets/css/complete-guide-grid/">A
-Complete Guide to Grid</a></strong> by CSS Tricks and <a
-href="https://www.w3schools.com/css/css_grid.asp"><strong>CSS Grid
-Layout Module</strong></a> by W3Schools.</p>
-<section id="nested-grids" class="level2">
-<h2>Nested grids</h2>
+<section id="grid-techniques" class="level2">
+<h2>Grid techniques</h2>
+<p>Similar to Flexbox, Grids allow for more precise control of how
+elements respond when their container width changes. The following
+examples<a href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a> show some particularly useful
+situations:</p>
+<section id="nested-grids" class="level3">
+<h3>Nested grids</h3>
 <p>A grid item can also become a grid container</p>
 <section id="html" class="level6 sourceCode">
 <h6 class="sourceCode">HTML</h6>
@@ -867,8 +1000,8 @@ class="citation" data-cites="maujac">@maujac</span></a>) on
 </iframe>
 </section>
 </section>
-<section id="overlapping-grid-items" class="level2">
-<h2>Overlapping Grid Items</h2>
+<section id="overlapping-grid-items" class="level3">
+<h3>Overlapping Grid Items</h3>
 <p>Grid items can overlap inside their grid container without any
 problems.</p>
 <p>In the example below <strong>.box2 overlaps on top of .box1</strong>
@@ -915,8 +1048,8 @@ class="citation" data-cites="maujac">@maujac</span></a>) on
 </iframe>
 </section>
 </section>
-<section id="layering-grid-items" class="level2">
-<h2>Layering Grid Items</h2>
+<section id="layering-grid-items" class="level3">
+<h3>Layering Grid Items</h3>
 <p>Grid items can be layered/stacked by properly positioning them and
 assigning <code>z-index</code> when necessary.</p>
 <blockquote>
@@ -944,8 +1077,8 @@ class="citation" data-cites="maujac">@maujac</span></a>) on
 </iframe>
 </section>
 </section>
-<section id="grid-area-property" class="level2">
-<h2>Grid area Property</h2>
+<section id="grid-area-property" class="level3">
+<h3>Grid area Property</h3>
 <p>It is possible to shorten the <code>grid-row</code> and
 <code>grid-column</code> notation even further by using
 <code>grid-area</code></p>
@@ -1013,8 +1146,8 @@ class="citation" data-cites="maujac">@maujac</span></a>) on
 </iframe>
 </section>
 </section>
-<section id="naming-and-positioning-by-grid-areas" class="level2">
-<h2>Naming and Positioning by Grid Areas</h2>
+<section id="naming-and-positioning-by-grid-areas" class="level3">
+<h3>Naming and Positioning by Grid Areas</h3>
 <p>In the example above we defining an area by specifying the lines that
 enclose that area:</p>
 <section id="css-6" class="level6 sourceCode">
@@ -1047,8 +1180,8 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb11-1"><a href=
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
 </section>
 </section>
-<section id="assigning-names-with-grid-area" class="level2">
-<h2>Assigning names with <code>grid-area</code></h2>
+<section id="assigning-names-with-grid-area" class="level3">
+<h3>Assigning names with <code>grid-area</code></h3>
 <p>You can assign any name to a HTML element with the
 <code>grid-area</code> property.</p>
 <section id="css-8" class="level6 sourceCode">
@@ -1070,8 +1203,8 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb12-1"><a href="#
 the item names instead of line numbers.</p>
 </section>
 </section>
-<section id="templates-with-grid-template-areas" class="level2">
-<h2>Templates with <code>grid-template-areas</code></h2>
+<section id="templates-with-grid-template-areas" class="level3">
+<h3>Templates with <code>grid-template-areas</code></h3>
 <p>The <code>grid-template-areas</code> property defines a grid template
 by referencing the names of the grid areas.</p>
 <ul>
@@ -1104,8 +1237,8 @@ class="citation" data-cites="maujac">@maujac</span></a>) on
 </section>
 </section>
 </section>
-<section id="using-grid-vs-flexbox" class="level1">
-<h1>Using Grid vs Flexbox</h1>
+<section id="grid-vs-flexbox" class="level2">
+<h2>Grid vs Flexbox</h2>
 <p>When to use Grid rather than Flexbox? Ask yourself the following
 questions:</p>
 <section id="direction-vs-2-directions" class="level3">
@@ -1140,17 +1273,6 @@ together</p>
 </blockquote>
 </section>
 </section>
-<section id="semantic-css" class="level1">
-<h1>Semantic CSS?</h1>
-<section id="organizing-stylesheets" class="level2">
-<h2>Organizing stylesheets</h2>
-</section>
-<section id="choosing-class-names" class="level2">
-<h2>Choosing class names</h2>
-</section>
-<section id="choosing-the-right-selector" class="level2">
-<h2>Choosing the right selector</h2>
-</section>
 </section>
 <section id="knowledge-check" class="level1">
 <h1>Knowledge Check</h1>
@@ -1158,14 +1280,15 @@ together</p>
 </section>
 <section id="readings" class="level1">
 <h1>Readings</h1>
-<ol type="1">
-<li></li>
-</ol>
+<p>Stay tuned for more information!</p>
 </section>
 <section id="exercises" class="level1">
 <h1>Exercises</h1>
-<p>These exercises will be based on June’s guest lecture (Wednesday,
-April 5)</p>
+<ol type="1">
+<li><strong><code>sup11.html</code></strong> in <a
+href="../pages/tutorials.html#week-11-exercises">June’s guest lecture
+exercises</a>.</li>
+</ol>
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
@@ -1177,6 +1300,17 @@ Queries”</a> (MDN Web Docs) and <a
 href="https://css-tricks.com/a-complete-guide-to-css-media-queries/">“A
 Complete Guide to CSS Media Queries”</a>(css-tricks).<a href="#fnref1"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>This section is adapted directly from <a
+href="https://maujac.github.io/2W6-UI/#/./wk9/layouts_grid">Website
+Layouts with Grid</a> from the Winter 2021 version of the course, in
+turn based on the page <a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basic
+Concepts of grid layout</a> by MDN web docs, <a
+href="https://css-tricks.com/snippets/css/complete-guide-grid/">A
+Complete Guide to Grid</a> by CSS Tricks and <a
+href="https://www.w3schools.com/css/css_grid.asp">CSS Grid Layout
+Module</a> by W3Schools.<a href="#fnref2" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section> 
    </article>
