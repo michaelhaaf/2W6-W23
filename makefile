@@ -74,7 +74,7 @@ $(TUTORIAL_ZIPS): %.zip : $$(shell find % -type f ! -path "%/.*")
 	./assets/build-scripts/generate-index-files tutorials
 	cd $(basename $@)/.. && zip -FSr $(notdir $@) $(notdir $(basename $*)) -x $(notdir $(basename $*))/.\*
 
-$(PAGE_TEMPLATE): assets/listings/*.html
+$(PAGE_TEMPLATE): %.html: $$(shell find assets/listings/ -type f)
 	cp $(PAGE_TEMPLATE) ./assets/templates/page.html.backup 
 	python ./assets/build-scripts/insert-listings.py --document template > $(PAGE_TEMPLATE)
 	touch $(PAGES_MD) $(LECTURES_MD)
