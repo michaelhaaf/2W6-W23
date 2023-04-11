@@ -257,13 +257,14 @@ See below.
 - `max-height`:
 - `min-height`:
 
-## Media queries[^queries-attribution]
+## Media queries
 
 [^queries-attribution]: This section was adapted directly from the articles ["Media Queries"][mdn-media-queries] (MDN Web Docs) and ["A Complete Guide to CSS Media Queries"][css-tricks-media-queries](css-tricks).
 
-[css-tricks-media-queries]: https://css-tricks.com/a-complete-guide-to-css-media-queries/
 
-**Media queries** are a key component of responsive design that allow you to apply CSS styles depending properties of client-side device characteristics. 
+**Media queries**[^queries-attribution] are a key component of responsive design that allow you to apply CSS styles depending properties of client-side device characteristics. 
+
+[css-tricks-media-queries]: https://css-tricks.com/a-complete-guide-to-css-media-queries/
 
 CSS Media queries are a way to identify important browser characteristics, features, and user preferences, then apply styles adapting to those things. Perhaps the most common media queries in the world are those that target particular [viewport][mdn-viewport] ranges and apply custom styles.
 
