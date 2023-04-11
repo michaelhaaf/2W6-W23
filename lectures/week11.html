@@ -340,9 +340,8 @@ solution
      <ul>
 <li><a href="#lesson-overview" id="toc-lesson-overview">Lesson
 Overview</a></li>
-<li><a href="#what-is-responsive-designresponsive-design-attribution"
-id="toc-what-is-responsive-designresponsive-design-attribution">What is
-Responsive Design?</a>
+<li><a href="#what-is-responsive-design"
+id="toc-what-is-responsive-design">What is Responsive Design?</a>
 <ul>
 <li><a href="#examples" id="toc-examples">Examples</a></li>
 <li><a href="#browser-dev-tools-responsive-mode"
@@ -350,9 +349,15 @@ id="toc-browser-dev-tools-responsive-mode">Browser Dev Tools Responsive
 Mode</a></li>
 </ul></li>
 <li><a href="#html-responsive-by-default"
-id="toc-html-responsive-by-default">HTML: Responsive by Default</a></li>
-<li><a href="#benefits-of-semantic-html"
-id="toc-benefits-of-semantic-html">Benefits of Semantic HTML</a></li>
+id="toc-html-responsive-by-default">HTML: Responsive by Default</a>
+<ul>
+<li><a href="#default-html-responsivity"
+id="toc-default-html-responsivity">Default HTML responsivity</a></li>
+<li><a href="#semantic-html-responsivity"
+id="toc-semantic-html-responsivity">Semantic HTML responsivity</a></li>
+<li><a href="#lab-4-tip-html" id="toc-lab-4-tip-html">Lab 4 Tip
+(HTML)</a></li>
+</ul></li>
 <li><a href="#responsive-css-techniques"
 id="toc-responsive-css-techniques">Responsive CSS Techniques</a>
 <ul>
@@ -435,7 +440,7 @@ Check</a></li>
      </div>
            <p class="date">
       Last update:
-      <time datetime="Tue Apr 11 12:17:17 2023">
+      <time datetime="Tue Apr 11 16:33:30 2023">
        Tuesday, April 11, 2023
       </time>
      </p>
@@ -445,18 +450,28 @@ Check</a></li>
 <h1>Lesson Overview</h1>
 <ul>
 <li>What is responsive design?</li>
-<li>What are the responsive properties of pure HTML?</li>
-<li>How do we add style and layout without reducing responsiveness?</li>
+<li>How can we achieve responsive design using just HTML?</li>
+<li>How do we add style and advanced layouts without taking away
+responisivity?</li>
 <li>How do we recognize patterns in our designs to reuse style
 components?</li>
-<li>How do we adjust the website layout for different devices?</li>
+<li>How do we adjust design layouts for different devices?</li>
 </ul>
 <hr />
 </section>
-<section id="what-is-responsive-designresponsive-design-attribution"
-class="level1">
-<h1>What is Responsive Design?<a href="#fn1" class="footnote-ref"
-id="fnref1" role="doc-noteref"><sup>1</sup></a></h1>
+<section id="what-is-responsive-design" class="level1">
+<h1>What is Responsive Design?</h1>
+<p>So far in this course, we have learned a great deal of
+<code>HTML</code>, <code>CSS</code>, and even some
+<code>JavaScript</code> to create website content, style it, and make it
+do stuff in a variety of ways. Your Lab3 and Lab4 homeworks are actually
+examples of the kind of work that web developers do on a regular basis.
+So what more is there to learn?</p>
+<p>Answer: there’s always more to learn. Have you ever been on a website
+that sucks to use? It’s not enough just to throw technology at a
+problem: any creative trade requires both <strong>technique</strong>
+(<code>HTML, CSS</code>) as well as <strong>design</strong>. So what is
+responsive web design?</p>
 <blockquote>
 <p><em>Responsive web design</em> is a web design approach to make web
 pages render well on all screen sizes and resolutions while ensuring
@@ -466,23 +481,97 @@ MDN Web Docs, <a
 href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">Responsive
 Design</a>
 </footer>
+<p><br></p>
+<p>With great power [to create websites], comes great responsibility [to
+make them readable on the devices that people actually use to read
+websites].</p>
+<footer>
+Uncle Ben, <a href="https://www.imdb.com/title/tt0145487/">Spider-Man
+(2002)</a>
+</footer>
 </blockquote>
-<p>Responsive web design isn’t a separate technology – it is an
-approach. It is a term used to describe a set of <strong>best
-practices</strong> used to create a layout that can respond to any
-device being used to view the content.</p>
+<p><strong>Responsive web design</strong> is an approach to using
+<code>HTML</code> and <code>CSS</code> to achieve an ambitious goal: we
+want not just make any web page, but web pages that render well on all
+screen sizes and resolutions while retaining usability and function.
+That is, responsive web design is the set of <strong>best
+practices</strong> used to create universally usable webpages.</p>
 <section id="examples" class="level2">
 <h2>Examples</h2>
-<p>Creating a non-resizable web page by setting a fixed width doesn’t
-work either; that leads to scroll bars on narrow devices and too much
-empty space on wide screens.</p>
+<p>It’s one thing to know in theory what Responsive web design is. Let’s
+see some examples and learn how to assess how responsive a web design is
+by experimentation:</p>
+<p>Bad examples:</p>
+<ol type="1">
+<li>lab2</li>
+<li>lab3</li>
+</ol>
+<p>Good examples:</p>
+<ol type="1">
+<li>lab1!</li>
+<li>lab4</li>
+</ol>
+<section id="bad-examples" class="level3">
+<h3>Bad examples</h3>
+</section>
+<section id="good-examples" class="level3">
+<h3>Good examples</h3>
+</section>
 </section>
 <section id="browser-dev-tools-responsive-mode" class="level2">
 <h2>Browser Dev Tools Responsive Mode</h2>
+<p>Getting good at any approach to <code>HTML/CSS</code> requires being
+able to debug our code and measure our success in achieving a design.
+Like in previous topics we have learned, modern internet browsers come
+with a suite of very useful tools for debugging and measuring – for
+responsive design, most browsers have a <strong>responsive design mode
+tool</strong>.</p>
+<p>This tool is how I created the demonstrations in the <a
+href="#examples">previous section</a>; like <a
+href="../pages/tutorials.html#week-11-exercises">June showed us last
+week</a>, you will spend a lot of time opening Responsive Mode and
+dragging the bottom right corner to test responsivity as take on more
+web development.</p>
+<p>To open and use Responsive Mode in the Browser Developer Tools:</p>
+<p><a
+href="https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html">Firefox</a>:</p>
+<ul>
+<li>Press <code>Ctrl + Shift + M</code> (windows/linux) or
+<code>option + command + M</code> (mac/osX)</li>
+</ul>
+<p><a
+href="https://developer.chrome.com/docs/devtools/device-mode/">Chrome/Edge/Opera
++ most other browsers</a>:</p>
+<ul>
+<li>Open the developer tools first: <code>Ctrl + Shift + I</code>
+(windows/linux) or <code>option + command + I</code> (mac/osX)</li>
+<li>Then, press <code>Ctrl + Shift + M</code> (windows/linux) or
+<code>option + command + M</code> (mac/osX)</li>
+</ul>
+<p>On all browsers, you will be able to <strong>change the viewport
+size</strong> (click + drag on bottom right corner), <strong>choose
+viewport devices</strong>, <strong>add custom viewport devices</strong>.
+There are more things the tool can do, but those three are what I use
+all the time. I’ve linked the documentation for each browser above, in
+case you want to learn more about them.</p>
+<p><strong>Make sure you try using the tools yourself!</strong> Head
+over to the <a href="../assignments/lab1solution/index.html">lab1</a>,
+<a href="../assignments/lab2solution/index.html">lab2</a>, and <a
+href="../assignments/lab3solution/index.html">lab3</a> solution files on
+this website to see if you can reproduce the videos I shared <a
+href="#examples">above</a>.</p>
+<p>Then, whenever you’re on the internet, <strong>try the tool out on
+other people’s websites (mine included! let me know if it
+sucks!)</strong></p>
+<hr />
 </section>
 </section>
 <section id="html-responsive-by-default" class="level1">
 <h1>HTML: Responsive by Default</h1>
+<p>As we saw in the <a href="#examples">previous examples</a>, our very
+first lab was strangely the <em>most</em> responsive of the labs we have
+made so far. This is because <code>HTML</code> is responsive by
+default:</p>
 <blockquote>
 <p>HTML is fundamentally responsive, or <em>fluid</em>. If you create a
 web page containing only HTML, with no CSS, and resize the window, the
@@ -493,19 +582,122 @@ href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_D
 Design</a>
 </footer>
 </blockquote>
-<p>While the default responsive behavior may sound like no solution is
-needed, long lines of text displayed full screen on a wide monitor can
-be difficult to read. If wide screen line length is reduced with CSS,
-such as by creating columns or adding significant padding, the site may
-look squashed for the user who narrows their browser window or opens the
-site on a mobile device.</p>
-<p>Start Lab 4 by creating the HTML, ensure you have a coherent layout
-(the relationship between all webpage content makes sense)</p>
+<p>Why is that? To understand this, we need to review some
+<code>HTML</code> fundamentals from the beginning of the semester.</p>
+<section id="default-html-responsivity" class="level2">
+<h2>Default HTML responsivity</h2>
+<p>There are two types of HTML element: most are <code>block</code>, and
+some are <code>inline</code>. How is the <code>height</code> and
+<code>width</code> of these elements <a
+href="https://www.w3schools.com/htmL/html_blocks.asp">computed by
+default?</a></p>
+<p><code>block</code>:</p>
+<ul>
+<li><code>width: auto;     /* 100% of parent width (forces next element to new line) */</code></li>
+<li><code>height: auto;    /* same as content height (0px if no content inside element) */</code></li>
+</ul>
+<p><code>inline</code>:</p>
+<ul>
+<li><code>width: auto;     /* same as content width (0px if no content inside element) */</code></li>
+<li><code>height: auto;    /* same as content height (0px if no content inside element) */</code></li>
+</ul>
+<p>Because <code>HTML</code> uses relative concepts like
+<strong>percentage of parent width</strong> to compute width, and
+because the top visible parent (the <code>body</code> element) is by
+default a <code>block</code> element, pure <code>HTML</code>
+<strong>automatically</strong> resizes its elements in response to the
+devices and viewports of the user.</p>
+<p>There are many public websites today which make use of only minimal
+CSS and are nonetheless fully responsive. Here is an arbitary example
+example: the online encyclopedia <a
+href="https://www.marxists.org/reference/archive/hegel/works/hl/hl512.htm#HL2_524">marxists.org</a>,
+which, among other things, contains <code>HTML</code> markup, minimal
+<code>CSS</code>, and the complete works of German philosopher <a
+href="https://en.wikipedia.org/wiki/Georg_Wilhelm_Friedrich_Hegel">George
+Hegel</a>:</p>
+<figure>
+<video src="../assets/videos/wk11/responsive-html-eg.webm"
+title="When webpages written without layout CSS are subject to different devices widths, HTML automatically adjusts the size of all elements to fit the screen."
+controls=""><a href="../assets/videos/wk11/responsive-html-eg.webm">In
+his Science of Logic (1816), Hegel explains the relationship between
+parent and child objects in HTML user interfaces. Note that the article
+is completely readable anywhere between 2000px and 300px (most device
+widths), but for wider displays, the text starts to become too
+long.</a></video>
+<figcaption aria-hidden="true">In his <em>Science of Logic (1816)</em>,
+Hegel explains the relationship between parent and child objects in
+<code>HTML</code> user interfaces. Note that the article is completely
+readable anywhere between 2000px and 300px (most device widths), but for
+wider displays, the text starts to become too long.</figcaption>
+</figure>
+<p>The default responsive behavior of HTML is a great starting point for
+any webside: all elements only take up the height they should take, and
+their widths adjust automatically to viewport widths.</p>
 </section>
-<section id="benefits-of-semantic-html" class="level1">
-<h1>Benefits of Semantic HTML</h1>
-<p>How to use the Semantic HTML elements to further improve the
-accesibility of your website by default.</p>
+<section id="semantic-html-responsivity" class="level2">
+<h2>Semantic HTML responsivity</h2>
+<p>On top of default <code>HTML</code> behavior, there are a few more
+improvements we can make using <strong>semantic</strong>, or meaningful,
+<code>HTML</code> element choices.</p>
+<figure>
+<img
+src="https://www.internetingishard.com/html-and-css/semantic-html/semantic-html-ffab7c.png"
+title="While semantic HTML elements have the exact same structural behavior as styled `&lt;div&gt;` elements, explicitly marking the meaning of our content defines the purpose of each section of our website, increasing the usability both for end-users as well as for other developers, browsers, and more."
+alt="Figure from Interneting is Hard: Semantic HTML" />
+<figcaption aria-hidden="true">Figure from Interneting is Hard: <a
+href="https://www.internetingishard.com/html-and-css/semantic-html/">Semantic
+HTML</a></figcaption>
+</figure>
+<p>By using <strong>semantic</strong>, that is, <em>meaningful</em>
+<code>HTML</code> tags, we significantly increase the usability and
+responsivity of our websites for free. How?</p>
+<div class="half-width">
+<figure>
+<img
+src="https://www.internetingishard.com/html-and-css/semantic-html/html-footer-element-0c927a.png"
+title="The HTML element &#39;footer&#39; inside of both the &#39;body&#39; and an &#39;article&#39; element of the webpage. Semantic elements can be re-used and re-combined to make meaningful distinction between webpage sections."
+alt="Semantic elements are composable: combine them to create meaning." />
+<figcaption aria-hidden="true">Semantic elements are
+<em>composable</em>: combine them to create meaning.</figcaption>
+</figure>
+</div>
+<div class="half-width">
+<figure>
+<img
+src="https://www.internetingishard.com/html-and-css/semantic-html/html-header-element-7b4e01.png"
+title="The HTML element &#39;header&#39; used much the same way as &#39;footer&#39; in the previous image."
+alt="Figures from Interneting is Hard: Semantic HTML" />
+<figcaption aria-hidden="true">Figures from Interneting is Hard: <a
+href="https://www.internetingishard.com/html-and-css/semantic-html/">Semantic
+HTML</a></figcaption>
+</figure>
+</div>
+<p><strong>NOTE</strong>: Semantic markup does not directly improve the
+behavior of your webpage at different zoom levels.</p>
+<p>That means we still haven’t fixed problems like: the long lines of
+text displayed full screen on a wide monitor that are too wide to read.
+It isn’t automatic to fix either: if we create columns or add padding,
+we will instead have the opposite problem and our website will be too
+narrow on small devices.</p>
+<p>That’s not even to mention: what if we need a real layout? We can’t
+make elements stack on each-other, or “flow” horizontally, with just
+<code>HTML</code>. The point of this lesson isn’t to never use
+<code>CSS</code>: it is to know when you actually need to do it, and
+what you could accidentally take away from the page design by adding it
+uncritically.</p>
+</section>
+<section id="lab-4-tip-html" class="level2">
+<h2>Lab 4 Tip (HTML)</h2>
+<p>If you are stuck on Lab 4, you can start by making sense of your
+<code>HTML</code>. Remember that your <code>HTML</code> is the
+<strong>foundation</strong> of your website, and all of your structure
+and responsivity is based on that foundation.</p>
+<p>You can test how your website <code>HTML</code> looks by <a
+href="#">removing the Page Style from your browser</a>. Here is an
+example of what the <code>HTML</code> for my lab 4 solution looks
+like:</p>
+<hr />
+</section>
 </section>
 <section id="responsive-css-techniques" class="level1">
 <h1>Responsive CSS Techniques</h1>
@@ -527,8 +719,8 @@ accesibility of your website by default.</p>
 <p>For adjusting specific elements.</p>
 </section>
 <section id="media-queriesqueries-attribution" class="level2">
-<h2>Media queries<a href="#fn2" class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a></h2>
+<h2>Media queries<a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a></h2>
 <p><strong>Media queries</strong> are a key component of responsive
 design that allow you to apply CSS styles depending properties of
 client-side device characteristics.</p>
@@ -979,15 +1171,11 @@ April 5)</p>
 role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1"><p>This section was adapted directly from the article <a
-href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">“Responsive
-Design”</a> (MDN Web Docs)<a href="#fnref1" class="footnote-back"
-role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>This section was adapted directly from the articles <a
+<li id="fn1"><p>This section was adapted directly from the articles <a
 href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries">“Media
 Queries”</a> (MDN Web Docs) and <a
 href="https://css-tricks.com/a-complete-guide-to-css-media-queries/">“A
-Complete Guide to CSS Media Queries”</a>(css-tricks).<a href="#fnref2"
+Complete Guide to CSS Media Queries”</a>(css-tricks).<a href="#fnref1"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section> 

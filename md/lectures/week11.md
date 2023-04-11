@@ -15,37 +15,91 @@ abstract: |
 # Lesson Overview
 
 - What is responsive design?
-- What are the responsive properties of pure HTML?
-- How do we add style and layout without reducing responsiveness?
+- How can we achieve responsive design using just HTML?
+- How do we add style and advanced layouts without taking away responisivity?
 - How do we recognize patterns in our designs to reuse style components?
-- How do we adjust the website layout for different devices? 
+- How do we adjust design layouts for different devices? 
 
 ---
 
-# What is Responsive Design?[^responsive-design-attribution]
+# What is Responsive Design?
 
+So far in this course, we have learned a great deal of `HTML`, `CSS`, and even some `JavaScript` to create website content, style it, and make it do stuff in a variety of ways. Your Lab3 and Lab4 homeworks are actually examples of the kind of work that web developers do on a regular basis. So what more is there to learn?
 
-
-    
-[^responsive-design-attribution]: This section was adapted directly from the article ["Responsive Design"][mdn-responsive-design] (MDN Web Docs)
+Answer: there's always more to learn. Have you ever been on a website that sucks to use? It's not enough just to throw technology at a problem: any creative trade requires both **technique** (`HTML, CSS`) as well as **design**. So what is responsive web design?
 
 > *Responsive web design* is a web design approach to make web pages render well on all screen sizes and resolutions while ensuring good usability. 
 >
 > <footer>
 >   MDN Web Docs, [Responsive Design][mdn-responsive-design]
 > </footer>
+>
+> <br>
+>
+> With great power [to create websites], comes great responsibility [to make them readable on the devices that people actually use to read websites].
+>
+> <footer>
+>   Uncle Ben, [Spider-Man (2002)](https://www.imdb.com/title/tt0145487/)
+> </footer>
 
-Responsive web design isn't a separate technology -- it is an approach. It is a term used to describe a set of **best practices** used to create a layout that can respond to any device being used to view the content.
+**Responsive web design** is an approach to using `HTML` and `CSS` to achieve an ambitious goal: we want not just make any web page, but web pages that render well on all screen sizes and resolutions while retaining usability and function. That is, responsive web design is the set of **best practices** used to create universally usable webpages.
 
 [mdn-responsive-design]: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
 
 ## Examples
 
-Creating a non-resizable web page by setting a fixed width doesn't work either; that leads to scroll bars on narrow devices and too much empty space on wide screens.
+It's one thing to know in theory what Responsive web design is. Let's see some examples and learn how to assess how responsive a web design is by experimentation:
+
+Bad examples:
+
+1. lab2
+2. lab3
+
+Good examples:
+
+1. lab1!
+2. lab4
+
+### Bad examples
+
+### Good examples
 
 ## Browser Dev Tools Responsive Mode
 
+Getting good at any approach to `HTML/CSS` requires being able to debug our code and measure our success in achieving a design. Like in previous topics we have learned, modern internet browsers come with a suite of very useful tools for debugging and measuring -- for responsive design, most browsers have a **responsive design mode tool**. 
+
+This tool is how I created the demonstrations in the [previous section](#examples); like [June showed us last week](../pages/tutorials.html#week-11-exercises), you will spend a lot of time opening Responsive Mode and dragging the bottom right corner to test responsivity as take on more web development.
+
+To open and use Responsive Mode in the Browser Developer Tools:
+
+[Firefox][firefox-designmode]: 
+    
+- Press `Ctrl + Shift + M` (windows/linux) or `option + command + M` (mac/osX)
+
+[Chrome/Edge/Opera + most other browsers][chrome-designmode]: 
+    
+- Open the developer tools first: `Ctrl + Shift + I`  (windows/linux) or `option + command + I` (mac/osX)
+- Then, press `Ctrl + Shift + M` (windows/linux) or `option + command + M` (mac/osX)
+
+On all browsers, you will be able to **change the viewport size** (click + drag on bottom right corner), **choose viewport devices**, **add custom viewport devices**. There are more things the tool can do, but those three are what I use all the time. I've linked the documentation for each browser above, in case you want to learn more about them.
+
+**Make sure you try using the tools yourself!** Head over to the [lab1][lab1solution], [lab2][lab2solution], and [lab3][lab3solution] solution files on this website to see if you can reproduce the videos I shared [above](#examples).
+
+Then, whenever you're on the internet, **try the tool out on other people's websites (mine included! let me know if it sucks!)**
+
+[firefox-designmode]: https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html
+[chrome-designmode]: https://developer.chrome.com/docs/devtools/device-mode/
+
+[lab1solution]: ../assignments/lab1solution/index.html
+[lab2solution]: ../assignments/lab2solution/index.html
+[lab3solution]: ../assignments/lab3solution/index.html
+[lab4solution]: ../assignments/lab4solution/index.html
+
+---
+
 # HTML: Responsive by Default
+
+As we saw in the [previous examples](#examples), our very first lab was strangely the *most* responsive of the labs we have made so far. This is because `HTML` is responsive by default:
 
 > HTML is fundamentally responsive, or *fluid*. If you create a web page containing only HTML, with no CSS, and resize the window, the browse will automatically reflow the text to fit the viewport.
 > 
@@ -53,13 +107,71 @@ Creating a non-resizable web page by setting a fixed width doesn't work either; 
 >   MDN Web Docs, [Responsive Design][mdn-responsive-design]
 > </footer>
 
-While the default responsive behavior may sound like no solution is needed, long lines of text displayed full screen on a wide monitor can be difficult to read. If wide screen line length is reduced with CSS, such as by creating columns or adding significant padding, the site may look squashed for the user who narrows their browser window or opens the site on a mobile device.
+Why is that? To understand this, we need to review some `HTML` fundamentals from the beginning of the semester. 
 
-Start Lab 4 by creating the HTML, ensure you have a coherent layout (the relationship between all webpage content makes sense)
+## Default HTML responsivity
 
-# Benefits of Semantic HTML
+There are two types of HTML element: most are `block`, and some are `inline`. How is the `height` and `width` of these elements [computed by default?][w3schools-html-sizes]
 
-How to use the Semantic HTML elements to further improve the accesibility of your website by default.
+`block`: 
+
+- `width: auto;     /* 100% of parent width (forces next element to new line) */`
+- `height: auto;    /* same as content height (0px if no content inside element) */`
+
+`inline`: 
+    
+- `width: auto;     /* same as content width (0px if no content inside element) */`
+- `height: auto;    /* same as content height (0px if no content inside element) */`
+
+[w3schools-html-sizes]: https://www.w3schools.com/htmL/html_blocks.asp
+
+Because `HTML` uses relative concepts like **percentage of parent width** to compute width, and because the top visible parent (the `body` element) is by default a `block` element, pure `HTML` **automatically** resizes its elements in response to the devices and viewports of the user.
+
+There are many public websites today which make use of only minimal CSS and are nonetheless fully responsive. Here is an arbitary example example: the online encyclopedia [marxists.org](https://www.marxists.org/reference/archive/hegel/works/hl/hl512.htm#HL2_524), which, among other things, contains `HTML` markup, minimal `CSS`, and the complete works of German philosopher [George Hegel](https://en.wikipedia.org/wiki/Georg_Wilhelm_Friedrich_Hegel):
+
+![In his *Science of Logic (1816)*, Hegel explains the relationship between parent and child objects in `HTML` user interfaces. Note that the article is completely readable anywhere between 2000px and 300px (most device widths), but for wider displays, the text starts to become too long.][responsive-html-eg]
+
+[responsive-html-eg]: ../assets/videos/wk11/responsive-html-eg.webm "When webpages written without layout CSS are subject to different devices widths, HTML automatically adjusts the size of all elements to fit the screen." 
+
+The default responsive behavior of HTML is a great starting point for any webside: all elements only take up the height they should take, and their widths adjust automatically to viewport widths. 
+
+## Semantic HTML responsivity
+
+On top of default `HTML` behavior, there are a few more improvements we can make using **semantic**, or meaningful, `HTML` element choices.
+
+![Figure from Interneting is Hard: [Semantic HTML][iih-semantic-html-source]][iih-semantic-html-img]
+
+
+[iih-semantic-html-img]: https://www.internetingishard.com/html-and-css/semantic-html/semantic-html-ffab7c.png "While semantic HTML elements have the exact same structural behavior as styled `<div>` elements, explicitly marking the meaning of our content defines the purpose of each section of our website, increasing the usability both for end-users as well as for other developers, browsers, and more."
+[iih-semantic-html-source]: https://www.internetingishard.com/html-and-css/semantic-html/
+
+By using **semantic**, that is, *meaningful* `HTML` tags, we significantly increase the usability and responsivity of our websites for free. How?
+
+<div class="half-width">
+![Semantic elements are *composable*: combine them to create meaning.][iih-footer]
+</div>
+<div class="half-width">
+![Figures from Interneting is Hard: [Semantic HTML][iih-semantic-html-source]][iih-header]
+</div>
+
+[iih-footer]: https://www.internetingishard.com/html-and-css/semantic-html/html-footer-element-0c927a.png "The HTML element 'footer' inside of both the 'body' and an 'article' element of the webpage. Semantic elements can be re-used and re-combined to make meaningful distinction between webpage sections."
+[iih-header]: https://www.internetingishard.com/html-and-css/semantic-html/html-header-element-7b4e01.png "The HTML element 'header' used much the same way as 'footer' in the previous image."
+
+**NOTE**: Semantic markup does not directly improve the behavior of your webpage at different zoom levels.
+
+That means we still haven't fixed problems like: the long lines of text displayed full screen on a wide monitor that are too wide to read. It isn't automatic to fix either: if we create columns or add padding, we will instead have the opposite problem and our website will be too narrow on small devices.
+
+That's not even to mention: what if we need a real layout? We can't make elements stack on each-other, or "flow" horizontally, with just `HTML`. The point of this lesson isn't to never use `CSS`: it is to know when you actually need to do it, and what you could accidentally take away from the page design by adding it uncritically.
+
+## Lab 4 Tip (HTML)
+
+If you are stuck on Lab 4, you can start by making sense of your `HTML`. Remember that your `HTML` is the **foundation** of your website, and all of your structure and responsivity is based on that foundation. 
+
+You can test how your website `HTML` looks by [removing the Page Style from your browser][remove-page-style]. Here is an example of what the `HTML` for my lab 4 solution looks like:
+
+[remove-page-style]: #
+
+---
 
 # Responsive CSS Techniques
 
