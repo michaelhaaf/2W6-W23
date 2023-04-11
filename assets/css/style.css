@@ -621,7 +621,8 @@ td h5 {
 }
 
 .accordion {
-  background: var(--surface);
+  background-color: var(--overlay);
+  color: var(--text);
   outline: none;
   border: none;
   cursor: pointer;

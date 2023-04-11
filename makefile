@@ -12,6 +12,8 @@ LECTURES_HTML := $(LECTURES_MD:md/lectures/%.md=lectures/%.html)
 
 # Path relative to makefile
 PAGE_TEMPLATE := ./assets/templates/page.html
+ASSIGNMENTS_TEMPLATE := ./assets/templates/assignments.html.backup
+TUTORIALS_TEMPLATE := ./assets/templates/tutorials.html.backup
 HIGHLIGHT_STYLE := ./assets/css/code-highlight.theme
 HTML_WRITER := ./assets/filters/separate-alt-figcaption.lua
 DATE_WRITER := ./assets/filters/last-updated.lua
@@ -41,6 +43,8 @@ FIND_OPTIONS = -maxdepth 1 \
 
 ## MAKE RULES
 
+.PHONY: all clean indices assignments tutorials
+
 all: $(PAGE_TEMPLATE) $(PAGES_HTML) $(LECTURES_HTML) 
 
 clean:
@@ -53,9 +57,13 @@ indices:
 	htmlq -f pages/tutorials.html "#TOC > ul > li > ul a" | sed 's/href="/href="..\/pages\/tutorials\.html/' | sed 's/ id=".*"//' > ./assets/listings/tutorial-listing.html
 	./assets/build-scripts/generate-index-files assignments
 	./assets/build-scripts/generate-index-files tutorials
-	cp pages/assignments.html pages/assignments.html.backup
+
+assignments:
+	cp pages/assignments.html $(ASSIGNMENTS_TEMPLATE)
 	python ./assets/build-scripts/insert-listings.py --document assignments > pages/assignments.html
-	cp pages/tutorials.html pages/tutorials.html.backup
+
+tutorials:
+	cp pages/tutorials.html $(TUTORIALS_TEMPLATE)
 	python ./assets/build-scripts/insert-listings.py --document tutorials > pages/tutorials.html
 
 $(PAGE_TEMPLATE): assets/listings/*.html

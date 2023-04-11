@@ -12,6 +12,10 @@ abstract: |
 
 # Labs 
 
+For each lab, all relevant files (instructions, starter assets, etc.) can be downloaded in the `.zip` file associated with that lab.
+
+You can also preview lab files in the browser by expanding the **(+) Lab contents** tabs in each section. 
+
 ## Lab 1
 
 [lab1.zip](#)

@@ -2,6 +2,6 @@
 
 LISTINGS_PATH = "./assets/listings"
 TEMPLATE_PATH = "./assets/templates/page.html.backup"
-LECTURES_PATH = "./pages/lectures.html.backup"
-ASSIGNMENTS_PATH = "./pages/assignments.html.backup"
-TUTORIALS_PATH = "./pages/tutorials.html.backup"
+LECTURES_PATH = "./assets/templates/lectures.html.backup"
+ASSIGNMENTS_PATH = "./assets/templates/assignments.html.backup"
+TUTORIALS_PATH = "./assets/templates/tutorials.html.backup"
