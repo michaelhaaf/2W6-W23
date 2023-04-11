@@ -79,3 +79,13 @@ pages/%.html: md/pages/%.md
 	touch $(HOME_MD)
 	pandoc $(PANDOC_OPTIONS) -o $@ $<
 
+pages/assignments.html: md/pages/assignments.md
+	touch $(HOME_MD)
+	pandoc $(PANDOC_OPTIONS) -o $(ASSIGNMENTS_TEMPLATE) $<
+	python ./assets/build-scripts/insert-listings.py --document assignments > pages/assignments.html
+
+pages/tutorials.html: md/pages/tutorials.md
+	touch $(HOME_MD)
+	pandoc $(PANDOC_OPTIONS) -o $(TUTORIALS_TEMPLATE) $<
+	python ./assets/build-scripts/insert-listings.py --document tutorials > pages/tutorials.html
+

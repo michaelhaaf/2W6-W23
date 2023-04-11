@@ -20,6 +20,8 @@ abstract: |
 [lab3solutions]: ../assignments/lab3solution.zip
 [lab4solutions]: ../assignments/lab4.zip
 
+[project1zip]: ../assignments/project1.zip
+
 # Labs 
 
 For each lab, all relevant files (instructions, starter assets, etc.) can be found by downloading the **.zip** file associated with that lab.

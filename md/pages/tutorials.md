@@ -16,12 +16,14 @@ abstract: |
 [week04stylingtextzip]: ../tutorials/week04-styling-text-exercises.zip
 [week06flexboxzip]: ../tutorials/week06-flexbox-exercises.zip
 [week10gridzip]: ../tutorials/week10-grid-exercises.zip
+[week11junezip]: ../tutorials/week11-june-exercises.zip
 
 [week04boxmodelsolutions]: ../tutorials/week04-box-model-solutions.zip
 [week04foundationssolutions]: ../tutorials/week04-foundations-solutions.zip
 [week04stylingtextsolutions]: ../tutorials/week04-styling-text-solutions.zip
 [week06flexboxsolutions]: ../tutorials/week06-flexbox-solutions.zip
 [week10gridsolutions]: ../tutorials/week10-grid-solutions.zip
+
 
 # Tutorials
 
