@@ -22,7 +22,7 @@ abstract: |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | Lectures         | Topics                                                          | Activities/Assessments                                                    |
 +==================+=================================================================+===========================================================================+
-| [Week 1][lec1]   | Tools - VS Code <br>                                            | **Lab 1 (5%, due Jan 27):** [Creating a website (.pdf)][lab1] <br>        |
+| [Week 1][lec1]   | Tools - VS Code <br>                                            | **Lab 1 (5%, due Jan 27):** [Creating a website][lab1] <br>        |
 |                  | HTML - boilerplate HTML5, content elements <br>                 | Activity: [Writing HTML Boilerplate (.html)][actBoilerplate]  <br>        |
 |                  | HTML - fundamentals, syntax, elements <br>                      |                                                                           |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
@@ -31,7 +31,7 @@ abstract: |
 |                  | Tools - VS Code skills for efficient web development <br>       | * [Part 1 (Youtube)][actVSCode1]                                          |
 |                  |                                                                 | * [Part 2 (Youtube)][actVSCode2]                                          |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
-| [Week 3][lec3]   | HTML - semantic elements, website markup <br>                   | **Lab 2 (10%, due Feb 16):** [Website layout and style (.pdf)][lab2] <br> |
+| [Week 3][lec3]   | HTML - semantic elements, website markup <br>                   | **Lab 2 (10%, due Feb 16):** [Website layout and style][lab2] <br> |
 |                  |                                                                 | **Lab 2 SOLUTION:** [solution directory][lab2solution] <br>               |
 |                  | Tools - browser dev tools for CSS/DOM inspection <br>           | Tutorial: [Document and Website Structure][tutWebsite] <br>               |
 |                  | CSS - inline vs internal vs external <br>                       | Activity: [CSS Diner][actDiner] <br>                                      |
@@ -46,7 +46,7 @@ abstract: |
 +==================+=================================================================+===========================================================================+
 | [Week 4][lec4]   | CSS - element properties: fonts, images, icons <br>             | Tutorial: [CSS Foundations Exercises][tutCSSFoundations] <br>             |
 |                  | CSS - layouts: the box model                                    | Tutorial: [CSS Box Model Exercises][tutCSSBoxModel] <br>                  |
-|                  |                                                                 | Tutorial: [Typesetting a Homepage][tutMdnText] [(.zip)][tutMdnText]  <br> |
+|                  |                                                                 | Tutorial: Typesetting a Homepage [(files)][tutMdnTextFiles]  <br>         |
 |                  |                                                                 | [Week 4 Exercises](../lectures/week04.html#exercises) <br>                |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | [Week 5][lec5]   | CSS - layouts: the box model, floats <br>                       | [Week 5 Exercises](../lectures/week05.html#exercises) <br>                |
@@ -114,26 +114,31 @@ abstract: |
 [lec14]: ../lectures/week14.html "Week 14 Lecture notes"
 [lec15]: ../lectures/week15.html "Week 15 Lecture notes"
 
-[lab1]: ../assignments/lab1 "Lab 1: worth 5%, due Jan 27"
-[lab2]: ../assignments/lab2 "Lab 2: worth 10%, due Feb 16"
-[lab3]: ../assignments/lab3 "Lab 3: worth 12.5%, due Mar 17"
-[lab4]: ../assignments/lab4 "Lab 4: worth 12.5%, due April 14"
-[pm1]: ../assignments/milestone1 "Project Milestone 1: worth 15%, due TBD"
-[pm2]: ../assignments/milestone2 "Project Milestone 2: worth 15%, due TBD"
+[lab1]: ../pages/assignments.html#lab-1 "Lab 1: worth 5%, due Jan 27"
+[lab2]: ../pages/assignments.html#lab-2 "Lab 2: worth 10%, due Feb 16"
+[lab3]: ../pages/assignments.html#lab-3 "Lab 3: worth 12.5%, due Mar 17"
+[lab4]: ../pages/assignments.html#lab-4 "Lab 4: worth 12.5%, due April 14"
+[pm1]: ../pages/assignments.html#milestone-1 "Project Milestone 1: worth 15%, due TBD"
+[pm2]: ../pages/assignments.html#milestone-2 "Project Milestone 2: worth 15%, due TBD"
 
 
-[lab2solution]: ../assignments/lab2solution "You can preview/download all solution files here."
-[lab3solution]: ../assignments/lab3solution "You can preview/download all solution files here."
-[lab4solution]: ../assignments/lab4solution "You can preview/download all solution files here."
+[lab2solution]: ../pages/assignments.html#lab-2-solution "You can preview/download all solution files here."
+[lab3solution]: ../pages/assignments.html#lab-3-solution "You can preview/download all solution files here."
+[lab4solution]: ../pages/assignments.html#lab-4-solution "You can preview/download all solution files here."
 
 [tutDocument]: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter "MDN: Marking up a Letter. Make sure you are familiar with all of the HTML elements covered in this tut."
 [tutWebsite]: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure "MDN: Document and website structure. This is a very helpful tutorial for getting started on Lab2."
-[tutCSSFoundations]: ../tutorials/css-exercises-foundations.zip "Odin Project: CSS Foundations Exercises. There are 6 exercises total in this set. You should be able to complete them all with what you have learned during Week 3."
-[tutCSSBoxModel]: ../tutorials/css-exercises-box-model.zip "Odin Project: CSS Box Model Exercises. There are 2 exercises total in this set. You should be able to complete them all with what you have learned during Week 4."
+[tutCSSFoundations]: ../pages/tutorials.html#week-04-exercises "Odin Project: CSS Foundations Exercises. There are 6 exercises total in this set. You should be able to complete them all with what you have learned during Week 3."
+[tutCSSBoxModel]: ../pages/tutorials.html#week-04-exercises "Odin Project: CSS Box Model Exercises. There are 2 exercises total in this set. You should be able to complete them all with what you have learned during Week 4."
 [tutMdnText]: https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage "MDN: Typesetting a homepage tutorial instructions."
-[tutMdnTextFiles]: ../tutorials/css-styling-text.zip "MDN: Typesetting a homepage tutorial starter files."
+[tutMdnTextFiles]: ../pages/tutorials.html#week04-styling-text-exercises "MDN: Typesetting a homepage tutorial starter files."
 
-[actBoilerplate]: ../tutorials/boilerplate.html "Completed Boilerplate HTML file, with all elements commented."
+[tutFlexbox]: ../pages/tutorials.html#week-06-exercises
+[tutFlexboxSolutions]: ../pages/tutorials.html#week-06-solutions
+[tutGrid]: ../pages/tutorials.html#week-10-exercises
+[tutGridSolutions]: ../pages/tutorials.html#week-10-solutions
+
+[actBoilerplate]: ../pages/tutorials.html#week-01-exercises "Completed Boilerplate HTML file, with all elements commented."
 [actVSCode1]: https://www.youtube.com/watch?v=V8vizNQKtx0 "Web Dev Simplified (YouTube): This video shows how to use 'Emmets' in VS Code to generate HTML tags and boilerplate automatically." 
 [actVSCode2]: https://www.youtube.com/watch?v=ifTF3ags0XI "Fireship (Youtube): This video contains a collection of generally helpful VS Code techniques for editting HTML files -- particularly for creating HTML tags from existing plaintext content using 'Wrap with Abbreviation'." 
 [actDiner]: https://flukeout.github.io "CSS Diner: Pracise selecting CSS elements with this interactive tut. You should be able to finish at least the first 16 exercises by the end of week 3; feel free to try the rest as well, reading the instructions on the right hand side for tips."

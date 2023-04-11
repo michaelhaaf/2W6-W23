@@ -35,6 +35,6 @@ This chapter was our first encounter with realistic web page layouts. We learned
 
 # Exercises
 
-- Odin Project: CSS Flexbox Practise Exercises [(.zip)][tutCSSFlexbox]
+- Odin Project: CSS Flexbox Practise Exercises [(instructions and starter files)][tutCSSFlexbox]
 
-[tutCSSFlexbox]: ../tutorials/css-exercises-flexbox.zip "Odin Project: CSS Flexbox Exercises. There are 7 exercises total in this set. You should be able to complete them all with what you have learned during Week 5 and 6."
+[tutCSSFlexbox]: ../pages/tutorials.html#week-06-exercises "Odin Project: CSS Flexbox Exercises. There are 7 exercises total in this set. You should be able to complete them all with what you have learned during Week 5 and 6."
