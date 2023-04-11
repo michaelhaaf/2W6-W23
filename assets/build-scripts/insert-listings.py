@@ -1,9 +1,19 @@
 #!/usr/bin/env python
-import sys
 import re
 import os
+import glob
+import argparse
 from bs4 import BeautifulSoup
-from settings import LISTINGS_PATH, TEMPLATE_PATH
+
+from settings import (LISTINGS_PATH, TEMPLATE_PATH, LECTURES_PATH,
+                      ASSIGNMENTS_PATH, TUTORIALS_PATH)
+
+document_map = {
+    "template": TEMPLATE_PATH,
+    "lectures": LECTURES_PATH,
+    "assignments": ASSIGNMENTS_PATH,
+    "tutorials": TUTORIALS_PATH
+}
 
 
 # FUNCTIONS #
@@ -15,27 +25,58 @@ def beautifyName(filename):
     return re.sub(r' ?(\d+) ?', r' \1 ', filename).capitalize()
 
 
-# Scales linearly in number of listing categories
-def insert_listing(listing_name, template_soup):
-    with open(f"{LISTINGS_PATH}/{listing_name}.html") as fh:
+def insert_listing(listing_path, document_soup):
+    listing_name = os.path.splitext(os.path.basename(listing_path))[0]
+    with open(listing_path) as fh:
         listing_soup = BeautifulSoup(fh, "html.parser")
-    listing_elem = template_soup.find(id=listing_name)
+    listing_elem = document_soup.find(id=listing_name)
     listing_elem.clear()
 
     for listing in listing_soup:
-        list_item = template_soup.new_tag("li")
+        list_item = document_soup.new_tag("li")
         listing.string = beautifyName(listing.string)
         list_item.append(listing)
         listing_elem.append(list_item)
 
 
+def insert_raw_listing(listing_path, document_soup):
+    listing_name = os.path.splitext(os.path.basename(listing_path))[0]
+    with open(listing_path) as fh:
+        listing_soup = BeautifulSoup(fh, "html.parser")
+    listing_elem = document_soup.find(id=listing_name)
+    if listing_elem is not None:
+        listing_elem.clear()
+        listing_elem.append(listing_soup)
+
+
 # MAIN #
+def main(args):
 
-with open(TEMPLATE_PATH) as fh:
-    template_soup = BeautifulSoup(fh, "html.parser")
+    with open(document_map.get(args.document)) as fh:
+        document_soup = BeautifulSoup(fh, "html.parser")
 
-insert_listing("lecture-listing", template_soup)
-insert_listing("assignment-listing", template_soup)
-insert_listing("tutorial-listing", template_soup)
+    if args.document == "template":
+        insert_listing(f"{LISTINGS_PATH}/lecture-listing.html", document_soup)
+        insert_listing(
+            f"{LISTINGS_PATH}/assignment-listing.html", document_soup)
+        insert_listing(f"{LISTINGS_PATH}/tutorial-listing.html", document_soup)
 
-print(template_soup.prettify())
+    else:
+        for listing in glob.glob(f"{LISTINGS_PATH}/{args.document}/*.html"):
+            insert_raw_listing(listing, document_soup)
+
+    print(document_soup.prettify())
+
+
+if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser(
+        description='Inserts file listings into specified document markup')
+    parser.add_argument('--document',
+                        required=True,
+                        help='Choose a document to insert listings into.',
+                        choices=document_map.keys(),
+                        dest='document'
+                        )
+    args = parser.parse_args()
+    main(args)

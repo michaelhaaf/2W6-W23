@@ -1,0 +1,71 @@
+## jobs in web development
+
+"web v.s. internet"
+
+quick types:
+a) frontend
+a designer gives you a picture. You are expected to be able to create the website, given the same picture assets they used
+a good designer will give you three pictures - what it should look like on mobile, tablet, and desktop. And if they're extra nice they'll do their designging in a program that will give you all the color hexes, margins, paddings llength etc when you mouse over them
+they often dont
+
+b) fullstack
+you do the whole thing usually, typically more freelance or small business
+You either need to know enough CSS to make a website look "professional", or, buy templates and reskin them for the customers
+
+
+c) backend
+CSS is only important when someone's page doesn't receives it's style assets because you accidentally forbade its file type in the server config
+
+
+In pretty much all cases though, as long as you understand the basics of CSS (i.e. the box model) you can just learn most of the rules and properties on the spot or over a week.
+And then also, knowing either flex or grid will solve all the trickier layout problems that come with designing using a bunch of squares
+
+* basics (box-model) (ask someone to draw)
+* flex or grid
+* "position" keyword
+
+I think you guys have covered all three of these. Colors and sizes arent tough with CSS, its usually the layouts designers and clients want (and user-interaction features) that cause the problems
+
+Free web design tip: if you want a good website for everyone to use. Like a government website or something. The less interativity the better. No animations. No moving pictures
+
+Especially in multi-team CSS files, the scripts for that can get pretty messy and big without any organization. The longer a websites been around and the more time the visuals are updated, that often results in messy CSS. What happens a lot is, updates are made to the design, a developer will add the CSS, but not remove the old, unused classes anymore (generally they are not sure if they are being used anywhere else). 
+
+Here are some other things, if you're interested in doing front end stuff full time, to look into
+
+* BEM (https://getbem.com/introduction/)
+	- you write your CSS in such a way that your class names tell you what element it represents
+* SASS (https://sass-lang.com/)
+	- a CSS pre-processor. Let's you write classes INSIDE other classes.. you compile your .sass or .scss files into regular CSS files which you link in your HTML
+* csstricks.com (https://css-tricks.com/)
+	- some of their articles are funny but I hear its gone a little downhill recently
+
+"Optimal CSS development pattern"
+* conventions + preprocessors
+* minifiying & combining
+* caching, serving
+
+What does a web browser cache? how can you check?
+What are the advantages to caching? disadvantages?
+
+When it comes to CSS in a professional setting, its the same as anything else code related...
+you can ALWAYS google it. But the more you understand how it generally works and what the more impactful features of it do, the less time you have to spend trying to understand what you're google. Or you can google it better
+
+(can you chatgpt a website by visually describing it? be my guest)
+
+## Art in web development
+
+Jobs suck and web development is like the most hyper futuristic medium of communication out there
+its literally called hyper text transfer protocol
+
+I want to show you some of the funkier things people have done in CSS
+
+Cool websites to look through:
+* http://old.reddit.com/r/ooer
+* https://orteil.dashnet.org/cookieclicker/
+* https://www.pokeclicker.com/
+* css zengarden
+* CSS spinners copy and paste
+
+Open console & inspect some, explain how some properties work, walk through MDN google it
+
+Fun stuff happens with JavaScript. You can use it to add or remove classes from elements on user interactions. See suplementary exercises.

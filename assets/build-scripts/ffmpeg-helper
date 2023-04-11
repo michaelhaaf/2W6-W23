@@ -27,8 +27,4 @@ OUTPUT_DIR="$2"
 
 export OUTPUT_DIR
 export -f ffmpeg-to-webm
-export -f ffmpeg-to-mp4
-parallel -vv -j 4 'ffmpeg-to-webm 1280 720 realtime "{}" "${OUTPUT_DIR}${.}.webm"' ::: $(find "$INPUT_DIR" -type f -name '*.mkv');
-parallel -vv -j 4 'ffmpeg-to-webm 640 360 realtime "{}" "${OUTPUT_DIR}/${.}.webm"' ::: $(find "$INPUT_DIR" -type f -name '*.mkv');
-parallel -vv -j 4 'ffmpeg-to-mp4 1280 720 ultrafast "{}" "${OUTPUT_DIR}/${.}.mp4"' ::: $(find "$INPUT_DIR" -type f -name '*.mkv');
-parallel -vv -j 4 'ffmpeg-to-mp4 640 360 ultrafast "{}" "${OUTPUT_DIR}/${.}.mp4"' ::: $(find "$INPUT_DIR" -type f -name '*.mkv');
+find "$INPUT_DIR" -type f -name '*.mkv' -exec sh -c 'for f do ffmpeg-to-webm 1280 720 best "$f" "${OUTPUT_DIR}/$(basename ${f%.*}).webm"; done' _ {} \;

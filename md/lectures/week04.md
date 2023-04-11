@@ -356,11 +356,11 @@ The below diagram shows these layers:
 
 # Exercises
 
-- Odin Project: CSS Foundations Practise Exercises [(.zip)][tutCSSFoundations]
-- MDN: Typesetting a Homepage [(instructions)][tutStylingTextInstructions] [(starter files .zip)][tutStylingTextFiles]
-- Odin Project: CSS Box Model Practise Exercises [(.zip)][tutCSSBoxModel]
+- Odin Project: CSS Foundations Practise Exercises [(instructions and files)][tutCSSFoundations]
+- MDN: Typesetting a Homepage [(instructions)][tutMdnText] [(starter files)][tutMdnTextFiles]
+- Odin Project: CSS Box Model Practise Exercises [(instructions and files)][tutCSSBoxModel]
 
-[tutCSSFoundations]: ../tutorials/css-exercises-foundations.zip "Odin Project: CSS Foundations Exercises. There are 6 exercises total in this set. You should be able to complete them all with what you have learned during Week 3."
-[tutStylingTextInstructions]: https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage "MDN: Typesetting a homepage tutorial instructions."
-[tutStylingTextFiles]: ../tutorials/css-styling-text.zip "MDN: Typesetting a homepage tutorial starter files."
-[tutCSSBoxModel]: ../tutorials/css-exercises-box-model.zip "Odin Project: CSS Box Model Exercises. There are 2 exercises total in this set. You should be able to complete them all with what you have learned during Week 4."
+[tutCSSFoundations]: ../pages/tutorials.html#week-04-exercises "Odin Project: CSS Foundations Exercises. There are 6 exercises total in this set. You should be able to complete them all with what you have learned during Week 3."
+[tutCSSBoxModel]: ../pages/tutorials.html#week-04-exercises "Odin Project: CSS Box Model Exercises. There are 2 exercises total in this set. You should be able to complete them all with what you have learned during Week 4."
+[tutMdnText]: https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage "MDN: Typesetting a homepage tutorial instructions."
+[tutMdnTextFiles]: ../pages/tutorials.html#week-04-exercises "MDN: Typesetting a homepage tutorial starter files."
