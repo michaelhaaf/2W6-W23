@@ -476,6 +476,7 @@ p + ul {
   margin-top: -0.5rem;
 }
 
+pre,
 code {
   font-size: 0.875rem;
 }
