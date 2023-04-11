@@ -206,6 +206,50 @@ solutions
        </span>
       </button>
       <ul class="dropdown hidden" id="assignment-listing">
+       <li>
+        <a href="../pages/assignments.html#lab-1">
+         lab 1
+        </a>
+       </li>
+       <li>
+        <a href="../pages/assignments.html#lab-2">
+         lab 2
+        </a>
+       </li>
+       <li>
+        <a href="../pages/assignments.html#lab-3">
+         lab 3
+        </a>
+       </li>
+       <li>
+        <a href="../pages/assignments.html#lab-4">
+         lab 4
+        </a>
+       </li>
+       <li>
+        <a href="../pages/assignments.html#lab-1-solution">
+         lab 1 
+solution
+        </a>
+       </li>
+       <li>
+        <a href="../pages/assignments.html#lab-2-solution">
+         lab 2 
+solution
+        </a>
+       </li>
+       <li>
+        <a href="../pages/assignments.html#lab-3-solution">
+         lab 3 
+solution
+        </a>
+       </li>
+       <li>
+        <a href="../pages/assignments.html#lab-4-solution">
+         lab 4 
+solution
+        </a>
+       </li>
       </ul>
      </li>
     </ul>

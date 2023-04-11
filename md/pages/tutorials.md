@@ -103,6 +103,17 @@ Instructions: [grids.zip][week10gridzip]
 <pre id="week10-grid-exercises-listing" class="collapsible">
 </pre>
 
+## Week 11 Exercises
+
+This week, we had a guest lecture from JAC alumni, professional web dev, and good friend June. This folder contains a series of exercises (some of them already complete) for accomplishing various useful CSS/JS tasks.
+
+Files: [guestLecture.zip][week11junezip]
+
+<button class="accordion">View files in browser</button>
+
+<pre id="week11-june-exercises-listing" class="collapsible">
+</pre>
+
 ---
 
 # Solutions

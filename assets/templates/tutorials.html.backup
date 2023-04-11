@@ -161,6 +161,12 @@
       </button>
       <ul class="dropdown hidden" id="tutorial-listing">
        <li>
+        <a href="../pages/tutorials.html#week-01-exercises">
+         week 01 
+exercises
+        </a>
+       </li>
+       <li>
         <a href="../pages/tutorials.html#week-04-exercises">
          week 04 
 exercises
@@ -244,12 +250,6 @@ solution
 solution
         </a>
        </li>
-       <li>
-        <a href="../pages/assignments.html#lab-4-solution">
-         lab 4 
-solution
-        </a>
-       </li>
       </ul>
      </li>
     </ul>
@@ -270,6 +270,8 @@ Exercises</a></li>
 <li><a href="#week-06-exercises" id="toc-week-06-exercises">Week 06
 Exercises</a></li>
 <li><a href="#week-10-exercises" id="toc-week-10-exercises">Week 10
+Exercises</a></li>
+<li><a href="#week-11-exercises" id="toc-week-11-exercises">Week 11
 Exercises</a></li>
 </ul></li>
 <li><a href="#solutions" id="toc-solutions">Solutions</a>
@@ -304,7 +306,7 @@ Solutions</a></li>
      </div>
            <p class="date">
       Last update:
-      <time datetime="Tue Apr 11 10:06:19 2023">
+      <time datetime="Tue Apr 11 11:44:54 2023">
        Tuesday, April 11, 2023
       </time>
      </p>
@@ -401,8 +403,22 @@ View files in browser
 </button>
 <pre id="week10-grid-exercises-listing" class="collapsible">
 </pre>
-<hr />
 </section>
+</section>
+<section id="week-11-exercises" class="level2">
+<h2>Week 11 Exercises</h2>
+<p>This week, we had a guest lecture from JAC alumni, professional web
+dev, and good friend June. This folder contains a series of exercises
+(some of them already complete) for accomplishing various useful CSS/JS
+tasks.</p>
+<p>Files: <a
+href="../tutorials/week11-june-exercises.zip">guestLecture.zip</a></p>
+<button class="accordion">
+View files in browser
+</button>
+<pre id="week11-june-exercises-listing" class="collapsible">
+</pre>
+<hr />
 </section>
 </section>
 <section id="solutions" class="level1">

@@ -10,6 +10,14 @@ LISTINGS_HTML := $(wildcard assets/listings/*.html)
 PAGES_HTML := $(PAGES_MD:md/pages/%.md=pages/%.html)
 LECTURES_HTML := $(LECTURES_MD:md/lectures/%.md=lectures/%.html)
 
+# subdir source
+ASSIGNMENT_DIRS := $(patsubst %/,%,$(wildcard assignments/*/))
+TUTORIAL_DIRS := $(patsubst %/,%,$(wildcard tutorials/*/))
+
+# .zip target
+ASSIGNMENT_ZIPS := $(addsuffix .zip, $(ASSIGNMENT_DIRS))
+TUTORIAL_ZIPS := $(addsuffix .zip, $(TUTORIAL_DIRS))
+
 # Path relative to makefile
 PAGE_TEMPLATE := ./assets/templates/page.html
 ASSIGNMENTS_TEMPLATE := ./assets/templates/assignments.html.backup
@@ -43,28 +51,28 @@ FIND_OPTIONS = -maxdepth 1 \
 
 ## MAKE RULES
 
-.PHONY: all clean indices assignments tutorials
+.PHONY: all clean indices 
 
-all: $(PAGE_TEMPLATE) $(PAGES_HTML) $(LECTURES_HTML) 
+all: $(ASSIGNMENT_ZIPS) $(TUTORIAL_ZIPS) $(PAGE_TEMPLATE) $(PAGES_HTML) $(LECTURES_HTML) 
 
 clean:
 	rm lectures/*.html
 	rm pages/*.html
 
-indices:
+# Indebted to https://www.andrewheiss.com/blog/2020/01/10/makefile-subdirectory-zips/ for getting this approach right
+.SECONDEXPANSION:
+
+$(ASSIGNMENT_ZIPS): %.zip : $$(shell find % -type f ! -path "%/.*")
 	tree lectures -H ../lectures | htmlq "body p a" | grep html > ./assets/listings/lecture-listing.html
 	htmlq -f pages/assignments.html "#TOC > ul > li > ul a" | sed 's/href="/href="..\/pages\/assignments\.html/' | sed 's/ id=".*"//' > ./assets/listings/assignment-listing.html
-	htmlq -f pages/tutorials.html "#TOC > ul > li > ul a" | sed 's/href="/href="..\/pages\/tutorials\.html/' | sed 's/ id=".*"//' > ./assets/listings/tutorial-listing.html
 	./assets/build-scripts/generate-index-files assignments
+	cd $(basename $@)/.. && zip -FSr $(notdir $@) $(notdir $(basename $*)) -x $(notdir $(basename $*))/.\*
+
+$(TUTORIAL_ZIPS): %.zip : $$(shell find % -type f ! -path "%/.*")
+	tree lectures -H ../lectures | htmlq "body p a" | grep html > ./assets/listings/lecture-listing.html
+	htmlq -f pages/tutorials.html "#TOC > ul > li > ul a" | sed 's/href="/href="..\/pages\/tutorials\.html/' | sed 's/ id=".*"//' > ./assets/listings/tutorial-listing.html
 	./assets/build-scripts/generate-index-files tutorials
-
-assignments:
-	cp pages/assignments.html $(ASSIGNMENTS_TEMPLATE)
-	python ./assets/build-scripts/insert-listings.py --document assignments > pages/assignments.html
-
-tutorials:
-	cp pages/tutorials.html $(TUTORIALS_TEMPLATE)
-	python ./assets/build-scripts/insert-listings.py --document tutorials > pages/tutorials.html
+	cd $(basename $@)/.. && zip -FSr $(notdir $@) $(notdir $(basename $*)) -x $(notdir $(basename $*))/.\*
 
 $(PAGE_TEMPLATE): assets/listings/*.html
 	cp $(PAGE_TEMPLATE) ./assets/templates/page.html.backup 
