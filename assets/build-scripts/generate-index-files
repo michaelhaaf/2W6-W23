@@ -6,7 +6,7 @@ dirname=$1
 
 find "./$dirname" -mindepth 1 -maxdepth 1 -type d -print0 | 
   while IFS= read -r -d '' dir; do 
-    tree -H "../../$dir" \
+    tree -H "../$dir" \
          "${TREE_OPTS[@]}" \
          -T "$(basename "$dir")" \
          -o "./assets/listings/${dir}-listing.html" \

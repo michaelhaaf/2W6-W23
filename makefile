@@ -59,6 +59,12 @@ clean:
 	rm lectures/*.html
 	rm pages/*.html
 
+indices:
+	tree lectures -H ../lectures | htmlq "body p a" | grep html > ./assets/listings/lecture-listing.html
+	htmlq -f pages/assignments.html "#TOC > ul > li > ul a" | sed 's/href="/href="..\/pages\/assignments\.html/' | sed 's/ id=".*"//' > ./assets/listings/assignment-listing.html
+	./assets/build-scripts/generate-index-files assignments
+	./assets/build-scripts/generate-index-files tutorials
+
 # Indebted to https://www.andrewheiss.com/blog/2020/01/10/makefile-subdirectory-zips/ for getting this approach right
 .SECONDEXPANSION:
 
