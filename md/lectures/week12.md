@@ -307,6 +307,9 @@ More to come. For now, here is last year's content:
 - [positioning](https://maujac.github.io/2W6-UI/#/./wk5/positioning-zIndex)
 - [overflow](https://maujac.github.io/2W6-UI/#/./wk8/displayNone-overflow)
 
+And here's a nice video reviewing what we learned about positioning from the guest lecture.
+
+- [CSS positioning in 60 seconds](https://www.youtube.com/shorts/jFcWa9kiOHQ)
 
 ## Design Fundamentals
 
