@@ -383,7 +383,8 @@ Flexbox</a></li>
 </ul></li>
 <li><a href="#knowledge-check" id="toc-knowledge-check">Knowledge
 Check</a></li>
-<li><a href="#readings" id="toc-readings">Readings</a></li>
+<li><a href="#readings-and-resources"
+id="toc-readings-and-resources">Readings and Resources</a></li>
 <li><a href="#exercises" id="toc-exercises">Exercises</a></li>
 </ul>     <a class="" href="../lectures/week12.html">
      <img alt="" class="icon" src="../assets/images/feather-icons/chevron-right.svg"/>
@@ -415,7 +416,7 @@ Check</a></li>
      </div>
            <p class="date">
       Last update:
-      <time datetime="Wed Apr 12 12:59:53 2023">
+      <time datetime="Wed Apr 12 23:11:37 2023">
        Wednesday, April 12, 2023
       </time>
      </p>
@@ -425,11 +426,9 @@ Check</a></li>
 <h1>Lesson Overview</h1>
 <ul>
 <li>What is responsive design?</li>
-<li>How can we achieve responsive design using just HTML?</li>
+<li>How do we achieve responsive design using just HTML?</li>
 <li>How do we add style and advanced layouts without taking away
 responisivity?</li>
-<li>How do we recognize patterns in our designs to reuse style
-components?</li>
 <li>How do we adjust design layouts for different devices?</li>
 </ul>
 <hr />
@@ -606,10 +605,10 @@ href="https://developer.chrome.com/docs/devtools/device-mode/">Chrome/Edge/Opera
 </ul>
 <p>On all browsers, you will be able to <strong>change the viewport
 size</strong> (click + drag on bottom right corner), <strong>choose
-viewport devices</strong>, <strong>add custom viewport devices</strong>.
-There are more things the tool can do, but those three are what I use
-all the time. I’ve linked the documentation for each browser above, in
-case you want to learn more about them.</p>
+viewport devices</strong>, and <strong>add custom viewport
+devices</strong>. There are more things the tool can do, but those three
+are what I use all the time. I’ve linked the documentation for each
+browser above, in case you want to learn more about them.</p>
 <p><strong>Make sure you try using the tools yourself!</strong> Head
 over to the <a href="../assignments/lab1solution/index.html">lab1</a>,
 <a href="../assignments/lab2solution/index.html">lab2</a>, and <a
@@ -667,8 +666,10 @@ devices and viewports of the user.</p>
 CSS and are nonetheless fully responsive. Here is an arbitary example
 example: the online encyclopedia <a
 href="https://www.marxists.org/reference/archive/hegel/works/hl/hl512.htm#HL2_524">marxists.org</a>,
-which, among other things, contains <code>HTML</code> markup, minimal
-<code>CSS</code>, and the complete works of German philosopher <a
+which, among other things, features <strong>semantic
+<code>HTML</code></strong> markup, <strong>minimal
+<code>CSS</code></strong> styling, and the complete works of German
+philosopher <a
 href="https://en.wikipedia.org/wiki/Georg_Wilhelm_Friedrich_Hegel">George
 Hegel</a>:</p>
 <figure>
@@ -687,21 +688,22 @@ readable anywhere between 2000px and 300px (most device widths), but for
 wider displays, the text starts to become too long.</figcaption>
 </figure>
 <p>The default responsive behavior of HTML is a great starting point for
-any webside: all elements only take up the height they should take, and
-their widths adjust automatically to viewport widths.</p>
+any website: all elements only take up the inherent height of their
+actual content, and their widths adjust automatically to viewport
+widths.</p>
 </section>
 <section id="semantic-html-responsivity" class="level2">
 <h2>Semantic HTML responsivity</h2>
 <p>On top of default <code>HTML</code> behavior, there are a few more
-improvements we can make using <strong>semantic</strong>, or meaningful,
+improvements we can make using <strong>semantic</strong>
 <code>HTML</code> element choices.</p>
 <figure>
 <img
-src="https://www.internetingishard.com/html-and-css/semantic-html/semantic-html-ffab7c.png"
+src="https://internetingishard.netlify.app/semantic-html-ffab7c.f3d6e999.png"
 title="While semantic HTML elements have the exact same structural behavior as styled `&lt;div&gt;` elements, explicitly marking the meaning of our content defines the purpose of each section of our website, increasing the usability both for end-users as well as for other developers, browsers, and more."
 alt="Figure from Interneting is Hard: Semantic HTML" />
 <figcaption aria-hidden="true">Figure from Interneting is Hard: <a
-href="https://www.internetingishard.com/html-and-css/semantic-html/">Semantic
+href="https://internetingishard.netlify.app/html-and-css/semantic-html/index.html">Semantic
 HTML</a></figcaption>
 </figure>
 <p>By using <strong>semantic</strong>, that is, <em>meaningful</em>
@@ -726,7 +728,7 @@ accurate.</li>
 <div class="half-width">
 <figure>
 <img
-src="https://www.internetingishard.com/html-and-css/semantic-html/html-footer-element-0c927a.png"
+src="https://internetingishard.netlify.app/html-footer-element-0c927a.ea3eb425.png"
 title="The HTML element &#39;footer&#39; inside of both the &#39;body&#39; and an &#39;article&#39; element of the webpage. Semantic elements can be re-used and re-combined to make meaningful distinction between webpage sections."
 alt="Semantic elements are composable: combine them to create meaning." />
 <figcaption aria-hidden="true">Semantic elements are
@@ -736,11 +738,11 @@ alt="Semantic elements are composable: combine them to create meaning." />
 <div class="half-width">
 <figure>
 <img
-src="https://www.internetingishard.com/html-and-css/semantic-html/html-header-element-7b4e01.png"
+src="https://internetingishard.netlify.app/html-header-element-7b4e01.d7494385.png"
 title="The HTML element &#39;header&#39; used much the same way as &#39;footer&#39; in the previous image."
 alt="Figures from Interneting is Hard: Semantic HTML" />
 <figcaption aria-hidden="true">Figures from Interneting is Hard: <a
-href="https://www.internetingishard.com/html-and-css/semantic-html/">Semantic
+href="https://internetingishard.netlify.app/html-and-css/semantic-html/index.html">Semantic
 HTML</a></figcaption>
 </figure>
 </div>
@@ -763,9 +765,9 @@ attributes allow you to automatically replace the content of an image in
 case the connection is bad/it cannot be rendered/some other issue – on
 top of allowing non-sighted users to understand your content.</li>
 <li>screenreaders (and other tools) automatically generate Tables of
-Contents from your (<code>&lt;h1&gt;, &lt;h2&gt;,</code> etc.) elements.
-See the <em>Lecture Navigation</em> section of my website for an
-example!</li>
+Contents from your heading (<code>&lt;h1&gt;, &lt;h2&gt;,</code> etc.)
+elements. See the <em>Lecture Navigation</em> section of my website for
+an example!</li>
 </ul>
 <p>As we can see, there is a large overlap between <strong>Responsive
 Design</strong> and <a
@@ -787,7 +789,7 @@ make elements stack on each-other, or “flow” horizontally, with just
 <code>HTML</code>. The point of this lesson isn’t to never use
 <code>CSS</code>: it is to know when you actually need to do it, and
 what you could accidentally take away from the page design by adding it
-uncritically.</p>
+without understanding it.</p>
 </section>
 </section>
 <section id="lab-4-tip-html" class="level2">
@@ -863,50 +865,99 @@ adapting to those things. Perhaps the most common media queries in the
 world are those that target particular <a
 href="https://developer.mozilla.org/en-US/docs/Glossary/Viewport">viewport</a>
 ranges and apply custom styles.</p>
-<p>For example, you may have a smaller font size for devices with small
-screens, increase the padding between paragraphs when a page is viewed
-in portrait mode, or increase the size of buttons on touchscreens.</p>
+<p>Some possible examples:</p>
+<ul>
+<li>Increase font size for devices with large screens</li>
+<li>Increase the padding between paragraphs when a page is viewed on a
+narrow device</li>
+<li>Increase the size of buttons on touchscreens</li>
+</ul>
+<p>You can see an example of each below.</p>
 <section id="css" class="level6 sourceCode">
 <h6 class="sourceCode">CSS</h6>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Some default style: */</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>body {</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span>: <span class="cn">blue</span><span class="op">;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">/* When the browser is AT LEAST (min-width) 600px and above */</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span> <span class="dv">screen</span> <span class="kw">and</span> (<span class="kw">min-width</span>: <span class="dv">600</span><span class="dt">px</span>) {</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.element</span> {</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* Apply some styles */</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">/* When the browser is AT MOST (max-width) 600px or below */</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span> <span class="dv">screen</span> <span class="kw">and</span> (<span class="kw">max-width</span>: <span class="dv">600</span><span class="dt">px</span>) {</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.element</span> {</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* Apply some styles */</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">/* When the browser is BETWEEN 30em and 80em */</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span> (<span class="kw">min-width</span>: <span class="dv">300</span><span class="dt">px</span>) <span class="kw">and</span> (<span class="kw">max-width</span>: <span class="dv">600</span><span class="dt">px</span>) {</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  body {</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">background-color</span>: <span class="cn">purple</span><span class="op">;</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>html {</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* Browser default is 16px, this will keep it at 16px */</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">font-size</span>: <span class="dv">100</span><span class="dt">%</span><span class="op">;</span>  </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>article p {</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* Common typographic style: padding on top, margin on bottom */</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">padding-top</span>: <span class="dv">0.5</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">margin-bottom</span>: <span class="dv">1.5</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>button {</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* Use padding to define the &quot;content&quot; size of the button */</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">padding</span>: <span class="dv">1</span><span class="dt">em</span> <span class="dv">2</span><span class="dt">em</span><span class="op">;</span> </span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">/* @media query overrides examples: */</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">/* Example using &quot;min-width&quot;:</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">* When the browser is AT LEAST (min-width) 800px or larger: */</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span> <span class="dv">screen</span> <span class="kw">and</span> (<span class="kw">min-width</span>: <span class="dv">800</span><span class="dt">px</span>) {</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    html {</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>        <span class="kw">font-size</span>: <span class="dv">125</span><span class="dt">%</span><span class="op">;</span>    <span class="co">/* increase font size on large screens! */</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co">/* Example using &quot;max-width&quot;:</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co">* When the browser is AT MOST (max-width) 600px or smaller: */</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span> <span class="dv">screen</span> <span class="kw">and</span> (<span class="kw">max-width</span>: <span class="dv">600</span><span class="dt">px</span>) {</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    article p {</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>        <span class="co">/* It is common for line-height to be 1.5rem, so in this e.g.:</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co">        *   - large devices: 0.5rem + 1rem = 1 line of whitespace</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="co">        *   - small devices: 1rem + 2rem = 2 lines of whitespace */</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>        <span class="kw">padding-top</span>: <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span>  </span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>        <span class="kw">margin-bottom</span>: <span class="dv">2</span><span class="dt">rem</span><span class="op">;</span> </span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="co">/* Example: detecting &quot;touchscreen&quot; device type with &quot;hover: none&quot; </span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="co">* When the browser does NOT have the ability to &quot;hover&quot;:</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="co">*/</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span> (<span class="kw">hover</span>: <span class="dv">none</span>) {</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* overwrite previous values only on devices that cannot &quot;hover&quot; */</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>    button {</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>        <span class="kw">padding</span>: <span class="dv">2</span><span class="dt">em</span> <span class="dv">4</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>You can add multiple media queries within a stylesheet, tweaking your
 whole layout or parts of it to best suit the various screen sizes. The
 points at which a media query is introduced, and the layout changed, are
 known as <strong>breakpoints.</strong></p>
-<p>A common approach when using media queries is to create a simple
-single-column layout for narrow-screen devices (e.g. mobile phones),
-then check for wider screens and implement a multiple-column layout when
-you know that you have enough screen width to handle it. Designing for
-mobile first is known as <strong>mobile first design.</strong></p>
+</section>
+<section id="mobile-first-design" class="level3">
+<h3>Mobile first design</h3>
+<p>A common approach to web design is to start with a simple
+single-column layout for narrow-screen devices (e.g. mobile phones).
+Then, use <code>min-width</code> queries to check for wider screens, and
+add <em>only the rules necessary</em> to implement a multiple-column
+layout when you know that you have enough screen width to handle it.
+Designing for mobile first is known as <strong>mobile first
+design.</strong></p>
 <p>Media queries can help with responsive web design, but are not a
 requirement: they should only be introduced when the web layout you are
 working with <strong>breaks</strong> (overlaps, overflows, becomes
 unusable) at small or large resolutions.</p>
+</section>
+<section id="media-query-specificity" class="level3">
+<h3>Media Query Specificity</h3>
+<p><strong>NOTE WELL</strong>: <code>@media</code> queries <em>do not
+add <a href="../lectures/week09.html#specificity">specificity</a></em>
+to your selectors. The examples above only worked <em>because the
+queries were placed at the end of the stylesheet</em> – remember that,
+in a tie between two equally specific selectors, the <em>last selector
+read by the Browser wins</em>.</p>
+<p>A <strong>common best practise</strong> is to place your
+<code>@media</code> queries at the end of your files so that you do not
+need to make your <code>@media</code> queries any more specific than
+they need to be.</p>
 </section>
 <section id="media-query-syntax-css-at-rules" class="level3">
 <h3>Media Query Syntax: CSS at-rules</h3>
@@ -947,6 +998,38 @@ styles directly in CSS)</li>
 respond when their container width changes. Review <a
 href="../lectures/week06.html">flexbox course content</a> for more
 information.</p>
+<p>One way that Flexbox really shines is in combination with <a
+href="#media-queries">media queries</a>. Here is an example:</p>
+<section id="css-1" class="level6 sourceCode">
+<h6 class="sourceCode">CSS</h6>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Say you have a flex container... */</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.flex-container</span> {</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">flex</span><span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">flex-direction</span>: <span class="dv">column</span><span class="op">;</span> <span class="co">/* Single column layout for mobile devices? */</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">gap</span>: <span class="dv">1</span><span class="dt">em</span><span class="op">;</span>               <span class="co">/* some flexbox properties... */</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">justify-content</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">align-items</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co">/* Responsive layout - makes a column into a row when a minimum width is met. */</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="im">@media</span> (<span class="kw">min-width</span>: <span class="dv">800</span><span class="dt">px</span>) {</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.flex-container</span> {</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">flex-direction</span>: row<span class="op">;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* all of the properties we set in .flex-container are maintained */</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="co">/*align-items: center; (not necessary) */</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="co">/*gap: 1em; (not necessary) */</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* but that doesn&#39;t stop us from overwriting some if we like */</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="kw">justify-content</span>: flex-start<span class="op">;</span> </span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>} </span></code></pre></div>
+<p>Check out <a
+href="https://www.w3schools.com/css/css3_flexbox_responsive.asp">w3schools</a>
+for more examples.</p>
+</section>
 </section>
 <section id="grid-techniques" class="level2">
 <h2>Grid techniques</h2>
@@ -960,37 +1043,37 @@ situations:</p>
 <p>A grid item can also become a grid container</p>
 <section id="html" class="level6 sourceCode">
 <h6 class="sourceCode">HTML</h6>
-<div class="sourceCode" id="cb2"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;wrapper&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box1&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;nested&quot;</span><span class="kw">&gt;</span>a<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;nested&quot;</span><span class="kw">&gt;</span>b<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;nested&quot;</span><span class="kw">&gt;</span>c<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/div&gt;</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box2&quot;</span><span class="kw">&gt;</span>Two<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box3&quot;</span><span class="kw">&gt;</span>Three<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box4&quot;</span><span class="kw">&gt;</span>Four<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
-</section>
-<section id="css-1" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
 <div class="sourceCode" id="cb3"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.wrapper</span> {</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">grid</span><span class="op">;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">3</span><span class="op">,</span> <span class="dv">1</span><span class="dt">fr</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">.box1</span> {</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">1</span>/<span class="dv">4</span><span class="op">;</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-row</span>: <span class="dv">1</span>/<span class="dv">3</span><span class="op">;</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">grid</span><span class="op">;</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">4</span><span class="op">,</span> <span class="dv">1</span><span class="dt">fr</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="fu">.nested</span><span class="in">:nth-child(2)</span>{</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">2</span>/<span class="dv">4</span><span class="op">;</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;wrapper&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box1&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;nested&quot;</span><span class="kw">&gt;</span>a<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;nested&quot;</span><span class="kw">&gt;</span>b<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;nested&quot;</span><span class="kw">&gt;</span>c<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box2&quot;</span><span class="kw">&gt;</span>Two<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box3&quot;</span><span class="kw">&gt;</span>Three<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box4&quot;</span><span class="kw">&gt;</span>Four<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+</section>
+<section id="css-2" class="level6 sourceCode">
+<h6 class="sourceCode">CSS</h6>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.wrapper</span> {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">grid</span><span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">3</span><span class="op">,</span> <span class="dv">1</span><span class="dt">fr</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">.box1</span> {</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">1</span>/<span class="dv">4</span><span class="op">;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-row</span>: <span class="dv">1</span>/<span class="dv">3</span><span class="op">;</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">grid</span><span class="op">;</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">4</span><span class="op">,</span> <span class="dv">1</span><span class="dt">fr</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="fu">.nested</span><span class="in">:nth-child(2)</span>{</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">2</span>/<span class="dv">4</span><span class="op">;</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <iframe height="287" style="width: 100%;" scrolling="no" title="wk9-layout_grid-ex10" src="https://codepen.io/maujac/embed/mdJNOpq?height=287&amp;theme-id=light&amp;default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
 See the Pen
 <a href='https://codepen.io/maujac/pen/mdJNOpq'>wk9-layout_grid-ex10</a>
@@ -1008,37 +1091,37 @@ problems.</p>
 and <strong>.box3 overlaps on top of .box2</strong>.</p>
 <section id="html-1" class="level6 sourceCode">
 <h6 class="sourceCode">HTML</h6>
-<div class="sourceCode" id="cb4"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;wrapper&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box box1&quot;</span><span class="kw">&gt;</span>One<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box box2&quot;</span><span class="kw">&gt;</span>Two<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box box3&quot;</span><span class="kw">&gt;</span>Three<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box box4&quot;</span><span class="kw">&gt;</span>Four<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
-</section>
-<section id="css-2" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
 <div class="sourceCode" id="cb5"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.wrapper</span> {</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">grid</span><span class="op">;</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">3</span><span class="op">,</span> <span class="dv">1</span><span class="dt">fr</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-auto-rows</span>: <span class="dv">75</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">.box1</span> {</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">1</span> / <span class="dv">4</span><span class="op">;</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-row</span>: <span class="dv">1</span> / <span class="dv">3</span><span class="op">;</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="fu">.box2</span> {</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">1</span> / <span class="dv">3</span><span class="op">;</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-row</span>: <span class="dv">2</span> / <span class="dv">4</span><span class="op">;</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="fu">.box3</span> {</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">2</span> / <span class="dv">3</span><span class="op">;</span></span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-row</span>: <span class="dv">3</span> / <span class="dv">4</span><span class="op">;</span></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;wrapper&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box box1&quot;</span><span class="kw">&gt;</span>One<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box box2&quot;</span><span class="kw">&gt;</span>Two<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box box3&quot;</span><span class="kw">&gt;</span>Three<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box box4&quot;</span><span class="kw">&gt;</span>Four<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+</section>
+<section id="css-3" class="level6 sourceCode">
+<h6 class="sourceCode">CSS</h6>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.wrapper</span> {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">grid</span><span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">3</span><span class="op">,</span> <span class="dv">1</span><span class="dt">fr</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-auto-rows</span>: <span class="dv">75</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="fu">.box1</span> {</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">1</span> / <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-row</span>: <span class="dv">1</span> / <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="fu">.box2</span> {</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">1</span> / <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-row</span>: <span class="dv">2</span> / <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="fu">.box3</span> {</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">2</span> / <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-row</span>: <span class="dv">3</span> / <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <iframe height="336" style="width: 100%;" scrolling="no" title="wk9-z-overlap-ex11" src="https://codepen.io/maujac/embed/MWwNbNw?height=336&amp;theme-id=light&amp;default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
 See the Pen
 <a href='https://codepen.io/maujac/pen/MWwNbNw'>wk9-z-overlap-ex11</a>
@@ -1060,14 +1143,14 @@ order of the element.</p>
 <p>Considering the previous example, we will place .box2 on top of .box1
 <strong>and</strong> .box3 by setting it’s <code>z-index</code> to
 1.</p>
-<section id="css-3" class="level6 sourceCode">
+<section id="css-4" class="level6 sourceCode">
 <h6 class="sourceCode">CSS</h6>
-<div class="sourceCode" id="cb6"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.box2</span> {</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">1</span> / <span class="dv">3</span><span class="op">;</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-row</span>: <span class="dv">2</span> / <span class="dv">4</span><span class="op">;</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">z-index</span>: <span class="dv">1</span><span class="op">;</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.box2</span> {</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">1</span> / <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-row</span>: <span class="dv">2</span> / <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">z-index</span>: <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <iframe height="337" style="width: 100%;" scrolling="no" title="wk9-z-index-ex12" src="https://codepen.io/maujac/embed/PoqMpzP?height=337&amp;theme-id=light&amp;default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
 See the Pen
 <a href='https://codepen.io/maujac/pen/PoqMpzP'>wk9-z-index-ex12</a> by
@@ -1091,10 +1174,10 @@ follows:</p>
 <li>grid-column-end number</li>
 </ol>
 <p><strong>Syntax</strong></p>
-<section id="css-4" class="level6 sourceCode">
+<section id="css-5" class="level6 sourceCode">
 <h6 class="sourceCode">CSS</h6>
-<div class="sourceCode" id="cb7"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>grid-area<span class="in">: &lt;row-start</span><span class="op">&gt;</span> / &lt;column-star<span class="op">&gt;</span> / &lt;row-end<span class="op">&gt;</span> / &lt;column-end<span class="op">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>grid-area<span class="in">: &lt;row-start</span><span class="op">&gt;</span> / &lt;column-star<span class="op">&gt;</span> / &lt;row-end<span class="op">&gt;</span> / &lt;column-end<span class="op">&gt;</span></span></code></pre></div>
 <blockquote>
 <p>Think of the order of declaration as the definition of two points,
 each defined by a set of row and line numbers in a coordinate
@@ -1108,35 +1191,35 @@ system.</p>
 </section>
 <section id="html-2" class="level6 sourceCode">
 <h6 class="sourceCode">HTML</h6>
-<div class="sourceCode" id="cb8"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;wrapper&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box1&quot;</span><span class="kw">&gt;</span>One<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box2&quot;</span><span class="kw">&gt;</span>Two<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box3&quot;</span><span class="kw">&gt;</span>Three<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box4&quot;</span><span class="kw">&gt;</span>Four<span class="kw">&lt;/div&gt;</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
-</section>
-<section id="css-5" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
 <div class="sourceCode" id="cb9"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.wrapper</span> {</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">grid</span><span class="op">;</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">3</span><span class="op">,</span> <span class="dv">1</span><span class="dt">fr</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-template-rows</span>: <span class="fu">repeat(</span><span class="dv">3</span><span class="op">,</span> <span class="dv">75</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="fu">.box1</span> {</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>   <span class="kw">grid-area</span>: <span class="dv">1</span> / <span class="dv">1</span> / <span class="dv">4</span> / <span class="dv">2</span><span class="op">;</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="fu">.box2</span> {</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>   <span class="kw">grid-area</span>: <span class="dv">1</span> / <span class="dv">3</span> / <span class="dv">3</span> / <span class="dv">4</span><span class="op">;</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="fu">.box3</span> {</span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>   <span class="kw">grid-area</span>: <span class="dv">1</span> / <span class="dv">2</span> / <span class="dv">2</span> / <span class="dv">3</span><span class="op">;</span></span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="fu">.box4</span> {</span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>   <span class="kw">grid-area</span>: <span class="dv">3</span> / <span class="dv">2</span> / <span class="dv">4</span> / <span class="dv">4</span><span class="op">;</span></span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+class="sourceCode html"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;wrapper&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box1&quot;</span><span class="kw">&gt;</span>One<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box2&quot;</span><span class="kw">&gt;</span>Two<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box3&quot;</span><span class="kw">&gt;</span>Three<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box4&quot;</span><span class="kw">&gt;</span>Four<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+</section>
+<section id="css-6" class="level6 sourceCode">
+<h6 class="sourceCode">CSS</h6>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.wrapper</span> {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">grid</span><span class="op">;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">3</span><span class="op">,</span> <span class="dv">1</span><span class="dt">fr</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-template-rows</span>: <span class="fu">repeat(</span><span class="dv">3</span><span class="op">,</span> <span class="dv">75</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="fu">.box1</span> {</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>   <span class="kw">grid-area</span>: <span class="dv">1</span> / <span class="dv">1</span> / <span class="dv">4</span> / <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="fu">.box2</span> {</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>   <span class="kw">grid-area</span>: <span class="dv">1</span> / <span class="dv">3</span> / <span class="dv">3</span> / <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="fu">.box3</span> {</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>   <span class="kw">grid-area</span>: <span class="dv">1</span> / <span class="dv">2</span> / <span class="dv">2</span> / <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="fu">.box4</span> {</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>   <span class="kw">grid-area</span>: <span class="dv">3</span> / <span class="dv">2</span> / <span class="dv">4</span> / <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <iframe height="389" style="width: 100%;" scrolling="no" title="wk9-grid-area-ex13" src="https://codepen.io/maujac/embed/XWbvRVW?height=389&amp;theme-id=light&amp;default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
 See the Pen
 <a href='https://codepen.io/maujac/pen/XWbvRVW'>wk9-grid-area-ex13</a>
@@ -1150,12 +1233,12 @@ class="citation" data-cites="maujac">@maujac</span></a>) on
 <h3>Naming and Positioning by Grid Areas</h3>
 <p>In the example above we defining an area by specifying the lines that
 enclose that area:</p>
-<section id="css-6" class="level6 sourceCode">
+<section id="css-7" class="level6 sourceCode">
 <h6 class="sourceCode">CSS</h6>
-<div class="sourceCode" id="cb10"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.box1</span> {</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">grid-area</span>: <span class="dv">1</span> / <span class="dv">1</span> / <span class="dv">4</span> / <span class="dv">2</span><span class="op">;</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.box1</span> {</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">grid-area</span>: <span class="dv">1</span> / <span class="dv">1</span> / <span class="dv">4</span> / <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>It is also possible to define an area by giving it a name via <a
 href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-area"><code>grid-area</code></a>
 and then specify the location of that area with the <a
@@ -1169,36 +1252,36 @@ property.</p>
 <li>main content</li>
 </ul>
 </section>
-<section id="css-7" class="level6 sourceCode">
+<section id="css-8" class="level6 sourceCode">
 <h6 class="sourceCode">CSS</h6>
-<div class="sourceCode" id="cb11"><pre
-class="sourceCode html"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;wrapper&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;header&gt;</span>Header<span class="kw">&lt;/header&gt;</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;footer&gt;</span>Footer<span class="kw">&lt;/footer&gt;</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;main&gt;</span>Main<span class="kw">&lt;/main&gt;</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;aside</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;sidebar&quot;</span><span class="kw">&gt;</span>Sidebar<span class="kw">&lt;/aside&gt;</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;wrapper&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;header&gt;</span>Header<span class="kw">&lt;/header&gt;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;footer&gt;</span>Footer<span class="kw">&lt;/footer&gt;</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;main&gt;</span>Main<span class="kw">&lt;/main&gt;</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;aside</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;sidebar&quot;</span><span class="kw">&gt;</span>Sidebar<span class="kw">&lt;/aside&gt;</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
 </section>
 </section>
 <section id="assigning-names-with-grid-area" class="level3">
 <h3>Assigning names with <code>grid-area</code></h3>
 <p>You can assign any name to a HTML element with the
 <code>grid-area</code> property.</p>
-<section id="css-8" class="level6 sourceCode">
+<section id="css-9" class="level6 sourceCode">
 <h6 class="sourceCode">CSS</h6>
-<div class="sourceCode" id="cb12"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>header {</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-area</span>: hd<span class="op">;</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>footer {</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-area</span>: ft<span class="op">;</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>main {</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-area</span>: main<span class="op">;</span></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="fu">.sidebar</span> {</span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-area</span>: sd<span class="op">;</span></span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>header {</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-area</span>: hd<span class="op">;</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>footer {</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-area</span>: ft<span class="op">;</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>main {</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-area</span>: main<span class="op">;</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="fu">.sidebar</span> {</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-area</span>: sd<span class="op">;</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>Once the naming convention has been assigned, create the layout using
 the item names instead of line numbers.</p>
 </section>
@@ -1214,19 +1297,19 @@ cells.</li>
 <li>Each name must be separated by a whitespace.</li>
 <li>A period signifies an empty cell.</li>
 </ul>
-<section id="css-9" class="level6 sourceCode">
+<section id="css-10" class="level6 sourceCode">
 <h6 class="sourceCode">CSS</h6>
-<div class="sourceCode" id="cb13"><pre
-class="sourceCode css"><code class="sourceCode css"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.wrapper</span> {</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">display</span>: <span class="dv">grid</span><span class="op">;</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">4</span><span class="op">,</span> <span class="dv">1</span><span class="dt">fr</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-template-rows</span>: <span class="fu">repeat(</span><span class="dv">3</span><span class="op">,</span> <span class="dv">75</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-template-areas</span>: </span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;hd  hd  hd   hd&quot;</span></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;sd  .  main main&quot;</span></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;sd  ft  ft   ft&quot;</span><span class="op">;</span></span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.wrapper</span> {</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">display</span>: <span class="dv">grid</span><span class="op">;</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-template-columns</span>: <span class="fu">repeat(</span><span class="dv">4</span><span class="op">,</span> <span class="dv">1</span><span class="dt">fr</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-template-rows</span>: <span class="fu">repeat(</span><span class="dv">3</span><span class="op">,</span> <span class="dv">75</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-template-areas</span>: </span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;hd  hd  hd   hd&quot;</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;sd  .  main main&quot;</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;sd  ft  ft   ft&quot;</span><span class="op">;</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <iframe height="386" style="width: 100%;" scrolling="no" title="wk9-grid-area_names-ex14" src="https://codepen.io/maujac/embed/vYOomae?height=386&amp;theme-id=light&amp;default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
 See the Pen
 <a href='https://codepen.io/maujac/pen/vYOomae'>wk9-grid-area_names-ex14</a>
@@ -1278,9 +1361,25 @@ together</p>
 <h1>Knowledge Check</h1>
 <p>Stay tuned for more information!</p>
 </section>
-<section id="readings" class="level1">
-<h1>Readings</h1>
-<p>Stay tuned for more information!</p>
+<section id="readings-and-resources" class="level1">
+<h1>Readings and Resources</h1>
+<ol type="1">
+<li>MDN Web Docs, <a
+href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">“Responsive
+Design”</a></li>
+<li>CSS Tricks, <a
+href="https://css-tricks.com/reader-mode-the-button-to-beat/">“Reader
+Mode: the button to beat”</a></li>
+<li>CSS Tricks, <a
+href="https://css-tricks.com/a-complete-guide-to-css-media-queries/">“A
+Complete Guide to CSS Media Queries”</a></li>
+<li>MDN Web Docs, <a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries">“Media
+Queries”</a></li>
+<li>Interneting is Hard, <a
+href="https://internetingishard.netlify.app/html-and-css/semantic-html/index.html">“Semantic
+HTML”</a></li>
+</ol>
 </section>
 <section id="exercises" class="level1">
 <h1>Exercises</h1>
@@ -1288,6 +1387,11 @@ together</p>
 <li><strong><code>sup11.html</code></strong> in <a
 href="../pages/tutorials.html#week-11-exercises">June’s guest lecture
 exercises</a>.</li>
+<li>(Optional, but useful for lab 4:)
+<strong><code>sup1html - sup5.html</code></strong> from the guest
+lecture exercises contain examples and explanations for CSS layouts that
+are used in Lab 4 (placing text on top of images/videos, using the
+<code>position</code> property, etc.)</li>
 </ol>
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document"

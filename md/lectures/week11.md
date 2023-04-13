@@ -15,9 +15,8 @@ abstract: |
 # Lesson Overview
 
 - What is responsive design?
-- How can we achieve responsive design using just HTML?
+- How do we achieve responsive design using just HTML?
 - How do we add style and advanced layouts without taking away responisivity?
-- How do we recognize patterns in our designs to reuse style components?
 - How do we adjust design layouts for different devices? 
 
 ---
@@ -104,7 +103,7 @@ To open and use Responsive Mode in the Browser Developer Tools:
 - Open the developer tools first: `Ctrl + Shift + I`  (windows/linux) or `option + command + I` (mac/osX)
 - Then, press `Ctrl + Shift + M` (windows/linux) or `option + command + M` (mac/osX)
 
-On all browsers, you will be able to **change the viewport size** (click + drag on bottom right corner), **choose viewport devices**, **add custom viewport devices**. There are more things the tool can do, but those three are what I use all the time. I've linked the documentation for each browser above, in case you want to learn more about them.
+On all browsers, you will be able to **change the viewport size** (click + drag on bottom right corner), **choose viewport devices**, and **add custom viewport devices**. There are more things the tool can do, but those three are what I use all the time. I've linked the documentation for each browser above, in case you want to learn more about them.
 
 **Make sure you try using the tools yourself!** Head over to the [lab1][lab1solution], [lab2][lab2solution], and [lab3][lab3solution] solution files on this website to see if you can reproduce the videos I shared [above](#examples).
 
@@ -150,23 +149,23 @@ There are two types of HTML element: most are `block`, and some are `inline`. Ho
 
 Because `HTML` uses relative concepts like **percentage of parent width** to compute width, and because the top visible parent (the `body` element) is by default a `block` element, pure `HTML` **automatically** resizes its elements in response to the devices and viewports of the user.
 
-There are many public websites today which make use of only minimal CSS and are nonetheless fully responsive. Here is an arbitary example example: the online encyclopedia [marxists.org](https://www.marxists.org/reference/archive/hegel/works/hl/hl512.htm#HL2_524), which, among other things, contains `HTML` markup, minimal `CSS`, and the complete works of German philosopher [George Hegel](https://en.wikipedia.org/wiki/Georg_Wilhelm_Friedrich_Hegel):
+There are many public websites today which make use of only minimal CSS and are nonetheless fully responsive. Here is an arbitary example example: the online encyclopedia [marxists.org](https://www.marxists.org/reference/archive/hegel/works/hl/hl512.htm#HL2_524), which, among other things, features **semantic `HTML`** markup, **minimal `CSS`** styling, and the complete works of German philosopher [George Hegel](https://en.wikipedia.org/wiki/Georg_Wilhelm_Friedrich_Hegel):
 
 ![In his *Science of Logic (1816)*, Hegel explains the relationship between parent and child objects in `HTML` user interfaces. Note that the article is completely readable anywhere between 2000px and 300px (most device widths), but for wider displays, the text starts to become too long.][responsive-html-eg]
 
 [responsive-html-eg]: ../assets/videos/wk11/responsive-html-eg.webm "When webpages written without layout CSS are subject to different devices widths, HTML automatically adjusts the size of all elements to fit the screen." 
 
-The default responsive behavior of HTML is a great starting point for any webside: all elements only take up the height they should take, and their widths adjust automatically to viewport widths. 
+The default responsive behavior of HTML is a great starting point for any website: all elements only take up the inherent height of their actual content, and their widths adjust automatically to viewport widths. 
 
 ## Semantic HTML responsivity
 
-On top of default `HTML` behavior, there are a few more improvements we can make using **semantic**, or meaningful, `HTML` element choices.
+On top of default `HTML` behavior, there are a few more improvements we can make using **semantic** `HTML` element choices.
 
 ![Figure from Interneting is Hard: [Semantic HTML][iih-semantic-html-source]][iih-semantic-html-img]
 
 
-[iih-semantic-html-img]: https://www.internetingishard.com/html-and-css/semantic-html/semantic-html-ffab7c.png "While semantic HTML elements have the exact same structural behavior as styled `<div>` elements, explicitly marking the meaning of our content defines the purpose of each section of our website, increasing the usability both for end-users as well as for other developers, browsers, and more."
-[iih-semantic-html-source]: https://www.internetingishard.com/html-and-css/semantic-html/
+[iih-semantic-html-img]: https://internetingishard.netlify.app/semantic-html-ffab7c.f3d6e999.png "While semantic HTML elements have the exact same structural behavior as styled `<div>` elements, explicitly marking the meaning of our content defines the purpose of each section of our website, increasing the usability both for end-users as well as for other developers, browsers, and more."
+[iih-semantic-html-source]: https://internetingishard.netlify.app/html-and-css/semantic-html/index.html
 
 By using **semantic**, that is, *meaningful* `HTML` tags, we significantly increase the usability and responsivity of our websites for free. How?
 
@@ -184,14 +183,16 @@ Here is a (incomplete) list of ways:
 ![Figures from Interneting is Hard: [Semantic HTML][iih-semantic-html-source]][iih-header]
 </div>
 
-[iih-footer]: https://www.internetingishard.com/html-and-css/semantic-html/html-footer-element-0c927a.png "The HTML element 'footer' inside of both the 'body' and an 'article' element of the webpage. Semantic elements can be re-used and re-combined to make meaningful distinction between webpage sections."
-[iih-header]: https://www.internetingishard.com/html-and-css/semantic-html/html-header-element-7b4e01.png "The HTML element 'header' used much the same way as 'footer' in the previous image."
+
+
+[iih-footer]: https://internetingishard.netlify.app/html-footer-element-0c927a.ea3eb425.png "The HTML element 'footer' inside of both the 'body' and an 'article' element of the webpage. Semantic elements can be re-used and re-combined to make meaningful distinction between webpage sections."
+[iih-header]: https://internetingishard.netlify.app/html-header-element-7b4e01.d7494385.png "The HTML element 'header' used much the same way as 'footer' in the previous image."
 
 Semantic HTML doesn't just improve the responsivity of your layout, it also also improves the responsivity of individual HTML elements. [You can find some ineresting examples at w3schools](https://www.w3schools.com/html/html_accessibility.asp), some highlights:
 
 - `<button>` elements (as opposed to using a restyled/javascripted `<div>`) are [clickable][w3schools-semantic-html], [focusable][w3schools-semantic-html] and [understood by screen-readers][w3schools-semantic-html] by default. `<a>` elements are very similar in this manner.
 - `<img>` tags with defined `alt` attributes allow you to automatically replace the content of an image in case the connection is bad/it cannot be rendered/some other issue -- on top of allowing non-sighted users to understand your content.
-- screenreaders (and other tools) automatically generate Tables of Contents from your (`<h1>, <h2>,` etc.) elements. See the *Lecture Navigation* section of my website for an example!
+- screenreaders (and other tools) automatically generate Tables of Contents from your heading (`<h1>, <h2>,` etc.) elements. See the *Lecture Navigation* section of my website for an example!
 
 [w3schools-semantic-html]: https://www.w3schools.com/html/html_accessibility.asp
 
@@ -203,7 +204,7 @@ As we can see, there is a large overlap between **Responsive Design** and [Acces
 
 That means we still haven't fixed problems like: the long lines of text displayed full screen on a wide monitor that are too wide to read. It isn't automatic to fix either: if we create columns or add padding, we will instead have the opposite problem and our website will be too narrow on small devices.
 
-That's not even to mention: what if we need a real layout? We can't make elements stack on each-other, or "flow" horizontally, with just `HTML`. The point of this lesson isn't to never use `CSS`: it is to know when you actually need to do it, and what you could accidentally take away from the page design by adding it uncritically.
+That's not even to mention: what if we need a real layout? We can't make elements stack on each-other, or "flow" horizontally, with just `HTML`. The point of this lesson isn't to never use `CSS`: it is to know when you actually need to do it, and what you could accidentally take away from the page design by adding it without understanding it.
 
 ## Lab 4 Tip (HTML)
 
@@ -268,46 +269,89 @@ See below.
 
 CSS Media queries are a way to identify important browser characteristics, features, and user preferences, then apply styles adapting to those things. Perhaps the most common media queries in the world are those that target particular [viewport][mdn-viewport] ranges and apply custom styles.
 
-For example, you may have a smaller font size for devices with small screens, increase the padding between paragraphs when a page is viewed in portrait mode, or increase the size of buttons on touchscreens.
+Some possible examples:
+
+- Increase font size for devices with large screens
+- Increase the padding between paragraphs when a page is viewed on a narrow device
+- Increase the size of buttons on touchscreens
+
+You can see an example of each below.
 
 ###### CSS{.sourceCode}
 ```css
 /* Some default style: */
-body {
-  background-color: blue;
+
+html {
+    /* Browser default is 16px, this will keep it at 16px */
+    font-size: 100%;  
 }
 
-/* When the browser is AT LEAST (min-width) 600px and above */
-@media screen and (min-width: 600px) {
-  .element {
-    /* Apply some styles */
-  }
+article p {
+    /* Common typographic style: padding on top, margin on bottom */
+    padding-top: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
-/* When the browser is AT MOST (max-width) 600px or below */
+button {
+    /* Use padding to define the "content" size of the button */
+    padding: 1em 2em; 
+}
+
+/* @media query overrides examples: */
+
+/* Example using "min-width":
+* When the browser is AT LEAST (min-width) 800px or larger: */
+@media screen and (min-width: 800px) {
+    html {
+        font-size: 125%;    /* increase font size on large screens! */
+    }
+}
+
+/* Example using "max-width":
+* When the browser is AT MOST (max-width) 600px or smaller: */
 @media screen and (max-width: 600px) {
-  .element {
-    /* Apply some styles */
-  }
+
+    article p {
+        /* It is common for line-height to be 1.5rem, so in this e.g.:
+        *   - large devices: 0.5rem + 1rem = 1 line of whitespace
+        *   - small devices: 1rem + 2rem = 2 lines of whitespace */
+        padding-top: 1rem;  
+        margin-bottom: 2rem; 
+    }
 }
 
-/* When the browser is BETWEEN 30em and 80em */
-@media (min-width: 300px) and (max-width: 600px) {
-  body {
-    background-color: purple;
-  }
+/* Example: detecting "touchscreen" device type with "hover: none" 
+* When the browser does NOT have the ability to "hover":
+*/
+@media (hover: none) {
+
+    /* overwrite previous values only on devices that cannot "hover" */
+    button {
+        padding: 2em 4em;
+    }
 }
 ```
 
+[mdn-hover]: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/hover
+
 You can add multiple media queries within a stylesheet, tweaking your whole layout or parts of it to best suit the various screen sizes. The points at which a media query is introduced, and the layout changed, are known as **breakpoints.**
 
-A common approach when using media queries is to create a simple single-column layout for narrow-screen devices (e.g. mobile phones), then check for wider screens and implement a multiple-column layout when you know that you have enough screen width to handle it. Designing for mobile first is known as **mobile first design.**
+### Mobile first design
+
+A common approach to web design is to start with a simple single-column layout for narrow-screen devices (e.g. mobile phones). Then, use `min-width` queries to check for wider screens, and add *only the rules necessary* to implement a multiple-column layout when you know that you have enough screen width to handle it. Designing for mobile first is known as **mobile first design.**
 
 Media queries can help with responsive web design, but are not a requirement: they should only be introduced when the web layout you are working with **breaks** (overlaps, overflows, becomes unusable) at small or large resolutions. 
 
 [mdn-at-rule]: https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule
 [mdn-viewport]: https://developer.mozilla.org/en-US/docs/Glossary/Viewport
 [mdn-media-queries]: https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries
+
+### Media Query Specificity
+
+**NOTE WELL**: `@media` queries *do not add [specificity](../lectures/week09.html#specificity)* to your selectors. The examples above only worked *because the queries were placed at the end of the stylesheet* -- remember that, in a tie between two equally specific selectors, the *last selector read by the Browser wins*. 
+
+A **common best practise** is to place your `@media` queries at the end of your files so that you do not need to make your `@media` queries any more specific than they need to be.
+
 
 ### Media Query Syntax: CSS at-rules
 
@@ -327,6 +371,37 @@ The syntax above may seem strange -- what is the `@` for? We haven't seen it yet
 ## Flexbox techniques
 
 Flexbox inherently allows for more precise control of how elements respond when their container width changes. Review [flexbox course content](../lectures/week06.html) for more information.
+
+One way that Flexbox really shines is in combination with [media queries](#media-queries). Here is an example: 
+
+###### CSS{.sourceCode}
+```css
+/* Say you have a flex container... */
+.flex-container {
+  display: flex;
+  flex-direction: column; /* Single column layout for mobile devices? */
+
+  gap: 1em;               /* some flexbox properties... */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive layout - makes a column into a row when a minimum width is met. */
+@media (min-width: 800px) {
+  .flex-container {
+    flex-direction: row;
+
+    /* all of the properties we set in .flex-container are maintained */
+    /*align-items: center; (not necessary) */
+    /*gap: 1em; (not necessary) */
+
+    /* but that doesn't stop us from overwriting some if we like */
+    justify-content: flex-start; 
+  }
+} 
+```
+
+Check out [w3schools](https://www.w3schools.com/css/css3_flexbox_responsive.asp) for more examples.
 
 ## Grid techniques
 
@@ -649,13 +724,19 @@ An example would be setting a percentage width on a flex item to make it line up
 
 Stay tuned for more information!
 
-# Readings
+# Readings and Resources
 
-Stay tuned for more information!
+1. MDN Web Docs, ["Responsive Design"][mdn-responsive-design]
+1. CSS Tricks, ["Reader Mode: the button to beat"][css-tricks-reader-mode]
+2. CSS Tricks, ["A Complete Guide to CSS Media Queries"][css-tricks-media-queries]
+3. MDN Web Docs, ["Media Queries"][mdn-media-queries]
+4. Interneting is Hard, ["Semantic HTML"][iih-semantic-html-source]
+
 
 # Exercises
 
 1. **`sup11.html`** in [June's guest lecture exercises](../pages/tutorials.html#week-11-exercises). 
+2. (Optional, but useful for lab 4:) **`sup1html - sup5.html`** from the guest lecture exercises contain examples and explanations for CSS layouts that are used in Lab 4 (placing text on top of images/videos, using the `position` property, etc.)
 
 
 [semrush-html-review]: https://www.semrush.com/blog/semantic-html5-guide/ 
