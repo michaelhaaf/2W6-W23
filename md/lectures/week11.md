@@ -206,7 +206,37 @@ That means we still haven't fixed problems like: the long lines of text displaye
 
 That's not even to mention: what if we need a real layout? We can't make elements stack on each-other, or "flow" horizontally, with just `HTML`. The point of this lesson isn't to never use `CSS`: it is to know when you actually need to do it, and what you could accidentally take away from the page design by adding it without understanding it.
 
-## Lab 4 Tip (HTML)
+## The Viewport Meta Tag
+
+There is one other `HTML` optimization worth knowing about. It's actually something that we have been using throughout this course without really acknowledging. Take a look at the [boilerplate](../pages/tutorials.html#week-01-exercises) code block below:
+
+###### HTML{.sourceCode}
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Some title</title>
+    <meta charset="UTF-8">
+
+    /* What is the point of this element? */
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+  </body>
+</html>
+```
+
+Many pages are not mobile optimized, and break (or at least look bad) when rendered at a small viewport width.
+
+Therefore, narrow screen devices (e.g. mobiles) render pages in a virtual window or viewport, which is usually wider than the screen, and then shrink the rendered result down so it can all be seen at once.
+
+The “viewport meta tag” let web developers control the viewport’s size and scale of a site and request that the site be loaded at the correct device width.
+
+Make sure to include this in your website when using Media Queries or the browser might not load the correct page layout. **This element is included for free when you use the VSCode `!` emmet for automatically producing boilerplate.**
+
+# Lab 4 Tip (HTML)
 
 If you are stuck on Lab 4, you can start by making sense of your `HTML`. Remember that your `HTML` is the **foundation** of your website, and all of your structure and responsivity is based on that foundation. 
 
@@ -271,11 +301,13 @@ CSS Media queries are a way to identify important browser characteristics, featu
 
 Some possible examples:
 
-- Increase font size for devices with large screens
-- Increase the padding between paragraphs when a page is viewed on a narrow device
-- Increase the size of buttons on touchscreens
+1. Increase font size for devices with large screens
+2. Increase the padding between paragraphs when a page is viewed on a narrow device
+3. Increase the size of buttons on touchscreens
 
 You can see an example of each below.
+
+1. Increasing font size for devices with large screens using `min-width`:
 
 ###### CSS{.sourceCode}
 ```css
@@ -286,18 +318,8 @@ html {
     font-size: 100%;  
 }
 
-article p {
-    /* Common typographic style: padding on top, margin on bottom */
-    padding-top: 0.5rem;
-    margin-bottom: 1.5rem;
-}
 
-button {
-    /* Use padding to define the "content" size of the button */
-    padding: 1em 2em; 
-}
-
-/* @media query overrides examples: */
+/* @media query override: */
 
 /* Example using "min-width":
 * When the browser is AT LEAST (min-width) 800px or larger: */
@@ -306,6 +328,21 @@ button {
         font-size: 125%;    /* increase font size on large screens! */
     }
 }
+```
+
+2. Increase the padding between paragraphs when a page is viewed on a narrow device using `max-width`
+
+###### CSS{.sourceCode}
+```css
+/* Some default style: */
+
+article p {
+    /* Common typographic style: padding on top, margin on bottom */
+    padding-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* @media query override: */
 
 /* Example using "max-width":
 * When the browser is AT MOST (max-width) 600px or smaller: */
@@ -319,6 +356,21 @@ button {
         margin-bottom: 2rem; 
     }
 }
+
+```
+
+3. Increase the size of buttons on touchscreens using ["hover"][mdn-hover]:
+
+###### CSS{.sourceCode}
+```css
+/* Some default style: */
+
+button {
+    /* Use padding to define the "content" size of the button */
+    padding: 1em 2em; 
+}
+
+/* @media query override: */
 
 /* Example: detecting "touchscreen" device type with "hover: none" 
 * When the browser does NOT have the ability to "hover":
@@ -336,9 +388,17 @@ button {
 
 You can add multiple media queries within a stylesheet, tweaking your whole layout or parts of it to best suit the various screen sizes. The points at which a media query is introduced, and the layout changed, are known as **breakpoints.**
 
+There are many other possible `@media` queries we can do, though `min-width` is the most common. You can see a complete list of possible breakpoints in the ["Media Features that can be Queried"](https://maujac.github.io/2W6-UI/#/./wk8/media_queries?id=media-features-to-be-queried) section of course notes from a previous year.
+
 ### Mobile first design
 
 A common approach to web design is to start with a simple single-column layout for narrow-screen devices (e.g. mobile phones). Then, use `min-width` queries to check for wider screens, and add *only the rules necessary* to implement a multiple-column layout when you know that you have enough screen width to handle it. Designing for mobile first is known as **mobile first design.**
+
+There three good reasons for this:
+
+- Mobile-first websites are **lighter** in processing requirements for mobile users, since the browser only has to apply the CSS that occurs before `@media` queries. 
+- The processing of complex media queries and the rendering of intricate layouts are done by larger devices, which presumably has higher computational power.
+- Mobile layouts are simpler (usually [plain HTML][html-responsive-by-default] will suffice!) and therefore: easier to implement, faster to code, and easier to maintain. Complexity should be added incrementally as screen sizes increase.
 
 Media queries can help with responsive web design, but are not a requirement: they should only be introduced when the web layout you are working with **breaks** (overlaps, overflows, becomes unusable) at small or large resolutions. 
 
