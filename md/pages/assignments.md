@@ -18,9 +18,22 @@ abstract: |
 [lab1solutions]: ../assignments/lab1.zip
 [lab2solutions]: ../assignments/lab2solution.zip
 [lab3solutions]: ../assignments/lab3solution.zip
-[lab4solutions]: ../assignments/lab4.zip
+[lab4solutions]: ../assignments/lab4solution.zip
 
-[project1zip]: ../assignments/project1.zip
+[projectzip]: ../assignments/project.zip
+
+# Project
+
+Instructions and relevant information about both Milestone 1 and Milestone 2 can be found in the .zip below. You can also preview files in the browser by expanding the **(+) View Files in browser** tab below.
+
+## Milestone 1 & 2
+
+Instructions: [project.zip][projectzip]
+
+<button class="accordion">View files in browser</button>
+
+<pre id="project-listing" class="collapsible">
+</pre>
 
 # Labs 
 
