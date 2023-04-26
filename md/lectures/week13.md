@@ -36,9 +36,35 @@ abstract: |
 
 # Webhosting
 
-## Setting up Byethost
+## Server Set Up
+
+### Free options
+
+In class, Larry showed us how to set up wordpress using the free server, 000webhost. Another option that he explains in his notes is byethost.
+
+You may use either! (there is no need to use both). Here are instructions.
 
 [See here][byethost]
+
+### Other options?
+
+One problem with free servers is they kind of suck and really only exist to steal data and farm clicks. For our purposes this is just fine -- we just want to learn how to set up a server quickly and publish a website, which free servers are more than adequate for. 
+
+If you would like to start a server that you intend to use in the future, however, there are many options that are much more reliable starting at around $5 per month. I provide links to a few of them below.
+
+- Linode: $100 credit if you make an account using [this link](https://linode.com/25a). Then, you can find instructions [here](https://www.linode.com/marketplace/apps/linode/wordpress), though there are many ways to do this task.
+- Digital Ocean: I couldn't find a good promotional credit but this is also a reuputable cloud server solution. See [wordpress set up instructions on Digital Ocean here](https://www.digitalocean.com/community/tutorials/how-to-use-the-wordpress-one-click-install-on-digitalocean-2)
+
+With a more powerful machine (either for a higher monthly cost, or hosted at home) you can accomplish all of the above at the same time, and more. Here are some great starting points for going down the self-hosting rabbit hole:
+
+- [/r/selfhosted](https://reddit.com/r/selfhosted/): While reddit is a flawed website in general, some subreddits are excellent quality forums for finding more information about particular fields. This is true for the self-hosting/system admin side of things as well.
+- [Server Builds forum](https://forums.serverbuilds.net/about): Lots of example server builds and discussions here.
+- [Self-Hosted Podcast](https://selfhosted.show/): A weekly podcast with interviews and discussions about the latest developments in open-source self-hosted applications and projects. They also have a [wiki](https://wiki.selfhosted.show/).
+- [Perfect Media Server](https://perfectmediaserver.com/): Made by one of the self-hosted show host, I've made a server at home that is kind of like this one.
+
+
+
+**To clarify:** All of the above is just here for your interest, it is toatlly optional. For this course, all that's required is a wordpress website, hosted by whatever means your team decides.
 
 ## FileZilla
 
@@ -54,14 +80,9 @@ abstract: |
 
 # Project
 
-## Milestone 1
+## Milestone 1&2
 
-Stay tuned!
-
-## Milestone 2
-
-Stay tuned!
-
+[Project Milestone Instructions Link](../pages/assignments.html#milestone-1-2)
 
 [cms]: https://johnabbott-my.sharepoint.com/personal/larryfagen_johnabbott_qc_ca/_layouts/15/Doc.aspx?sourcedoc={9a27a8ca-3672-4387-915d-9c08663bd781}&action=view&wd=target%28Class%2018.one%7Cdae6abbf-5de6-4951-9613-1e1526e58f9d%2FContent%20Management%20System%7Cc2fef070-2f2b-438b-8fd5-09f11f8688cc%2F%29&wdorigin=703 
 
