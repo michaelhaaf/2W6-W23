@@ -22,9 +22,14 @@ abstract: |
 
 # Content Management Systems
 
-## Installation
+**UPDATE**: The links that I shared here before April 29 were broken for many students. I have fixed these links now -- each section contains a link to a .pdf with instructions for that section.
 
-[See here][cms]
+I also have combined all of the instructions into a single pdf, which you can download [here][all-slides].
+
+## CMS and Wordpress
+
+- [Introduction to CMS][cms]
+- [Wordpress Directory structure after installation][installation]
 
 ## Frontend & Backend
 
@@ -44,7 +49,7 @@ In class, Larry showed us how to set up wordpress using the free server, 000webh
 
 You may use either! (there is no need to use both). Here are instructions.
 
-[See here][byethost]
+[Installing on byethost instructions][byethost]
 
 ### Other options?
 
@@ -68,15 +73,15 @@ With a more powerful machine (either for a higher monthly cost, or hosted at hom
 
 ## FileZilla
 
-[See here][filezilla]
+[Use FileZilla to upload/download files on your website remotely][filezilla]
 
 ## Wordpress on a Server
 
-[See here][wordpress-server]
+[How to finalize wordpress installation on your server][wordpress-server]
 
 ## Configuring Wordpress
 
-[See here][wordpress-configure]
+[How to configure wordpress][wordpress-configure]
 
 # Project
 
@@ -84,18 +89,12 @@ With a more powerful machine (either for a higher monthly cost, or hosted at hom
 
 [Project Milestone Instructions Link](../pages/assignments.html#milestone-1-2)
 
-[cms]: https://johnabbott-my.sharepoint.com/personal/larryfagen_johnabbott_qc_ca/_layouts/15/Doc.aspx?sourcedoc={9a27a8ca-3672-4387-915d-9c08663bd781}&action=view&wd=target%28Class%2018.one%7Cdae6abbf-5de6-4951-9613-1e1526e58f9d%2FContent%20Management%20System%7Cc2fef070-2f2b-438b-8fd5-09f11f8688cc%2F%29&wdorigin=703 
-
-[installation]: https://johnabbott-my.sharepoint.com/personal/larryfagen_johnabbott_qc_ca/_layouts/15/Doc.aspx?sourcedoc={9a27a8ca-3672-4387-915d-9c08663bd781}&action=view&wd=target%28Class%2018.one%7Cdae6abbf-5de6-4951-9613-1e1526e58f9d%2FProper%20Installation%7Cdffc8f5c-ea57-4682-a653-c5e17b83f2f3%2F%29&wdorigin=703 
-
-[troubleshooting]: https://johnabbott-my.sharepoint.com/personal/larryfagen_johnabbott_qc_ca/_layouts/15/Doc.aspx?sourcedoc={9a27a8ca-3672-4387-915d-9c08663bd781}&action=view&wd=target%28Class%2018.one%7Cdae6abbf-5de6-4951-9613-1e1526e58f9d%2FProblems%20Need%20Reset%7C884b8086-d0b1-47cb-8f79-21342001faf8%2F%29&wdorigin=703
-
-[frontend-backend]: https://johnabbott-my.sharepoint.com/personal/larryfagen_johnabbott_qc_ca/_layouts/15/Doc.aspx?sourcedoc={9a27a8ca-3672-4387-915d-9c08663bd781}&action=view&wd=target%28Class%2018.one%7Cdae6abbf-5de6-4951-9613-1e1526e58f9d%2FFront%20End%2C%20Back%20End%7C03550e8a-7bd9-4641-a185-51b15c88aa2a%2F%29&wdorigin=703 
-
-[byethost]: https://johnabbott-my.sharepoint.com/personal/larryfagen_johnabbott_qc_ca/_layouts/15/Doc.aspx?sourcedoc={9a27a8ca-3672-4387-915d-9c08663bd781}&action=view&wd=target%28Class%2019.one%7C2ef4b3ca-0e2b-4041-9835-2702a7bc0fa3%2FSetting%20Up%20Byethost%7C73906a74-2c94-43de-82d6-82d6bd3532f0%2F%29&wdorigin=703
-
-[filezilla]: https://johnabbott-my.sharepoint.com/personal/larryfagen_johnabbott_qc_ca/_layouts/15/Doc.aspx?sourcedoc={9a27a8ca-3672-4387-915d-9c08663bd781}&action=view&wd=target%28Class%2019.one%7C2ef4b3ca-0e2b-4041-9835-2702a7bc0fa3%2FFileZilla%7C545372bc-c2b8-4a50-9bc8-3db42a568369%2F%29&wdorigin=703
-
-[wordpress-server]: https://johnabbott-my.sharepoint.com/personal/larryfagen_johnabbott_qc_ca/_layouts/15/Doc.aspx?sourcedoc={9a27a8ca-3672-4387-915d-9c08663bd781}&action=view&wd=target%28Class%2019.one%7C2ef4b3ca-0e2b-4041-9835-2702a7bc0fa3%2FNow%20Install%20WordPress%20on%20Server%7C15a4367b-f150-4d82-b20f-53c5a169f4ab%2F%29&wdorigin=703
-
-[wordpress-configure]: https://johnabbott-my.sharepoint.com/personal/larryfagen_johnabbott_qc_ca/_layouts/15/Doc.aspx?sourcedoc={9a27a8ca-3672-4387-915d-9c08663bd781}&action=view&wd=target%28Class%2019.one%7C2ef4b3ca-0e2b-4041-9835-2702a7bc0fa3%2FNow%20Configure%20WordPress%7C8fe914cd-20c5-4d5d-80bc-2d8e9aa77739%2F%29&wdorigin=703
+[all-slides]: ../assets/content/wk13/larry-slides.pdf
+[cms]: ../assets/content/wk13/cms-introduction.pdf
+[installation]: ../assets/content/wk13/wordpress-folder-structure.pdf
+[troubleshooting]:../assets/content/wk13/troubleshooting-resetting.pdf
+[frontend-backend]: ../assets/content/wk13/front-end-back-end.pdf
+[byethost]:../assets/content/wk13/setting-up-byethost.pdf
+[filezilla]:../assets/content/wk13/filezilla.pdf
+[wordpress-server]:../assets/content/wk13/wordpress-install-on-server.pdf
+[wordpress-configure]:../assets/content/wk13/configure-wordpress.pdf
