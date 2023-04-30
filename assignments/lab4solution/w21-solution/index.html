@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pexels Clone Site</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link to Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav id="topnav" class="flx-away">
+        <ul id="left">
+            <li>
+                <a href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 32 32">
+                        <path d="M2 0h28a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"
+                            fill="#05A081"></path>
+                        <path
+                            d="M13 21h3.863v-3.752h1.167a3.124 3.124 0 1 0 0-6.248H13v10zm5.863 2H11V9h7.03a5.124 5.124 0 0 1 .833 10.18V23z"
+                            fill="#fff"></path>
+                    </svg>
+                </a>
+            </li>
+            <li class="hide">
+                <a href=""><h1>Pexels</h1></a>
+            </li>
+            <form class="search" action="https://www.pexels.com/videos/">
+                <input type="text" placeholder="Search for free photos" name="q">
+                <button type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </ul>
+        <ul id="right">
+            <li class="hide"><a href="">Explore</a></li>
+            <li class="hide"><a href="">License</a></li>
+            <li class="hide"><a href="">Upload</a></li>
+            <li class="hide"><a href="">
+                    <svg class="white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z">
+                        </path>
+                    </svg>
+                </a></li>
+            <li class="hide"><a class="join" href="">Join</a></li>
+            <li><a href="">
+                    <svg class="white" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="hero">
+            <video autoplay="" loop="" muted=""
+                poster="https://www.pexels.com/assets/videos/free-videos-7daa2ef41a140f70c757ce91913a4ecb90570b7d7cd2b401bae868350e02c83a.jpg">
+                <source src="https://static.pexels.com/lib/videos/free-videos.mp4" type="video/mp4">
+                <source src="https://static.pexels.com/lib/videos/free-videos.webm" type="video/webm">
+            </video>
+
+            <div class="hero-text">
+                <h2>The best free stock videos shared by the Pexels community.</h2>
+                <form class="search" action="https://www.pexels.com/videos/">
+                    <input type="text" placeholder="Search for free photos" name="q">
+                    <button type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+                <p><span>Suggested: </span><span>bed fantasy truck indian army breakfast sustainability more</span></p>
+            </div>
+        </section>
+        <nav id="tabs">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Discover</a></li>
+                <li><a href="">Videos</a></li>
+                <li><a href="">Leaderboard</a></li>
+                <li><a href="">Challenges</a></li>
+            </ul>
+        </nav>
+        <section id="videos">
+            <div class="flx-away">
+                <h2>Trending Free Stock Videos</h2>
+                <p>Trending ▾</p>
+            </div>
+            <div id="grid">
+                <a href="https://www.pexels.com/video/thunderbolt-855936/" class="vid-box">
+                    <img src="https://images.pexels.com/videos/855936/free-video-855936.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="thumderbolt" class="vid">
+                    <img src="https://raw.githubusercontent.com/mau-jac/2W6-UI/master/docs/wk10/assets/play.svg?sanitize=true" alt="play icon" class="play">
+                </a>
+                <a href="https://www.pexels.com/video/time-lapse-video-of-sky-1869959/" class="vid-box">
+                    <img src="https://images.pexels.com/videos/1869959/free-video-1869959.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="sky" class="vid">
+                    <img src="https://raw.githubusercontent.com/mau-jac/2W6-UI/master/docs/wk10/assets/play.svg?sanitize=true" alt="play icon" class="play">
+                </a>
+                <a href="https://www.pexels.com/video/vast-area-of-dry-land-1572321/" class="vid-box">
+                    <img src="https://images.pexels.com/videos/1572321/free-video-1572321.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" class="vid">
+                    <img src="https://raw.githubusercontent.com/mau-jac/2W6-UI/master/docs/wk10/assets/play.svg?sanitize=true" alt="play icon" class="play">
+                </a>
+                <a href="https://www.pexels.com/video/an-elevated-highway-in-the-mountain-valley-in-hawaii-3629511/" class="vid-box two-row">
+                    <img src="https://images.pexels.com/videos/3676936/pexels-photo-3676936.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="vehicle traffic on a mountain road" class="vid">
+                    <img src="https://raw.githubusercontent.com/mau-jac/2W6-UI/master/docs/wk10/assets/play.svg?sanitize=true" alt="play icon" class="play">
+                </a>
+                <a href="https://www.pexels.com/video/woman-holding-her-dog-2796076/" class="vid-box">
+                    <img src="https://images.pexels.com/videos/2796078/free-video-2796078.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="woman holding her dog" class="vid">
+                    <img src="https://raw.githubusercontent.com/mau-jac/2W6-UI/master/docs/wk10/assets/play.svg?sanitize=true" alt="play icon" class="play">
+                </a>
+                <a href="https://www.pexels.com/video/underwater-bubbles-857131/" class="vid-box">
+                    <img src="https://images.pexels.com/videos/857131/free-video-857131.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="underwater bubbles" class="vid">
+                    <img src="https://raw.githubusercontent.com/mau-jac/2W6-UI/master/docs/wk10/assets/play.svg?sanitize=true" alt="play icon" class="play">
+                </a>
+                <a href="https://www.pexels.com/video/water-crashing-over-the-rocks-1093662/" class="vid-box">
+                    <img src="https://images.pexels.com/videos/1093662/free-video-1093662.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="water crashing over the rocks" class="vid">
+                    <img src="https://raw.githubusercontent.com/mau-jac/2W6-UI/master/docs/wk10/assets/play.svg?sanitize=true" alt="play icon" class="play">
+                </a>
+                <a href="https://www.pexels.com/video/people-traveling-in-the-desert-1739011/" class="vid-box">
+                    <img src="https://images.pexels.com/videos/1739011/free-video-1739011.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="people traveling in the desert" class="vid">
+                    <img src="https://raw.githubusercontent.com/mau-jac/2W6-UI/master/docs/wk10/assets/play.svg?sanitize=true" alt=play icon"" class="play">
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

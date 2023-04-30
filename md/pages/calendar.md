@@ -71,6 +71,7 @@ abstract: |
 |                  |                                                                 | [Week 9 Readings](../lectures/week09.html#readings-and-resources) <br>    |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | [Week 10][lec10] | CSS - Mastering 2D layouts with CSS Grid                        | **Lab 4 (12.5%, due April 14)**: [Grid Layouts][lab4] <br>                |
+|                  |                                                                 | **Lab 4 SOLUTION:** [solution preview][lab4solution] <br>                 |
 |                  |                                                                 | [Week 10 Exercises](../lectures/week10.html#exercises) <br>               |
 |                  |                                                                 | [Week 10 Readings](../lectures/week10.html#readings-and-resources) <br>   |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+

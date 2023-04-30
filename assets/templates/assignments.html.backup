@@ -267,6 +267,12 @@ solution
 solution
         </a>
        </li>
+       <li>
+        <a href="../pages/assignments.html#lab-4-solution">
+         lab 4 
+solution
+        </a>
+       </li>
       </ul>
      </li>
     </ul>
@@ -298,6 +304,8 @@ Solution</a></li>
 Solution</a></li>
 <li><a href="#lab-3-solution" id="toc-lab-3-solution">Lab 3
 Solution</a></li>
+<li><a href="#lab-4-solution" id="toc-lab-4-solution">Lab 4
+Solution</a></li>
 </ul></li>
 </ul>     <a class="" href="../pages/tutorials.html">
      <img alt="" class="icon" src="../assets/images/feather-icons/chevron-right.svg"/>
@@ -322,8 +330,8 @@ Solution</a></li>
      </div>
            <p class="date">
       Last update:
-      <time datetime="Wed Apr 26 14:25:10 2023">
-       Wednesday, April 26, 2023
+      <time datetime="Sun Apr 30 15:28:00 2023">
+       Sunday, April 30, 2023
       </time>
      </p>
          </header>
@@ -445,6 +453,17 @@ href="../assignments/lab3solution.zip">lab3solution.zip</a></p>
 View files in browser
 </button>
 <pre id="lab3solution-listing" class="collapsible">
+</pre>
+</section>
+<section id="lab-4-solution" class="level2">
+<h2>Lab 4 Solution</h2>
+<p>Solution files: <a
+href="../assignments/lab4solution.zip">lab4solution.zip</a> (NOTE:
+contains solutions from W21 and W23 (this semester))</p>
+<button class="accordion">
+View files in browser
+</button>
+<pre id="lab4solution-listing" class="collapsible">
 </pre>
 </section>
 </section> 

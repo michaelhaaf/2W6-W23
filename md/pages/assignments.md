@@ -125,3 +125,12 @@ Solution files: [lab3solution.zip][lab3solutions]
 
 <pre id="lab3solution-listing" class="collapsible">
 </pre>
+
+## Lab 4 Solution
+
+Solution files: [lab4solution.zip][lab4solutions] (NOTE: contains solutions from W21 and W23 (this semester))
+
+<button class="accordion">View files in browser</button>
+
+<pre id="lab4solution-listing" class="collapsible">
+</pre>
