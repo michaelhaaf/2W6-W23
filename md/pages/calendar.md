@@ -88,15 +88,15 @@ abstract: |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | [Week 13][lec13] | Intro to CMS (Content Management Systems)                       |                                                                           |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
-| [Week 14][lec14] | **Test Review**: Review all material covered so far <br>        | **Test 2 (15%, TBD)** <br>                                                |
-|                  | Content Management Systems - Introduction to Wordpress  <br>    | **Project P1 (15%, due end of classes):** [Instructions][pm1]<br>         |
-|                  | Intermediate CSS - Accessibility, Best Practises                | [Week 14 Readings](../week14.html/#readings-resources)                    |
-+------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 
 # May
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | Lectures         | Topics                                                          | Activities/Assessments                                                    |
 +==================+=================================================================+===========================================================================+
+| [Week 14][lec14] | **Test 2** <br>                                                 | **Test 2 (15%, May 3)** <br>                                              |
+|                  | Content Management Systems - Introduction to Wordpress  <br>    | **Project P1 (15%, due end of classes):** [Instructions][pm1]<br>         |
+|                  | Intermediate CSS - Accessibility, Best Practises                | [Week 14 Readings](../lectures/week14.html#readings-resources)            |
++------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | [Week 15][lec15] | Content Management Systems - Creating/Modifying a Wordpress CMS | **Project P2 (15%, due end of exams):** [Instructions][pm2] <br>          |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 
