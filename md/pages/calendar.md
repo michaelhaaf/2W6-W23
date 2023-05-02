@@ -83,20 +83,21 @@ abstract: |
 | [Week 11][lec11] | Intermediate CSS - June's Guest Lecture, Responsive Design      | [Week 11 Exercises](../lectures/week11.html#exercises) <br>               |
 |                  |                                                                 | [Week 11 Readings](../lectures/week11.html#readings-and-resources) <br>   |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
-| [Week 12][lec12] | Intermediate CSS - HTML Forms, Accessibility, CSS Best Practises| [Week 12 Exercises](../lectures/week12.html#exercises) <br>               |
+| [Week 12][lec12] | Intermediate CSS - HTML Forms                                   | [Week 12 Exercises](../lectures/week12.html#exercises) <br>               |
 |                  |                                                                 | [Week 12 Readings](../lectures/week12.html#readings-and-resources) <br>   | 
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | [Week 13][lec13] | Intro to CMS (Content Management Systems)                       |                                                                           |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | [Week 14][lec14] | **Test Review**: Review all material covered so far <br>        | **Test 2 (15%, TBD)** <br>                                                |
-|                  | Content Management Systems - Introduction to Wordpress          | **Project Milestone 1 (15%, due end of classes):** TBD                    |
+|                  | Content Management Systems - Introduction to Wordpress  <br>    | **Project P1 (15%, due end of classes):** [Instructions][pm1]<br>         |
+|                  | Intermediate CSS - Accessibility, Best Practises                | [Week 14 Readings](../week14.html/#readings-resources)                    |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 
 # May
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | Lectures         | Topics                                                          | Activities/Assessments                                                    |
 +==================+=================================================================+===========================================================================+
-| [Week 15][lec15] | Content Management Systems - Creating/Modifying a Wordpress CMS | **Project Milestone 2 (15%, due end of exams):** TBD                      |
+| [Week 15][lec15] | Content Management Systems - Creating/Modifying a Wordpress CMS | **Project P2 (15%, due end of exams):** [Instructions][pm2] <br>          |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 
 [lec1]: ../lectures/week01.html "Week 1 Lecture notes"
@@ -119,8 +120,8 @@ abstract: |
 [lab2]: ../pages/assignments.html#lab-2 "Lab 2: worth 10%, due Feb 16"
 [lab3]: ../pages/assignments.html#lab-3 "Lab 3: worth 12.5%, due Mar 17"
 [lab4]: ../pages/assignments.html#lab-4 "Lab 4: worth 12.5%, due April 14"
-[pm1]: ../pages/assignments.html#milestone-1 "Project Milestone 1: worth 15%, due TBD"
-[pm2]: ../pages/assignments.html#milestone-2 "Project Milestone 2: worth 15%, due TBD"
+[pm1]: ../pages/assignments.html#milestone-1-2 "Project Milestone 1: worth 15%, due TBD"
+[pm2]: ../pages/assignments.html#milestone-1-2 "Project Milestone 2: worth 15%, due TBD"
 
 
 [lab2solution]: ../pages/assignments.html#lab-2-solution "You can preview/download all solution files here."
