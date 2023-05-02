@@ -37,7 +37,24 @@ I also have combined all of the instructions into a single pdf, which you can do
 
 ## Troubleshooting
 
-[See here][troubleshooting]
+[Larry's general notes about troubleshooting are here.][troubleshooting] Start with these first, then:
+
+1. **Wordpress keeps uninstalling/deleting my progress?**
+
+    - **Are you on 000webhost?** We have discovered that [000webhost has some serious issues.][000webhost-rl] Read the linked article to understand what they are. 
+    - **If so:** use [FileZilla](#filezilla) to download any files you care about keeping (in case you have made a lot of progress).
+    - Then: [uninstall and delete your 000webhost account][000webhost-delete]. You can start over again on Byethost or another free server provider.
+    - **If not:** please google your server + your issue and try to troubleshoot.
+
+2. Common Wordpress issues and how to fix them
+
+    - See [this article](https://www.joomdev.com/common-wordpress-errors-and-how-to-fix-them/)
+    - One good way to troubleshoot debug is by using Wordpress utility plugings like [Heartbeat Control](https://wordpress.org/plugins/heartbeat-control/). You should install this plugin on your website to help you troubleshoot.
+
+
+[000webhost-rl]: https://www.000webhost.com/forum/t/wordpress-installation-page-rate-limiting-issue/178462
+[000webhost-delete]: https://www.websiteplanet.com/blog/cancel-000webhost-refund/
+
 
 # Webhosting
 
@@ -47,7 +64,7 @@ I also have combined all of the instructions into a single pdf, which you can do
 
 In class, Larry showed us how to set up wordpress using the free server, 000webhost. Another option that he explains in his notes is byethost.
 
-You may use either! (there is no need to use both). Here are instructions.
+**UPDATE**: use byethost, do not use 000webhost ()
 
 [Installing on byethost instructions][byethost]
 
