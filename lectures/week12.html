@@ -292,22 +292,6 @@ solution
      <ul>
 <li><a href="#lesson-overview" id="toc-lesson-overview">Lesson
 Overview</a></li>
-<li><a href="#accessibility" id="toc-accessibility">Accessibility</a>
-<ul>
-<li><a href="#keyboard-input" id="toc-keyboard-input">Keyboard
-input</a></li>
-<li><a href="#color-contrast" id="toc-color-contrast">Color
-contrast</a></li>
-<li><a href="#images-videos-and-other-media"
-id="toc-images-videos-and-other-media">Images, videos, and other
-media</a></li>
-<li><a href="#auditing-accesibility-using-developer-tools"
-id="toc-auditing-accesibility-using-developer-tools">Auditing
-accesibility using Developer Tools</a></li>
-<li><a href="#wcag-the-web-content-accessibility-guidelines"
-id="toc-wcag-the-web-content-accessibility-guidelines">WCAG: The Web
-Content Accessibility Guidelines</a></li>
-</ul></li>
 <li><a href="#html-forms" id="toc-html-forms">HTML Forms</a>
 <ul>
 <li><a href="#the-form-element" id="toc-the-form-element">The
@@ -321,24 +305,6 @@ id="toc-placeholder-and-default-text">Placeholder and default
 text</a></li>
 <li><a href="#built-in-form-validation"
 id="toc-built-in-form-validation">Built-in form validation</a></li>
-</ul></li>
-<li><a href="#semantic-css" id="toc-semantic-css">Semantic CSS?</a>
-<ul>
-<li><a href="#organizing-stylesheets"
-id="toc-organizing-stylesheets">Organizing stylesheets</a></li>
-<li><a href="#choosing-class-names"
-id="toc-choosing-class-names">Choosing class names</a></li>
-<li><a href="#choosing-the-right-selector"
-id="toc-choosing-the-right-selector">Choosing the right
-selector</a></li>
-</ul></li>
-<li><a href="#css-miscellany" id="toc-css-miscellany">CSS Miscellany</a>
-<ul>
-<li><a href="#positioning-overflow"
-id="toc-positioning-overflow">Positioning &amp; Overflow</a></li>
-<li><a href="#design-fundamentals" id="toc-design-fundamentals">Design
-Fundamentals</a></li>
-<li><a href="#frameworks" id="toc-frameworks">Frameworks</a></li>
 </ul></li>
 <li><a href="#knowledge-check" id="toc-knowledge-check">Knowledge
 Check</a></li>
@@ -360,21 +326,15 @@ Check</a></li>
      </h1>
             <div class="abstract">
       <div class="abstract-title">
-       Intermediate User Interfaces: Accesibility, HTML Forms, and more
+       Intermediate User Interfaces: HTML Forms
       </div>
-      <p>Building off of creating Responsive Designs, we will continue
-      learning best practises for functional, usable, and accessible
-      websites.</p>
-      <p>We will learn a few other concepts as well: how to create and
-      style HTML Forms, which are ubiquitous on the web for entering
-      data into a website.</p>
-      <p>We will finish by covering a few more important CSS concepts:
-      positioning, design, and frameworks (as much as time allows).</p>
+      <p>We will learn how to create and style HTML Forms, which are
+      ubiquitous on the web for entering data into a website.</p>
      </div>
            <p class="date">
       Last update:
-      <time datetime="Sun Apr 30 15:28:07 2023">
-       Sunday, April 30, 2023
+      <time datetime="Tue May 2 11:35:20 2023">
+       Tuesday, May 02, 2023
       </time>
      </p>
          </header>
@@ -382,64 +342,14 @@ Check</a></li>
 <section id="lesson-overview" class="level1">
 <h1>Lesson Overview</h1>
 <ul>
-<li>Accessibility</li>
 <li>HTML Forms</li>
-<li>Other CSS odds and ends we haven’t yet had time for</li>
 </ul>
 <hr />
-</section>
-<section id="accessibility" class="level1">
-<h1>Accessibility</h1>
-<p>Accesibility<a href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a> is…</p>
-<section id="keyboard-input" class="level2">
-<h2>Keyboard input</h2>
-</section>
-<section id="color-contrast" class="level2">
-<h2>Color contrast</h2>
-</section>
-<section id="images-videos-and-other-media" class="level2">
-<h2>Images, videos, and other media</h2>
-</section>
-<section id="auditing-accesibility-using-developer-tools"
-class="level2">
-<h2>Auditing accesibility using Developer Tools</h2>
-</section>
-<section id="wcag-the-web-content-accessibility-guidelines"
-class="level2">
-<h2>WCAG: The Web Content Accessibility Guidelines</h2>
-<p>The best practises shown in the previous sections developed from
-standards set by The <a
-href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content
-Accessibility Guidelines (WCAG)</a>.</p>
-<p>WCAG is broadly broken down into four principles:</p>
-<ul>
-<li><a
-href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable">Perceivable</a>:
-Users must be able to perceive it in some way, using one or more of
-their senses.</li>
-<li><a
-href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable">Operable</a>:
-Users must be able to control UI elements (e.g. buttons must be
-clickable in some way 014 mouse, keyboard, voice command, etc.).</li>
-<li><a
-href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable">Understandable</a>:
-The content must be understandable to its users.</li>
-<li><a
-href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust">Robust</a>:
-The content must be developed using well-adopted web standards that will
-work across different browsers, now and in the future.</li>
-</ul>
-<p>Each of the links above will take you to pages that further expand on
-these areas, with practical recommendations for how to measure and
-achieve these outcomes.</p>
-<hr />
-</section>
 </section>
 <section id="html-forms" class="level1">
 <h1>HTML Forms</h1>
-<p>Forms<a href="#fn2" class="footnote-ref" id="fnref2"
-role="doc-noteref"><sup>2</sup></a> are the primary interactive
+<p>Forms<a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a> are the primary interactive
 component of websites. Forms allow users to enter data, which is
 generally sent to a web server for processing and storage, or used
 immediately on the browser to update the interface.</p>
@@ -922,67 +832,6 @@ click has been processed. See DOM Events for more.</p>
 <hr />
 </section>
 </section>
-<section id="semantic-css" class="level1">
-<h1>Semantic CSS?</h1>
-<section id="organizing-stylesheets" class="level2">
-<h2>Organizing stylesheets</h2>
-</section>
-<section id="choosing-class-names" class="level2">
-<h2>Choosing class names</h2>
-</section>
-<section id="choosing-the-right-selector" class="level2">
-<h2>Choosing the right selector</h2>
-<hr />
-</section>
-</section>
-<section id="css-miscellany" class="level1">
-<h1>CSS Miscellany</h1>
-<p>Here are a list of important topics in CSS that I’m not sure we will
-have time to cover in full detail. More information to come.</p>
-<section id="positioning-overflow" class="level2">
-<h2>Positioning &amp; Overflow</h2>
-<p>More to come. For now, here is last year’s content:</p>
-<ul>
-<li><a
-href="https://maujac.github.io/2W6-UI/#/./wk5/positioning-zIndex">positioning</a></li>
-<li><a
-href="https://maujac.github.io/2W6-UI/#/./wk8/displayNone-overflow">overflow</a></li>
-</ul>
-<p>And here’s a nice video reviewing what we learned about positioning
-from the guest lecture.</p>
-<ul>
-<li><a href="https://www.youtube.com/shorts/jFcWa9kiOHQ">CSS positioning
-in 60 seconds</a></li>
-</ul>
-</section>
-<section id="design-fundamentals" class="level2">
-<h2>Design Fundamentals</h2>
-<p>More to come. For now, here is last year’s content:</p>
-<ul>
-<li><a
-href="https://maujac.github.io/2W6-UI/#/./wk9/design_fundamentals">Design
-Fundamentals</a></li>
-</ul>
-<p>as well as some articles I personally have found helpful:</p>
-<ul>
-<li><a
-href="https://m2.material.io/design/color/the-color-system.html">Material
-Design color theme tutorial</a></li>
-<li><a
-href="https://m2.material.io/design/color/dark-theme.html">Material
-Design DARK color theme tutorial</a></li>
-</ul>
-</section>
-<section id="frameworks" class="level2">
-<h2>Frameworks</h2>
-<p>More to come. For now, here is last year’s content:</p>
-<ul>
-<li><a
-href="https://maujac.github.io/2W6-UI/#/./wk14/css_frameworks">CSS
-Frameworks</a></li>
-</ul>
-</section>
-</section>
 <section id="knowledge-check" class="level1">
 <h1>Knowledge Check</h1>
 <p>Stay tuned for more information!</p>
@@ -1027,14 +876,10 @@ Attributes</a></li>
 role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1"><p>This section was adapted directly from the articles <a
-href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG">“Understanding
-the Web Content Accessibility Guidelines”</a> (MDN Web Docs).<a
-href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>This section was adapted directly from <a
+<li id="fn1"><p>This section was adapted directly from <a
 href="https://maujac.github.io/2W6-UI/#/./wk11/forms">HTML Forms</a> by
 Mauricio Buschinelli from the Winter 2021 offering of this couse.<a
-href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section> 
    </article>

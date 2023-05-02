@@ -3,58 +3,16 @@ title: "2W6-W23: Week 12 Lecture Notes"
 toc-title: "Lecture navigation"
 prev-page: "../lectures/week11.html"
 next-page: "../lectures/week13.html"
-abstract-title: "Intermediate User Interfaces: Accesibility, HTML Forms, and more"
+abstract-title: "Intermediate User Interfaces: HTML Forms"
 abstract: |
-  Building off of creating Responsive Designs, we will continue learning best practises for functional, usable, and accessible websites.
-
-  We will learn a few other concepts as well: how to create and style HTML Forms, which are ubiquitous on the web for entering data into a website.
-
-  We will finish by covering a few more important CSS concepts: positioning, design, and frameworks (as much as time allows).
+  We will learn how to create and style HTML Forms, which are ubiquitous on the web for entering data into a website.
 ---
 
 ---
 
 # Lesson Overview
 
-- Accessibility
 - HTML Forms
-- Other CSS odds and ends we haven't yet had time for
-
----
-
-# Accessibility
-
-Accesibility[^accessibility-attribution] is...
-
-[^accessibility-attribution]: This section was adapted directly from the articles ["Understanding the Web Content Accessibility Guidelines"](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG) (MDN Web Docs).  
-
-## Keyboard input
-
-## Color contrast
-
-## Images, videos, and other media
-
-## Auditing accesibility using Developer Tools
-
-## WCAG: The Web Content Accessibility Guidelines
-
-The best practises shown in the previous sections developed from standards set by The [Web Content Accessibility Guidelines (WCAG)][wcag]. 
-
-WCAG is broadly broken down into four principles: 
-
-- [Perceivable][wcag-perceivable]: Users must be able to perceive it in some way, using one or more of their senses.
-- [Operable][wcag-operable]: Users must be able to control UI elements (e.g. buttons must be clickable in some way \u2014 mouse, keyboard, voice command, etc.).
-- [Understandable][wcag-understandable]: The content must be understandable to its users.
-- [Robust][wcag-robust]: The content must be developed using well-adopted web standards that will work across different browsers, now and in the future.
-
-Each of the links above will take you to pages that further expand on these areas, with practical recommendations for how to measure and achieve these outcomes.
-
-[wcag]: https://www.w3.org/WAI/standards-guidelines/wcag/
-[wcag-perceivable]: https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable
-[wcag-operable]: https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable
-[wcag-understandable]: https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable
-[wcag-robust]: https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust
-[css-tricks-reduced-motion]: https://css-tricks.com/revisiting-prefers-reduced-motion/
 
 ---
 
@@ -285,49 +243,6 @@ This is done by using validation attributes on `<input>` elements:
 >The `submit` event is only triggered after the button's click has been processed. See DOM Events for more.
 
 ---
-
-# Semantic CSS?
-
-## Organizing stylesheets
-
-## Choosing class names
-
-## Choosing the right selector
-
----
-
-# CSS Miscellany
-
-Here are a list of important topics in CSS that I'm not sure we will have time to cover in full detail. More information to come.
-
-## Positioning & Overflow
-
-More to come. For now, here is last year's content:
-
-- [positioning](https://maujac.github.io/2W6-UI/#/./wk5/positioning-zIndex)
-- [overflow](https://maujac.github.io/2W6-UI/#/./wk8/displayNone-overflow)
-
-And here's a nice video reviewing what we learned about positioning from the guest lecture.
-
-- [CSS positioning in 60 seconds](https://www.youtube.com/shorts/jFcWa9kiOHQ)
-
-## Design Fundamentals
-
-More to come. For now, here is last year's content:
-
-- [Design Fundamentals](https://maujac.github.io/2W6-UI/#/./wk9/design_fundamentals)
-
-as well as some articles I personally have found helpful:
-
-- [Material Design color theme tutorial](https://m2.material.io/design/color/the-color-system.html)
-- [Material Design DARK color theme tutorial](https://m2.material.io/design/color/dark-theme.html)
-
-## Frameworks
-
-More to come. For now, here is last year's content:
-
-- [CSS Frameworks](https://maujac.github.io/2W6-UI/#/./wk14/css_frameworks)
-
 
 # Knowledge Check
 
