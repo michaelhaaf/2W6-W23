@@ -1,9 +1,9 @@
 ---
-title: "2W6-W23: Week 12 Lecture Notes"
+title: "2W6-W23: Week 14 Lecture Notes"
 toc-title: "Lecture navigation"
 prev-page: "../lectures/week13.html"
 next-page: "../pages/calendar.html"
-abstract-title: "Intermediate User Interfaces: Accesibility, HTML Forms, and more"
+abstract-title: "Intermediate User Interfaces: Accesibility, CSS Best Practises, and more"
 abstract: |
   Building off of creating Responsive Designs, we will continue learning best practises for functional, usable, and accessible websites.
 
