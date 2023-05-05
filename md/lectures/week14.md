@@ -106,6 +106,16 @@ Stay tuned for more information!
 
 # Readings & Resources
 
-- [Traversy Media: Web Development in 2023 - a Practical Guide][webdev2023]: The entire video is almost 3 hours (!!) and covers much more than we have in this class. You should first watch the first **33 minutes** (up to the end of the **Design Software** section) to review the content we have covered in this class and to learn what things to look into next to advance your abilities in Web Development.
+1. [Traversy Media: Web Development in 2023 - a Practical Guide][webdev2023]: The entire video is almost 3 hours (!!) and covers much more than we have in this class. **You do not need to watch the whole thing**. Instead, focus on the following: 
+
+    - Watch the first **33 minutes** (up to the end of the **Design Software** section) to review the content we have covered in this class
+    - Then, skip ahead to the "No Code Tools" chapter to review what we have learned about Content Management Systems like Wordpress.
+    - Subtitles file (with timestamps): [link][subs-timestamps]
+    - Subtitles file (without timestamps): [link][subs-raw]
+    - Written guide by the author: [link](https://www.traversymedia.com/guide)
+    - (Coming soon) **Milestone 2** of your project will ask you a few questions about the content of this video and of this lecture. I will post an update on LEA as soon as it's all ready.
+
 
 [webdev2023]: https://www.youtube.com/watch?v=u72H_zZzkcw
+[subs-timestamps]: ../assets/content/wk14/subs-with-timestamps.txt
+[subs-raw]: ../assets/content/wk14/subs-without-timestamps.txt
