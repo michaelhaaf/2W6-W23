@@ -1,0 +1,701 @@
+/* ------------------------------------------ *\
+  || Table of Contents
+\* ------------------------------------------ */
+
+/* 
+* Major style categories in this document are marked by '||' characters to ease finding related styles (using editor find searches, etc.) 
+* The major styles are also ordered (approximately) in order of least->most specific to the design (so that later rules overrite eariler ones in specificity ties)
+*
+* || Themes
+*   - color, font, layout specifications
+*
+* || Global
+*   - margin, padding, box-sizing
+*   - CSS resets, general styles
+*
+* || Typography
+*   - font and box model settings for content elements (h1-3, p, ul, ol, figure)
+*
+* || Utilities
+*   - re-usable style definitions for common actions (hidden, show, etc.)
+*
+* || Components
+*   - re-usable style definitions for common components (buttons, navbars, etc.)
+*
+* || Containers
+*   - layout definitions for containing elements in our design (cards, flexboxes, grids)
+*
+* || Sections
+*   - style definitions for each section of the website
+*
+* || Overrides
+*   - style overrides for particular requirements, @media queries
+* 
+* Acknowledgements:
+*   Resources used in creating this design cited inline.
+* 
+*   Document structure inspired by: 
+*     - https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing
+*     - https://cssguidelin.es/
+*/
+
+
+/* ------------------------------------------ *\
+  || Themes
+\* ------------------------------------------ */
+
+/* Color specifications */
+:root {
+  --primary-dark: #2E323F;
+  --primary-medium: #3B4050;
+  --primary-light: #6F737F;
+  --secondary-dark: #A59678;
+  --black: #000000;
+  --white: #ffffff;
+  --off-white: #F0F0F0;
+  --filter-black: brightness(0) saturate(100%);
+}
+
+
+/* Color specifications */
+:root {
+  --primary-dark: #2a273f;
+  --primary-medium: #393552;
+  --primary-light: #a7a4bc;
+  --secondary-dark: #eb6f92;
+  --secondary-dark: #b4637a;
+  --black: #000000;
+  --white: #ffffff;
+  --off-white: #F0F0F0;
+  --filter-black: brightness(0) saturate(100%);
+  --svg-filter-accent: var(--filter-black) invert(50%) sepia(17%) saturate(1350%) hue-rotate(292deg) brightness(88%) contrast(80%);
+}
+
+
+/* Font specifications */
+:root {
+  --font-family-body: "Montserrat", sans-serif;
+  --font-family-headers: "Oswald", sans-serif;
+  --font-size-xxs: 0.875rem;    /* 14px */
+  --font-size-xs: 1rem;         /* 16px */
+  --font-size-s: 1.125rem;      /* 18px */
+  --font-size-m: 1.25rem;       /* 20px */
+  --font-size-l: 2rem;          /* 32px */
+  --font-size-xl: 3rem;         /* 48px */
+  --font-size-xxl: 5rem;        /* 80px */
+  --font-weight-headers: 700;
+  --font-weight-subheaders: 300;
+  --line-height-rem: 2rem;
+  --line-height-xxs: 2.286;     /* 2.125 * 14px = 32px (1 line) */
+  --line-height-xs: 2;          /* 2 * 16px = 32px (1 line) */
+  --line-height-s: 1.778;       /* 1.778 * 18px = 32px (1 line) */
+  --line-height-m: 1.6;         /* 1.6 * 20px = 32px (1 line) */
+  --line-height-l: 1.25;        /* 1.25 * 32px = 40px -- need 0.5rem (8 extra px) to make 1.5 lines, this is added in padding */ 
+  --line-height-xl: 1.125;      /* 1.125 * 48px = 54px -- need 0.625rem (10 extra px) to make 2 lines, this is added in padding */  
+  --line-height-xxl: 1.2;       /* 1.2 * 80px = 96px (3 lines) */
+}
+
+
+/* ------------------------------------------ *\
+  || Global
+\* ------------------------------------------ */
+
+/* Spacing variables */
+:root {
+  /* Default: 1rem = 16px, 2rem = 32px */
+  /* Line height will be set to 32px to allow larger than 16px body font */
+  --space: 2rem;
+  --space-xs: 0.5rem;
+  --space-s: 1rem;
+  --space-m: 2rem;
+  --space-l: 4rem;
+  --space-xl: 8rem;
+  /* Define internal spacing (padding, generally) for components */
+  /* em, unlike rem, will scale to element font -- elements with larger fonts will have proportionally larger inset */
+  --space-inset: 1em;
+  --space-inset-xs: 0.25em;
+  --space-inset-s: 0.5em;
+  --space-inset-m: 1em;
+  --space-inset-l: 2em;
+  --space-inset-xl: 4em;
+  /* Default HTML flow spacing between blocks */
+  --space-stack: 0 0 2rem 0;
+  --space-stack-xs: 0 0 0.5rem 0;
+  --space-stack-s: 0 0 1rem 0;
+  --space-stack-m: 0 0 2rem 0;
+  --space-stack-l: 0 0 4rem 0;
+  --space-stack-xl: 0 0 8rem 0;
+  /* Vertical offset for correcting alignment */
+  --space-offset: 1.25rem 0 0 0;
+}
+
+/* Use space definitions to define layout spacing */
+:root {
+  --margin-figure: var(--space-stack-m);
+  --margin-text: var(--space-stack);
+  --margin-text-xl: var(--space-stack-l);
+  --padding-figure: var(--space-offset);
+  --padding-text: var(--space-offset);
+  --padding-text-l: calc(var(--space-offset) + 0.5rem);
+  --padding-text-xl: calc(var(--space-offset) + 0.625rem);
+}
+
+/* Layout requirements */
+:root {
+  --container-max-width: 1200px;
+  --min-title-card-height: 660px;
+}
+
+body {
+  min-height: 100%;
+}
+
+/* This is an aggressive univeral reset, inspired by the Meyer Reset 
+   https://meyerweb.com/eric/tools/css/reset/ 
+   This set of rules sets sane defaults for font behavior. It also resets all browser default box model properties -- a consequence is that you must add padding/border/margin to every element. I think it's nice, because it forces you to be conscious of the style of each element you use. 
+*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+}
+
+/*
+   Universal Box Sizing best practise, for max flexibility and :pseudo support.
+   See https://css-tricks.com/box-sizing/ for a full explanation.
+   TL;DR: This setting makes all elements inherit their box-sizing property from their ancestor. That means we have to set the box-sizing property on either the body element for this to be useful. And it is useful -- it helps with decoupling the size of your component elements (margin/border/padding) from your overall layout.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* From the Meyer Reset: 
+   HTML5 display-role reset for older browsers 
+   That is, older browsers do not universally treat these elements as "block"
+   It is also a helpful reminder for you that you should consider structural HTML elements display: block by default in your layout (you can overwrite these elements individually with display: flex or display: grid if your layout demands it)
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* 
+   To make navigation bars, we are often reseting the default list style (so list items do not have dots or numbering)
+   However, in body/article/section text, it is often useful to keep the default list-style (you'll often just end up re-introducing the default by CSS)
+   Rather than reset ALL list styles, we can keep the nice browser defaults and only reset lists that we mark with the "role" attribute in our markup (e.g. nav lists)
+   Inspiration: https://andy-bell.co.uk/a-modern-css-reset/ 
+*/
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+
+/* 
+   This style will force hyperlinks to take the color of the body text. Useful when you do not have a theme color for hyperlinks definined in your requirements.
+   This style can be overwritten by more specific styles for different sections of your website later in this CSS file.
+*/
+a {
+  color: inherit;
+}
+
+
+/* 
+   Some HTML content elements are NOT responsive by default. This is because they are in-line elements, and therefore only take the width/height of their content box independent of the size of their parent container.
+   Setting max-width and display: block; allows img/picture/video content to scale with the size of the display without stretching.
+   Why not width: 100%;? 
+   Width will force the image to grow as its parent grows. Images smaller than their container will stretch and pixelate. 
+   More info: https://andy-bell.co.uk/a-modern-css-reset/
+*/
+img,
+picture,
+video {
+  max-width: 100%;
+  display: inline-block;
+}
+
+/*
+   All of our webpage content lies in the body. Font, color, and box-sizing (see above) properties are inherited by descendent elements.
+   That means we can define the "body" typographic settings just once and have defined defaults for all elements.
+*/
+body {
+  box-sizing: border-box;
+  font-size: var(--font-size-m);
+  font-family: var(--font-family-body);
+  color: var(--primary-dark);
+  line-height: var(--line-height-m);
+  text-align: left;
+}
+
+/* ------------------------------------------ *\
+  || Typography
+\* ------------------------------------------ */
+
+/* 
+   Some sample Typographic settings, using the :root custom properties.
+   These settings will vary by project
+*/
+h1,
+h2,
+h3 {
+  font-family: var(--font-family-headers);
+  font-weight: var(--font-weight-headers);
+}
+
+h1 {
+  margin: var(--margin-text-xl);
+  padding: var(--padding-text-xl);
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
+}
+
+h2 {
+  margin: var(--margin-text);
+  padding: var(--padding-text-l);
+  font-size: var(--font-size-l);
+  line-height: var(--line-height-l);
+}
+
+p,
+ul,
+ol {
+  margin: var(--margin-text);
+}
+
+ul:not([role]),
+ol:not([role]) {
+  padding-left: var(--space-inset-l);
+}
+
+figure,
+button {
+  margin: var(--margin-figure);
+  padding: var(--padding-figure);
+}
+
+figcaption {
+  font-size: var(--font-size-xxs);
+  line-height: var(--line-height-xxs);
+  color: var(--primary-medium);
+}
+
+figcaption::before {
+  content: "Figure: ";
+}
+
+
+/* ------------------------------------------ *\
+  || Utilities
+\* ------------------------------------------ */
+
+.hidden {
+  display: none;
+}
+
+.stack-0-margin {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.font-xs {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.font-xxs {
+  font-size: var(--font-size-xxs);
+  line-height: var(--line-height-xxs);
+}
+
+.hover-expand + p {
+  /* -webkit-box for clamping paragraph content https://daily-dev-tips.com/posts/css-modern-multi-line-ellipsis/ */
+  display: -webkit-box;
+  -webkit-line-clamp: 0;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+  max-height: 0;
+  margin: var(--space-stack-m);
+}
+.hover-expand:hover + p,
+.hover-expand + p:hover {
+  -webkit-line-clamp: 100;
+  max-height: 100%
+}
+.hover-expand::after {
+  content: "";
+}
+
+
+
+
+/* ------------------------------------------ *\
+  || Components
+\* ------------------------------------------ */
+
+.btn {
+  /* Button typography */
+  text-transform: uppercase;
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-subheaders);
+  font-family: var(--font-family-headers);
+  background-color: var(--secondary-dark);
+  color: var(--white);
+  letter-spacing: 0.05em;
+  /* Button layout/reset */
+  border-radius: var(--space-inset-l);
+  padding: var(--space-inset-xs) var(--space-inset-l);
+}
+.btn:hover,
+.btn:focus {
+  cursor: pointer;
+  opacity: 0.75;
+}
+.btn:active {
+  transform: scale(0.95);
+}
+
+.nav a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-s);
+}
+
+.footer-nav a {
+  color: var(--primary-light);
+  padding: 0;
+}
+.page-nav {
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+}
+.page-nav--visible {
+  visibility: visible;
+  height: auto;
+  position: relative;
+}
+
+.license-logo img {
+  max-height: var(--line-height-rem);
+  width: auto;
+}
+
+.toggle {
+  position: absolute;
+  left: var(--space-inset-m);
+  width: var(--space-inset-l);
+  height: var(--space-inset-l);
+  cursor: pointer;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  align-self: center;
+  text-decoration: none;
+}
+.logo::after {
+  content: "420-2W6";
+  vertical-align: middle;
+}
+.logo img {
+  height: var(--line-height-rem);
+  width: auto;
+  vertical-align: middle;
+  filter: var(--svg-filter-accent);
+}
+
+
+
+/* ------------------------------------------ *\
+  || Containers
+\* ------------------------------------------ */
+
+.container {
+  /* Content inside a block with this class will be centered, take up 90% of parent width up to a defined maximum width -- no media query required. */
+  width: 90%;
+  max-width: var(--container-max-width);
+  /* Center and pad to make sure that content does not hug the wall */
+  margin: 0 auto;
+  padding: var(--space-inset-s) 0;
+}
+
+.card {
+  /* Padding used to make sure that content does not hug with wall (no centering) */
+  padding: var(--space-inset-xl) 0;
+}
+
+.card-s {
+  /* Padding used to make sure that content does not hug with wall (no centering) */
+  padding: var(--space-inset-l);
+}
+
+.grid-col-a {
+  grid-area: about;
+}
+
+.grid-col-b {
+  grid-area: getting-around;
+}
+
+.grid-col-c {
+  grid-area: external-resources;
+}
+
+.grid-col-d {
+  grid-area: and-more;
+}
+
+.grid-col-e {
+  grid-area: copyright;
+}
+
+/* ------------------------------------------ *\
+  || Sections
+\* ------------------------------------------ */
+
+
+.page-header {
+  background-color: var(--primary-dark);
+  color: var(--off-white);
+  text-align: center;
+}
+
+.page-header :is(img, ul) {
+  margin: 0;
+  padding: 0;
+}
+
+.page-header a {
+  text-transform: uppercase;
+  font-family: var(--font-family-headers);
+  font-weight: var(--font-weight-subheaders);
+  padding: var(--space-inset-s) var(--space-inset-m);
+}
+
+
+.section-1 {
+  background-color: var(--primary-medium);
+  color: var(--white);
+  min-height: var(--min-title-card-height);
+}
+
+.section-1 h1 {
+  font-size: var(--font-size-xxl);
+  line-height: var(--line-height-xxl);
+  padding: var(--padding-text);
+}
+
+.section-1 em {
+  color: var(--secondary-dark);
+  font-weight: var(--font-weight-headers);
+}
+
+.section-1 footer {
+  text-align: right;
+  color: var(--primary-light);
+}
+
+
+.section-2 {
+  background-color: var(--off-white);
+  color: var(--black);
+}
+
+.section-2 em {
+  color: var(--primary-medium);
+  font-weight: var(--font-weight-headers);
+}
+
+.section-2 h2 {
+  color: var(--secondary-dark);
+  text-align: center;
+}
+
+
+.section-3 {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.section-3 em {
+  color: var(--primary-medium);
+  font-weight: var(--font-weight-headers);
+}
+
+.section-3 h1 {
+  color: var(--secondary-dark);
+  margin: var(--space-stack-m);
+}
+
+.section-3 h2 {
+  color: var(--white);
+  text-align: center;
+}
+
+.section-3 .card-s {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  margin: var(--space-stack-m);
+}
+
+.section-3 .card-s em {
+  color: var(--secondary-dark);
+}
+
+
+.page-footer {
+  color: var(--primary-light);
+  background-color: var(--primary-dark);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.page-footer h1 {
+  color: var(--white);
+  text-align: center;
+}
+
+.page-footer h2 {
+  color: var(--secondary-dark);
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-m);
+}
+
+
+/* ------------------------------------------ *\
+  || Overrides
+\* ------------------------------------------ */
+
+@media (width >= 48rem) {
+
+  .toggle {
+    display: none;
+  }
+
+  .page-nav {
+    visibility: visible;
+    display: flex;
+    height: auto;
+    position: initial;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .tablet.flex-container {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-l);
+  }
+
+  .tablet.sidebar.flex-container {
+    margin: 0;
+    gap: var(--space-s);
+  }
+
+  .tablet.grid-container {
+    display: grid;
+    justify-items: start;
+    grid-template-columns: 2fr var(--space-m) 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+      "about . getting-around external-resources and-more"
+      "about . copyright copyright copyright";
+    gap: var(--space-m);
+  }
+
+  .page-nav ul {
+    display: flex;
+  }
+
+  .page-nav .btn {
+    margin-left: var(--space-inset-s);
+    padding: var(--space-inset-s) var(--space-inset-m);
+  }
+
+  .section-1 h1 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .section-1 .two-column > div:first-child {
+    max-width: 50%;
+    align-self: flex-start;
+  }
+  
+  .section-1 .two-column > div:last-child {
+    max-width: 50%;
+    align-self: flex-end;
+  }
+
+  .tablet.three-column > * {
+    width: 33%;
+  }
+
+  .section-3 h2 {
+    font-size: var(--font-size-m);
+    line-height: var(--line-height-m);
+  }
+
+  .section-2 p,
+  .section-3 p {
+    font-size: var(--font-size-s);
+    line-height: var(--line-height-s);
+  }
+
+}
+
+@media (width >= 64rem) {
+
+  .desktop.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-xl);
+  }
+
+  .desktop.three-column > * {
+    width: 100%;
+  }
+
+  .section-3 .two-column > :first-child {
+    max-width: 60%;
+    align-self: flex-start;
+  }
+
+  .section-3 .two-column > :last-child {
+    max-width: 40%;
+    align-self: flex-start;
+  }
+
+  .section-3 .sidebar.flex-container {
+    flex-direction: column;
+  }
+
+  .section-3 h2 {
+    font-size: var(--font-size-l);
+    line-height: var(--line-height-l);
+  }
+  .section-2 p,
+  .section-3 p {
+    font-size: var(--font-size-m);
+    line-height: var(--line-height-m);
+  }
+
+}
