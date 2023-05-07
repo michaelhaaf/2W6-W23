@@ -214,6 +214,9 @@ ol[role="list"] {
 a {
   color: inherit;
 }
+a:hover {
+  filter: brightness(1.5);
+}
 
 
 /* 
@@ -308,6 +311,10 @@ figcaption::before {
   display: none;
 }
 
+.rotate-180 {
+  transform: rotate(0.5turn);
+}
+
 .stack-0-margin {
   display: block;
   margin: 0;
@@ -330,14 +337,17 @@ figcaption::before {
   -webkit-line-clamp: 0;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  transition: all 0.3s ease-in;
   max-height: 0;
   margin: var(--space-stack-m);
+  border: 1px solid var(--foreground);
 }
 .hover-expand:hover + p,
 .hover-expand + p:hover {
   -webkit-line-clamp: 100;
-  max-height: 100%
+  max-height: 100%;
+  border: none;
+  border-top: 2px solid var(--foreground);
+  padding-top: var(--space-inset-s);
 }
 .hover-expand::after {
   content: "";
@@ -367,6 +377,7 @@ figcaption::before {
 .btn:focus {
   cursor: pointer;
   opacity: 0.75;
+  filter: none;
 }
 .btn:active {
   transform: scale(0.95);
@@ -375,8 +386,6 @@ figcaption::before {
 .nav a {
   display: inline-block;
   text-decoration: none;
-  font-size: var(--font-size-s);
-  line-height: var(--line-height-s);
 }
 
 .footer-nav a {
@@ -495,8 +504,9 @@ figcaption::before {
 
 
 .section-1 {
+  --foreground: var(--white);
   background-color: var(--primary-medium);
-  color: var(--white);
+  color: var(--foreground);
   min-height: var(--min-title-card-height);
 }
 
@@ -518,6 +528,7 @@ figcaption::before {
 
 
 .section-2 {
+  --foreground: var(--primary-light);
   background-color: var(--off-white);
   color: var(--black);
 }
@@ -554,8 +565,9 @@ figcaption::before {
 }
 
 .section-3 .card-s {
+  --foreground: var(--white);
   background-color: var(--primary-dark);
-  color: var(--white);
+  color: var(--foreground);
   margin: var(--space-stack-m);
 }
 
@@ -565,10 +577,11 @@ figcaption::before {
 
 
 .page-footer {
+  --foreground: var(--primary-light);
   color: var(--primary-light);
   background-color: var(--primary-dark);
-  font-size: var(--font-size-xs);
-  line-height: var(--line-height-xs);
+  font-size: var(--font-size-xxs);
+  line-height: var(--line-height-xxs);
 }
 
 .page-footer h1 {
@@ -616,11 +629,11 @@ figcaption::before {
   .tablet.grid-container {
     display: grid;
     justify-items: start;
-    grid-template-columns: 2fr var(--space-m) 1fr 1fr 1fr;
+    grid-template-columns: 2fr var(--space-m) 1fr 2fr;
     grid-template-rows: auto 1fr;
     grid-template-areas: 
-      "about . getting-around external-resources and-more"
-      "about . copyright copyright copyright";
+      "about . getting-around external-resources"
+      "about . copyright copyright";
     gap: var(--space-m);
   }
 
