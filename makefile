@@ -51,13 +51,17 @@ FIND_OPTIONS = -maxdepth 1 \
 
 ## MAKE RULES
 
-.PHONY: all clean indices 
+.PHONY: all clean indices clean-parcel
 
 all: $(ASSIGNMENT_ZIPS) $(TUTORIAL_ZIPS) $(PAGE_TEMPLATE) $(PAGES_HTML) $(LECTURES_HTML) 
 
 clean:
 	rm lectures/*.html
 	rm pages/*.html
+
+clean-parcel:
+	find . -depth -type d -name "node_modules" -exec rm -rf {} \;
+	find . -depth -type d -name ".parcel-cache" -exec rm -rf {} \;
 
 indices:
 	tree lectures -H ../lectures | htmlq "body p a" | grep html > ./assets/listings/lecture-listing.html
@@ -102,4 +106,3 @@ pages/tutorials.html: md/pages/tutorials.md
 	touch $(HOME_MD)
 	pandoc $(PANDOC_OPTIONS) -o $(TUTORIALS_TEMPLATE) $<
 	python ./assets/build-scripts/insert-listings.py --document tutorials > pages/tutorials.html
-

@@ -201,6 +201,12 @@ exercises
         </a>
        </li>
        <li>
+        <a href="../pages/tutorials.html#week-15-tutorial">
+         week 15 
+tutorial
+        </a>
+       </li>
+       <li>
         <a href="../pages/tutorials.html#week-04-solutions">
          week 04 
 solutions
@@ -301,6 +307,8 @@ Exercises</a></li>
 Exercises</a></li>
 <li><a href="#week-11-exercises" id="toc-week-11-exercises">Week 11
 Exercises</a></li>
+<li><a href="#week-15-tutorial" id="toc-week-15-tutorial">Week 15
+Tutorial</a></li>
 </ul></li>
 <li><a href="#solutions" id="toc-solutions">Solutions</a>
 <ul>
@@ -334,8 +342,8 @@ Solutions</a></li>
      </div>
            <p class="date">
       Last update:
-      <time datetime="Fri May 5 14:57:54 2023">
-       Friday, May 05, 2023
+      <time datetime="Sun May 7 17:53:35 2023">
+       Sunday, May 07, 2023
       </time>
      </p>
          </header>
@@ -445,6 +453,19 @@ href="../tutorials/week11-june-exercises.zip">guestLecture.zip</a></p>
 View files in browser
 </button>
 <pre id="week11-june-exercises-listing" class="collapsible">
+</pre>
+</section>
+<section id="week-15-tutorial" class="level2">
+<h2>Week 15 Tutorial</h2>
+<p>This tutorial demonstrates several of the intermediate and advanced
+CSS and User Interface concepts we learned at the end of the
+semester.</p>
+<p>Files: <a
+href="../tutorials/week15-best-practises.zip">week15-best-practises.zip</a></p>
+<button class="accordion">
+View files in browser
+</button>
+<pre id="week15-best-practises-listing" class="collapsible">
 </pre>
 <hr />
 </section>

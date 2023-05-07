@@ -17,6 +17,7 @@ abstract: |
 [week06flexboxzip]: ../tutorials/week06-flexbox-exercises.zip
 [week10gridzip]: ../tutorials/week10-grid-exercises.zip
 [week11junezip]: ../tutorials/week11-june-exercises.zip
+[week15bestpractiseszip]: ../tutorials/week15-best-practises.zip
 
 [week04boxmodelsolutions]: ../tutorials/week04-box-model-solutions.zip
 [week04foundationssolutions]: ../tutorials/week04-foundations-solutions.zip
@@ -112,6 +113,17 @@ Files: [guestLecture.zip][week11junezip]
 <button class="accordion">View files in browser</button>
 
 <pre id="week11-june-exercises-listing" class="collapsible">
+</pre>
+
+## Week 15 Tutorial
+
+This tutorial demonstrates several of the intermediate and advanced CSS and User Interface concepts we learned at the end of the semester.
+
+Files: [week15-best-practises.zip][week15bestpractiseszip]
+
+<button class="accordion">View files in browser</button>
+
+<pre id="week15-best-practises-listing" class="collapsible">
 </pre>
 
 ---
