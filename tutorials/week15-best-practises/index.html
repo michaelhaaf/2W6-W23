@@ -172,10 +172,17 @@
           </p>
 
           <figure>
-            <img
-              src="./assets/1977_10_IN2.webp"
-              alt="three drawings of common website layouts"
-            />
+            <picture>
+              <source type="image/webp" srcset="./assets/main-image.webp" />
+              <source
+                type="image/jpeg"
+                srcset="./assets/main-image.webp?as=jpeg"
+              />
+              <img
+                src="./assets/main-image.webp"
+                alt="TODO replace this image"
+              />
+            </picture>
             <figcaption>
               Many websites have common requirements for how content should be
               displayed. Learning design
@@ -285,7 +292,7 @@
               <a
                 href="https://courses.kevinpowell.co/conquering-responsive-layouts"
                 >Conquering Responsive Layouts</a
-              >. 
+              >.
             </span>
             <p>
               <a
