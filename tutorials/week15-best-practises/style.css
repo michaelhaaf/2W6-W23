@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* ------------------------------------------ *\
   || Table of Contents
 \* ------------------------------------------ */
@@ -47,19 +43,6 @@
 /* ------------------------------------------ *\
   || Themes
 \* ------------------------------------------ */
-
-/* Color specifications */
-:root {
-  --primary-dark: #2E323F;
-  --primary-medium: #3B4050;
-  --primary-light: #6F737F;
-  --secondary-dark: #A59678;
-  --black: #000000;
-  --white: #ffffff;
-  --off-white: #F0F0F0;
-  --filter-black: brightness(0) saturate(100%);
-}
-
 
 /* Color specifications */
 :root {

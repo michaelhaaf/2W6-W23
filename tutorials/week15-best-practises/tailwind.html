@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>2W6-W23: Tailwind Tutorial</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="tailwind.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="http://files.keyes.ie/things/baseliner/baseliner-latest.min.js"></script>
+  </head>
+  <body class="">
+    <header class="bg-primaryDark text-white">
+      <div class="flex">
+        <button class="toggle" aria-label="open navigation">
+          <img src="./assets/hamburger.svg" alt="toggle menu icon" />
+        </button>
+        <a class="" href="#">
+          <img class="h-16 w-16" src="assets/favicon.svg" alt="2W6-W23 Logo" />
+        </a>
+        <nav class="flex items-center">
+          <ul class="flex" role="list">
+            <li><a href="#" class="">Home</a></li>
+            <li><a href="#" class="">About</a></li>
+            <li><a href="#" class="">Contact</a></li>
+          </ul>
+          <ul class="flex" role="list">
+            <li><a href="#" class="">Sign In</a></li>
+            <li><a href="#" class="btn">Sign Up</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="bg-primaryMedium">
+      <div class="sm:container">
+        <h1 class="text-6xl text-bold text-white">Accessible design <em class="text-secondaryDark">doesn't have to be a struggle...</em></h1>
+        <div class="">
+          <p>
+            ... though it might be at first. In any skill, hobby, or profession,
+            developing good technique takes knowledge and practise.
+          </p>
+          <p>
+            Once you have learned some things about it, though,
+            <em>accessible designs</em> are actually quite pleasant to make
+            (and, of course, to use).
+          </p>
+          <p>
+            Over the years, HTML5 and CSS have matured into very capable
+            languages for creating and styling web interfaces. You should
+            (hopefully) feel at the end of this course the ability to create (at
+            least approximately) any web layout you like using these languages.
+          </p>
+          <button type="" class="btn">I Want to Learn</button>
+          <p>
+            Sadly, the button above can't help you. Inspecting the source code
+            of this document, however, can.
+          </p>
+          <p>
+            I have tried to summarize what we have learned (and some things we
+            haven't) about HTML and CSS best practises into the design and
+            documentation of this page.
+          </p>
+
+          <p>
+            Inspect the elements, read the source code comments, and feel free
+            to re-use this code in your future projects. Let me know if you have
+            any questions!
+          </p>
+          <footer>
+            <span class="stack-0-margin font-xs"
+              >Content and code written by Michael Haaf &copy;2023</span
+            >
+            <span class="stack-0-margin font-xs"
+              >Inspired by the final project template for the
+              <a
+                href="https://courses.kevinpowell.co/conquering-responsive-layouts"
+                >Conquering Responsive Layouts</a
+              >
+              course by Kevin Powell.</span
+            >
+          </footer>
+        </div>
+      </div>
+    </section>
+    <section class="section-2 card">
+      <div class="container tablet flex-container three-column">
+        <div class="flex-container">
+          <h2>Mobile-first</h2>
+          <p class="hover-expand">
+            Mobile layouts are typically <em>single-column</em>, perfectly
+            suited to the block stacking nature of <em>unstyled HTML</em>.
+            Mobile-first designs force the developer to emphasize coherent
+            structure and markup.
+          </p>
+          <p>
+            Inspect this page in a mobile layout, both with and without page
+            style. Then,
+            <a
+              href="https://technocript.com/how-to-see-and-extract-css-of-a-website/#How-to-See-CSS-of-a-Website"
+              >view the source CSS</a
+            >
+            for this website. What, if anything, does the CSS add to the layout
+            of this page?
+          </p>
+        </div>
+        <div class="">
+          <h2>Responsive</h2>
+          <p class="hover-expand">
+            Responsive web designs have
+            <em>well-defined layouts for each device</em> used to browse the
+            page. Tablet and Destkop layouts are often composed of many columns
+            to take advantage of wider viewport space.
+          </p>
+          <p>
+            Use
+            <a
+              href="https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html"
+              >responsive mode</a
+            >
+            in your browser's developer tools to inspect this page at a variety
+            of widths. How does the overall layout change at each breakpoint?
+            How are the styles of some components changed?
+          </p>
+        </div>
+        <div class="">
+          <h2>Accessible</h2>
+          <p class="hover-expand">
+            Accessible design ensures that websites are usable by as many people
+            as possible.
+            <em
+              >Page semantics, colour contrast, keyboard interactivity, network
+              speed, and device capability</em
+            >
+            are just some properties that developers should have in mind when
+            designing websites.
+          </p>
+          <p>
+            Use the
+            <a
+              href="https://developer.chrome.com/docs/devtools/accessibility/reference/#pane"
+              >accessibility auditing tool</a
+            >
+            to inspect these properties on this page. What has been done well?
+            What has room for improvement?
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="section-3 card">
+      <div class="container desktop flex-container two-column">
+        <div class="">
+          <h1>The art and science of interface design</h1>
+          <p>
+            With practise, you will obtain <em>genuine fluency</em> in
+            expressing aesthetic and responsive interfaces using the modern
+            tools of the trade.
+          </p>
+          <p>
+            Remember that when you are developing websites, or any programs,
+            <em>you are not the only person who uses them.</em> In fact, if you
+            are successful in this field, your code and your projects will be
+            used and read by others many
+            <a href="https://en.wikipedia.org/wiki/Order_of_magnitude"
+              >orders of magnitude</a
+            >
+            more than the amount of time spent creating them.
+          </p>
+
+          <figure>
+            <picture class="">
+              <source
+                type="image/webp"
+                srcset="./assets/liberation.jpg?as=webp"
+              />
+              <source
+                type="image/jpeg"
+                srcset="./assets/liberation.jpg?as=jpeg"
+              />
+              <img
+                src="./assets/liberation.jpg"
+                alt="Tesselated triangles transform to terns. 'Liberation' (1955), M.C. Escher."
+              />
+            </picture>
+            <figcaption>
+              <a href="">Liberation</a>, &copy;1955 M.C.Escher. All websites may
+              be different, but there are component and layout
+              <a href="https://web.dev/patterns/layout/">patterns</a> that are
+              common to all projects. Learning to identify and create similar
+              patterns will help you develop user interfaces systematically.
+              Retrieved from <a href="https://www.wikiart.org/">Wikiart.org</a>.
+            </figcaption>
+          </figure>
+          <p>
+            While the content of your websites and your projects is of course
+            important, the accessibility of your website is the key factor that
+            determines whether that content can be used and understood by
+            others. Therefore, it is important to understand the main obstacles
+            to accessibility in user interface design.
+          </p>
+        </div>
+        <div class="sidebar tablet desktop flex-container three-column">
+          <div class="card-s">
+            <h2>Break it down</h2>
+            <p class="hover-expand">
+              Not unlike lego, HTML structural elements are <em>blocks</em> by
+              default. Each element is a unit on its own that, when combined
+              with other elements, comprises a greater whole.
+            </p>
+            <p>
+              When designing, ask yourself: what IS each element on my page?
+              What are its constraints? How does it relate to the elements
+              around it?
+            </p>
+          </div>
+
+          <div class="card-s">
+            <h2>Work your way up</h2>
+            <p class="hover-expand">
+              Not unlike cooking, CSS styles are <em>recipes</em> for combining
+              and transforming ingredients into a finished <s>meal</s> website.
+            </p>
+            <p>
+              When <s>cooking</s> adding css, ask yourself: does this style help
+              fulfill a requirement of my project? Try to avoid band-aid
+              solutions.
+            </p>
+          </div>
+          <div class="card-s">
+            <h2>~*~</h2>
+            <p class="hover-expand">
+              Not unlike any other programming language, it's helpful to debug
+              as you develop. Temporary <em>borders</em> around elements in your
+              CSS is one way to help visualize how that element is flowing in
+              your document.
+            </p>
+            <p>
+              Finally: there's no need to be so serious all the time. It's okay
+              to make mistakes. The important things it to just make stuff so
+              that you can learn how it works.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="page-footer card">
+      <div class="container">
+        <h1>just the tip of the iceberg</h1>
+        <div class="tablet grid-container">
+          <nav class="nav footer-nav grid-col-b">
+            <h2>Getting around</h2>
+            <ul role="list">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="nav footer-nav grid-col-c">
+            <h2>External Resources</h2>
+            <ul role="list">
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/CSS_and_JavaScript">CSS/JS: Accessibility best practises</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#accessibility_testing_checklist">Accessibility Checklist</a></li>
+              <li><a href="https://web.dev/patterns/">HTML/CSS/JS Patterns</a></li>
+            </ul>
+          </div>
+          <div class="grid-col-e">
+            <h2>Copyright</h2>
+            <span class="stack-0-margin font-xxs">
+              &copy;2023 Michael Haaf. Site content:
+              <a href="https://creativecommons.org/licenses/by/4.0/"
+                >CC-BY-4.0</a
+              >. Site
+              <a href="https://github.com/michaelhaaf/2W6-W23/blob/main/LICENSE"
+                >code</a
+              >:
+              <a
+                href="https://michaelhaaf.github.io/2W6-W23/pages/home.html#course-website"
+                >GNU GPL v3.0</a
+              >
+            </span>
+            <span class="stack-0-margin font-xxs">
+              Site design inspired by an assignment from
+              <a
+                href="https://courses.kevinpowell.co/conquering-responsive-layouts"
+                >Conquering Responsive Layouts</a
+              >.
+            </span>
+            <p>
+              <a
+                class="license-logo"
+                rel="license"
+                href="https://www.gnu.org/licenses/gpl-3.0.html"
+                ><img
+                  alt="GNU General Public License V3"
+                  src="./assets/gpl-v3-logo.svg"
+              /></a>
+              <a
+                class="license-logo"
+                rel="license"
+                href="http://creativecommons.org/licenses/by/4.0/"
+                ><img
+                  alt="Creative Commons License"
+                  src="https://i.creativecommons.org/l/by/4.0/80x15.png"
+              /></a>
+            </p>
+          </div>
+          <div class="grid-col-a">
+            <h2>About our company</h2>
+            <p>
+              In fact, I am not a company, I am a teacher, and this website is
+              more about
+              <a
+                href="https://michaelhaaf.github.io/2W6-W23/lectures/week15.html"
+                >learning how to develop a user interface</a
+              >
+              than it is about selling a product.
+            </p>
+            <p>
+              If I were a company, however, I might have a blurb here about the
+              kinds of products and services I offer.
+            </p>
+            <p class="hover-expand"></p>
+            <p>
+              The less you eat, drink and buy books; the less you go to the
+              theatre, the dance hall, the public house; the less you think,
+              love, theorise, sing, paint, fence, etc., the more you save
+              &mdash; the greater becomes your treasure which neither moths nor
+              rust will devour &mdash; your capital. The less you are, the less
+              you express your own life, the more you have, i.e., the greater is
+              your alienated life, the greater is the store of your estranged
+              being. Everything taken from you in life and in humanity, is
+              replaced for you in money and in wealth; and all the things which
+              you cannot do, your money can do. It can eat and, drink, go to the
+              dance hall and the theatre; it can travel, it can appropriate art,
+              learning, the treasures of the past, political power &mdash; all
+              this it can appropriate for you &mdash; it can buy all this: it is
+              true endowment. Yet being all this, it wants to do nothing but
+              create itself, buy itself; for everything else is after all its
+              servant, and when I have the master I have the servant and do not
+              need his servant. All passions and all activity must therefore be
+              submerged in avarice. The developer may only have enough for him
+              to want to live, and may only want to live in order to have that.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="main.js" defer></script>
+  </body>
+</html>
