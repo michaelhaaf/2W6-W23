@@ -1,0 +1,62 @@
+:root {
+  color-scheme: dark light;
+  --filter-black: brightness(0) saturate(100%);
+}
+
+:root,
+:root[data-theme="light"] {
+  --base: #faf4ed;
+  --surface: #fffaf3;
+  --surface-2: #f2e9e1;
+  --overlay: #f2e9e1;
+  --muted: #9893a5;
+  --muted-subtle: #797593;
+  --subtle: #67637e;
+  --text: #575279;
+  --accent-red: #9e4c65;
+  --accent-gold: #905a0e;
+  --accent-orange: #b33d37;
+  --accent-teal: #286983;
+  --accent-foam: #406c77;
+  --accent-violet: #745d8e;
+  --highlight-low: #f4ede8;
+  --highlight-med: #dfdad9;
+  --highlight-high: #cecacd;
+  /* Hex color to CSS filter calculator: https://isotropic.co/tool/hex-color-to-css-filter/ */
+  --svg-filter-base: var(--filter-black) invert(31%) sepia(10%) saturate(1771%)
+    hue-rotate(208deg) brightness(99%) contrast(86%);
+  --svg-filter-surface: var(--filter-black) invert(41%) sepia(7%)
+    saturate(1400%) hue-rotate(209deg) brightness(91%) contrast(83%);
+  --svg-filter-accent-red: var(--filter-black) invert(37%) sepia(11%)
+    saturate(2106%) hue-rotate(291deg) brightness(97%) contrast(97%);
+}
+
+:root[data-theme="dark"] {
+  /* Adaptation of Rose Pine Moon theme: 
+* https://rosepinetheme.com/palette/ingredients 
+*/
+  --base: #232136;
+  --surface: #2a273f;
+  --surface-2: #2a273f;
+  --overlay: #393552;
+  --muted: #6e6a86;
+  --muted-subtle: #908caa;
+  --subtle: #a7a4bc;
+  --text: #e0def4;
+  --accent-red: #ee86a3;
+  --accent-gold: #f6c177;
+  --accent-orange: #ea9a97;
+  --accent-teal: #6cb0cb;
+  --accent-foam: #9ccfd8;
+  --accent-violet: #c4a7e7;
+  --highlight-low: #2a283e;
+  --highlight-med: #44415a;
+  --highlight-high: #56526e;
+  /* Hex color to CSS filter calculator: https://isotropic.co/tool/hex-color-to-css-filter/ */
+  --svg-filter-base: var(--filter-black) invert(87%) sepia(24%) saturate(138%)
+    hue-rotate(206deg) brightness(96%) contrast(100%);
+  --svg-filter-surface: var(--filter-black) invert(73%) sepia(10%)
+    saturate(469%) hue-rotate(208deg) brightness(91%) contrast(84%);
+  --svg-filter-accent-red: var(--filter-black) invert(87%) sepia(22%)
+    saturate(3499%) hue-rotate(291deg) brightness(91%) contrast(105%);
+}

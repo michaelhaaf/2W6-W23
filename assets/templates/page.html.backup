@@ -289,35 +289,17 @@ solution
     </ul>
    </nav>
   </aside>
-  $if(toc)$
-  <aside class="aside--page">
-   <nav class="nav nav--page" id="$idprefix$TOC" role="doc-toc">
-    $if(toc-title)$
-    <h2 id="$idprefix$toc-title">
-     $toc-title$
-    </h2>
-    $endif$ $if(prev-page)$
-    <a class="" href="$prev-page$">
-     <img alt="" class="icon" src="../assets/images/feather-icons/chevron-left.svg"/>
-     <span class="icon-text">
-      Previous page...
-     </span>
-    </a>
-    $endif$ $table-of-contents$ $if(next-page)$
-    <a class="" href="$next-page$">
-     <img alt="" class="icon" src="../assets/images/feather-icons/chevron-right.svg"/>
-     <span class="icon-text">
-      Next page...
-     </span>
-    </a>
-    $endif$
-   </nav>
-  </aside>
-  $endif$
+
   <main class="main base">
+
    <article class="article">
-    $for(include-before)$ $include-before$ $endfor$ $if(title)$
-    <header id="title-block-header">
+
+
+
+    $for(include-before)$ $include-before$ $endfor$ 
+
+    $if(title)$
+    <header id="title-block-header" class="level1">
      <h1 class="title">
       $title$
      </h1>
@@ -345,7 +327,44 @@ solution
      </p>
      $endif$
     </header>
-    $endif$ $body$ $for(include-after)$ $include-after$ $endfor$
+    $endif$ 
+
+    $if(toc)$
+    <aside class="level1">
+     <nav class="margin" id="$idprefix$TOC" role="doc-toc">
+      $if(toc-title)$
+      <h2 id="$idprefix$toc-title">
+       $toc-title$
+      </h2>
+      $endif$ 
+
+      $if(prev-page)$
+      <a class="" href="$prev-page$">
+       <img alt="" class="icon" src="../assets/images/feather-icons/chevron-left.svg"/>
+       <span class="icon-text">
+        Previous page...
+       </span>
+      </a>
+      $endif$ 
+
+      $table-of-contents$ 
+
+      $if(next-page)$
+      <a class="" href="$next-page$">
+       <img alt="" class="icon" src="../assets/images/feather-icons/chevron-right.svg"/>
+       <span class="icon-text">
+        Next page...
+       </span>
+      </a>
+      $endif$
+
+     </nav>
+    </aside>
+    $endif$
+
+    $body$ 
+
+    $for(include-after)$ $include-after$ $endfor$
    </article>
   </main>
   <footer class="footer">

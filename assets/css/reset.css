@@ -6,10 +6,10 @@
   margin: 0;
   padding: 0;
   border: 0;
-  outline: 0;
   font: inherit;
   font-size: 100%;
   vertical-align: baseline;
+  background: transparent;
 }
 
 /*
@@ -21,6 +21,15 @@
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html {
+  box-sizing: border-box;
+  min-height: 100%;
 }
 
 /* From the Meyer Reset: 

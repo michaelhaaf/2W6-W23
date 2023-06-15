@@ -289,11 +289,39 @@ solution
     </ul>
    </nav>
   </aside>
-    <aside class="aside--page">
-   <nav class="nav nav--page" id="TOC" role="doc-toc">
-        <h2 id="toc-title">
-     Page navigation
-    </h2>
+  <main class="main base">
+   <article class="article">
+     
+
+        <header class="level1" id="title-block-header">
+     <h1 class="title">
+      2W6-W23: Assignments
+     </h1>
+            <div class="abstract">
+      <div class="abstract-title">
+       Assigned lab work and solutions
+      </div>
+      <p>Here you will find information about all assigned lab work
+      given this semester.</p>
+     </div>
+           <p class="date">
+      Last update:
+      <time datetime="Thu Jun 15 18:12:17 2023">
+       Thursday, June 15, 2023
+      </time>
+     </p>
+         </header>
+     
+
+        <aside class="level1">
+     <nav class="margin" id="TOC" role="doc-toc">
+            <h2 id="toc-title">
+       Page navigation
+      </h2>
+       
+
+       
+
       <ul>
 <li><a href="#project" id="toc-project">Project</a>
 <ul>
@@ -318,35 +346,18 @@ Solution</a></li>
 <li><a href="#lab-4-solution" id="toc-lab-4-solution">Lab 4
 Solution</a></li>
 </ul></li>
-</ul>     <a class="" href="../pages/tutorials.html">
-     <img alt="" class="icon" src="../assets/images/feather-icons/chevron-right.svg"/>
-     <span class="icon-text">
-      Next page...
-     </span>
-    </a>
-       </nav>
-  </aside>
-    <main class="main base">
-   <article class="article">
-         <header id="title-block-header">
-     <h1 class="title">
-      2W6-W23: Assignments
-     </h1>
-            <div class="abstract">
-      <div class="abstract-title">
-       Assigned lab work and solutions
-      </div>
-      <p>Here you will find information about all assigned lab work
-      given this semester.</p>
-     </div>
-           <p class="date">
-      Last update:
-      <time datetime="Sun May 7 17:53:33 2023">
-       Sunday, May 07, 2023
-      </time>
-     </p>
-         </header>
-     <hr />
+</ul> 
+
+            <a class="" href="../pages/tutorials.html">
+       <img alt="" class="icon" src="../assets/images/feather-icons/chevron-right.svg"/>
+       <span class="icon-text">
+        Next page...
+       </span>
+      </a>
+           </nav>
+    </aside>
+    
+    <hr />
 <section id="project" class="level1">
 <h1>Project</h1>
 <p>Instructions and relevant information about both Milestone 1 and
@@ -478,6 +489,8 @@ View files in browser
 </pre>
 </section>
 </section> 
+
+    
    </article>
   </main>
   <footer class="footer">

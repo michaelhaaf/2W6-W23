@@ -3,20 +3,15 @@
 \* ------------------------------------------ */
 
 /* 
-* || Themes
+* || Imports
 *
 * || Reset
-*/
-@import "reset.css";
-/*
 *
-* || Globals
-*   - margin, padding, box-sizing
+* || Global
+*
+* || Themes 
 *
 * || Typography
-*   - webfont imports
-*   - text elements redefined for vertical rythm, measure
-*   - p, h1-6, 
 *
 * || Utilities
 *   - .hidden, .text-shadow, etc.
@@ -41,246 +36,62 @@
 *     - https://cssguidelin.es/
 */
 
+
 /* ------------------------------------------ *\
-  || Themes
+  || Imports
 \* ------------------------------------------ */
 
-:root {
-  /* Colors, filters, and properties common to both themes */
-  color-scheme: dark light;
-  --filter-black: brightness(0) saturate(100%);
-}
+@import "reset.css";
+@import "globals.css";
+@import "themes.css";
+@import "typography.css";
 
-/* Font specifications */
-:root {
-  --font-family-body: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-  --font-family-headers: var(--font-family-body);
-  --font-size-xxs: 0.875rem;    /* 14px */
-  --font-size-xs: 1rem;         /* 16px */
-  --font-size-s: 1.125rem;      /* 18px */
-  --font-size-m: 1.25rem;       /* 20px */
-  --font-size-l: 2rem;          /* 32px */
-  --font-size-xl: 3rem;         /* 48px */
-  --font-size-xxl: 5rem;        /* 80px */
-  --font-weight-headers: 700;
-  --font-weight-subheaders: 300;
-  --line-height-rem: 2rem;
-  --line-height-xxs: 2.286;     /* 2.125 * 14px = 32px (1 line) */
-  --line-height-xs: 2;          /* 2 * 16px = 32px (1 line) */
-  --line-height-s: 1.778;       /* 1.778 * 18px = 32px (1 line) */
-  --line-height-m: 1.6;         /* 1.6 * 20px = 32px (1 line) */
-  --line-height-l: 1.25;        /* 1.25 * 32px = 40px -- need 0.5rem (8 extra px) to make 1.5 lines, this is added in padding */ 
-  --line-height-xl: 1.125;      /* 1.125 * 48px = 54px -- need 0.625rem (10 extra px) to make 2 lines, this is added in padding */  
-  --line-height-xxl: 1.2;       /* 1.2 * 80px = 96px (3 lines) */
-}
-
-/* Spacing variables */
-:root {
-  /* Default: 1rem = 16px, 2rem = 32px */
-  /* Line height will be set to 32px to allow larger than 16px body font */
-  --space: 2rem;
-  --space-xs: 0.5rem;
-  --space-s: 1rem;
-  --space-m: 2rem;
-  --space-l: 4rem;
-  --space-xl: 8rem;
-  /* Define internal spacing (padding, generally) for components */
-  /* em, unlike rem, will scale to element font -- elements with larger fonts will have proportionally larger inset */
-  --space-inset: 1em;
-  --space-inset-xs: 0.25em;
-  --space-inset-s: 0.5em;
-  --space-inset-m: 1em;
-  --space-inset-l: 2em;
-  --space-inset-xl: 4em;
-  /* Default HTML flow spacing between blocks */
-  --space-stack: 0 0 2rem 0;
-  --space-stack-xs: 0 0 0.5rem 0;
-  --space-stack-s: 0 0 1rem 0;
-  --space-stack-m: 0 0 2rem 0;
-  --space-stack-l: 0 0 4rem 0;
-  --space-stack-xl: 0 0 8rem 0;
-  /* Vertical offset for correcting alignment */
-  --space-offset: 1.25rem 0 0 0;
-}
-
-/* Use space definitions to define layout spacing */
-:root {
-  --margin-figure: var(--space-stack-m);
-  --margin-text: var(--space-stack);
-  --margin-text-xl: var(--space-stack-l);
-  --padding-figure: var(--space-offset);
-  --padding-text: var(--space-offset);
-  --padding-text-l: calc(var(--space-offset) + 0.5rem);
-  --padding-text-xl: calc(var(--space-offset) + 0.625rem);
-}
-
-/* Display sizes requirements */
-:root {
-  --display-size-hd: 1080px;
-  --display-size-1440p: 1440px;
-}
-
-
-:root,
-:root[data-theme="light"] {
-
-  --base: #faf4ed;
-  --surface: #fffaf3;
-  --surface-2: #f2e9e1;
-  --overlay: #f2e9e1;
-  --muted: #9893a5;
-  --muted-subtle: #797593;
-  --subtle: #67637e;
-  --text: #575279;
-  --accent-red: #9e4c65;
-  --accent-gold: #905a0e;
-  --accent-orange: #b33d37;
-  --accent-teal: #286983;
-  --accent-foam: #406c77;
-  --accent-violet: #745d8e;
-  --highlight-low: #f4ede8;
-  --highlight-med: #dfdad9;
-  --highlight-high: #cecacd;
-
-  /* Hex color to CSS filter calculator: https://isotropic.co/tool/hex-color-to-css-filter/ */
-  --svg-filter-base: var(--filter-black) invert(31%) sepia(10%) saturate(1771%) hue-rotate(208deg) brightness(99%) contrast(86%);
-  --svg-filter-surface: var(--filter-black) invert(41%) sepia(7%) saturate(1400%) hue-rotate(209deg) brightness(91%) contrast(83%);
-  --svg-filter-accent-red: var(--filter-black) invert(37%) sepia(11%) saturate(2106%) hue-rotate(291deg) brightness(97%) contrast(97%); 
-}
-
-:root[data-theme="dark"] {
-  /* Adaptation of Rose Pine Moon theme: 
-* https://rosepinetheme.com/palette/ingredients 
-*/
-  --base: #232136;
-  --surface: #2a273f;
-  --surface-2: #2a273f;
-  --overlay: #393552;
-  --muted: #6e6a86;
-  --muted-subtle: #908caa;
-  --subtle: #a7a4bc;
-  --text: #e0def4;
-  --accent-red: #ee86a3;
-  --accent-gold: #f6c177;
-  --accent-orange: #ea9a97;
-  --accent-teal: #6cb0cb;
-  --accent-foam: #9ccfd8;
-  --accent-violet: #c4a7e7;
-  --highlight-low: #2a283e;
-  --highlight-med: #44415a;
-  --highlight-high: #56526e;
-
-  /* Hex color to CSS filter calculator: https://isotropic.co/tool/hex-color-to-css-filter/ */
-  --svg-filter-base: var(--filter-black) invert(87%) sepia(24%) saturate(138%) hue-rotate(206deg) brightness(96%) contrast(100%);
-  --svg-filter-surface: var(--filter-black) invert(73%) sepia(10%) saturate(469%) hue-rotate(208deg) brightness(91%) contrast(84%);
-  --svg-filter-accent-red: var(--filter-black) invert(87%) sepia(22%) saturate(3499%) hue-rotate(291deg) brightness(91%) contrast(105%);
-}
+/* ------------------------------------------ *\
+  || Reset
+\* ------------------------------------------ */
 
 /* ------------------------------------------ *\
   || Global
 \* ------------------------------------------ */
 
-* {
-  transition: background-color 0.3s, color 0.3s, filter 0.3s;
-  transition-timing-function: ease-out;
-}
-
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-html {
-  box-sizing: border-box;
-  min-height: 100%;
-}
+/* ------------------------------------------ *\
+  || Themes
+\* ------------------------------------------ */
 
 /* ------------------------------------------ *\
   || Typography
 \* ------------------------------------------ */
 
-/* Font face imports
-* Create "et-book" font-family: a webfont of the typeface used in Edward Tufte's books.
-* See https://github.com/edwardtufte/et-book for more information.
-* CSS adapted from https://github.com/edwardtufte/et-book/blob/gh-pages/et-book.css 
-*/
-@charset "UTF-8";
-
-@font-face {
-  font-family: "et-book";
-  src: url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
-  src: url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff")
-      format("woff"),
-    url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf")
-      format("truetype"),
-    url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf")
-      format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+:is(section, header, footer, aside).level1 {
+  display: grid;
+  grid: auto-flow / [content] 2fr [margin] 1fr;
 }
 
-@font-face {
-  font-family: "et-book";
-  src: url("../fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
-  src: url("../fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff")
-      format("woff"),
-    url("../fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf")
-      format("truetype"),
-    url("../fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf")
-      format("svg");
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
+:is(section, header, footer, aside).level1 > * {
+  grid-column: content;
 }
 
-@font-face {
-  font-family: "et-book";
-  src: url("../fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
-  src: url("../fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff")
-      format("woff"),
-    url("../fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf")
-      format("truetype"),
-    url("../fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf")
-      format("svg");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
+:is(section, header, footer, aside).level1 > .margin {
+  grid-column: margin;
 }
 
-@font-face {
-  font-family: "et-book-roman-old-style";
-  src: url("../fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot");
-  src: url("../fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff")
-      format("woff"),
-    url("../fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf")
-      format("truetype"),
-    url("../fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.svg#etbookromanosf")
-      format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+article {
+  position: relative;
 }
 
-/* 
-* Approach borrowed heavily from the following:
-*   - "The Perfect Paragraph" and "Applying Macrotypography" https://www.smashingmagazine.com/2011/11/the-perfect-paragraph
-*   - https://vanseodesign.com/web-design/baseline-grid/
-*   - https://topfunky.com/baseline-rhythm-calculator/ 
-*   - https://jez.io/tufte-pandoc-css/tufte-md/
-*/
+aside.level1 {
+  position: absolute;
+  inset: 0;
+}
 
-body {
-  font-family: var(--font-family-body);
-  word-spacing: -0.05rem;
-  line-height: 1.5;
+nav.margin {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+figcaption::before {
+  content: "Figure: ";
 }
 
 h5,
@@ -329,30 +140,13 @@ h6 {
   || Objects
 \* ------------------------------------------ */
 
-.base {
-  background-color: var(--base);
-  color: var(--text);
+.header {
+  display: none;
 }
 
-.surface {
-  background-color: var(--surface);
-  color: var(--text);
-}
-
-.overlay {
-  background-color: var(--overlay);
-  color: var(--text);
-}
-
-.dropbtn {
-  border: none;
-  outline: none;
-}
-
-.theme-toggle-icon {
-  border: none;
-  outline: none;
-  cursor: pointer;
+.aside--page,
+.aside--site {
+  display: none;
 }
 
 /* ------------------------------------------ *\
