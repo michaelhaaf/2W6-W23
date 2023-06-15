@@ -5,7 +5,12 @@
 /* 
 * || Themes
 *
-* || Global
+* || Reset
+*/
+@import "reset.css";
+/*
+*
+* || Globals
 *   - margin, padding, box-sizing
 *
 * || Typography
@@ -43,23 +48,82 @@
 :root {
   /* Colors, filters, and properties common to both themes */
   color-scheme: dark light;
-
-  --shadow: #232136aa;
-  --light-fg-high: #f4ede8;
-  --light-fg-med: #dfdad9;
-  --light-fg-low: #cecacd;
-  --dark-fg-high: #2a283e;
-  --dark-fg-med: #44415a;
-  --dark-fg-low: #56526e;
-
   --filter-black: brightness(0) saturate(100%);
 }
 
+/* Font specifications */
+:root {
+  --font-family-body: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  --font-family-headers: var(--font-family-body);
+  --font-size-xxs: 0.875rem;    /* 14px */
+  --font-size-xs: 1rem;         /* 16px */
+  --font-size-s: 1.125rem;      /* 18px */
+  --font-size-m: 1.25rem;       /* 20px */
+  --font-size-l: 2rem;          /* 32px */
+  --font-size-xl: 3rem;         /* 48px */
+  --font-size-xxl: 5rem;        /* 80px */
+  --font-weight-headers: 700;
+  --font-weight-subheaders: 300;
+  --line-height-rem: 2rem;
+  --line-height-xxs: 2.286;     /* 2.125 * 14px = 32px (1 line) */
+  --line-height-xs: 2;          /* 2 * 16px = 32px (1 line) */
+  --line-height-s: 1.778;       /* 1.778 * 18px = 32px (1 line) */
+  --line-height-m: 1.6;         /* 1.6 * 20px = 32px (1 line) */
+  --line-height-l: 1.25;        /* 1.25 * 32px = 40px -- need 0.5rem (8 extra px) to make 1.5 lines, this is added in padding */ 
+  --line-height-xl: 1.125;      /* 1.125 * 48px = 54px -- need 0.625rem (10 extra px) to make 2 lines, this is added in padding */  
+  --line-height-xxl: 1.2;       /* 1.2 * 80px = 96px (3 lines) */
+}
+
+/* Spacing variables */
+:root {
+  /* Default: 1rem = 16px, 2rem = 32px */
+  /* Line height will be set to 32px to allow larger than 16px body font */
+  --space: 2rem;
+  --space-xs: 0.5rem;
+  --space-s: 1rem;
+  --space-m: 2rem;
+  --space-l: 4rem;
+  --space-xl: 8rem;
+  /* Define internal spacing (padding, generally) for components */
+  /* em, unlike rem, will scale to element font -- elements with larger fonts will have proportionally larger inset */
+  --space-inset: 1em;
+  --space-inset-xs: 0.25em;
+  --space-inset-s: 0.5em;
+  --space-inset-m: 1em;
+  --space-inset-l: 2em;
+  --space-inset-xl: 4em;
+  /* Default HTML flow spacing between blocks */
+  --space-stack: 0 0 2rem 0;
+  --space-stack-xs: 0 0 0.5rem 0;
+  --space-stack-s: 0 0 1rem 0;
+  --space-stack-m: 0 0 2rem 0;
+  --space-stack-l: 0 0 4rem 0;
+  --space-stack-xl: 0 0 8rem 0;
+  /* Vertical offset for correcting alignment */
+  --space-offset: 1.25rem 0 0 0;
+}
+
+/* Use space definitions to define layout spacing */
+:root {
+  --margin-figure: var(--space-stack-m);
+  --margin-text: var(--space-stack);
+  --margin-text-xl: var(--space-stack-l);
+  --padding-figure: var(--space-offset);
+  --padding-text: var(--space-offset);
+  --padding-text-l: calc(var(--space-offset) + 0.5rem);
+  --padding-text-xl: calc(var(--space-offset) + 0.625rem);
+}
+
+/* Display sizes requirements */
+:root {
+  --display-size-hd: 1080px;
+  --display-size-1440p: 1440px;
+}
+
+
 :root,
 :root[data-theme="light"] {
-  /* Adaptation of Rose Pine Dawn theme: 
-* https://rosepinetheme.com/palette/ingredients 
-*/
+
   --base: #faf4ed;
   --surface: #fffaf3;
   --surface-2: #f2e9e1;
@@ -82,13 +146,6 @@
   --svg-filter-base: var(--filter-black) invert(31%) sepia(10%) saturate(1771%) hue-rotate(208deg) brightness(99%) contrast(86%);
   --svg-filter-surface: var(--filter-black) invert(41%) sepia(7%) saturate(1400%) hue-rotate(209deg) brightness(91%) contrast(83%);
   --svg-filter-accent-red: var(--filter-black) invert(37%) sepia(11%) saturate(2106%) hue-rotate(291deg) brightness(97%) contrast(97%); 
-  --gradient-start: rgba(242, 233, 225, 0);
-  --gradient-target: rgba(242, 233, 225, 1);
-  --header-image: url("../images/light-theme/lissitzky-circles.jpg");
-  --header-image-text: "Preliminary sketch for a poster, by El Lizzitsky";
-  --header-position: 170% 42%;
-  --header-size: 90%;
-  --theme-toggle-icon: url("../images/light-theme/theme-toggle-icon.svg");
 }
 
 :root[data-theme="dark"] {
@@ -117,62 +174,11 @@
   --svg-filter-base: var(--filter-black) invert(87%) sepia(24%) saturate(138%) hue-rotate(206deg) brightness(96%) contrast(100%);
   --svg-filter-surface: var(--filter-black) invert(73%) sepia(10%) saturate(469%) hue-rotate(208deg) brightness(91%) contrast(84%);
   --svg-filter-accent-red: var(--filter-black) invert(87%) sepia(22%) saturate(3499%) hue-rotate(291deg) brightness(91%) contrast(105%);
-  --gradient-start: rgba(35, 33, 54, 0);
-  --gradient-target: rgba(35, 33, 54, 1);
-  --header-image: url("../images/dark-theme/guggenheim-brown.jpg");
-  --header-image-text: "A II, by László Moholy-Nagy";
-  --header-position: -70% 29%;
-  --header-size: 90%;
-  --theme-toggle-icon: url("../images/dark-theme/theme-toggle-icon.svg");
-
-}
-
-@media screen and (prefers-color-scheme: dark) {
-  /* Media theme preference query
-* I have not yet found a (non-js) way to avoid repeating one theme spec in order to use prefers-color-scheme automatically.
-* Here we redefine :root such that the dark theme is default when the user has specified it should be using their browser/OS configuration.
-*/
-  :root {
-    --base: #232136;
-    --surface: #2a273f;
-    --surface-2: #2a273f;
-    --overlay: #393552;
-    --muted: #6e6a86;
-    --muted-subtle: #908caa;
-    --subtle: #a7a4bc;
-    --text: #e0def4;
-    --accent-red: #ee86a3;
-    --accent-gold: #f6c177;
-    --accent-orange: #ea9a97;
-    --accent-teal: #6cb0cb;
-    --accent-foam: #9ccfd8;
-    --accent-violet: #c4a7e7;
-    --highlight-low: #2a283e;
-    --highlight-med: #44415a;
-    --highlight-high: #56526e;
-
-    /* Hex color to CSS filter calculator: https://isotropic.co/tool/hex-color-to-css-filter/ */
-    --svg-filter-base: var(--filter-black) invert(87%) sepia(24%) saturate(138%) hue-rotate(206deg) brightness(96%) contrast(100%);
-    --svg-filter-surface: var(--filter-black) invert(73%) sepia(10%) saturate(469%) hue-rotate(208deg) brightness(91%) contrast(84%);
-    --svg-filter-accent-red: var(--filter-black) invert(87%) sepia(22%) saturate(3499%) hue-rotate(291deg) brightness(91%) contrast(105%);
-    --gradient-start: rgba(35, 33, 54, 0);
-    --gradient-target: rgba(35, 33, 54, 1);
-    --header-position: -70% 29%;
-    --header-size: 90%;
-    --header-image: url("../images/dark-theme/guggenheim-brown.jpg");
-    --header-image-text: "A II, by László Moholy-Nagy";
-    --theme-toggle-icon: url("../images/dark-theme/theme-toggle-icon.svg");
-  }
 }
 
 /* ------------------------------------------ *\
   || Global
 \* ------------------------------------------ */
-
-* {
-  margin: 0;
-  padding: 0;
-}
 
 * {
   transition: background-color 0.3s, color 0.3s, filter 0.3s;
@@ -185,68 +191,7 @@ html:focus-within {
 
 html {
   box-sizing: border-box;
-  height: 100%;
-  font-size: 100%;
-}
-
-*,
-*::before,
-*::after {
-  /* 
-* Universal Box Sizing best practise, for max flexibility and :pseudo support.
-* See https://css-tricks.com/box-sizing/
-*/
-  box-sizing: inherit;
-}
-
-a:link {
-  color: var(--accent-foam);
-
-}
-a:visited {
-  color: var(--accent-violet);
-}
-
-video,
-img {
-/*
-* <img> tag fallback.
-* See https://bitsofco.de/styling-broken-images/
-* */
-  font-weight: 300;
-  line-height: 1.5;
-  text-align: center;
-  max-width: 100%;
-  margin: 0 auto;
-  height: auto;
-  display: block;
-  position: relative;
-}
-
-img::before {
-  content: "There should be an image here... very suspicious.";
-  display: block;
-  margin-bottom: 1.5rem;
-}
-
-img::after {
-  content: "(url: " attr(src) ")";
-  display: block;
-}
-
-iframe {
-  width: 100%;
-}
-
-.article .full-width,
-.full-width {
-  max-width: 90%;
-}
-
-.article .half-width,
-.half-width {
-  display: inline-block;
-  max-width: 45%;
+  min-height: 100%;
 }
 
 /* ------------------------------------------ *\
@@ -332,281 +277,15 @@ iframe {
 *   - https://jez.io/tufte-pandoc-css/tufte-md/
 */
 
-em {
-  font-style: italic;
-}
-strong {
-  font-style: bold;
-  color: var(--text);
-}
-
 body {
-  font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD",
-    "Book Antiqua", Georgia, serif;
+  font-family: var(--font-family-body);
   word-spacing: -0.05rem;
   line-height: 1.5;
-  overflow-y: visible;
-  overflow-x: hidden;
-}
-
-h1 {
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
-  font-size: 2rem;
-  line-height: 0.75;
-  font-weight: 400;
-}
-
-h1.title {
-  line-height: 1.5;
-  margin: -0.75rem 0 1.5rem;
-}
-
-article h1 {
-  line-height: 1.5;
-  margin-top: 2.25rem;
-}
-
-h2 {
-  margin-top: 1.5rem;
-  margin-bottom: 0.3409em;
-  font-size: 1.5rem;
-  line-height: 1;
-  padding-top: 0.75em;
-  font-style: italic;
-  font-weight: 400;
-}
-
-
-.article :is(section, header, table) {
-  max-width: 100%;
-}
-
-.article :is(iframe, blockquote, table) {
-  max-width: 90%;
-  margin: 1.5rem auto;
-}
-
-.abstract, .title, #title-block-header {
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-
-}
-
-.cp_embed_wrapper {
-  margin: 1.5rem 0;
-}
-
-article iframe,
-.cp_embed_wrapper * {
-}
-
-article section {
-  scroll-margin-top: 3rem;
-}
-article section.level1 {
-  scroll-margin-top: 4.5rem;
-}
-
-article h2, th {
-  border-bottom: 1px solid var(--muted);
-}
-
-article table {
-  margin: 0 0 1.5rem;
-  max-width: 90%;
-}
-
-h3, th, .abstract-title {
-  margin-top: 1.5rem;
-  margin-bottom: 0.45rem;
-  font-size: 1.25rem;
-  line-height: 1.2;
-  padding-top: 0.75rem;
-  font-style: italic;
-  font-weight: 400;
-}
-
-.abstract-title {
-  margin-top: 0;
-}
-
-/* Margins/padding are off, needs revision */
-h4, .nav--page .icon-text {
-  margin: 0;
-  margin-bottom: 0.45em;
-  font-size: 1.125rem;
-  line-height: 1.2;
-  padding-top: 0.75em;
-  font-style: italic;
-  font-weight: 400;
 }
 
 h5,
 h6 {
   text-transform: uppercase;
-}
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid var(--text);
-  margin: 3rem 0 1.5rem 0;
-  padding: 0;
-}
-
-.level2 hr:last-child {
-  margin-top: 9rem;
-}
-
-h5,
-p,
-ol,
-ul,
-td,
-label {
-  font-size: 1rem;
-  line-height: 1.5;
-  padding-top: 0.375rem;
-  margin-bottom: 1.125rem;
-}
-
-p + ul {
-  margin-top: -0.5rem;
-}
-
-pre,
-code {
-  font-size: 0.875rem;
-}
-
-.caption,
-figcaption {
-  font-size: 0.875rem;
-  margin: 0;
-  padding-top: 0.625rem;
-  text-align: center;
-}
-
-figure {
-  margin: 1.5rem 0;
-}
-
-figure.full-width {
-  margin: 1.5rem auto;
-}
-
-code,
-pre {
-  white-space: pre-wrap;
-}
-
-h6.sourceCode,
-div.sourceCode {
-  background-color: var(--overlay);
-  border-left: 0.25rem solid var(--accent-foam);
-  padding: 0 1.5rem 1.5rem;
-  margin-top: 0;
-}
-
-h6.sourceCode {
-  margin-bottom: 0;
-  padding: 0;
-  padding-right: 0.75rem;
-  padding-top: 0.25rem;
-  text-align: right;
-  color: var(--muted);
-  font-size: 1rem;
-}
-
-blockquote {
-  margin: 0 0 1.5rem 1.5rem;
-  padding-inline-start: 1rem;
-  border-left: 0.5rem solid var(--accent-violet);
-}
-
-blockquote footer {
-  text-align: right;
-}
-
-p.small {
-  font-size: 0.875rem;
-  line-height: 1.7142;
-  margin-bottom: 1.7142rem;
-}
-
-article {
-  padding-top: 1.5rem;
-  padding-right: 1.5rem;
-  padding-bottom: 3rem;
-  padding-left: 1.5rem;
-}
-
-article p,
-article li,
-article td {
-  color: var(--subtle);
-}
-
-article li,
-article ol,
-article ul {
-  line-height: 1.5;
-  font-size: 1rem;
-}
-
-article ul,
-ol {
-  padding-left: 2rem;
-}
-
-.note-text {
-  font-size: 0.75rem;
-  font-weight: bold;
-  line-height: 1.5rem;
-}
-
-.header-description a::before {
-  content: var(--header-image-text);
-}
-
-.abstract p {
-  font-style: italic;
-}
-
-.footnote-back,
-.footnote-ref {
-  text-decoration: none;
-}
-
-/* Table styles inspired by:
-* https://pencilandpaper.io/articles/ux-pattern-analysis-enterprise-data-tables/
-*/
-
-table {
-  border-collapse: separate;
-  border-spacing: 0 1.5rem;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-th {
-  text-align: left;
-  padding-right: 0.75rem;
-}
-
-td {
-  vertical-align: top;
-  padding-right: 1rem;
-  font-size: 1rem;
-}
-
-/* Unclear semantics, needs refactor */
-td h5 {
-  margin-bottom: 0;
 }
 
 /* ------------------------------------------ *\
@@ -623,16 +302,10 @@ td h5 {
 }
 
 .accordion {
-  background-color: var(--overlay);
-  color: var(--text);
   outline: none;
   border: none;
   cursor: pointer;
-  width: 90%;
   text-align: left;
-  padding: 1em;
-  font-size: 1rem;
-  font-family: inherit;
 }
 
 .accordion::before {
@@ -671,551 +344,32 @@ td h5 {
   color: var(--text);
 }
 
-.main {
-}
-
 .dropbtn {
   border: none;
   outline: none;
-  font-family: inherit;
 }
 
 .theme-toggle-icon {
   border: none;
+  outline: none;
   cursor: pointer;
-  background: var(--theme-toggle-icon);
-  background-size: 3rem 3rem;
-  width: 3rem;
-  height: 3rem;
-  filter: var(--svg-filter-base);
-  font-size: 0;
-}
-
-.icon {
-  width: 1.5em;
-  height: auto;
-  margin: 0;
-  filter: var(--svg-filter-surface);
-}
-
-.active .icon {
-  filter: var(--svg-filter-accent-red);
-}
-
-.icon-text {
-  display: none;
-}
-
-/* 
-* ||| nav objects 
-*
-* Design choice: <nav> is classed; <ul>, <li> and <a> modified within scope
-* Reasoning: I'm using autogenerated HTML lists of <a> for page/site and placing them within a classed nav in my pandoc template. It is easier/more flexible to class one ancestor than all decendants.
-* Cons: couples CSS to specific HTML structure. I think it's a principled choice but I may refactor in the future.
-*/
-
-/*
-*
-* Assumed structure:
-*   - .nav > ul > li > a 
-* Subclass additions:
-*   - .nav.nav--site > ul > li > button.dropbtn + ul.dropdown > li > a
-*   - .nav.nav--page > ul > li > ul > li > a (etc.)
-*
-* Object behavior:
-*   - <ul>, <li>, <a>, <button>: reset style
-*   - <a>, <button>: takes up available space so entirety can be clicked
-*   - <ul>.dropdown: display toggle, drops at parent width
-* Subclass additions:
-*   - .nav--site ul: 
-*   - .nav--page ul:
-*/
-
-/*
-* ||| .nav <a> 
-*/
-
-.nav a:link,
-.nav a:visited,
-.nav .dropbtn,
-.nav code {
-  color: var(--subtle);
-  font-size: 0.875em;
-  line-height: 1.5rem;
-  text-decoration: none;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.nav a:hover,
-.nav .dropbtn:hover {
-  background-color: var(--overlay);
-  color: var(--text);
-  cursor: pointer;
-}
-
-.nav a:focus, 
-.nav .dropbtn:focus {
-  outline: dotted;
-  outline-offset: -0.3em;
-  background-color: var(--overlay);
-  color: var(--text);
-}
-
-.nav a.semi-active:link,
-.nav a.semi-active:visited,
-.nav .dropbtn.semi-active,
-.nav a.semi-active:link code,
-.nav a.semi-active:visited code {
-  background-color: var(--surface-2);
-  color: var(--accent-red);
-  filter: grayscale(15%);
-}
-
-.nav a.active:link,
-.nav a.active:visited,
-.nav .dropbtn.active,
-.nav a.active:link code,
-.nav a.active:visited code {
-  background-color: var(--overlay);
-  color: var(--accent-red);
-  font-weight: bold;
-  filter: none;
-}
-
-/* 
-* ||| nav <ul> and <li> 
-*/
-.nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-/*
-* ||| nav--page 
-*/
-.nav--page {
-  padding: 0.5rem 1.5rem 0 0;
-}
-
-/* 
-* |||| .nav--page <a>
-*/
-
-.nav--page {
-  overflow-y: auto;
-  max-height: 100vh;
-}
-
-.nav--page ul a {
-  display: block;
-  border-left: 2px solid var(--muted);
-  border-radius: 0.5px;
-  text-align: left;
-  min-width: 30ch;
-}
-
-.nav--page ul a.active {
-  border-left: 3px solid var(--accent-red);
-}
-
-.nav--page li > ul {
-  display: none;
-}
-
-.nav--page li > a:not(:only-child):before {
-  content: "(+) ";
-}
-
-.nav--page li > a.semi-active:not(:only-child):before {
-  content: "-- ";
-}
-
-.nav--page a.expanded,
-.nav--page a.semi-active + ul {
-  display: block;
-  text-indent: 1rem;
-}
-
-.nav--page a.expanded + ul > li > a, 
-.nav--page a.semi-active + ul > li > a {
-  text-indent: 1.5rem;
-  font-size: 0.75rem;
-}
-
-/* 
-* |||| nav--site <a> and <button> 
-*/
-
-.nav--site a,
-.nav--site .dropbtn {
-  background-color: var(--surface);
-  flex: 1;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  text-align: center;
-}
-
-.nav a,
-.nav .dropbtn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-}
-
-.nav--page a {
-  justify-content: space-around;
-}
-
-/* 
-* |||| nav--site .dropdown
-*/
-
-.nav--site .dropdown {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: absolute;
-  z-index: 3;
-  margin-top: 3rem;
-  background-color: var(--surface);
-  box-shadow: 0 0.5em 1em rgba(0,0,0,0.2);
-
-  overflow-y: auto;
-  max-height: 18rem;
-}
-
-.nav .dropdown a {
-  background-color: var(--surface);
-  padding-left: 1.5rem;
-  padding-right: 7rem;
-}
-
-.nav--site .dropdown a:hover {
-  background-color: var(--overlay);
-  color: var(--text);
-  font-weight: bold;
-}
-
-.nav--site .dropdown a:focus {
-  outline: dotted;
-  background-color: var(--overlay);
-  color: var(--text);
-  font-weight: bold;
-}
-
-/* 
-* |||| nav--site <ul> <li> and <a>
-*/
-
-.nav--site > ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.nav--site li {
-  flex: 1;
-  display: flex;
-}
-
-/*
-* |||| nav--page <ul> <li> and <a>
-*/
-
-.nav--page h2 {
-  margin-top: 0;
-  padding-top: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
-.nav--page {
-  position: sticky;
-  top: 3rem;
-  align-self: flex-start;
-  height: auto;
 }
 
 /* ------------------------------------------ *\
   || Containers
 \* ------------------------------------------ */
 
-header.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-
-  background-position: var(--header-position);
-  background-size: var(--header-size);
-  background-image:
-    linear-gradient(
-      to bottom,      
-      var(--gradient-start),
-      66%,
-      var(--gradient-target)
-    ),
-    var(--header-image);
-
-  padding: 9rem 0.5rem 0.5rem;
-}
-
-.header h1 {
-  margin-top: 0;
-  margin-bottom: -0.325rem;
-  padding-top: 0.875rem;
-}
-
-.course-info-decoration {
-  display: flex;
-  align-items: center;
-  gap: 0.375em;
-}
-
-.aside--page * {
-  text-align: left;
-  text-indent: 0.75rem;
-}
-
-.aside--site h2 {
-  display: none;
-}
-
-.aside--site {
-  position: sticky;
-  top: 0;
-}
-
-.footer {
-  padding: 0 1.5rem;
-}
-
 /* ------------------------------------------ *\
   || Layout
 \* ------------------------------------------ */
-
-.header {
-  grid-area: hd;
-  border-bottom: 0.2px solid var(--muted);
-}
-
-.main {
-  grid-area: mn;
-}
-
-.footer {
-  grid-area: ft;
-}
-
-.aside--site {
-  grid-area: nv;
-  z-index: 2;
-  border-bottom: 0.2px solid var(--muted);
-  border-right: 0.2px solid var(--muted);
-}
-
-.aside--page {
-  grid-area: sd;
-  display: none;
-  z-index: 1;
-}
-
-.page-container {
-  display: grid;
-  grid-template-columns: minmax(20rem, 1fr);
-  grid-template-areas:
-    "hd"
-    "nv"
-    "mn"
-    "ft";
-  margin: 0 auto;
-  width: min(100%, 1920px);
-  border: 0.2px solid var(--muted);
-}
 
 /* ------------------------------------------ *\
   || Code
 \* ------------------------------------------ */
 
-pre.numberSource code > span > a:first-child::before { 
-  background-color: var(--accent-orange);
-  color: var(--overlay);
-}
-
-pre.numberSource { border-left: 1px solid var(--overlay); }
-
-div.sourceCode
-  { color: var(--muted-subtle); background-color: var(--overlay); }
-
-code span.al { color: var(--accent-gold); } /* Alert */
-code span.an { color: var(--accent-foam); font-weight: bold; } /* Annotation */
-code span.at { } /* Attribute */
-code span.bn { color: var(--accent-red); } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: var(--accent-teal); } /* ControlFlow */
-code span.ch { color: var(--accent-red); } /* Char */
-code span.cn { color: var(--accent-red); font-weight: bold; } /* Constant */
-code span.co { color: var(--accent-foam); } /* Comment */
-code span.cv { color: var(--accent-foam); font-weight: bold; } /* CommentVar */
-code span.do { color: var(--accent-foam); } /* Documentation */
-code span.dt { color: var(--accent-teal); } /* DataType */
-code span.dv { color: var(--accent-teal); } /* DecVal */
-code span.er { color: var(--accent-red); } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: var(--subtle); } /* Float */
-code span.fu { color: var(--accent-violet); } /* Function */
-code span.im { } /* Import */
-code span.in { color: var(--accent-foam); font-weight: bold; } /* Information */
-code span.kw { color: var(--accent-violet); } /* Keyword */
-code span.op { color: var(--accent-violet); } /* Operator */
-code span.ot { color: var(--accent-gold); } /* Other */
-code span.pp { color: var(--accent-gold); font-weight: bold; } /* Preprocessor */
-code span.sc { color: var(--accent-red); } /* SpecialChar */
-code span.ss { color: var(--accent-orange); } /* SpecialString */
-code span.st { color: var(--accent-orange); } /* String */
-code span.va { } /* Variable */
-code span.vs { color: var(--accent-orange); } /* VerbatimString */
-code span.wa { color: var(--accent-foam); font-weight: bold; } /* Warning */
-
 /* ------------------------------------------ *\
   || Overrides
 \* ------------------------------------------ */
-
-#title-block-header p {
-  /* Generated by Pandoc */
-  display: inline-block;
-}
-
-.header .note-text {
-  display: none;
-}
-
-@media only screen and (min-width: 48rem) {
-  .header .note-text {
-    display: inline;
-  }
-
-  html {
-    font-size: 112.5%;
-  }
-
-  /* leave room for right margin/TOC scroller for tablets/desktop */
-  .abstract > :is(p, ul),
-  .article > :is(p),
-  .article section > :is(p, ul, ol, figure), 
-  .article section > :is(div.sourceCode, h6.sourceCode) {
-    max-width: clamp(25rem, 100%, 40rem);
-  }
-
-  .page-container {
-    grid-template-columns: minmax(20rem, 1fr) minmax(auto, 30ch);
-    grid-template-areas:
-      "hd hd"
-      "nv nv"
-      "mn sd"
-      "ft sd";
-  }
-
-  /* Note: duplication with this implementation. Needs refactor */
-  .page-container[data-layout="column"] {
-    grid-template-columns: minmax(20rem, 1fr);
-    grid-template-areas:
-      "hd"
-      "nv"
-      "mn"
-      "ft";
-  }
-
-  .aside--page {
-    display: flex;
-  }
-
-  .nav--page .icon-text {
-    display: inline;
-  }
-
-}
-
-@media only screen and (min-width: 80rem) {
-  .page-container {
-    grid-template-columns: minmax(auto, 30ch) minmax(20rem, 1fr) minmax(auto, 30ch);
-    grid-template-areas:
-      "hd hd hd"
-      "nv mn sd"
-      "nv mn sd"
-      "nv ft ft";
-  }
-
-  /* Note: duplication with this implementation. Needs refactor */
-  .page-container[data-layout="column"] {
-    grid-template-columns: minmax(auto, 30ch) minmax(20rem, 1fr);
-    grid-template-areas:
-      "hd hd"
-      "nv mn"
-      "nv mn"
-      "nv ft";
-  }
-
-  .icon-text {
-    display: inline;
-  }
-
-  .nav--site > ul {
-    flex-direction: column;
-    position: sticky;
-    top: 0;
-  }
-
-  .nav--site a,
-  .nav--site .dropbtn {
-    padding-left: 0.75rem;
-    text-align: left;
-    justify-content: flex-start;
-    min-width: 30ch;
-  }
-
-  .nav--site {
-    display: unset;
-  }
-
-  html {
-    font-size: 137.5%;
-  }
-
-  .nav--page {
-    top: 0;
-  }
-
-  article section {
-    scroll-margin-top: 0;
-  }
-
-  article section.level1 {
-    scroll-margin-top: 1.5rem;
-  }
-
-}
-
-/*
-* Remove all animations, transitions and smooth scroll for people that prefer not to see them 
-* Source: https://andy-bell.co.uk/a-modern-css-reset/
-*/
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-   scroll-behavior: auto;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
 
 /*
 * Remove redundancies for PDF printing

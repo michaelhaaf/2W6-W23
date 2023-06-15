@@ -1,0 +1,123 @@
+/* This is an aggressive univeral reset, inspired by the Meyer Reset 
+   https://meyerweb.com/eric/tools/css/reset/ 
+   This set of rules sets sane defaults for font behavior. It also resets all browser default box model properties -- a consequence is that you must add padding/border/margin to every element. I think it's nice, because it forces you to be conscious of the style of each element you use. 
+*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/*
+   Universal Box Sizing best practise, for max flexibility and :pseudo support.
+   See https://css-tricks.com/box-sizing/ for a full explanation.
+   TL;DR: This setting makes all elements inherit their box-sizing property from their ancestor. That means we have to set the box-sizing property on either the body element for this to be useful. And it is useful -- it helps with decoupling the size of your component elements (margin/border/padding) from your overall layout.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* From the Meyer Reset: 
+   HTML5 display-role reset for older browsers 
+   That is, older browsers do not universally treat these elements as "block"
+   It is also a helpful reminder for you that you should consider structural HTML elements display: block by default in your layout (you can overwrite these elements individually with display: flex or display: grid if your layout demands it)
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* 
+   Some HTML content elements are NOT responsive by default. This is because they are in-line elements, and therefore only take the width/height of their content box independent of the size of their parent container.
+   Setting max-width and display: block; allows img/picture/video content to scale with the size of the display without stretching.
+   Why not width: 100%;? 
+   Width will force the image to grow as its parent grows. Images smaller than their container will stretch and pixelate. 
+   More info: https://andy-bell.co.uk/a-modern-css-reset/
+*/
+img,
+picture,
+video {
+  max-width: 100%;
+  display: inline-block;
+}
+
+/* 
+   To make navigation bars, we are often reseting the default list style (so list items do not have dots or numbering)
+   However, in body/article/section text, it is often useful to keep the default list-style (you'll often just end up re-introducing the default by CSS)
+   Rather than reset ALL list styles, we can keep the nice browser defaults and only reset lists that we mark with the "role" attribute in our markup (e.g. nav lists)
+   Inspiration: https://andy-bell.co.uk/a-modern-css-reset/ 
+*/
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/*
+*
+*/
+em {
+  font-style: italic;
+}
+strong {
+  font-style: bold;
+}
+
+/* Table styles inspired by:
+* https://pencilandpaper.io/articles/ux-pattern-analysis-enterprise-data-tables/
+*/
+table {
+  border-collapse: separate;
+  border-spacing: 0 1.5rem;
+}
+th {
+  text-align: left;
+}
+td {
+  vertical-align: top;
+}
+
+code,
+pre {
+  white-space: pre-wrap;
+}
+
+/*
+* Suppresses content-generation in some browsers
+*/
+blockquote,
+q {
+  quotes: none;
+}
+
+/*
+* Remove all animations, transitions and smooth scroll for people that prefer not to see them 
+* Source: https://andy-bell.co.uk/a-modern-css-reset/
+*/
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
