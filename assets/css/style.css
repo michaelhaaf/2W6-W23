@@ -78,7 +78,7 @@
 
 /* NOTE: makes navigation to top of section impossible */
 .level1 :is(section, header, footer, aside) {
-  display: contents;
+  /* display: contents; */
 }
 
 .margin {

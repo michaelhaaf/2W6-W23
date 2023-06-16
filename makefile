@@ -31,8 +31,9 @@ PAGE_STYLE := ../assets/css/style.css
 # Common options
 PANDOC_OPTIONS = --standalone \
 	--table-of-contents \
-	--toc-depth=2 \
+	--toc-depth=5 \
 	--section-divs \
+	--number-sections \
 	--lua-filter=$(DATE_WRITER) \
 	--css $(PAGE_STYLE) \
 	--template $(PAGE_TEMPLATE) \
