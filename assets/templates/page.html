@@ -321,17 +321,26 @@ solution
       </time>
      </p>
      $endif$
+     <hr>
     </header>
     $endif$ 
 
-    $if(toc)$
     <aside class="level1">
-     <nav class="margin content-menu" id="$idprefix$TOC" role="doc-toc">
-      $if(toc-title)$
-      <h2 id="$idprefix$toc-title">
-       $toc-title$
-      </h2>
-      $endif$ 
+
+    <nav class="margin interface-menu" id="interface-menu" role="interface-navigation">
+      <a class="" href="#title-block-header">
+       <img alt="" class="icon" src="../assets/images/feather-icons/chevron-up.svg"/>
+       <span class="icon-text">
+        Scroll to top...
+       </span>
+      </a>
+
+      <a class="" href="#site-footer">
+       <img alt="" class="icon" src="../assets/images/feather-icons/chevron-down.svg"/>
+       <span class="icon-text">
+        Scroll to bottom...
+       </span>
+      </a>
 
       $if(prev-page)$
       <a class="" href="$prev-page$">
@@ -342,8 +351,6 @@ solution
       </a>
       $endif$ 
 
-      $table-of-contents$ 
-
       $if(next-page)$
       <a class="" href="$next-page$">
        <img alt="" class="icon" src="../assets/images/feather-icons/chevron-right.svg"/>
@@ -353,6 +360,21 @@ solution
       </a>
       $endif$
      </nav>
+
+
+    $if(toc)$
+     <nav class="margin content-menu" id="$idprefix$TOC" role="doc-toc">
+      $if(toc-title)$
+      <h2 id="$idprefix$toc-title">
+       $toc-title$
+      </h2>
+      $endif$ 
+
+      $table-of-contents$ 
+     </nav>
+
+     
+
     </aside>
     $endif$
 
@@ -361,7 +383,7 @@ solution
     $for(include-after)$ $include-after$ $endfor$
    </article>
   </main>
-  <footer class="footer">
+  <footer id="site-footer" class="footer">
    <span class="note-text">
     © 2023 Michael Haaf |
     <a href="../pages/home.html#about-this-website">

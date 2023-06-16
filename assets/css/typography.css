@@ -2,6 +2,7 @@
   --font-family-body: et-book, Palatino, "Palatino Linotype", "Palatino LT STD",
     "Book Antiqua", Georgia, serif;
   --font-family-headers: var(--font-family-body);
+  --font-size-xxxs: 0.75rem; /* 12px */
   --font-size-xxs: 0.875rem; /* 14px */
   --font-size-xs: 1rem; /* 16px */
   --font-size-s: 1.125rem; /* 18px */
@@ -11,51 +12,53 @@
   --font-size-xxl: 5rem; /* 80px */
   --font-weight-headers: 700;
   --font-weight-subheaders: 300;
-  --line-height-rem: 2rem;
-  --line-height-xxs: 1.143; /* 1.143 * 14px = 16px (1/2 line) */
+  --line-height-xxxs: 1.333; /* 1.333 * 12px = 16px (1/2 line) */
+  --line-height-xxs: 1.423; /* 1.423 * 14px = 20px (5/8 line) */
   --line-height-xs: 1.5; /* 2 * 16px = 24px (3/4 line) */
   --line-height-s: 1.556; /* 1.556 * 18px = 28px (7/8 line) */
   --line-height-m: 1.6; /* 1.6 * 20px = 32px (1 line) */
   --line-height-l: 1.25; /* 1.25 * 32px = 40px -- need 0.5rem (8 extra px) to make 1.5 lines, this is added in padding */
   --line-height-xl: 1.125; /* 1.125 * 48px = 54px -- need 0.625rem (10 extra px) to make 2 lines, this is added in padding */
   --line-height-xxl: 1.2; /* 1.2 * 80px = 96px (3 lines) */
+  --half-line-rem: 1rem;
+  --one-line-rem: 2rem;
+  --two-line-rem: 4rem;
 }
 
 body {
-  font-family: var(--font-family-body);
-  line-height: var(--line-height-m);
   font-size: var(--font-size-m);
+  line-height: var(--line-height-m);
+  font-family: var(--font-family-body);
   word-spacing: -0.05em;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-family-headers);
   font-weight: var(--font-weight-headers);
 }
 
 h1 {
   font-size: var(--font-size-xl);
-  margin: var(--margin-text-xl);
-  padding: var(--padding-text-xl);
-  font-size: var(--font-size-xl);
   line-height: var(--line-height-xl);
+  padding: var(--padding-text-xl);
 }
 
 h2 {
   font-size: var(--font-size-l);
-  margin: var(--margin-text-l);
-  padding: var(--padding-text-l);
-  font-size: var(--font-size-l);
   line-height: var(--line-height-l);
+  padding: var(--padding-text-l);
 }
 
-ul,
-ol {
-  font-size: var(--font-size-m);
-  margin: var(--margin-text-m);
-  padding: var(--padding-text-m);
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
   font-size: var(--font-size-m);
   line-height: var(--line-height-m);
 }
@@ -67,15 +70,19 @@ ol:not([role]) {
 
 figure,
 button {
-  margin: var(--margin-figure);
   padding: var(--padding-figure);
 }
 
-figcaption {
+small,
+figcaption, {
   font-size: var(--font-size-xxs);
   line-height: var(--line-height-xxs);
 }
 
 abbr {
   letter-spacing: 0.1em;
+}
+
+p {
+  line-height: var(--line-height);
 }

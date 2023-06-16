@@ -23,17 +23,19 @@
   --space-stack-l: 0 0 4rem 0;
   --space-stack-xl: 0 0 8rem 0;
   /* Vertical offset for correcting alignment */
-  --space-offset: 1.25rem 0 0 0;
 }
 
 
 /* Use space definitions to define layout spacing */
 :root {
   --margin-figure: var(--space-stack-m);
-  --margin-text: var(--space-stack);
-  --margin-text-xl: var(--space-stack-l);
   --padding-figure: var(--space-offset);
+  --margin-text: var(--space-stack);
+  --margin-text-m: var(--space-stack-m);
+  --margin-text-l: var(--space-stack-l);
+  --margin-text-xl: var(--space-stack-xl);
   --padding-text: var(--space-offset);
+  --padding-text-m: var(--space-offset-m);
   --padding-text-l: calc(var(--space-offset) + 0.5rem);
   --padding-text-xl: calc(var(--space-offset) + 0.625rem);
 }

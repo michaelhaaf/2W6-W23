@@ -35,15 +35,15 @@
   /* Adaptation of Rose Pine Moon theme: 
 * https://rosepinetheme.com/palette/ingredients 
 */
-  --base: #232136;
-  --surface: #2a273f;
-  --surface-2: #2a273f;
-  --overlay: #393552;
-  --muted: #6e6a86;
-  --muted-subtle: #908caa;
-  --subtle: #a7a4bc;
-  --text: #e0def4;
-  --accent-red: #ee86a3;
+  --base: hsl(245 25% 20%);
+  --surface: hsl(245 20% 25%);
+  --overlay: hsl(245 15% 30%);
+  --muted: hsl(245 10% 50%);
+  --muted-subtle: hsl(245 10% 60%);
+  --subtle: hsl(245 10% 70%);
+  --text: hsl(245 50% 90%);
+  --accent-red: hsl(345 75% 75%);
+
   --accent-gold: #f6c177;
   --accent-orange: #ea9a97;
   --accent-teal: #6cb0cb;

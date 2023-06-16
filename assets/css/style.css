@@ -65,7 +65,8 @@
 
 .level1 {
   display: grid;
-  grid: auto-flow / [content] 2fr [margin] 1fr;
+  row-gap: 2rem;
+  grid: auto-flow / 1em [content] 2fr 1em [margin] 1fr 1em;
 }
 
 .level1 * {
@@ -77,22 +78,13 @@
 }
 
 /* NOTE: makes navigation to top of section impossible */
-.level1 :is(section, header, footer, aside) {
-  /* display: contents; */
+.level1 :is(section, header, footer, aside, .abstract) {
+  display: contents;
 }
 
-.margin {
-  font-size: var(--font-size-xxs);
+figcaption {
   line-height: var(--line-height-xxs);
-}
-
-figcaption::before {
-  content: "Figure: ";
-}
-
-h5,
-h6 {
-  text-transform: uppercase;
+  font-size: var(--font-size-xxs);
 }
 
 /* ------------------------------------------ *\
@@ -140,27 +132,89 @@ h6 {
   display: none;
 }
 
-.aside--page,
 .aside--site {
   display: none;
 }
 
 nav.margin {
-  font-size: var(--font-size-xxs);
-  line-height: var(--font-size-xxs);
+  justify-self: center;
 }
+
+nav a {
+  text-decoration: none;
+}
+
+nav ul:not([role]),
+nav ol:not([role]) {
+  list-style: none;
+  padding-left: 1em;
+}
+
+nav ul,
+nav ol {
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-s);
+  font-weight: normal;
+}
+
+nav li ul,
+nav li ol {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+nav li li ul,
+nav li li ol {
+  font-size: var(--font-size-xxs);
+  line-height: var(--line-height-xxs);
+}
+
+nav > ul,
+nav > ol {
+  font-weight: var(--font-weight-headers);
+}
+
+.toc-section-number {
+  color: var(--muted);
+}
+
+.header-section-number {
+  display: none;
+}
+
+.content-menu {
+  background-color: var(--surface);
+  border: 1px solid var(--muted);
+  padding: 1em;
+}
+
 
 /* ------------------------------------------ *\
   || Containers
 \* ------------------------------------------ */
 
+.base {
+  background-color: var(--base);
+  color: var(--text);
+}
+
+.surface {
+  background-color: var(--surface);
+  color: var(--text);
+}
+
+.overlay {
+  background-color: var(--overlay);
+  color: var(--text);
+}
+
 /* ------------------------------------------ *\
   || Layout
 \* ------------------------------------------ */
 
-
 article {
   position: relative;
+  padding: 2rem 0;
 }
 
 aside.level1 {
@@ -172,8 +226,10 @@ aside.level1 {
 nav.margin {
   pointer-events: auto;
   position: sticky;
-  top: 0;
-  height: 100vh;
+  top: 2rem;
+  max-height: 90vh;
+  overflow-y: auto;
+  align-self: start;
 }
 
 

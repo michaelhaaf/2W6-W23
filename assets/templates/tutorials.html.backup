@@ -306,15 +306,15 @@ solution
      </div>
            <p class="date">
       Last update:
-      <time datetime="Thu Jun 15 18:12:20 2023">
-       Thursday, June 15, 2023
+      <time datetime="Fri Jun 16 13:05:06 2023">
+       Friday, June 16, 2023
       </time>
      </p>
          </header>
      
 
         <aside class="level1">
-     <nav class="margin" id="TOC" role="doc-toc">
+     <nav class="margin content-menu" id="TOC" role="doc-toc">
             <h2 id="toc-title">
        Page navigation
       </h2>
@@ -323,29 +323,67 @@ solution
        
 
       <ul>
-<li><a href="#tutorials" id="toc-tutorials">Tutorials</a>
+<li><a href="#tutorials" id="toc-tutorials"><span
+class="toc-section-number">1</span> Tutorials</a>
 <ul>
-<li><a href="#week-01-exercises" id="toc-week-01-exercises">Week 01
-Exercises</a></li>
-<li><a href="#week-04-exercises" id="toc-week-04-exercises">Week 04
-Exercises</a></li>
-<li><a href="#week-06-exercises" id="toc-week-06-exercises">Week 06
-Exercises</a></li>
-<li><a href="#week-10-exercises" id="toc-week-10-exercises">Week 10
-Exercises</a></li>
-<li><a href="#week-11-exercises" id="toc-week-11-exercises">Week 11
-Exercises</a></li>
-<li><a href="#week-15-tutorial" id="toc-week-15-tutorial">Week 15
-Tutorial</a></li>
+<li><a href="#week-01-exercises" id="toc-week-01-exercises"><span
+class="toc-section-number">1.1</span> Week 01 Exercises</a></li>
+<li><a href="#week-04-exercises" id="toc-week-04-exercises"><span
+class="toc-section-number">1.2</span> Week 04 Exercises</a>
+<ul>
+<li><a href="#css-foundations" id="toc-css-foundations"><span
+class="toc-section-number">1.2.1</span> CSS Foundations</a></li>
+<li><a href="#css-box-model" id="toc-css-box-model"><span
+class="toc-section-number">1.2.2</span> CSS Box Model</a></li>
+<li><a href="#css-typesetting-typography"
+id="toc-css-typesetting-typography"><span
+class="toc-section-number">1.2.3</span> CSS Typesetting &amp;
+Typography</a></li>
 </ul></li>
-<li><a href="#solutions" id="toc-solutions">Solutions</a>
+<li><a href="#week-06-exercises" id="toc-week-06-exercises"><span
+class="toc-section-number">1.3</span> Week 06 Exercises</a>
 <ul>
-<li><a href="#week-04-solutions" id="toc-week-04-solutions">Week 04
-Solutions</a></li>
-<li><a href="#week-06-solutions" id="toc-week-06-solutions">Week 06
-Solutions</a></li>
-<li><a href="#week-10-solutions" id="toc-week-10-solutions">Week 10
-Solutions</a></li>
+<li><a href="#css-flexbox" id="toc-css-flexbox"><span
+class="toc-section-number">1.3.1</span> CSS Flexbox</a></li>
+</ul></li>
+<li><a href="#week-10-exercises" id="toc-week-10-exercises"><span
+class="toc-section-number">1.4</span> Week 10 Exercises</a>
+<ul>
+<li><a href="#css-grid" id="toc-css-grid"><span
+class="toc-section-number">1.4.1</span> CSS Grid</a></li>
+</ul></li>
+<li><a href="#week-11-exercises" id="toc-week-11-exercises"><span
+class="toc-section-number">1.5</span> Week 11 Exercises</a></li>
+<li><a href="#week-15-tutorial" id="toc-week-15-tutorial"><span
+class="toc-section-number">1.6</span> Week 15 Tutorial</a></li>
+</ul></li>
+<li><a href="#solutions" id="toc-solutions"><span
+class="toc-section-number">2</span> Solutions</a>
+<ul>
+<li><a href="#week-04-solutions" id="toc-week-04-solutions"><span
+class="toc-section-number">2.1</span> Week 04 Solutions</a>
+<ul>
+<li><a href="#css-foundations-1" id="toc-css-foundations-1"><span
+class="toc-section-number">2.1.1</span> CSS Foundations</a></li>
+<li><a href="#css-box-model-1" id="toc-css-box-model-1"><span
+class="toc-section-number">2.1.2</span> CSS Box Model</a></li>
+<li><a href="#css-typesetting-typography-1"
+id="toc-css-typesetting-typography-1"><span
+class="toc-section-number">2.1.3</span> CSS Typesetting &amp;
+Typography</a></li>
+</ul></li>
+<li><a href="#week-06-solutions" id="toc-week-06-solutions"><span
+class="toc-section-number">2.2</span> Week 06 Solutions</a>
+<ul>
+<li><a href="#css-flexbox-1" id="toc-css-flexbox-1"><span
+class="toc-section-number">2.2.1</span> CSS Flexbox</a></li>
+</ul></li>
+<li><a href="#week-10-solutions" id="toc-week-10-solutions"><span
+class="toc-section-number">2.3</span> Week 10 Solutions</a>
+<ul>
+<li><a href="#css-grid-1" id="toc-css-grid-1"><span
+class="toc-section-number">2.3.1</span> CSS Grid</a></li>
+</ul></li>
 </ul></li>
 </ul> 
 
@@ -359,15 +397,17 @@ Solutions</a></li>
     </aside>
     
     <hr />
-<section id="tutorials" class="level1">
-<h1>Tutorials</h1>
+<section id="tutorials" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span>
+Tutorials</h1>
 <p>For each tutorial, all relevant files (instructions, starter assets,
 etc.) can be found by downloading the <strong>.zip</strong> file
 associated with that lab.</p>
 <p>You can also preview lab files in the browser by expanding the
 <strong>(+) View files in browser</strong> tab from each section.</p>
-<section id="week-01-exercises" class="level2">
-<h2>Week 01 Exercises</h2>
+<section id="week-01-exercises" class="level2" data-number="1.1">
+<h2 data-number="1.1"><span class="header-section-number">1.1</span>
+Week 01 Exercises</h2>
 <p>In this tutorial, I demonstrated a few boilerplate HTML techniques.
 Refer back to this file if you forget the purpose of any of the
 fundamental HTML elements – the file is well-commented.</p>
@@ -378,8 +418,9 @@ View files in browser
 <pre id="week01-boilerplate-listing" class="collapsible">
 </pre>
 </section>
-<section id="week-04-exercises" class="level2">
-<h2>Week 04 Exercises</h2>
+<section id="week-04-exercises" class="level2" data-number="1.2">
+<h2 data-number="1.2"><span class="header-section-number">1.2</span>
+Week 04 Exercises</h2>
 <p>The first two sets of <a
 href="https://www.theodinproject.com/lessons/foundations-css-foundations">Odin
 Project</a> exercises. They are great general review of CSS
@@ -389,8 +430,9 @@ href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Typesettin
 Web Docs exercise set</a>. It is comprehensive practise for finding and
 using external web fonts, as well as perfecting typographic CSS
 skills.</p>
-<section id="css-foundations" class="level3">
-<h3>CSS Foundations</h3>
+<section id="css-foundations" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1"><span class="header-section-number">1.2.1</span>
+CSS Foundations</h3>
 <p>Each exercise set contains several README.md files explaining how to
 solve the problems.</p>
 <p>Instructions: <a
@@ -401,8 +443,9 @@ View files in browser
 <pre id="week04-foundations-exercises-listing" class="collapsible">
 </pre>
 </section>
-<section id="css-box-model" class="level3">
-<h3>CSS Box Model</h3>
+<section id="css-box-model" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2"><span class="header-section-number">1.2.2</span>
+CSS Box Model</h3>
 <p>Instructions: <a
 href="../tutorials/week04-box-model-exercises.zip">boxModel.zip</a></p>
 <button class="accordion">
@@ -411,8 +454,10 @@ View files in browser
 <pre id="week04-box-model-exercises-listing" class="collapsible">
 </pre>
 </section>
-<section id="css-typesetting-typography" class="level3">
-<h3>CSS Typesetting &amp; Typography</h3>
+<section id="css-typesetting-typography" class="level3"
+data-number="1.2.3">
+<h3 data-number="1.2.3"><span class="header-section-number">1.2.3</span>
+CSS Typesetting &amp; Typography</h3>
 <p>Instructions: <a
 href="../tutorials/week04-styling-text-exercises.zip">stylingText.zip</a></p>
 <button class="accordion">
@@ -422,12 +467,14 @@ View files in browser
 </pre>
 </section>
 </section>
-<section id="week-06-exercises" class="level2">
-<h2>Week 06 Exercises</h2>
+<section id="week-06-exercises" class="level2" data-number="1.3">
+<h2 data-number="1.3"><span class="header-section-number">1.3</span>
+Week 06 Exercises</h2>
 <p>Another set of Odin Project exercises, focusing on the mechanics of
 Flexbox.</p>
-<section id="css-flexbox" class="level3">
-<h3>CSS Flexbox</h3>
+<section id="css-flexbox" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1"><span class="header-section-number">1.3.1</span>
+CSS Flexbox</h3>
 <p>Instructions: <a
 href="../tutorials/week06-flexbox-exercises.zip">flexbox.zip</a></p>
 <button class="accordion">
@@ -437,12 +484,14 @@ View files in browser
 </pre>
 </section>
 </section>
-<section id="week-10-exercises" class="level2">
-<h2>Week 10 Exercises</h2>
+<section id="week-10-exercises" class="level2" data-number="1.4">
+<h2 data-number="1.4"><span class="header-section-number">1.4</span>
+Week 10 Exercises</h2>
 <p>Another set of Odin Project exercises, focusing on the mechanics of
 Grid.</p>
-<section id="css-grid" class="level3">
-<h3>CSS Grid</h3>
+<section id="css-grid" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1"><span class="header-section-number">1.4.1</span>
+CSS Grid</h3>
 <p>Instructions: <a
 href="../tutorials/week10-grid-exercises.zip">grids.zip</a></p>
 <button class="accordion">
@@ -452,8 +501,9 @@ View files in browser
 </pre>
 </section>
 </section>
-<section id="week-11-exercises" class="level2">
-<h2>Week 11 Exercises</h2>
+<section id="week-11-exercises" class="level2" data-number="1.5">
+<h2 data-number="1.5"><span class="header-section-number">1.5</span>
+Week 11 Exercises</h2>
 <p>This week, we had a guest lecture from JAC alumni, professional web
 dev, and good friend June. This folder contains a series of exercises
 (some of them already complete) for accomplishing various useful CSS/JS
@@ -466,8 +516,9 @@ View files in browser
 <pre id="week11-june-exercises-listing" class="collapsible">
 </pre>
 </section>
-<section id="week-15-tutorial" class="level2">
-<h2>Week 15 Tutorial</h2>
+<section id="week-15-tutorial" class="level2" data-number="1.6">
+<h2 data-number="1.6"><span class="header-section-number">1.6</span>
+Week 15 Tutorial</h2>
 <p>This tutorial demonstrates several of the intermediate and advanced
 CSS and User Interface concepts we learned at the end of the
 semester.</p>
@@ -481,12 +532,15 @@ View files in browser
 <hr />
 </section>
 </section>
-<section id="solutions" class="level1">
-<h1>Solutions</h1>
-<section id="week-04-solutions" class="level2">
-<h2>Week 04 Solutions</h2>
-<section id="css-foundations-1" class="level3">
-<h3>CSS Foundations</h3>
+<section id="solutions" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span>
+Solutions</h1>
+<section id="week-04-solutions" class="level2" data-number="2.1">
+<h2 data-number="2.1"><span class="header-section-number">2.1</span>
+Week 04 Solutions</h2>
+<section id="css-foundations-1" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1"><span class="header-section-number">2.1.1</span>
+CSS Foundations</h3>
 <p>Foundations solutions: <a
 href="../tutorials/week04-foundations-solutions.zip">foundationsSolutions.zip</a></p>
 <button class="accordion">
@@ -495,8 +549,9 @@ View files in browser
 <pre id="week04-foundations-solutions-listing" class="collapsible">
 </pre>
 </section>
-<section id="css-box-model-1" class="level3">
-<h3>CSS Box Model</h3>
+<section id="css-box-model-1" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2"><span class="header-section-number">2.1.2</span>
+CSS Box Model</h3>
 <p>Box Model solutions: <a
 href="../tutorials/week04-box-model-solutions.zip">boxModelSolutions.zip</a></p>
 <button class="accordion">
@@ -505,8 +560,10 @@ View files in browser
 <pre id="week04-box-model-solutions-listing" class="collapsible">
 </pre>
 </section>
-<section id="css-typesetting-typography-1" class="level3">
-<h3>CSS Typesetting &amp; Typography</h3>
+<section id="css-typesetting-typography-1" class="level3"
+data-number="2.1.3">
+<h3 data-number="2.1.3"><span class="header-section-number">2.1.3</span>
+CSS Typesetting &amp; Typography</h3>
 <p>Styling Text solutions: <a
 href="../tutorials/week04-styling-text-solutions.zip">stylingTextSolutions.zip</a></p>
 <button class="accordion">
@@ -516,10 +573,12 @@ View files in browser
 </pre>
 </section>
 </section>
-<section id="week-06-solutions" class="level2">
-<h2>Week 06 Solutions</h2>
-<section id="css-flexbox-1" class="level3">
-<h3>CSS Flexbox</h3>
+<section id="week-06-solutions" class="level2" data-number="2.2">
+<h2 data-number="2.2"><span class="header-section-number">2.2</span>
+Week 06 Solutions</h2>
+<section id="css-flexbox-1" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1"><span class="header-section-number">2.2.1</span>
+CSS Flexbox</h3>
 <p>Flexbox solutions: <a
 href="../tutorials/week06-flexbox-solutions.zip">flexboxSolutions.zip</a></p>
 <button class="accordion">
@@ -529,10 +588,12 @@ View files in browser
 </pre>
 </section>
 </section>
-<section id="week-10-solutions" class="level2">
-<h2>Week 10 Solutions</h2>
-<section id="css-grid-1" class="level3">
-<h3>CSS Grid</h3>
+<section id="week-10-solutions" class="level2" data-number="2.3">
+<h2 data-number="2.3"><span class="header-section-number">2.3</span>
+Week 10 Solutions</h2>
+<section id="css-grid-1" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1"><span class="header-section-number">2.3.1</span>
+CSS Grid</h3>
 <p>Grid solutions: <a
 href="../tutorials/week10-grid-solutions.zip">gridSolutions.zip</a></p>
 <button class="accordion">

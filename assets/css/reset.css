@@ -113,6 +113,17 @@ q {
   quotes: none;
 }
 
+/* 
+   This style will force hyperlinks to take the color of the body text. Useful when you do not have a theme color for hyperlinks definined in your requirements.
+   This style can be overwritten by more specific styles for different sections of your website later in this CSS file.
+*/
+a {
+  color: inherit;
+}
+a:hover {
+  filter: brightness(1.5);
+}
+
 /*
 * Remove all animations, transitions and smooth scroll for people that prefer not to see them 
 * Source: https://andy-bell.co.uk/a-modern-css-reset/
