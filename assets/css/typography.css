@@ -12,9 +12,9 @@
   --font-weight-headers: 700;
   --font-weight-subheaders: 300;
   --line-height-rem: 2rem;
-  --line-height-xxs: 2.286; /* 2.125 * 14px = 32px (1 line) */
-  --line-height-xs: 2; /* 2 * 16px = 32px (1 line) */
-  --line-height-s: 1.778; /* 1.778 * 18px = 32px (1 line) */
+  --line-height-xxs: 1.143; /* 1.143 * 14px = 16px (1/2 line) */
+  --line-height-xs: 1.5; /* 2 * 16px = 24px (3/4 line) */
+  --line-height-s: 1.556; /* 1.556 * 18px = 28px (7/8 line) */
   --line-height-m: 1.6; /* 1.6 * 20px = 32px (1 line) */
   --line-height-l: 1.25; /* 1.25 * 32px = 40px -- need 0.5rem (8 extra px) to make 1.5 lines, this is added in padding */
   --line-height-xl: 1.125; /* 1.125 * 48px = 54px -- need 0.625rem (10 extra px) to make 2 lines, this is added in padding */
@@ -51,7 +51,6 @@ h2 {
   line-height: var(--line-height-l);
 }
 
-p,
 ul,
 ol {
   font-size: var(--font-size-m);
@@ -75,4 +74,8 @@ button {
 figcaption {
   font-size: var(--font-size-xxs);
   line-height: var(--line-height-xxs);
+}
+
+abbr {
+  letter-spacing: 0.1em;
 }

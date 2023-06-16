@@ -44,6 +44,7 @@
 @import "reset.css";
 @import "globals.css";
 @import "themes.css";
+@import "fonts.css";
 @import "typography.css";
 
 /* ------------------------------------------ *\
@@ -62,32 +63,27 @@
   || Typography
 \* ------------------------------------------ */
 
-:is(section, header, footer, aside).level1 {
+.level1 {
   display: grid;
   grid: auto-flow / [content] 2fr [margin] 1fr;
 }
 
-:is(section, header, footer, aside).level1 > * {
+.level1 * {
   grid-column: content;
 }
 
-:is(section, header, footer, aside).level1 > .margin {
+.level1 .margin {
   grid-column: margin;
 }
 
-article {
-  position: relative;
+/* NOTE: makes navigation to top of section impossible */
+.level1 :is(section, header, footer, aside) {
+  display: contents;
 }
 
-aside.level1 {
-  position: absolute;
-  inset: 0;
-}
-
-nav.margin {
-  position: sticky;
-  top: 0;
-  height: 100vh;
+.margin {
+  font-size: var(--font-size-xxs);
+  line-height: var(--line-height-xxs);
 }
 
 figcaption::before {
@@ -149,6 +145,11 @@ h6 {
   display: none;
 }
 
+nav.margin {
+  font-size: var(--font-size-xxs);
+  line-height: var(--font-size-xxs);
+}
+
 /* ------------------------------------------ *\
   || Containers
 \* ------------------------------------------ */
@@ -156,6 +157,25 @@ h6 {
 /* ------------------------------------------ *\
   || Layout
 \* ------------------------------------------ */
+
+
+article {
+  position: relative;
+}
+
+aside.level1 {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+}
+
+nav.margin {
+  pointer-events: auto;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
 
 /* ------------------------------------------ *\
   || Code

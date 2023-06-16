@@ -71,8 +71,8 @@ video {
    Rather than reset ALL list styles, we can keep the nice browser defaults and only reset lists that we mark with the "role" attribute in our markup (e.g. nav lists)
    Inspiration: https://andy-bell.co.uk/a-modern-css-reset/ 
 */
-ul[role="list"],
-ol[role="list"] {
+ul[role="navigation"],
+ol[role="navigation"] {
   list-style: none;
 }
 

@@ -4,7 +4,6 @@
 * CSS adapted from https://github.com/edwardtufte/et-book/blob/gh-pages/et-book.css 
 */
 @charset "UTF-8";
-
 @font-face {
   font-family: "et-book";
   src: url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
@@ -20,7 +19,6 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: "et-book";
   src: url("../fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
@@ -36,7 +34,6 @@
   font-style: italic;
   font-display: swap;
 }
-
 @font-face {
   font-family: "et-book";
   src: url("../fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
@@ -52,7 +49,6 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: "et-book-roman-old-style";
   src: url("../fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot");
