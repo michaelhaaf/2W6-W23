@@ -124,6 +124,10 @@ a:hover {
   filter: brightness(1.5);
 }
 
+button {
+  border: 1px solid transparent;
+}
+
 /*
 * Remove all animations, transitions and smooth scroll for people that prefer not to see them 
 * Source: https://andy-bell.co.uk/a-modern-css-reset/

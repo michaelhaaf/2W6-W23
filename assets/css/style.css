@@ -128,6 +128,24 @@ figcaption {
   || Objects
 \* ------------------------------------------ */
 
+
+nav[aria-label="course-navigation"] {
+  width: max-content;
+  background-color: var(--surface);
+}
+
+[role="menuitem"] {
+  position: relative;
+  height: 2rem;
+  width: 2rem;
+  background-image: var(--icon);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+
 .header {
   display: none;
 }

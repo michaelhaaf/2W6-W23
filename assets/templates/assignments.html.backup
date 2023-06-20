@@ -1,328 +1,251 @@
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
- <head>
-  <link href="../assets/images/favicon.svg" rel="icon" sizes="any" type="image/svg+xml"/>
-  <script defer="" src="../assets/js/main.js">
-  </script>
-  <meta content="dark light" name="color-scheme"/>
-  <meta charset="utf-8"/>
-  <meta content="pandoc" name="generator"/>
-  <meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
-       <title>
-   2W6-W23: Assignments
-  </title>
-  <style>
-   code{white-space: pre-wrap;}
-   span.smallcaps{font-variant: small-caps;}
-   div.columns{display: flex; gap: min(4vw, 1.5em);}
-   div.column{flex: auto; overflow-x: auto;}
-   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-   ul.task-list{list-style: none;}
-   ul.task-list li input[type="checkbox"] {
-     width: 0.8em;
-     margin: 0 0.8em 0.2em -1.6em;
-     vertical-align: middle;
-   }
-   .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
-    <link href="../assets/css/style.css" rel="stylesheet"/>
-    
-  <!--[if lt IE 9]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-    <![endif]-->
- </head>
- <body class="page-container base">
-  <header class="header">
-   <div class="course-info-decoration">
-    <button class="theme-toggle-icon" id="theme-toggle-icon">
-     Theme toggle icon
-    </button>
-    <div>
-     <h1>
-      User Interfaces
-     </h1>
-     <span class="note-text">
-      420-2W6 | Winter 2023 | as taught by
-      <a href="https://github.com/michaelhaaf/2W6-W23">
-       Michael Haaf
-      </a>
-     </span>
-    </div>
-   </div>
-   <div>
-    <span class="header-description note-text">
-     Image:
-     <a href="https://www.guggenheim.org/artwork/movement/constructivism">
-     </a>
-    </span>
-   </div>
-  </header>
-  <aside class="aside--site surface">
-   <nav class="nav nav--site" id="site-navigation">
-    <h2>
-     Site Navigation
-    </h2>
-    <ul>
-     <li>
-      <a href="../pages/home.html" id="site-home">
-       <img alt="" class="icon" src="../assets/images/home.svg"/>
-       <span class="icon-text">
-        Home
-       </span>
-      </a>
-     </li>
-     <li>
-      <a href="../pages/course-outline.html" id="site-course-outline">
-       <img alt="" class="icon" src="../assets/images/outline.svg"/>
-       <span class="icon-text">
-        Course Outline
-       </span>
-      </a>
-     </li>
-     <li>
-      <a href="../pages/calendar.html" id="site-calendar">
-       <img alt="" class="icon" src="../assets/images/calendar.svg"/>
-       <span class="icon-text">
-        Calendar
-       </span>
-      </a>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-lectures" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/lectures.svg"/>
-       <span class="icon-text">
-        Lectures
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="lecture-listing">
-       <li>
-        <a href="../lectures/week01.html">
-         Week 01
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week02.html">
-         Week 02
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week03.html">
-         Week 03
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week04.html">
-         Week 04
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week05.html">
-         Week 05
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week06.html">
-         Week 06
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week07.html">
-         Week 07
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week09.html">
-         Week 09
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week10.html">
-         Week 10
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week11.html">
-         Week 11
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week12.html">
-         Week 12
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week13.html">
-         Week 13
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week14.html">
-         Week 14
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-tutorials" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/tutorials.svg"/>
-       <span class="icon-text">
-        Tutorials
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="tutorial-listing">
-       <li>
-        <a href="../pages/tutorials.html#week-01-exercises">
-         week 01 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-04-exercises">
-         week 04 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-06-exercises">
-         week 06 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-10-exercises">
-         week 10 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-11-exercises">
-         week 11 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-15-tutorial">
-         week 15 
-tutorial
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-04-solutions">
-         week 04 
-solutions
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-06-solutions">
-         week 06 
-solutions
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-10-solutions">
-         week 10 
-solutions
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-assignments" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/assignments.svg"/>
-       <span class="icon-text">
-        Assignments
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="assignment-listing">
-       <li>
-        <a href="../pages/assignments.html#milestone-1-2">
-         milestone 1 &amp;
- 2
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-1">
-         lab 1
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-2">
-         lab 2
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-3">
-         lab 3
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-4">
-         lab 4
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-1-solution">
-         lab 1 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-2-solution">
-         lab 2 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-3-solution">
-         lab 3 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-4-solution">
-         lab 4 
-solution
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </nav>
-  </aside>
-  <main class="main base">
-   <article class="article">
-     
-
-        <header class="level1" id="title-block-header">
-     <h1 class="title">
-      2W6-W23: Assignments
-     </h1>
-            <div class="abstract">
-      <div class="abstract-title">
-       Assigned lab work and solutions
+  <head>
+    <link
+      href="../assets/images/favicon.svg"
+      rel="icon"
+      sizes="any"
+      type="image/svg+xml"
+    />
+    <script defer="" src="../assets/js/main.js"></script>
+    <meta content="dark light" name="color-scheme" />
+    <meta charset="utf-8" />
+    <meta content="pandoc" name="generator" />
+    <meta
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+      name="viewport"
+    />
+           <title>2W6-W23: Assignments</title>
+    <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      div.columns{display: flex; gap: min(4vw, 1.5em);}
+      div.column{flex: auto; overflow-x: auto;}
+      div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+      ul.task-list{list-style: none;}
+      ul.task-list li input[type="checkbox"] {
+        width: 0.8em;
+        margin: 0 0.8em 0.2em -1.6em;
+        vertical-align: middle;
+      }
+      .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+        <link href="../assets/css/style.css" rel="stylesheet" />
+      
+  </head>
+  <body class="page-container base">
+    <header role="banner">
+      <div class="course-banner">
+        <button class="theme-toggle-icon" id="theme-toggle-icon">
+          Theme toggle icon
+        </button>
+        <div>
+          <h1>User Interfaces</h1>
+          <span>
+            420-2W6 | Winter 2023 | as taught by
+            <a href="https://github.com/michaelhaaf/2W6-W23"> Michael Haaf </a>
+          </span>
+        </div>
       </div>
-      <p>Here you will find information about all assigned lab work
-      given this semester.</p>
-     </div>
-           <p class="date">
-      Last update:
-      <time datetime="Fri Jun 16 13:05:04 2023">
-       Friday, June 16, 2023
-      </time>
-     </p>
-         </header>
-     
+      <div class="image-attribution">
+        <span>
+          Image:
+          <a href="https://www.guggenheim.org/artwork/movement/constructivism">
+          </a>
+        </span>
+      </div>
+    </header>
 
-        <aside class="level1">
-     <nav class="margin content-menu" id="TOC" role="doc-toc">
-            <h2 id="toc-title">
-       Page navigation
-      </h2>
-       
+    <nav class="" role="navigation" aria-labelledby="course-navigation">
+      <h2 class="visually-hidden" id="course-navigation">Course Navigation</h2>
+      <ul role="menu">
+        <li>
+          <a
+            style="--icon: url(../assets/images/home.svg)"
+            href="../pages/home.html"
+            aria-label="Link to Home"
+            role="menuitem"
+          >
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a
+            style="--icon: url(../assets/images/course-outline.svg)"
+            href="../pages/course-outline.html"
+            aria-label="Link to Course Outline"
+            role="menuitem"
+          >
+            <span>Course outline</span>
+          </a>
+        </li>
+        <li>
+          <a
+            style="--icon: url(../assets/images/calendar.svg)"
+            href="../pages/calendar.html"
+            aria-label="Link to Calendar"
+            role="menuitem"
+          >
+            <span>Calendar</span>
+          </a>
+        </li>
+        <li class="has-submenu">
+          <a
+            style="--icon: url(../assets/images/lectures.svg)"
+            href="../pages/lectures.html"
+            aria-expanded="false"
+            aria-controls="lecture-listing"
+            aria-label="Link to Lectures"
+            role="menuitem"
+          >
+            <span>Lectures</span>
+          </a>
+          <button
+            style="--icon: url(../assets/images/feather-icons/chevron-right)"
+            aria-expanded="false"
+            aria-controls="lecture-listing"
+            aria-label="Expand lecture menu"
+            role="menuitem"
+          >
+            <span class="visually-hidden">Expand submenu</span>
+          </button>
+          <ul id="lecture-listing"></ul>
+        </li>
+        <li class="has-submenu">
+          <a
+            style="--icon: url(../assets/images/tutorials.svg)"
+            href="../pages/tutorials.html"
+            aria-expanded="false"
+            aria-controls="tutorial-listing"
+            aria-label="Link to Tutorials"
+            role="menuitem"
+          >
+            <span>Tutorials</span>
+          </a>
+          <button
+            style="--icon: url(../assets/images/feather-icons/chevron-right)"
+            aria-expanded="false"
+            aria-controls="tutorial-listing"
+            aria-label="Expand tutorial menu"
+            role="menuitem"
+          >
+            <span class="visually-hidden">Expand submenu</span>
+          </button>
+          <ul id="tutorial-listing"></ul>
+        </li>
+        <li class="has-submenu">
+          <a
+            style="--icon: url(../assets/images/assignments.svg)"
+            href="../pages/assignments.html"
+            aria-expanded="false"
+            aria-controls="assignment-listing"
+            aria-label="Link to Assignments"
+            role="menuitem"
+          >
+            <span>Assignments</span>
+          </a>
+          <button
+            style="--icon: url(../assets/images/feather-icons/chevron-right)"
+            aria-expanded="false"
+            aria-controls="assignment-listing"
+            aria-label="Expand assignment menu"
+            role="menuitem"
+          >
+            <span class="visually-hidden">Expand submenu</span>
+          </button>
+          <ul id="assignment-listing"></ul>
+        </li>
+      </ul>
+    </nav>
 
-       
+    <main class="base" role="main">
+      <article class="article">
+                 <header class="level1" id="title-block-header">
+          <h1>2W6-W23: Assignments</h1>
+                      <div class="abstract">
+            <h2>Assigned lab work and solutions</h2>
+            <p>Here you will find information about all assigned lab
+            work given this semester.</p>
+          </div>
+                     <p>
+            Last update:
+            <time datetime="Tue Jun 20 18:41:58 2023"> Tuesday, June 20,
+2023 </time>
+          </p>
+                    <hr />
+        </header>
+        
+        <section class="overlay-grid" class="level1">
+          <nav class="margin menu tooltip" aria-label="interface-menu">
+            <ul role="menubar">
+              <li>
+                <a
+                  style="
+                    --icon: url(../assets/images/feather-icons/chevron-up.svg);
+                  "
+                  href="#title-block-header"
+                  role="menuitem"
+                >
+                  <span>Scroll to beginning</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  style="
+                    --icon: url(../assets/images/feather-icons/chevron-down.svg);
+                  "
+                  href="#site-footer"
+                  role="menuitem"
+                >
+                  <span>Scroll to end</span>
+                </a>
+              </li>
+                             <li>
+                <a
+                  style="
+                    --icon: url(../assets/images/feather-icons/chevron-right.svg);
+                  "
+                  href="../pages/tutorials.html"
+                  role="menuitem"
+                >
+                  <span>Next page</span>
+                </a>
+              </li>
+                            <li>
+                <a
+                  style="
+                    --icon: url("../assets/images/feather-icons/printer.svg");
+                  "
+                  href="#"
+                  role="menuitem"
+                >
+                  <span>View PDF</span>
+                </a>
+              </li>
+              <li>
+                <button
+                  style="
+                    --icon: url(../assets/images/feather-icons/maximize-2.svg);
+                  "
+                  aria-expanded="false"
+                  aria-controls="margin-menu"
+                  aria-label="Toggle margin menu"
+                  role="menuitem"
+                >
+                  <span>Toggle margin menu</span>
+                </button>
+              </li>
+            </ul>
+          </nav>
 
-      <ul>
+                    <nav
+            class="margin toc"
+            id="TOC"
+            role="navigation"
+            aria-label="table-of-contents"
+          >
+                        <h2 id="toc-title">Page navigation</h2>
+             <ul>
 <li><a href="#project" id="toc-project"><span
 class="toc-section-number">1</span> Project</a>
 <ul>
@@ -377,18 +300,10 @@ class="toc-section-number">3.3</span> Lab 3 Solution</a></li>
 <li><a href="#lab-4-solution" id="toc-lab-4-solution"><span
 class="toc-section-number">3.4</span> Lab 4 Solution</a></li>
 </ul></li>
-</ul> 
-
-            <a class="" href="../pages/tutorials.html">
-       <img alt="" class="icon" src="../assets/images/feather-icons/chevron-right.svg"/>
-       <span class="icon-text">
-        Next page...
-       </span>
-      </a>
-           </nav>
-    </aside>
-    
-    <hr />
+</ul>
+          </nav>
+                  </section>
+        <hr />
 <section id="project" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span>
 Project</h1>
@@ -537,25 +452,17 @@ View files in browser
 </pre>
 </section>
 </section> 
-
-    
-   </article>
-  </main>
-  <footer class="footer">
-   <span class="note-text">
-    © 2023 Michael Haaf |
-    <a href="../pages/home.html#about-this-website">
-     About
-    </a>
-    |
-    <a href="../pages/home.html#course-logistics">
-     Contact
-    </a>
-    |
-    <a href="../pages/home.html#copyright">
-     Terms &amp; Conditions
-    </a>
-   </span>
-  </footer>
- </body>
+      </article>
+    </main>
+    <footer id="site-footer" role="contentinfo">
+      <span>
+        © 2023 Michael Haaf |
+        <a href="../pages/home.html#about-this-website"> About </a>
+        |
+        <a href="../pages/home.html#course-logistics"> Contact </a>
+        |
+        <a href="../pages/home.html#copyright"> Terms &amp; Conditions </a>
+      </span>
+    </footer>
+  </body>
 </html>
