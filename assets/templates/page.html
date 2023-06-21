@@ -33,12 +33,11 @@
     $endfor$ $for(header-includes)$ $header-includes$ $endfor$ $if(math)$ $math$
     $endif$
   </head>
-  <body class="page-container base">
+  <body class="base">
+
     <header role="banner">
-      <div class="course-banner">
-        <button class="theme-toggle-icon" id="theme-toggle-icon">
-          Theme toggle icon
-        </button>
+      <div class="">
+        <button id="theme-toggle-icon" aria-label="theme-toggle-icon">X</button>
         <div>
           <h1>User Interfaces</h1>
           <span>
@@ -56,8 +55,8 @@
       </div>
     </header>
 
-    <nav class="" role="navigation" aria-labelledby="course-navigation">
-      <h2 class="visually-hidden" id="course-navigation">Course Navigation</h2>
+    <nav class="tooltip vertical" role="navigation" aria-labelledby="course-content">
+      <h2 class="visually-hidden" id="course-content">Course Content</h2>
       <ul role="menu">
         <li>
           <a
@@ -182,8 +181,8 @@
         </header>
         $endif$
 
-        <section class="overlay-grid" class="level1">
-          <nav class="margin menu tooltip" aria-label="interface-menu">
+        <section class="overlay-grid level1">
+          <nav class="margin surface menu sticky tooltip" aria-label="interface-menu">
             <ul role="menubar">
               <li>
                 <a
@@ -261,7 +260,7 @@
 
           $if(toc)$
           <nav
-            class="margin toc"
+            class="margin surface menu sticky toc"
             id="$idprefix$TOC"
             role="navigation"
             aria-label="table-of-contents"

@@ -33,12 +33,11 @@
         <link href="../assets/css/style.css" rel="stylesheet" />
       
   </head>
-  <body class="page-container base">
+  <body class="base">
+
     <header role="banner">
-      <div class="course-banner">
-        <button class="theme-toggle-icon" id="theme-toggle-icon">
-          Theme toggle icon
-        </button>
+      <div class="">
+        <button id="theme-toggle-icon" aria-label="theme-toggle-icon">X</button>
         <div>
           <h1>User Interfaces</h1>
           <span>
@@ -56,12 +55,12 @@
       </div>
     </header>
 
-    <nav class="" role="navigation" aria-labelledby="course-navigation">
-      <h2 class="visually-hidden" id="course-navigation">Course Navigation</h2>
+    <nav class="tooltip vertical" role="navigation" aria-labelledby="course-content">
+      <h2 class="visually-hidden" id="course-content">Course Content</h2>
       <ul role="menu">
         <li>
           <a
-            style="--icon: url(../assets/images/home.svg)"
+            style="--icon: url(../images/home.svg)"
             href="../pages/home.html"
             aria-label="Link to Home"
             role="menuitem"
@@ -71,7 +70,7 @@
         </li>
         <li>
           <a
-            style="--icon: url(../assets/images/course-outline.svg)"
+            style="--icon: url(../images/outline.svg)"
             href="../pages/course-outline.html"
             aria-label="Link to Course Outline"
             role="menuitem"
@@ -81,7 +80,7 @@
         </li>
         <li>
           <a
-            style="--icon: url(../assets/images/calendar.svg)"
+            style="--icon: url(../images/calendar.svg)"
             href="../pages/calendar.html"
             aria-label="Link to Calendar"
             role="menuitem"
@@ -91,7 +90,7 @@
         </li>
         <li class="has-submenu">
           <a
-            style="--icon: url(../assets/images/lectures.svg)"
+            style="--icon: url(../images/lectures.svg)"
             href="../pages/lectures.html"
             aria-expanded="false"
             aria-controls="lecture-listing"
@@ -101,7 +100,7 @@
             <span>Lectures</span>
           </a>
           <button
-            style="--icon: url(../assets/images/feather-icons/chevron-right)"
+            style="--icon: url(../images/feather-icons/chevron-right.svg)"
             aria-expanded="false"
             aria-controls="lecture-listing"
             aria-label="Expand lecture menu"
@@ -113,7 +112,7 @@
         </li>
         <li class="has-submenu">
           <a
-            style="--icon: url(../assets/images/tutorials.svg)"
+            style="--icon: url(../images/tutorials.svg)"
             href="../pages/tutorials.html"
             aria-expanded="false"
             aria-controls="tutorial-listing"
@@ -123,7 +122,7 @@
             <span>Tutorials</span>
           </a>
           <button
-            style="--icon: url(../assets/images/feather-icons/chevron-right)"
+            style="--icon: url(../images/feather-icons/chevron-right)"
             aria-expanded="false"
             aria-controls="tutorial-listing"
             aria-label="Expand tutorial menu"
@@ -135,7 +134,7 @@
         </li>
         <li class="has-submenu">
           <a
-            style="--icon: url(../assets/images/assignments.svg)"
+            style="--icon: url(../images/assignments.svg)"
             href="../pages/assignments.html"
             aria-expanded="false"
             aria-controls="assignment-listing"
@@ -145,7 +144,7 @@
             <span>Assignments</span>
           </a>
           <button
-            style="--icon: url(../assets/images/feather-icons/chevron-right)"
+            style="--icon: url(../images/feather-icons/chevron-right)"
             aria-expanded="false"
             aria-controls="assignment-listing"
             aria-label="Expand assignment menu"
@@ -169,19 +168,19 @@
           </div>
                      <p>
             Last update:
-            <time datetime="Tue Jun 20 18:41:58 2023"> Tuesday, June 20,
-2023 </time>
+            <time datetime="Wed Jun 21 17:36:26 2023"> Wednesday, June
+21, 2023 </time>
           </p>
                     <hr />
         </header>
         
-        <section class="overlay-grid" class="level1">
-          <nav class="margin menu tooltip" aria-label="interface-menu">
+        <section class="overlay-grid level1">
+          <nav class="margin surface menu sticky tooltip" aria-label="interface-menu">
             <ul role="menubar">
               <li>
                 <a
                   style="
-                    --icon: url(../assets/images/feather-icons/chevron-up.svg);
+                    --icon: url(../images/feather-icons/chevron-up.svg);
                   "
                   href="#title-block-header"
                   role="menuitem"
@@ -192,7 +191,7 @@
               <li>
                 <a
                   style="
-                    --icon: url(../assets/images/feather-icons/chevron-down.svg);
+                    --icon: url(../images/feather-icons/chevron-down.svg);
                   "
                   href="#site-footer"
                   role="menuitem"
@@ -203,7 +202,7 @@
                              <li>
                 <a
                   style="
-                    --icon: url(../assets/images/feather-icons/chevron-right.svg);
+                    --icon: url(../images/feather-icons/chevron-right.svg);
                   "
                   href="../pages/tutorials.html"
                   role="menuitem"
@@ -214,7 +213,7 @@
                             <li>
                 <a
                   style="
-                    --icon: url("../assets/images/feather-icons/printer.svg");
+                    --icon: url('../images/feather-icons/printer.svg');
                   "
                   href="#"
                   role="menuitem"
@@ -225,7 +224,7 @@
               <li>
                 <button
                   style="
-                    --icon: url(../assets/images/feather-icons/maximize-2.svg);
+                    --icon: url(../images/feather-icons/maximize-2.svg);
                   "
                   aria-expanded="false"
                   aria-controls="margin-menu"
@@ -239,7 +238,7 @@
           </nav>
 
                     <nav
-            class="margin toc"
+            class="margin surface menu sticky toc"
             id="TOC"
             role="navigation"
             aria-label="table-of-contents"

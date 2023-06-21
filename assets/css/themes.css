@@ -5,23 +5,19 @@
 
 :root,
 :root[data-theme="light"] {
-  --base: #faf4ed;
-  --surface: #fffaf3;
-  --surface-2: #f2e9e1;
-  --overlay: #f2e9e1;
-  --muted: #9893a5;
-  --muted-subtle: #797593;
-  --subtle: #67637e;
-  --text: #575279;
-  --accent-red: #9e4c65;
-  --accent-gold: #905a0e;
-  --accent-orange: #b33d37;
-  --accent-teal: #286983;
-  --accent-foam: #406c77;
-  --accent-violet: #745d8e;
-  --highlight-low: #f4ede8;
-  --highlight-med: #dfdad9;
-  --highlight-high: #cecacd;
+  --base: hsl(30 55% 95%);
+  --surface: hsl(35 100% 98%);
+  --overlay: hsl(28 40% 90%);
+  --muted: hsl(256 10% 60%);
+  --muted-subtle: hsl(250 15% 50%)
+  --subtle: hsl(250 10% 45%);
+  --text: hsl(250 20% 40%);
+  --accent-red: hsl(340 35% 45%);
+  --accent-gold: hsl(35 80% 30%);
+  --accent-orange: hsl(3 50% 45%);
+  --accent-teal: hsl(200 50% 30%);
+  --accent-foam: hsl(190 30% 35%);
+  --accent-violet: hsl(270 20% 45%);
   /* Hex color to CSS filter calculator: https://isotropic.co/tool/hex-color-to-css-filter/ */
   --svg-filter-base: var(--filter-black) invert(31%) sepia(10%) saturate(1771%)
     hue-rotate(208deg) brightness(99%) contrast(86%);
@@ -30,11 +26,7 @@
   --svg-filter-accent-red: var(--filter-black) invert(37%) sepia(11%)
     saturate(2106%) hue-rotate(291deg) brightness(97%) contrast(97%);
 }
-
 :root[data-theme="dark"] {
-  /* Adaptation of Rose Pine Moon theme: 
-* https://rosepinetheme.com/palette/ingredients 
-*/
   --base: hsl(245 25% 20%);
   --surface: hsl(245 20% 25%);
   --overlay: hsl(245 15% 30%);
@@ -42,21 +34,63 @@
   --muted-subtle: hsl(245 10% 60%);
   --subtle: hsl(245 10% 70%);
   --text: hsl(245 50% 90%);
-  --accent-red: hsl(345 75% 75%);
-
-  --accent-gold: #f6c177;
-  --accent-orange: #ea9a97;
-  --accent-teal: #6cb0cb;
-  --accent-foam: #9ccfd8;
-  --accent-violet: #c4a7e7;
-  --highlight-low: #2a283e;
-  --highlight-med: #44415a;
-  --highlight-high: #56526e;
+  --accent-red: hsl(340 75% 75%);
+  --accent-gold: hsl(35 88% 70%);
+  --accent-orange: hsl(3 66% 75%);
+  --accent-teal: hsl(200 50% 60%);
+  --accent-foam: hsl(190 45% 70%);
+  --accent-violet: hsl(270 55% 80%);
   /* Hex color to CSS filter calculator: https://isotropic.co/tool/hex-color-to-css-filter/ */
   --svg-filter-base: var(--filter-black) invert(87%) sepia(24%) saturate(138%)
     hue-rotate(206deg) brightness(96%) contrast(100%);
   --svg-filter-surface: var(--filter-black) invert(73%) sepia(10%)
     saturate(469%) hue-rotate(208deg) brightness(91%) contrast(84%);
   --svg-filter-accent-red: var(--filter-black) invert(87%) sepia(22%)
+    saturate(3499%) hue-rotate(291deg) brightness(91%) contrast(105%);
+}
+
+:root,
+:root[data-theme="light"] {
+  --hsl-base: 30 55% 95%;
+  --hsl-surface: 35 100% 98%;
+  --hsl-overlay: 28 40% 90%;
+  --hsl-muted: 256 10% 60%;
+  --hsl-muted-subtle: 250 15% 50%;
+  --hsl-subtle: 250 10% 45%;
+  --hsl-text: 250 20% 40%;
+  --hsl-accent-red: 340 35% 45%;
+  --hsl-accent-gold: 35 80% 30%;
+  --hsl-accent-orange: 3 50% 45%;
+  --hsl-accent-teal: 200 50% 30%;
+  --hsl-accent-foam: 190 30% 35%;
+  --hsl-accent-violet: 270 20% 45%;
+  /* Hex color to CSS filter calculator: https://isotropic.co/tool/hex-color-to-css-filter/ */
+  --hsl-svg-filter-base: var(--filter-black) invert(31%) sepia(10%) saturate(1771%)
+    hue-rotate(208deg) brightness(99%) contrast(86%);
+  --hsl-svg-filter-surface: var(--filter-black) invert(41%) sepia(7%)
+    saturate(1400%) hue-rotate(209deg) brightness(91%) contrast(83%);
+  --hsl-svg-filter-accent-red: var(--filter-black) invert(37%) sepia(11%)
+    saturate(2106%) hue-rotate(291deg) brightness(97%) contrast(97%);
+}
+:root[data-theme="dark"] {
+  --hsl-base: 245 25% 20%;
+  --hsl-surface: 245 20% 25%;
+  --hsl-overlay: 245 15% 30%;
+  --hsl-muted: 245 10% 50%;
+  --hsl-muted-subtle: 245 10% 60%;
+  --hsl-subtle: 245 10% 70%;
+  --hsl-text: 245 50% 90%;
+  --hsl-accent-red: 340 75% 75%;
+  --hsl-accent-gold: 35 88% 70%;
+  --hsl-accent-orange: 3 66% 75%;
+  --hsl-accent-teal: 200 50% 60%;
+  --hsl-accent-foam: 190 45% 70%;
+  --hsl-accent-violet: 270 55% 80%;
+  /* Hex color to CSS filter calculator: https://isotropic.co/tool/hex-color-to-css-filter/ */
+  --hsl-svg-filter-base: var(--filter-black) invert(87%) sepia(24%) saturate(138%)
+    hue-rotate(206deg) brightness(96%) contrast(100%);
+  --hsl-svg-filter-surface: var(--filter-black) invert(73%) sepia(10%)
+    saturate(469%) hue-rotate(208deg) brightness(91%) contrast(84%);
+  --hsl-svg-filter-accent-red: var(--filter-black) invert(87%) sepia(22%)
     saturate(3499%) hue-rotate(291deg) brightness(91%) contrast(105%);
 }

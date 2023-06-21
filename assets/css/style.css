@@ -51,6 +51,14 @@
   || Reset
 \* ------------------------------------------ */
 
+nav a {
+  text-decoration: none;
+}
+nav ul,
+nav ol {
+  list-style: none;
+}
+
 /* ------------------------------------------ *\
   || Global
 \* ------------------------------------------ */
@@ -66,7 +74,8 @@
 .level1 {
   display: grid;
   row-gap: 2rem;
-  grid: auto-flow / 1em [content] 2fr 1em [margin] 1fr 1em;
+  grid-auto-rows: min-content;
+  grid-template-columns: 1em [content] 2fr 1em [margin] 1fr 1em; 
 }
 
 .level1 * {
@@ -94,6 +103,17 @@ figcaption {
 .hidden {
   /* !important required for this utility, I think it's appropriate */
   display: none !important;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 .baseline-grid {
@@ -129,81 +149,120 @@ figcaption {
 \* ------------------------------------------ */
 
 
-nav[aria-label="course-navigation"] {
-  width: max-content;
-  background-color: var(--surface);
-}
-
-[role="menuitem"] {
-  position: relative;
-  height: 2rem;
-  width: 2rem;
-  background-image: var(--icon);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-
-
-
-.header {
-  display: none;
-}
-
-.aside--site {
-  display: none;
-}
-
-nav.margin {
+.toc {
   justify-self: center;
 }
-
-nav a {
-  text-decoration: none;
-}
-
-nav ul:not([role]),
-nav ol:not([role]) {
-  list-style: none;
-  padding-left: 1em;
-}
-
-nav ul,
-nav ol {
+.toc ul,
+.toc ol {
   font-size: var(--font-size-s);
   line-height: var(--line-height-s);
   font-weight: normal;
+  padding-left: 1em;
 }
-
-nav li ul,
-nav li ol {
+.toc li ul,
+.toc li ol {
   font-size: var(--font-size-xs);
   line-height: var(--line-height-xs);
 }
-
-nav li li ul,
-nav li li ol {
+.toc li li ul,
+.toc li li ol {
   font-size: var(--font-size-xxs);
   line-height: var(--line-height-xxs);
 }
-
-nav > ul,
-nav > ol {
+.toc > ul,
+.toc > ol {
   font-weight: var(--font-weight-headers);
 }
-
 .toc-section-number {
   color: var(--muted);
 }
 
-.header-section-number {
-  display: none;
-}
-
-.content-menu {
-  background-color: var(--surface);
+.menu {
   border: 1px solid var(--muted);
   padding: 1em;
+}
+
+.tooltip {
+}
+
+
+
+/* inspired by: https://www.youtube.com/watch?v=6hW4YTVi3hc */
+/* invsetigate box shadows: https://www.joshwcomeau.com/css/designing-shadows/ */
+.vertical {
+  font-size: var(--font-size-xxs);
+  line-height: var(--line-height-xxs);
+  padding: 1em;
+}
+.vertical ul {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  align-items: start;
+  justify-content: space-between;
+  background-color: hsl(var(--hsl-accent-foam));
+  border-radius: 8px;
+  box-shadow: 4px 8px 8px hsl(var(--hsl-accent-foam) / 25%);
+}
+.vertical li {
+  padding: 1rem 1rem;
+}
+.vertical a {
+  display: block;
+  position: relative;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 0.5rem;
+  background-image: var(--icon);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  background-size: 100%;
+  z-index: 99;
+}
+.vertical a:hover,
+.vertical a:focus,
+.vertical a:active {
+}
+.vertical a span {
+  background-color: var(--surface);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  left: 150%;
+  top: 50%;
+  transform-origin: left;
+  --scale: 0;
+  opacity: 0;
+  transform: translateY(-50%) scale(var(--scale));
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.vertical a:hover span, 
+.vertical a:focus span, 
+.vertical a:active span {
+  --scale: 1;
+  opacity: 1;
+}
+.vertical a span::before {
+  content: "";
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.125rem;
+  background-color: inherit;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+
+
+
+
+
+
+.header-section-number {
+  display: none;
 }
 
 
@@ -230,25 +289,61 @@ nav > ol {
   || Layout
 \* ------------------------------------------ */
 
+header[role="banner"] {
+  grid-area: header;
+}
+
+footer[role="contentinfo"]{
+  grid-area: footer;
+}
+
+main[role="main"] {
+  grid-area: main;
+}
+
+nav[aria-label="course-content"] {
+  grid-area: course-nav;
+}
+
+body {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header"
+    "course-nav main"
+    "footer footer";
+}
+
 article {
   position: relative;
   padding: 2rem 0;
 }
 
-aside.level1 {
+.overlay-grid {
   pointer-events: none;
   position: absolute;
   inset: 0;
 }
 
-nav.margin {
+.overlay-grid .sticky {
   pointer-events: auto;
   position: sticky;
-  top: 2rem;
-  max-height: 90vh;
   overflow-y: auto;
   align-self: start;
 }
+
+.overlay-grid > .sticky:nth-of-type(1) {
+  top: 2rem;
+  max-height: 90vh;
+}
+
+.overlay-grid > .sticky:nth-of-type(2) {
+  top: 6rem;
+  max-height: 90vh;
+}
+
 
 
 /* ------------------------------------------ *\
