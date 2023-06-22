@@ -18,23 +18,15 @@ document_map = {
 
 # FUNCTIONS #
 
-# Regex: find number groups and insert spaces around them.
-# inspired by: https://stackoverflow.com/a/59338244
-def beautifyName(filename):
-    filename = os.path.splitext(filename)[0]
-    return re.sub(r' ?(\d+) ?', r' \1 ', filename).capitalize()
-
-
 def insert_listing(listing_path, document_soup):
     listing_name = os.path.splitext(os.path.basename(listing_path))[0]
     with open(listing_path) as fh:
-        listing_soup = BeautifulSoup(fh, "html.parser")
+        listing_soup = BeautifulSoup(fh, "html.parser").find_all('a', recursive=False)
     listing_elem = document_soup.find(id=listing_name)
     listing_elem.clear()
 
     for listing in listing_soup:
         list_item = document_soup.new_tag("li")
-        listing.string = beautifyName(listing.string)
         list_item.append(listing)
         listing_elem.append(list_item)
 

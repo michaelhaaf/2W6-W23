@@ -66,6 +66,7 @@ clean-parcel:
 
 indices:
 	tree lectures -H ../lectures | htmlq "body p a" | grep html > ./assets/listings/lecture-listing.html
+	htmlq -f pages/tutorials.html "#TOC > ul > li > ul a" | sed 's/href="/href="..\/pages\/tutorials\.html/' | sed 's/ id=".*"//' > ./assets/listings/tutorial-listing.html
 	htmlq -f pages/assignments.html "#TOC > ul > li > ul a" | sed 's/href="/href="..\/pages\/assignments\.html/' | sed 's/ id=".*"//' > ./assets/listings/assignment-listing.html
 	./assets/build-scripts/generate-index-files assignments
 	./assets/build-scripts/generate-index-files tutorials
@@ -87,7 +88,7 @@ $(TUTORIAL_ZIPS): %.zip : $$(shell find % -type f ! -path "%/.*")
 
 $(PAGE_TEMPLATE): %.html: $$(shell find assets/listings/ -type f)
 	cp $(PAGE_TEMPLATE) ./assets/templates/page.html.backup 
-	python ./assets/build-scripts/insert-listings.py --document template > $(PAGE_TEMPLATE)
+	python ./assets/build-scripts/insert-listings.py --document template > $(PAGE_TEMPLATE) || cp ./assets/templates/page.html.backup ${PAGE_TEMPLATE}
 	touch $(PAGES_MD) $(LECTURES_MD)
 
 lectures/%.html: md/lectures/%.md
