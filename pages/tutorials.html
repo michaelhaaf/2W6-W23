@@ -13,34 +13,31 @@
   </title>
   <style>
    code{white-space: pre-wrap;}
-   span.smallcaps{font-variant: small-caps;}
-   div.columns{display: flex; gap: min(4vw, 1.5em);}
-   div.column{flex: auto; overflow-x: auto;}
-   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-   ul.task-list{list-style: none;}
-   ul.task-list li input[type="checkbox"] {
-     width: 0.8em;
-     margin: 0 0.8em 0.2em -1.6em;
-     vertical-align: middle;
-   }
-   .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+      span.smallcaps{font-variant: small-caps;}
+      div.columns{display: flex; gap: min(4vw, 1.5em);}
+      div.column{flex: auto; overflow-x: auto;}
+      div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+      ul.task-list{list-style: none;}
+      ul.task-list li input[type="checkbox"] {
+        width: 0.8em;
+        margin: 0 0.8em 0.2em -1.6em;
+        vertical-align: middle;
+      }
+      .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
   <link href="../assets/css/style.css" rel="stylesheet"/>
-  <!--[if lt IE 9]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-    <![endif]-->
  </head>
- <body class="page-container base">
-  <header class="header">
-   <div class="course-info-decoration">
-    <button class="theme-toggle-icon" id="theme-toggle-icon">
-     Theme toggle icon
+ <body class="base">
+  <header role="banner">
+   <div class="">
+    <button aria-hidden="true" aria-label="theme-toggle-icon" id="theme-toggle-icon">
+     X
     </button>
     <div>
      <h1>
       User Interfaces
      </h1>
-     <span class="note-text">
+     <span>
       420-2W6 | Winter 2023 | as taught by
       <a href="https://github.com/michaelhaaf/2W6-W23">
        Michael Haaf
@@ -48,354 +45,368 @@
      </span>
     </div>
    </div>
-   <div>
-    <span class="header-description note-text">
+   <div class="image-attribution">
+    <span>
      Image:
      <a href="https://www.guggenheim.org/artwork/movement/constructivism">
      </a>
     </span>
    </div>
   </header>
-  <aside class="aside--site surface">
-   <nav class="nav nav--site" id="site-navigation">
-    <h2>
-     Site Navigation
-    </h2>
-    <ul>
-     <li>
-      <a href="../pages/home.html" id="site-home">
-       <img alt="" class="icon" src="../assets/images/home.svg"/>
-       <span class="icon-text">
-        Home
-       </span>
-      </a>
-     </li>
-     <li>
-      <a href="../pages/course-outline.html" id="site-course-outline">
-       <img alt="" class="icon" src="../assets/images/outline.svg"/>
-       <span class="icon-text">
-        Course Outline
-       </span>
-      </a>
-     </li>
-     <li>
-      <a href="../pages/calendar.html" id="site-calendar">
-       <img alt="" class="icon" src="../assets/images/calendar.svg"/>
-       <span class="icon-text">
-        Calendar
-       </span>
-      </a>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-lectures" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/lectures.svg"/>
-       <span class="icon-text">
-        Lectures
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="lecture-listing">
-       <li>
-        <a href="../lectures/week01.html">
-         Week 01
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week02.html">
-         Week 02
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week03.html">
-         Week 03
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week04.html">
-         Week 04
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week05.html">
-         Week 05
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week06.html">
-         Week 06
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week07.html">
-         Week 07
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week09.html">
-         Week 09
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week10.html">
-         Week 10
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week11.html">
-         Week 11
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week12.html">
-         Week 12
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week13.html">
-         Week 13
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week14.html">
-         Week 14
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-tutorials" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/tutorials.svg"/>
-       <span class="icon-text">
-        Tutorials
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="tutorial-listing">
-       <li>
-        <a href="../pages/tutorials.html#week-01-exercises">
-         week 01 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-04-exercises">
-         week 04 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-06-exercises">
-         week 06 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-10-exercises">
-         week 10 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-11-exercises">
-         week 11 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-15-tutorial">
-         week 15 
-tutorial
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-04-solutions">
-         week 04 
-solutions
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-06-solutions">
-         week 06 
-solutions
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-10-solutions">
-         week 10 
-solutions
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-assignments" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/assignments.svg"/>
-       <span class="icon-text">
-        Assignments
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="assignment-listing">
-       <li>
-        <a href="../pages/assignments.html#milestone-1-2">
-         milestone 1 &amp;
- 2
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-1">
-         lab 1
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-2">
-         lab 2
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-3">
-         lab 3
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-4">
-         lab 4
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-1-solution">
-         lab 1 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-2-solution">
-         lab 2 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-3-solution">
-         lab 3 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-4-solution">
-         lab 4 
-solution
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </nav>
-  </aside>
-  <aside class="aside--page">
-   <nav class="nav nav--page" id="TOC" role="doc-toc">
-    <h2 id="toc-title">
-     Page navigation
-    </h2>
-    <ul>
-     <li>
-      <a href="#tutorials" id="toc-tutorials">
+  <nav aria-labelledby="course-content" class="tooltip vertical sticky-container" role="navigation">
+   <h2 class="visually-hidden" id="course-content">
+    Course Content
+   </h2>
+   <ul class="sticky" role="menu">
+    <li>
+     <a aria-label="Link to Home" href="../pages/home.html" role="menuitem" style="--icon: url(../images/home.svg)">
+      <span>
+       Home
+      </span>
+     </a>
+    </li>
+    <li>
+     <a aria-label="Link to Course Outline" href="../pages/course-outline.html" role="menuitem" style="--icon: url(../images/outline.svg)">
+      <span>
+       Course outline
+      </span>
+     </a>
+    </li>
+    <li>
+     <a aria-label="Link to Calendar" href="../pages/calendar.html" role="menuitem" style="--icon: url(../images/calendar.svg)">
+      <span>
+       Calendar
+      </span>
+     </a>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Lectures" href="../pages/lectures.html" role="menuitem" style="--icon: url(../images/lectures.svg)">
+      <span>
+       Lectures
+      </span>
+     </a>
+     <button aria-controls="lecture-listing" aria-expanded="false" aria-label="Expand lecture menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right.svg)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="lecture-listing">
+     </ul>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Tutorials" href="../pages/tutorials.html" role="menuitem" style="--icon: url(../images/tutorials.svg)">
+      <span>
        Tutorials
-      </a>
-      <ul>
-       <li>
-        <a href="#week-01-exercises" id="toc-week-01-exercises">
-         Week 01
-Exercises
-        </a>
-       </li>
-       <li>
-        <a href="#week-04-exercises" id="toc-week-04-exercises">
-         Week 04
-Exercises
-        </a>
-       </li>
-       <li>
-        <a href="#week-06-exercises" id="toc-week-06-exercises">
-         Week 06
-Exercises
-        </a>
-       </li>
-       <li>
-        <a href="#week-10-exercises" id="toc-week-10-exercises">
-         Week 10
-Exercises
-        </a>
-       </li>
-       <li>
-        <a href="#week-11-exercises" id="toc-week-11-exercises">
-         Week 11
-Exercises
-        </a>
-       </li>
-       <li>
-        <a href="#week-15-tutorial" id="toc-week-15-tutorial">
-         Week 15
-Tutorial
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li>
-      <a href="#solutions" id="toc-solutions">
-       Solutions
-      </a>
-      <ul>
-       <li>
-        <a href="#week-04-solutions" id="toc-week-04-solutions">
-         Week 04
-Solutions
-        </a>
-       </li>
-       <li>
-        <a href="#week-06-solutions" id="toc-week-06-solutions">
-         Week 06
-Solutions
-        </a>
-       </li>
-       <li>
-        <a href="#week-10-solutions" id="toc-week-10-solutions">
-         Week 10
-Solutions
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-    <a class="" href="../pages/assignments.html">
-     <img alt="" class="icon" src="../assets/images/feather-icons/chevron-right.svg"/>
-     <span class="icon-text">
-      Next page...
-     </span>
-    </a>
-   </nav>
-  </aside>
-  <main class="main base">
+      </span>
+     </a>
+     <button aria-controls="tutorial-listing" aria-expanded="false" aria-label="Expand tutorial menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="tutorial-listing">
+     </ul>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Assignments" href="../pages/assignments.html" role="menuitem" style="--icon: url(../images/assignments.svg)">
+      <span>
+       Assignments
+      </span>
+     </a>
+     <button aria-controls="assignment-listing" aria-expanded="false" aria-label="Expand assignment menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="assignment-listing">
+     </ul>
+    </li>
+   </ul>
+  </nav>
+  <main class="base" role="main">
    <article class="article">
-    <header id="title-block-header">
-     <h1 class="title">
+    <header class="level1" id="title-block-header">
+     <h1>
       2W6-W23: Tutorials
      </h1>
      <div class="abstract">
-      <div class="abstract-title">
+      <h2>
        Practise lab work and solutions
-      </div>
+      </h2>
       <p>
-       Here you will find information about all practise lab work
-      given this semester.
+       Here you will find information about all practise lab
+            work given this semester.
       </p>
      </div>
-     <p class="date">
+     <p>
       Last update:
-      <time datetime="Sun May 7 17:53:35 2023">
-       Sunday, May 07, 2023
+      <time datetime="Thu Jun 22 16:37:36 2023">
+       Thursday, June
+22, 2023
       </time>
      </p>
+     <hr/>
     </header>
+    <section class="overlay-grid sticky-container level1">
+     <nav aria-labelledby="page-controls-title" class="margin surface menu sticky tooltip">
+      <h2 class="visually-hidden" id="page-controls-title">
+       Page Controls
+      </h2>
+      <ul role="menubar">
+       <li>
+        <a href="#title-block-header" role="menuitem" style="
+                    --icon: url(../images/feather-icons/chevron-up.svg);
+                  ">
+         <span>
+          Scroll to beginning
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="#site-footer" role="menuitem" style="
+                    --icon: url(../images/feather-icons/chevron-down.svg);
+                  ">
+         <span>
+          Scroll to end
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="../pages/assignments.html" role="menuitem" style="
+                    --icon: url(../images/feather-icons/chevron-right.svg);
+                  ">
+         <span>
+          Next page
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="#" role="menuitem" style="
+                    --icon: url('../images/feather-icons/printer.svg');
+                  ">
+         <span>
+          View PDF
+         </span>
+        </a>
+       </li>
+       <li>
+        <button aria-controls="margin-menu" aria-expanded="false" aria-hidden="true" aria-label="Toggle margin menu" role="menuitem" style="
+                    --icon: url(../images/feather-icons/maximize-2.svg);
+                  ">
+         <span>
+          Toggle margin menu
+         </span>
+        </button>
+       </li>
+      </ul>
+     </nav>
+     <nav aria-labelledby="toc-title" class="margin surface menu sticky toc" id="TOC" role="navigation">
+      <h2 id="toc-title">
+       Contents
+      </h2>
+      <ul>
+       <li>
+        <a href="#tutorials" id="toc-tutorials">
+         <span class="toc-section-number">
+          1
+         </span>
+         Tutorials
+        </a>
+        <ul>
+         <li>
+          <a href="#week-01-exercises" id="toc-week-01-exercises">
+           <span class="toc-section-number">
+            1.1
+           </span>
+           Week 01
+            Exercises
+          </a>
+         </li>
+         <li>
+          <a href="#week-04-exercises" id="toc-week-04-exercises">
+           <span class="toc-section-number">
+            1.2
+           </span>
+           Week 04 Exercises
+          </a>
+          <ul>
+           <li>
+            <a href="#css-foundations" id="toc-css-foundations">
+             <span class="toc-section-number">
+              1.2.1
+             </span>
+             CSS
+            Foundations
+            </a>
+           </li>
+           <li>
+            <a href="#css-box-model" id="toc-css-box-model">
+             <span class="toc-section-number">
+              1.2.2
+             </span>
+             CSS Box
+            Model
+            </a>
+           </li>
+           <li>
+            <a href="#css-typesetting-typography" id="toc-css-typesetting-typography">
+             <span class="toc-section-number">
+              1.2.3
+             </span>
+             CSS Typesetting
+            &amp; Typography
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li>
+          <a href="#week-06-exercises" id="toc-week-06-exercises">
+           <span class="toc-section-number">
+            1.3
+           </span>
+           Week 06 Exercises
+          </a>
+          <ul>
+           <li>
+            <a href="#css-flexbox" id="toc-css-flexbox">
+             <span class="toc-section-number">
+              1.3.1
+             </span>
+             CSS Flexbox
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li>
+          <a href="#week-10-exercises" id="toc-week-10-exercises">
+           <span class="toc-section-number">
+            1.4
+           </span>
+           Week 10 Exercises
+          </a>
+          <ul>
+           <li>
+            <a href="#css-grid" id="toc-css-grid">
+             <span class="toc-section-number">
+              1.4.1
+             </span>
+             CSS Grid
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li>
+          <a href="#week-11-exercises" id="toc-week-11-exercises">
+           <span class="toc-section-number">
+            1.5
+           </span>
+           Week 11
+            Exercises
+          </a>
+         </li>
+         <li>
+          <a href="#week-15-tutorial" id="toc-week-15-tutorial">
+           <span class="toc-section-number">
+            1.6
+           </span>
+           Week 15
+            Tutorial
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <a href="#solutions" id="toc-solutions">
+         <span class="toc-section-number">
+          2
+         </span>
+         Solutions
+        </a>
+        <ul>
+         <li>
+          <a href="#week-04-solutions" id="toc-week-04-solutions">
+           <span class="toc-section-number">
+            2.1
+           </span>
+           Week 04 Solutions
+          </a>
+          <ul>
+           <li>
+            <a href="#css-foundations-1" id="toc-css-foundations-1">
+             <span class="toc-section-number">
+              2.1.1
+             </span>
+             CSS
+            Foundations
+            </a>
+           </li>
+           <li>
+            <a href="#css-box-model-1" id="toc-css-box-model-1">
+             <span class="toc-section-number">
+              2.1.2
+             </span>
+             CSS Box
+            Model
+            </a>
+           </li>
+           <li>
+            <a href="#css-typesetting-typography-1" id="toc-css-typesetting-typography-1">
+             <span class="toc-section-number">
+              2.1.3
+             </span>
+             CSS Typesetting
+            &amp; Typography
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li>
+          <a href="#week-06-solutions" id="toc-week-06-solutions">
+           <span class="toc-section-number">
+            2.2
+           </span>
+           Week 06 Solutions
+          </a>
+          <ul>
+           <li>
+            <a href="#css-flexbox-1" id="toc-css-flexbox-1">
+             <span class="toc-section-number">
+              2.2.1
+             </span>
+             CSS Flexbox
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li>
+          <a href="#week-10-solutions" id="toc-week-10-solutions">
+           <span class="toc-section-number">
+            2.3
+           </span>
+           Week 10 Solutions
+          </a>
+          <ul>
+           <li>
+            <a href="#css-grid-1" id="toc-css-grid-1">
+             <span class="toc-section-number">
+              2.3.1
+             </span>
+             CSS Grid
+            </a>
+           </li>
+          </ul>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </nav>
+    </section>
     <hr/>
-    <section class="level1" id="tutorials">
-     <h1>
+    <section class="level1" data-number="1" id="tutorials">
+     <h1 data-number="1">
+      <span class="header-section-number">
+       1
+      </span>
       Tutorials
      </h1>
      <p>
@@ -414,8 +425,11 @@ associated with that lab.
       </strong>
       tab from each section.
      </p>
-     <section class="level2" id="week-01-exercises">
-      <h2>
+     <section class="level2" data-number="1.1" id="week-01-exercises">
+      <h2 data-number="1.1">
+       <span class="header-section-number">
+        1.1
+       </span>
        Week 01 Exercises
       </h2>
       <p>
@@ -433,8 +447,11 @@ fundamental HTML elements – the file is well-commented.
 	└── <a href=".././tutorials/week01-boilerplate/week1-boilerplate.html">week1-boilerplate.html</a>
 </pre>
      </section>
-     <section class="level2" id="week-04-exercises">
-      <h2>
+     <section class="level2" data-number="1.2" id="week-04-exercises">
+      <h2 data-number="1.2">
+       <span class="header-section-number">
+        1.2
+       </span>
        Week 04 Exercises
       </h2>
       <p>
@@ -456,8 +473,11 @@ Web Docs exercise set
 using external web fonts, as well as perfecting typographic CSS
 skills.
       </p>
-      <section class="level3" id="css-foundations">
-       <h3>
+      <section class="level3" data-number="1.2.1" id="css-foundations">
+       <h3 data-number="1.2.1">
+        <span class="header-section-number">
+         1.2.1
+        </span>
         CSS Foundations
        </h3>
        <p>
@@ -509,8 +529,11 @@ solve the problems.
 	    └── <a href=".././tutorials/week04-foundations-exercises/06-cascade-fix/style.css">style.css</a>
 </pre>
       </section>
-      <section class="level3" id="css-box-model">
-       <h3>
+      <section class="level3" data-number="1.2.2" id="css-box-model">
+       <h3 data-number="1.2.2">
+        <span class="header-section-number">
+         1.2.2
+        </span>
         CSS Box Model
        </h3>
        <p>
@@ -537,8 +560,11 @@ solve the problems.
 	    └── <a href=".././tutorials/week04-box-model-exercises/02-margin-and-padding-2/style.css">style.css</a>
 </pre>
       </section>
-      <section class="level3" id="css-typesetting-typography">
-       <h3>
+      <section class="level3" data-number="1.2.3" id="css-typesetting-typography">
+       <h3 data-number="1.2.3">
+        <span class="header-section-number">
+         1.2.3
+        </span>
         CSS Typesetting &amp; Typography
        </h3>
        <p>
@@ -558,16 +584,22 @@ solve the problems.
 </pre>
       </section>
      </section>
-     <section class="level2" id="week-06-exercises">
-      <h2>
+     <section class="level2" data-number="1.3" id="week-06-exercises">
+      <h2 data-number="1.3">
+       <span class="header-section-number">
+        1.3
+       </span>
        Week 06 Exercises
       </h2>
       <p>
        Another set of Odin Project exercises, focusing on the mechanics of
 Flexbox.
       </p>
-      <section class="level3" id="css-flexbox">
-       <h3>
+      <section class="level3" data-number="1.3.1" id="css-flexbox">
+       <h3 data-number="1.3.1">
+        <span class="header-section-number">
+         1.3.1
+        </span>
         CSS Flexbox
        </h3>
        <p>
@@ -629,16 +661,22 @@ Flexbox.
 </pre>
       </section>
      </section>
-     <section class="level2" id="week-10-exercises">
-      <h2>
+     <section class="level2" data-number="1.4" id="week-10-exercises">
+      <h2 data-number="1.4">
+       <span class="header-section-number">
+        1.4
+       </span>
        Week 10 Exercises
       </h2>
       <p>
        Another set of Odin Project exercises, focusing on the mechanics of
 Grid.
       </p>
-      <section class="level3" id="css-grid">
-       <h3>
+      <section class="level3" data-number="1.4.1" id="css-grid">
+       <h3 data-number="1.4.1">
+        <span class="header-section-number">
+         1.4.1
+        </span>
         CSS Grid
        </h3>
        <p>
@@ -673,8 +711,11 @@ Grid.
 </pre>
       </section>
      </section>
-     <section class="level2" id="week-11-exercises">
-      <h2>
+     <section class="level2" data-number="1.5" id="week-11-exercises">
+      <h2 data-number="1.5">
+       <span class="header-section-number">
+        1.5
+       </span>
        Week 11 Exercises
       </h2>
       <p>
@@ -712,8 +753,11 @@ tasks.
 	    └── <a href=".././tutorials/week11-june-exercises/sup/sup9.html">sup9.html</a>
 </pre>
      </section>
-     <section class="level2" id="week-15-tutorial">
-      <h2>
+     <section class="level2" data-number="1.6" id="week-15-tutorial">
+      <h2 data-number="1.6">
+       <span class="header-section-number">
+        1.6
+       </span>
        Week 15 Tutorial
       </h2>
       <p>
@@ -734,43 +778,42 @@ semester.
 	├── <a href=".././tutorials/week15-best-practises/index.html">index.html</a>
 	├── <a href=".././tutorials/week15-best-practises/main.js">main.js</a>
 	├── <a href=".././tutorials/week15-best-practises/package.json">package.json</a>
-	├── <a href=".././tutorials/week15-best-practises/package-lock.json">package-lock.json</a>
 	├── <a href=".././tutorials/week15-best-practises/style.css">style.css</a>
 	├── <a href=".././tutorials/week15-best-practises/tailwind.config.js">tailwind.config.js</a>
-	├── <a href=".././tutorials/week15-best-practises/assets/">assets</a>
-	│   ├── <a href=".././tutorials/week15-best-practises/assets/favicon.svg">favicon.svg</a>
-	│   ├── <a href=".././tutorials/week15-best-practises/assets/gpl-v3-logo-inkscape.svg">gpl-v3-logo-inkscape.svg</a>
-	│   ├── <a href=".././tutorials/week15-best-practises/assets/gpl-v3-logo.svg">gpl-v3-logo.svg</a>
-	│   ├── <a href=".././tutorials/week15-best-practises/assets/hamburger.svg">hamburger.svg</a>
-	│   ├── <a href=".././tutorials/week15-best-practises/assets/liberation.jpg">liberation.jpg</a>
-	│   ├── <a href=".././tutorials/week15-best-practises/assets/liberation.png">liberation.png</a>
-	│   ├── <a href=".././tutorials/week15-best-practises/assets/logo.svg">logo.svg</a>
-	│   └── <a href=".././tutorials/week15-best-practises/assets/main-image.webp">main-image.webp</a>
-	└── <a href=".././tutorials/week15-best-practises/dist/">dist</a>
-	    ├── <a href=".././tutorials/week15-best-practises/dist/favicon.6176ebb7.svg">favicon.6176ebb7.svg</a>
-	    ├── <a href=".././tutorials/week15-best-practises/dist/gpl-v3-logo.646df9af.svg">gpl-v3-logo.646df9af.svg</a>
-	    ├── <a href=".././tutorials/week15-best-practises/dist/hamburger.f3b5c885.svg">hamburger.f3b5c885.svg</a>
-	    ├── <a href=".././tutorials/week15-best-practises/dist/index.99ff7795.css">index.99ff7795.css</a>
-	    ├── <a href=".././tutorials/week15-best-practises/dist/index.99ff7795.css.map">index.99ff7795.css.map</a>
-	    ├── <a href=".././tutorials/week15-best-practises/dist/index.e55e0f80.js">index.e55e0f80.js</a>
-	    ├── <a href=".././tutorials/week15-best-practises/dist/index.e55e0f80.js.map">index.e55e0f80.js.map</a>
-	    ├── <a href=".././tutorials/week15-best-practises/dist/index.html">index.html</a>
-	    ├── <a href=".././tutorials/week15-best-practises/dist/main-image.247440ea.webp">main-image.247440ea.webp</a>
-	    └── <a href=".././tutorials/week15-best-practises/dist/main-image.bbdae02a.jpeg">main-image.bbdae02a.jpeg</a>
+	├── <a href=".././tutorials/week15-best-practises/tailwind.css">tailwind.css</a>
+	├── <a href=".././tutorials/week15-best-practises/tailwind.html">tailwind.html</a>
+	└── <a href=".././tutorials/week15-best-practises/assets/">assets</a>
+	    ├── <a href=".././tutorials/week15-best-practises/assets/favicon.svg">favicon.svg</a>
+	    ├── <a href=".././tutorials/week15-best-practises/assets/gpl-v3-logo-inkscape.svg">gpl-v3-logo-inkscape.svg</a>
+	    ├── <a href=".././tutorials/week15-best-practises/assets/gpl-v3-logo.svg">gpl-v3-logo.svg</a>
+	    ├── <a href=".././tutorials/week15-best-practises/assets/hamburger.svg">hamburger.svg</a>
+	    ├── <a href=".././tutorials/week15-best-practises/assets/liberation.jpg">liberation.jpg</a>
+	    ├── <a href=".././tutorials/week15-best-practises/assets/liberation.png">liberation.png</a>
+	    ├── <a href=".././tutorials/week15-best-practises/assets/logo.svg">logo.svg</a>
+	    └── <a href=".././tutorials/week15-best-practises/assets/main-image.webp">main-image.webp</a>
 </pre>
       <hr/>
      </section>
     </section>
-    <section class="level1" id="solutions">
-     <h1>
+    <section class="level1" data-number="2" id="solutions">
+     <h1 data-number="2">
+      <span class="header-section-number">
+       2
+      </span>
       Solutions
      </h1>
-     <section class="level2" id="week-04-solutions">
-      <h2>
+     <section class="level2" data-number="2.1" id="week-04-solutions">
+      <h2 data-number="2.1">
+       <span class="header-section-number">
+        2.1
+       </span>
        Week 04 Solutions
       </h2>
-      <section class="level3" id="css-foundations-1">
-       <h3>
+      <section class="level3" data-number="2.1.1" id="css-foundations-1">
+       <h3 data-number="2.1.1">
+        <span class="header-section-number">
+         2.1.1
+        </span>
         CSS Foundations
        </h3>
        <p>
@@ -811,8 +854,11 @@ semester.
 	        └── <a href=".././tutorials/week04-foundations-solutions/06-cascade-fix/solution/solution.html">solution.html</a>
 </pre>
       </section>
-      <section class="level3" id="css-box-model-1">
-       <h3>
+      <section class="level3" data-number="2.1.2" id="css-box-model-1">
+       <h3 data-number="2.1.2">
+        <span class="header-section-number">
+         2.1.2
+        </span>
         CSS Box Model
        </h3>
        <p>
@@ -837,8 +883,11 @@ semester.
 	        └── <a href=".././tutorials/week04-box-model-solutions/02-margin-and-padding-2/solution/solution.html">solution.html</a>
 </pre>
       </section>
-      <section class="level3" id="css-typesetting-typography-1">
-       <h3>
+      <section class="level3" data-number="2.1.3" id="css-typesetting-typography-1">
+       <h3 data-number="2.1.3">
+        <span class="header-section-number">
+         2.1.3
+        </span>
         CSS Typesetting &amp; Typography
        </h3>
        <p>
@@ -913,12 +962,18 @@ semester.
 </pre>
       </section>
      </section>
-     <section class="level2" id="week-06-solutions">
-      <h2>
+     <section class="level2" data-number="2.2" id="week-06-solutions">
+      <h2 data-number="2.2">
+       <span class="header-section-number">
+        2.2
+       </span>
        Week 06 Solutions
       </h2>
-      <section class="level3" id="css-flexbox-1">
-       <h3>
+      <section class="level3" data-number="2.2.1" id="css-flexbox-1">
+       <h3 data-number="2.2.1">
+        <span class="header-section-number">
+         2.2.1
+        </span>
         CSS Flexbox
        </h3>
        <p>
@@ -964,12 +1019,18 @@ semester.
 </pre>
       </section>
      </section>
-     <section class="level2" id="week-10-solutions">
-      <h2>
+     <section class="level2" data-number="2.3" id="week-10-solutions">
+      <h2 data-number="2.3">
+       <span class="header-section-number">
+        2.3
+       </span>
        Week 10 Solutions
       </h2>
-      <section class="level3" id="css-grid-1">
-       <h3>
+      <section class="level3" data-number="2.3.1" id="css-grid-1">
+       <h3 data-number="2.3.1">
+        <span class="header-section-number">
+         2.3.1
+        </span>
         CSS Grid
        </h3>
        <p>
@@ -1002,8 +1063,8 @@ semester.
     </section>
    </article>
   </main>
-  <footer class="footer">
-   <span class="note-text">
+  <footer id="site-footer" role="contentinfo">
+   <span>
     © 2023 Michael Haaf |
     <a href="../pages/home.html#about-this-website">
      About
