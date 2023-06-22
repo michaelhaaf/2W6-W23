@@ -75,7 +75,7 @@ button {
 }
 
 small,
-figcaption, {
+figcaption {
   font-size: var(--font-size-xxs);
   line-height: var(--line-height-xxs);
 }

@@ -83,7 +83,7 @@ em {
   font-style: italic;
 }
 strong {
-  font-style: bold;
+  font-weight: bold;
 }
 
 /* Table styles inspired by:

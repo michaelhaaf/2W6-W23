@@ -155,7 +155,6 @@ function turnActive(elem) {
 
 function setCurrent(elem) {
   elem.setAttribute("aria-current", "page");
-  console.log(elem);
 }
 
 function toggleDropdown(event) {

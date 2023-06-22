@@ -95,11 +95,6 @@ html {
   display: contents;
 }
 
-figcaption {
-  line-height: var(--line-height-xxs);
-  font-size: var(--font-size-xxs);
-}
-
 /* ------------------------------------------ *\
   || Utilities
 \* ------------------------------------------ */
@@ -286,15 +281,10 @@ figcaption {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
-
-
-
-
-
-
 .header-section-number {
   display: none;
 }
+
 
 
 /* ------------------------------------------ *\
