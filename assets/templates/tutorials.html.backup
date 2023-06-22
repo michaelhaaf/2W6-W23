@@ -37,7 +37,7 @@
 
     <header role="banner">
       <div class="">
-        <button id="theme-toggle-icon" aria-label="theme-toggle-icon">X</button>
+        <button id="theme-toggle-icon" aria-label="theme-toggle-icon" aria-hidden="true">X</button>
         <div>
           <h1>User Interfaces</h1>
           <span>
@@ -55,9 +55,9 @@
       </div>
     </header>
 
-    <nav class="tooltip vertical" role="navigation" aria-labelledby="course-content">
+    <nav class="tooltip vertical sticky-container" role="navigation" aria-labelledby="course-content">
       <h2 class="visually-hidden" id="course-content">Course Content</h2>
-      <ul role="menu">
+      <ul role="menu" class="sticky">
         <li>
           <a
             style="--icon: url(../images/home.svg)"
@@ -162,13 +162,13 @@
           </div>
                      <p>
             Last update:
-            <time datetime="Thu Jun 22 13:50:01 2023"> Thursday, June
+            <time datetime="Thu Jun 22 15:35:12 2023"> Thursday, June
 22, 2023 </time>
           </p>
                     <hr />
         </header>
         
-        <section class="overlay-grid level1">
+        <section class="overlay-grid sticky-container level1">
           <nav class="margin surface menu sticky tooltip" aria-labelledby="page-controls-title">
             <h2 id="page-controls-title" class="visually-hidden">Page Controls</h2>
             <ul role="menubar">
@@ -224,6 +224,7 @@
                   aria-expanded="false"
                   aria-controls="margin-menu"
                   aria-label="Toggle margin menu"
+                  aria-hidden="true"
                   role="menuitem"
                 >
                   <span>Toggle margin menu</span>

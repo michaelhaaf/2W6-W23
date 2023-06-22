@@ -153,6 +153,11 @@ function turnActive(elem) {
   }
 }
 
+function setCurrent(elem) {
+  elem.setAttribute("aria-current", "page");
+  console.log(elem);
+}
+
 function toggleDropdown(event) {
   event.stopPropagation();
   let dropbtn = event.currentTarget;
@@ -172,16 +177,20 @@ window.onclick = function (e) {
   }
 };
 
-// Set current site section to active
-const siteLinks = document.querySelectorAll('[id^="site-"]:is(a, button)');
-
+// Set current page 
 window.onload = function (e) {
-  let currentPath = window.location.pathname
-    .substring(0, window.location.pathname.lastIndexOf('.'))
-    .split("/")
-  let currentLink = currentPath.includes("lectures") ? "lectures" : currentPath.at(-1);
-  let currentLinkElem = document.querySelector(`#site-${currentLink}`);
-  turnActive(currentLinkElem);
+  let pathname = window.location.pathname
+  let basename = pathname.substring(pathname.lastIndexOf('/')+1)
+  if (pathname.includes("lectures")) {
+    basename = "lectures.html";
+  } else if (pathname.includes("assignments")) {
+    basename = "assignments.html";
+  } else if (pathname.includes("tutorials")) {
+    basename = "tutorials.html";
+  }
+
+  let currentPageTab = document.querySelector(`nav a[href$="${basename}"]`).parentElement;
+  setCurrent(currentPageTab);
 };
 
 

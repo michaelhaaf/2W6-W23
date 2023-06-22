@@ -71,6 +71,10 @@ nav ol {
   || Typography
 \* ------------------------------------------ */
 
+html {
+  font-size: 125%;
+}
+
 .level1 {
   display: grid;
   row-gap: 2rem;
@@ -194,16 +198,34 @@ figcaption {
   font-size: var(--font-size-xxs);
   line-height: var(--line-height-xxs);
 }
-.vertical ul {
+.vertical > ul {
   display: flex;
   flex-flow: column nowrap;
   align-items: start;
   justify-content: space-between;
-  border-radius: 8px;
-  box-shadow: 4px 8px 8px hsl(var(--hsl-text) / 25%);
 }
 .vertical li {
   padding: 0.5rem 0.5rem;
+  background-color: var(--surface);
+  border-right: 1px solid var(--muted);
+}
+.vertical li:first-child {
+  border-top: 1px solid var(--muted);
+}
+.vertical li:last-child {
+  border-bottom: 1px solid var(--muted);
+}
+.vertical li[aria-current="page"] {
+  background-color: var(--base);
+  border-right: initial;
+  border-top: 1px solid var(--muted);
+  border-bottom: 1px solid var(--muted);
+}
+.vertical li:first-child[aria-current="page"] {
+  border-top: initial;
+}
+.vertical li:last-child[aria-current="page"] {
+  border-bottom: initial;
 }
 .vertical a {
   display: block;
@@ -230,7 +252,7 @@ figcaption {
 .vertical a:hover,
 .vertical a:focus,
 .vertical a:active {
-  background-color: hsl(var(--hsl-surface) / 1);
+  background-color: hsl(var(--hsl-base) / 1);
 }
 .vertical a span {
   background-color: hsl(var(--hsl-surface) / 1);
@@ -329,20 +351,29 @@ article {
   position: relative;
 }
 
+/* https://stackoverflow.com/a/38994837 */
 .sticky {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.sticky::-webkit-scrollbar { 
+    display: none;
+}
+
+.sticky {
+  overflow: auto;
   position: sticky;
-  overflow-y: auto;
   align-self: start;
 }
 
 .sticky-container > .sticky {
   top: 2rem;
-  max-height: 90vh;
+  max-height: 100vh;
 }
 
 .sticky-container > .sticky:nth-of-type(2) {
   top: 6rem;
-  max-height: 90vh;
+  max-height: 100vh;
 }
 
 .overlay-grid {
