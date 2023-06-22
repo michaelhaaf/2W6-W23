@@ -92,8 +92,6 @@
           <a
             style="--icon: url(../images/lectures.svg)"
             href="../pages/lectures.html"
-            aria-expanded="false"
-            aria-controls="lecture-listing"
             aria-label="Link to Lectures"
             role="menuitem"
           >
@@ -114,8 +112,6 @@
           <a
             style="--icon: url(../images/tutorials.svg)"
             href="../pages/tutorials.html"
-            aria-expanded="false"
-            aria-controls="tutorial-listing"
             aria-label="Link to Tutorials"
             role="menuitem"
           >
@@ -136,8 +132,6 @@
           <a
             style="--icon: url(../images/assignments.svg)"
             href="../pages/assignments.html"
-            aria-expanded="false"
-            aria-controls="assignment-listing"
             aria-label="Link to Assignments"
             role="menuitem"
           >
@@ -168,14 +162,15 @@
           </div>
                      <p>
             Last update:
-            <time datetime="Wed Jun 21 17:36:26 2023"> Wednesday, June
-21, 2023 </time>
+            <time datetime="Thu Jun 22 13:49:59 2023"> Thursday, June
+22, 2023 </time>
           </p>
                     <hr />
         </header>
         
         <section class="overlay-grid level1">
-          <nav class="margin surface menu sticky tooltip" aria-label="interface-menu">
+          <nav class="margin surface menu sticky tooltip" aria-labelledby="page-controls-title">
+            <h2 id="page-controls-title" class="visually-hidden">Page Controls</h2>
             <ul role="menubar">
               <li>
                 <a
@@ -241,65 +236,72 @@
             class="margin surface menu sticky toc"
             id="TOC"
             role="navigation"
-            aria-label="table-of-contents"
+            aria-labelledby="toc-title"
           >
-                        <h2 id="toc-title">Page navigation</h2>
-             <ul>
-<li><a href="#project" id="toc-project"><span
-class="toc-section-number">1</span> Project</a>
-<ul>
-<li><a href="#milestone-1-2" id="toc-milestone-1-2"><span
-class="toc-section-number">1.1</span> Milestone 1 &amp; 2</a></li>
-</ul></li>
-<li><a href="#labs" id="toc-labs"><span
-class="toc-section-number">2</span> Labs</a>
-<ul>
-<li><a href="#lab-1" id="toc-lab-1"><span
-class="toc-section-number">2.1</span> Lab 1</a>
-<ul>
-<li><a href="#creating-a-basic-website-with-html-boilerplate"
-id="toc-creating-a-basic-website-with-html-boilerplate"><span
-class="toc-section-number">2.1.1</span> Creating a basic website with
-HTML boilerplate</a></li>
-</ul></li>
-<li><a href="#lab-2" id="toc-lab-2"><span
-class="toc-section-number">2.2</span> Lab 2</a>
-<ul>
-<li><a href="#structing-and-styling-websites-with-html-css"
-id="toc-structing-and-styling-websites-with-html-css"><span
-class="toc-section-number">2.2.1</span> Structing and styling websites
-with HTML &amp; CSS</a></li>
-</ul></li>
-<li><a href="#lab-3" id="toc-lab-3"><span
-class="toc-section-number">2.3</span> Lab 3</a>
-<ul>
-<li><a href="#crafting-layouts-with-css-flexbox-float"
-id="toc-crafting-layouts-with-css-flexbox-float"><span
-class="toc-section-number">2.3.1</span> Crafting layouts with CSS
-Flexbox &amp; Float</a></li>
-</ul></li>
-<li><a href="#lab-4" id="toc-lab-4"><span
-class="toc-section-number">2.4</span> Lab 4</a>
-<ul>
-<li><a href="#responsive-2d-layouts-with-css-grid-and-semantic-html"
-id="toc-responsive-2d-layouts-with-css-grid-and-semantic-html"><span
-class="toc-section-number">2.4.1</span> Responsive 2d layouts with CSS
-Grid and Semantic HTML</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#solutions" id="toc-solutions"><span
-class="toc-section-number">3</span> Solutions</a>
-<ul>
-<li><a href="#lab-1-solution" id="toc-lab-1-solution"><span
-class="toc-section-number">3.1</span> Lab 1 Solution</a></li>
-<li><a href="#lab-2-solution" id="toc-lab-2-solution"><span
-class="toc-section-number">3.2</span> Lab 2 Solution</a></li>
-<li><a href="#lab-3-solution" id="toc-lab-3-solution"><span
-class="toc-section-number">3.3</span> Lab 3 Solution</a></li>
-<li><a href="#lab-4-solution" id="toc-lab-4-solution"><span
-class="toc-section-number">3.4</span> Lab 4 Solution</a></li>
-</ul></li>
-</ul>
+            <h2 id="toc-title">Contents</h2>
+            <ul>
+            <li><a href="#project" id="toc-project"><span
+            class="toc-section-number">1</span> Project</a>
+            <ul>
+            <li><a href="#milestone-1-2" id="toc-milestone-1-2"><span
+            class="toc-section-number">1.1</span> Milestone 1 &amp;
+            2</a></li>
+            </ul></li>
+            <li><a href="#labs" id="toc-labs"><span
+            class="toc-section-number">2</span> Labs</a>
+            <ul>
+            <li><a href="#lab-1" id="toc-lab-1"><span
+            class="toc-section-number">2.1</span> Lab 1</a>
+            <ul>
+            <li><a
+            href="#creating-a-basic-website-with-html-boilerplate"
+            id="toc-creating-a-basic-website-with-html-boilerplate"><span
+            class="toc-section-number">2.1.1</span> Creating a basic
+            website with HTML boilerplate</a></li>
+            </ul></li>
+            <li><a href="#lab-2" id="toc-lab-2"><span
+            class="toc-section-number">2.2</span> Lab 2</a>
+            <ul>
+            <li><a href="#structing-and-styling-websites-with-html-css"
+            id="toc-structing-and-styling-websites-with-html-css"><span
+            class="toc-section-number">2.2.1</span> Structing and
+            styling websites with HTML &amp; CSS</a></li>
+            </ul></li>
+            <li><a href="#lab-3" id="toc-lab-3"><span
+            class="toc-section-number">2.3</span> Lab 3</a>
+            <ul>
+            <li><a href="#crafting-layouts-with-css-flexbox-float"
+            id="toc-crafting-layouts-with-css-flexbox-float"><span
+            class="toc-section-number">2.3.1</span> Crafting layouts
+            with CSS Flexbox &amp; Float</a></li>
+            </ul></li>
+            <li><a href="#lab-4" id="toc-lab-4"><span
+            class="toc-section-number">2.4</span> Lab 4</a>
+            <ul>
+            <li><a
+            href="#responsive-2d-layouts-with-css-grid-and-semantic-html"
+            id="toc-responsive-2d-layouts-with-css-grid-and-semantic-html"><span
+            class="toc-section-number">2.4.1</span> Responsive 2d
+            layouts with CSS Grid and Semantic HTML</a></li>
+            </ul></li>
+            </ul></li>
+            <li><a href="#solutions" id="toc-solutions"><span
+            class="toc-section-number">3</span> Solutions</a>
+            <ul>
+            <li><a href="#lab-1-solution" id="toc-lab-1-solution"><span
+            class="toc-section-number">3.1</span> Lab 1
+            Solution</a></li>
+            <li><a href="#lab-2-solution" id="toc-lab-2-solution"><span
+            class="toc-section-number">3.2</span> Lab 2
+            Solution</a></li>
+            <li><a href="#lab-3-solution" id="toc-lab-3-solution"><span
+            class="toc-section-number">3.3</span> Lab 3
+            Solution</a></li>
+            <li><a href="#lab-4-solution" id="toc-lab-4-solution"><span
+            class="toc-section-number">3.4</span> Lab 4
+            Solution</a></li>
+            </ul></li>
+            </ul>
           </nav>
                   </section>
         <hr />

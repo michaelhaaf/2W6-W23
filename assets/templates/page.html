@@ -37,7 +37,7 @@
 
     <header role="banner">
       <div class="">
-        <button id="theme-toggle-icon" aria-label="theme-toggle-icon">X</button>
+        <button id="theme-toggle-icon" aria-label="theme-toggle-icon" aria-hidden="true">X</button>
         <div>
           <h1>User Interfaces</h1>
           <span>
@@ -55,9 +55,9 @@
       </div>
     </header>
 
-    <nav class="tooltip vertical" role="navigation" aria-labelledby="course-content">
+    <nav class="tooltip vertical sticky-container" role="navigation" aria-labelledby="course-content">
       <h2 class="visually-hidden" id="course-content">Course Content</h2>
-      <ul role="menu">
+      <ul role="menu" class="sticky">
         <li>
           <a
             style="--icon: url(../images/home.svg)"
@@ -92,8 +92,6 @@
           <a
             style="--icon: url(../images/lectures.svg)"
             href="../pages/lectures.html"
-            aria-expanded="false"
-            aria-controls="lecture-listing"
             aria-label="Link to Lectures"
             role="menuitem"
           >
@@ -114,8 +112,6 @@
           <a
             style="--icon: url(../images/tutorials.svg)"
             href="../pages/tutorials.html"
-            aria-expanded="false"
-            aria-controls="tutorial-listing"
             aria-label="Link to Tutorials"
             role="menuitem"
           >
@@ -136,8 +132,6 @@
           <a
             style="--icon: url(../images/assignments.svg)"
             href="../pages/assignments.html"
-            aria-expanded="false"
-            aria-controls="assignment-listing"
             aria-label="Link to Assignments"
             role="menuitem"
           >
@@ -181,8 +175,9 @@
         </header>
         $endif$
 
-        <section class="overlay-grid level1">
-          <nav class="margin surface menu sticky tooltip" aria-label="interface-menu">
+        <section class="overlay-grid sticky-container level1">
+          <nav class="margin surface menu sticky tooltip" aria-labelledby="page-controls-title">
+            <h2 id="page-controls-title" class="visually-hidden">Page Controls</h2>
             <ul role="menubar">
               <li>
                 <a
@@ -250,6 +245,7 @@
                   aria-expanded="false"
                   aria-controls="margin-menu"
                   aria-label="Toggle margin menu"
+                  aria-hidden="true"
                   role="menuitem"
                 >
                   <span>Toggle margin menu</span>
@@ -263,11 +259,10 @@
             class="margin surface menu sticky toc"
             id="$idprefix$TOC"
             role="navigation"
-            aria-label="table-of-contents"
+            aria-labelledby="toc-title"
           >
-            $if(toc-title)$
-            <h2 id="$idprefix$toc-title">$toc-title$</h2>
-            $endif$ $table-of-contents$
+            <h2 id="toc-title">Contents</h2>
+            $table-of-contents$
           </nav>
           $endif$
         </section>

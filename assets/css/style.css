@@ -150,7 +150,7 @@ figcaption {
 
 
 .toc {
-  justify-self: center;
+  justify-self: start;
 }
 .toc ul,
 .toc ol {
@@ -183,6 +183,7 @@ figcaption {
 }
 
 .tooltip {
+  justify-self: start;
 }
 
 
@@ -192,40 +193,48 @@ figcaption {
 .vertical {
   font-size: var(--font-size-xxs);
   line-height: var(--line-height-xxs);
-  padding: 1em;
 }
 .vertical ul {
   display: flex;
   flex-flow: column nowrap;
-  gap: 1rem;
   align-items: start;
   justify-content: space-between;
-  background-color: hsl(var(--hsl-accent-foam));
   border-radius: 8px;
-  box-shadow: 4px 8px 8px hsl(var(--hsl-accent-foam) / 25%);
+  box-shadow: 4px 8px 8px hsl(var(--hsl-text) / 25%);
 }
 .vertical li {
-  padding: 1rem 1rem;
+  padding: 0.5rem 0.5rem;
 }
 .vertical a {
   display: block;
   position: relative;
-  height: 2rem;
-  width: 2rem;
+  height: 4rem;
+  width: 4rem;
   border-radius: 0.5rem;
+  z-index: 99;
+}
+.vertical a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   background-image: var(--icon);
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-  background-size: 100%;
-  z-index: 99;
+  background-size: 50%;
+  z-index: -1;
+  filter: var(--svg-filter-base);
 }
 .vertical a:hover,
 .vertical a:focus,
 .vertical a:active {
+  background-color: hsl(var(--hsl-surface) / 1);
 }
 .vertical a span {
-  background-color: var(--surface);
+  background-color: hsl(var(--hsl-surface) / 1);
+  color: var(--text);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   position: absolute;
@@ -318,7 +327,22 @@ body {
 
 article {
   position: relative;
-  padding: 2rem 0;
+}
+
+.sticky {
+  position: sticky;
+  overflow-y: auto;
+  align-self: start;
+}
+
+.sticky-container > .sticky {
+  top: 2rem;
+  max-height: 90vh;
+}
+
+.sticky-container > .sticky:nth-of-type(2) {
+  top: 6rem;
+  max-height: 90vh;
 }
 
 .overlay-grid {
@@ -329,22 +353,7 @@ article {
 
 .overlay-grid .sticky {
   pointer-events: auto;
-  position: sticky;
-  overflow-y: auto;
-  align-self: start;
 }
-
-.overlay-grid > .sticky:nth-of-type(1) {
-  top: 2rem;
-  max-height: 90vh;
-}
-
-.overlay-grid > .sticky:nth-of-type(2) {
-  top: 6rem;
-  max-height: 90vh;
-}
-
-
 
 /* ------------------------------------------ *\
   || Code
