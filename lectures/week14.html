@@ -27,21 +27,18 @@
   </style>
     <link href="../assets/css/style.css" rel="stylesheet"/>
     
-  <!--[if lt IE 9]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-    <![endif]-->
  </head>
- <body class="page-container base">
-  <header class="header">
-   <div class="course-info-decoration">
-    <button class="theme-toggle-icon" id="theme-toggle-icon">
-     Theme toggle icon
+ <body class="base">
+  <header role="banner">
+   <div class="">
+    <button aria-hidden="true" aria-label="theme-toggle-icon" id="theme-toggle-icon">
+     X
     </button>
     <div>
      <h1>
       User Interfaces
      </h1>
-     <span class="note-text">
+     <span>
       420-2W6 | Winter 2023 | as taught by
       <a href="https://github.com/michaelhaaf/2W6-W23">
        Michael Haaf
@@ -49,359 +46,537 @@
      </span>
     </div>
    </div>
-   <div>
-    <span class="header-description note-text">
+   <div class="image-attribution">
+    <span>
      Image:
      <a href="https://www.guggenheim.org/artwork/movement/constructivism">
      </a>
     </span>
    </div>
   </header>
-  <aside class="aside--site surface">
-   <nav class="nav nav--site" id="site-navigation">
-    <h2>
-     Site Navigation
-    </h2>
-    <ul>
-     <li>
-      <a href="../pages/home.html" id="site-home">
-       <img alt="" class="icon" src="../assets/images/home.svg"/>
-       <span class="icon-text">
-        Home
-       </span>
-      </a>
-     </li>
-     <li>
-      <a href="../pages/course-outline.html" id="site-course-outline">
-       <img alt="" class="icon" src="../assets/images/outline.svg"/>
-       <span class="icon-text">
-        Course Outline
-       </span>
-      </a>
-     </li>
-     <li>
-      <a href="../pages/calendar.html" id="site-calendar">
-       <img alt="" class="icon" src="../assets/images/calendar.svg"/>
-       <span class="icon-text">
-        Calendar
-       </span>
-      </a>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-lectures" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/lectures.svg"/>
-       <span class="icon-text">
-        Lectures
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="lecture-listing">
-       <li>
-        <a href="../lectures/week01.html">
-         Week 01
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week02.html">
-         Week 02
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week03.html">
-         Week 03
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week04.html">
-         Week 04
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week05.html">
-         Week 05
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week06.html">
-         Week 06
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week07.html">
-         Week 07
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week09.html">
-         Week 09
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week10.html">
-         Week 10
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week11.html">
-         Week 11
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week12.html">
-         Week 12
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week13.html">
-         Week 13
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week14.html">
-         Week 14
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-tutorials" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/tutorials.svg"/>
-       <span class="icon-text">
-        Tutorials
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="tutorial-listing">
-       <li>
-        <a href="../pages/tutorials.html#week-01-exercises">
-         week 01 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-04-exercises">
-         week 04 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-06-exercises">
-         week 06 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-10-exercises">
-         week 10 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-11-exercises">
-         week 11 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-15-tutorial">
-         week 15 
-tutorial
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-04-solutions">
-         week 04 
-solutions
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-06-solutions">
-         week 06 
-solutions
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-10-solutions">
-         week 10 
-solutions
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-assignments" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/assignments.svg"/>
-       <span class="icon-text">
-        Assignments
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="assignment-listing">
-       <li>
-        <a href="../pages/assignments.html#milestone-1-2">
-         milestone 1 &amp;
- 2
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-1">
-         lab 1
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-2">
-         lab 2
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-3">
-         lab 3
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-4">
-         lab 4
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-1-solution">
-         lab 1 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-2-solution">
-         lab 2 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-3-solution">
-         lab 3 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-4-solution">
-         lab 4 
-solution
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </nav>
-  </aside>
-    <aside class="aside--page">
-   <nav class="nav nav--page" id="TOC" role="doc-toc">
-        <h2 id="toc-title">
-     Lecture navigation
-    </h2>
-         <a class="" href="../lectures/week13.html">
-     <img alt="" class="icon" src="../assets/images/feather-icons/chevron-left.svg"/>
-     <span class="icon-text">
-      Previous page...
-     </span>
-    </a>
-     <ul>
-<li><a href="#lesson-overview" id="toc-lesson-overview">Lesson
-Overview</a></li>
-<li><a href="#accessibility" id="toc-accessibility">Accessibility</a>
-<ul>
-<li><a href="#keyboard-input" id="toc-keyboard-input">Keyboard
-input</a></li>
-<li><a href="#color-contrast" id="toc-color-contrast">Color
-contrast</a></li>
-<li><a href="#images-videos-and-other-media"
-id="toc-images-videos-and-other-media">Images, videos, and other
-media</a></li>
-<li><a href="#auditing-accesibility-using-developer-tools"
-id="toc-auditing-accesibility-using-developer-tools">Auditing
-accesibility using Developer Tools</a></li>
-<li><a href="#wcag-the-web-content-accessibility-guidelines"
-id="toc-wcag-the-web-content-accessibility-guidelines">WCAG: The Web
-Content Accessibility Guidelines</a></li>
-</ul></li>
-<li><a href="#semantic-css" id="toc-semantic-css">Semantic CSS?</a>
-<ul>
-<li><a href="#organizing-stylesheets"
-id="toc-organizing-stylesheets">Organizing stylesheets</a></li>
-<li><a href="#choosing-class-names"
-id="toc-choosing-class-names">Choosing class names</a></li>
-<li><a href="#choosing-the-right-selector"
-id="toc-choosing-the-right-selector">Choosing the right
-selector</a></li>
-</ul></li>
-<li><a href="#css-miscellany" id="toc-css-miscellany">CSS Miscellany</a>
-<ul>
-<li><a href="#positioning-overflow"
-id="toc-positioning-overflow">Positioning &amp; Overflow</a></li>
-<li><a href="#design-fundamentals" id="toc-design-fundamentals">Design
-Fundamentals</a></li>
-<li><a href="#frameworks" id="toc-frameworks">Frameworks</a></li>
-</ul></li>
-<li><a href="#knowledge-check" id="toc-knowledge-check">Knowledge
-Check</a></li>
-<li><a href="#readings-resources" id="toc-readings-resources">Readings
-&amp; Resources</a></li>
-</ul>     <a class="" href="../pages/calendar.html">
-     <img alt="" class="icon" src="../assets/images/feather-icons/chevron-right.svg"/>
-     <span class="icon-text">
-      Next page...
-     </span>
-    </a>
-       </nav>
-  </aside>
-    <main class="main base">
+  <nav aria-labelledby="course-content" class="tooltip vertical sticky-container" role="navigation">
+   <h2 class="visually-hidden" id="course-content">
+    Course Content
+   </h2>
+   <ul class="sticky" role="menu">
+    <li>
+     <a aria-label="Link to Home" href="../pages/home.html" role="menuitem" style="--icon: url(../images/home.svg)">
+      <span>
+       Home
+      </span>
+     </a>
+    </li>
+    <li>
+     <a aria-label="Link to Course Outline" href="../pages/course-outline.html" role="menuitem" style="--icon: url(../images/outline.svg)">
+      <span>
+       Course outline
+      </span>
+     </a>
+    </li>
+    <li>
+     <a aria-label="Link to Calendar" href="../pages/calendar.html" role="menuitem" style="--icon: url(../images/calendar.svg)">
+      <span>
+       Calendar
+      </span>
+     </a>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Lectures" href="../pages/lectures.html" role="menuitem" style="--icon: url(../images/lectures.svg)">
+      <span>
+       Lectures
+      </span>
+     </a>
+     <button aria-controls="lecture-listing" aria-expanded="false" aria-label="Expand lecture menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right.svg)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="lecture-listing" style="display: none;">
+      <li>
+       <a href="../lectures/week01.html">
+        week01.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week02.html">
+        week02.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week03.html">
+        week03.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week04.html">
+        week04.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week05.html">
+        week05.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week06.html">
+        week06.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week07.html">
+        week07.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week09.html">
+        week09.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week10.html">
+        week10.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week11.html">
+        week11.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week12.html">
+        week12.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week13.html">
+        week13.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week14.html">
+        week14.html
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Tutorials" href="../pages/tutorials.html" role="menuitem" style="--icon: url(../images/tutorials.svg)">
+      <span>
+       Tutorials
+      </span>
+     </a>
+     <button aria-controls="tutorial-listing" aria-expanded="false" aria-label="Expand tutorial menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="tutorial-listing" style="display: none;">
+      <li>
+       <a href="../pages/tutorials.html#week-01-exercises">
+        <span class="toc-section-number">
+         1.1
+        </span>
+        Week 01
+            Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-04-exercises">
+        <span class="toc-section-number">
+         1.2
+        </span>
+        Week 04 Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-foundations">
+        <span class="toc-section-number">
+         1.2.1
+        </span>
+        CSS
+            Foundations
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-box-model">
+        <span class="toc-section-number">
+         1.2.2
+        </span>
+        CSS Box
+            Model
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-typesetting-typography">
+        <span class="toc-section-number">
+         1.2.3
+        </span>
+        CSS Typesetting
+            &amp; Typography
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-06-exercises">
+        <span class="toc-section-number">
+         1.3
+        </span>
+        Week 06 Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-flexbox">
+        <span class="toc-section-number">
+         1.3.1
+        </span>
+        CSS Flexbox
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-10-exercises">
+        <span class="toc-section-number">
+         1.4
+        </span>
+        Week 10 Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-grid">
+        <span class="toc-section-number">
+         1.4.1
+        </span>
+        CSS Grid
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-11-exercises">
+        <span class="toc-section-number">
+         1.5
+        </span>
+        Week 11
+            Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-15-tutorial">
+        <span class="toc-section-number">
+         1.6
+        </span>
+        Week 15
+            Tutorial
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-04-solutions">
+        <span class="toc-section-number">
+         2.1
+        </span>
+        Week 04 Solutions
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-foundations-1">
+        <span class="toc-section-number">
+         2.1.1
+        </span>
+        CSS
+            Foundations
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-box-model-1">
+        <span class="toc-section-number">
+         2.1.2
+        </span>
+        CSS Box
+            Model
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-typesetting-typography-1">
+        <span class="toc-section-number">
+         2.1.3
+        </span>
+        CSS Typesetting
+            &amp; Typography
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-06-solutions">
+        <span class="toc-section-number">
+         2.2
+        </span>
+        Week 06 Solutions
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-flexbox-1">
+        <span class="toc-section-number">
+         2.2.1
+        </span>
+        CSS Flexbox
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-10-solutions">
+        <span class="toc-section-number">
+         2.3
+        </span>
+        Week 10 Solutions
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-grid-1">
+        <span class="toc-section-number">
+         2.3.1
+        </span>
+        CSS Grid
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Assignments" href="../pages/assignments.html" role="menuitem" style="--icon: url(../images/assignments.svg)">
+      <span>
+       Assignments
+      </span>
+     </a>
+     <button aria-controls="assignment-listing" aria-expanded="false" aria-label="Expand assignment menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="assignment-listing" style="display: none;">
+      <li>
+       <a href="../pages/assignments.html#milestone-1-2">
+        Milestone 1 &amp;
+2
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-1">
+        Lab 1
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-2">
+        Lab 2
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-3">
+        Lab 3
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-4">
+        Lab 4
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-1-solution">
+        Lab 1
+Solution
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-2-solution">
+        Lab 2
+Solution
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-3-solution">
+        Lab 3
+Solution
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-4-solution">
+        Lab 4
+Solution
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </nav>
+  <main class="base" role="main">
    <article class="article">
-         <header id="title-block-header">
-     <h1 class="title">
+         <header class="level1" id="title-block-header">
+     <h1>
       2W6-W23: Week 14 Lecture Notes
      </h1>
             <div class="abstract">
-      <div class="abstract-title">
+      <h2>
        Intermediate User Interfaces: Accesibility, CSS Best Practises,
        and more
-      </div>
+      </h2>
       <p>Building off of creating Responsive Designs, we will continue
       learning best practises for functional, usable, and accessible
       websites.</p>
       <p>We will finish by covering a few more important CSS concepts:
       positioning, design, and frameworks (as much as time allows).</p>
      </div>
-           <p class="date">
+           <p>
       Last update:
-      <time datetime="Sun May 7 17:53:42 2023">
-       Sunday, May 07, 2023
+      <time datetime="Thu Jun 22 19:36:07 2023">
+       Thursday, June 22, 2023
       </time>
      </p>
-         </header>
-     <hr />
-<section id="lesson-overview" class="level1">
-<h1>Lesson Overview</h1>
+          <hr/>
+    </header>
+        <section class="overlay-grid sticky-container level1">
+     <nav aria-labelledby="page-controls-title" class="margin surface menu sticky tooltip">
+      <h2 class="visually-hidden" id="page-controls-title">
+       Page Controls
+      </h2>
+      <ul role="menubar">
+       <li>
+        <a href="#title-block-header" role="menuitem" style="--icon: url(../images/feather-icons/chevron-up.svg)">
+         <span>
+          Scroll to beginning
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="#site-footer" role="menuitem" style="--icon: url(../images/feather-icons/chevron-down.svg)">
+         <span>
+          Scroll to end
+         </span>
+        </a>
+       </li>
+              <li>
+        <a href="../lectures/week13.html" role="menuitem" style="--icon: url(../images/feather-icons/chevron-left.svg)">
+         <span>
+          Previous page
+         </span>
+        </a>
+       </li>
+               <li>
+        <a href="../pages/calendar.html" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right.svg)">
+         <span>
+          Next page
+         </span>
+        </a>
+       </li>
+              <li>
+        <a href="#" role="menuitem" style="--icon: url('../images/feather-icons/printer.svg')">
+         <span>
+          View PDF
+         </span>
+        </a>
+       </li>
+       <li>
+        <button aria-controls="margin-menu" aria-expanded="false" aria-hidden="true" aria-label="Toggle margin menu" role="menuitem" style="--icon: url(../images/feather-icons/maximize-2.svg)">
+         <span>
+          Toggle margin menu
+         </span>
+        </button>
+       </li>
+      </ul>
+     </nav>
+          <nav aria-labelledby="toc-title" class="margin surface menu sticky toc" id="TOC" role="navigation">
+      <h2 id="toc-title">
+       Contents
+      </h2>
+      <ul>
+      <li><a href="#lesson-overview" id="toc-lesson-overview"><span
+      class="toc-section-number">1</span> Lesson Overview</a></li>
+      <li><a href="#accessibility" id="toc-accessibility"><span
+      class="toc-section-number">2</span> Accessibility</a>
+      <ul>
+      <li><a href="#keyboard-input" id="toc-keyboard-input"><span
+      class="toc-section-number">2.1</span> Keyboard input</a></li>
+      <li><a href="#color-contrast" id="toc-color-contrast"><span
+      class="toc-section-number">2.2</span> Color contrast</a></li>
+      <li><a href="#images-videos-and-other-media"
+      id="toc-images-videos-and-other-media"><span
+      class="toc-section-number">2.3</span> Images, videos, and other
+      media</a></li>
+      <li><a href="#auditing-accesibility-using-developer-tools"
+      id="toc-auditing-accesibility-using-developer-tools"><span
+      class="toc-section-number">2.4</span> Auditing accesibility using
+      Developer Tools</a></li>
+      <li><a href="#wcag-the-web-content-accessibility-guidelines"
+      id="toc-wcag-the-web-content-accessibility-guidelines"><span
+      class="toc-section-number">2.5</span> WCAG: The Web Content
+      Accessibility Guidelines</a></li>
+      </ul></li>
+      <li><a href="#semantic-css" id="toc-semantic-css"><span
+      class="toc-section-number">3</span> Semantic CSS?</a>
+      <ul>
+      <li><a href="#organizing-stylesheets"
+      id="toc-organizing-stylesheets"><span
+      class="toc-section-number">3.1</span> Organizing
+      stylesheets</a></li>
+      <li><a href="#choosing-class-names"
+      id="toc-choosing-class-names"><span
+      class="toc-section-number">3.2</span> Choosing class
+      names</a></li>
+      <li><a href="#choosing-the-right-selector"
+      id="toc-choosing-the-right-selector"><span
+      class="toc-section-number">3.3</span> Choosing the right
+      selector</a></li>
+      </ul></li>
+      <li><a href="#css-miscellany" id="toc-css-miscellany"><span
+      class="toc-section-number">4</span> CSS Miscellany</a>
+      <ul>
+      <li><a href="#positioning-overflow"
+      id="toc-positioning-overflow"><span
+      class="toc-section-number">4.1</span> Positioning &amp;
+      Overflow</a></li>
+      <li><a href="#design-fundamentals"
+      id="toc-design-fundamentals"><span
+      class="toc-section-number">4.2</span> Design Fundamentals</a></li>
+      <li><a href="#frameworks" id="toc-frameworks"><span
+      class="toc-section-number">4.3</span> Frameworks</a></li>
+      </ul></li>
+      <li><a href="#knowledge-check" id="toc-knowledge-check"><span
+      class="toc-section-number">5</span> Knowledge Check</a></li>
+      <li><a href="#readings-resources"
+      id="toc-readings-resources"><span
+      class="toc-section-number">6</span> Readings &amp;
+      Resources</a></li>
+      </ul>
+     </nav>
+         </section>
+    <hr />
+<section id="lesson-overview" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Lesson
+Overview</h1>
 <ul>
 <li>Accessibility</li>
 <li>Other CSS odds and ends we haven’t yet had time for</li>
 </ul>
 <hr />
 </section>
-<section id="accessibility" class="level1">
-<h1>Accessibility</h1>
+<section id="accessibility" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span>
+Accessibility</h1>
 <p>Accesibility<a href="#fn1" class="footnote-ref" id="fnref1"
 role="doc-noteref"><sup>1</sup></a> is…</p>
-<section id="keyboard-input" class="level2">
-<h2>Keyboard input</h2>
+<section id="keyboard-input" class="level2" data-number="2.1">
+<h2 data-number="2.1"><span class="header-section-number">2.1</span>
+Keyboard input</h2>
 </section>
-<section id="color-contrast" class="level2">
-<h2>Color contrast</h2>
+<section id="color-contrast" class="level2" data-number="2.2">
+<h2 data-number="2.2"><span class="header-section-number">2.2</span>
+Color contrast</h2>
 </section>
-<section id="images-videos-and-other-media" class="level2">
-<h2>Images, videos, and other media</h2>
+<section id="images-videos-and-other-media" class="level2"
+data-number="2.3">
+<h2 data-number="2.3"><span class="header-section-number">2.3</span>
+Images, videos, and other media</h2>
 </section>
-<section id="auditing-accesibility-using-developer-tools"
-class="level2">
-<h2>Auditing accesibility using Developer Tools</h2>
+<section id="auditing-accesibility-using-developer-tools" class="level2"
+data-number="2.4">
+<h2 data-number="2.4"><span class="header-section-number">2.4</span>
+Auditing accesibility using Developer Tools</h2>
 </section>
 <section id="wcag-the-web-content-accessibility-guidelines"
-class="level2">
-<h2>WCAG: The Web Content Accessibility Guidelines</h2>
+class="level2" data-number="2.5">
+<h2 data-number="2.5"><span class="header-section-number">2.5</span>
+WCAG: The Web Content Accessibility Guidelines</h2>
 <p>The best practises shown in the previous sections developed from
 standards set by The <a
 href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content
@@ -430,25 +605,32 @@ achieve these outcomes.</p>
 <hr />
 </section>
 </section>
-<section id="semantic-css" class="level1">
-<h1>Semantic CSS?</h1>
-<section id="organizing-stylesheets" class="level2">
-<h2>Organizing stylesheets</h2>
+<section id="semantic-css" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span>
+Semantic CSS?</h1>
+<section id="organizing-stylesheets" class="level2" data-number="3.1">
+<h2 data-number="3.1"><span class="header-section-number">3.1</span>
+Organizing stylesheets</h2>
 </section>
-<section id="choosing-class-names" class="level2">
-<h2>Choosing class names</h2>
+<section id="choosing-class-names" class="level2" data-number="3.2">
+<h2 data-number="3.2"><span class="header-section-number">3.2</span>
+Choosing class names</h2>
 </section>
-<section id="choosing-the-right-selector" class="level2">
-<h2>Choosing the right selector</h2>
+<section id="choosing-the-right-selector" class="level2"
+data-number="3.3">
+<h2 data-number="3.3"><span class="header-section-number">3.3</span>
+Choosing the right selector</h2>
 <hr />
 </section>
 </section>
-<section id="css-miscellany" class="level1">
-<h1>CSS Miscellany</h1>
+<section id="css-miscellany" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> CSS
+Miscellany</h1>
 <p>Here are a list of important topics in CSS that I’m not sure we will
 have time to cover in full detail. More information to come.</p>
-<section id="positioning-overflow" class="level2">
-<h2>Positioning &amp; Overflow</h2>
+<section id="positioning-overflow" class="level2" data-number="4.1">
+<h2 data-number="4.1"><span class="header-section-number">4.1</span>
+Positioning &amp; Overflow</h2>
 <p>More to come. For now, here is last year’s content:</p>
 <ul>
 <li><a
@@ -463,8 +645,9 @@ from the guest lecture.</p>
 in 60 seconds</a></li>
 </ul>
 </section>
-<section id="design-fundamentals" class="level2">
-<h2>Design Fundamentals</h2>
+<section id="design-fundamentals" class="level2" data-number="4.2">
+<h2 data-number="4.2"><span class="header-section-number">4.2</span>
+Design Fundamentals</h2>
 <p>More to come. For now, here is last year’s content:</p>
 <ul>
 <li><a
@@ -481,8 +664,9 @@ href="https://m2.material.io/design/color/dark-theme.html">Material
 Design DARK color theme tutorial</a></li>
 </ul>
 </section>
-<section id="frameworks" class="level2">
-<h2>Frameworks</h2>
+<section id="frameworks" class="level2" data-number="4.3">
+<h2 data-number="4.3"><span class="header-section-number">4.3</span>
+Frameworks</h2>
 <p>More to come. For now, here is last year’s content:</p>
 <ul>
 <li><a
@@ -491,12 +675,14 @@ Frameworks</a></li>
 </ul>
 </section>
 </section>
-<section id="knowledge-check" class="level1">
-<h1>Knowledge Check</h1>
+<section id="knowledge-check" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span>
+Knowledge Check</h1>
 <p>Stay tuned for more information!</p>
 </section>
-<section id="readings-resources" class="level1">
-<h1>Readings &amp; Resources</h1>
+<section id="readings-resources" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span>
+Readings &amp; Resources</h1>
 <ol type="1">
 <li><p><a href="https://www.youtube.com/watch?v=u72H_zZzkcw">Traversy
 Media: Web Development in 2023 - a Practical Guide</a>: The entire video
@@ -521,7 +707,7 @@ I will post an update on LEA as soon as it’s all ready.</li>
 </ul></li>
 </ol>
 </section>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
+<aside id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
 <ol>
@@ -530,11 +716,11 @@ href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_W
 the Web Content Accessibility Guidelines”</a> (MDN Web Docs).<a
 href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-</section> 
+</aside> 
    </article>
   </main>
-  <footer class="footer">
-   <span class="note-text">
+  <footer id="site-footer" role="contentinfo">
+   <span>
     © 2023 Michael Haaf |
     <a href="../pages/home.html#about-this-website">
      About

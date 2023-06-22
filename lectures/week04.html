@@ -92,21 +92,18 @@
   </style>
     <link href="../assets/css/style.css" rel="stylesheet"/>
     
-  <!--[if lt IE 9]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-    <![endif]-->
  </head>
- <body class="page-container base">
-  <header class="header">
-   <div class="course-info-decoration">
-    <button class="theme-toggle-icon" id="theme-toggle-icon">
-     Theme toggle icon
+ <body class="base">
+  <header role="banner">
+   <div class="">
+    <button aria-hidden="true" aria-label="theme-toggle-icon" id="theme-toggle-icon">
+     X
     </button>
     <div>
      <h1>
       User Interfaces
      </h1>
-     <span class="note-text">
+     <span>
       420-2W6 | Winter 2023 | as taught by
       <a href="https://github.com/michaelhaaf/2W6-W23">
        Michael Haaf
@@ -114,319 +111,370 @@
      </span>
     </div>
    </div>
-   <div>
-    <span class="header-description note-text">
+   <div class="image-attribution">
+    <span>
      Image:
      <a href="https://www.guggenheim.org/artwork/movement/constructivism">
      </a>
     </span>
    </div>
   </header>
-  <aside class="aside--site surface">
-   <nav class="nav nav--site" id="site-navigation">
-    <h2>
-     Site Navigation
-    </h2>
-    <ul>
-     <li>
-      <a href="../pages/home.html" id="site-home">
-       <img alt="" class="icon" src="../assets/images/home.svg"/>
-       <span class="icon-text">
-        Home
-       </span>
-      </a>
-     </li>
-     <li>
-      <a href="../pages/course-outline.html" id="site-course-outline">
-       <img alt="" class="icon" src="../assets/images/outline.svg"/>
-       <span class="icon-text">
-        Course Outline
-       </span>
-      </a>
-     </li>
-     <li>
-      <a href="../pages/calendar.html" id="site-calendar">
-       <img alt="" class="icon" src="../assets/images/calendar.svg"/>
-       <span class="icon-text">
-        Calendar
-       </span>
-      </a>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-lectures" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/lectures.svg"/>
-       <span class="icon-text">
-        Lectures
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="lecture-listing">
-       <li>
-        <a href="../lectures/week01.html">
-         Week 01
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week02.html">
-         Week 02
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week03.html">
-         Week 03
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week04.html">
-         Week 04
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week05.html">
-         Week 05
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week06.html">
-         Week 06
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week07.html">
-         Week 07
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week09.html">
-         Week 09
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week10.html">
-         Week 10
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week11.html">
-         Week 11
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week12.html">
-         Week 12
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week13.html">
-         Week 13
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week14.html">
-         Week 14
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-tutorials" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/tutorials.svg"/>
-       <span class="icon-text">
-        Tutorials
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="tutorial-listing">
-       <li>
-        <a href="../pages/tutorials.html#week-01-exercises">
-         week 01 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-04-exercises">
-         week 04 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-06-exercises">
-         week 06 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-10-exercises">
-         week 10 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-11-exercises">
-         week 11 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-15-tutorial">
-         week 15 
-tutorial
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-04-solutions">
-         week 04 
-solutions
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-06-solutions">
-         week 06 
-solutions
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-10-solutions">
-         week 10 
-solutions
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-assignments" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/assignments.svg"/>
-       <span class="icon-text">
-        Assignments
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="assignment-listing">
-       <li>
-        <a href="../pages/assignments.html#milestone-1-2">
-         milestone 1 &amp;
- 2
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-1">
-         lab 1
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-2">
-         lab 2
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-3">
-         lab 3
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-4">
-         lab 4
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-1-solution">
-         lab 1 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-2-solution">
-         lab 2 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-3-solution">
-         lab 3 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-4-solution">
-         lab 4 
-solution
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </nav>
-  </aside>
-    <aside class="aside--page">
-   <nav class="nav nav--page" id="TOC" role="doc-toc">
-        <h2 id="toc-title">
-     Lecture navigation
-    </h2>
-         <a class="" href="../lectures/week03.html">
-     <img alt="" class="icon" src="../assets/images/feather-icons/chevron-left.svg"/>
-     <span class="icon-text">
-      Previous page...
-     </span>
-    </a>
-     <ul>
-<li><a href="#lesson-overview" id="toc-lesson-overview">Lesson
-Overview</a></li>
-<li><a href="#fonts" id="toc-fonts">Fonts</a>
-<ul>
-<li><a href="#font-families" id="toc-font-families">Font
-Families</a></li>
-<li><a href="#using-web-font-families"
-id="toc-using-web-font-families">Using Web Font Families</a></li>
-<li><a href="#font-size" id="toc-font-size">Font size</a></li>
-<li><a href="#font-weight" id="toc-font-weight">Font Weight</a></li>
-<li><a href="#text-decorations" id="toc-text-decorations">Text
-Decorations</a></li>
-<li><a href="#text-layout-alignment" id="toc-text-layout-alignment">Text
-Layout &amp; Alignment</a></li>
-<li><a href="#other-text-styling" id="toc-other-text-styling">Other text
-styling</a></li>
-<li><a href="#shorthand-properties-notation"
-id="toc-shorthand-properties-notation">Shorthand Properties
-Notation</a></li>
-</ul></li>
-<li><a href="#the-box-model" id="toc-the-box-model">The Box Model</a>
-<ul>
-<li><a href="#block-and-inline-boxes"
-id="toc-block-and-inline-boxes">Block and inline boxes</a></li>
-<li><a href="#outer-display-type" id="toc-outer-display-type">Outer
-display type</a></li>
-<li><a href="#inner-display-type" id="toc-inner-display-type">Inner
-display type</a></li>
-<li><a href="#the-anatomy-of-the-box-model"
-id="toc-the-anatomy-of-the-box-model">The Anatomy of the Box
-Model</a></li>
-<li><a href="#margins-padding-and-borders"
-id="toc-margins-padding-and-borders">Margins, padding, and
-borders</a></li>
-</ul></li>
-<li><a href="#knowledge-check" id="toc-knowledge-check">Knowledge
-Check</a>
-<ul>
-<li><a href="#fonts-1" id="toc-fonts-1">Fonts</a></li>
-<li><a href="#the-box-model-1" id="toc-the-box-model-1">The Box
-Model</a></li>
-</ul></li>
-<li><a href="#exercises" id="toc-exercises">Exercises</a></li>
-</ul>     <a class="" href="../lectures/week05.html">
-     <img alt="" class="icon" src="../assets/images/feather-icons/chevron-right.svg"/>
-     <span class="icon-text">
-      Next page...
-     </span>
-    </a>
-       </nav>
-  </aside>
-    <main class="main base">
+  <nav aria-labelledby="course-content" class="tooltip vertical sticky-container" role="navigation">
+   <h2 class="visually-hidden" id="course-content">
+    Course Content
+   </h2>
+   <ul class="sticky" role="menu">
+    <li>
+     <a aria-label="Link to Home" href="../pages/home.html" role="menuitem" style="--icon: url(../images/home.svg)">
+      <span>
+       Home
+      </span>
+     </a>
+    </li>
+    <li>
+     <a aria-label="Link to Course Outline" href="../pages/course-outline.html" role="menuitem" style="--icon: url(../images/outline.svg)">
+      <span>
+       Course outline
+      </span>
+     </a>
+    </li>
+    <li>
+     <a aria-label="Link to Calendar" href="../pages/calendar.html" role="menuitem" style="--icon: url(../images/calendar.svg)">
+      <span>
+       Calendar
+      </span>
+     </a>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Lectures" href="../pages/lectures.html" role="menuitem" style="--icon: url(../images/lectures.svg)">
+      <span>
+       Lectures
+      </span>
+     </a>
+     <button aria-controls="lecture-listing" aria-expanded="false" aria-label="Expand lecture menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right.svg)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="lecture-listing" style="display: none;">
+      <li>
+       <a href="../lectures/week01.html">
+        week01.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week02.html">
+        week02.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week03.html">
+        week03.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week04.html">
+        week04.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week05.html">
+        week05.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week06.html">
+        week06.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week07.html">
+        week07.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week09.html">
+        week09.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week10.html">
+        week10.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week11.html">
+        week11.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week12.html">
+        week12.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week13.html">
+        week13.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week14.html">
+        week14.html
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Tutorials" href="../pages/tutorials.html" role="menuitem" style="--icon: url(../images/tutorials.svg)">
+      <span>
+       Tutorials
+      </span>
+     </a>
+     <button aria-controls="tutorial-listing" aria-expanded="false" aria-label="Expand tutorial menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="tutorial-listing" style="display: none;">
+      <li>
+       <a href="../pages/tutorials.html#week-01-exercises">
+        <span class="toc-section-number">
+         1.1
+        </span>
+        Week 01
+            Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-04-exercises">
+        <span class="toc-section-number">
+         1.2
+        </span>
+        Week 04 Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-foundations">
+        <span class="toc-section-number">
+         1.2.1
+        </span>
+        CSS
+            Foundations
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-box-model">
+        <span class="toc-section-number">
+         1.2.2
+        </span>
+        CSS Box
+            Model
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-typesetting-typography">
+        <span class="toc-section-number">
+         1.2.3
+        </span>
+        CSS Typesetting
+            &amp; Typography
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-06-exercises">
+        <span class="toc-section-number">
+         1.3
+        </span>
+        Week 06 Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-flexbox">
+        <span class="toc-section-number">
+         1.3.1
+        </span>
+        CSS Flexbox
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-10-exercises">
+        <span class="toc-section-number">
+         1.4
+        </span>
+        Week 10 Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-grid">
+        <span class="toc-section-number">
+         1.4.1
+        </span>
+        CSS Grid
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-11-exercises">
+        <span class="toc-section-number">
+         1.5
+        </span>
+        Week 11
+            Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-15-tutorial">
+        <span class="toc-section-number">
+         1.6
+        </span>
+        Week 15
+            Tutorial
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-04-solutions">
+        <span class="toc-section-number">
+         2.1
+        </span>
+        Week 04 Solutions
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-foundations-1">
+        <span class="toc-section-number">
+         2.1.1
+        </span>
+        CSS
+            Foundations
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-box-model-1">
+        <span class="toc-section-number">
+         2.1.2
+        </span>
+        CSS Box
+            Model
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-typesetting-typography-1">
+        <span class="toc-section-number">
+         2.1.3
+        </span>
+        CSS Typesetting
+            &amp; Typography
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-06-solutions">
+        <span class="toc-section-number">
+         2.2
+        </span>
+        Week 06 Solutions
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-flexbox-1">
+        <span class="toc-section-number">
+         2.2.1
+        </span>
+        CSS Flexbox
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-10-solutions">
+        <span class="toc-section-number">
+         2.3
+        </span>
+        Week 10 Solutions
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-grid-1">
+        <span class="toc-section-number">
+         2.3.1
+        </span>
+        CSS Grid
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Assignments" href="../pages/assignments.html" role="menuitem" style="--icon: url(../images/assignments.svg)">
+      <span>
+       Assignments
+      </span>
+     </a>
+     <button aria-controls="assignment-listing" aria-expanded="false" aria-label="Expand assignment menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="assignment-listing" style="display: none;">
+      <li>
+       <a href="../pages/assignments.html#milestone-1-2">
+        Milestone 1 &amp;
+2
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-1">
+        Lab 1
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-2">
+        Lab 2
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-3">
+        Lab 3
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-4">
+        Lab 4
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-1-solution">
+        Lab 1
+Solution
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-2-solution">
+        Lab 2
+Solution
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-3-solution">
+        Lab 3
+Solution
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-4-solution">
+        Lab 4
+Solution
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </nav>
+  <main class="base" role="main">
    <article class="article">
-         <header id="title-block-header">
-     <h1 class="title">
+         <header class="level1" id="title-block-header">
+     <h1>
       2W6-W23: Week 4 Lecture Notes
      </h1>
             <div class="abstract">
-      <div class="abstract-title">
+      <h2>
        Styling HTML content with CSS
-      </div>
+      </h2>
       <p>Last week, we learned the fundamentals of CSS; in particular:
       how CSS is inserted into HTML files, how CSS is used to select
       HTML elements, and how to inspect CSS properties and make changes
@@ -440,16 +488,159 @@ Model</a></li>
       for fonts, images, and icons; we will also learn more about how
       HTML and CSS create website layouts.</p>
      </div>
-           <p class="date">
+           <p>
       Last update:
       <time datetime="Sunday, March 26, 2023">
        Sunday, March 26, 2023
       </time>
      </p>
-         </header>
-     <hr />
-<section id="lesson-overview" class="level1">
-<h1>Lesson Overview</h1>
+          <hr/>
+    </header>
+        <section class="overlay-grid sticky-container level1">
+     <nav aria-labelledby="page-controls-title" class="margin surface menu sticky tooltip">
+      <h2 class="visually-hidden" id="page-controls-title">
+       Page Controls
+      </h2>
+      <ul role="menubar">
+       <li>
+        <a href="#title-block-header" role="menuitem" style="--icon: url(../images/feather-icons/chevron-up.svg)">
+         <span>
+          Scroll to beginning
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="#site-footer" role="menuitem" style="--icon: url(../images/feather-icons/chevron-down.svg)">
+         <span>
+          Scroll to end
+         </span>
+        </a>
+       </li>
+              <li>
+        <a href="../lectures/week03.html" role="menuitem" style="--icon: url(../images/feather-icons/chevron-left.svg)">
+         <span>
+          Previous page
+         </span>
+        </a>
+       </li>
+               <li>
+        <a href="../lectures/week05.html" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right.svg)">
+         <span>
+          Next page
+         </span>
+        </a>
+       </li>
+              <li>
+        <a href="#" role="menuitem" style="--icon: url('../images/feather-icons/printer.svg')">
+         <span>
+          View PDF
+         </span>
+        </a>
+       </li>
+       <li>
+        <button aria-controls="margin-menu" aria-expanded="false" aria-hidden="true" aria-label="Toggle margin menu" role="menuitem" style="--icon: url(../images/feather-icons/maximize-2.svg)">
+         <span>
+          Toggle margin menu
+         </span>
+        </button>
+       </li>
+      </ul>
+     </nav>
+          <nav aria-labelledby="toc-title" class="margin surface menu sticky toc" id="TOC" role="navigation">
+      <h2 id="toc-title">
+       Contents
+      </h2>
+      <ul>
+      <li><a href="#lesson-overview" id="toc-lesson-overview"><span
+      class="toc-section-number">1</span> Lesson Overview</a></li>
+      <li><a href="#fonts" id="toc-fonts"><span
+      class="toc-section-number">2</span> Fonts</a>
+      <ul>
+      <li><a href="#font-families" id="toc-font-families"><span
+      class="toc-section-number">2.1</span> Font Families</a>
+      <ul>
+      <li><a href="#changing-fonts-with-font-family"
+      id="toc-changing-fonts-with-font-family"><span
+      class="toc-section-number">2.1.1</span> Changing fonts with
+      <code>font-family</code></a></li>
+      </ul></li>
+      <li><a href="#using-web-font-families"
+      id="toc-using-web-font-families"><span
+      class="toc-section-number">2.2</span> Using Web Font
+      Families</a></li>
+      <li><a href="#font-size" id="toc-font-size"><span
+      class="toc-section-number">2.3</span> Font size</a>
+      <ul>
+      <li><a href="#recommendation-inheritance"
+      id="toc-recommendation-inheritance"><span
+      class="toc-section-number">2.3.1</span> Recommendation &amp;
+      inheritance</a></li>
+      </ul></li>
+      <li><a href="#font-weight" id="toc-font-weight"><span
+      class="toc-section-number">2.4</span> Font Weight</a></li>
+      <li><a href="#text-decorations" id="toc-text-decorations"><span
+      class="toc-section-number">2.5</span> Text Decorations</a></li>
+      <li><a href="#text-layout-alignment"
+      id="toc-text-layout-alignment"><span
+      class="toc-section-number">2.6</span> Text Layout &amp;
+      Alignment</a></li>
+      <li><a href="#other-text-styling"
+      id="toc-other-text-styling"><span
+      class="toc-section-number">2.7</span> Other text styling</a></li>
+      <li><a href="#shorthand-properties-notation"
+      id="toc-shorthand-properties-notation"><span
+      class="toc-section-number">2.8</span> Shorthand Properties
+      Notation</a></li>
+      </ul></li>
+      <li><a href="#the-box-model" id="toc-the-box-model"><span
+      class="toc-section-number">3</span> The Box Model</a>
+      <ul>
+      <li><a href="#block-and-inline-boxes"
+      id="toc-block-and-inline-boxes"><span
+      class="toc-section-number">3.1</span> Block and inline
+      boxes</a></li>
+      <li><a href="#outer-display-type"
+      id="toc-outer-display-type"><span
+      class="toc-section-number">3.2</span> Outer display type</a></li>
+      <li><a href="#inner-display-type"
+      id="toc-inner-display-type"><span
+      class="toc-section-number">3.3</span> Inner display type</a></li>
+      <li><a href="#the-anatomy-of-the-box-model"
+      id="toc-the-anatomy-of-the-box-model"><span
+      class="toc-section-number">3.4</span> The Anatomy of the Box
+      Model</a></li>
+      <li><a href="#margins-padding-and-borders"
+      id="toc-margins-padding-and-borders"><span
+      class="toc-section-number">3.5</span> Margins, padding, and
+      borders</a>
+      <ul>
+      <li><a href="#margin" id="toc-margin"><span
+      class="toc-section-number">3.5.1</span> Margin</a></li>
+      <li><a href="#margin-collapsing" id="toc-margin-collapsing"><span
+      class="toc-section-number">3.5.2</span> Margin Collapsing</a></li>
+      <li><a href="#padding" id="toc-padding"><span
+      class="toc-section-number">3.5.3</span> Padding</a></li>
+      <li><a href="#borders" id="toc-borders"><span
+      class="toc-section-number">3.5.4</span> Borders</a></li>
+      </ul></li>
+      </ul></li>
+      <li><a href="#knowledge-check" id="toc-knowledge-check"><span
+      class="toc-section-number">4</span> Knowledge Check</a>
+      <ul>
+      <li><a href="#fonts-1" id="toc-fonts-1"><span
+      class="toc-section-number">4.1</span> Fonts</a></li>
+      <li><a href="#the-box-model-1" id="toc-the-box-model-1"><span
+      class="toc-section-number">4.2</span> The Box Model</a></li>
+      </ul></li>
+      <li><a href="#exercises" id="toc-exercises"><span
+      class="toc-section-number">5</span> Exercises</a></li>
+      </ul>
+     </nav>
+         </section>
+    <hr />
+<section id="lesson-overview" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Lesson
+Overview</h1>
 <ul>
 <li>How to style fonts</li>
 <li>How to style images</li>
@@ -458,8 +649,9 @@ Model</a></li>
 </ul>
 <hr />
 </section>
-<section id="fonts" class="level1">
-<h1>Fonts</h1>
+<section id="fonts" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span>
+Fonts</h1>
 <p><em>This section was adapted from <a
 href="https://maujac.github.io/2W6-UI/#/./wk/../wk3/wk3_3_text_units?id=fonts">Mauricio
 Buschinelli’s</a> course notes, which in turn were adapted from <a
@@ -467,8 +659,9 @@ href="https://www.w3schools.com/css/css_font.asp">CSS Fonts</a> by
 w3schools.com and <a
 href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental
 text and font styling</a> by MDN Web Docs.</em></p>
-<section id="font-families" class="level2">
-<h2>Font Families</h2>
+<section id="font-families" class="level2" data-number="2.1">
+<h2 data-number="2.1"><span class="header-section-number">2.1</span>
+Font Families</h2>
 <p>In CSS, fonts are organized into groups of <strong>Font
 Families</strong>. In fact, the font family concept (also known as
 <strong>typeface</strong>) extends beyond CSS to typography in
@@ -563,8 +756,10 @@ href="https://en.wikipedia.org/wiki/Typeface">Typeface</a></figcaption>
 horizontal space than letters that are wide. Fonts in the the
 <code>serif</code> and <code>sans-serif</code> families are typically
 proportional fonts.</p>
-<section id="changing-fonts-with-font-family" class="level3">
-<h3>Changing fonts with <code>font-family</code></h3>
+<section id="changing-fonts-with-font-family" class="level3"
+data-number="2.1.1">
+<h3 data-number="2.1.1"><span class="header-section-number">2.1.1</span>
+Changing fonts with <code>font-family</code></h3>
 <p>The fonts available to the browser depend largely on the fonts
 installed in the operating system.</p>
 <blockquote>
@@ -572,8 +767,9 @@ installed in the operating system.</p>
 fonts, from most specific to least specific.</p>
 </blockquote>
 <p>This is also known as a <strong>font stack</strong>:</p>
-<section id="css" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css" class="level6 sourceCode" data-number="2.1.1.0.0.1">
+<h6 class="sourceCode" data-number="2.1.1.0.0.1"><span
+class="header-section-number">2.1.1.0.0.1</span> CSS</h6>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>p {</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-family</span>: <span class="st">&quot;Times New Roman&quot;</span><span class="op">,</span> Times<span class="op">,</span> <span class="dv">serif</span><span class="op">;</span></span>
@@ -595,8 +791,9 @@ instead we can apply them to a root element like the
 descendant elements (like <code>&lt;p&gt;</code>,
 <code>&lt;a&gt;</code>, etc.) automatically.</p>
 </section>
-<section id="css-1" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-1" class="level6 sourceCode" data-number="2.1.1.0.0.2">
+<h6 class="sourceCode" data-number="2.1.1.0.0.2"><span
+class="header-section-number">2.1.1.0.0.2</span> CSS</h6>
 <div class="sourceCode" id="cb2"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>body {</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-family</span>: <span class="st">&quot;Segoe UI&quot;</span><span class="op">,</span> Tahoma<span class="op">,</span> Geneva<span class="op">,</span> Verdana<span class="op">,</span> <span class="dv">sans-serif</span><span class="op">;</span></span>
@@ -607,8 +804,9 @@ non-typographic elements next week.</p>
 </section>
 </section>
 </section>
-<section id="using-web-font-families" class="level2">
-<h2>Using Web Font Families</h2>
+<section id="using-web-font-families" class="level2" data-number="2.2">
+<h2 data-number="2.2"><span class="header-section-number">2.2</span>
+Using Web Font Families</h2>
 <p>So far, all of the fonts that we have seen (Verdana, Times New Roman,
 etc.) are <a
 href="https://www.w3schools.com/cssref/css_websafe_fonts.asp"><strong>Web
@@ -634,8 +832,9 @@ font to add to a project.</figcaption>
 </figure>
 <p>Include the provided link in the head section of your HTML file, just
 like you would link a CSS Style sheet.</p>
-<section id="html" class="level6 sourceCode">
-<h6 class="sourceCode">HTML</h6>
+<section id="html" class="level6 sourceCode" data-number="2.2.0.0.0.1">
+<h6 class="sourceCode" data-number="2.2.0.0.0.1"><span
+class="header-section-number">2.2.0.0.0.1</span> HTML</h6>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ot">  href=</span><span class="st">&quot;https://fonts.googleapis.com/css?family=Roboto</span><span class="er">&amp;</span><span class="st">display=swap&quot;</span></span>
@@ -644,16 +843,18 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="
 <p>Add the <code>font-family</code> property to your CSS. <strong>Don’t
 forget to add a fall-back font</strong>.</p>
 </section>
-<section id="css-2" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-2" class="level6 sourceCode" data-number="2.2.0.0.0.2">
+<h6 class="sourceCode" data-number="2.2.0.0.0.2"><span
+class="header-section-number">2.2.0.0.0.2</span> CSS</h6>
 <div class="sourceCode" id="cb4"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>p {</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-family</span>: <span class="st">&quot;Roboto&quot;</span><span class="op">,</span> <span class="dv">sans-serif</span><span class="op">;</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </section>
 </section>
-<section id="font-size" class="level2">
-<h2>Font size</h2>
+<section id="font-size" class="level2" data-number="2.3">
+<h2 data-number="2.3"><span class="header-section-number">2.3</span>
+Font size</h2>
 <p>Font size can be set with the <code>font-size</code> property.</p>
 <p><code>font-size</code> value can be set as absolute or relative:</p>
 <p><strong>Absolute size:</strong></p>
@@ -668,8 +869,10 @@ operating system settings).</li>
 below).</li>
 <li>User can adjust it.</li>
 </ul>
-<section id="recommendation-inheritance" class="level3">
-<h3>Recommendation &amp; inheritance</h3>
+<section id="recommendation-inheritance" class="level3"
+data-number="2.3.1">
+<h3 data-number="2.3.1"><span class="header-section-number">2.3.1</span>
+Recommendation &amp; inheritance</h3>
 <p>For <code>font-size</code> <strong>it is recommended that you use
 relative CSS units over fixed units.</strong> You need to be aware of
 where your HTML element is inheriting these units from.</p>
@@ -696,8 +899,9 @@ data-cites="michaelhaaf">@michaelhaaf</span></a>) on
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 </section>
 </section>
-<section id="font-weight" class="level2">
-<h2>Font Weight</h2>
+<section id="font-weight" class="level2" data-number="2.4">
+<h2 data-number="2.4"><span class="header-section-number">2.4</span>
+Font Weight</h2>
 <p>The <a
 href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight"><code>font-weight</code></a>
 property sets how bold the text is, depending on the values supported by
@@ -719,8 +923,9 @@ provide finer grained control than the above keywords.
 <p>See <a
 href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight">font-weight
 by MDN</a> web docs for more information.</p>
-<section id="css-3" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-3" class="level6 sourceCode" data-number="2.4.0.0.0.1">
+<h6 class="sourceCode" data-number="2.4.0.0.0.1"><span
+class="header-section-number">2.4.0.0.0.1</span> CSS</h6>
 <div class="sourceCode" id="cb5"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>font-weight<span class="in">: bold</span>;</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -729,8 +934,9 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb5-1"><a href="#c
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>font-weight<span class="in">: 200;</span></span></code></pre></div>
 </section>
 </section>
-<section id="text-decorations" class="level2">
-<h2>Text Decorations</h2>
+<section id="text-decorations" class="level2" data-number="2.5">
+<h2 data-number="2.5"><span class="header-section-number">2.5</span>
+Text Decorations</h2>
 <p>The <a
 href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration"><code>text-decoration</code></a>
 sets the decorations on fonts (mainly used to change default underline
@@ -743,8 +949,9 @@ on links).</p>
 text</del>.</li>
 </ul>
 </section>
-<section id="text-layout-alignment" class="level2">
-<h2>Text Layout &amp; Alignment</h2>
+<section id="text-layout-alignment" class="level2" data-number="2.6">
+<h2 data-number="2.6"><span class="header-section-number">2.6</span>
+Text Layout &amp; Alignment</h2>
 <p><em>For this section refer to the “Text layout” section of <a
 href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Text_layout">Fundamental
 text and font styling</a> by MDN web docs.</em></p>
@@ -760,8 +967,9 @@ href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing"><code>let
 href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing"><code>word-spacing</code></a></li>
 </ul>
 </section>
-<section id="other-text-styling" class="level2">
-<h2>Other text styling</h2>
+<section id="other-text-styling" class="level2" data-number="2.7">
+<h2 data-number="2.7"><span class="header-section-number">2.7</span>
+Other text styling</h2>
 <p>There are many other text styling properties, some more used than
 others:</p>
 <ul>
@@ -776,8 +984,10 @@ href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow"><code>text-s
 Applies drop shadows to your text.</li>
 </ul>
 </section>
-<section id="shorthand-properties-notation" class="level2">
-<h2>Shorthand Properties Notation</h2>
+<section id="shorthand-properties-notation" class="level2"
+data-number="2.8">
+<h2 data-number="2.8"><span class="header-section-number">2.8</span>
+Shorthand Properties Notation</h2>
 <p>You can set multiple font values in one shot by using the shorthand
 <code>&lt;font&gt;</code> property (many CSS properties have a shorthand
 version):</p>
@@ -802,8 +1012,9 @@ href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height"><code>line-h
 <li><a
 href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family"><code>font-family</code></a></li>
 </ul>
-<section id="css-4" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-4" class="level6 sourceCode" data-number="2.8.0.0.0.1">
+<h6 class="sourceCode" data-number="2.8.0.0.0.1"><span
+class="header-section-number">2.8.0.0.0.1</span> CSS</h6>
 <div class="sourceCode" id="cb6"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>body {</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font</span>: <span class="dv">italic</span> <span class="dv">small-caps</span> <span class="dv">bold</span> <span class="dv">16</span><span class="dt">px</span>/<span class="dv">2</span> <span class="dv">cursive</span><span class="op">;</span></span>
@@ -811,8 +1022,9 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb6-1"><a href="#c
 </section>
 </section>
 </section>
-<section id="the-box-model" class="level1">
-<h1>The Box Model</h1>
+<section id="the-box-model" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> The Box
+Model</h1>
 <p><em>This section was adapted from <a
 href="https://www.theodinproject.com/lessons/foundations-the-box-model">The
 Odin Project</a> and <a
@@ -829,8 +1041,9 @@ is key to being able to create more complex layouts with CSS, or to
 align items with other items. In this lesson, we will take a look at the
 CSS Box Model. You’ll get an understanding of how it works and the
 terminology that relates to it.</p>
-<section id="block-and-inline-boxes" class="level2">
-<h2>Block and inline boxes</h2>
+<section id="block-and-inline-boxes" class="level2" data-number="3.1">
+<h2 data-number="3.1"><span class="header-section-number">3.1</span>
+Block and inline boxes</h2>
 <p>Whether an element is <strong>block</strong> or
 <strong>inline</strong>, ALL elements have well defined box behavior
 that determines how the box behaves in terms of page flow and in
@@ -850,8 +1063,9 @@ data-cites="michaelhaaf">@michaelhaaf</span></a>) on
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 </section>
-<section id="outer-display-type" class="level2">
-<h2>Outer display type</h2>
+<section id="outer-display-type" class="level2" data-number="3.2">
+<h2 data-number="3.2"><span class="header-section-number">3.2</span>
+Outer display type</h2>
 <p>In CSS, all boxes have an <strong>inner display type</strong> and an
 <strong>outer display type</strong>.</p>
 <p>If a box has an outer display type of <code>block</code>, then:</p>
@@ -884,8 +1098,9 @@ other inline boxes to move away from the box.</li>
 <code>&lt;strong&gt;</code> use <code>inline</code> as their outer
 display type by default.</p>
 </section>
-<section id="inner-display-type" class="level2">
-<h2>Inner display type</h2>
+<section id="inner-display-type" class="level2" data-number="3.3">
+<h2 data-number="3.3"><span class="header-section-number">3.3</span>
+Inner display type</h2>
 <p>Boxes also have an inner display type, which dictates how elements
 <strong>inside</strong> that box (i.e., the children of the box) are
 laid out.</p>
@@ -901,8 +1116,10 @@ know that there is a difference between the <em>outer</em> (behavior of
 element itself) and <em>inner</em> (behavior of element’s children)
 display types.</p>
 </section>
-<section id="the-anatomy-of-the-box-model" class="level2">
-<h2>The Anatomy of the Box Model</h2>
+<section id="the-anatomy-of-the-box-model" class="level2"
+data-number="3.4">
+<h2 data-number="3.4"><span class="header-section-number">3.4</span> The
+Anatomy of the Box Model</h2>
 <p>It’s cool and fine that all HTML elements are boxes. But, how do you
 change the behavior of those boxes themselves? We need to know the
 strucure, or anatomy, of the CSS box model:</p>
@@ -931,26 +1148,34 @@ href="https://www.kirupa.com/html5/viewport_device_document_size.html">The
 Box Model</a></figcaption>
 </figure>
 </section>
-<section id="margins-padding-and-borders" class="level2">
-<h2>Margins, padding, and borders</h2>
-<section id="margin" class="level3">
-<h3>Margin</h3>
+<section id="margins-padding-and-borders" class="level2"
+data-number="3.5">
+<h2 data-number="3.5"><span class="header-section-number">3.5</span>
+Margins, padding, and borders</h2>
+<section id="margin" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1"><span class="header-section-number">3.5.1</span>
+Margin</h3>
 </section>
-<section id="margin-collapsing" class="level3">
-<h3>Margin Collapsing</h3>
+<section id="margin-collapsing" class="level3" data-number="3.5.2">
+<h3 data-number="3.5.2"><span class="header-section-number">3.5.2</span>
+Margin Collapsing</h3>
 </section>
-<section id="padding" class="level3">
-<h3>Padding</h3>
+<section id="padding" class="level3" data-number="3.5.3">
+<h3 data-number="3.5.3"><span class="header-section-number">3.5.3</span>
+Padding</h3>
 </section>
-<section id="borders" class="level3">
-<h3>Borders</h3>
+<section id="borders" class="level3" data-number="3.5.4">
+<h3 data-number="3.5.4"><span class="header-section-number">3.5.4</span>
+Borders</h3>
 </section>
 </section>
 </section>
-<section id="knowledge-check" class="level1">
-<h1>Knowledge Check</h1>
-<section id="fonts-1" class="level2">
-<h2>Fonts</h2>
+<section id="knowledge-check" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span>
+Knowledge Check</h1>
+<section id="fonts-1" class="level2" data-number="4.1">
+<h2 data-number="4.1"><span class="header-section-number">4.1</span>
+Fonts</h2>
 <ul>
 <li>What are the differences between the main Generic font
 families?</li>
@@ -961,8 +1186,9 @@ sizes?</li>
 are not “web safe” in our designs?</li>
 </ul>
 </section>
-<section id="the-box-model-1" class="level2">
-<h2>The Box Model</h2>
+<section id="the-box-model-1" class="level2" data-number="4.2">
+<h2 data-number="4.2"><span class="header-section-number">4.2</span> The
+Box Model</h2>
 <ul>
 <li>From inside to outside, what is the order of box-model
 properties?</li>
@@ -978,8 +1204,9 @@ overlap each other?</li>
 </ul>
 </section>
 </section>
-<section id="exercises" class="level1">
-<h1>Exercises</h1>
+<section id="exercises" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span>
+Exercises</h1>
 <ul>
 <li>Odin Project: CSS Foundations Practise Exercises <a
 href="../pages/tutorials.html#week-04-exercises"
@@ -999,8 +1226,8 @@ and files)</a></li>
 </section> 
    </article>
   </main>
-  <footer class="footer">
-   <span class="note-text">
+  <footer id="site-footer" role="contentinfo">
+   <span>
     © 2023 Michael Haaf |
     <a href="../pages/home.html#about-this-website">
      About

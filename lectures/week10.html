@@ -27,21 +27,18 @@
   </style>
     <link href="../assets/css/style.css" rel="stylesheet"/>
     
-  <!--[if lt IE 9]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-    <![endif]-->
  </head>
- <body class="page-container base">
-  <header class="header">
-   <div class="course-info-decoration">
-    <button class="theme-toggle-icon" id="theme-toggle-icon">
-     Theme toggle icon
+ <body class="base">
+  <header role="banner">
+   <div class="">
+    <button aria-hidden="true" aria-label="theme-toggle-icon" id="theme-toggle-icon">
+     X
     </button>
     <div>
      <h1>
       User Interfaces
      </h1>
-     <span class="note-text">
+     <span>
       420-2W6 | Winter 2023 | as taught by
       <a href="https://github.com/michaelhaaf/2W6-W23">
        Michael Haaf
@@ -49,324 +46,487 @@
      </span>
     </div>
    </div>
-   <div>
-    <span class="header-description note-text">
+   <div class="image-attribution">
+    <span>
      Image:
      <a href="https://www.guggenheim.org/artwork/movement/constructivism">
      </a>
     </span>
    </div>
   </header>
-  <aside class="aside--site surface">
-   <nav class="nav nav--site" id="site-navigation">
-    <h2>
-     Site Navigation
-    </h2>
-    <ul>
-     <li>
-      <a href="../pages/home.html" id="site-home">
-       <img alt="" class="icon" src="../assets/images/home.svg"/>
-       <span class="icon-text">
-        Home
-       </span>
-      </a>
-     </li>
-     <li>
-      <a href="../pages/course-outline.html" id="site-course-outline">
-       <img alt="" class="icon" src="../assets/images/outline.svg"/>
-       <span class="icon-text">
-        Course Outline
-       </span>
-      </a>
-     </li>
-     <li>
-      <a href="../pages/calendar.html" id="site-calendar">
-       <img alt="" class="icon" src="../assets/images/calendar.svg"/>
-       <span class="icon-text">
-        Calendar
-       </span>
-      </a>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-lectures" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/lectures.svg"/>
-       <span class="icon-text">
-        Lectures
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="lecture-listing">
-       <li>
-        <a href="../lectures/week01.html">
-         Week 01
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week02.html">
-         Week 02
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week03.html">
-         Week 03
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week04.html">
-         Week 04
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week05.html">
-         Week 05
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week06.html">
-         Week 06
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week07.html">
-         Week 07
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week09.html">
-         Week 09
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week10.html">
-         Week 10
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week11.html">
-         Week 11
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week12.html">
-         Week 12
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week13.html">
-         Week 13
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week14.html">
-         Week 14
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-tutorials" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/tutorials.svg"/>
-       <span class="icon-text">
-        Tutorials
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="tutorial-listing">
-       <li>
-        <a href="../pages/tutorials.html#week-01-exercises">
-         week 01 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-04-exercises">
-         week 04 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-06-exercises">
-         week 06 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-10-exercises">
-         week 10 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-11-exercises">
-         week 11 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-15-tutorial">
-         week 15 
-tutorial
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-04-solutions">
-         week 04 
-solutions
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-06-solutions">
-         week 06 
-solutions
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-10-solutions">
-         week 10 
-solutions
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-assignments" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/assignments.svg"/>
-       <span class="icon-text">
-        Assignments
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="assignment-listing">
-       <li>
-        <a href="../pages/assignments.html#milestone-1-2">
-         milestone 1 &amp;
- 2
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-1">
-         lab 1
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-2">
-         lab 2
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-3">
-         lab 3
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-4">
-         lab 4
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-1-solution">
-         lab 1 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-2-solution">
-         lab 2 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-3-solution">
-         lab 3 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-4-solution">
-         lab 4 
-solution
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </nav>
-  </aside>
-    <aside class="aside--page">
-   <nav class="nav nav--page" id="TOC" role="doc-toc">
-        <h2 id="toc-title">
-     Lecture navigation
-    </h2>
-         <a class="" href="../lectures/week09.html">
-     <img alt="" class="icon" src="../assets/images/feather-icons/chevron-left.svg"/>
-     <span class="icon-text">
-      Previous page...
-     </span>
-    </a>
-     <ul>
-<li><a href="#lesson-overview" id="toc-lesson-overview">Lesson
-Overview</a></li>
-<li><a href="#css-grid-fundamentals" id="toc-css-grid-fundamentals">CSS
-Grid Fundamentals</a>
-<ul>
-<li><a href="#overview" id="toc-overview">Overview</a></li>
-<li><a href="#knowledge-check" id="toc-knowledge-check">Knowledge
-Check</a></li>
-</ul></li>
-<li><a href="#creating-a-grid" id="toc-creating-a-grid">Creating a
-Grid</a>
-<ul>
-<li><a href="#overview-1" id="toc-overview-1">Overview</a></li>
-<li><a href="#knowledge-check-1" id="toc-knowledge-check-1">Knowledge
-Check</a></li>
-</ul></li>
-<li><a href="#positioning-grid-items"
-id="toc-positioning-grid-items">Positioning Grid Items</a>
-<ul>
-<li><a href="#overview-2" id="toc-overview-2">Overview</a></li>
-<li><a href="#knowledge-check-2" id="toc-knowledge-check-2">Knowledge
-Check</a></li>
-</ul></li>
-<li><a href="#automated-grids" id="toc-automated-grids">Automated
-Grids</a>
-<ul>
-<li><a href="#overview-3" id="toc-overview-3">Overview</a></li>
-<li><a href="#knowledge-check-3" id="toc-knowledge-check-3">Knowledge
-Check</a></li>
-</ul></li>
-<li><a href="#readings-and-resources"
-id="toc-readings-and-resources">Readings and Resources</a></li>
-<li><a href="#exercises" id="toc-exercises">Exercises</a></li>
-</ul>     <a class="" href="../lectures/week11.html">
-     <img alt="" class="icon" src="../assets/images/feather-icons/chevron-right.svg"/>
-     <span class="icon-text">
-      Next page...
-     </span>
-    </a>
-       </nav>
-  </aside>
-    <main class="main base">
+  <nav aria-labelledby="course-content" class="tooltip vertical sticky-container" role="navigation">
+   <h2 class="visually-hidden" id="course-content">
+    Course Content
+   </h2>
+   <ul class="sticky" role="menu">
+    <li>
+     <a aria-label="Link to Home" href="../pages/home.html" role="menuitem" style="--icon: url(../images/home.svg)">
+      <span>
+       Home
+      </span>
+     </a>
+    </li>
+    <li>
+     <a aria-label="Link to Course Outline" href="../pages/course-outline.html" role="menuitem" style="--icon: url(../images/outline.svg)">
+      <span>
+       Course outline
+      </span>
+     </a>
+    </li>
+    <li>
+     <a aria-label="Link to Calendar" href="../pages/calendar.html" role="menuitem" style="--icon: url(../images/calendar.svg)">
+      <span>
+       Calendar
+      </span>
+     </a>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Lectures" href="../pages/lectures.html" role="menuitem" style="--icon: url(../images/lectures.svg)">
+      <span>
+       Lectures
+      </span>
+     </a>
+     <button aria-controls="lecture-listing" aria-expanded="false" aria-label="Expand lecture menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right.svg)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="lecture-listing" style="display: none;">
+      <li>
+       <a href="../lectures/week01.html">
+        week01.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week02.html">
+        week02.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week03.html">
+        week03.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week04.html">
+        week04.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week05.html">
+        week05.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week06.html">
+        week06.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week07.html">
+        week07.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week09.html">
+        week09.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week10.html">
+        week10.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week11.html">
+        week11.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week12.html">
+        week12.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week13.html">
+        week13.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week14.html">
+        week14.html
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Tutorials" href="../pages/tutorials.html" role="menuitem" style="--icon: url(../images/tutorials.svg)">
+      <span>
+       Tutorials
+      </span>
+     </a>
+     <button aria-controls="tutorial-listing" aria-expanded="false" aria-label="Expand tutorial menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="tutorial-listing" style="display: none;">
+      <li>
+       <a href="../pages/tutorials.html#week-01-exercises">
+        <span class="toc-section-number">
+         1.1
+        </span>
+        Week 01
+            Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-04-exercises">
+        <span class="toc-section-number">
+         1.2
+        </span>
+        Week 04 Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-foundations">
+        <span class="toc-section-number">
+         1.2.1
+        </span>
+        CSS
+            Foundations
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-box-model">
+        <span class="toc-section-number">
+         1.2.2
+        </span>
+        CSS Box
+            Model
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-typesetting-typography">
+        <span class="toc-section-number">
+         1.2.3
+        </span>
+        CSS Typesetting
+            &amp; Typography
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-06-exercises">
+        <span class="toc-section-number">
+         1.3
+        </span>
+        Week 06 Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-flexbox">
+        <span class="toc-section-number">
+         1.3.1
+        </span>
+        CSS Flexbox
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-10-exercises">
+        <span class="toc-section-number">
+         1.4
+        </span>
+        Week 10 Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-grid">
+        <span class="toc-section-number">
+         1.4.1
+        </span>
+        CSS Grid
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-11-exercises">
+        <span class="toc-section-number">
+         1.5
+        </span>
+        Week 11
+            Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-15-tutorial">
+        <span class="toc-section-number">
+         1.6
+        </span>
+        Week 15
+            Tutorial
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-04-solutions">
+        <span class="toc-section-number">
+         2.1
+        </span>
+        Week 04 Solutions
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-foundations-1">
+        <span class="toc-section-number">
+         2.1.1
+        </span>
+        CSS
+            Foundations
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-box-model-1">
+        <span class="toc-section-number">
+         2.1.2
+        </span>
+        CSS Box
+            Model
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-typesetting-typography-1">
+        <span class="toc-section-number">
+         2.1.3
+        </span>
+        CSS Typesetting
+            &amp; Typography
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-06-solutions">
+        <span class="toc-section-number">
+         2.2
+        </span>
+        Week 06 Solutions
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-flexbox-1">
+        <span class="toc-section-number">
+         2.2.1
+        </span>
+        CSS Flexbox
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-10-solutions">
+        <span class="toc-section-number">
+         2.3
+        </span>
+        Week 10 Solutions
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-grid-1">
+        <span class="toc-section-number">
+         2.3.1
+        </span>
+        CSS Grid
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Assignments" href="../pages/assignments.html" role="menuitem" style="--icon: url(../images/assignments.svg)">
+      <span>
+       Assignments
+      </span>
+     </a>
+     <button aria-controls="assignment-listing" aria-expanded="false" aria-label="Expand assignment menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="assignment-listing" style="display: none;">
+      <li>
+       <a href="../pages/assignments.html#milestone-1-2">
+        Milestone 1 &amp;
+2
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-1">
+        Lab 1
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-2">
+        Lab 2
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-3">
+        Lab 3
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-4">
+        Lab 4
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-1-solution">
+        Lab 1
+Solution
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-2-solution">
+        Lab 2
+Solution
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-3-solution">
+        Lab 3
+Solution
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-4-solution">
+        Lab 4
+Solution
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </nav>
+  <main class="base" role="main">
    <article class="article">
-         <header id="title-block-header">
-     <h1 class="title">
+         <header class="level1" id="title-block-header">
+     <h1>
       2W6-W23: Week 10 Lecture Notes
      </h1>
             <div class="abstract">
-      <div class="abstract-title">
+      <h2>
        Intermediate CSS: Mastering Layouts with CSS Grid
-      </div>
+      </h2>
       <p>We are now reaching a point in our CSS skills that we can
       create almost any layout or structure that we can envision.</p>
       <p>This week, we will learn about CSS Grid. These lecture notes
       are summaries adapted directly from The Odin Project.</p>
      </div>
-           <p class="date">
+           <p>
       Last update:
       <time datetime="Friday, March 31, 2023">
        Friday, March 31, 2023
       </time>
      </p>
-         </header>
-     <hr />
-<section id="lesson-overview" class="level1">
-<h1>Lesson Overview</h1>
+          <hr/>
+    </header>
+        <section class="overlay-grid sticky-container level1">
+     <nav aria-labelledby="page-controls-title" class="margin surface menu sticky tooltip">
+      <h2 class="visually-hidden" id="page-controls-title">
+       Page Controls
+      </h2>
+      <ul role="menubar">
+       <li>
+        <a href="#title-block-header" role="menuitem" style="--icon: url(../images/feather-icons/chevron-up.svg)">
+         <span>
+          Scroll to beginning
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="#site-footer" role="menuitem" style="--icon: url(../images/feather-icons/chevron-down.svg)">
+         <span>
+          Scroll to end
+         </span>
+        </a>
+       </li>
+              <li>
+        <a href="../lectures/week09.html" role="menuitem" style="--icon: url(../images/feather-icons/chevron-left.svg)">
+         <span>
+          Previous page
+         </span>
+        </a>
+       </li>
+               <li>
+        <a href="../lectures/week11.html" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right.svg)">
+         <span>
+          Next page
+         </span>
+        </a>
+       </li>
+              <li>
+        <a href="#" role="menuitem" style="--icon: url('../images/feather-icons/printer.svg')">
+         <span>
+          View PDF
+         </span>
+        </a>
+       </li>
+       <li>
+        <button aria-controls="margin-menu" aria-expanded="false" aria-hidden="true" aria-label="Toggle margin menu" role="menuitem" style="--icon: url(../images/feather-icons/maximize-2.svg)">
+         <span>
+          Toggle margin menu
+         </span>
+        </button>
+       </li>
+      </ul>
+     </nav>
+          <nav aria-labelledby="toc-title" class="margin surface menu sticky toc" id="TOC" role="navigation">
+      <h2 id="toc-title">
+       Contents
+      </h2>
+      <ul>
+      <li><a href="#lesson-overview" id="toc-lesson-overview"><span
+      class="toc-section-number">1</span> Lesson Overview</a></li>
+      <li><a href="#css-grid-fundamentals"
+      id="toc-css-grid-fundamentals"><span
+      class="toc-section-number">2</span> CSS Grid Fundamentals</a>
+      <ul>
+      <li><a href="#overview" id="toc-overview"><span
+      class="toc-section-number">2.1</span> Overview</a></li>
+      <li><a href="#knowledge-check" id="toc-knowledge-check"><span
+      class="toc-section-number">2.2</span> Knowledge Check</a></li>
+      </ul></li>
+      <li><a href="#creating-a-grid" id="toc-creating-a-grid"><span
+      class="toc-section-number">3</span> Creating a Grid</a>
+      <ul>
+      <li><a href="#overview-1" id="toc-overview-1"><span
+      class="toc-section-number">3.1</span> Overview</a></li>
+      <li><a href="#knowledge-check-1" id="toc-knowledge-check-1"><span
+      class="toc-section-number">3.2</span> Knowledge Check</a></li>
+      </ul></li>
+      <li><a href="#positioning-grid-items"
+      id="toc-positioning-grid-items"><span
+      class="toc-section-number">4</span> Positioning Grid Items</a>
+      <ul>
+      <li><a href="#overview-2" id="toc-overview-2"><span
+      class="toc-section-number">4.1</span> Overview</a></li>
+      <li><a href="#knowledge-check-2" id="toc-knowledge-check-2"><span
+      class="toc-section-number">4.2</span> Knowledge Check</a></li>
+      </ul></li>
+      <li><a href="#automated-grids" id="toc-automated-grids"><span
+      class="toc-section-number">5</span> Automated Grids</a>
+      <ul>
+      <li><a href="#overview-3" id="toc-overview-3"><span
+      class="toc-section-number">5.1</span> Overview</a></li>
+      <li><a href="#knowledge-check-3" id="toc-knowledge-check-3"><span
+      class="toc-section-number">5.2</span> Knowledge Check</a></li>
+      </ul></li>
+      <li><a href="#readings-and-resources"
+      id="toc-readings-and-resources"><span
+      class="toc-section-number">6</span> Readings and
+      Resources</a></li>
+      <li><a href="#exercises" id="toc-exercises"><span
+      class="toc-section-number">7</span> Exercises</a></li>
+      </ul>
+     </nav>
+         </section>
+    <hr />
+<section id="lesson-overview" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Lesson
+Overview</h1>
 <p>By the end of these lessons, you will know:</p>
 <ul>
 <li>what CSS Grid is and what it is useful for, its basic differences
@@ -378,13 +538,15 @@ Container</li>
 </ul>
 <hr />
 </section>
-<section id="css-grid-fundamentals" class="level1">
-<h1>CSS Grid Fundamentals</h1>
+<section id="css-grid-fundamentals" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> CSS
+Grid Fundamentals</h1>
 <p><strong>Lecture Notes:</strong> <a
 href="https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-introduction-to-grid">Grid
 Fundamentals (Introduction to Grid)</a></p>
-<section id="overview" class="level2">
-<h2>Overview</h2>
+<section id="overview" class="level2" data-number="2.1">
+<h2 data-number="2.1"><span class="header-section-number">2.1</span>
+Overview</h2>
 <p>For this week, the lectures will be based directly on CSS Grid notes
 from the Odin Project.</p>
 <p>In the first part of the Grid lessons, you will learn what CSS Grids
@@ -398,8 +560,9 @@ href="https://www.hotdesign.com/seybold/">Tables</a> – terrible!</p>
 <li>Describe a situation for using Grid over Flexbox</li>
 </ul>
 </section>
-<section id="knowledge-check" class="level2">
-<h2>Knowledge Check</h2>
+<section id="knowledge-check" class="level2" data-number="2.2">
+<h2 data-number="2.2"><span class="header-section-number">2.2</span>
+Knowledge Check</h2>
 <p>This section contains questions for you to check your understanding
 of <a href="css-grid-fundamentals">grid fundamentals</a>. If you’re
 having trouble answering the questions below on your own, review the
@@ -412,13 +575,15 @@ items in a container?</li>
 </ul>
 </section>
 </section>
-<section id="creating-a-grid" class="level1">
-<h1>Creating a Grid</h1>
+<section id="creating-a-grid" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span>
+Creating a Grid</h1>
 <p><strong>Lecture Notes:</strong> <a
 href="https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-creating-a-grid">Creating
 a Grid</a></p>
-<section id="overview-1" class="level2">
-<h2>Overview</h2>
+<section id="overview-1" class="level2" data-number="3.1">
+<h2 data-number="3.1"><span class="header-section-number">3.1</span>
+Overview</h2>
 <p>The previous article covered what CSS Grid Layouts are. In this
 article, you’ll learn how to create your own grid. This lesson will
 cover making a grid container, adding columns and rows, the explicit and
@@ -431,8 +596,9 @@ implicit concept behind Grid and how to space out grid gaps.</p>
 <li>Set gaps between grid cells</li>
 </ul>
 </section>
-<section id="knowledge-check-1" class="level2">
-<h2>Knowledge Check</h2>
+<section id="knowledge-check-1" class="level2" data-number="3.2">
+<h2 data-number="3.2"><span class="header-section-number">3.2</span>
+Knowledge Check</h2>
 <p>This section contains questions for you to check your understanding
 of <a href="#creating-a-grid">creating a grid</a>. If you’re having
 trouble answering the questions below on your own, review the material
@@ -447,13 +613,15 @@ tracks.</li>
 </ul>
 </section>
 </section>
-<section id="positioning-grid-items" class="level1">
-<h1>Positioning Grid Items</h1>
+<section id="positioning-grid-items" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span>
+Positioning Grid Items</h1>
 <p><strong>Lecture Notes:</strong> <a
 href="https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-positioning-grid-elements">Positioning
 Grid Items</a></p>
-<section id="overview-2" class="level2">
-<h2>Overview</h2>
+<section id="overview-2" class="level2" data-number="4.1">
+<h2 data-number="4.1"><span class="header-section-number">4.1</span>
+Overview</h2>
 <p>In this lesson we will examine the different parts of a grid and
 explore common properties that can be used to position grid items.</p>
 <p>By the end of this lesson, you should be able to:</p>
@@ -466,8 +634,9 @@ Grid</li>
 <code>grid-row</code>, etc.</li>
 </ul>
 </section>
-<section id="knowledge-check-2" class="level2">
-<h2>Knowledge Check</h2>
+<section id="knowledge-check-2" class="level2" data-number="4.2">
+<h2 data-number="4.2"><span class="header-section-number">4.2</span>
+Knowledge Check</h2>
 <p>This section contains questions for you to check your understanding
 of <a href="#positioning-grid-items">positioning grid items</a>. If
 you’re having trouble answering the questions below on your own, review
@@ -484,13 +653,15 @@ items?</li>
 </ul>
 </section>
 </section>
-<section id="automated-grids" class="level1">
-<h1>Automated Grids</h1>
+<section id="automated-grids" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span>
+Automated Grids</h1>
 <p><strong>Lecture Notes:</strong> <a
 href="https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-advanced-grid-properties">Automated
 Grids (Advanced Grid Properties)</a></p>
-<section id="overview-3" class="level2">
-<h2>Overview</h2>
+<section id="overview-3" class="level2" data-number="5.1">
+<h2 data-number="5.1"><span class="header-section-number">5.1</span>
+Overview</h2>
 <p>In the last part of the Grid lessons, you will learn how to define
 Automated Grids – that is, grids which can automatically adapt otherwise
 static properties like the number of rows/columns, or the sizes of
@@ -508,8 +679,9 @@ grid with a dynamic number of rows or columns</li>
 to create responsive grids</li>
 </ul>
 </section>
-<section id="knowledge-check-3" class="level2">
-<h2>Knowledge Check</h2>
+<section id="knowledge-check-3" class="level2" data-number="5.2">
+<h2 data-number="5.2"><span class="header-section-number">5.2</span>
+Knowledge Check</h2>
 <p>This section contains questions for you to check your understanding
 of <a href="#automated-grids">automated grid properties</a>. If you’re
 having trouble answering the questions below on your own, review the
@@ -534,8 +706,9 @@ tracks as possible, given certain constraints?</li>
 </ul>
 </section>
 </section>
-<section id="readings-and-resources" class="level1">
-<h1>Readings and Resources</h1>
+<section id="readings-and-resources" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span>
+Readings and Resources</h1>
 <ol type="1">
 <li><a href="https://cssgridgarden.com/">CSS Grid Garden</a>: Similar to
 Flexbox Froggy and CSS Diner, this is an interactive set of Grid puzzles
@@ -562,8 +735,9 @@ additional visual demonstration beyond what we have covered in
 class.</li>
 </ol>
 </section>
-<section id="exercises" class="level1">
-<h1>Exercises</h1>
+<section id="exercises" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span>
+Exercises</h1>
 <ol type="1">
 <li>Odin Project: <a href="../pages/tutorials.html#week-10-exercises"
 title="Odin Project: CSS Grid Exercises. There are 3 exercises total in this set.">CSS
@@ -572,8 +746,8 @@ Grid Practise Exercises</a></li>
 </section> 
    </article>
   </main>
-  <footer class="footer">
-   <span class="note-text">
+  <footer id="site-footer" role="contentinfo">
+   <span>
     © 2023 Michael Haaf |
     <a href="../pages/home.html#about-this-website">
      About

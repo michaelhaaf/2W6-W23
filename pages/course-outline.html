@@ -27,21 +27,18 @@
   </style>
     <link href="../assets/css/style.css" rel="stylesheet"/>
     
-  <!--[if lt IE 9]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-    <![endif]-->
  </head>
- <body class="page-container base">
-  <header class="header">
-   <div class="course-info-decoration">
-    <button class="theme-toggle-icon" id="theme-toggle-icon">
-     Theme toggle icon
+ <body class="base">
+  <header role="banner">
+   <div class="">
+    <button aria-hidden="true" aria-label="theme-toggle-icon" id="theme-toggle-icon">
+     X
     </button>
     <div>
      <h1>
       User Interfaces
      </h1>
-     <span class="note-text">
+     <span>
       420-2W6 | Winter 2023 | as taught by
       <a href="https://github.com/michaelhaaf/2W6-W23">
        Michael Haaf
@@ -49,317 +46,479 @@
      </span>
     </div>
    </div>
-   <div>
-    <span class="header-description note-text">
+   <div class="image-attribution">
+    <span>
      Image:
      <a href="https://www.guggenheim.org/artwork/movement/constructivism">
      </a>
     </span>
    </div>
   </header>
-  <aside class="aside--site surface">
-   <nav class="nav nav--site" id="site-navigation">
-    <h2>
-     Site Navigation
-    </h2>
-    <ul>
-     <li>
-      <a href="../pages/home.html" id="site-home">
-       <img alt="" class="icon" src="../assets/images/home.svg"/>
-       <span class="icon-text">
-        Home
-       </span>
-      </a>
-     </li>
-     <li>
-      <a href="../pages/course-outline.html" id="site-course-outline">
-       <img alt="" class="icon" src="../assets/images/outline.svg"/>
-       <span class="icon-text">
-        Course Outline
-       </span>
-      </a>
-     </li>
-     <li>
-      <a href="../pages/calendar.html" id="site-calendar">
-       <img alt="" class="icon" src="../assets/images/calendar.svg"/>
-       <span class="icon-text">
-        Calendar
-       </span>
-      </a>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-lectures" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/lectures.svg"/>
-       <span class="icon-text">
-        Lectures
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="lecture-listing">
-       <li>
-        <a href="../lectures/week01.html">
-         Week 01
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week02.html">
-         Week 02
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week03.html">
-         Week 03
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week04.html">
-         Week 04
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week05.html">
-         Week 05
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week06.html">
-         Week 06
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week07.html">
-         Week 07
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week09.html">
-         Week 09
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week10.html">
-         Week 10
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week11.html">
-         Week 11
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week12.html">
-         Week 12
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week13.html">
-         Week 13
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week14.html">
-         Week 14
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-tutorials" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/tutorials.svg"/>
-       <span class="icon-text">
-        Tutorials
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="tutorial-listing">
-       <li>
-        <a href="../pages/tutorials.html#week-01-exercises">
-         week 01 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-04-exercises">
-         week 04 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-06-exercises">
-         week 06 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-10-exercises">
-         week 10 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-11-exercises">
-         week 11 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-15-tutorial">
-         week 15 
-tutorial
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-04-solutions">
-         week 04 
-solutions
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-06-solutions">
-         week 06 
-solutions
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-10-solutions">
-         week 10 
-solutions
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-assignments" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/assignments.svg"/>
-       <span class="icon-text">
-        Assignments
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="assignment-listing">
-       <li>
-        <a href="../pages/assignments.html#milestone-1-2">
-         milestone 1 &amp;
- 2
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-1">
-         lab 1
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-2">
-         lab 2
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-3">
-         lab 3
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-4">
-         lab 4
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-1-solution">
-         lab 1 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-2-solution">
-         lab 2 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-3-solution">
-         lab 3 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-4-solution">
-         lab 4 
-solution
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </nav>
-  </aside>
-    <aside class="aside--page">
-   <nav class="nav nav--page" id="TOC" role="doc-toc">
-        <h2 id="toc-title">
-     Page navigation
-    </h2>
-         <a class="" href="../pages/home.html">
-     <img alt="" class="icon" src="../assets/images/feather-icons/chevron-left.svg"/>
-     <span class="icon-text">
-      Previous page...
-     </span>
-    </a>
-     <ul>
-<li><a href="#general-information" id="toc-general-information">GENERAL
-INFORMATION</a></li>
-<li><a href="#introduction" id="toc-introduction">INTRODUCTION</a></li>
-<li><a href="#course-objectives" id="toc-course-objectives">COURSE
-OBJECTIVES</a></li>
-<li><a href="#evaluation-plan" id="toc-evaluation-plan">EVALUATION
-PLAN</a></li>
-<li><a href="#course-content" id="toc-course-content">COURSE
-CONTENT</a></li>
-<li><a href="#tentative-schedule" id="toc-tentative-schedule">TENTATIVE
-SCHEDULE</a></li>
-<li><a href="#suggested-text" id="toc-suggested-text">SUGGESTED
-TEXT</a></li>
-<li><a href="#course-costs" id="toc-course-costs">COURSE COSTS</a></li>
-<li><a href="#ponderation" id="toc-ponderation">PONDERATION</a></li>
-<li><a href="#late-policy" id="toc-late-policy">LATE POLICY</a></li>
-<li><a href="#attendance-policy" id="toc-attendance-policy">ATTENDANCE
-POLICY</a></li>
-<li><a href="#college-policies" id="toc-college-policies">COLLEGE
-POLICIES</a></li>
-<li><a href="#college-definition-of-cheating"
-id="toc-college-definition-of-cheating">College Definition of
-Cheating:</a></li>
-<li><a href="#college-definition-of-plagiarism"
-id="toc-college-definition-of-plagiarism">College Definition of
-Plagiarism:</a></li>
-</ul>     <a class="" href="../pages/calendar.html">
-     <img alt="" class="icon" src="../assets/images/feather-icons/chevron-right.svg"/>
-     <span class="icon-text">
-      Next page...
-     </span>
-    </a>
-       </nav>
-  </aside>
-    <main class="main base">
+  <nav aria-labelledby="course-content" class="tooltip vertical sticky-container" role="navigation">
+   <h2 class="visually-hidden" id="course-content">
+    Course Content
+   </h2>
+   <ul class="sticky" role="menu">
+    <li>
+     <a aria-label="Link to Home" href="../pages/home.html" role="menuitem" style="--icon: url(../images/home.svg)">
+      <span>
+       Home
+      </span>
+     </a>
+    </li>
+    <li>
+     <a aria-label="Link to Course Outline" href="../pages/course-outline.html" role="menuitem" style="--icon: url(../images/outline.svg)">
+      <span>
+       Course outline
+      </span>
+     </a>
+    </li>
+    <li>
+     <a aria-label="Link to Calendar" href="../pages/calendar.html" role="menuitem" style="--icon: url(../images/calendar.svg)">
+      <span>
+       Calendar
+      </span>
+     </a>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Lectures" href="../pages/lectures.html" role="menuitem" style="--icon: url(../images/lectures.svg)">
+      <span>
+       Lectures
+      </span>
+     </a>
+     <button aria-controls="lecture-listing" aria-expanded="false" aria-label="Expand lecture menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right.svg)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="lecture-listing" style="display: none;">
+      <li>
+       <a href="../lectures/week01.html">
+        week01.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week02.html">
+        week02.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week03.html">
+        week03.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week04.html">
+        week04.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week05.html">
+        week05.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week06.html">
+        week06.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week07.html">
+        week07.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week09.html">
+        week09.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week10.html">
+        week10.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week11.html">
+        week11.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week12.html">
+        week12.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week13.html">
+        week13.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week14.html">
+        week14.html
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Tutorials" href="../pages/tutorials.html" role="menuitem" style="--icon: url(../images/tutorials.svg)">
+      <span>
+       Tutorials
+      </span>
+     </a>
+     <button aria-controls="tutorial-listing" aria-expanded="false" aria-label="Expand tutorial menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="tutorial-listing" style="display: none;">
+      <li>
+       <a href="../pages/tutorials.html#week-01-exercises">
+        <span class="toc-section-number">
+         1.1
+        </span>
+        Week 01
+            Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-04-exercises">
+        <span class="toc-section-number">
+         1.2
+        </span>
+        Week 04 Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-foundations">
+        <span class="toc-section-number">
+         1.2.1
+        </span>
+        CSS
+            Foundations
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-box-model">
+        <span class="toc-section-number">
+         1.2.2
+        </span>
+        CSS Box
+            Model
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-typesetting-typography">
+        <span class="toc-section-number">
+         1.2.3
+        </span>
+        CSS Typesetting
+            &amp; Typography
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-06-exercises">
+        <span class="toc-section-number">
+         1.3
+        </span>
+        Week 06 Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-flexbox">
+        <span class="toc-section-number">
+         1.3.1
+        </span>
+        CSS Flexbox
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-10-exercises">
+        <span class="toc-section-number">
+         1.4
+        </span>
+        Week 10 Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-grid">
+        <span class="toc-section-number">
+         1.4.1
+        </span>
+        CSS Grid
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-11-exercises">
+        <span class="toc-section-number">
+         1.5
+        </span>
+        Week 11
+            Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-15-tutorial">
+        <span class="toc-section-number">
+         1.6
+        </span>
+        Week 15
+            Tutorial
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-04-solutions">
+        <span class="toc-section-number">
+         2.1
+        </span>
+        Week 04 Solutions
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-foundations-1">
+        <span class="toc-section-number">
+         2.1.1
+        </span>
+        CSS
+            Foundations
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-box-model-1">
+        <span class="toc-section-number">
+         2.1.2
+        </span>
+        CSS Box
+            Model
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-typesetting-typography-1">
+        <span class="toc-section-number">
+         2.1.3
+        </span>
+        CSS Typesetting
+            &amp; Typography
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-06-solutions">
+        <span class="toc-section-number">
+         2.2
+        </span>
+        Week 06 Solutions
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-flexbox-1">
+        <span class="toc-section-number">
+         2.2.1
+        </span>
+        CSS Flexbox
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-10-solutions">
+        <span class="toc-section-number">
+         2.3
+        </span>
+        Week 10 Solutions
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-grid-1">
+        <span class="toc-section-number">
+         2.3.1
+        </span>
+        CSS Grid
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Assignments" href="../pages/assignments.html" role="menuitem" style="--icon: url(../images/assignments.svg)">
+      <span>
+       Assignments
+      </span>
+     </a>
+     <button aria-controls="assignment-listing" aria-expanded="false" aria-label="Expand assignment menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="assignment-listing" style="display: none;">
+      <li>
+       <a href="../pages/assignments.html#milestone-1-2">
+        Milestone 1 &amp;
+2
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-1">
+        Lab 1
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-2">
+        Lab 2
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-3">
+        Lab 3
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-4">
+        Lab 4
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-1-solution">
+        Lab 1
+Solution
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-2-solution">
+        Lab 2
+Solution
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-3-solution">
+        Lab 3
+Solution
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-4-solution">
+        Lab 4
+Solution
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </nav>
+  <main class="base" role="main">
    <article class="article">
-         <header id="title-block-header">
-     <h1 class="title">
+         <header class="level1" id="title-block-header">
+     <h1>
       2W6-W23: Course Outline
      </h1>
             <div class="abstract">
-      <div class="abstract-title">
+      <h2>
        User Interfaces – Computer Science Technology 420.B0
-      </div>
+      </h2>
       <p>This document was converted to HTML for presentation on this
       website using <a href="https://pandoc.org/">pandoc</a>. The course
       outline is also available for download as a <a
       href="../assets/documents/course_outline.pdf">.pdf file</a>.</p>
      </div>
-           <p class="date">
+           <p>
       Last update:
-      <time datetime="Sun May 7 17:53:34 2023">
-       Sunday, May 07, 2023
+      <time datetime="Thu Jun 22 19:35:59 2023">
+       Thursday, June 22, 2023
       </time>
      </p>
-         </header>
-     <hr />
-<section id="general-information" class="level1">
-<h1>GENERAL INFORMATION</h1>
+          <hr/>
+    </header>
+        <section class="overlay-grid sticky-container level1">
+     <nav aria-labelledby="page-controls-title" class="margin surface menu sticky tooltip">
+      <h2 class="visually-hidden" id="page-controls-title">
+       Page Controls
+      </h2>
+      <ul role="menubar">
+       <li>
+        <a href="#title-block-header" role="menuitem" style="--icon: url(../images/feather-icons/chevron-up.svg)">
+         <span>
+          Scroll to beginning
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="#site-footer" role="menuitem" style="--icon: url(../images/feather-icons/chevron-down.svg)">
+         <span>
+          Scroll to end
+         </span>
+        </a>
+       </li>
+              <li>
+        <a href="../pages/home.html" role="menuitem" style="--icon: url(../images/feather-icons/chevron-left.svg)">
+         <span>
+          Previous page
+         </span>
+        </a>
+       </li>
+               <li>
+        <a href="../pages/calendar.html" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right.svg)">
+         <span>
+          Next page
+         </span>
+        </a>
+       </li>
+              <li>
+        <a href="#" role="menuitem" style="--icon: url('../images/feather-icons/printer.svg')">
+         <span>
+          View PDF
+         </span>
+        </a>
+       </li>
+       <li>
+        <button aria-controls="margin-menu" aria-expanded="false" aria-hidden="true" aria-label="Toggle margin menu" role="menuitem" style="--icon: url(../images/feather-icons/maximize-2.svg)">
+         <span>
+          Toggle margin menu
+         </span>
+        </button>
+       </li>
+      </ul>
+     </nav>
+          <nav aria-labelledby="toc-title" class="margin surface menu sticky toc" id="TOC" role="navigation">
+      <h2 id="toc-title">
+       Contents
+      </h2>
+      <ul>
+      <li><a href="#general-information"
+      id="toc-general-information"><span
+      class="toc-section-number">1</span> GENERAL INFORMATION</a></li>
+      <li><a href="#introduction" id="toc-introduction"><span
+      class="toc-section-number">2</span> INTRODUCTION</a></li>
+      <li><a href="#course-objectives" id="toc-course-objectives"><span
+      class="toc-section-number">3</span> COURSE OBJECTIVES</a></li>
+      <li><a href="#evaluation-plan" id="toc-evaluation-plan"><span
+      class="toc-section-number">4</span> EVALUATION PLAN</a></li>
+      <li><a href="#course-content" id="toc-course-content"><span
+      class="toc-section-number">5</span> COURSE CONTENT</a></li>
+      <li><a href="#tentative-schedule"
+      id="toc-tentative-schedule"><span
+      class="toc-section-number">6</span> TENTATIVE SCHEDULE</a></li>
+      <li><a href="#suggested-text" id="toc-suggested-text"><span
+      class="toc-section-number">7</span> SUGGESTED TEXT</a></li>
+      <li><a href="#course-costs" id="toc-course-costs"><span
+      class="toc-section-number">8</span> COURSE COSTS</a></li>
+      <li><a href="#ponderation" id="toc-ponderation"><span
+      class="toc-section-number">9</span> PONDERATION</a></li>
+      <li><a href="#late-policy" id="toc-late-policy"><span
+      class="toc-section-number">10</span> LATE POLICY</a></li>
+      <li><a href="#attendance-policy" id="toc-attendance-policy"><span
+      class="toc-section-number">11</span> ATTENDANCE POLICY</a></li>
+      <li><a href="#college-policies" id="toc-college-policies"><span
+      class="toc-section-number">12</span> COLLEGE POLICIES</a></li>
+      <li><a href="#college-definition-of-cheating"
+      id="toc-college-definition-of-cheating"><span
+      class="toc-section-number">13</span> College Definition of
+      Cheating:</a></li>
+      <li><a href="#college-definition-of-plagiarism"
+      id="toc-college-definition-of-plagiarism"><span
+      class="toc-section-number">14</span> College Definition of
+      Plagiarism:</a></li>
+      </ul>
+     </nav>
+         </section>
+    <hr />
+<section id="general-information" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> GENERAL
+INFORMATION</h1>
 <table style="width:99%;">
 <colgroup>
 <col style="width: 27%" />
@@ -431,8 +590,9 @@ This course is a prerequisite for 420-3W5-AB and 420-4A8-AB</td>
 </tbody>
 </table>
 </section>
-<section id="introduction" class="level1">
-<h1>INTRODUCTION</h1>
+<section id="introduction" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span>
+INTRODUCTION</h1>
 <p>This course provides the student with the tools and techniques
 required to design and program user interfaces in web applications. It
 is designed as a front-end web development course with HTML and CSS at
@@ -440,8 +600,9 @@ the presentation level and JavaScript providing functionality.
 Accessibility in the user experience as well as responsive web design
 will also be explored.</p>
 </section>
-<section id="course-objectives" class="level1">
-<h1>COURSE OBJECTIVES</h1>
+<section id="course-objectives" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> COURSE
+OBJECTIVES</h1>
 <p>Competency 00SU. Develop transactional Web applications. Achievement
 Context:</p>
 <ul>
@@ -472,8 +633,9 @@ and resolution</td>
 </tbody>
 </table>
 </section>
-<section id="evaluation-plan" class="level1">
-<h1>EVALUATION PLAN</h1>
+<section id="evaluation-plan" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span>
+EVALUATION PLAN</h1>
 <table style="width:62%;">
 <colgroup>
 <col style="width: 51%" />
@@ -509,8 +671,9 @@ and resolution</td>
 <p>(Note: Weeks indicated for Tests and Project are tentative. Final
 evaluation consists of the tests, the project, and the assignments).</p>
 </section>
-<section id="course-content" class="level1">
-<h1>COURSE CONTENT</h1>
+<section id="course-content" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> COURSE
+CONTENT</h1>
 <ul>
 <li>User Interfaces
 <ul>
@@ -545,8 +708,9 @@ evaluation consists of the tests, the project, and the assignments).</p>
 </ul></li>
 </ul>
 </section>
-<section id="tentative-schedule" class="level1">
-<h1>TENTATIVE SCHEDULE</h1>
+<section id="tentative-schedule" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span>
+TENTATIVE SCHEDULE</h1>
 <table style="width:97%;">
 <colgroup>
 <col style="width: 12%" />
@@ -623,17 +787,20 @@ Practises</td>
 </tbody>
 </table>
 </section>
-<section id="suggested-text" class="level1">
-<h1>SUGGESTED TEXT</h1>
+<section id="suggested-text" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span>
+SUGGESTED TEXT</h1>
 <p>No textbook is required. Suggested readings from excerpts and the web
 will be provided on the course website.</p>
 </section>
-<section id="course-costs" class="level1">
-<h1>COURSE COSTS</h1>
+<section id="course-costs" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> COURSE
+COSTS</h1>
 <p>N/A</p>
 </section>
-<section id="ponderation" class="level1">
-<h1>PONDERATION</h1>
+<section id="ponderation" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span>
+PONDERATION</h1>
 <p>This course consists of 90 hours of scheduled lectures and lab work.
 In addition, each student will be required to do 45 hours of personal
 study that includes research, personally booked computer time and work
@@ -641,8 +808,9 @@ at home. In addition, LEA will be used for the submission of labs,
 assignments, projects or for testing. Further details will be provided
 if applicable.</p>
 </section>
-<section id="late-policy" class="level1">
-<h1>LATE POLICY</h1>
+<section id="late-policy" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> LATE
+POLICY</h1>
 <p>All assignments and projects are expected to be submitted by the
 required due date. A late penalty of up to 10% per day might apply to
 assignments submitted late up to a maximum number of allowed late days.
@@ -651,14 +819,16 @@ instructions specific to that assignment. Any work submitted after the
 maximum number of allowed late days has been reached will not be
 graded</p>
 </section>
-<section id="attendance-policy" class="level1">
-<h1>ATTENDANCE POLICY</h1>
+<section id="attendance-policy" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span>
+ATTENDANCE POLICY</h1>
 <p>Attendance is compulsory. Unexcused absences of more than 20% of any
 class activities will result in a grade of 0 for the assessment related
 to that activity.</p>
 </section>
-<section id="college-policies" class="level1">
-<h1>COLLEGE POLICIES</h1>
+<section id="college-policies" class="level1" data-number="12">
+<h1 data-number="12"><span class="header-section-number">12</span>
+COLLEGE POLICIES</h1>
 <p>IPESA, Institutional Policy on the Evaluation of Student Achievement:
 <strong><u><a
 href="http://departments.johnabbott.qc.ca/wp-content/uploads/2017/08/Policy-7-IPESA.pdf">Policy-7-IPESA.pdf</a></u></strong></p>
@@ -692,8 +862,10 @@ represent infractions against academic integrity. Students are expected
 to conduct themselves accordingly and must be responsible for all of
 their actions.</p>
 </section>
-<section id="college-definition-of-cheating" class="level1">
-<h1>College Definition of Cheating:</h1>
+<section id="college-definition-of-cheating" class="level1"
+data-number="13">
+<h1 data-number="13"><span class="header-section-number">13</span>
+College Definition of Cheating:</h1>
 <p>Cheating means any dishonest or deceptive practice relative to
 examinations, tests, quizzes, lab assignments, research papers or other
 forms of evaluation tasks. Cheating includes, but is not restricted to,
@@ -705,8 +877,10 @@ is incumbent upon the department through the teacher to ensure students
 are forewarned about unauthorized material, devices or practices that
 are not permitted.</p>
 </section>
-<section id="college-definition-of-plagiarism" class="level1">
-<h1>College Definition of Plagiarism:</h1>
+<section id="college-definition-of-plagiarism" class="level1"
+data-number="14">
+<h1 data-number="14"><span class="header-section-number">14</span>
+College Definition of Plagiarism:</h1>
 <p>Plagiarism is a form of cheating. It includes copying or paraphrasing
 (expressing the ideas of someone else in one’s own words), of another
 person's work or the use of another person’s work or ideas without
@@ -719,14 +893,18 @@ Validation Committee (CVC) / Course Outlines – Reference Documents /
 Academic Integrity.</p>
 <p><strong>For link to interactive tutorial on how to cite sources
 correctly: http://citeit.ccdmd.qc.ca</strong></p>
-<section id="section" class="level20">
-<p class="heading"></p>
+<section id="section" class="level20"
+data-number="14.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.1">
+<p class="heading"
+data-number="14.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.1"><span
+class="header-section-number">14.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.1</span>
+</p>
 </section>
 </section> 
    </article>
   </main>
-  <footer class="footer">
-   <span class="note-text">
+  <footer id="site-footer" role="contentinfo">
+   <span>
     © 2023 Michael Haaf |
     <a href="../pages/home.html#about-this-website">
      About

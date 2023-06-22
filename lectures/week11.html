@@ -92,21 +92,18 @@
   </style>
     <link href="../assets/css/style.css" rel="stylesheet"/>
     
-  <!--[if lt IE 9]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-    <![endif]-->
  </head>
- <body class="page-container base">
-  <header class="header">
-   <div class="course-info-decoration">
-    <button class="theme-toggle-icon" id="theme-toggle-icon">
-     Theme toggle icon
+ <body class="base">
+  <header role="banner">
+   <div class="">
+    <button aria-hidden="true" aria-label="theme-toggle-icon" id="theme-toggle-icon">
+     X
     </button>
     <div>
      <h1>
       User Interfaces
      </h1>
-     <span class="note-text">
+     <span>
       420-2W6 | Winter 2023 | as taught by
       <a href="https://github.com/michaelhaaf/2W6-W23">
        Michael Haaf
@@ -114,327 +111,371 @@
      </span>
     </div>
    </div>
-   <div>
-    <span class="header-description note-text">
+   <div class="image-attribution">
+    <span>
      Image:
      <a href="https://www.guggenheim.org/artwork/movement/constructivism">
      </a>
     </span>
    </div>
   </header>
-  <aside class="aside--site surface">
-   <nav class="nav nav--site" id="site-navigation">
-    <h2>
-     Site Navigation
-    </h2>
-    <ul>
-     <li>
-      <a href="../pages/home.html" id="site-home">
-       <img alt="" class="icon" src="../assets/images/home.svg"/>
-       <span class="icon-text">
-        Home
-       </span>
-      </a>
-     </li>
-     <li>
-      <a href="../pages/course-outline.html" id="site-course-outline">
-       <img alt="" class="icon" src="../assets/images/outline.svg"/>
-       <span class="icon-text">
-        Course Outline
-       </span>
-      </a>
-     </li>
-     <li>
-      <a href="../pages/calendar.html" id="site-calendar">
-       <img alt="" class="icon" src="../assets/images/calendar.svg"/>
-       <span class="icon-text">
-        Calendar
-       </span>
-      </a>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-lectures" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/lectures.svg"/>
-       <span class="icon-text">
-        Lectures
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="lecture-listing">
-       <li>
-        <a href="../lectures/week01.html">
-         Week 01
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week02.html">
-         Week 02
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week03.html">
-         Week 03
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week04.html">
-         Week 04
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week05.html">
-         Week 05
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week06.html">
-         Week 06
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week07.html">
-         Week 07
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week09.html">
-         Week 09
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week10.html">
-         Week 10
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week11.html">
-         Week 11
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week12.html">
-         Week 12
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week13.html">
-         Week 13
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week14.html">
-         Week 14
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-tutorials" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/tutorials.svg"/>
-       <span class="icon-text">
-        Tutorials
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="tutorial-listing">
-       <li>
-        <a href="../pages/tutorials.html#week-01-exercises">
-         week 01 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-04-exercises">
-         week 04 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-06-exercises">
-         week 06 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-10-exercises">
-         week 10 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-11-exercises">
-         week 11 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-15-tutorial">
-         week 15 
-tutorial
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-04-solutions">
-         week 04 
-solutions
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-06-solutions">
-         week 06 
-solutions
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-10-solutions">
-         week 10 
-solutions
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-assignments" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/assignments.svg"/>
-       <span class="icon-text">
-        Assignments
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="assignment-listing">
-       <li>
-        <a href="../pages/assignments.html#milestone-1-2">
-         milestone 1 &amp;
- 2
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-1">
-         lab 1
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-2">
-         lab 2
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-3">
-         lab 3
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-4">
-         lab 4
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-1-solution">
-         lab 1 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-2-solution">
-         lab 2 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-3-solution">
-         lab 3 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-4-solution">
-         lab 4 
-solution
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </nav>
-  </aside>
-    <aside class="aside--page">
-   <nav class="nav nav--page" id="TOC" role="doc-toc">
-        <h2 id="toc-title">
-     Lecture navigation
-    </h2>
-         <a class="" href="../lectures/week10.html">
-     <img alt="" class="icon" src="../assets/images/feather-icons/chevron-left.svg"/>
-     <span class="icon-text">
-      Previous page...
-     </span>
-    </a>
-     <ul>
-<li><a href="#lesson-overview" id="toc-lesson-overview">Lesson
-Overview</a></li>
-<li><a href="#what-is-responsive-design"
-id="toc-what-is-responsive-design">What is Responsive Design?</a>
-<ul>
-<li><a href="#examples" id="toc-examples">Examples</a></li>
-<li><a href="#browser-dev-tools-responsive-mode"
-id="toc-browser-dev-tools-responsive-mode">Browser Dev Tools Responsive
-Mode</a></li>
-</ul></li>
-<li><a href="#html-responsive-by-default"
-id="toc-html-responsive-by-default">HTML: Responsive by Default</a>
-<ul>
-<li><a href="#default-html-responsivity"
-id="toc-default-html-responsivity">Default HTML responsivity</a></li>
-<li><a href="#semantic-html-responsivity"
-id="toc-semantic-html-responsivity">Semantic HTML responsivity</a></li>
-<li><a href="#the-viewport-meta-tag" id="toc-the-viewport-meta-tag">The
-Viewport Meta Tag</a></li>
-</ul></li>
-<li><a href="#lab-4-tip-html" id="toc-lab-4-tip-html">Lab 4 Tip
-(HTML)</a></li>
-<li><a href="#responsive-css-techniques"
-id="toc-responsive-css-techniques">Responsive CSS Techniques</a>
-<ul>
-<li><a href="#heightwidth-vs.-padding"
-id="toc-heightwidth-vs.-padding">Height/Width vs. Padding</a></li>
-<li><a href="#pixels-vs.-percentagerelative-units"
-id="toc-pixels-vs.-percentagerelative-units">Pixels
-vs. Percentage/Relative Units</a></li>
-<li><a href="#max-and-min-heightwidth"
-id="toc-max-and-min-heightwidth">Max and Min Height/Width</a></li>
-<li><a href="#media-queries" id="toc-media-queries">Media
-queries</a></li>
-</ul></li>
-<li><a href="#css-flexbox-and-grid" id="toc-css-flexbox-and-grid">CSS
-Flexbox and Grid</a>
-<ul>
-<li><a href="#flexbox-techniques" id="toc-flexbox-techniques">Flexbox
-techniques</a></li>
-<li><a href="#grid-techniques" id="toc-grid-techniques">Grid
-techniques</a></li>
-<li><a href="#grid-vs-flexbox" id="toc-grid-vs-flexbox">Grid vs
-Flexbox</a></li>
-</ul></li>
-<li><a href="#knowledge-check" id="toc-knowledge-check">Knowledge
-Check</a></li>
-<li><a href="#readings-and-resources"
-id="toc-readings-and-resources">Readings and Resources</a></li>
-<li><a href="#exercises" id="toc-exercises">Exercises</a></li>
-</ul>     <a class="" href="../lectures/week12.html">
-     <img alt="" class="icon" src="../assets/images/feather-icons/chevron-right.svg"/>
-     <span class="icon-text">
-      Next page...
-     </span>
-    </a>
-       </nav>
-  </aside>
-    <main class="main base">
+  <nav aria-labelledby="course-content" class="tooltip vertical sticky-container" role="navigation">
+   <h2 class="visually-hidden" id="course-content">
+    Course Content
+   </h2>
+   <ul class="sticky" role="menu">
+    <li>
+     <a aria-label="Link to Home" href="../pages/home.html" role="menuitem" style="--icon: url(../images/home.svg)">
+      <span>
+       Home
+      </span>
+     </a>
+    </li>
+    <li>
+     <a aria-label="Link to Course Outline" href="../pages/course-outline.html" role="menuitem" style="--icon: url(../images/outline.svg)">
+      <span>
+       Course outline
+      </span>
+     </a>
+    </li>
+    <li>
+     <a aria-label="Link to Calendar" href="../pages/calendar.html" role="menuitem" style="--icon: url(../images/calendar.svg)">
+      <span>
+       Calendar
+      </span>
+     </a>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Lectures" href="../pages/lectures.html" role="menuitem" style="--icon: url(../images/lectures.svg)">
+      <span>
+       Lectures
+      </span>
+     </a>
+     <button aria-controls="lecture-listing" aria-expanded="false" aria-label="Expand lecture menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right.svg)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="lecture-listing" style="display: none;">
+      <li>
+       <a href="../lectures/week01.html">
+        week01.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week02.html">
+        week02.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week03.html">
+        week03.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week04.html">
+        week04.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week05.html">
+        week05.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week06.html">
+        week06.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week07.html">
+        week07.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week09.html">
+        week09.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week10.html">
+        week10.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week11.html">
+        week11.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week12.html">
+        week12.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week13.html">
+        week13.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week14.html">
+        week14.html
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Tutorials" href="../pages/tutorials.html" role="menuitem" style="--icon: url(../images/tutorials.svg)">
+      <span>
+       Tutorials
+      </span>
+     </a>
+     <button aria-controls="tutorial-listing" aria-expanded="false" aria-label="Expand tutorial menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="tutorial-listing" style="display: none;">
+      <li>
+       <a href="../pages/tutorials.html#week-01-exercises">
+        <span class="toc-section-number">
+         1.1
+        </span>
+        Week 01
+            Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-04-exercises">
+        <span class="toc-section-number">
+         1.2
+        </span>
+        Week 04 Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-foundations">
+        <span class="toc-section-number">
+         1.2.1
+        </span>
+        CSS
+            Foundations
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-box-model">
+        <span class="toc-section-number">
+         1.2.2
+        </span>
+        CSS Box
+            Model
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-typesetting-typography">
+        <span class="toc-section-number">
+         1.2.3
+        </span>
+        CSS Typesetting
+            &amp; Typography
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-06-exercises">
+        <span class="toc-section-number">
+         1.3
+        </span>
+        Week 06 Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-flexbox">
+        <span class="toc-section-number">
+         1.3.1
+        </span>
+        CSS Flexbox
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-10-exercises">
+        <span class="toc-section-number">
+         1.4
+        </span>
+        Week 10 Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-grid">
+        <span class="toc-section-number">
+         1.4.1
+        </span>
+        CSS Grid
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-11-exercises">
+        <span class="toc-section-number">
+         1.5
+        </span>
+        Week 11
+            Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-15-tutorial">
+        <span class="toc-section-number">
+         1.6
+        </span>
+        Week 15
+            Tutorial
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-04-solutions">
+        <span class="toc-section-number">
+         2.1
+        </span>
+        Week 04 Solutions
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-foundations-1">
+        <span class="toc-section-number">
+         2.1.1
+        </span>
+        CSS
+            Foundations
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-box-model-1">
+        <span class="toc-section-number">
+         2.1.2
+        </span>
+        CSS Box
+            Model
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-typesetting-typography-1">
+        <span class="toc-section-number">
+         2.1.3
+        </span>
+        CSS Typesetting
+            &amp; Typography
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-06-solutions">
+        <span class="toc-section-number">
+         2.2
+        </span>
+        Week 06 Solutions
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-flexbox-1">
+        <span class="toc-section-number">
+         2.2.1
+        </span>
+        CSS Flexbox
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-10-solutions">
+        <span class="toc-section-number">
+         2.3
+        </span>
+        Week 10 Solutions
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-grid-1">
+        <span class="toc-section-number">
+         2.3.1
+        </span>
+        CSS Grid
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Assignments" href="../pages/assignments.html" role="menuitem" style="--icon: url(../images/assignments.svg)">
+      <span>
+       Assignments
+      </span>
+     </a>
+     <button aria-controls="assignment-listing" aria-expanded="false" aria-label="Expand assignment menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="assignment-listing" style="display: none;">
+      <li>
+       <a href="../pages/assignments.html#milestone-1-2">
+        Milestone 1 &amp;
+2
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-1">
+        Lab 1
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-2">
+        Lab 2
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-3">
+        Lab 3
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-4">
+        Lab 4
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-1-solution">
+        Lab 1
+Solution
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-2-solution">
+        Lab 2
+Solution
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-3-solution">
+        Lab 3
+Solution
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-4-solution">
+        Lab 4
+Solution
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </nav>
+  <main class="base" role="main">
    <article class="article">
-         <header id="title-block-header">
-     <h1 class="title">
+         <header class="level1" id="title-block-header">
+     <h1>
       2W6-W23: Week 11 Lecture Notes
      </h1>
             <div class="abstract">
-      <div class="abstract-title">
+      <h2>
        Responsive Web Development: Best Practise for Best User
        Experiences
-      </div>
+      </h2>
       <p>Throughout this course, we have learned a variety of techniques
       for performing particular useful interface tasks. We have focused
       on learning the mechanics of CSS and HTML in order understand
@@ -444,16 +485,210 @@ id="toc-readings-and-resources">Readings and Resources</a></li>
       mechanics to learn best practises for creating universally
       userable, and enjoyable, user interfaces.</p>
      </div>
-           <p class="date">
+           <p>
       Last update:
-      <time datetime="Sun May 7 17:53:40 2023">
-       Sunday, May 07, 2023
+      <time datetime="Thu Jun 22 19:36:06 2023">
+       Thursday, June 22, 2023
       </time>
      </p>
-         </header>
-     <hr />
-<section id="lesson-overview" class="level1">
-<h1>Lesson Overview</h1>
+          <hr/>
+    </header>
+        <section class="overlay-grid sticky-container level1">
+     <nav aria-labelledby="page-controls-title" class="margin surface menu sticky tooltip">
+      <h2 class="visually-hidden" id="page-controls-title">
+       Page Controls
+      </h2>
+      <ul role="menubar">
+       <li>
+        <a href="#title-block-header" role="menuitem" style="--icon: url(../images/feather-icons/chevron-up.svg)">
+         <span>
+          Scroll to beginning
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="#site-footer" role="menuitem" style="--icon: url(../images/feather-icons/chevron-down.svg)">
+         <span>
+          Scroll to end
+         </span>
+        </a>
+       </li>
+              <li>
+        <a href="../lectures/week10.html" role="menuitem" style="--icon: url(../images/feather-icons/chevron-left.svg)">
+         <span>
+          Previous page
+         </span>
+        </a>
+       </li>
+               <li>
+        <a href="../lectures/week12.html" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right.svg)">
+         <span>
+          Next page
+         </span>
+        </a>
+       </li>
+              <li>
+        <a href="#" role="menuitem" style="--icon: url('../images/feather-icons/printer.svg')">
+         <span>
+          View PDF
+         </span>
+        </a>
+       </li>
+       <li>
+        <button aria-controls="margin-menu" aria-expanded="false" aria-hidden="true" aria-label="Toggle margin menu" role="menuitem" style="--icon: url(../images/feather-icons/maximize-2.svg)">
+         <span>
+          Toggle margin menu
+         </span>
+        </button>
+       </li>
+      </ul>
+     </nav>
+          <nav aria-labelledby="toc-title" class="margin surface menu sticky toc" id="TOC" role="navigation">
+      <h2 id="toc-title">
+       Contents
+      </h2>
+      <ul>
+      <li><a href="#lesson-overview" id="toc-lesson-overview"><span
+      class="toc-section-number">1</span> Lesson Overview</a></li>
+      <li><a href="#what-is-responsive-design"
+      id="toc-what-is-responsive-design"><span
+      class="toc-section-number">2</span> What is Responsive Design?</a>
+      <ul>
+      <li><a href="#examples" id="toc-examples"><span
+      class="toc-section-number">2.1</span> Examples</a>
+      <ul>
+      <li><a href="#bad-examples" id="toc-bad-examples"><span
+      class="toc-section-number">2.1.1</span> Bad examples:</a></li>
+      <li><a href="#good-examples" id="toc-good-examples"><span
+      class="toc-section-number">2.1.2</span> Good examples</a></li>
+      </ul></li>
+      <li><a href="#browser-dev-tools-responsive-mode"
+      id="toc-browser-dev-tools-responsive-mode"><span
+      class="toc-section-number">2.2</span> Browser Dev Tools Responsive
+      Mode</a></li>
+      </ul></li>
+      <li><a href="#html-responsive-by-default"
+      id="toc-html-responsive-by-default"><span
+      class="toc-section-number">3</span> HTML: Responsive by
+      Default</a>
+      <ul>
+      <li><a href="#default-html-responsivity"
+      id="toc-default-html-responsivity"><span
+      class="toc-section-number">3.1</span> Default HTML
+      responsivity</a></li>
+      <li><a href="#semantic-html-responsivity"
+      id="toc-semantic-html-responsivity"><span
+      class="toc-section-number">3.2</span> Semantic HTML
+      responsivity</a>
+      <ul>
+      <li><a href="#css-what-is-it-good-for"
+      id="toc-css-what-is-it-good-for"><span
+      class="toc-section-number">3.2.1</span> CSS: what is it good
+      for?</a></li>
+      </ul></li>
+      <li><a href="#the-viewport-meta-tag"
+      id="toc-the-viewport-meta-tag"><span
+      class="toc-section-number">3.3</span> The Viewport Meta
+      Tag</a></li>
+      </ul></li>
+      <li><a href="#lab-4-tip-html" id="toc-lab-4-tip-html"><span
+      class="toc-section-number">4</span> Lab 4 Tip (HTML)</a></li>
+      <li><a href="#responsive-css-techniques"
+      id="toc-responsive-css-techniques"><span
+      class="toc-section-number">5</span> Responsive CSS Techniques</a>
+      <ul>
+      <li><a href="#heightwidth-vs.-padding"
+      id="toc-heightwidth-vs.-padding"><span
+      class="toc-section-number">5.1</span> Height/Width
+      vs. Padding</a></li>
+      <li><a href="#pixels-vs.-percentagerelative-units"
+      id="toc-pixels-vs.-percentagerelative-units"><span
+      class="toc-section-number">5.2</span> Pixels
+      vs. Percentage/Relative Units</a></li>
+      <li><a href="#max-and-min-heightwidth"
+      id="toc-max-and-min-heightwidth"><span
+      class="toc-section-number">5.3</span> Max and Min
+      Height/Width</a></li>
+      <li><a href="#media-queries" id="toc-media-queries"><span
+      class="toc-section-number">5.4</span> Media queries</a>
+      <ul>
+      <li><a href="#mobile-first-design"
+      id="toc-mobile-first-design"><span
+      class="toc-section-number">5.4.1</span> Mobile first
+      design</a></li>
+      <li><a href="#media-query-specificity"
+      id="toc-media-query-specificity"><span
+      class="toc-section-number">5.4.2</span> Media Query
+      Specificity</a></li>
+      <li><a href="#media-query-syntax-css-at-rules"
+      id="toc-media-query-syntax-css-at-rules"><span
+      class="toc-section-number">5.4.3</span> Media Query Syntax: CSS
+      at-rules</a></li>
+      </ul></li>
+      </ul></li>
+      <li><a href="#css-flexbox-and-grid"
+      id="toc-css-flexbox-and-grid"><span
+      class="toc-section-number">6</span> CSS Flexbox and Grid</a>
+      <ul>
+      <li><a href="#flexbox-techniques"
+      id="toc-flexbox-techniques"><span
+      class="toc-section-number">6.1</span> Flexbox techniques</a></li>
+      <li><a href="#grid-techniques" id="toc-grid-techniques"><span
+      class="toc-section-number">6.2</span> Grid techniques</a>
+      <ul>
+      <li><a href="#nested-grids" id="toc-nested-grids"><span
+      class="toc-section-number">6.2.1</span> Nested grids</a></li>
+      <li><a href="#overlapping-grid-items"
+      id="toc-overlapping-grid-items"><span
+      class="toc-section-number">6.2.2</span> Overlapping Grid
+      Items</a></li>
+      <li><a href="#layering-grid-items"
+      id="toc-layering-grid-items"><span
+      class="toc-section-number">6.2.3</span> Layering Grid
+      Items</a></li>
+      <li><a href="#grid-area-property"
+      id="toc-grid-area-property"><span
+      class="toc-section-number">6.2.4</span> Grid area
+      Property</a></li>
+      <li><a href="#naming-and-positioning-by-grid-areas"
+      id="toc-naming-and-positioning-by-grid-areas"><span
+      class="toc-section-number">6.2.5</span> Naming and Positioning by
+      Grid Areas</a></li>
+      <li><a href="#assigning-names-with-grid-area"
+      id="toc-assigning-names-with-grid-area"><span
+      class="toc-section-number">6.2.6</span> Assigning names with
+      <code>grid-area</code></a></li>
+      <li><a href="#templates-with-grid-template-areas"
+      id="toc-templates-with-grid-template-areas"><span
+      class="toc-section-number">6.2.7</span> Templates with
+      <code>grid-template-areas</code></a></li>
+      </ul></li>
+      <li><a href="#grid-vs-flexbox" id="toc-grid-vs-flexbox"><span
+      class="toc-section-number">6.3</span> Grid vs Flexbox</a>
+      <ul>
+      <li><a href="#direction-vs-2-directions"
+      id="toc-direction-vs-2-directions"><span
+      class="toc-section-number">6.3.1</span> 1 direction vs 2
+      directions</a></li>
+      <li><a href="#content-vs-layout" id="toc-content-vs-layout"><span
+      class="toc-section-number">6.3.2</span> Content vs layout</a></li>
+      </ul></li>
+      </ul></li>
+      <li><a href="#knowledge-check" id="toc-knowledge-check"><span
+      class="toc-section-number">7</span> Knowledge Check</a></li>
+      <li><a href="#readings-and-resources"
+      id="toc-readings-and-resources"><span
+      class="toc-section-number">8</span> Readings and
+      Resources</a></li>
+      <li><a href="#exercises" id="toc-exercises"><span
+      class="toc-section-number">9</span> Exercises</a></li>
+      </ul>
+     </nav>
+         </section>
+    <hr />
+<section id="lesson-overview" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Lesson
+Overview</h1>
 <ul>
 <li>What is responsive design?</li>
 <li>How do we achieve responsive design using just HTML?</li>
@@ -463,8 +698,9 @@ responisivity?</li>
 </ul>
 <hr />
 </section>
-<section id="what-is-responsive-design" class="level1">
-<h1>What is Responsive Design?</h1>
+<section id="what-is-responsive-design" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> What is
+Responsive Design?</h1>
 <p>So far in this course, we have learned a great deal of
 <code>HTML</code>, <code>CSS</code>, and even some
 <code>JavaScript</code> to create website content, style it, and make it
@@ -500,15 +736,17 @@ want not just make any web page, but web pages that render well on all
 screen sizes and resolutions while retaining usability and function.
 That is, responsive web design is the set of <strong>best
 practices</strong> used to create universally usable webpages.</p>
-<section id="examples" class="level2">
-<h2>Examples</h2>
+<section id="examples" class="level2" data-number="2.1">
+<h2 data-number="2.1"><span class="header-section-number">2.1</span>
+Examples</h2>
 <p>It’s one thing to know in theory what Responsive web design is. Let’s
 see some examples and learn how to assess how responsive a web design is
 by experimentation.</p>
 <p>It turns out, our lab work so far this semester is a good starting
 point. We already have a few examples to work with:</p>
-<section id="bad-examples" class="level3">
-<h3>Bad examples:</h3>
+<section id="bad-examples" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1"><span class="header-section-number">2.1.1</span>
+Bad examples:</h3>
 <ol type="1">
 <li><a href="../assignments/lab2solution/index.html">Lab 2</a>:</li>
 </ol>
@@ -553,8 +791,9 @@ see where the website “breaks” as you change the preview
 size.</figcaption>
 </figure>
 </section>
-<section id="good-examples" class="level3">
-<h3>Good examples</h3>
+<section id="good-examples" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2"><span class="header-section-number">2.1.2</span>
+Good examples</h3>
 <ol type="1">
 <li>Lab 1 (!!): <a href="../assignments/lab1solution/index.html">(link
 to solution preview – try it out yourself!)</a>,</li>
@@ -603,8 +842,10 @@ requirements.</figcaption>
 </figure>
 </section>
 </section>
-<section id="browser-dev-tools-responsive-mode" class="level2">
-<h2>Browser Dev Tools Responsive Mode</h2>
+<section id="browser-dev-tools-responsive-mode" class="level2"
+data-number="2.2">
+<h2 data-number="2.2"><span class="header-section-number">2.2</span>
+Browser Dev Tools Responsive Mode</h2>
 <p>Getting good at any approach to <code>HTML/CSS</code> requires being
 able to debug our code and measure our success in achieving a design.
 Like in previous topics we have learned, modern internet browsers come
@@ -651,8 +892,9 @@ sucks!).</p>
 <hr />
 </section>
 </section>
-<section id="html-responsive-by-default" class="level1">
-<h1>HTML: Responsive by Default</h1>
+<section id="html-responsive-by-default" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> HTML:
+Responsive by Default</h1>
 <p>As we saw in the <a href="#examples">previous examples</a>, our very
 first lab was strangely the <em>most</em> responsive of the labs we have
 made so far. This is because <code>HTML</code> is responsive by
@@ -669,8 +911,10 @@ Design</a>
 </blockquote>
 <p>Why is that? To understand this, we need to review some
 <code>HTML</code> fundamentals from the beginning of the semester.</p>
-<section id="default-html-responsivity" class="level2">
-<h2>Default HTML responsivity</h2>
+<section id="default-html-responsivity" class="level2"
+data-number="3.1">
+<h2 data-number="3.1"><span class="header-section-number">3.1</span>
+Default HTML responsivity</h2>
 <p>There are two types of HTML element: most are <code>block</code>, and
 some are <code>inline</code>. How is the <code>height</code> and
 <code>width</code> of these elements <a
@@ -722,8 +966,10 @@ any website: all elements only take up the inherent height of their
 actual content, and their widths adjust automatically to viewport
 widths.</p>
 </section>
-<section id="semantic-html-responsivity" class="level2">
-<h2>Semantic HTML responsivity</h2>
+<section id="semantic-html-responsivity" class="level2"
+data-number="3.2">
+<h2 data-number="3.2"><span class="header-section-number">3.2</span>
+Semantic HTML responsivity</h2>
 <p>On top of default <code>HTML</code> behavior, there are a few more
 improvements we can make using <strong>semantic</strong>
 <code>HTML</code> element choices.</p>
@@ -805,8 +1051,10 @@ href="../lectures/week12.html#accessibility">Accessibility</a> – in
 fact, I would say that Responsive Design is a subset of the broader
 study of accessible web design. We will cover this all in more detail
 next week!</p>
-<section id="css-what-is-it-good-for" class="level3">
-<h3>CSS: what is it good for?</h3>
+<section id="css-what-is-it-good-for" class="level3"
+data-number="3.2.1">
+<h3 data-number="3.2.1"><span class="header-section-number">3.2.1</span>
+CSS: what is it good for?</h3>
 <p><strong>NOTE</strong>: Semantic markup does not directly improve the
 behavior of your webpage at different zoom levels.</p>
 <p>That means we still haven’t fixed problems like: the long lines of
@@ -822,15 +1070,17 @@ what you could accidentally take away from the page design by adding it
 without understanding it.</p>
 </section>
 </section>
-<section id="the-viewport-meta-tag" class="level2">
-<h2>The Viewport Meta Tag</h2>
+<section id="the-viewport-meta-tag" class="level2" data-number="3.3">
+<h2 data-number="3.3"><span class="header-section-number">3.3</span> The
+Viewport Meta Tag</h2>
 <p>There is one other <code>HTML</code> optimization worth knowing
 about. It’s actually something that we have been using throughout this
 course without really acknowledging. Take a look at the <a
 href="../pages/tutorials.html#week-01-exercises">boilerplate</a> code
 block below:</p>
-<section id="html" class="level6 sourceCode">
-<h6 class="sourceCode">HTML</h6>
+<section id="html" class="level6 sourceCode" data-number="3.3.0.0.0.1">
+<h6 class="sourceCode" data-number="3.3.0.0.0.1"><span
+class="header-section-number">3.3.0.0.0.1</span> HTML</h6>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;html</span> <span class="er">lang</span><span class="ot">=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span></span>
@@ -861,8 +1111,9 @@ automatically producing boilerplate.</strong></p>
 </section>
 </section>
 </section>
-<section id="lab-4-tip-html" class="level1">
-<h1>Lab 4 Tip (HTML)</h1>
+<section id="lab-4-tip-html" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Lab 4
+Tip (HTML)</h1>
 <p>If you are stuck on Lab 4, you can start by making sense of your
 <code>HTML</code>. Remember that your <code>HTML</code> is the
 <strong>foundation</strong> of your website, and all of your structure
@@ -873,11 +1124,13 @@ example of what the <code>HTML</code> for my lab 4 solution looks
 like:</p>
 <hr />
 </section>
-<section id="responsive-css-techniques" class="level1">
-<h1>Responsive CSS Techniques</h1>
+<section id="responsive-css-techniques" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span>
+Responsive CSS Techniques</h1>
 <p>A list of other CSS techniques worth mentioning</p>
-<section id="heightwidth-vs.-padding" class="level2">
-<h2>Height/Width vs. Padding</h2>
+<section id="heightwidth-vs.-padding" class="level2" data-number="5.1">
+<h2 data-number="5.1"><span class="header-section-number">5.1</span>
+Height/Width vs. Padding</h2>
 <p>Style vs. Content specified size</p>
 <p>Big picture:</p>
 <ul>
@@ -890,8 +1143,10 @@ in surprising ways)</li>
 “wider”)</li>
 </ul>
 </section>
-<section id="pixels-vs.-percentagerelative-units" class="level2">
-<h2>Pixels vs. Percentage/Relative Units</h2>
+<section id="pixels-vs.-percentagerelative-units" class="level2"
+data-number="5.2">
+<h2 data-number="5.2"><span class="header-section-number">5.2</span>
+Pixels vs. Percentage/Relative Units</h2>
 <p>Fixed vs. dynamic sizing.</p>
 <p>Big picture:</p>
 <ul>
@@ -904,8 +1159,9 @@ PARENT font size, which can cause deeply nested element font sizes to
 grow/shrink exponentially)</li>
 </ul>
 </section>
-<section id="max-and-min-heightwidth" class="level2">
-<h2>Max and Min Height/Width</h2>
+<section id="max-and-min-heightwidth" class="level2" data-number="5.3">
+<h2 data-number="5.3"><span class="header-section-number">5.3</span> Max
+and Min Height/Width</h2>
 <p>Overflow vs. natural dimensions of container</p>
 <p>Big picture:</p>
 <ul>
@@ -921,8 +1177,9 @@ grow/shrink exponentially)</li>
 <li><p><code>min-height</code>:</p></li>
 </ul>
 </section>
-<section id="media-queries" class="level2">
-<h2>Media queries</h2>
+<section id="media-queries" class="level2" data-number="5.4">
+<h2 data-number="5.4"><span class="header-section-number">5.4</span>
+Media queries</h2>
 <p><strong>Media queries</strong><a href="#fn1" class="footnote-ref"
 id="fnref1" role="doc-noteref"><sup>1</sup></a> are a key component of
 responsive design that allow you to apply CSS styles depending
@@ -945,8 +1202,9 @@ narrow device</li>
 <li>Increasing font size for devices with large screens using
 <code>min-width</code>:</li>
 </ol>
-<section id="css" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css" class="level6 sourceCode" data-number="5.4.0.0.0.1">
+<h6 class="sourceCode" data-number="5.4.0.0.0.1"><span
+class="header-section-number">5.4.0.0.0.1</span> CSS</h6>
 <div class="sourceCode" id="cb2"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Some default style: */</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -970,8 +1228,9 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#c
 narrow device using <code>max-width</code></li>
 </ol>
 </section>
-<section id="css-1" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-1" class="level6 sourceCode" data-number="5.4.0.0.0.2">
+<h6 class="sourceCode" data-number="5.4.0.0.0.2"><span
+class="header-section-number">5.4.0.0.0.2</span> CSS</h6>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Some default style: */</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1000,8 +1259,9 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#c
 href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/hover">“hover”</a>:</li>
 </ol>
 </section>
-<section id="css-2" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-2" class="level6 sourceCode" data-number="5.4.0.0.0.3">
+<h6 class="sourceCode" data-number="5.4.0.0.0.3"><span
+class="header-section-number">5.4.0.0.0.3</span> CSS</h6>
 <div class="sourceCode" id="cb4"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Some default style: */</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1033,8 +1293,9 @@ href="https://maujac.github.io/2W6-UI/#/./wk8/media_queries?id=media-features-to
 Features that can be Queried”</a> section of course notes from a
 previous year.</p>
 </section>
-<section id="mobile-first-design" class="level3">
-<h3>Mobile first design</h3>
+<section id="mobile-first-design" class="level3" data-number="5.4.1">
+<h3 data-number="5.4.1"><span class="header-section-number">5.4.1</span>
+Mobile first design</h3>
 <p>A common approach to web design is to start with a simple
 single-column layout for narrow-screen devices (e.g. mobile phones).
 Then, use <code>min-width</code> queries to check for wider screens, and
@@ -1060,8 +1321,10 @@ requirement: they should only be introduced when the web layout you are
 working with <strong>breaks</strong> (overlaps, overflows, becomes
 unusable) at small or large resolutions.</p>
 </section>
-<section id="media-query-specificity" class="level3">
-<h3>Media Query Specificity</h3>
+<section id="media-query-specificity" class="level3"
+data-number="5.4.2">
+<h3 data-number="5.4.2"><span class="header-section-number">5.4.2</span>
+Media Query Specificity</h3>
 <p><strong>NOTE WELL</strong>: <code>@media</code> queries <em>do not
 add <a href="../lectures/week09.html#specificity">specificity</a></em>
 to your selectors. The examples above only worked <em>because the
@@ -1073,8 +1336,10 @@ read by the Browser wins</em>.</p>
 need to make your <code>@media</code> queries any more specific than
 they need to be.</p>
 </section>
-<section id="media-query-syntax-css-at-rules" class="level3">
-<h3>Media Query Syntax: CSS at-rules</h3>
+<section id="media-query-syntax-css-at-rules" class="level3"
+data-number="5.4.3">
+<h3 data-number="5.4.3"><span class="header-section-number">5.4.3</span>
+Media Query Syntax: CSS at-rules</h3>
 <p>The syntax above may seem strange – what is the <code>@</code> for?
 We haven’t seen it yet: in CSS, <a
 href="https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule">at-rules</a>
@@ -1104,18 +1369,21 @@ styles directly in CSS)</li>
 </section>
 </section>
 </section>
-<section id="css-flexbox-and-grid" class="level1">
-<h1>CSS Flexbox and Grid</h1>
-<section id="flexbox-techniques" class="level2">
-<h2>Flexbox techniques</h2>
+<section id="css-flexbox-and-grid" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> CSS
+Flexbox and Grid</h1>
+<section id="flexbox-techniques" class="level2" data-number="6.1">
+<h2 data-number="6.1"><span class="header-section-number">6.1</span>
+Flexbox techniques</h2>
 <p>Flexbox inherently allows for more precise control of how elements
 respond when their container width changes. Review <a
 href="../lectures/week06.html">flexbox course content</a> for more
 information.</p>
 <p>One way that Flexbox really shines is in combination with <a
 href="#media-queries">media queries</a>. Here is an example:</p>
-<section id="css-3" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-3" class="level6 sourceCode" data-number="6.1.0.0.0.1">
+<h6 class="sourceCode" data-number="6.1.0.0.0.1"><span
+class="header-section-number">6.1.0.0.0.1</span> CSS</h6>
 <div class="sourceCode" id="cb5"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Say you have a flex container... */</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.flex-container</span> {</span>
@@ -1145,18 +1413,22 @@ href="https://www.w3schools.com/css/css3_flexbox_responsive.asp">w3schools</a>
 for more examples.</p>
 </section>
 </section>
-<section id="grid-techniques" class="level2">
-<h2>Grid techniques</h2>
+<section id="grid-techniques" class="level2" data-number="6.2">
+<h2 data-number="6.2"><span class="header-section-number">6.2</span>
+Grid techniques</h2>
 <p>Similar to Flexbox, Grids allow for more precise control of how
 elements respond when their container width changes. The following
 examples<a href="#fn2" class="footnote-ref" id="fnref2"
 role="doc-noteref"><sup>2</sup></a> show some particularly useful
 situations:</p>
-<section id="nested-grids" class="level3">
-<h3>Nested grids</h3>
+<section id="nested-grids" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1"><span class="header-section-number">6.2.1</span>
+Nested grids</h3>
 <p>A grid item can also become a grid container</p>
-<section id="html-1" class="level6 sourceCode">
-<h6 class="sourceCode">HTML</h6>
+<section id="html-1" class="level6 sourceCode"
+data-number="6.2.1.0.0.1">
+<h6 class="sourceCode" data-number="6.2.1.0.0.1"><span
+class="header-section-number">6.2.1.0.0.1</span> HTML</h6>
 <div class="sourceCode" id="cb6"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;wrapper&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box1&quot;</span><span class="kw">&gt;</span></span>
@@ -1169,8 +1441,9 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box4&quot;</span><span class="kw">&gt;</span>Four<span class="kw">&lt;/div&gt;</span></span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
 </section>
-<section id="css-4" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-4" class="level6 sourceCode" data-number="6.2.1.0.0.2">
+<h6 class="sourceCode" data-number="6.2.1.0.0.2"><span
+class="header-section-number">6.2.1.0.0.2</span> CSS</h6>
 <div class="sourceCode" id="cb7"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.wrapper</span> {</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">grid</span><span class="op">;</span></span>
@@ -1197,14 +1470,17 @@ class="citation" data-cites="maujac">@maujac</span></a>) on
 </iframe>
 </section>
 </section>
-<section id="overlapping-grid-items" class="level3">
-<h3>Overlapping Grid Items</h3>
+<section id="overlapping-grid-items" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2"><span class="header-section-number">6.2.2</span>
+Overlapping Grid Items</h3>
 <p>Grid items can overlap inside their grid container without any
 problems.</p>
 <p>In the example below <strong>.box2 overlaps on top of .box1</strong>
 and <strong>.box3 overlaps on top of .box2</strong>.</p>
-<section id="html-2" class="level6 sourceCode">
-<h6 class="sourceCode">HTML</h6>
+<section id="html-2" class="level6 sourceCode"
+data-number="6.2.2.0.0.1">
+<h6 class="sourceCode" data-number="6.2.2.0.0.1"><span
+class="header-section-number">6.2.2.0.0.1</span> HTML</h6>
 <div class="sourceCode" id="cb8"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;wrapper&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box box1&quot;</span><span class="kw">&gt;</span>One<span class="kw">&lt;/div&gt;</span></span>
@@ -1213,8 +1489,9 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb8-1"><a href="
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box box4&quot;</span><span class="kw">&gt;</span>Four<span class="kw">&lt;/div&gt;</span></span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
 </section>
-<section id="css-5" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-5" class="level6 sourceCode" data-number="6.2.2.0.0.2">
+<h6 class="sourceCode" data-number="6.2.2.0.0.2"><span
+class="header-section-number">6.2.2.0.0.2</span> CSS</h6>
 <div class="sourceCode" id="cb9"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.wrapper</span> {</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">grid</span><span class="op">;</span></span>
@@ -1245,8 +1522,9 @@ class="citation" data-cites="maujac">@maujac</span></a>) on
 </iframe>
 </section>
 </section>
-<section id="layering-grid-items" class="level3">
-<h3>Layering Grid Items</h3>
+<section id="layering-grid-items" class="level3" data-number="6.2.3">
+<h3 data-number="6.2.3"><span class="header-section-number">6.2.3</span>
+Layering Grid Items</h3>
 <p>Grid items can be layered/stacked by properly positioning them and
 assigning <code>z-index</code> when necessary.</p>
 <blockquote>
@@ -1257,8 +1535,9 @@ order of the element.</p>
 <p>Considering the previous example, we will place .box2 on top of .box1
 <strong>and</strong> .box3 by setting it’s <code>z-index</code> to
 1.</p>
-<section id="css-6" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-6" class="level6 sourceCode" data-number="6.2.3.0.0.1">
+<h6 class="sourceCode" data-number="6.2.3.0.0.1"><span
+class="header-section-number">6.2.3.0.0.1</span> CSS</h6>
 <div class="sourceCode" id="cb10"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.box2</span> {</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">grid-column</span>: <span class="dv">1</span> / <span class="dv">3</span><span class="op">;</span></span>
@@ -1274,8 +1553,9 @@ class="citation" data-cites="maujac">@maujac</span></a>) on
 </iframe>
 </section>
 </section>
-<section id="grid-area-property" class="level3">
-<h3>Grid area Property</h3>
+<section id="grid-area-property" class="level3" data-number="6.2.4">
+<h3 data-number="6.2.4"><span class="header-section-number">6.2.4</span>
+Grid area Property</h3>
 <p>It is possible to shorten the <code>grid-row</code> and
 <code>grid-column</code> notation even further by using
 <code>grid-area</code></p>
@@ -1288,8 +1568,9 @@ follows:</p>
 <li>grid-column-end number</li>
 </ol>
 <p><strong>Syntax</strong></p>
-<section id="css-7" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-7" class="level6 sourceCode" data-number="6.2.4.0.0.1">
+<h6 class="sourceCode" data-number="6.2.4.0.0.1"><span
+class="header-section-number">6.2.4.0.0.1</span> CSS</h6>
 <div class="sourceCode" id="cb11"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>grid-area<span class="in">: &lt;row-start</span><span class="op">&gt;</span> / &lt;column-star<span class="op">&gt;</span> / &lt;row-end<span class="op">&gt;</span> / &lt;column-end<span class="op">&gt;</span></span></code></pre></div>
 <blockquote>
@@ -1303,8 +1584,10 @@ system.</p>
 </blockquote>
 <p>Example of <code>grid-area</code>:</p>
 </section>
-<section id="html-3" class="level6 sourceCode">
-<h6 class="sourceCode">HTML</h6>
+<section id="html-3" class="level6 sourceCode"
+data-number="6.2.4.0.0.2">
+<h6 class="sourceCode" data-number="6.2.4.0.0.2"><span
+class="header-section-number">6.2.4.0.0.2</span> HTML</h6>
 <div class="sourceCode" id="cb12"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;wrapper&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box1&quot;</span><span class="kw">&gt;</span>One<span class="kw">&lt;/div&gt;</span></span>
@@ -1313,8 +1596,9 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb12-1"><a href=
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>   <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;box4&quot;</span><span class="kw">&gt;</span>Four<span class="kw">&lt;/div&gt;</span></span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
 </section>
-<section id="css-8" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-8" class="level6 sourceCode" data-number="6.2.4.0.0.3">
+<h6 class="sourceCode" data-number="6.2.4.0.0.3"><span
+class="header-section-number">6.2.4.0.0.3</span> CSS</h6>
 <div class="sourceCode" id="cb13"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.wrapper</span> {</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">grid</span><span class="op">;</span></span>
@@ -1343,12 +1627,15 @@ class="citation" data-cites="maujac">@maujac</span></a>) on
 </iframe>
 </section>
 </section>
-<section id="naming-and-positioning-by-grid-areas" class="level3">
-<h3>Naming and Positioning by Grid Areas</h3>
+<section id="naming-and-positioning-by-grid-areas" class="level3"
+data-number="6.2.5">
+<h3 data-number="6.2.5"><span class="header-section-number">6.2.5</span>
+Naming and Positioning by Grid Areas</h3>
 <p>In the example above we defining an area by specifying the lines that
 enclose that area:</p>
-<section id="css-9" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-9" class="level6 sourceCode" data-number="6.2.5.0.0.1">
+<h6 class="sourceCode" data-number="6.2.5.0.0.1"><span
+class="header-section-number">6.2.5.0.0.1</span> CSS</h6>
 <div class="sourceCode" id="cb14"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.box1</span> {</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">grid-area</span>: <span class="dv">1</span> / <span class="dv">1</span> / <span class="dv">4</span> / <span class="dv">2</span><span class="op">;</span></span>
@@ -1366,8 +1653,10 @@ property.</p>
 <li>main content</li>
 </ul>
 </section>
-<section id="css-10" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-10" class="level6 sourceCode"
+data-number="6.2.5.0.0.2">
+<h6 class="sourceCode" data-number="6.2.5.0.0.2"><span
+class="header-section-number">6.2.5.0.0.2</span> CSS</h6>
 <div class="sourceCode" id="cb15"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;wrapper&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;header&gt;</span>Header<span class="kw">&lt;/header&gt;</span></span>
@@ -1377,12 +1666,16 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb15-1"><a href=
 <span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
 </section>
 </section>
-<section id="assigning-names-with-grid-area" class="level3">
-<h3>Assigning names with <code>grid-area</code></h3>
+<section id="assigning-names-with-grid-area" class="level3"
+data-number="6.2.6">
+<h3 data-number="6.2.6"><span class="header-section-number">6.2.6</span>
+Assigning names with <code>grid-area</code></h3>
 <p>You can assign any name to a HTML element with the
 <code>grid-area</code> property.</p>
-<section id="css-11" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-11" class="level6 sourceCode"
+data-number="6.2.6.0.0.1">
+<h6 class="sourceCode" data-number="6.2.6.0.0.1"><span
+class="header-section-number">6.2.6.0.0.1</span> CSS</h6>
 <div class="sourceCode" id="cb16"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>header {</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">grid-area</span>: hd<span class="op">;</span></span>
@@ -1400,8 +1693,10 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb16-1"><a href="#
 the item names instead of line numbers.</p>
 </section>
 </section>
-<section id="templates-with-grid-template-areas" class="level3">
-<h3>Templates with <code>grid-template-areas</code></h3>
+<section id="templates-with-grid-template-areas" class="level3"
+data-number="6.2.7">
+<h3 data-number="6.2.7"><span class="header-section-number">6.2.7</span>
+Templates with <code>grid-template-areas</code></h3>
 <p>The <code>grid-template-areas</code> property defines a grid template
 by referencing the names of the grid areas.</p>
 <ul>
@@ -1411,8 +1706,10 @@ cells.</li>
 <li>Each name must be separated by a whitespace.</li>
 <li>A period signifies an empty cell.</li>
 </ul>
-<section id="css-12" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-12" class="level6 sourceCode"
+data-number="6.2.7.0.0.1">
+<h6 class="sourceCode" data-number="6.2.7.0.0.1"><span
+class="header-section-number">6.2.7.0.0.1</span> CSS</h6>
 <div class="sourceCode" id="cb17"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.wrapper</span> {</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">display</span>: <span class="dv">grid</span><span class="op">;</span></span>
@@ -1434,19 +1731,23 @@ class="citation" data-cites="maujac">@maujac</span></a>) on
 </section>
 </section>
 </section>
-<section id="grid-vs-flexbox" class="level2">
-<h2>Grid vs Flexbox</h2>
+<section id="grid-vs-flexbox" class="level2" data-number="6.3">
+<h2 data-number="6.3"><span class="header-section-number">6.3</span>
+Grid vs Flexbox</h2>
 <p>When to use Grid rather than Flexbox? Ask yourself the following
 questions:</p>
-<section id="direction-vs-2-directions" class="level3">
-<h3>1 direction vs 2 directions</h3>
+<section id="direction-vs-2-directions" class="level3"
+data-number="6.3.1">
+<h3 data-number="6.3.1"><span class="header-section-number">6.3.1</span>
+1 direction vs 2 directions</h3>
 <p>If you <strong>only</strong> need to control the layout by
 <strong>row <em>or</em> column</strong> – use a flexbox</p>
 <p>If you need to control the layout by <strong>both row <em>and</em>
 column</strong> – use a grid</p>
 </section>
-<section id="content-vs-layout" class="level3">
-<h3>Content vs layout</h3>
+<section id="content-vs-layout" class="level3" data-number="6.3.2">
+<h3 data-number="6.3.2"><span class="header-section-number">6.3.2</span>
+Content vs layout</h3>
 <p>Flexbox works from the content out, meaning you start with a set of
 items and then you space them out evenly inside a flexbox.</p>
 <ul>
@@ -1471,12 +1772,14 @@ together</p>
 </section>
 </section>
 </section>
-<section id="knowledge-check" class="level1">
-<h1>Knowledge Check</h1>
+<section id="knowledge-check" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span>
+Knowledge Check</h1>
 <p>Stay tuned for more information!</p>
 </section>
-<section id="readings-and-resources" class="level1">
-<h1>Readings and Resources</h1>
+<section id="readings-and-resources" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span>
+Readings and Resources</h1>
 <ol type="1">
 <li>MDN Web Docs, <a
 href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design">“Responsive
@@ -1495,8 +1798,9 @@ href="https://internetingishard.netlify.app/html-and-css/semantic-html/index.htm
 HTML”</a></li>
 </ol>
 </section>
-<section id="exercises" class="level1">
-<h1>Exercises</h1>
+<section id="exercises" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span>
+Exercises</h1>
 <ol type="1">
 <li><strong><code>sup11.html</code></strong> in <a
 href="../pages/tutorials.html#week-11-exercises">June’s guest lecture
@@ -1508,7 +1812,7 @@ are used in Lab 4 (placing text on top of images/videos, using the
 <code>position</code> property, etc.)</li>
 </ol>
 </section>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
+<aside id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
 <ol>
@@ -1530,11 +1834,11 @@ href="https://www.w3schools.com/css/css_grid.asp">CSS Grid Layout
 Module</a> by W3Schools.<a href="#fnref2" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
 </ol>
-</section> 
+</aside> 
    </article>
   </main>
-  <footer class="footer">
-   <span class="note-text">
+  <footer id="site-footer" role="contentinfo">
+   <span>
     © 2023 Michael Haaf |
     <a href="../pages/home.html#about-this-website">
      About

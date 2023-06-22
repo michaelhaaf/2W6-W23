@@ -92,21 +92,18 @@
   </style>
     <link href="../assets/css/style.css" rel="stylesheet"/>
     
-  <!--[if lt IE 9]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-    <![endif]-->
  </head>
- <body class="page-container base">
-  <header class="header">
-   <div class="course-info-decoration">
-    <button class="theme-toggle-icon" id="theme-toggle-icon">
-     Theme toggle icon
+ <body class="base">
+  <header role="banner">
+   <div class="">
+    <button aria-hidden="true" aria-label="theme-toggle-icon" id="theme-toggle-icon">
+     X
     </button>
     <div>
      <h1>
       User Interfaces
      </h1>
-     <span class="note-text">
+     <span>
       420-2W6 | Winter 2023 | as taught by
       <a href="https://github.com/michaelhaaf/2W6-W23">
        Michael Haaf
@@ -114,315 +111,370 @@
      </span>
     </div>
    </div>
-   <div>
-    <span class="header-description note-text">
+   <div class="image-attribution">
+    <span>
      Image:
      <a href="https://www.guggenheim.org/artwork/movement/constructivism">
      </a>
     </span>
    </div>
   </header>
-  <aside class="aside--site surface">
-   <nav class="nav nav--site" id="site-navigation">
-    <h2>
-     Site Navigation
-    </h2>
-    <ul>
-     <li>
-      <a href="../pages/home.html" id="site-home">
-       <img alt="" class="icon" src="../assets/images/home.svg"/>
-       <span class="icon-text">
-        Home
-       </span>
-      </a>
-     </li>
-     <li>
-      <a href="../pages/course-outline.html" id="site-course-outline">
-       <img alt="" class="icon" src="../assets/images/outline.svg"/>
-       <span class="icon-text">
-        Course Outline
-       </span>
-      </a>
-     </li>
-     <li>
-      <a href="../pages/calendar.html" id="site-calendar">
-       <img alt="" class="icon" src="../assets/images/calendar.svg"/>
-       <span class="icon-text">
-        Calendar
-       </span>
-      </a>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-lectures" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/lectures.svg"/>
-       <span class="icon-text">
-        Lectures
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="lecture-listing">
-       <li>
-        <a href="../lectures/week01.html">
-         Week 01
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week02.html">
-         Week 02
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week03.html">
-         Week 03
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week04.html">
-         Week 04
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week05.html">
-         Week 05
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week06.html">
-         Week 06
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week07.html">
-         Week 07
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week09.html">
-         Week 09
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week10.html">
-         Week 10
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week11.html">
-         Week 11
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week12.html">
-         Week 12
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week13.html">
-         Week 13
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week14.html">
-         Week 14
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-tutorials" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/tutorials.svg"/>
-       <span class="icon-text">
-        Tutorials
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="tutorial-listing">
-       <li>
-        <a href="../pages/tutorials.html#week-01-exercises">
-         week 01 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-04-exercises">
-         week 04 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-06-exercises">
-         week 06 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-10-exercises">
-         week 10 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-11-exercises">
-         week 11 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-15-tutorial">
-         week 15 
-tutorial
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-04-solutions">
-         week 04 
-solutions
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-06-solutions">
-         week 06 
-solutions
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-10-solutions">
-         week 10 
-solutions
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-assignments" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/assignments.svg"/>
-       <span class="icon-text">
-        Assignments
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="assignment-listing">
-       <li>
-        <a href="../pages/assignments.html#milestone-1-2">
-         milestone 1 &amp;
- 2
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-1">
-         lab 1
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-2">
-         lab 2
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-3">
-         lab 3
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-4">
-         lab 4
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-1-solution">
-         lab 1 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-2-solution">
-         lab 2 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-3-solution">
-         lab 3 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-4-solution">
-         lab 4 
-solution
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </nav>
-  </aside>
-    <aside class="aside--page">
-   <nav class="nav nav--page" id="TOC" role="doc-toc">
-        <h2 id="toc-title">
-     Lecture navigation
-    </h2>
-         <a class="" href="../lectures/week07.html">
-     <img alt="" class="icon" src="../assets/images/feather-icons/chevron-left.svg"/>
-     <span class="icon-text">
-      Previous page...
-     </span>
-    </a>
-     <ul>
-<li><a href="#lesson-overview" id="toc-lesson-overview">Lesson
-Overview</a></li>
-<li><a href="#css-mechanics-review" id="toc-css-mechanics-review">CSS
-Mechanics Review</a></li>
-<li><a href="#css-cascade" id="toc-css-cascade">CSS Cascade</a>
-<ul>
-<li><a href="#specificity" id="toc-specificity">Specificity</a></li>
-<li><a href="#inheritance" id="toc-inheritance">Inheritance</a></li>
-<li><a href="#rule-order" id="toc-rule-order">Rule Order</a></li>
-<li><a href="#calculation" id="toc-calculation">Calculation</a></li>
-<li><a href="#using-the-inspector-to-debug"
-id="toc-using-the-inspector-to-debug">Using the Inspector to
-Debug</a></li>
-</ul></li>
-<li><a href="#css-custom-properties" id="toc-css-custom-properties">CSS
-Custom Properties</a>
-<ul>
-<li><a href="#custom-properties-as-variables"
-id="toc-custom-properties-as-variables">Custom Properties as
-Variables</a></li>
-<li><a href="#fallback-values" id="toc-fallback-values">Fallback
-Values</a></li>
-<li><a href="#scope" id="toc-scope">Scope</a></li>
-<li><a href="#the-root-selector" id="toc-the-root-selector">The
-<code>:root</code> selector</a></li>
-<li><a href="#themes-with-custom-properties"
-id="toc-themes-with-custom-properties">Themes with Custom
-Properties</a></li>
-</ul></li>
-<li><a href="#knowledge-check" id="toc-knowledge-check">Knowledge
-Check</a>
-<ul>
-<li><a href="#css-cascade-1" id="toc-css-cascade-1">CSS Cascade</a></li>
-<li><a href="#css-custom-properties-1"
-id="toc-css-custom-properties-1">CSS Custom Properties</a></li>
-</ul></li>
-<li><a href="#readings-and-resources"
-id="toc-readings-and-resources">Readings and Resources</a></li>
-<li><a href="#exercises" id="toc-exercises">Exercises</a></li>
-</ul>     <a class="" href="../lectures/week10.html">
-     <img alt="" class="icon" src="../assets/images/feather-icons/chevron-right.svg"/>
-     <span class="icon-text">
-      Next page...
-     </span>
-    </a>
-       </nav>
-  </aside>
-    <main class="main base">
+  <nav aria-labelledby="course-content" class="tooltip vertical sticky-container" role="navigation">
+   <h2 class="visually-hidden" id="course-content">
+    Course Content
+   </h2>
+   <ul class="sticky" role="menu">
+    <li>
+     <a aria-label="Link to Home" href="../pages/home.html" role="menuitem" style="--icon: url(../images/home.svg)">
+      <span>
+       Home
+      </span>
+     </a>
+    </li>
+    <li>
+     <a aria-label="Link to Course Outline" href="../pages/course-outline.html" role="menuitem" style="--icon: url(../images/outline.svg)">
+      <span>
+       Course outline
+      </span>
+     </a>
+    </li>
+    <li>
+     <a aria-label="Link to Calendar" href="../pages/calendar.html" role="menuitem" style="--icon: url(../images/calendar.svg)">
+      <span>
+       Calendar
+      </span>
+     </a>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Lectures" href="../pages/lectures.html" role="menuitem" style="--icon: url(../images/lectures.svg)">
+      <span>
+       Lectures
+      </span>
+     </a>
+     <button aria-controls="lecture-listing" aria-expanded="false" aria-label="Expand lecture menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right.svg)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="lecture-listing" style="display: none;">
+      <li>
+       <a href="../lectures/week01.html">
+        week01.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week02.html">
+        week02.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week03.html">
+        week03.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week04.html">
+        week04.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week05.html">
+        week05.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week06.html">
+        week06.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week07.html">
+        week07.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week09.html">
+        week09.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week10.html">
+        week10.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week11.html">
+        week11.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week12.html">
+        week12.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week13.html">
+        week13.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week14.html">
+        week14.html
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Tutorials" href="../pages/tutorials.html" role="menuitem" style="--icon: url(../images/tutorials.svg)">
+      <span>
+       Tutorials
+      </span>
+     </a>
+     <button aria-controls="tutorial-listing" aria-expanded="false" aria-label="Expand tutorial menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="tutorial-listing" style="display: none;">
+      <li>
+       <a href="../pages/tutorials.html#week-01-exercises">
+        <span class="toc-section-number">
+         1.1
+        </span>
+        Week 01
+            Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-04-exercises">
+        <span class="toc-section-number">
+         1.2
+        </span>
+        Week 04 Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-foundations">
+        <span class="toc-section-number">
+         1.2.1
+        </span>
+        CSS
+            Foundations
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-box-model">
+        <span class="toc-section-number">
+         1.2.2
+        </span>
+        CSS Box
+            Model
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-typesetting-typography">
+        <span class="toc-section-number">
+         1.2.3
+        </span>
+        CSS Typesetting
+            &amp; Typography
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-06-exercises">
+        <span class="toc-section-number">
+         1.3
+        </span>
+        Week 06 Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-flexbox">
+        <span class="toc-section-number">
+         1.3.1
+        </span>
+        CSS Flexbox
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-10-exercises">
+        <span class="toc-section-number">
+         1.4
+        </span>
+        Week 10 Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-grid">
+        <span class="toc-section-number">
+         1.4.1
+        </span>
+        CSS Grid
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-11-exercises">
+        <span class="toc-section-number">
+         1.5
+        </span>
+        Week 11
+            Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-15-tutorial">
+        <span class="toc-section-number">
+         1.6
+        </span>
+        Week 15
+            Tutorial
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-04-solutions">
+        <span class="toc-section-number">
+         2.1
+        </span>
+        Week 04 Solutions
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-foundations-1">
+        <span class="toc-section-number">
+         2.1.1
+        </span>
+        CSS
+            Foundations
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-box-model-1">
+        <span class="toc-section-number">
+         2.1.2
+        </span>
+        CSS Box
+            Model
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-typesetting-typography-1">
+        <span class="toc-section-number">
+         2.1.3
+        </span>
+        CSS Typesetting
+            &amp; Typography
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-06-solutions">
+        <span class="toc-section-number">
+         2.2
+        </span>
+        Week 06 Solutions
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-flexbox-1">
+        <span class="toc-section-number">
+         2.2.1
+        </span>
+        CSS Flexbox
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-10-solutions">
+        <span class="toc-section-number">
+         2.3
+        </span>
+        Week 10 Solutions
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-grid-1">
+        <span class="toc-section-number">
+         2.3.1
+        </span>
+        CSS Grid
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Assignments" href="../pages/assignments.html" role="menuitem" style="--icon: url(../images/assignments.svg)">
+      <span>
+       Assignments
+      </span>
+     </a>
+     <button aria-controls="assignment-listing" aria-expanded="false" aria-label="Expand assignment menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="assignment-listing" style="display: none;">
+      <li>
+       <a href="../pages/assignments.html#milestone-1-2">
+        Milestone 1 &amp;
+2
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-1">
+        Lab 1
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-2">
+        Lab 2
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-3">
+        Lab 3
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-4">
+        Lab 4
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-1-solution">
+        Lab 1
+Solution
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-2-solution">
+        Lab 2
+Solution
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-3-solution">
+        Lab 3
+Solution
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-4-solution">
+        Lab 4
+Solution
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </nav>
+  <main class="base" role="main">
    <article class="article">
-         <header id="title-block-header">
-     <h1 class="title">
+         <header class="level1" id="title-block-header">
+     <h1>
       2W6-W23: Week 9 Lecture Notes
      </h1>
             <div class="abstract">
-      <div class="abstract-title">
+      <h2>
        Cascading StyleSheets: What is the ‘Cascade’ of CSS?
-      </div>
+      </h2>
       <p>We have yet to learn in concrete detail a very important
       mechanic of CSS: when two styles contradict, how does the browser
       determine which style to apply?</p>
@@ -433,16 +485,141 @@ id="toc-readings-and-resources">Readings and Resources</a></li>
       ‘rules’ that we can define once and reuse many times throughout
       our document to reduce code repetitio0n.</p>
      </div>
-           <p class="date">
+           <p>
       Last update:
       <time datetime="Monday, March 27, 2023">
        Monday, March 27, 2023
       </time>
      </p>
-         </header>
-     <hr />
-<section id="lesson-overview" class="level1">
-<h1>Lesson Overview</h1>
+          <hr/>
+    </header>
+        <section class="overlay-grid sticky-container level1">
+     <nav aria-labelledby="page-controls-title" class="margin surface menu sticky tooltip">
+      <h2 class="visually-hidden" id="page-controls-title">
+       Page Controls
+      </h2>
+      <ul role="menubar">
+       <li>
+        <a href="#title-block-header" role="menuitem" style="--icon: url(../images/feather-icons/chevron-up.svg)">
+         <span>
+          Scroll to beginning
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="#site-footer" role="menuitem" style="--icon: url(../images/feather-icons/chevron-down.svg)">
+         <span>
+          Scroll to end
+         </span>
+        </a>
+       </li>
+              <li>
+        <a href="../lectures/week07.html" role="menuitem" style="--icon: url(../images/feather-icons/chevron-left.svg)">
+         <span>
+          Previous page
+         </span>
+        </a>
+       </li>
+               <li>
+        <a href="../lectures/week10.html" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right.svg)">
+         <span>
+          Next page
+         </span>
+        </a>
+       </li>
+              <li>
+        <a href="#" role="menuitem" style="--icon: url('../images/feather-icons/printer.svg')">
+         <span>
+          View PDF
+         </span>
+        </a>
+       </li>
+       <li>
+        <button aria-controls="margin-menu" aria-expanded="false" aria-hidden="true" aria-label="Toggle margin menu" role="menuitem" style="--icon: url(../images/feather-icons/maximize-2.svg)">
+         <span>
+          Toggle margin menu
+         </span>
+        </button>
+       </li>
+      </ul>
+     </nav>
+          <nav aria-labelledby="toc-title" class="margin surface menu sticky toc" id="TOC" role="navigation">
+      <h2 id="toc-title">
+       Contents
+      </h2>
+      <ul>
+      <li><a href="#lesson-overview" id="toc-lesson-overview"><span
+      class="toc-section-number">1</span> Lesson Overview</a></li>
+      <li><a href="#css-mechanics-review"
+      id="toc-css-mechanics-review"><span
+      class="toc-section-number">2</span> CSS Mechanics Review</a></li>
+      <li><a href="#css-cascade" id="toc-css-cascade"><span
+      class="toc-section-number">3</span> CSS Cascade</a>
+      <ul>
+      <li><a href="#specificity" id="toc-specificity"><span
+      class="toc-section-number">3.1</span> Specificity</a></li>
+      <li><a href="#inheritance" id="toc-inheritance"><span
+      class="toc-section-number">3.2</span> Inheritance</a></li>
+      <li><a href="#rule-order" id="toc-rule-order"><span
+      class="toc-section-number">3.3</span> Rule Order</a>
+      <ul>
+      <li><a href="#inline-css" id="toc-inline-css"><span
+      class="toc-section-number">3.3.1</span> Inline CSS</a></li>
+      <li><a href="#internal-and-external-css"
+      id="toc-internal-and-external-css"><span
+      class="toc-section-number">3.3.2</span> Internal and External
+      CSS</a></li>
+      </ul></li>
+      <li><a href="#calculation" id="toc-calculation"><span
+      class="toc-section-number">3.4</span> Calculation</a></li>
+      <li><a href="#using-the-inspector-to-debug"
+      id="toc-using-the-inspector-to-debug"><span
+      class="toc-section-number">3.5</span> Using the Inspector to
+      Debug</a></li>
+      </ul></li>
+      <li><a href="#css-custom-properties"
+      id="toc-css-custom-properties"><span
+      class="toc-section-number">4</span> CSS Custom Properties</a>
+      <ul>
+      <li><a href="#custom-properties-as-variables"
+      id="toc-custom-properties-as-variables"><span
+      class="toc-section-number">4.1</span> Custom Properties as
+      Variables</a></li>
+      <li><a href="#fallback-values" id="toc-fallback-values"><span
+      class="toc-section-number">4.2</span> Fallback Values</a></li>
+      <li><a href="#scope" id="toc-scope"><span
+      class="toc-section-number">4.3</span> Scope</a></li>
+      <li><a href="#the-root-selector" id="toc-the-root-selector"><span
+      class="toc-section-number">4.4</span> The <code>:root</code>
+      selector</a></li>
+      <li><a href="#themes-with-custom-properties"
+      id="toc-themes-with-custom-properties"><span
+      class="toc-section-number">4.5</span> Themes with Custom
+      Properties</a></li>
+      </ul></li>
+      <li><a href="#knowledge-check" id="toc-knowledge-check"><span
+      class="toc-section-number">5</span> Knowledge Check</a>
+      <ul>
+      <li><a href="#css-cascade-1" id="toc-css-cascade-1"><span
+      class="toc-section-number">5.1</span> CSS Cascade</a></li>
+      <li><a href="#css-custom-properties-1"
+      id="toc-css-custom-properties-1"><span
+      class="toc-section-number">5.2</span> CSS Custom
+      Properties</a></li>
+      </ul></li>
+      <li><a href="#readings-and-resources"
+      id="toc-readings-and-resources"><span
+      class="toc-section-number">6</span> Readings and
+      Resources</a></li>
+      <li><a href="#exercises" id="toc-exercises"><span
+      class="toc-section-number">7</span> Exercises</a></li>
+      </ul>
+     </nav>
+         </section>
+    <hr />
+<section id="lesson-overview" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Lesson
+Overview</h1>
 <ul>
 <li>Review important CSS mechanics we have learned so far</li>
 <li>How browsers <em>resolve</em> the CSS rules we write for elements in
@@ -454,8 +631,9 @@ determining the result of CSS Cascade.</li>
 </ul>
 <hr />
 </section>
-<section id="css-mechanics-review" class="level1">
-<h1>CSS Mechanics Review</h1>
+<section id="css-mechanics-review" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> CSS
+Mechanics Review</h1>
 <p>It is worthwhile to double check that you have understood all of the
 CSS mechanics (i.e., the rules for CSS works and why) that we have
 learned in this class so far. These include:</p>
@@ -482,8 +660,9 @@ Odin Project: CSS Foundations</a>.</p>
 particularly the <a href="https://flukeout.github.io/">CSS
 Diner</a>.</p>
 </section>
-<section id="css-cascade" class="level1">
-<h1>CSS Cascade</h1>
+<section id="css-cascade" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> CSS
+Cascade</h1>
 <p><em>This section was adapted directly from the ‘The Cascade of CSS’
 section of the <a
 href="https://www.theodinproject.com/lessons/foundations-css-foundations">Odin
@@ -519,8 +698,9 @@ to a document is <strong>well-defined</strong> by a procedure known as
 the <strong>CSS Cascade</strong>. There are different factors that the
 cascade uses to determine this, <strong>three</strong> of which we’ll
 cover in this class.</p>
-<section id="specificity" class="level2">
-<h2>Specificity</h2>
+<section id="specificity" class="level2" data-number="3.1">
+<h2 data-number="3.1"><span class="header-section-number">3.1</span>
+Specificity</h2>
 <p>A CSS declaration that is <strong>more specific</strong> will take
 precedence over less specific ones. What does it mean for a declaration
 to be more specific than another? There are a few basic rules to
@@ -559,8 +739,9 @@ amount of a single selector will beat a smaller amount of that same
 selector</strong>.</p>
 <p>Let’s take a look at a few quick examples to visualize how
 specificity works. Consider the following HTML and CSS code:</p>
-<section id="html" class="level6 sourceCode">
-<h6 class="sourceCode">HTML</h6>
+<section id="html" class="level6 sourceCode" data-number="3.1.0.0.0.1">
+<h6 class="sourceCode" data-number="3.1.0.0.0.1"><span
+class="header-section-number">3.1.0.0.0.1</span> HTML</h6>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- index.html --&gt;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -568,8 +749,9 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;list subsection&quot;</span><span class="kw">&gt;</span> <span class="kw">&lt;/div&gt;</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
 </section>
-<section id="css" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css" class="level6 sourceCode" data-number="3.1.0.0.0.2">
+<h6 class="sourceCode" data-number="3.1.0.0.0.2"><span
+class="header-section-number">3.1.0.0.0.2</span> CSS</h6>
 <div class="sourceCode" id="cb2"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* rule 1 */</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.subsection</span> {</span>
@@ -585,8 +767,10 @@ rule 2 is more specific because it is using more class selectors, so the
 <code>color: red;</code> declaration would take precedence.</p>
 <p>Now, let’s change things a little bit:</p>
 </section>
-<section id="html-1" class="level6 sourceCode">
-<h6 class="sourceCode">HTML</h6>
+<section id="html-1" class="level6 sourceCode"
+data-number="3.1.0.0.0.3">
+<h6 class="sourceCode" data-number="3.1.0.0.0.3"><span
+class="header-section-number">3.1.0.0.0.3</span> HTML</h6>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- index.html --&gt;</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -594,8 +778,9 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;list&quot;</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;subsection&quot;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
 </section>
-<section id="css-1" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-1" class="level6 sourceCode" data-number="3.1.0.0.0.4">
+<h6 class="sourceCode" data-number="3.1.0.0.0.4"><span
+class="header-section-number">3.1.0.0.0.4</span> CSS</h6>
 <div class="sourceCode" id="cb4"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* rule 1 */</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#subsection</span> {</span>
@@ -612,8 +797,10 @@ case, the <code>color: blue;</code> declaration would take
 precedence.</p>
 <p>Let’s consider one final example:</p>
 </section>
-<section id="html-2" class="level6 sourceCode">
-<h6 class="sourceCode">HTML</h6>
+<section id="html-2" class="level6 sourceCode"
+data-number="3.1.0.0.0.5">
+<h6 class="sourceCode" data-number="3.1.0.0.0.5"><span
+class="header-section-number">3.1.0.0.0.5</span> HTML</h6>
 <div class="sourceCode" id="cb5"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- index.html --&gt;</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -623,8 +810,9 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/div&gt;</span></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
 </section>
-<section id="css-2" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-2" class="level6 sourceCode" data-number="3.1.0.0.0.6">
+<h6 class="sourceCode" data-number="3.1.0.0.0.6"><span
+class="header-section-number">3.1.0.0.0.6</span> CSS</h6>
 <div class="sourceCode" id="cb6"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* rule 1 */</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.list</span> <span class="pp">#subsection</span> {</span>
@@ -652,8 +840,9 @@ empty space). <strong>These symbols do not add any specificity in and of
 themselves</strong>.</p>
 </section>
 </section>
-<section id="inheritance" class="level2">
-<h2>Inheritance</h2>
+<section id="inheritance" class="level2" data-number="3.2">
+<h2 data-number="3.2"><span class="header-section-number">3.2</span>
+Inheritance</h2>
 <p>One thing that you might have noticed already is that some CSS
 properties are <strong>automatically propagated</strong> from parents to
 children. A common example you will see in many websites is that most
@@ -669,8 +858,10 @@ properties (<code>color, font-size, font-family</code>, etc.) are
 are not</strong>.</p>
 <p>The exception to this is when directly targeting an element, as this
 always beats inheritance:</p>
-<section id="html-3" class="level6 sourceCode">
-<h6 class="sourceCode">HTML</h6>
+<section id="html-3" class="level6 sourceCode"
+data-number="3.2.0.0.0.1">
+<h6 class="sourceCode" data-number="3.2.0.0.0.1"><span
+class="header-section-number">3.2.0.0.0.1</span> HTML</h6>
 <div class="sourceCode" id="cb7"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- index.html --&gt;</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -678,8 +869,9 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;child&quot;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
 </section>
-<section id="css-3" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-3" class="level6 sourceCode" data-number="3.2.0.0.0.2">
+<h6 class="sourceCode" data-number="3.2.0.0.0.2"><span
+class="header-section-number">3.2.0.0.0.2</span> CSS</h6>
 <div class="sourceCode" id="cb8"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* styles.css */</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -707,16 +899,18 @@ an example</a> for the CSS <code>color</code> property (you can see
 <code>color</code>).</p>
 </section>
 </section>
-<section id="rule-order" class="level2">
-<h2>Rule Order</h2>
+<section id="rule-order" class="level2" data-number="3.3">
+<h2 data-number="3.3"><span class="header-section-number">3.3</span>
+Rule Order</h2>
 <p>The final factor, the end of the line, the tie-breaker of the
 tie-breaker. Let’s say that after every other factor has been taken into
 account, there are still multiple conflicting rules targeting an
 element. How does the cascade determine which rule to apply?</p>
 <p>Really simply, actually. Whichever rule was the last defined is the
 winner.</p>
-<section id="css-4" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-4" class="level6 sourceCode" data-number="3.3.0.0.0.1">
+<h6 class="sourceCode" data-number="3.3.0.0.0.1"><span
+class="header-section-number">3.3.0.0.0.1</span> CSS</h6>
 <div class="sourceCode" id="cb9"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* styles.css */</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -739,12 +933,15 @@ Yes: <strong>inline</strong>, <strong>internal</strong>, and
 <strong>external</strong> CSS each have specificity; we will learn how
 the three of them work just below.</p>
 </section>
-<section id="inline-css" class="level3">
-<h3>Inline CSS</h3>
+<section id="inline-css" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1"><span class="header-section-number">3.3.1</span>
+Inline CSS</h3>
 <p>Quick review: Inline CSS makes it possible to add styles directly to
 HTML elements:</p>
-<section id="html-4" class="level6 sourceCode">
-<h6 class="sourceCode">HTML</h6>
+<section id="html-4" class="level6 sourceCode"
+data-number="3.3.1.0.0.1">
+<h6 class="sourceCode" data-number="3.3.1.0.0.1"><span
+class="header-section-number">3.3.1.0.0.1</span> HTML</h6>
 <div class="sourceCode" id="cb10"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;body&gt;</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">style</span><span class="ot">=</span><span class="st">&quot;color: white; background-color: black;&quot;</span><span class="kw">&gt;</span>...<span class="kw">&lt;/div&gt;</span></span>
@@ -775,8 +972,10 @@ using the <code>!important</code> keyword. We will dive into that in a
 <a href="#calculation">later section</a>.</p>
 </section>
 </section>
-<section id="internal-and-external-css" class="level3">
-<h3>Internal and External CSS</h3>
+<section id="internal-and-external-css" class="level3"
+data-number="3.3.2">
+<h3 data-number="3.3.2"><span class="header-section-number">3.3.2</span>
+Internal and External CSS</h3>
 <p>Quick review: External CSS is the most common method you will come
 across. It involves creating a separate file for the CSS and linking it
 inside of an HTML’s opening and closing <code>&lt;head&gt;</code> tags
@@ -797,8 +996,10 @@ resulting style</strong>.</p>
 <p>We can see examples of this below. First, an HTML file with two
 external <code>&lt;link&gt;</code> tags and one
 <code>&lt;style&gt;</code> tag. Pay attention to the order:</p>
-<section id="html-5" class="level6 sourceCode">
-<h6 class="sourceCode">HTML</h6>
+<section id="html-5" class="level6 sourceCode"
+data-number="3.3.2.0.0.1">
+<h6 class="sourceCode" data-number="3.3.2.0.0.1"><span
+class="header-section-number">3.3.2.0.0.1</span> HTML</h6>
 <div class="sourceCode" id="cb11"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;head&gt;</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">&quot;stylesheet&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;style-file-1.css&quot;</span><span class="kw">&gt;</span>    <span class="co">&lt;!-- link to style-file-1.css --&gt;</span></span>
@@ -820,8 +1021,9 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb11-1"><a href=
 <span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/body&gt;</span></span></code></pre></div>
 <p>Next, definitions for the .css files:</p>
 </section>
-<section id="css-5" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-5" class="level6 sourceCode" data-number="3.3.2.0.0.2">
+<h6 class="sourceCode" data-number="3.3.2.0.0.2"><span
+class="header-section-number">3.3.2.0.0.2</span> CSS</h6>
 <div class="sourceCode" id="cb12"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* style-file-1.css */</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>div {</span>
@@ -867,8 +1069,9 @@ rules.</p>
 </section>
 </section>
 </section>
-<section id="calculation" class="level2">
-<h2>Calculation</h2>
+<section id="calculation" class="level2" data-number="3.4">
+<h2 data-number="3.4"><span class="header-section-number">3.4</span>
+Calculation</h2>
 <p><em>The examples in this section were adapted from <a
 href="https://www.w3schools.com/css/css_specificity.asp">CSS
 Specificity</a> by W3Schools</em></p>
@@ -943,8 +1146,10 @@ inside a <code>&lt;div&gt;</code> inside a <code>&lt;div&gt;</code>… 16
 times!) at once results in a <strong>less specific</strong> selector
 than having just one <code>class</code> in the selector.</p>
 </section>
-<section id="using-the-inspector-to-debug" class="level2">
-<h2>Using the Inspector to Debug</h2>
+<section id="using-the-inspector-to-debug" class="level2"
+data-number="3.5">
+<h2 data-number="3.5"><span class="header-section-number">3.5</span>
+Using the Inspector to Debug</h2>
 <p>While knowing the underlying calculation is useful, it is rare that
 we need to actually do math to determine which CSS rules are applied. We
 can also use Developer tools like our browser’s Inspector Mode to see
@@ -974,8 +1179,9 @@ Style pane. Properties that are <del>crossed out</del> have been
 <strong>overridden</strong> by more specific properties.</p>
 </section>
 </section>
-<section id="css-custom-properties" class="level1">
-<h1>CSS Custom Properties</h1>
+<section id="css-custom-properties" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> CSS
+Custom Properties</h1>
 <p><em>This section was adapted directly from <a
 href="https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-custom-properties">Custom
 Properties</a> by the Odin Project.</em></p>
@@ -992,13 +1198,16 @@ instance of a specific value, we only need to update a single instance:
 the custom property itself. Not only that, but custom properties can
 help us keep colors consistent throughout a project, something that will
 be really helpful as projects get larger.</p>
-<section id="custom-properties-as-variables" class="level2">
-<h2>Custom Properties as Variables</h2>
+<section id="custom-properties-as-variables" class="level2"
+data-number="4.1">
+<h2 data-number="4.1"><span class="header-section-number">4.1</span>
+Custom Properties as Variables</h2>
 <p>The syntax for declaring and accessing a custom property is really
 simple and not too different from how we write normal rule
 declarations:</p>
-<section id="css-6" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-6" class="level6 sourceCode" data-number="4.1.0.0.0.1">
+<h6 class="sourceCode" data-number="4.1.0.0.0.1"><span
+class="header-section-number">4.1.0.0.0.1</span> CSS</h6>
 <div class="sourceCode" id="cb13"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.error-modal</span> {</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">/* the &#39;--&#39; characters signify a custom property */</span></span>
@@ -1028,8 +1237,9 @@ place our custom property inside of the parenthesis (including the
 double hyphen at the beginning).</p>
 </section>
 </section>
-<section id="fallback-values" class="level2">
-<h2>Fallback Values</h2>
+<section id="fallback-values" class="level2" data-number="4.2">
+<h2 data-number="4.2"><span class="header-section-number">4.2</span>
+Fallback Values</h2>
 <p>The <code>var()</code> function actually accepts <strong>two</strong>
 parameters. The first parameter we’ve already seen: this is whichever
 custom property (variable) we are using
@@ -1039,8 +1249,9 @@ value is provided in addition to a custom property, the fallback value
 will be used if the custom property is invalid or hasn’t been declared
 yet. We can even pass in another custom property as a fallback, which
 can have its own fallback value as well!</p>
-<section id="css-7" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-7" class="level6 sourceCode" data-number="4.2.0.0.0.1">
+<h6 class="sourceCode" data-number="4.2.0.0.0.1"><span
+class="header-section-number">4.2.0.0.0.1</span> CSS</h6>
 <div class="sourceCode" id="cb14"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.fallback</span> {</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="va">--color-text</span>: <span class="cn">white</span><span class="op">;</span></span>
@@ -1055,8 +1266,9 @@ the fallback to our fallback would take over and the <code>color</code>
 property would have a value of <code>yellow</code>.</p>
 </section>
 </section>
-<section id="scope" class="level2">
-<h2>Scope</h2>
+<section id="scope" class="level2" data-number="4.3">
+<h2 data-number="4.3"><span class="header-section-number">4.3</span>
+Scope</h2>
 <p>In the previous section, we saw that that we could declare and then
 access custom properties within the same selector (whether
 <code>.error-modal</code> or <code>.fallback</code>). This is because
@@ -1069,8 +1281,10 @@ selector, as well as any descendants of that selector.</strong></p>
 <p>In the example below, only the element with the cool-paragraph class
 would get styled with a red background since it’s a descendant of the
 element where our custom property is declared:</p>
-<section id="html-6" class="level6 sourceCode">
-<h6 class="sourceCode">HTML</h6>
+<section id="html-6" class="level6 sourceCode"
+data-number="4.3.0.0.0.1">
+<h6 class="sourceCode" data-number="4.3.0.0.0.1"><span
+class="header-section-number">4.3.0.0.0.1</span> HTML</h6>
 <div class="sourceCode" id="cb15"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;cool-div&#39;</span><span class="kw">&gt;</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;cool-p&#39;</span><span class="kw">&gt;</span>Check out my cool, red background!<span class="kw">&lt;/p&gt;</span></span>
@@ -1078,8 +1292,9 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb15-1"><a href=
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;boring-p&#39;</span><span class="kw">&gt;</span>I&#39;m not in scope so I&#39;m not cool.<span class="kw">&lt;/p&gt;</span></span>
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;cool-p&#39;</span><span class="kw">&gt;</span>I&#39;m ALSO not in scope so I&#39;m ALSO not cool (despite my class name!).<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
 </section>
-<section id="css-8" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-8" class="level6 sourceCode" data-number="4.3.0.0.0.2">
+<h6 class="sourceCode" data-number="4.3.0.0.0.2"><span
+class="header-section-number">4.3.0.0.0.2</span> CSS</h6>
 <div class="sourceCode" id="cb16"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.cool-div</span> {</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="va">--main-bg</span>: <span class="cn">red</span><span class="op">;</span></span>
@@ -1097,8 +1312,9 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb16-1"><a href="#
 <span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </section>
 </section>
-<section id="the-root-selector" class="level2">
-<h2>The <code>:root</code> selector</h2>
+<section id="the-root-selector" class="level2" data-number="4.4">
+<h2 data-number="4.4"><span class="header-section-number">4.4</span> The
+<code>:root</code> selector</h2>
 <p>While there may be times where you will want to limit the scope of a
 custom property, you may want to be able to use other custom properties
 on many, unrelated selectors. One workaround would be declaring the same
@@ -1116,14 +1332,17 @@ extra fanciness: we can declare universal custom properties on the
 href="https://developer.mozilla.org/en-US/docs/Web/CSS/:root">:root
 selector</a> which is essentially the same thing as the html selector
 except it has a <strong>higher specificity</strong>.</p>
-<section id="html-7" class="level6 sourceCode">
-<h6 class="sourceCode">HTML</h6>
+<section id="html-7" class="level6 sourceCode"
+data-number="4.4.0.0.0.1">
+<h6 class="sourceCode" data-number="4.4.0.0.0.1"><span
+class="header-section-number">4.4.0.0.0.1</span> HTML</h6>
 <div class="sourceCode" id="cb17"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;cool-paragraph&#39;</span><span class="kw">&gt;</span>Lorem ipsum dolor sit amet.<span class="kw">&lt;/p&gt;</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;exciting-paragraph&#39;</span><span class="kw">&gt;</span>Lorem ipsum dolor sit amet.<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
 </section>
-<section id="css-9" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-9" class="level6 sourceCode" data-number="4.4.0.0.0.2">
+<h6 class="sourceCode" data-number="4.4.0.0.0.2"><span
+class="header-section-number">4.4.0.0.0.2</span> CSS</h6>
 <div class="sourceCode" id="cb18"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="in">:root</span> {</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="va">--main-color</span>: <span class="cn">red</span><span class="op">;</span></span>
@@ -1149,8 +1368,10 @@ within our CSS file, since any other selector would be considered a
 descendant of the <code>:root</code> selector.</p>
 </section>
 </section>
-<section id="themes-with-custom-properties" class="level2">
-<h2>Themes with Custom Properties</h2>
+<section id="themes-with-custom-properties" class="level2"
+data-number="4.5">
+<h2 data-number="4.5"><span class="header-section-number">4.5</span>
+Themes with Custom Properties</h2>
 <p>There are plenty of applications for defining universal custom
 properties. One excellent application in particular is using the
 <code>:root</code> selector to define <strong>color themes</strong> on
@@ -1187,10 +1408,12 @@ element and every property to: just toggle the class on the
 naturally cascade to all selectors in your CSS.</p>
 </section>
 </section>
-<section id="knowledge-check" class="level1">
-<h1>Knowledge Check</h1>
-<section id="css-cascade-1" class="level2">
-<h2>CSS Cascade</h2>
+<section id="knowledge-check" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span>
+Knowledge Check</h1>
+<section id="css-cascade-1" class="level2" data-number="5.1">
+<h2 data-number="5.1"><span class="header-section-number">5.1</span> CSS
+Cascade</h2>
 <ul>
 <li><a href="#specificity">Can you rank <code>id</code>,
 <code>class</code>, and <code>type</code> selectors by
@@ -1206,8 +1429,9 @@ specificity selector with <code>font-size: 1rem</code>. What is the
 result?</a></li>
 </ul>
 </section>
-<section id="css-custom-properties-1" class="level2">
-<h2>CSS Custom Properties</h2>
+<section id="css-custom-properties-1" class="level2" data-number="5.2">
+<h2 data-number="5.2"><span class="header-section-number">5.2</span> CSS
+Custom Properties</h2>
 <ul>
 <li><a href="#custom-properties-as-variables">How do you
 <strong>declare</strong> a custom property with a name of
@@ -1225,8 +1449,9 @@ selectors?</a></li>
 </ul>
 </section>
 </section>
-<section id="readings-and-resources" class="level1">
-<h1>Readings and Resources</h1>
+<section id="readings-and-resources" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span>
+Readings and Resources</h1>
 <ol type="1">
 <li><p><a
 href="https://www.theodinproject.com/lessons/foundations-css-foundations">The
@@ -1265,8 +1490,9 @@ store and use, then check out this article for some helpful
 examples.</p></li>
 </ol>
 </section>
-<section id="exercises" class="level1">
-<h1>Exercises</h1>
+<section id="exercises" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span>
+Exercises</h1>
 <ol type="1">
 <li>Open the Developer Tools inspector in your browser on this page. Can
 you see where the light and dark color schemes are defined?</li>
@@ -1278,8 +1504,8 @@ concepts.</li>
 </section> 
    </article>
   </main>
-  <footer class="footer">
-   <span class="note-text">
+  <footer id="site-footer" role="contentinfo">
+   <span>
     © 2023 Michael Haaf |
     <a href="../pages/home.html#about-this-website">
      About

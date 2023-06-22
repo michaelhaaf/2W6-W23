@@ -27,21 +27,18 @@
   </style>
     <link href="../assets/css/style.css" rel="stylesheet"/>
     
-  <!--[if lt IE 9]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-    <![endif]-->
  </head>
- <body class="page-container base">
-  <header class="header">
-   <div class="course-info-decoration">
-    <button class="theme-toggle-icon" id="theme-toggle-icon">
-     Theme toggle icon
+ <body class="base">
+  <header role="banner">
+   <div class="">
+    <button aria-hidden="true" aria-label="theme-toggle-icon" id="theme-toggle-icon">
+     X
     </button>
     <div>
      <h1>
       User Interfaces
      </h1>
-     <span class="note-text">
+     <span>
       420-2W6 | Winter 2023 | as taught by
       <a href="https://github.com/michaelhaaf/2W6-W23">
        Michael Haaf
@@ -49,316 +46,510 @@
      </span>
     </div>
    </div>
-   <div>
-    <span class="header-description note-text">
+   <div class="image-attribution">
+    <span>
      Image:
      <a href="https://www.guggenheim.org/artwork/movement/constructivism">
      </a>
     </span>
    </div>
   </header>
-  <aside class="aside--site surface">
-   <nav class="nav nav--site" id="site-navigation">
-    <h2>
-     Site Navigation
-    </h2>
-    <ul>
-     <li>
-      <a href="../pages/home.html" id="site-home">
-       <img alt="" class="icon" src="../assets/images/home.svg"/>
-       <span class="icon-text">
-        Home
-       </span>
-      </a>
-     </li>
-     <li>
-      <a href="../pages/course-outline.html" id="site-course-outline">
-       <img alt="" class="icon" src="../assets/images/outline.svg"/>
-       <span class="icon-text">
-        Course Outline
-       </span>
-      </a>
-     </li>
-     <li>
-      <a href="../pages/calendar.html" id="site-calendar">
-       <img alt="" class="icon" src="../assets/images/calendar.svg"/>
-       <span class="icon-text">
-        Calendar
-       </span>
-      </a>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-lectures" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/lectures.svg"/>
-       <span class="icon-text">
-        Lectures
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="lecture-listing">
-       <li>
-        <a href="../lectures/week01.html">
-         Week 01
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week02.html">
-         Week 02
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week03.html">
-         Week 03
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week04.html">
-         Week 04
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week05.html">
-         Week 05
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week06.html">
-         Week 06
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week07.html">
-         Week 07
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week09.html">
-         Week 09
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week10.html">
-         Week 10
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week11.html">
-         Week 11
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week12.html">
-         Week 12
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week13.html">
-         Week 13
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week14.html">
-         Week 14
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-tutorials" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/tutorials.svg"/>
-       <span class="icon-text">
-        Tutorials
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="tutorial-listing">
-       <li>
-        <a href="../pages/tutorials.html#week-01-exercises">
-         week 01 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-04-exercises">
-         week 04 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-06-exercises">
-         week 06 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-10-exercises">
-         week 10 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-11-exercises">
-         week 11 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-15-tutorial">
-         week 15 
-tutorial
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-04-solutions">
-         week 04 
-solutions
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-06-solutions">
-         week 06 
-solutions
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-10-solutions">
-         week 10 
-solutions
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-assignments" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/assignments.svg"/>
-       <span class="icon-text">
-        Assignments
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="assignment-listing">
-       <li>
-        <a href="../pages/assignments.html#milestone-1-2">
-         milestone 1 &amp;
- 2
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-1">
-         lab 1
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-2">
-         lab 2
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-3">
-         lab 3
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-4">
-         lab 4
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-1-solution">
-         lab 1 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-2-solution">
-         lab 2 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-3-solution">
-         lab 3 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-4-solution">
-         lab 4 
-solution
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </nav>
-  </aside>
-    <aside class="aside--page">
-   <nav class="nav nav--page" id="TOC" role="doc-toc">
-        <h2 id="toc-title">
-     Lecture navigation
-    </h2>
-         <a class="" href="../lectures/week11.html">
-     <img alt="" class="icon" src="../assets/images/feather-icons/chevron-left.svg"/>
-     <span class="icon-text">
-      Previous page...
-     </span>
-    </a>
-     <ul>
-<li><a href="#lesson-overview" id="toc-lesson-overview">Lesson
-Overview</a></li>
-<li><a href="#html-forms" id="toc-html-forms">HTML Forms</a>
-<ul>
-<li><a href="#the-form-element" id="toc-the-form-element">The
-<code>&lt;form&gt;</code> Element</a></li>
-<li><a href="#the-input-element" id="toc-the-input-element">The
-<code>&lt;input&gt;</code> Element</a></li>
-<li><a href="#the-textarea-element" id="toc-the-textarea-element">The
-<code>&lt;textarea&gt;</code> Element</a></li>
-<li><a href="#placeholder-and-default-text"
-id="toc-placeholder-and-default-text">Placeholder and default
-text</a></li>
-<li><a href="#built-in-form-validation"
-id="toc-built-in-form-validation">Built-in form validation</a></li>
-</ul></li>
-<li><a href="#knowledge-check" id="toc-knowledge-check">Knowledge
-Check</a></li>
-<li><a href="#readings" id="toc-readings">Readings</a></li>
-<li><a href="#exercises" id="toc-exercises">Exercises</a></li>
-</ul>     <a class="" href="../lectures/week13.html">
-     <img alt="" class="icon" src="../assets/images/feather-icons/chevron-right.svg"/>
-     <span class="icon-text">
-      Next page...
-     </span>
-    </a>
-       </nav>
-  </aside>
-    <main class="main base">
+  <nav aria-labelledby="course-content" class="tooltip vertical sticky-container" role="navigation">
+   <h2 class="visually-hidden" id="course-content">
+    Course Content
+   </h2>
+   <ul class="sticky" role="menu">
+    <li>
+     <a aria-label="Link to Home" href="../pages/home.html" role="menuitem" style="--icon: url(../images/home.svg)">
+      <span>
+       Home
+      </span>
+     </a>
+    </li>
+    <li>
+     <a aria-label="Link to Course Outline" href="../pages/course-outline.html" role="menuitem" style="--icon: url(../images/outline.svg)">
+      <span>
+       Course outline
+      </span>
+     </a>
+    </li>
+    <li>
+     <a aria-label="Link to Calendar" href="../pages/calendar.html" role="menuitem" style="--icon: url(../images/calendar.svg)">
+      <span>
+       Calendar
+      </span>
+     </a>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Lectures" href="../pages/lectures.html" role="menuitem" style="--icon: url(../images/lectures.svg)">
+      <span>
+       Lectures
+      </span>
+     </a>
+     <button aria-controls="lecture-listing" aria-expanded="false" aria-label="Expand lecture menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right.svg)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="lecture-listing" style="display: none;">
+      <li>
+       <a href="../lectures/week01.html">
+        week01.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week02.html">
+        week02.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week03.html">
+        week03.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week04.html">
+        week04.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week05.html">
+        week05.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week06.html">
+        week06.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week07.html">
+        week07.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week09.html">
+        week09.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week10.html">
+        week10.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week11.html">
+        week11.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week12.html">
+        week12.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week13.html">
+        week13.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week14.html">
+        week14.html
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Tutorials" href="../pages/tutorials.html" role="menuitem" style="--icon: url(../images/tutorials.svg)">
+      <span>
+       Tutorials
+      </span>
+     </a>
+     <button aria-controls="tutorial-listing" aria-expanded="false" aria-label="Expand tutorial menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="tutorial-listing" style="display: none;">
+      <li>
+       <a href="../pages/tutorials.html#week-01-exercises">
+        <span class="toc-section-number">
+         1.1
+        </span>
+        Week 01
+            Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-04-exercises">
+        <span class="toc-section-number">
+         1.2
+        </span>
+        Week 04 Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-foundations">
+        <span class="toc-section-number">
+         1.2.1
+        </span>
+        CSS
+            Foundations
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-box-model">
+        <span class="toc-section-number">
+         1.2.2
+        </span>
+        CSS Box
+            Model
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-typesetting-typography">
+        <span class="toc-section-number">
+         1.2.3
+        </span>
+        CSS Typesetting
+            &amp; Typography
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-06-exercises">
+        <span class="toc-section-number">
+         1.3
+        </span>
+        Week 06 Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-flexbox">
+        <span class="toc-section-number">
+         1.3.1
+        </span>
+        CSS Flexbox
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-10-exercises">
+        <span class="toc-section-number">
+         1.4
+        </span>
+        Week 10 Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-grid">
+        <span class="toc-section-number">
+         1.4.1
+        </span>
+        CSS Grid
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-11-exercises">
+        <span class="toc-section-number">
+         1.5
+        </span>
+        Week 11
+            Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-15-tutorial">
+        <span class="toc-section-number">
+         1.6
+        </span>
+        Week 15
+            Tutorial
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-04-solutions">
+        <span class="toc-section-number">
+         2.1
+        </span>
+        Week 04 Solutions
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-foundations-1">
+        <span class="toc-section-number">
+         2.1.1
+        </span>
+        CSS
+            Foundations
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-box-model-1">
+        <span class="toc-section-number">
+         2.1.2
+        </span>
+        CSS Box
+            Model
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-typesetting-typography-1">
+        <span class="toc-section-number">
+         2.1.3
+        </span>
+        CSS Typesetting
+            &amp; Typography
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-06-solutions">
+        <span class="toc-section-number">
+         2.2
+        </span>
+        Week 06 Solutions
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-flexbox-1">
+        <span class="toc-section-number">
+         2.2.1
+        </span>
+        CSS Flexbox
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-10-solutions">
+        <span class="toc-section-number">
+         2.3
+        </span>
+        Week 10 Solutions
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-grid-1">
+        <span class="toc-section-number">
+         2.3.1
+        </span>
+        CSS Grid
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Assignments" href="../pages/assignments.html" role="menuitem" style="--icon: url(../images/assignments.svg)">
+      <span>
+       Assignments
+      </span>
+     </a>
+     <button aria-controls="assignment-listing" aria-expanded="false" aria-label="Expand assignment menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="assignment-listing" style="display: none;">
+      <li>
+       <a href="../pages/assignments.html#milestone-1-2">
+        Milestone 1 &amp;
+2
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-1">
+        Lab 1
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-2">
+        Lab 2
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-3">
+        Lab 3
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-4">
+        Lab 4
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-1-solution">
+        Lab 1
+Solution
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-2-solution">
+        Lab 2
+Solution
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-3-solution">
+        Lab 3
+Solution
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-4-solution">
+        Lab 4
+Solution
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </nav>
+  <main class="base" role="main">
    <article class="article">
-         <header id="title-block-header">
-     <h1 class="title">
+         <header class="level1" id="title-block-header">
+     <h1>
       2W6-W23: Week 12 Lecture Notes
      </h1>
             <div class="abstract">
-      <div class="abstract-title">
+      <h2>
        Intermediate User Interfaces: HTML Forms
-      </div>
+      </h2>
       <p>We will learn how to create and style HTML Forms, which are
       ubiquitous on the web for entering data into a website.</p>
      </div>
-           <p class="date">
+           <p>
       Last update:
-      <time datetime="Sun May 7 17:53:41 2023">
-       Sunday, May 07, 2023
+      <time datetime="Thu Jun 22 19:36:06 2023">
+       Thursday, June 22, 2023
       </time>
      </p>
-         </header>
-     <hr />
-<section id="lesson-overview" class="level1">
-<h1>Lesson Overview</h1>
+          <hr/>
+    </header>
+        <section class="overlay-grid sticky-container level1">
+     <nav aria-labelledby="page-controls-title" class="margin surface menu sticky tooltip">
+      <h2 class="visually-hidden" id="page-controls-title">
+       Page Controls
+      </h2>
+      <ul role="menubar">
+       <li>
+        <a href="#title-block-header" role="menuitem" style="--icon: url(../images/feather-icons/chevron-up.svg)">
+         <span>
+          Scroll to beginning
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="#site-footer" role="menuitem" style="--icon: url(../images/feather-icons/chevron-down.svg)">
+         <span>
+          Scroll to end
+         </span>
+        </a>
+       </li>
+              <li>
+        <a href="../lectures/week11.html" role="menuitem" style="--icon: url(../images/feather-icons/chevron-left.svg)">
+         <span>
+          Previous page
+         </span>
+        </a>
+       </li>
+               <li>
+        <a href="../lectures/week13.html" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right.svg)">
+         <span>
+          Next page
+         </span>
+        </a>
+       </li>
+              <li>
+        <a href="#" role="menuitem" style="--icon: url('../images/feather-icons/printer.svg')">
+         <span>
+          View PDF
+         </span>
+        </a>
+       </li>
+       <li>
+        <button aria-controls="margin-menu" aria-expanded="false" aria-hidden="true" aria-label="Toggle margin menu" role="menuitem" style="--icon: url(../images/feather-icons/maximize-2.svg)">
+         <span>
+          Toggle margin menu
+         </span>
+        </button>
+       </li>
+      </ul>
+     </nav>
+          <nav aria-labelledby="toc-title" class="margin surface menu sticky toc" id="TOC" role="navigation">
+      <h2 id="toc-title">
+       Contents
+      </h2>
+      <ul>
+      <li><a href="#lesson-overview" id="toc-lesson-overview"><span
+      class="toc-section-number">1</span> Lesson Overview</a></li>
+      <li><a href="#html-forms" id="toc-html-forms"><span
+      class="toc-section-number">2</span> HTML Forms</a>
+      <ul>
+      <li><a href="#the-form-element" id="toc-the-form-element"><span
+      class="toc-section-number">2.1</span> The
+      <code>&lt;form&gt;</code> Element</a></li>
+      <li><a href="#the-input-element" id="toc-the-input-element"><span
+      class="toc-section-number">2.2</span> The
+      <code>&lt;input&gt;</code> Element</a>
+      <ul>
+      <li><a href="#input-type" id="toc-input-type"><span
+      class="toc-section-number">2.2.1</span> <code>&lt;input&gt;</code>
+      Type</a></li>
+      <li><a href="#the-label-elements"
+      id="toc-the-label-elements"><span
+      class="toc-section-number">2.2.2</span> The
+      <code>&lt;label&gt;</code> elements</a></li>
+      <li><a href="#input-size-interaction"
+      id="toc-input-size-interaction"><span
+      class="toc-section-number">2.2.3</span> <code>&lt;input&gt;</code>
+      size &amp; interaction</a></li>
+      </ul></li>
+      <li><a href="#the-textarea-element"
+      id="toc-the-textarea-element"><span
+      class="toc-section-number">2.3</span> The
+      <code>&lt;textarea&gt;</code> Element</a></li>
+      <li><a href="#placeholder-and-default-text"
+      id="toc-placeholder-and-default-text"><span
+      class="toc-section-number">2.4</span> Placeholder and default
+      text</a>
+      <ul>
+      <li><a href="#the-select-element"
+      id="toc-the-select-element"><span
+      class="toc-section-number">2.4.1</span> The
+      <code>&lt;select&gt;</code> element</a>
+      <ul>
+      <li><a href="#submission-with-input-typebutton"
+      id="toc-submission-with-input-typebutton"><span
+      class="toc-section-number">2.4.1.1</span> Submission with input
+      type=“button”</a></li>
+      <li><a href="#submission-with-button"
+      id="toc-submission-with-button"><span
+      class="toc-section-number">2.4.1.2</span> Submission with
+      button</a></li>
+      </ul></li>
+      </ul></li>
+      <li><a href="#built-in-form-validation"
+      id="toc-built-in-form-validation"><span
+      class="toc-section-number">2.5</span> Built-in form
+      validation</a></li>
+      </ul></li>
+      <li><a href="#knowledge-check" id="toc-knowledge-check"><span
+      class="toc-section-number">3</span> Knowledge Check</a></li>
+      <li><a href="#readings" id="toc-readings"><span
+      class="toc-section-number">4</span> Readings</a></li>
+      <li><a href="#exercises" id="toc-exercises"><span
+      class="toc-section-number">5</span> Exercises</a></li>
+      </ul>
+     </nav>
+         </section>
+    <hr />
+<section id="lesson-overview" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Lesson
+Overview</h1>
 <ul>
 <li>HTML Forms</li>
 </ul>
 <hr />
 </section>
-<section id="html-forms" class="level1">
-<h1>HTML Forms</h1>
+<section id="html-forms" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> HTML
+Forms</h1>
 <p>Forms<a href="#fn1" class="footnote-ref" id="fnref1"
 role="doc-noteref"><sup>1</sup></a> are the primary interactive
 component of websites. Forms allow users to enter data, which is
@@ -404,8 +595,9 @@ styled as usual via CSS;</li>
 <code>&lt;input&gt;</code> is selected.</li>
 </ul>
 <p>Now we will look at each form component in a little more detail:</p>
-<section id="the-form-element" class="level2">
-<h2>The <code>&lt;form&gt;</code> Element</h2>
+<section id="the-form-element" class="level2" data-number="2.1">
+<h2 data-number="2.1"><span class="header-section-number">2.1</span> The
+<code>&lt;form&gt;</code> Element</h2>
 <p>As mentioned, the <code>&lt;form&gt;</code> tag is used to create an
 HTML form for user input.</p>
 <p>The most important attributes of <code>&lt;form&gt;</code> is
@@ -507,8 +699,9 @@ data-cites="maujac">@maujac</span></a>) on
 element attributes <a
 href="https://www.w3schools.com/tags/tag_form.asp">here</a>.</p>
 </section>
-<section id="the-input-element" class="level2">
-<h2>The <code>&lt;input&gt;</code> Element</h2>
+<section id="the-input-element" class="level2" data-number="2.2">
+<h2 data-number="2.2"><span class="header-section-number">2.2</span> The
+<code>&lt;input&gt;</code> Element</h2>
 <p>The <a
 href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code>
 element</a> can be displayed in several ways, depending on the
@@ -522,8 +715,9 @@ on a few.</p>
 href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">MDN
 Web docs page on the <code>&lt;input&gt;</code> element.</a></p>
 </blockquote>
-<section id="input-type" class="level3">
-<h3><code>&lt;input&gt;</code> Type</h3>
+<section id="input-type" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1"><span class="header-section-number">2.2.1</span>
+<code>&lt;input&gt;</code> Type</h3>
 <p>There are many values that <code>type=</code> can take, we will focus
 on the following:</p>
 <ul>
@@ -669,8 +863,9 @@ class="citation" data-cites="maujac">@maujac</span></a>) on
 <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 </section>
-<section id="the-label-elements" class="level3">
-<h3>The <code>&lt;label&gt;</code> elements</h3>
+<section id="the-label-elements" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2"><span class="header-section-number">2.2.2</span>
+The <code>&lt;label&gt;</code> elements</h3>
 <p>The <a
 href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label"><code>&lt;label&gt;</code>
 element</a> associates a text caption with an <code>&lt;input&gt;</code>
@@ -690,8 +885,9 @@ the form input.</li>
 <li>Clicking on the label will focus/activate the input.</li>
 </ul>
 </section>
-<section id="input-size-interaction" class="level3">
-<h3><code>&lt;input&gt;</code> size &amp; interaction</h3>
+<section id="input-size-interaction" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3"><span class="header-section-number">2.2.3</span>
+<code>&lt;input&gt;</code> size &amp; interaction</h3>
 <p>The <a
 href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/size"><code>size</code>
 attribute</a> specifies how much of the input is shown. Has similar
@@ -718,8 +914,9 @@ class="citation" data-cites="maujac">@maujac</span></a>) on
 </iframe>
 </section>
 </section>
-<section id="the-textarea-element" class="level2">
-<h2>The <code>&lt;textarea&gt;</code> Element</h2>
+<section id="the-textarea-element" class="level2" data-number="2.3">
+<h2 data-number="2.3"><span class="header-section-number">2.3</span> The
+<code>&lt;textarea&gt;</code> Element</h2>
 <p><a
 href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">The
 <code>&lt;textare&gt;</code> element</a> provides a multi-line text
@@ -732,8 +929,10 @@ class="citation" data-cites="maujac">@maujac</span></a>) on
 <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 </section>
-<section id="placeholder-and-default-text" class="level2">
-<h2>Placeholder and default text</h2>
+<section id="placeholder-and-default-text" class="level2"
+data-number="2.4">
+<h2 data-number="2.4"><span class="header-section-number">2.4</span>
+Placeholder and default text</h2>
 <p>To define the default value of an <a
 href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a>
 element you have to use the <code>value</code> attribute:</p>
@@ -746,8 +945,9 @@ class="citation" data-cites="maujac">@maujac</span></a>) on
 <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 </figure>
-<section id="the-select-element" class="level3">
-<h3>The <code>&lt;select&gt;</code> element</h3>
+<section id="the-select-element" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1"><span class="header-section-number">2.4.1</span>
+The <code>&lt;select&gt;</code> element</h3>
 <p>The <a
 href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code>
 element</a> is used to create a drop-down list of options.</p>
@@ -769,8 +969,11 @@ same.</p>
 <p>Depending on the browser and the <code>action</code> attribute of the
 <code>&lt;form&gt;</code>, the page might quickly refresh, which can be
 hard to notice.</p>
-<section id="submission-with-input-typebutton" class="level4">
-<h4>Submission with input type=“button”</h4>
+<section id="submission-with-input-typebutton" class="level4"
+data-number="2.4.1.1">
+<h4 data-number="2.4.1.1"><span
+class="header-section-number">2.4.1.1</span> Submission with input
+type=“button”</h4>
 <p>The <code>&lt;input&gt;</code> element can be used as a button in
 order to submit the form. This happens automatically as soon as the
 button is clicked.</p>
@@ -782,8 +985,10 @@ class="citation" data-cites="maujac">@maujac</span></a>) on
 <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 </section>
-<section id="submission-with-button" class="level4">
-<h4>Submission with button</h4>
+<section id="submission-with-button" class="level4"
+data-number="2.4.1.2">
+<h4 data-number="2.4.1.2"><span
+class="header-section-number">2.4.1.2</span> Submission with button</h4>
 <p>The <a
 href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button"><code>&lt;button&gt;</code></a>
 element can also be used to submit the form. The main difference between
@@ -801,8 +1006,9 @@ data-cites="maujac">@maujac</span></a>) on
 </section>
 </section>
 </section>
-<section id="built-in-form-validation" class="level2">
-<h2>Built-in form validation</h2>
+<section id="built-in-form-validation" class="level2" data-number="2.5">
+<h2 data-number="2.5"><span class="header-section-number">2.5</span>
+Built-in form validation</h2>
 <p>One of the most significant features of <a
 href="https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types">HTML5
 form controls</a> is the ability to validate most user data without
@@ -843,12 +1049,14 @@ click has been processed. See DOM Events for more.</p>
 <hr />
 </section>
 </section>
-<section id="knowledge-check" class="level1">
-<h1>Knowledge Check</h1>
+<section id="knowledge-check" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span>
+Knowledge Check</h1>
 <p>Stay tuned for more information!</p>
 </section>
-<section id="readings" class="level1">
-<h1>Readings</h1>
+<section id="readings" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span>
+Readings</h1>
 <ul>
 <li><a
 href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Basic_native_form_controls">Basic
@@ -864,8 +1072,9 @@ form validation</a> by MDN web docs</li>
 tutorial</a></li>
 </ul>
 </section>
-<section id="exercises" class="level1">
-<h1>Exercises</h1>
+<section id="exercises" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span>
+Exercises</h1>
 <p>(Not part of an assignment, just to study for Test 2) Complete the
 following exercises from W3C Schools:</p>
 <ol type="1">
@@ -883,7 +1092,7 @@ href="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_form_at
 Attributes</a></li>
 </ol>
 </section>
-<section id="footnotes" class="footnotes footnotes-end-of-document"
+<aside id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
 <ol>
@@ -892,11 +1101,11 @@ href="https://maujac.github.io/2W6-UI/#/./wk11/forms">HTML Forms</a> by
 Mauricio Buschinelli from the Winter 2021 offering of this couse.<a
 href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-</section> 
+</aside> 
    </article>
   </main>
-  <footer class="footer">
-   <span class="note-text">
+  <footer id="site-footer" role="contentinfo">
+   <span>
     © 2023 Michael Haaf |
     <a href="../pages/home.html#about-this-website">
      About

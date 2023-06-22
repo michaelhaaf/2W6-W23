@@ -26,21 +26,18 @@
    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
   <link href="../assets/css/style.css" rel="stylesheet"/>
-  <!--[if lt IE 9]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-    <![endif]-->
  </head>
- <body class="page-container base">
-  <header class="header">
-   <div class="course-info-decoration">
-    <button class="theme-toggle-icon" id="theme-toggle-icon">
-     Theme toggle icon
+ <body class="base">
+  <header role="banner">
+   <div class="">
+    <button aria-hidden="true" aria-label="theme-toggle-icon" id="theme-toggle-icon">
+     X
     </button>
     <div>
      <h1>
       User Interfaces
      </h1>
-     <span class="note-text">
+     <span>
       420-2W6 | Winter 2023 | as taught by
       <a href="https://github.com/michaelhaaf/2W6-W23">
        Michael Haaf
@@ -48,357 +45,586 @@
      </span>
     </div>
    </div>
-   <div>
-    <span class="header-description note-text">
+   <div class="image-attribution">
+    <span>
      Image:
      <a href="https://www.guggenheim.org/artwork/movement/constructivism">
      </a>
     </span>
    </div>
   </header>
-  <aside class="aside--site surface">
-   <nav class="nav nav--site" id="site-navigation">
-    <h2>
-     Site Navigation
-    </h2>
-    <ul>
-     <li>
-      <a href="../pages/home.html" id="site-home">
-       <img alt="" class="icon" src="../assets/images/home.svg"/>
-       <span class="icon-text">
-        Home
-       </span>
-      </a>
-     </li>
-     <li>
-      <a href="../pages/course-outline.html" id="site-course-outline">
-       <img alt="" class="icon" src="../assets/images/outline.svg"/>
-       <span class="icon-text">
-        Course Outline
-       </span>
-      </a>
-     </li>
-     <li>
-      <a href="../pages/calendar.html" id="site-calendar">
-       <img alt="" class="icon" src="../assets/images/calendar.svg"/>
-       <span class="icon-text">
-        Calendar
-       </span>
-      </a>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-lectures" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/lectures.svg"/>
-       <span class="icon-text">
-        Lectures
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="lecture-listing">
-       <li>
-        <a href="../lectures/week01.html">
-         Week 01
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week02.html">
-         Week 02
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week03.html">
-         Week 03
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week04.html">
-         Week 04
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week05.html">
-         Week 05
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week06.html">
-         Week 06
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week07.html">
-         Week 07
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week09.html">
-         Week 09
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week10.html">
-         Week 10
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week11.html">
-         Week 11
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week12.html">
-         Week 12
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week13.html">
-         Week 13
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week14.html">
-         Week 14
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-tutorials" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/tutorials.svg"/>
-       <span class="icon-text">
-        Tutorials
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="tutorial-listing">
-       <li>
-        <a href="../pages/tutorials.html#week-01-exercises">
-         week 01 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-04-exercises">
-         week 04 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-06-exercises">
-         week 06 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-10-exercises">
-         week 10 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-11-exercises">
-         week 11 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-15-tutorial">
-         week 15 
-tutorial
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-04-solutions">
-         week 04 
-solutions
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-06-solutions">
-         week 06 
-solutions
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-10-solutions">
-         week 10 
-solutions
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-assignments" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/assignments.svg"/>
-       <span class="icon-text">
-        Assignments
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="assignment-listing">
-       <li>
-        <a href="../pages/assignments.html#milestone-1-2">
-         milestone 1 &amp;
- 2
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-1">
-         lab 1
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-2">
-         lab 2
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-3">
-         lab 3
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-4">
-         lab 4
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-1-solution">
-         lab 1 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-2-solution">
-         lab 2 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-3-solution">
-         lab 3 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-4-solution">
-         lab 4 
-solution
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </nav>
-  </aside>
-  <aside class="aside--page">
-   <nav class="nav nav--page" id="TOC" role="doc-toc">
-    <h2 id="toc-title">
-     Page navigation
-    </h2>
-    <ul>
-     <li>
-      <a href="#project" id="toc-project">
-       Project
-      </a>
-      <ul>
-       <li>
-        <a href="#milestone-1-2" id="toc-milestone-1-2">
-         Milestone 1 &amp;
+  <nav aria-labelledby="course-content" class="tooltip vertical sticky-container" role="navigation">
+   <h2 class="visually-hidden" id="course-content">
+    Course Content
+   </h2>
+   <ul class="sticky" role="menu">
+    <li>
+     <a aria-label="Link to Home" href="../pages/home.html" role="menuitem" style="--icon: url(../images/home.svg)">
+      <span>
+       Home
+      </span>
+     </a>
+    </li>
+    <li>
+     <a aria-label="Link to Course Outline" href="../pages/course-outline.html" role="menuitem" style="--icon: url(../images/outline.svg)">
+      <span>
+       Course outline
+      </span>
+     </a>
+    </li>
+    <li>
+     <a aria-label="Link to Calendar" href="../pages/calendar.html" role="menuitem" style="--icon: url(../images/calendar.svg)">
+      <span>
+       Calendar
+      </span>
+     </a>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Lectures" href="../pages/lectures.html" role="menuitem" style="--icon: url(../images/lectures.svg)">
+      <span>
+       Lectures
+      </span>
+     </a>
+     <button aria-controls="lecture-listing" aria-expanded="false" aria-label="Expand lecture menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right.svg)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="lecture-listing" style="display: none;">
+      <li>
+       <a href="../lectures/week01.html">
+        week01.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week02.html">
+        week02.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week03.html">
+        week03.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week04.html">
+        week04.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week05.html">
+        week05.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week06.html">
+        week06.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week07.html">
+        week07.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week09.html">
+        week09.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week10.html">
+        week10.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week11.html">
+        week11.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week12.html">
+        week12.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week13.html">
+        week13.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week14.html">
+        week14.html
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Tutorials" href="../pages/tutorials.html" role="menuitem" style="--icon: url(../images/tutorials.svg)">
+      <span>
+       Tutorials
+      </span>
+     </a>
+     <button aria-controls="tutorial-listing" aria-expanded="false" aria-label="Expand tutorial menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="tutorial-listing" style="display: none;">
+      <li>
+       <a href="../pages/tutorials.html#week-01-exercises">
+        <span class="toc-section-number">
+         1.1
+        </span>
+        Week 01
+            Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-04-exercises">
+        <span class="toc-section-number">
+         1.2
+        </span>
+        Week 04 Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-foundations">
+        <span class="toc-section-number">
+         1.2.1
+        </span>
+        CSS
+            Foundations
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-box-model">
+        <span class="toc-section-number">
+         1.2.2
+        </span>
+        CSS Box
+            Model
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-typesetting-typography">
+        <span class="toc-section-number">
+         1.2.3
+        </span>
+        CSS Typesetting
+            &amp; Typography
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-06-exercises">
+        <span class="toc-section-number">
+         1.3
+        </span>
+        Week 06 Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-flexbox">
+        <span class="toc-section-number">
+         1.3.1
+        </span>
+        CSS Flexbox
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-10-exercises">
+        <span class="toc-section-number">
+         1.4
+        </span>
+        Week 10 Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-grid">
+        <span class="toc-section-number">
+         1.4.1
+        </span>
+        CSS Grid
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-11-exercises">
+        <span class="toc-section-number">
+         1.5
+        </span>
+        Week 11
+            Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-15-tutorial">
+        <span class="toc-section-number">
+         1.6
+        </span>
+        Week 15
+            Tutorial
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-04-solutions">
+        <span class="toc-section-number">
+         2.1
+        </span>
+        Week 04 Solutions
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-foundations-1">
+        <span class="toc-section-number">
+         2.1.1
+        </span>
+        CSS
+            Foundations
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-box-model-1">
+        <span class="toc-section-number">
+         2.1.2
+        </span>
+        CSS Box
+            Model
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-typesetting-typography-1">
+        <span class="toc-section-number">
+         2.1.3
+        </span>
+        CSS Typesetting
+            &amp; Typography
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-06-solutions">
+        <span class="toc-section-number">
+         2.2
+        </span>
+        Week 06 Solutions
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-flexbox-1">
+        <span class="toc-section-number">
+         2.2.1
+        </span>
+        CSS Flexbox
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-10-solutions">
+        <span class="toc-section-number">
+         2.3
+        </span>
+        Week 10 Solutions
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-grid-1">
+        <span class="toc-section-number">
+         2.3.1
+        </span>
+        CSS Grid
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Assignments" href="../pages/assignments.html" role="menuitem" style="--icon: url(../images/assignments.svg)">
+      <span>
+       Assignments
+      </span>
+     </a>
+     <button aria-controls="assignment-listing" aria-expanded="false" aria-label="Expand assignment menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="assignment-listing" style="display: none;">
+      <li>
+       <a href="../pages/assignments.html#milestone-1-2">
+        Milestone 1 &amp;
 2
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li>
-      <a href="#labs" id="toc-labs">
-       Labs
-      </a>
-      <ul>
-       <li>
-        <a href="#lab-1" id="toc-lab-1">
-         Lab 1
-        </a>
-       </li>
-       <li>
-        <a href="#lab-2" id="toc-lab-2">
-         Lab 2
-        </a>
-       </li>
-       <li>
-        <a href="#lab-3" id="toc-lab-3">
-         Lab 3
-        </a>
-       </li>
-       <li>
-        <a href="#lab-4" id="toc-lab-4">
-         Lab 4
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li>
-      <a href="#solutions" id="toc-solutions">
-       Solutions
-      </a>
-      <ul>
-       <li>
-        <a href="#lab-1-solution" id="toc-lab-1-solution">
-         Lab 1
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-1">
+        Lab 1
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-2">
+        Lab 2
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-3">
+        Lab 3
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-4">
+        Lab 4
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-1-solution">
+        Lab 1
 Solution
-        </a>
-       </li>
-       <li>
-        <a href="#lab-2-solution" id="toc-lab-2-solution">
-         Lab 2
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-2-solution">
+        Lab 2
 Solution
-        </a>
-       </li>
-       <li>
-        <a href="#lab-3-solution" id="toc-lab-3-solution">
-         Lab 3
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-3-solution">
+        Lab 3
 Solution
-        </a>
-       </li>
-       <li>
-        <a href="#lab-4-solution" id="toc-lab-4-solution">
-         Lab 4
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-4-solution">
+        Lab 4
 Solution
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-    <a class="" href="../pages/tutorials.html">
-     <img alt="" class="icon" src="../assets/images/feather-icons/chevron-right.svg"/>
-     <span class="icon-text">
-      Next page...
-     </span>
-    </a>
-   </nav>
-  </aside>
-  <main class="main base">
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </nav>
+  <main class="base" role="main">
    <article class="article">
-    <header id="title-block-header">
-     <h1 class="title">
+    <header class="level1" id="title-block-header">
+     <h1>
       2W6-W23: Assignments
      </h1>
      <div class="abstract">
-      <div class="abstract-title">
+      <h2>
        Assigned lab work and solutions
-      </div>
+      </h2>
       <p>
        Here you will find information about all assigned lab work
       given this semester.
       </p>
      </div>
-     <p class="date">
+     <p>
       Last update:
-      <time datetime="Wed May 10 15:49:45 2023">
-       Wednesday, May 10, 2023
+      <time datetime="Thu Jun 22 19:35:58 2023">
+       Thursday, June 22, 2023
       </time>
      </p>
+     <hr/>
     </header>
+    <section class="overlay-grid sticky-container level1">
+     <nav aria-labelledby="page-controls-title" class="margin surface menu sticky tooltip">
+      <h2 class="visually-hidden" id="page-controls-title">
+       Page Controls
+      </h2>
+      <ul role="menubar">
+       <li>
+        <a href="#title-block-header" role="menuitem" style="--icon: url(../images/feather-icons/chevron-up.svg)">
+         <span>
+          Scroll to beginning
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="#site-footer" role="menuitem" style="--icon: url(../images/feather-icons/chevron-down.svg)">
+         <span>
+          Scroll to end
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="../pages/tutorials.html" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right.svg)">
+         <span>
+          Next page
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="#" role="menuitem" style="--icon: url('../images/feather-icons/printer.svg')">
+         <span>
+          View PDF
+         </span>
+        </a>
+       </li>
+       <li>
+        <button aria-controls="margin-menu" aria-expanded="false" aria-hidden="true" aria-label="Toggle margin menu" role="menuitem" style="--icon: url(../images/feather-icons/maximize-2.svg)">
+         <span>
+          Toggle margin menu
+         </span>
+        </button>
+       </li>
+      </ul>
+     </nav>
+     <nav aria-labelledby="toc-title" class="margin surface menu sticky toc" id="TOC" role="navigation">
+      <h2 id="toc-title">
+       Contents
+      </h2>
+      <ul>
+       <li>
+        <a href="#project" id="toc-project">
+         <span class="toc-section-number">
+          1
+         </span>
+         Project
+        </a>
+        <ul>
+         <li>
+          <a href="#milestone-1-2" id="toc-milestone-1-2">
+           <span class="toc-section-number">
+            1.1
+           </span>
+           Milestone 1 &amp; 2
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <a href="#labs" id="toc-labs">
+         <span class="toc-section-number">
+          2
+         </span>
+         Labs
+        </a>
+        <ul>
+         <li>
+          <a href="#lab-1" id="toc-lab-1">
+           <span class="toc-section-number">
+            2.1
+           </span>
+           Lab 1
+          </a>
+          <ul>
+           <li>
+            <a href="#creating-a-basic-website-with-html-boilerplate" id="toc-creating-a-basic-website-with-html-boilerplate">
+             <span class="toc-section-number">
+              2.1.1
+             </span>
+             Creating a basic website
+      with HTML boilerplate
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li>
+          <a href="#lab-2" id="toc-lab-2">
+           <span class="toc-section-number">
+            2.2
+           </span>
+           Lab 2
+          </a>
+          <ul>
+           <li>
+            <a href="#structing-and-styling-websites-with-html-css" id="toc-structing-and-styling-websites-with-html-css">
+             <span class="toc-section-number">
+              2.2.1
+             </span>
+             Structing and styling
+      websites with HTML &amp; CSS
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li>
+          <a href="#lab-3" id="toc-lab-3">
+           <span class="toc-section-number">
+            2.3
+           </span>
+           Lab 3
+          </a>
+          <ul>
+           <li>
+            <a href="#crafting-layouts-with-css-flexbox-float" id="toc-crafting-layouts-with-css-flexbox-float">
+             <span class="toc-section-number">
+              2.3.1
+             </span>
+             Crafting layouts with CSS
+      Flexbox &amp; Float
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li>
+          <a href="#lab-4" id="toc-lab-4">
+           <span class="toc-section-number">
+            2.4
+           </span>
+           Lab 4
+          </a>
+          <ul>
+           <li>
+            <a href="#responsive-2d-layouts-with-css-grid-and-semantic-html" id="toc-responsive-2d-layouts-with-css-grid-and-semantic-html">
+             <span class="toc-section-number">
+              2.4.1
+             </span>
+             Responsive 2d layouts with
+      CSS Grid and Semantic HTML
+            </a>
+           </li>
+          </ul>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <a href="#solutions" id="toc-solutions">
+         <span class="toc-section-number">
+          3
+         </span>
+         Solutions
+        </a>
+        <ul>
+         <li>
+          <a href="#lab-1-solution" id="toc-lab-1-solution">
+           <span class="toc-section-number">
+            3.1
+           </span>
+           Lab 1 Solution
+          </a>
+         </li>
+         <li>
+          <a href="#lab-2-solution" id="toc-lab-2-solution">
+           <span class="toc-section-number">
+            3.2
+           </span>
+           Lab 2 Solution
+          </a>
+         </li>
+         <li>
+          <a href="#lab-3-solution" id="toc-lab-3-solution">
+           <span class="toc-section-number">
+            3.3
+           </span>
+           Lab 3 Solution
+          </a>
+         </li>
+         <li>
+          <a href="#lab-4-solution" id="toc-lab-4-solution">
+           <span class="toc-section-number">
+            3.4
+           </span>
+           Lab 4 Solution
+          </a>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </nav>
+    </section>
     <hr/>
-    <section class="level1" id="project">
-     <h1>
+    <section class="level1" data-number="1" id="project">
+     <h1 data-number="1">
+      <span class="header-section-number">
+       1
+      </span>
       Project
      </h1>
      <p>
@@ -411,8 +637,11 @@ browser
       </strong>
       tab below.
      </p>
-     <section class="level2" id="milestone-1-2">
-      <h2>
+     <section class="level2" data-number="1.1" id="milestone-1-2">
+      <h2 data-number="1.1">
+       <span class="header-section-number">
+        1.1
+       </span>
        Milestone 1 &amp; 2
       </h2>
       <p>
@@ -430,8 +659,11 @@ browser
 </pre>
      </section>
     </section>
-    <section class="level1" id="labs">
-     <h1>
+    <section class="level1" data-number="2" id="labs">
+     <h1 data-number="2">
+      <span class="header-section-number">
+       2
+      </span>
       Labs
      </h1>
      <p>
@@ -450,16 +682,23 @@ with that lab.
       </strong>
       tab from each section.
      </p>
-     <section class="level2" id="lab-1">
-      <h2>
-       Lab 1
+     <section class="level2" data-number="2.1" id="lab-1">
+      <h2 data-number="2.1">
+       <span class="header-section-number">
+        2.1
+       </span>
+       Lab
+1
       </h2>
       <p>
        In this lab, we build a simple website without any styling using
 boilerplate and fundamenal HTML elements.
       </p>
-      <section class="level3" id="creating-a-basic-website-with-html-boilerplate">
-       <h3>
+      <section class="level3" data-number="2.1.1" id="creating-a-basic-website-with-html-boilerplate">
+       <h3 data-number="2.1.1">
+        <span class="header-section-number">
+         2.1.1
+        </span>
         Creating a basic website with HTML boilerplate
        </h3>
        <p>
@@ -476,9 +715,13 @@ boilerplate and fundamenal HTML elements.
 </pre>
       </section>
      </section>
-     <section class="level2" id="lab-2">
-      <h2>
-       Lab 2
+     <section class="level2" data-number="2.2" id="lab-2">
+      <h2 data-number="2.2">
+       <span class="header-section-number">
+        2.2
+       </span>
+       Lab
+2
       </h2>
       <p>
        This lab introduces
@@ -489,8 +732,11 @@ boilerplate and fundamenal HTML elements.
 structure, as well as fundamental CSS techniques for styling a
 webpage.
       </p>
-      <section class="level3" id="structing-and-styling-websites-with-html-css">
-       <h3>
+      <section class="level3" data-number="2.2.1" id="structing-and-styling-websites-with-html-css">
+       <h3 data-number="2.2.1">
+        <span class="header-section-number">
+         2.2.1
+        </span>
         Structing and styling websites with HTML &amp; CSS
        </h3>
        <p>
@@ -517,17 +763,24 @@ webpage.
 </pre>
       </section>
      </section>
-     <section class="level2" id="lab-3">
-      <h2>
-       Lab 3
+     <section class="level2" data-number="2.3" id="lab-3">
+      <h2 data-number="2.3">
+       <span class="header-section-number">
+        2.3
+       </span>
+       Lab
+3
       </h2>
       <p>
        This lab tests your ability to create professional website layouts
 using strong HTML/CSS fundamentals, as well as intermediate techniques
 like Float and Flexbox.
       </p>
-      <section class="level3" id="crafting-layouts-with-css-flexbox-float">
-       <h3>
+      <section class="level3" data-number="2.3.1" id="crafting-layouts-with-css-flexbox-float">
+       <h3 data-number="2.3.1">
+        <span class="header-section-number">
+         2.3.1
+        </span>
         Crafting layouts with CSS Flexbox &amp; Float
        </h3>
        <p>
@@ -550,16 +803,23 @@ like Float and Flexbox.
 </pre>
       </section>
      </section>
-     <section class="level2" id="lab-4">
-      <h2>
-       Lab 4
+     <section class="level2" data-number="2.4" id="lab-4">
+      <h2 data-number="2.4">
+       <span class="header-section-number">
+        2.4
+       </span>
+       Lab
+4
       </h2>
       <p>
        This lab builds upon everything we have learned so far to create a
 fascimile website from a design found online.
       </p>
-      <section class="level3" id="responsive-2d-layouts-with-css-grid-and-semantic-html">
-       <h3>
+      <section class="level3" data-number="2.4.1" id="responsive-2d-layouts-with-css-grid-and-semantic-html">
+       <h3 data-number="2.4.1">
+        <span class="header-section-number">
+         2.4.1
+        </span>
         Responsive 2d layouts with CSS Grid and Semantic HTML
        </h3>
        <p>
@@ -586,13 +846,20 @@ fascimile website from a design found online.
       </section>
      </section>
     </section>
-    <section class="level1" id="solutions">
-     <h1>
+    <section class="level1" data-number="3" id="solutions">
+     <h1 data-number="3">
+      <span class="header-section-number">
+       3
+      </span>
       Solutions
      </h1>
-     <section class="level2" id="lab-1-solution">
-      <h2>
-       Lab 1 Solution
+     <section class="level2" data-number="3.1" id="lab-1-solution">
+      <h2 data-number="3.1">
+       <span class="header-section-number">
+        3.1
+       </span>
+       Lab
+1 Solution
       </h2>
       <p>
        Solution files:
@@ -610,9 +877,13 @@ fascimile website from a design found online.
 	    └── <a href=".././assignments/lab1solution/images/pexels-pixabay-34231.jpg">pexels-pixabay-34231.jpg</a>
 </pre>
      </section>
-     <section class="level2" id="lab-2-solution">
-      <h2>
-       Lab 2 Solution
+     <section class="level2" data-number="3.2" id="lab-2-solution">
+      <h2 data-number="3.2">
+       <span class="header-section-number">
+        3.2
+       </span>
+       Lab
+2 Solution
       </h2>
       <p>
        Solution files:
@@ -644,9 +915,13 @@ fascimile website from a design found online.
 	    └── <a href=".././assignments/lab2solution/images/turtle4.jpg">turtle4.jpg</a>
 </pre>
      </section>
-     <section class="level2" id="lab-3-solution">
-      <h2>
-       Lab 3 Solution
+     <section class="level2" data-number="3.3" id="lab-3-solution">
+      <h2 data-number="3.3">
+       <span class="header-section-number">
+        3.3
+       </span>
+       Lab
+3 Solution
       </h2>
       <p>
        Solution files:
@@ -674,9 +949,13 @@ fascimile website from a design found online.
 	    └── <a href=".././assignments/lab3solution/images/stores.svg">stores.svg</a>
 </pre>
      </section>
-     <section class="level2" id="lab-4-solution">
-      <h2>
-       Lab 4 Solution
+     <section class="level2" data-number="3.4" id="lab-4-solution">
+      <h2 data-number="3.4">
+       <span class="header-section-number">
+        3.4
+       </span>
+       Lab
+4 Solution
       </h2>
       <p>
        Solution files:
@@ -701,8 +980,8 @@ contains solutions from W21 and W23 (this semester))
     </section>
    </article>
   </main>
-  <footer class="footer">
-   <span class="note-text">
+  <footer id="site-footer" role="contentinfo">
+   <span>
     © 2023 Michael Haaf |
     <a href="../pages/home.html#about-this-website">
      About

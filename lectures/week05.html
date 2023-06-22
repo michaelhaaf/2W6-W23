@@ -92,21 +92,18 @@
   </style>
     <link href="../assets/css/style.css" rel="stylesheet"/>
     
-  <!--[if lt IE 9]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-    <![endif]-->
  </head>
- <body class="page-container base">
-  <header class="header">
-   <div class="course-info-decoration">
-    <button class="theme-toggle-icon" id="theme-toggle-icon">
-     Theme toggle icon
+ <body class="base">
+  <header role="banner">
+   <div class="">
+    <button aria-hidden="true" aria-label="theme-toggle-icon" id="theme-toggle-icon">
+     X
     </button>
     <div>
      <h1>
       User Interfaces
      </h1>
-     <span class="note-text">
+     <span>
       420-2W6 | Winter 2023 | as taught by
       <a href="https://github.com/michaelhaaf/2W6-W23">
        Michael Haaf
@@ -114,300 +111,370 @@
      </span>
     </div>
    </div>
-   <div>
-    <span class="header-description note-text">
+   <div class="image-attribution">
+    <span>
      Image:
      <a href="https://www.guggenheim.org/artwork/movement/constructivism">
      </a>
     </span>
    </div>
   </header>
-  <aside class="aside--site surface">
-   <nav class="nav nav--site" id="site-navigation">
-    <h2>
-     Site Navigation
-    </h2>
-    <ul>
-     <li>
-      <a href="../pages/home.html" id="site-home">
-       <img alt="" class="icon" src="../assets/images/home.svg"/>
-       <span class="icon-text">
-        Home
-       </span>
-      </a>
-     </li>
-     <li>
-      <a href="../pages/course-outline.html" id="site-course-outline">
-       <img alt="" class="icon" src="../assets/images/outline.svg"/>
-       <span class="icon-text">
-        Course Outline
-       </span>
-      </a>
-     </li>
-     <li>
-      <a href="../pages/calendar.html" id="site-calendar">
-       <img alt="" class="icon" src="../assets/images/calendar.svg"/>
-       <span class="icon-text">
-        Calendar
-       </span>
-      </a>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-lectures" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/lectures.svg"/>
-       <span class="icon-text">
-        Lectures
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="lecture-listing">
-       <li>
-        <a href="../lectures/week01.html">
-         Week 01
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week02.html">
-         Week 02
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week03.html">
-         Week 03
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week04.html">
-         Week 04
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week05.html">
-         Week 05
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week06.html">
-         Week 06
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week07.html">
-         Week 07
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week09.html">
-         Week 09
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week10.html">
-         Week 10
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week11.html">
-         Week 11
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week12.html">
-         Week 12
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week13.html">
-         Week 13
-        </a>
-       </li>
-       <li>
-        <a href="../lectures/week14.html">
-         Week 14
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-tutorials" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/tutorials.svg"/>
-       <span class="icon-text">
-        Tutorials
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="tutorial-listing">
-       <li>
-        <a href="../pages/tutorials.html#week-01-exercises">
-         week 01 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-04-exercises">
-         week 04 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-06-exercises">
-         week 06 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-10-exercises">
-         week 10 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-11-exercises">
-         week 11 
-exercises
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-15-tutorial">
-         week 15 
-tutorial
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-04-solutions">
-         week 04 
-solutions
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-06-solutions">
-         week 06 
-solutions
-        </a>
-       </li>
-       <li>
-        <a href="../pages/tutorials.html#week-10-solutions">
-         week 10 
-solutions
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li>
-      <button class="dropbtn" id="site-assignments" tabindex="0">
-       <img alt="" class="icon" src="../assets/images/assignments.svg"/>
-       <span class="icon-text">
-        Assignments
-       </span>
-      </button>
-      <ul class="dropdown hidden" id="assignment-listing">
-       <li>
-        <a href="../pages/assignments.html#milestone-1-2">
-         milestone 1 &amp;
- 2
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-1">
-         lab 1
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-2">
-         lab 2
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-3">
-         lab 3
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-4">
-         lab 4
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-1-solution">
-         lab 1 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-2-solution">
-         lab 2 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-3-solution">
-         lab 3 
-solution
-        </a>
-       </li>
-       <li>
-        <a href="../pages/assignments.html#lab-4-solution">
-         lab 4 
-solution
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </nav>
-  </aside>
-    <aside class="aside--page">
-   <nav class="nav nav--page" id="TOC" role="doc-toc">
-        <h2 id="toc-title">
-     Lecture navigation
-    </h2>
-         <a class="" href="../lectures/week04.html">
-     <img alt="" class="icon" src="../assets/images/feather-icons/chevron-left.svg"/>
-     <span class="icon-text">
-      Previous page...
-     </span>
-    </a>
-     <ul>
-<li><a href="#lesson-overview" id="toc-lesson-overview">Lesson
-Overview</a></li>
-<li><a href="#floats" id="toc-floats">Floats</a>
-<ul>
-<li><a href="#default-html-layout-behavior"
-id="toc-default-html-layout-behavior">Default HTML Layout
-Behavior</a></li>
-<li><a href="#floating-an-element" id="toc-floating-an-element">Floating
-an Element</a></li>
-<li><a href="#nested-floating-elements"
-id="toc-nested-floating-elements">Nested floating elements</a></li>
-<li><a href="#multiple-floats" id="toc-multiple-floats">Multiple
-floats</a></li>
-<li><a href="#clearing-floats" id="toc-clearing-floats">Clearing
-Floats</a></li>
-<li><a href="#hiding-overflow" id="toc-hiding-overflow">Hiding
-Overflow</a></li>
-<li><a href="#example-float-based-layouts"
-id="toc-example-float-based-layouts">Example Float-based
-Layouts</a></li>
-</ul></li>
-<li><a href="#knowledge-check" id="toc-knowledge-check">Knowledge
-Check</a></li>
-<li><a href="#exercises" id="toc-exercises">Exercises</a></li>
-</ul>     <a class="" href="../lectures/week06.html">
-     <img alt="" class="icon" src="../assets/images/feather-icons/chevron-right.svg"/>
-     <span class="icon-text">
-      Next page...
-     </span>
-    </a>
-       </nav>
-  </aside>
-    <main class="main base">
+  <nav aria-labelledby="course-content" class="tooltip vertical sticky-container" role="navigation">
+   <h2 class="visually-hidden" id="course-content">
+    Course Content
+   </h2>
+   <ul class="sticky" role="menu">
+    <li>
+     <a aria-label="Link to Home" href="../pages/home.html" role="menuitem" style="--icon: url(../images/home.svg)">
+      <span>
+       Home
+      </span>
+     </a>
+    </li>
+    <li>
+     <a aria-label="Link to Course Outline" href="../pages/course-outline.html" role="menuitem" style="--icon: url(../images/outline.svg)">
+      <span>
+       Course outline
+      </span>
+     </a>
+    </li>
+    <li>
+     <a aria-label="Link to Calendar" href="../pages/calendar.html" role="menuitem" style="--icon: url(../images/calendar.svg)">
+      <span>
+       Calendar
+      </span>
+     </a>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Lectures" href="../pages/lectures.html" role="menuitem" style="--icon: url(../images/lectures.svg)">
+      <span>
+       Lectures
+      </span>
+     </a>
+     <button aria-controls="lecture-listing" aria-expanded="false" aria-label="Expand lecture menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right.svg)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="lecture-listing" style="display: none;">
+      <li>
+       <a href="../lectures/week01.html">
+        week01.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week02.html">
+        week02.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week03.html">
+        week03.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week04.html">
+        week04.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week05.html">
+        week05.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week06.html">
+        week06.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week07.html">
+        week07.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week09.html">
+        week09.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week10.html">
+        week10.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week11.html">
+        week11.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week12.html">
+        week12.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week13.html">
+        week13.html
+       </a>
+      </li>
+      <li>
+       <a href="../lectures/week14.html">
+        week14.html
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Tutorials" href="../pages/tutorials.html" role="menuitem" style="--icon: url(../images/tutorials.svg)">
+      <span>
+       Tutorials
+      </span>
+     </a>
+     <button aria-controls="tutorial-listing" aria-expanded="false" aria-label="Expand tutorial menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="tutorial-listing" style="display: none;">
+      <li>
+       <a href="../pages/tutorials.html#week-01-exercises">
+        <span class="toc-section-number">
+         1.1
+        </span>
+        Week 01
+            Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-04-exercises">
+        <span class="toc-section-number">
+         1.2
+        </span>
+        Week 04 Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-foundations">
+        <span class="toc-section-number">
+         1.2.1
+        </span>
+        CSS
+            Foundations
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-box-model">
+        <span class="toc-section-number">
+         1.2.2
+        </span>
+        CSS Box
+            Model
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-typesetting-typography">
+        <span class="toc-section-number">
+         1.2.3
+        </span>
+        CSS Typesetting
+            &amp; Typography
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-06-exercises">
+        <span class="toc-section-number">
+         1.3
+        </span>
+        Week 06 Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-flexbox">
+        <span class="toc-section-number">
+         1.3.1
+        </span>
+        CSS Flexbox
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-10-exercises">
+        <span class="toc-section-number">
+         1.4
+        </span>
+        Week 10 Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-grid">
+        <span class="toc-section-number">
+         1.4.1
+        </span>
+        CSS Grid
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-11-exercises">
+        <span class="toc-section-number">
+         1.5
+        </span>
+        Week 11
+            Exercises
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-15-tutorial">
+        <span class="toc-section-number">
+         1.6
+        </span>
+        Week 15
+            Tutorial
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-04-solutions">
+        <span class="toc-section-number">
+         2.1
+        </span>
+        Week 04 Solutions
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-foundations-1">
+        <span class="toc-section-number">
+         2.1.1
+        </span>
+        CSS
+            Foundations
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-box-model-1">
+        <span class="toc-section-number">
+         2.1.2
+        </span>
+        CSS Box
+            Model
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-typesetting-typography-1">
+        <span class="toc-section-number">
+         2.1.3
+        </span>
+        CSS Typesetting
+            &amp; Typography
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-06-solutions">
+        <span class="toc-section-number">
+         2.2
+        </span>
+        Week 06 Solutions
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-flexbox-1">
+        <span class="toc-section-number">
+         2.2.1
+        </span>
+        CSS Flexbox
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#week-10-solutions">
+        <span class="toc-section-number">
+         2.3
+        </span>
+        Week 10 Solutions
+       </a>
+      </li>
+      <li>
+       <a href="../pages/tutorials.html#css-grid-1">
+        <span class="toc-section-number">
+         2.3.1
+        </span>
+        CSS Grid
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="has-submenu">
+     <a aria-label="Link to Assignments" href="../pages/assignments.html" role="menuitem" style="--icon: url(../images/assignments.svg)">
+      <span>
+       Assignments
+      </span>
+     </a>
+     <button aria-controls="assignment-listing" aria-expanded="false" aria-label="Expand assignment menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right)">
+      <span class="visually-hidden">
+       Expand submenu
+      </span>
+     </button>
+     <ul id="assignment-listing" style="display: none;">
+      <li>
+       <a href="../pages/assignments.html#milestone-1-2">
+        Milestone 1 &amp;
+2
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-1">
+        Lab 1
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-2">
+        Lab 2
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-3">
+        Lab 3
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-4">
+        Lab 4
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-1-solution">
+        Lab 1
+Solution
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-2-solution">
+        Lab 2
+Solution
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-3-solution">
+        Lab 3
+Solution
+       </a>
+      </li>
+      <li>
+       <a href="../pages/assignments.html#lab-4-solution">
+        Lab 4
+Solution
+       </a>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </nav>
+  <main class="base" role="main">
    <article class="article">
-         <header id="title-block-header">
-     <h1 class="title">
+         <header class="level1" id="title-block-header">
+     <h1>
       2W6-W23: Week 5 Lecture Notes
      </h1>
             <div class="abstract">
-      <div class="abstract-title">
+      <h2>
        Intro to Layouts and Floats in CSS
-      </div>
+      </h2>
       <p>Last week, we learned a large set of CSS properties for
       applying styles to text, image, and other content elements.</p>
       <p>Now that we have a decent amount of practise selecting and
@@ -418,16 +485,131 @@ Check</a></li>
       the technique most commonly used for the first two decades of web
       development: “Floating” elements.</p>
      </div>
-           <p class="date">
+           <p>
       Last update:
       <time datetime="Sunday, February 19, 2023">
        Sunday, February 19, 2023
       </time>
      </p>
-         </header>
-     <hr />
-<section id="lesson-overview" class="level1">
-<h1>Lesson Overview</h1>
+          <hr/>
+    </header>
+        <section class="overlay-grid sticky-container level1">
+     <nav aria-labelledby="page-controls-title" class="margin surface menu sticky tooltip">
+      <h2 class="visually-hidden" id="page-controls-title">
+       Page Controls
+      </h2>
+      <ul role="menubar">
+       <li>
+        <a href="#title-block-header" role="menuitem" style="--icon: url(../images/feather-icons/chevron-up.svg)">
+         <span>
+          Scroll to beginning
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="#site-footer" role="menuitem" style="--icon: url(../images/feather-icons/chevron-down.svg)">
+         <span>
+          Scroll to end
+         </span>
+        </a>
+       </li>
+              <li>
+        <a href="../lectures/week04.html" role="menuitem" style="--icon: url(../images/feather-icons/chevron-left.svg)">
+         <span>
+          Previous page
+         </span>
+        </a>
+       </li>
+               <li>
+        <a href="../lectures/week06.html" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right.svg)">
+         <span>
+          Next page
+         </span>
+        </a>
+       </li>
+              <li>
+        <a href="#" role="menuitem" style="--icon: url('../images/feather-icons/printer.svg')">
+         <span>
+          View PDF
+         </span>
+        </a>
+       </li>
+       <li>
+        <button aria-controls="margin-menu" aria-expanded="false" aria-hidden="true" aria-label="Toggle margin menu" role="menuitem" style="--icon: url(../images/feather-icons/maximize-2.svg)">
+         <span>
+          Toggle margin menu
+         </span>
+        </button>
+       </li>
+      </ul>
+     </nav>
+          <nav aria-labelledby="toc-title" class="margin surface menu sticky toc" id="TOC" role="navigation">
+      <h2 id="toc-title">
+       Contents
+      </h2>
+      <ul>
+      <li><a href="#lesson-overview" id="toc-lesson-overview"><span
+      class="toc-section-number">1</span> Lesson Overview</a></li>
+      <li><a href="#floats" id="toc-floats"><span
+      class="toc-section-number">2</span> Floats</a>
+      <ul>
+      <li><a href="#default-html-layout-behavior"
+      id="toc-default-html-layout-behavior"><span
+      class="toc-section-number">2.1</span> Default HTML Layout
+      Behavior</a></li>
+      <li><a href="#floating-an-element"
+      id="toc-floating-an-element"><span
+      class="toc-section-number">2.2</span> Floating an Element</a></li>
+      <li><a href="#nested-floating-elements"
+      id="toc-nested-floating-elements"><span
+      class="toc-section-number">2.3</span> Nested floating
+      elements</a></li>
+      <li><a href="#multiple-floats" id="toc-multiple-floats"><span
+      class="toc-section-number">2.4</span> Multiple floats</a></li>
+      <li><a href="#clearing-floats" id="toc-clearing-floats"><span
+      class="toc-section-number">2.5</span> Clearing Floats</a></li>
+      <li><a href="#hiding-overflow" id="toc-hiding-overflow"><span
+      class="toc-section-number">2.6</span> Hiding Overflow</a></li>
+      <li><a href="#example-float-based-layouts"
+      id="toc-example-float-based-layouts"><span
+      class="toc-section-number">2.7</span> Example Float-based
+      Layouts</a>
+      <ul>
+      <li><a href="#floats-for-full-bleed-layout"
+      id="toc-floats-for-full-bleed-layout"><span
+      class="toc-section-number">2.7.1</span> Floats for Full-Bleed
+      Layout</a></li>
+      <li><a href="#floats-for-equal-width-columns"
+      id="toc-floats-for-equal-width-columns"><span
+      class="toc-section-number">2.7.2</span> Floats for Equal-Width
+      Columns</a></li>
+      <li><a href="#floats-for-grids" id="toc-floats-for-grids"><span
+      class="toc-section-number">2.7.3</span> Floats for Grids</a></li>
+      <li><a href="#a-brief-note-on-naming-conventions"
+      id="toc-a-brief-note-on-naming-conventions"><span
+      class="toc-section-number">2.7.4</span> A Brief Note on Naming
+      Conventions</a></li>
+      <li><a href="#floats-for-content"
+      id="toc-floats-for-content"><span
+      class="toc-section-number">2.7.5</span> Floats for
+      Content</a></li>
+      <li><a href="#hiding-overflow-for-content"
+      id="toc-hiding-overflow-for-content"><span
+      class="toc-section-number">2.7.6</span> Hiding Overflow (For
+      Content)</a></li>
+      </ul></li>
+      </ul></li>
+      <li><a href="#knowledge-check" id="toc-knowledge-check"><span
+      class="toc-section-number">3</span> Knowledge Check</a></li>
+      <li><a href="#exercises" id="toc-exercises"><span
+      class="toc-section-number">4</span> Exercises</a></li>
+      </ul>
+     </nav>
+         </section>
+    <hr />
+<section id="lesson-overview" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Lesson
+Overview</h1>
 <ul>
 <li>How to achieve horizontal positioning in CSS using the
 <code>float</code> property</li>
@@ -438,8 +620,9 @@ elements</li>
 </ul>
 <hr />
 </section>
-<section id="floats" class="level1">
-<h1>Floats</h1>
+<section id="floats" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span>
+Floats</h1>
 <p><em>This lesson was directly adapted from the online HTML/CSS
 learning resource, <a
 href="https://www.internetingishard.com/html-and-css/floats/">Interneting
@@ -473,8 +656,10 @@ gentler introduction to CSS layouts than Flexbox. Instead of being
 overwhelmed with all the possibilities of Flexbox, we’ll get a chance to
 focus more on the process of building up a sophisticated web page
 layout.</p>
-<section id="default-html-layout-behavior" class="level2">
-<h2>Default HTML Layout Behavior</h2>
+<section id="default-html-layout-behavior" class="level2"
+data-number="2.1">
+<h2 data-number="2.1"><span class="header-section-number">2.1</span>
+Default HTML Layout Behavior</h2>
 <p>Floats alter the default layout of a web page, so we should probably
 start by reviewing what exactly that “default” behavior is. Default HTML
 flow was covered in Week 2 and 3, you can currently find our class notes
@@ -502,8 +687,9 @@ with much real content. This is the reason for setting explicit
 <p>It’s worth taking a look at what happens when we shrink an element’s
 width. Try opening the CodePen (click the “Edit on Codepen” button) and
 update the <code>.sidebar</code> rule to match the following:</p>
-<section id="css" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css" class="level6 sourceCode" data-number="2.1.0.0.0.1">
+<h6 class="sourceCode" data-number="2.1.0.0.0.1"><span
+class="header-section-number">2.1.0.0.0.1</span> CSS</h6>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.sidebar</span> {</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">200</span><span class="dt">px</span><span class="op">;</span>                 <span class="co">/* Add this */</span></span>
@@ -515,14 +701,16 @@ the same position. All the blocks are still rendered vertically one
 after another. This is the behavior we’ll be changing with floats.</p>
 </section>
 </section>
-<section id="floating-an-element" class="level2">
-<h2>Floating an Element</h2>
+<section id="floating-an-element" class="level2" data-number="2.2">
+<h2 data-number="2.2"><span class="header-section-number">2.2</span>
+Floating an Element</h2>
 <p>The CSS float property gives us control over the horizontal position
 of an element. By “floating” the sidebar to the left, we’re telling the
 browser to align it to the left side of the page. Go ahead and float our
 sidebar with the following line:</p>
-<section id="css-1" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-1" class="level6 sourceCode" data-number="2.2.0.0.0.1">
+<h6 class="sourceCode" data-number="2.2.0.0.0.1"><span
+class="header-section-number">2.2.0.0.0.1</span> CSS</h6>
 <div class="sourceCode" id="cb2"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.sidebar</span> {</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">float</span>: <span class="dv">left</span><span class="op">;</span>                  <span class="co">/* Add this */</span></span>
@@ -558,8 +746,9 @@ results shown in these figures!</p>
 above example. Try experimenting with the following properties as
 well:</p>
 </section>
-<section id="css-2" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-2" class="level6 sourceCode" data-number="2.2.0.0.0.2">
+<h6 class="sourceCode" data-number="2.2.0.0.0.2"><span
+class="header-section-number">2.2.0.0.0.2</span> CSS</h6>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* styles for block-level elements */</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>float<span class="in">: left</span>;   <span class="co">/* left-aligned */</span></span>
@@ -571,8 +760,9 @@ class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#c
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>text-align<span class="in">: center</span>; </span></code></pre></div>
 </section>
 </section>
-<section id="nested-floating-elements" class="level2">
-<h2>Nested floating elements</h2>
+<section id="nested-floating-elements" class="level2" data-number="2.3">
+<h2 data-number="2.3"><span class="header-section-number">2.3</span>
+Nested floating elements</h2>
 <p>Floated boxes always align to the left or right of their
 <strong>parent</strong> element – not their grandparent, not the
 <code>&lt;body&gt;</code> element, but their immediate parent.</p>
@@ -584,8 +774,9 @@ window. This is why our sidebar floats to the far left of the page.</p>
 of this element will float to the far left of <strong>its parent
 element</strong>. Try inserting the code below into the CodePen we have
 been practising with.</p>
-<section id="css-3" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-3" class="level6 sourceCode" data-number="2.3.0.0.0.1">
+<h6 class="sourceCode" data-number="2.3.0.0.0.1"><span
+class="header-section-number">2.3.0.0.0.1</span> CSS</h6>
 <div class="sourceCode" id="cb4"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.page</span> {</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">900</span><span class="dt">px</span><span class="op">;</span> <span class="co">/* Add this line */</span></span>
@@ -603,12 +794,14 @@ our simple example demonstrates the universal truth of CSS layouts:
 etc.</em></p>
 </section>
 </section>
-<section id="multiple-floats" class="level2">
-<h2>Multiple floats</h2>
+<section id="multiple-floats" class="level2" data-number="2.4">
+<h2 data-number="2.4"><span class="header-section-number">2.4</span>
+Multiple floats</h2>
 <p>Let’s examine our current magazine-style float a little bit more by
 adding an explicit width to our <code>.content</code> block:</p>
-<section id="css-4" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-4" class="level6 sourceCode" data-number="2.4.0.0.0.1">
+<h6 class="sourceCode" data-number="2.4.0.0.0.1"><span
+class="header-section-number">2.4.0.0.0.1</span> CSS</h6>
 <div class="sourceCode" id="cb5"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.content</span> {</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">650</span><span class="dt">px</span><span class="op">;</span>                 <span class="co">/* Add this */</span></span>
@@ -639,8 +832,9 @@ different/horizontal flow, we need to make THOSE elements have the
 <code>float</code> property set as well. Add one more line to the
 <code>.content</code> rule:</p>
 </section>
-<section id="css-5" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-5" class="level6 sourceCode" data-number="2.4.0.0.0.2">
+<h6 class="sourceCode" data-number="2.4.0.0.0.2"><span
+class="header-section-number">2.4.0.0.0.2</span> CSS</h6>
 <div class="sourceCode" id="cb6"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.content</span> {</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">float</span>: <span class="dv">left</span><span class="op">;</span>            <span class="co">/* Add this line */</span></span>
@@ -673,8 +867,9 @@ that wasn’t floated (i.e., the <code>.menu</code>).</p>
 <p>We can see this more clearly by adding a red border around our
 <code>.page</code> element:</p>
 </section>
-<section id="css-6" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-6" class="level6 sourceCode" data-number="2.4.0.0.0.3">
+<h6 class="sourceCode" data-number="2.4.0.0.0.3"><span
+class="header-section-number">2.4.0.0.0.3</span> CSS</h6>
 <div class="sourceCode" id="cb7"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.page</span> {</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">900</span><span class="dt">px</span><span class="op">;</span></span>
@@ -687,16 +882,18 @@ even there. There are two ways to fix this: <strong>clearing a
 float</strong> and <strong>hiding overflow</strong>.</p>
 </section>
 </section>
-<section id="clearing-floats" class="level2">
-<h2>Clearing Floats</h2>
+<section id="clearing-floats" class="level2" data-number="2.5">
+<h2 data-number="2.5"><span class="header-section-number">2.5</span>
+Clearing Floats</h2>
 <p>“Clearing” a float is when we tell a block to ignore any floats that
 appear before it. <strong>A cleared element always appears after any
 floats</strong>, instead of flowing around floated boxes. It’s like
 forcing a box back into the default vertical flow of the page.</p>
 <p>We can use the clear property to make our <code>.footer</code> drop
 down to the bottom of the page:</p>
-<section id="css-7" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-7" class="level6 sourceCode" data-number="2.5.0.0.0.1">
+<h6 class="sourceCode" data-number="2.5.0.0.0.1"><span
+class="header-section-number">2.5.0.0.0.1</span> CSS</h6>
 <div class="sourceCode" id="cb8"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.footer</span> {</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">clear</span>: <span class="dv">both</span><span class="op">;</span>            <span class="co">/* Add this */</span></span>
@@ -728,8 +925,9 @@ colors filling the entire browser window.</p>
 <code>.page</code> element. Change the <code>HTML</code> in the CodePen
 to match the following:</p>
 </section>
-<section id="html" class="level6 sourceCode">
-<h6 class="sourceCode">HTML</h6>
+<section id="html" class="level6 sourceCode" data-number="2.5.0.0.0.2">
+<h6 class="sourceCode" data-number="2.5.0.0.0.2"><span
+class="header-section-number">2.5.0.0.0.2</span> HTML</h6>
 <div class="sourceCode" id="cb9"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;menu&#39;</span><span class="kw">&gt;</span>Menu<span class="kw">&lt;/div&gt;</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;page&#39;</span><span class="kw">&gt;</span></span>
@@ -747,8 +945,9 @@ they don’t count towards its height. In other words, moving the footer
 outside of the <code>.page</code> container broke our clear fix.</p>
 </section>
 </section>
-<section id="hiding-overflow" class="level2">
-<h2>Hiding Overflow</h2>
+<section id="hiding-overflow" class="level2" data-number="2.6">
+<h2 data-number="2.6"><span class="header-section-number">2.6</span>
+Hiding Overflow</h2>
 <p>Clearing floats only fixes the height issue when there’s an element
 <strong>inside</strong> the container element that we can add a
 <code>clear</code> property to. Now that our footer is outside
@@ -768,8 +967,9 @@ overflow property</a>. The setting the property
 <strong>recognize the height of any floated elements within that
 container div</strong>. This is how we can add a background color to our
 <code>.page</code> element and have it actually render:</p>
-<section id="css-8" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-8" class="level6 sourceCode" data-number="2.6.0.0.0.1">
+<h6 class="sourceCode" data-number="2.6.0.0.0.1"><span
+class="header-section-number">2.6.0.0.0.1</span> CSS</h6>
 <div class="sourceCode" id="cb10"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.page</span> {</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">900</span><span class="dt">px</span><span class="op">;</span></span>
@@ -791,12 +991,16 @@ need a way to tell the browser to incorporate floats into the height of
 their container element in order for their backgrounds to show up.</p>
 </section>
 </section>
-<section id="example-float-based-layouts" class="level2">
-<h2>Example Float-based Layouts</h2>
+<section id="example-float-based-layouts" class="level2"
+data-number="2.7">
+<h2 data-number="2.7"><span class="header-section-number">2.7</span>
+Example Float-based Layouts</h2>
 <p>The following subsections show some of the common web layouts that
 can be achieved using what we’ve learned about Floats so far.</p>
-<section id="floats-for-full-bleed-layout" class="level3">
-<h3>Floats for Full-Bleed Layout</h3>
+<section id="floats-for-full-bleed-layout" class="level3"
+data-number="2.7.1">
+<h3 data-number="2.7.1"><span class="header-section-number">2.7.1</span>
+Floats for Full-Bleed Layout</h3>
 <p>In a few of the previous sections, the term <a
 href="https://www.joshwcomeau.com/css/full-bleed/">Full-bleed</a> layout
 was used. This is jargon that comes from the print industry, where
@@ -826,8 +1030,10 @@ properties separately. Putting a box around <code>.page</code> lets
 <code>.page</code> continue centering stuff while giving us a different
 <code>&lt;div&gt;</code> to define a background-color property. Change
 our <code>&lt;body&gt;</code> element to match the following:</p>
-<section id="html-1" class="level6 sourceCode">
-<h6 class="sourceCode">HTML</h6>
+<section id="html-1" class="level6 sourceCode"
+data-number="2.7.1.0.0.1">
+<h6 class="sourceCode" data-number="2.7.1.0.0.1"><span
+class="header-section-number">2.7.1.0.0.1</span> HTML</h6>
 <div class="sourceCode" id="cb11"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;body&gt;</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;menu&#39;</span><span class="kw">&gt;</span>Menu<span class="kw">&lt;/div&gt;</span></span>
@@ -846,8 +1052,9 @@ fill the width of their container. So, we should be able to move our
 <code>background-color</code> declaration to a <code>.container</code>
 rule to get a full-bleed background:</p>
 </section>
-<section id="css-9" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-9" class="level6 sourceCode" data-number="2.7.1.0.0.2">
+<h6 class="sourceCode" data-number="2.7.1.0.0.2"><span
+class="header-section-number">2.7.1.0.0.2</span> CSS</h6>
 <div class="sourceCode" id="cb12"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.page</span> {</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">900</span><span class="dt">px</span><span class="op">;</span></span>
@@ -871,8 +1078,10 @@ everything, and finally left-aligned <code>.sidebar</code> and
 pretty typical of most website layouts.</p>
 </section>
 </section>
-<section id="floats-for-equal-width-columns" class="level3">
-<h3>Floats for Equal-Width Columns</h3>
+<section id="floats-for-equal-width-columns" class="level3"
+data-number="2.7.2">
+<h3 data-number="2.7.2"><span class="header-section-number">2.7.2</span>
+Floats for Equal-Width Columns</h3>
 <p>So far, we’ve seen a sidebar layout, a fixed-width layout, and a
 full-bleed layout. Floats can also be used to create multi-column
 layouts. This works just like our <code>.sidebar</code> and
@@ -885,8 +1094,10 @@ href="https://www.internetingishard.com/html-and-css/clears/">Floats</a></figcap
 </figure>
 <p>Next we’re going to add three equal-width columns to our footer.
 Update the <code>&lt;footer&gt;</code> element, like so:</p>
-<section id="html-2" class="level6 sourceCode">
-<h6 class="sourceCode">HTML</h6>
+<section id="html-2" class="level6 sourceCode"
+data-number="2.7.2.0.0.1">
+<h6 class="sourceCode" data-number="2.7.2.0.0.1"><span
+class="header-section-number">2.7.2.0.0.1</span> HTML</h6>
 <div class="sourceCode" id="cb13"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;footer&#39;</span><span class="kw">&gt;</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;column&#39;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
@@ -896,8 +1107,10 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb13-1"><a href=
 <p>We can style each of these columns just like we laid out the rest of
 our page. Add a new rule to styles.css:</p>
 </section>
-<section id="css-10" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-10" class="level6 sourceCode"
+data-number="2.7.2.0.0.2">
+<h6 class="sourceCode" data-number="2.7.2.0.0.2"><span
+class="header-section-number">2.7.2.0.0.2</span> CSS</h6>
 <div class="sourceCode" id="cb14"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.column</span> {</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">float</span>: <span class="dv">left</span><span class="op">;</span></span>
@@ -920,8 +1133,9 @@ changing the widths of the elements we’re floating, we can get all kinds
 of different layouts, from sidebars to multiple columns to grids.</p>
 </section>
 </section>
-<section id="floats-for-grids" class="level3">
-<h3>Floats for Grids</h3>
+<section id="floats-for-grids" class="level3" data-number="2.7.3">
+<h3 data-number="2.7.3"><span class="header-section-number">2.7.3</span>
+Floats for Grids</h3>
 <p>Want a grid in the footer instead of 3 columns? No problem! When
 there isn’t enough room to stack a floated element horizontally, it pops
 down to the next line. All we need to do is add some more
@@ -932,8 +1146,10 @@ alt="Figure from Interneting is Hard: Floats" />
 <figcaption aria-hidden="true">Figure from Interneting is Hard: <a
 href="https://www.internetingishard.com/html-and-css/clears/">Floats</a></figcaption>
 </figure>
-<section id="html-3" class="level6 sourceCode">
-<h6 class="sourceCode">HTML</h6>
+<section id="html-3" class="level6 sourceCode"
+data-number="2.7.3.0.0.1">
+<h6 class="sourceCode" data-number="2.7.3.0.0.1"><span
+class="header-section-number">2.7.3.0.0.1</span> HTML</h6>
 <div class="sourceCode" id="cb15"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;footer&#39;</span><span class="kw">&gt;</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;column&#39;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
@@ -948,8 +1164,10 @@ already know how to fix that. Let’s replace the footer’s explicit height
 with another <code>overflow: hidden</code> so it can accommodate any
 number of grid items:</p>
 </section>
-<section id="css-11" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-11" class="level6 sourceCode"
+data-number="2.7.3.0.0.2">
+<h6 class="sourceCode" data-number="2.7.3.0.0.2"><span
+class="header-section-number">2.7.3.0.0.2</span> CSS</h6>
 <div class="sourceCode" id="cb16"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.footer</span> {</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">overflow</span>: <span class="dv">hidden</span><span class="op">;</span></span>
@@ -963,8 +1181,10 @@ again, remember that flexbox is a more modern way to create these kinds
 of layouts.</p>
 </section>
 </section>
-<section id="a-brief-note-on-naming-conventions" class="level3">
-<h3>A Brief Note on Naming Conventions</h3>
+<section id="a-brief-note-on-naming-conventions" class="level3"
+data-number="2.7.4">
+<h3 data-number="2.7.4"><span class="header-section-number">2.7.4</span>
+A Brief Note on Naming Conventions</h3>
 <p>The <code>.column</code> class name isn’t exactly accurate anymore.
 This scenario is a good example of why we want to <strong>avoid class
 names that refer to appearance</strong>. “Column” isn’t so great because
@@ -973,8 +1193,9 @@ multiple columns (e.g., for a mobile layout, there would likely only be
 one column). A better name would be something like
 <code>.footer-item</code>, but we’ll leave that for you to fix.</p>
 </section>
-<section id="floats-for-content" class="level3">
-<h3>Floats for Content</h3>
+<section id="floats-for-content" class="level3" data-number="2.7.5">
+<h3 data-number="2.7.5"><span class="header-section-number">2.7.5</span>
+Floats for Content</h3>
 <p>There’s two aspects to defining a web page layout. You have your
 overall page structure, which is what we’ve been focussing on throughout
 this lesson. This is stuff like where you sidebar goes, how big your
@@ -990,8 +1211,10 @@ href="https://www.internetingishard.com/html-and-css/clears/">Floats</a></figcap
 <p>The process for the latter is the same, it’s just nested inside the
 former. Let’s add some dummy content to our <code>.content</code>
 element so we have something to play with:</p>
-<section id="html-4" class="level6 sourceCode">
-<h6 class="sourceCode">HTML</h6>
+<section id="html-4" class="level6 sourceCode"
+data-number="2.7.5.0.0.1">
+<h6 class="sourceCode" data-number="2.7.5.0.0.1"><span
+class="header-section-number">2.7.5.0.0.1</span> HTML</h6>
 <div class="sourceCode" id="cb17"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;container&#39;</span><span class="kw">&gt;</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;page&#39;</span><span class="kw">&gt;</span></span>
@@ -1025,8 +1248,10 @@ our structural divs. For example, let’s create a magazine-style layout
 by floating the image and letting the text flow around it. Add a couple
 more rules to our stylesheet:</p>
 </section>
-<section id="css-12" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-12" class="level6 sourceCode"
+data-number="2.7.5.0.0.2">
+<h6 class="sourceCode" data-number="2.7.5.0.0.2"><span
+class="header-section-number">2.7.5.0.0.2</span> CSS</h6>
 <div class="sourceCode" id="cb18"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.content</span> {</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding</span>: <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
@@ -1050,8 +1275,10 @@ content. More complex layouts may need another layer or two of nesting,
 but the idea is the same.</p>
 </section>
 </section>
-<section id="hiding-overflow-for-content" class="level3">
-<h3>Hiding Overflow (For Content)</h3>
+<section id="hiding-overflow-for-content" class="level3"
+data-number="2.7.6">
+<h3 data-number="2.7.6"><span class="header-section-number">2.7.6</span>
+Hiding Overflow (For Content)</h3>
 <p>You’ll find examples of nested layouts all over the place. For our
 final example, consider a basic user-comment thread. You have an image
 that’s floated left with a heading and some text next to it:</p>
@@ -1063,8 +1290,10 @@ href="https://www.internetingishard.com/html-and-css/clears/">Floats</a></figcap
 </figure>
 <p>Let’s try creating this in our footer. In your favorite
 <code>.column</code> element, add the following:</p>
-<section id="html-5" class="level6 sourceCode">
-<h6 class="sourceCode">HTML</h6>
+<section id="html-5" class="level6 sourceCode"
+data-number="2.7.6.0.0.1">
+<h6 class="sourceCode" data-number="2.7.6.0.0.1"><span
+class="header-section-number">2.7.6.0.0.1</span> HTML</h6>
 <div class="sourceCode" id="cb19"><pre
 class="sourceCode html"><code class="sourceCode html"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;column&#39;</span><span class="kw">&gt;</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&#39;avatar&#39;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
@@ -1075,8 +1304,10 @@ class="sourceCode html"><code class="sourceCode html"><span id="cb19-1"><a href=
 <span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
 <p>And the corresponding CSS rules:</p>
 </section>
-<section id="css-13" class="level6 sourceCode">
-<h6 class="sourceCode">CSS</h6>
+<section id="css-13" class="level6 sourceCode"
+data-number="2.7.6.0.0.2">
+<h6 class="sourceCode" data-number="2.7.6.0.0.2"><span
+class="header-section-number">2.7.6.0.0.2</span> CSS</h6>
 <div class="sourceCode" id="cb20"><pre
 class="sourceCode css"><code class="sourceCode css"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.avatar</span> {</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">float</span>: <span class="dv">left</span><span class="op">;</span></span>
@@ -1116,8 +1347,9 @@ overflow underneath the floated image.</p>
 </section>
 </section>
 </section>
-<section id="knowledge-check" class="level1">
-<h1>Knowledge Check</h1>
+<section id="knowledge-check" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span>
+Knowledge Check</h1>
 <p>This chapter was our first encounter with realistic web page layouts.
 We learned how to float divs to the left and right, how to deal with
 content after a float, and how to combine floats with the auto-margin
@@ -1132,8 +1364,9 @@ with the <code>float</code> property set?</li>
 from overlapping?</li>
 </ul>
 </section>
-<section id="exercises" class="level1">
-<h1>Exercises</h1>
+<section id="exercises" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span>
+Exercises</h1>
 <p>If you have been coding along with the CodePens given in this
 article, then you are already done the exercise! Otherwise, start with
 the base CodePen given <a href="#default-html-layout-behavior">here</a>.
@@ -1153,8 +1386,8 @@ href="#floats-for-content">Floats for Content</a></li>
 </section> 
    </article>
   </main>
-  <footer class="footer">
-   <span class="note-text">
+  <footer id="site-footer" role="contentinfo">
+   <span>
     © 2023 Michael Haaf |
     <a href="../pages/home.html#about-this-website">
      About
