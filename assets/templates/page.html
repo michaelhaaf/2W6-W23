@@ -30,11 +30,12 @@
  </head>
  <body class="base">
   <header role="banner">
-   <div class="">
-    <button aria-hidden="true" aria-label="theme-toggle-icon" id="theme-toggle-icon">
-     X
-    </button>
-    <div>
+   <div class="to-be-named">
+    <div class="flex-row">
+      <button aria-hidden="true" aria-label="theme-toggle-icon" id="theme-toggle-icon">
+      </button>
+      <div class="">
+
      <h1>
       User Interfaces
      </h1>
@@ -44,17 +45,18 @@
        Michael Haaf
       </a>
      </span>
+
+          </div>
     </div>
+    <div class="image-attribution">
+        <span>
+         <a href="https://www.guggenheim.org/artwork/movement/constructivism">Title</a>, by <a href="#">Author</a> (<a href="#">CC BY ND 4.0</a>)
+        </span>
+       </div>
    </div>
-   <div class="image-attribution">
-    <span>
-     Image:
-     <a href="https://www.guggenheim.org/artwork/movement/constructivism">
-     </a>
-    </span>
-   </div>
+   
   </header>
-  <nav aria-labelledby="course-content" class="tooltip vertical sticky-container" role="navigation">
+  <nav aria-labelledby="course-content" class="tooltip vertical sticky-container surface" role="navigation">
    <h2 class="visually-hidden" id="course-content">
     Course Content
    </h2>
@@ -86,7 +88,7 @@
        Lectures
       </span>
      </a>
-     <button aria-controls="lecture-listing" aria-expanded="false" aria-label="Expand lecture menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right.svg)">
+     <button aria-controls="lecture-listing" aria-expanded="false" aria-label="Expand lecture menu" style="--icon: url(../images/feather-icons/chevron-right.svg)">
       <span class="visually-hidden">
        Expand submenu
       </span>
@@ -165,7 +167,7 @@
        Tutorials
       </span>
      </a>
-     <button aria-controls="tutorial-listing" aria-expanded="false" aria-label="Expand tutorial menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right)">
+     <button aria-controls="tutorial-listing" aria-expanded="false" aria-label="Expand tutorial menu" style="--icon: url(../images/feather-icons/chevron-right.svg)">
       <span class="visually-hidden">
        Expand submenu
       </span>
@@ -340,7 +342,7 @@
        Assignments
       </span>
      </a>
-     <button aria-controls="assignment-listing" aria-expanded="false" aria-label="Expand assignment menu" role="menuitem" style="--icon: url(../images/feather-icons/chevron-right)">
+     <button aria-controls="assignment-listing" aria-expanded="false" aria-label="Expand assignment menu" style="--icon: url(../images/feather-icons/chevron-right.svg)">
       <span class="visually-hidden">
        Expand submenu
       </span>
@@ -434,7 +436,7 @@ Solution
     </header>
     $endif$
     <section class="overlay-grid sticky-container level1">
-     <nav aria-labelledby="page-controls-title" class="margin surface menu sticky tooltip">
+     <nav aria-labelledby="page-controls-title" class="margin surface menu sticky tooltip toolbar horizontal small">
       <h2 class="visually-hidden" id="page-controls-title">
        Page Controls
       </h2>

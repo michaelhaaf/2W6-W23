@@ -5,13 +5,23 @@
 
 :root,
 :root[data-theme="light"] {
-  --base: hsl(30 55% 95%);
-  --surface: hsl(35 100% 98%);
-  --overlay: hsl(28 40% 90%);
-  --muted: hsl(256 10% 60%);
-  --muted-subtle: hsl(250 15% 50%)
-  --subtle: hsl(250 10% 45%);
-  --text: hsl(250 20% 40%);
+  --banner-bg-url: url("../images/light-theme/lissitzky-circles.jpg");
+  --banner-bg-size: cover;
+  --banner-bg-filter: contrast(90%) brightness(125%);
+  --banner-bg-rotation: 180deg;
+
+  --hue-fg: 245deg;
+  --hue-bg: 30deg;
+  --saturation-base: 55%;
+  --brightness-base: 95%;
+
+  --base: hsl(var(--hue-bg) 55% 95%);
+  --surface: hsl(var(--hue-bg) 50% 93%);
+  --overlay: hsl(var(--hue-bg) 40% 90%);
+  --muted: hsl(var(--hue-fg) 10% 60%);
+  --muted-subtle: hsl(var(--hue-fg) 15% 50%)
+  --subtle: hsl(var(--hue-fg) 10% 45%);
+  --text: hsl(var(--hue-fg) 20% 40%);
   --accent-red: hsl(340 35% 45%);
   --accent-gold: hsl(35 80% 30%);
   --accent-orange: hsl(3 50% 45%);
@@ -27,13 +37,20 @@
     saturate(2106%) hue-rotate(291deg) brightness(97%) contrast(97%);
 }
 :root[data-theme="dark"] {
-  --base: hsl(245 25% 20%);
-  --surface: hsl(245 20% 25%);
-  --overlay: hsl(245 15% 30%);
-  --muted: hsl(245 10% 50%);
-  --muted-subtle: hsl(245 10% 60%);
-  --subtle: hsl(245 10% 70%);
-  --text: hsl(245 50% 90%);
+  --banner-path: url("../images/dark-theme/guggenheim-brown.jpg");
+
+  --hue-fg: 245deg;
+  --hue-bg: 245deg;
+  --saturation-base: 25%;
+  --brightness-base: 20%;
+
+  --base: hsl(var(--hue-bg) 25% 20%);
+  --surface: hsl(var(--hue-bg) 20% 25%);
+  --overlay: hsl(var(--hue-bg) 15% 30%);
+  --muted: hsl(var(--hue-fg) 10% 50%);
+  --muted-subtle: hsl(var(--hue-fg) 10% 60%);
+  --subtle: hsl(var(--hue-fg) 10% 70%);
+  --text: hsl(var(--hue-fg) 50% 90%);
   --accent-red: hsl(340 75% 75%);
   --accent-gold: hsl(35 88% 70%);
   --accent-orange: hsl(3 66% 75%);

@@ -78,8 +78,10 @@ html {
 .level1 {
   display: grid;
   row-gap: 2rem;
+  margin-bottom: 2rem;
+  column-gap: 1em;
   grid-auto-rows: min-content;
-  grid-template-columns: 1em [content] 2fr 1em [margin] 1fr 1em; 
+  grid-template-columns: [content] 2fr [margin] 1fr; 
 }
 
 .level1 * {
@@ -93,6 +95,11 @@ html {
 /* NOTE: makes navigation to top of section impossible */
 .level1 :is(section, header, footer, aside, .abstract) {
   display: contents;
+}
+
+h2[data-number] {
+  font-style: italic;
+  border-bottom: 1px solid var(--muted);
 }
 
 /* ------------------------------------------ *\
@@ -147,9 +154,13 @@ html {
   || Objects
 \* ------------------------------------------ */
 
+.header-section-number {
+  display: none;
+}
 
 .toc {
   justify-self: start;
+  padding: 1rem 1em;
 }
 .toc ul,
 .toc ol {
@@ -178,59 +189,42 @@ html {
 
 .menu {
   border: 1px solid var(--muted);
-  padding: 1em;
 }
 
-.tooltip {
-  justify-self: start;
+.horizontal {
+  width: min-content;
 }
 
-
-
-/* inspired by: https://www.youtube.com/watch?v=6hW4YTVi3hc */
-/* invsetigate box shadows: https://www.joshwcomeau.com/css/designing-shadows/ */
-.vertical {
-  font-size: var(--font-size-xxs);
-  line-height: var(--line-height-xxs);
+.horizontal > ul {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: start;
 }
 .vertical > ul {
   display: flex;
   flex-flow: column nowrap;
   align-items: start;
-  justify-content: space-between;
+  justify-content: start;
 }
-.vertical li {
-  padding: 0.5rem 0.5rem;
-  background-color: var(--surface);
-  border-right: 1px solid var(--muted);
+
+
+.tooltip {
+  font-size: var(--font-size-xxs);
+  line-height: var(--line-height-xxs);
 }
-.vertical li:first-child {
-  border-top: 1px solid var(--muted);
-}
-.vertical li:last-child {
-  border-bottom: 1px solid var(--muted);
-}
-.vertical li[aria-current="page"] {
-  background-color: var(--base);
-  border-right: initial;
-  border-top: 1px solid var(--muted);
-  border-bottom: 1px solid var(--muted);
-}
-.vertical li:first-child[aria-current="page"] {
-  border-top: initial;
-}
-.vertical li:last-child[aria-current="page"] {
-  border-bottom: initial;
-}
-.vertical a {
+.tooltip [role="menuitem"] {
   display: block;
   position: relative;
+  z-index: 99;
   height: 4rem;
   width: 4rem;
-  border-radius: 0.5rem;
-  z-index: 99;
 }
-.vertical a::before {
+.tooltip.small [role="menuitem"] { 
+  height: 3rem;
+  width: 3rem;
+}
+.tooltip [role="menuitem"]::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -244,12 +238,12 @@ html {
   z-index: -1;
   filter: var(--svg-filter-base);
 }
-.vertical a:hover,
-.vertical a:focus,
-.vertical a:active {
+.tooltip [role="menuitem"]:hover,
+.tooltip [role="menuitem"]:focus,
+.tooltip [role="menuitem"]:active {
   background-color: hsl(var(--hsl-base) / 1);
 }
-.vertical a span {
+.tooltip [role="menuitem"] span {
   background-color: hsl(var(--hsl-surface) / 1);
   color: var(--text);
   padding: 0.5rem 1rem;
@@ -262,14 +256,15 @@ html {
   opacity: 0;
   transform: translateY(-50%) scale(var(--scale));
   transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 99;
 }
-.vertical a:hover span, 
-.vertical a:focus span, 
-.vertical a:active span {
+.tooltip [role="menuitem"]:hover span, 
+.tooltip [role="menuitem"]:focus span, 
+.tooltip [role="menuitem"]:active span {
   --scale: 1;
   opacity: 1;
 }
-.vertical a span::before {
+.tooltip [role="menuitem"] span::before {
   content: "";
   position: absolute;
   width: 0.5rem;
@@ -281,11 +276,54 @@ html {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.header-section-number {
-  display: none;
+
+
+
+/* inspired by: https://www.youtube.com/watch?v=6hW4YTVi3hc */
+/* investigate box shadows: https://www.joshwcomeau.com/css/designing-shadows/ */
+
+.vertical li {
+  padding: 0.5rem 0.5rem;
+  border-right: 1px solid var(--muted);
+  overflow: visible;
+  z-index: 10;
+}
+.vertical li[aria-current="page"] {
+  background-color: var(--base);
+  border-right: initial;
+  box-shadow: 
+    inset 8px 8px 8px -8px hsl(var(--hue-fg) 0% 0% / 0.5),
+    inset 8px -8px 8px -8px hsl(var(--hue-fg) 0% 0% / 0.5);
+}
+.vertical li:not([aria-current="page"]) {
+  box-shadow: 0px 0px 10px 0px hsl(var(--hue-fg) 0% 0% / 1);
+  box-shadow: 0 0 8px hsl(var(--hue-fg) 0% 0% / 1);
+  clip-path: inset(0px -8px 0px 0px);
+}
+.vertical li:first-child[aria-current="page"] {
+}
+.vertical li:last-child[aria-current="page"] {
 }
 
 
+.to-be-named {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  font-size: var(--font-size-xxs);
+  line-height: var(--font-size-xxs);
+}
+
+.to-be-named > * {
+  padding: 0.5rem 1em;
+  /* background-color: hsl(var(--hue-bg) var(--saturation-base) var(--brightness-base) / 0.8); */
+  background-color: var(--surface);
+  border: 1px solid var(--muted);
+}
+
+.flex-row {
+  display: flex;
+}
 
 /* ------------------------------------------ *\
   || Containers
@@ -304,6 +342,26 @@ html {
 .overlay {
   background-color: var(--overlay);
   color: var(--text);
+}
+
+header[role="banner"] {
+  position: relative;
+  padding-top: 9rem;
+  border-bottom: 1px solid var(--muted);
+  box-shadow: 0px 8px 8px -8px hsl(var(--hue-fg) 0% 0% / 0.5);
+}
+header[role="banner"]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: var(--banner-bg-url);
+  background-size: var(--banner-bg-size);
+  background-position: +4em -16em;
+  rotate: var(--banner-bg-rotation);
+  z-index: -1;
+  filter: var(--banner-bg-filter);
 }
 
 /* ------------------------------------------ *\
@@ -339,6 +397,7 @@ body {
 
 article {
   position: relative;
+  padding: 2rem 1em;
 }
 
 /* https://stackoverflow.com/a/38994837 */
@@ -354,22 +413,23 @@ article {
   overflow: auto;
   position: sticky;
   align-self: start;
+  max-height: 100vh;
 }
 
-.sticky-container > .sticky {
+.vertical.sticky-container > .sticky {
+  top: 0;
+}
+.overlay-grid.sticky-container > .sticky {
   top: 2rem;
-  max-height: 100vh;
 }
-
-.sticky-container > .sticky:nth-of-type(2) {
-  top: 6rem;
-  max-height: 100vh;
+.overlay-grid.sticky-container > .sticky:nth-of-type(2) {
+  top: 7rem;
 }
 
 .overlay-grid {
   pointer-events: none;
   position: absolute;
-  inset: 0;
+  inset: 2rem 1em;
 }
 
 .overlay-grid .sticky {
