@@ -7,21 +7,21 @@
 :root[data-theme="light"] {
   --banner-bg-url: url("../images/light-theme/lissitzky-circles.jpg");
   --banner-bg-size: cover;
-  --banner-bg-filter: contrast(90%) brightness(125%);
   --banner-bg-rotation: 180deg;
+  --theme-toggle-icon: url("../images/light-theme/theme-toggle-icon.svg");
 
   --hue-fg: 245deg;
   --hue-bg: 30deg;
   --saturation-base: 55%;
   --brightness-base: 95%;
 
-  --base: hsl(var(--hue-bg) 55% 95%);
-  --surface: hsl(var(--hue-bg) 50% 93%);
+  --base: hsl(var(--hue-bg) 65% 95%);
+  --surface: hsl(var(--hue-bg) 55% 92%);
   --overlay: hsl(var(--hue-bg) 40% 90%);
   --muted: hsl(var(--hue-fg) 10% 60%);
-  --muted-subtle: hsl(var(--hue-fg) 15% 50%)
-  --subtle: hsl(var(--hue-fg) 10% 45%);
-  --text: hsl(var(--hue-fg) 20% 40%);
+  --muted-subtle: hsl(var(--hue-fg) 15% 50%);
+  --subtle: hsl(var(--hue-fg) 20% 45%);
+  --text: hsl(var(--hue-fg) 25% 40%);
   --accent-red: hsl(340 35% 45%);
   --accent-gold: hsl(35 80% 30%);
   --accent-orange: hsl(3 50% 45%);
@@ -37,7 +37,10 @@
     saturate(2106%) hue-rotate(291deg) brightness(97%) contrast(97%);
 }
 :root[data-theme="dark"] {
-  --banner-path: url("../images/dark-theme/guggenheim-brown.jpg");
+  --banner-bg-size: cover;
+  --banner-bg-rotation: 0deg;
+  --banner-bg-url: url("../images/dark-theme/guggenheim-brown.jpg");
+  --theme-toggle-icon: url("../images/dark-theme/theme-toggle-icon.svg");
 
   --hue-fg: 245deg;
   --hue-bg: 245deg;
@@ -46,10 +49,10 @@
 
   --base: hsl(var(--hue-bg) 25% 20%);
   --surface: hsl(var(--hue-bg) 20% 25%);
-  --overlay: hsl(var(--hue-bg) 15% 30%);
-  --muted: hsl(var(--hue-fg) 10% 50%);
-  --muted-subtle: hsl(var(--hue-fg) 10% 60%);
-  --subtle: hsl(var(--hue-fg) 10% 70%);
+  --overlay: hsl(var(--hue-bg) 20% 30%);
+  --muted: hsl(var(--hue-fg) 20% 60%);
+  --muted-subtle: hsl(var(--hue-fg) 30% 70%);
+  --subtle: hsl(var(--hue-fg) 40% 80%);
   --text: hsl(var(--hue-fg) 50% 90%);
   --accent-red: hsl(340 75% 75%);
   --accent-gold: hsl(35 88% 70%);

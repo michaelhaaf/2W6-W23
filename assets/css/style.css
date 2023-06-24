@@ -72,7 +72,19 @@ nav ol {
 \* ------------------------------------------ */
 
 html {
-  font-size: 125%;
+  font-size: 100%;
+}
+
+p, li, ol {
+  color: var(--subtle);
+}
+
+a {
+  color: inherit;
+}
+
+strong {
+  color: var(--text);
 }
 
 .level1 {
@@ -156,6 +168,15 @@ h2[data-number] {
 
 .header-section-number {
   display: none;
+}
+
+#theme-toggle-icon {
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  background: center / cover no-repeat var(--theme-toggle-icon);
+  filter: var(--svg-filter-base);
+  font-size: 0;
 }
 
 .toc {
@@ -247,7 +268,6 @@ h2[data-number] {
   background-color: hsl(var(--hsl-surface) / 1);
   color: var(--text);
   padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
   position: absolute;
   left: 150%;
   top: 50%;
@@ -264,41 +284,15 @@ h2[data-number] {
   --scale: 1;
   opacity: 1;
 }
-.tooltip [role="menuitem"] span::before {
-  content: "";
-  position: absolute;
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 0.125rem;
-  background-color: inherit;
-  left: 0;
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-
-
 
 /* inspired by: https://www.youtube.com/watch?v=6hW4YTVi3hc */
-/* investigate box shadows: https://www.joshwcomeau.com/css/designing-shadows/ */
 
 .vertical li {
   padding: 0.5rem 0.5rem;
-  border-right: 1px solid var(--muted);
-  overflow: visible;
-  z-index: 10;
 }
 .vertical li[aria-current="page"] {
-  background-color: var(--base);
-  border-right: initial;
-  box-shadow: 
-    inset 8px 8px 8px -8px hsl(var(--hue-fg) 0% 0% / 0.5),
-    inset 8px -8px 8px -8px hsl(var(--hue-fg) 0% 0% / 0.5);
 }
 .vertical li:not([aria-current="page"]) {
-  box-shadow: 0px 0px 10px 0px hsl(var(--hue-fg) 0% 0% / 1);
-  box-shadow: 0 0 8px hsl(var(--hue-fg) 0% 0% / 1);
-  clip-path: inset(0px -8px 0px 0px);
 }
 .vertical li:first-child[aria-current="page"] {
 }
@@ -315,10 +309,9 @@ h2[data-number] {
 }
 
 .to-be-named > * {
-  padding: 0.5rem 1em;
+  padding: 0.5rem 0.5rem;
   /* background-color: hsl(var(--hue-bg) var(--saturation-base) var(--brightness-base) / 0.8); */
   background-color: var(--surface);
-  border: 1px solid var(--muted);
 }
 
 .flex-row {
@@ -347,8 +340,6 @@ h2[data-number] {
 header[role="banner"] {
   position: relative;
   padding-top: 9rem;
-  border-bottom: 1px solid var(--muted);
-  box-shadow: 0px 8px 8px -8px hsl(var(--hue-fg) 0% 0% / 0.5);
 }
 header[role="banner"]::before {
   content: "";
