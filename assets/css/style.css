@@ -42,7 +42,6 @@
 \* ------------------------------------------ */
 
 @import "reset.css";
-@import "globals.css";
 @import "themes.css";
 @import "fonts.css";
 @import "typography.css";
@@ -62,6 +61,11 @@ nav ol {
 /* ------------------------------------------ *\
   || Global
 \* ------------------------------------------ */
+
+:root {
+  --border-muted: 1px solid hsl(var(--hsl-muted) / 0.5);
+  --border-default: 1px solid var(--muted);
+}
 
 /* ------------------------------------------ *\
   || Themes
@@ -109,9 +113,19 @@ strong {
   display: contents;
 }
 
+.overlay-grid {
+  row-gap: 0;
+  grid-auto-rows: minmax(3rem, min-content);
+}
+
+.abstract h2,
 h2[data-number] {
   font-style: italic;
-  border-bottom: 1px solid var(--muted);
+  border-bottom: var(--border-default);
+}
+
+.abstract {
+  font-style: italic;
 }
 
 /* ------------------------------------------ *\
@@ -170,18 +184,9 @@ h2[data-number] {
   display: none;
 }
 
-#theme-toggle-icon {
-  cursor: pointer;
-  width: 3rem;
-  height: 3rem;
-  background: center / cover no-repeat var(--theme-toggle-icon);
-  filter: var(--svg-filter-base);
-  font-size: 0;
-}
-
 .toc {
   justify-self: start;
-  padding: 1rem 1em;
+  min-width: 14rem;
 }
 .toc ul,
 .toc ol {
@@ -209,11 +214,12 @@ h2[data-number] {
 }
 
 .menu {
-  border: 1px solid var(--muted);
+  border: var(--border-default);
 }
 
 .horizontal {
   width: min-content;
+  max-width: 14rem;
 }
 
 .horizontal > ul {
@@ -234,31 +240,41 @@ h2[data-number] {
   font-size: var(--font-size-xxs);
   line-height: var(--line-height-xxs);
 }
-.tooltip [role="menuitem"] {
+
+
+.icon {
   display: block;
   position: relative;
-  z-index: 99;
-  height: 4rem;
-  width: 4rem;
-}
-.tooltip.small [role="menuitem"] { 
   height: 3rem;
   width: 3rem;
 }
-.tooltip [role="menuitem"]::before {
+.icon.small { 
+  height: 2rem;
+  width: 2rem;
+}
+.icon.large {
+  height: 4rem;
+  width: 4rem;
+}
+.icon::before {
   content: "";
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
+  filter: var(--svg-filter-base);
   background-image: var(--icon);
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
   background-size: 50%;
-  z-index: -1;
-  filter: var(--svg-filter-base);
 }
+.icon.scale-up::before {
+  background-size: 60%;
+}
+.icon.scale-up-2x::before {
+  background-size: 70%;
+}
+
+
 .tooltip [role="menuitem"]:hover,
 .tooltip [role="menuitem"]:focus,
 .tooltip [role="menuitem"]:active {
@@ -291,6 +307,10 @@ h2[data-number] {
   padding: 0.5rem 0.5rem;
 }
 .vertical li[aria-current="page"] {
+  border-top: var(--border-muted);
+  border-bottom: var(--border-muted);
+  border-right: 0px;
+  background-color: var(--base);
 }
 .vertical li:not([aria-current="page"]) {
 }
@@ -309,13 +329,13 @@ h2[data-number] {
 }
 
 .to-be-named > * {
-  padding: 0.5rem 0.5rem;
   /* background-color: hsl(var(--hue-bg) var(--saturation-base) var(--brightness-base) / 0.8); */
   background-color: var(--surface);
 }
 
 .flex-row {
   display: flex;
+  align-items: center;
 }
 
 /* ------------------------------------------ *\
@@ -337,6 +357,18 @@ h2[data-number] {
   color: var(--text);
 }
 
+.text-wrapper {
+  padding: 1rem 1rem;
+}
+.text-wrapper.compact {
+  padding: 0rem 1rem 1rem 1rem;
+}
+
+.to-be-named > * {
+  border: var(--border-muted);
+  border-bottom: 0px;
+}
+
 header[role="banner"] {
   position: relative;
   padding-top: 12rem;
@@ -345,13 +377,15 @@ header[role="banner"]::before {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: -1;
   background-image: var(--banner-bg-url);
   background-size: var(--banner-bg-size);
   background-position: var(--banner-bg-position);
   rotate: var(--banner-bg-rotation);
-  z-index: -1;
   filter: var(--banner-bg-filter);
 }
+
+
 
 /* ------------------------------------------ *\
   || Layout
@@ -386,7 +420,13 @@ body {
 
 article {
   position: relative;
-  padding: 2rem 1em;
+  padding: 0 1rem;
+  border: var(--border-muted);
+}
+
+.vertical {
+  border: var(--border-muted);
+  border-top: 0px;
 }
 
 /* https://stackoverflow.com/a/38994837 */
@@ -408,17 +448,19 @@ article {
 .vertical.sticky-container > .sticky {
   top: 0;
 }
-.overlay-grid.sticky-container > .sticky {
-  top: 2rem;
+.overlay-grid.sticky-container > .sticky:nth-of-type(1) {
+  top: 1rem;
+  align-self: end;
+  border-bottom: 0px;
 }
 .overlay-grid.sticky-container > .sticky:nth-of-type(2) {
-  top: 7rem;
+  top: 3rem;
 }
 
 .overlay-grid {
   pointer-events: none;
   position: absolute;
-  inset: 2rem 1em;
+  inset: 0 1rem;
 }
 
 .overlay-grid .sticky {

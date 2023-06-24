@@ -7,22 +7,61 @@
   --font-size-xs: 1rem; /* 16px */
   --font-size-s: 1.125rem; /* 18px */
   --font-size-m: 1.25rem; /* 20px */
-  --font-size-l: 2rem; /* 32px */
-  --font-size-xl: 3rem; /* 48px */
-  --font-size-xxl: 5rem; /* 80px */
+  --font-size-l: 1.75rem; /* 28px */
+  --font-size-xl: 2rem; /* 32px */
+  --font-size-xxl: 3rem; /* 48px */
+  --font-size-xxxl: 5rem; /* 80px */
   --font-weight-headers: 300;
   --font-weight-subheaders: 300;
   --line-height-xxxs: 1.333; /* 1.333 * 12px = 16px (1/2 line) */
-  --line-height-xxs: 1.423; /* 1.423 * 14px = 20px (5/8 line) */
+  --line-height-xxs: 1.429; /* 1.429 * 14px = 20px (5/8 line) */
   --line-height-xs: 1.5; /* 2 * 16px = 24px (3/4 line) */
   --line-height-s: 1.556; /* 1.556 * 18px = 28px (7/8 line) */
   --line-height-m: 1.6; /* 1.6 * 20px = 32px (1 line) */
-  --line-height-l: 1.25; /* 1.25 * 32px = 40px -- need 0.5rem (8 extra px) to make 1.5 lines, this is added in padding */
-  --line-height-xl: 1.125; /* 1.125 * 48px = 54px -- need 0.625rem (10 extra px) to make 2 lines, this is added in padding */
-  --line-height-xxl: 1.2; /* 1.2 * 80px = 96px (3 lines) */
+  --line-height-l: 1.429; /* 1.429 * 28px = 40px -- need 0.5rem (8 extra px) to make 1.5 lines, this is added in padding */
+  --line-height-xl: 1.25; /* 1.25 * 32px = 40px -- need 0.5rem (8 extra px) to make 1.5 lines, this is added in padding */
+  --line-height-xxl: 1.125; /* 1.125 * 48px = 54px -- need 0.625rem (10 extra px) to make 2 lines, this is added in padding */
+  --line-height-xxxl: 1.2; /* 1.2 * 80px = 96px (3 lines) */
   --half-line-rem: 1rem;
   --one-line-rem: 2rem;
   --two-line-rem: 4rem;
+}
+
+:root {
+  /* Line height set to 32px to allow larger than 16px body font */
+  --space: 2rem;
+  --space-xs: 0.5rem;
+  --space-s: 1rem;
+  --space-m: 2rem;
+  --space-l: 4rem;
+  --space-xl: 8rem;
+  /* Define internal spacing (padding, generally) for components */
+  /* em, unlike rem, will scale to element font -- elements with larger fonts will have proportionally larger inset */
+  --space-inset: 1em;
+  --space-inset-xs: 0.25em;
+  --space-inset-s: 0.5em;
+  --space-inset-m: 1em;
+  --space-inset-l: 2em;
+  --space-inset-xl: 4em;
+  /* Default HTML flow spacing between blocks */
+  --space-stack: 0 0 2rem 0;
+  --space-stack-xs: 0 0 0.5rem 0;
+  --space-stack-s: 0 0 1rem 0;
+  --space-stack-m: 0 0 2rem 0;
+  --space-stack-l: 0 0 4rem 0;
+  --space-stack-xl: 0 0 8rem 0;
+  /* Vertical offset for correcting alignment */
+}
+/* Use space definitions to define layout spacing */
+:root {
+  --margin-figure: var(--space-stack-m);
+  --margin-text: var(--space-stack);
+  --margin-text-m: var(--space-stack-m);
+  --margin-text-l: var(--space-stack-l);
+  --margin-text-xl: var(--space-stack-xl);
+  --padding-text-l: 0.5rem;
+  --padding-text-xl: 0.5rem;
+  --padding-text-xxl: 0.625rem;
 }
 
 body {
@@ -43,16 +82,22 @@ h6 {
   text-wrap: balance;
 }
 
+h1.banner-title {
+  font-size: var(--font-size-xxl);
+  line-height: var(--line-height-xxl);
+  padding-top: var(--padding-text-xxl)
+}
+
 h1 {
   font-size: var(--font-size-xl);
   line-height: var(--line-height-xl);
-  padding: var(--padding-text-xl);
+  padding-top: var(--padding-text-xl);
 }
 
 h2 {
   font-size: var(--font-size-l);
   line-height: var(--line-height-l);
-  padding: var(--padding-text-l);
+  padding-top: var(--padding-text-l);
 }
 
 h3,
@@ -67,10 +112,6 @@ h6 {
 ul:not([role]),
 ol:not([role]) {
   padding-left: var(--space-inset-l);
-}
-
-figure {
-  padding: var(--padding-figure);
 }
 
 small,
