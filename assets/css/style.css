@@ -339,17 +339,15 @@ h2[data-number] {
 
 header[role="banner"] {
   position: relative;
-  padding-top: 9rem;
+  padding-top: 12rem;
 }
 header[role="banner"]::before {
   content: "";
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
   background-image: var(--banner-bg-url);
   background-size: var(--banner-bg-size);
-  background-position: +4em -16em;
+  background-position: var(--banner-bg-position);
   rotate: var(--banner-bg-rotation);
   z-index: -1;
   filter: var(--banner-bg-filter);
@@ -378,7 +376,7 @@ nav[aria-label="course-content"] {
 body {
   width: 100%;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: min-content auto;
   grid-template-rows: auto;
   grid-template-areas: 
     "header header"
