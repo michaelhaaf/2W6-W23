@@ -63,7 +63,7 @@
     </header>
     <nav
       aria-labelledby="course-content"
-      class="tooltip vertical sticky-container surface"
+      class="tooltip vertical sticky-container"
       role="navigation"
     >
       <h2 class="visually-hidden" id="course-content">Course Content</h2>
@@ -357,7 +357,7 @@
       </ul>
     </nav>
     <main class="base" role="main">
-      <article class="article">
+      <article class="text-wrapper">
         $for(include-before)$ $include-before$ $endfor$ $if(title)$
         <header class="level1" id="title-block-header">
           <h1>$title$</h1>
@@ -469,7 +469,7 @@
           $if(toc)$
           <nav
             aria-labelledby="toc-title"
-            class="margin surface menu sticky toc text-wrapper compact"
+            class="margin surface menu sticky toc text-wrapper"
             id="$idprefix$TOC"
             role="navigation"
           >
@@ -492,4 +492,11 @@
       </span>
     </footer>
   </body>
+  <script src="http://files.keyes.ie/things/baseliner/baseliner-latest.min.js">
+  </script>
+  <script>
+  window.onload = function() {
+    baseliner = new Baseliner(32);
+  }
+  </script>
 </html>
