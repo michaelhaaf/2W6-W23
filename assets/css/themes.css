@@ -8,14 +8,18 @@
   --banner-bg-url: url("../images/dark-theme/guggenheim-circles.jpg");
   --banner-bg-size: cover;
   --banner-bg-rotation: 0deg;
-  --banner-bg-position: 0 +70%;
+  --banner-bg-position: 0% +7.5%;
   --banner-bg-filter: invert(100%) hue-rotate(90deg);
   --theme-toggle-icon: url("../images/light-theme/theme-toggle-icon.svg");
 
   --hue-fg: 255deg;
   --hue-bg: 30deg;
-  --saturation-base: 55%;
+  --saturation-base: 65%;
+  --saturation-surface: 55%;
+  --saturation-overlay: 40%;
   --brightness-base: 95%;
+  --brightness-surface: 92%;
+  --brightness-overlay: 90%;
 
   --base: hsl(var(--hue-bg) 65% 95%);
   --surface: hsl(var(--hue-bg) 55% 92%);
@@ -42,14 +46,18 @@
   --banner-bg-size: cover;
   --banner-bg-rotation: 0deg;
   --banner-bg-url: url("../images/dark-theme/guggenheim-circles.jpg");
-  --banner-bg-position: 0 +70%;
+  --banner-bg-position: 0 +62.5%;
   --banner-bg-filter: brightness(90%);
   --theme-toggle-icon: url("../images/dark-theme/theme-toggle-icon.svg");
 
   --hue-fg: 245deg;
   --hue-bg: 245deg;
   --saturation-base: 25%;
+  --saturation-surface: 20%;
+  --saturation-overlay: 20%;
   --brightness-base: 20%;
+  --brightness-surface: 25%;
+  --brightness-overlay: 30%;
 
   --base: hsl(var(--hue-bg) 25% 20%);
   --surface: hsl(var(--hue-bg) 20% 25%);

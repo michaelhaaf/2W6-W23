@@ -329,8 +329,8 @@ h2[data-number] {
 }
 
 .to-be-named > * {
-  /* background-color: hsl(var(--hue-bg) var(--saturation-base) var(--brightness-base) / 0.8); */
-  background-color: var(--surface);
+  background-color: hsl(var(--hue-bg) var(--saturation-surface) calc(var(--brightness-surface) + 5%) / 0.8);
+  /* background-color: var(--surface); */
 }
 
 .flex-row {
@@ -348,7 +348,8 @@ h2[data-number] {
 }
 
 .surface {
-  background-color: var(--surface);
+  /* background-color: var(--surface); */
+  background-color: hsl(var(--hue-bg) var(--saturation-surface) var(--brightness-surface) / 0.8);
   color: var(--text);
 }
 
