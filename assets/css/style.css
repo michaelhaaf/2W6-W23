@@ -383,6 +383,9 @@ h2[data-number] {
   color: var(--text);
 }
 
+article.text-wrapper{
+  padding: 0 1rem;
+}
 .text-wrapper {
   padding: 0.5rem 1rem;
 }
