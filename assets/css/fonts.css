@@ -1,8 +1,18 @@
-/* Font face imports
+
+/* Font face imports 
 * Create "et-book" font-family: a webfont of the typeface used in Edward Tufte's books.
 * See https://github.com/edwardtufte/et-book for more information.
 * CSS adapted from https://github.com/edwardtufte/et-book/blob/gh-pages/et-book.css 
 */
+
+/* Font-specific typographic constants */
+:root {
+  /* et-book font metrics, determined using FontForge https://fontforge.org/ */
+  --em-square: 2048;
+  --ascender-bold: 1921;
+  --ascender-regular: 1835;
+}
+
 @charset "UTF-8";
 @font-face {
   font-family: "et-book";

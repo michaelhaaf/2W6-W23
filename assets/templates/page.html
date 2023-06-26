@@ -38,6 +38,7 @@
       <div class="to-be-named">
         <div class="flex-row">
           <button
+            id="baseliner-toggle"
             aria-hidden="True"
             class="icon large scale-up-2x"
             style="--icon: url(../images/favicon.svg)"
@@ -473,7 +474,7 @@
             id="$idprefix$TOC"
             role="navigation"
           >
-            <h2 id="toc-title">Contents</h2>
+            <button id="toc-title" class="accordion toc-title">Contents</button>
             $table-of-contents$
           </nav>
           $endif$
@@ -493,10 +494,5 @@
     </footer>
   </body>
   <script src="http://files.keyes.ie/things/baseliner/baseliner-latest.min.js">
-  </script>
-  <script>
-  window.onload = function() {
-    baseliner = new Baseliner(32);
-  }
   </script>
 </html>

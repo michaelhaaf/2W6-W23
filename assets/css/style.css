@@ -63,8 +63,9 @@ nav ol {
 \* ------------------------------------------ */
 
 :root {
-  --border-muted: 1px solid hsl(var(--hsl-muted) / 0.5);
-  --border-default: 1px solid var(--muted);
+  --border-size: 1px;
+  --border-muted: var(--border-size) solid hsl(var(--hsl-muted) / 0.5);
+  --border-default: var(--border-size) solid var(--muted);
 }
 
 /* ------------------------------------------ *\
@@ -122,6 +123,7 @@ strong {
 h2[data-number] {
   font-style: italic;
   border-bottom: var(--border-default);
+  margin-bottom: calc(var(--padding-l) - var(--border-size));
 }
 
 .abstract {
@@ -157,14 +159,19 @@ h2[data-number] {
   border: none;
   cursor: pointer;
   text-align: left;
+  width: 100%;
 }
 
-.accordion::before {
+.accordion::after {
+  text-align: right;
+  float: right;
   content: "(+)";
 }
 
-.accordion.expanded::before {
-  content: "--";
+.accordion.expanded::after {
+  text-align: right;
+  float: right;
+  content: " --";
 }
 
 .collapsible {
@@ -187,30 +194,46 @@ h2[data-number] {
 .toc {
   justify-self: start;
   min-width: 14rem;
+  padding: 0.5rem 0;
+}
+.toc-title {
+  text-transform: uppercase;
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-m);
+  font-weight: var(--font-weight-subheaders);
 }
 .toc ul,
 .toc ol {
-  font-size: var(--font-size-s);
-  line-height: var(--line-height-s);
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-m);
   font-weight: normal;
   padding-left: 1em;
 }
 .toc li ul,
 .toc li ol {
-  font-size: var(--font-size-xs);
-  line-height: var(--line-height-xs);
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-s);
 }
 .toc li li ul,
 .toc li li ol {
-  font-size: var(--font-size-xxs);
-  line-height: var(--line-height-xxs);
-}
-.toc > ul,
-.toc > ol {
-  font-weight: var(--font-weight-headers);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
 }
 .toc-section-number {
   color: var(--muted);
+}
+.toc li > a:not(:only-child)::after {
+  content: "(+)";
+}
+.toc li > a.semi-active:not(:only-child)::after {
+  content: " --";
+}
+.toc li > ul {
+  display: none;
+}
+.toc a.expanded,
+.toc a.semi-active + ul {
+  display: initial;
 }
 
 .menu {
@@ -237,8 +260,8 @@ h2[data-number] {
 
 
 .tooltip {
-  font-size: var(--font-size-xxs);
-  line-height: var(--line-height-xxs);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
 }
 
 
@@ -303,12 +326,15 @@ h2[data-number] {
 
 /* inspired by: https://www.youtube.com/watch?v=6hW4YTVi3hc */
 
+.vertical {
+  border-top: var(--border-muted);
+}
 .vertical li {
   padding: 0.5rem 0.5rem;
 }
 .vertical li[aria-current="page"] {
-  border-top: var(--border-muted);
-  border-bottom: var(--border-muted);
+  border-top: var(--border-default);
+  border-bottom: var(--border-default);
   border-right: 0px;
   background-color: var(--base);
 }
@@ -324,8 +350,8 @@ h2[data-number] {
   display: flex;
   align-items: end;
   justify-content: space-between;
-  font-size: var(--font-size-xxs);
-  line-height: var(--font-size-xxs);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
 }
 
 .to-be-named > *,
@@ -358,7 +384,7 @@ h2[data-number] {
 }
 
 .text-wrapper {
-  padding: 0rem 1rem;
+  padding: 0.5rem 1rem;
 }
 .text-wrapper.compact {
   padding: 0rem 1rem 1rem 1rem;

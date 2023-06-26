@@ -58,11 +58,11 @@ themeToggleIcon.addEventListener("click", toggleTheme);
 let activeSection; let activeTocLink;
 let observerOptions; let observedSections;
 
-const pageContent = document.querySelector("article.article");
-const allSections = pageContent.querySelectorAll("section.level1, section.level2");
+const pageContent = document.querySelector("article");
+const allSections = pageContent.querySelectorAll("section.level1:not(.overlay-grid), section.level2, section.level3");
 const currentActiveSections = [];
 
-const pageToc = document.querySelector(".nav--page");
+const pageToc = document.querySelector("nav.toc");
 const tocLinks = pageToc ? pageToc.querySelectorAll(":scope a") : [];
 
 if (!pageToc) {
@@ -79,20 +79,21 @@ if (!pageToc) {
 }
 
 function setActive(observedSections) {
-  observedSections.forEach(section => {
-    const id = section.target.getAttribute('id');
-    const sectionTocLink = document.querySelector(`nav li a[href="#${id}"]`);
-    if (section.intersectionRatio > 0) { 
-      sectionTocLink.classList.add("semi-active");
-      currentActiveSections.push(section.target);
-    } else {
-      sectionTocLink.classList.remove("semi-active");
-      const index = currentActiveSections.indexOf(section.target);
-      if (index > -1) {
-        currentActiveSections.splice(index, 1);
+  observedSections
+    .forEach(section => {
+      const id = section.target.getAttribute('id');
+      const sectionTocLink = document.querySelector(`nav li a[href="#${id}"]`);
+      if (section.intersectionRatio > 0) { 
+        sectionTocLink.classList.add("semi-active");
+        currentActiveSections.push(section.target);
+      } else {
+        sectionTocLink.classList.remove("semi-active");
+        const index = currentActiveSections.indexOf(section.target);
+        if (index > -1) {
+          currentActiveSections.splice(index, 1);
+        }
       }
-    }
-  });
+    });
   let minViewportDist = Number.MAX_VALUE;
   let closestSection = activeSection;
   let closestTocLink = activeTocLink;
@@ -205,3 +206,23 @@ function expandCollapsible(event) {
   elem.classList.toggle("expanded");
   panel.classList.toggle("expanded");
 }
+
+
+// baseliner
+const baselinerToggle = document.querySelector('#baseliner-toggle');
+
+// https://keyes.ie/things/baseliner/  
+// This tool creates a bunch of divs, which can cause vertical overflow.
+// I had to add some jank to remove those elems. TODO refactor for brevity/clarity
+baselinerToggle.addEventListener('click', () => {
+  let baselinerElem = document.querySelector('#overlay-it');
+  let baselinerOverlay = document.querySelector('#baseline-overlay');
+  if (baselinerElem) {
+    document.body.removeChild(baselinerElem.parentElement)
+    if (baselinerOverlay) {
+      document.body.removeChild(baselinerOverlay) 
+    }
+  } else {
+    baseliner = new Baseliner({gridHeight: 32, gridOffset: 2});
+  } 
+});
