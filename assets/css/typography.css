@@ -158,6 +158,7 @@ strong {
 * 80/20 rule reset. Could calculate but don't need ::marker to match font-size height, just needs to be smaller than line-height.
 * */
 li::marker,
-.toc-section-number {
+.toc-section-number,
+.header-section-number {
   font-size: 0.8em;
 }

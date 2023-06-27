@@ -68,6 +68,20 @@ nav ol {
   --border-default: var(--border-size) solid var(--muted);
 }
 
+/* https://css-tricks.com/standardizing-focus-styles-with-css-custom-properties/ */
+:is(a, button, input, textarea, summary) {
+  --outline-size: max(2px, 0.08em);
+  --outline-style: solid;
+  --outline-color: currentColor;
+}
+:is(.icon) {
+  --outline-offset: min(-2px, -0.08em);
+}
+:is(a, button, input, textarea, summary):focus {
+  outline: var(--outline-size) var(--outline-style) var(--outline-color);
+  outline-offset: var(--outline-offset, var(--outline-size));
+}
+
 /* ------------------------------------------ *\
   || Themes
 \* ------------------------------------------ */
@@ -187,10 +201,6 @@ h2[data-number] {
   || Objects
 \* ------------------------------------------ */
 
-.header-section-number {
-  display: none;
-}
-
 .toc {
   justify-self: start;
   min-width: 14rem;
@@ -207,7 +217,7 @@ h2[data-number] {
   font-size: var(--font-size-m);
   line-height: var(--line-height-m);
   font-weight: normal;
-  padding-left: 1em;
+  padding-left: 0em;
 }
 .toc li ul,
 .toc li ol {
@@ -279,6 +289,10 @@ h2[data-number] {
   height: 4rem;
   width: 4rem;
 }
+.has-submenu .icon {
+  height: 3rem;
+  width: 2rem;
+}
 .icon::before {
   content: "";
   position: absolute;
@@ -290,13 +304,20 @@ h2[data-number] {
   background-color: transparent;
   background-size: 50%;
 }
+.has-submenu .icon:first-child::before {
+  background-size: 80%;
+  background-position: right;
+}
+.has-submenu .icon:nth-child(2)::before {
+  background-size: 60%;
+  background-position: center;
+}
 .icon.scale-up::before {
   background-size: 60%;
 }
 .icon.scale-up-2x::before {
   background-size: 70%;
 }
-
 
 .tooltip [role="menuitem"]:hover,
 .tooltip [role="menuitem"]:focus,
@@ -344,7 +365,11 @@ h2[data-number] {
 }
 .vertical li:last-child[aria-current="page"] {
 }
-
+.vertical li.has-submenu {
+  padding-right: 0rem;
+  padding-left: 0rem;
+  display: flex;
+}
 
 .to-be-named {
   display: flex;
