@@ -50,8 +50,11 @@
   || Reset
 \* ------------------------------------------ */
 
-nav a {
+/* TODO: use roles for selection */
+nav a,
+nav a:visited {
   text-decoration: none;
+  color: inherit;
 }
 nav ul,
 nav ol {
@@ -97,9 +100,15 @@ html {
 p, li, ol {
   color: var(--subtle);
 }
+strong {
+  color: var(--text);
+}
 
 a {
-  color: inherit;
+  color: var(--accent-foam);
+}
+a:visited {
+  color: var(--accent-violet);
 }
 
 strong {
