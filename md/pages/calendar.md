@@ -11,18 +11,12 @@ abstract: |
   You can compare this calendar with the calendar from the [Course Outline](../pages/course-outline.html#tentative-schedule) to see where this course has deviated from the original outline.
 ---
 
----
-
-**Stay tuned:** Throughout the semester I will update this calendar with each week's resources. I will make corresponding updates on **LEA** so that you continue to get notifications through the regular college channels; however, these links will usually just take you to this page unless I indicate otherwise.
-
-**NOTE:** All hyperlinks have a defined `<title>` attribute. **Hover** over the links with your mouse to view more information about each :) 
-
 # January
 
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
 | Lectures         | Topics                                                          | Activities/Assessments                                                    |
 +==================+=================================================================+===========================================================================+
-| [Week 1][lec1]   | Tools - VS Code <br>                                            | **Lab 1 (5%, due Jan 27):** [Creating a website][lab1] <br>        |
+| [Week 1][lec1]   | Tools - VS Code <br>                                            | **Lab 1 (5%, due Jan 27):** [Creating a website][lab1] <br>               |
 |                  | HTML - boilerplate HTML5, content elements <br>                 | Activity: [Writing HTML Boilerplate (.html)][actBoilerplate]  <br>        |
 |                  | HTML - fundamentals, syntax, elements <br>                      |                                                                           |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
@@ -31,7 +25,7 @@ abstract: |
 |                  | Tools - VS Code skills for efficient web development <br>       | * [Part 1 (Youtube)][actVSCode1]                                          |
 |                  |                                                                 | * [Part 2 (Youtube)][actVSCode2]                                          |
 +------------------+-----------------------------------------------------------------+---------------------------------------------------------------------------+
-| [Week 3][lec3]   | HTML - semantic elements, website markup <br>                   | **Lab 2 (10%, due Feb 16):** [Website layout and style][lab2] <br> |
+| [Week 3][lec3]   | HTML - semantic elements, website markup <br>                   | **Lab 2 (10%, due Feb 16):** [Website layout and style][lab2] <br>        |
 |                  |                                                                 | **Lab 2 SOLUTION:** [solution directory][lab2solution] <br>               |
 |                  | Tools - browser dev tools for CSS/DOM inspection <br>           | Tutorial: [Document and Website Structure][tutWebsite] <br>               |
 |                  | CSS - inline vs internal vs external <br>                       | Activity: [CSS Diner][actDiner] <br>                                      |
