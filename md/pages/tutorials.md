@@ -2,6 +2,7 @@
 title: "2W6-W23: Tutorials"
 toc-title: "Page navigation"
 next-page: "../pages/assignments.html"
+prev-page: "../pages/calendar.html"
 lang: "en"
 abstract-title: "Practise lab work and solutions"
 abstract: |

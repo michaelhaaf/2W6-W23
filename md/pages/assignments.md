@@ -1,7 +1,8 @@
 ---
 title: "2W6-W23: Assignments"
 toc-title: "Page navigation"
-next-page: "../pages/tutorials.html"
+next-page: "../pages/home.html"
+prev-page: "../pages/tutorials.html"
 lang: "en"
 abstract-title: "Assigned lab work and solutions"
 abstract: |
