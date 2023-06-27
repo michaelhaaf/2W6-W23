@@ -162,3 +162,15 @@ li::marker,
 .header-section-number {
   font-size: 0.8em;
 }
+
+sup {
+  vertical-align: super;
+  font-size: 0.666em;
+}
+.footnote-ref {
+  text-decoration: none;
+}
+.footnote-back {
+  margin-left: 0.5em;
+  text-decoration: none;
+}
