@@ -10,8 +10,6 @@ abstract: |
     For the rest of the course, we will skip ahead to publishing an automatically creating a website using a CMS (Content Management System).
 ---
 
----
-
 # Lesson Overview
 
 - What are Content Management Systems?

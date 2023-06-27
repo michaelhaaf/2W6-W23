@@ -13,8 +13,6 @@ abstract: |
   We will also learn about CSS Custom Properties: these are CSS 'rules' that we can define once and reuse many times throughout our document to reduce code repetitio0n.
 ---
 
----
-
 # Lesson Overview
 
 - Review important CSS mechanics we have learned so far

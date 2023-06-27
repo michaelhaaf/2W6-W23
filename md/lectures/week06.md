@@ -11,8 +11,6 @@ abstract: |
   In 2009, CSS Flexibile Box Layout, otherwise known as [Flexbox](https://en.wikipedia.org/wiki/CSS_Flexible_Box_Layout) was introduced as a part of [CSS 3](https://en.wikipedia.org/wiki/CSS#CSS_3). As mobile devices became increasingly the most common interface for browsing web pages, Flexbox provided a framework superior to Float/Tables in responding to the viewport size of the user and arranging elements with precise developer control.
 ---
 
----
-
 # Lesson Overview
 
 - Introduction to Flexbox

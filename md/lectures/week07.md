@@ -11,8 +11,6 @@ abstract: |
   For now, let's take a big picture break and return to some of the other technologies used in web development. This week, we are going to master using the browser for web development. We are also going to learn the very basics of Javascript in order to learn how HTML/CSS projects can be given dynamic behavior.
 ---
 
----
-
 # Lesson Overview
 
 - Choosing a browser for web development

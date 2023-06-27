@@ -9,8 +9,6 @@ abstract: |
   Here you will find information about all assigned lab work given this semester.
 ---
 
----
-
 [lab1zip]: ../assignments/lab1.zip
 [lab2zip]: ../assignments/lab2.zip
 [lab3zip]: ../assignments/lab3.zip

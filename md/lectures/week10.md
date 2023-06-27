@@ -11,8 +11,6 @@ abstract: |
   This week, we will learn about CSS Grid. These lecture notes are summaries adapted directly from The Odin Project.
 ---
 
----
-
 # Lesson Overview
 
 By the end of these lessons, you will know:
@@ -21,7 +19,6 @@ By the end of these lessons, you will know:
 - how to create and define the basic properties of a Grid Container
 - how to manipulate Grid Items (elements inside a Grid Container)
 - how create responsive, flexible, automatic Grids
-
 
 ---
 

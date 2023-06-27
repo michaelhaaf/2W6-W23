@@ -13,8 +13,6 @@ abstract: |
   This week, we will learn how to make use of the CSS properties for fonts, images, and icons; we will also learn more about how HTML and CSS create website layouts.
 ---
 
----
-
 # Lesson Overview
 
 - How to style fonts

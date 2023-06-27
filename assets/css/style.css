@@ -69,6 +69,7 @@ nav ol {
   --border-size: 1px;
   --border-muted: var(--border-size) solid hsl(var(--hsl-muted) / 0.5);
   --border-default: var(--border-size) solid var(--muted);
+  --border-prominent: var(--border-size) solid var(--subtle);
 }
 
 /* https://css-tricks.com/standardizing-focus-styles-with-css-custom-properties/ */
@@ -113,6 +114,12 @@ a:visited {
 
 strong {
   color: var(--text);
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border-top: var(--border-default);
 }
 
 .level1 {

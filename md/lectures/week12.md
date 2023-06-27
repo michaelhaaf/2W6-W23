@@ -8,8 +8,6 @@ abstract: |
   We will learn how to create and style HTML Forms, which are ubiquitous on the web for entering data into a website.
 ---
 
----
-
 # Lesson Overview
 
 - HTML Forms

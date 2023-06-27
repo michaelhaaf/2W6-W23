@@ -13,8 +13,6 @@ abstract: |
   There are many techniques for layout in CSS. We will focus on the technique most commonly used for the first two decades of web development: "Floating" elements.
 ---
 
----
-
 # Lesson Overview
 
 - How to achieve horizontal positioning in CSS using the `float` property

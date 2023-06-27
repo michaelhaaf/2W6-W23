@@ -9,8 +9,6 @@ abstract: |
   Here you will find information about all practise lab work given this semester.
 ---
 
----
-
 [week01boilerplatezip]: ../tutorials/week01-boilerplate.zip
 [week04boxmodelzip]: ../tutorials/week04-box-model-exercises.zip
 [week04foundationszip]: ../tutorials/week04-foundations-exercises.zip

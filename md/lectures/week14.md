@@ -10,8 +10,6 @@ abstract: |
   We will finish by covering a few more important CSS concepts: positioning, design, and frameworks (as much as time allows).
 ---
 
----
-
 # Lesson Overview
 
 - Accessibility

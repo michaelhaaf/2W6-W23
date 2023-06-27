@@ -9,8 +9,6 @@ abstract: |
   Lesson summary.
 ---
 
----
-
 # Lesson Overview
 
 - To be updated

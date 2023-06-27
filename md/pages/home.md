@@ -9,8 +9,6 @@ abstract: |
   User Interface development is the art and technique of creating content, style, and behavior in computer applications. This course will focus on web application development using HTML, CSS, and JavaScript.
 ---
 
----
-
 # Course Logistics
 
 - **Classroom:** Penfield 327

@@ -10,8 +10,6 @@ abstract: |
   This knowledge will pay great dividends in the following section. Here, we are applying our knowledge of HTML and CSS mechanics to learn best practises for creating universally userable, and enjoyable, user interfaces.
 ---
 
----
-
 # Lesson Overview
 
 - What is responsive design?
