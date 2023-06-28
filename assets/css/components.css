@@ -29,7 +29,7 @@
 \* ------------------------------------------ */
 
 .site-banner figure {
-  padding-top: 13rem;
+  padding-top: 11rem;
   position: relative;
 }
 .site-banner figure::before {
@@ -47,6 +47,9 @@
   text-align: right;
   padding: 1rem;
 }
+.site-banner small {
+  padding-bottom: 0.5rem;
+}
 
 .banner-top-bar {
   display: flex;
@@ -55,69 +58,6 @@
 .banner-top-bar small {
   display: block;
 }
-
-
-
-.main-menu {
-  display: flex;
-}
-
-/* MDN */
-.text-wrapper {
-  /* margin-left: auto; */
-  /* margin-right: auto; */
-  /* max-width: var(--max-width); */
-  /* padding-left: var(--gutter); */
-  /* padding-right: var(--gutter); */
-}
-
-article.text-wrapper{
-  padding: 0 1rem;
-}
-.text-wrapper {
-  padding: 0.5rem 1rem;
-}
-.text-wrapper.compact {
-  padding: 0rem 1rem 1rem 1rem;
-}
-
-/* Sticky */
-
-/* https://stackoverflow.com/a/38994837 */
-.sticky {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-.sticky::-webkit-scrollbar { 
-    display: none;
-}
-.sticky {
-  overflow: auto;
-  position: sticky;
-  align-self: start;
-  max-height: 100vh;
-}
-
-.vertical.sticky-container > .sticky {
-  top: 0;
-}
-.overlay-grid.sticky-container > .sticky:nth-of-type(1) {
-  top: 1rem;
-  align-self: end;
-  border-bottom: 0px;
-}
-.overlay-grid.sticky-container > .sticky:nth-of-type(2) {
-  top: 3rem;
-}
-.overlay-grid {
-  pointer-events: none;
-  position: absolute;
-  inset: 0;
-}
-.overlay-grid .sticky {
-  pointer-events: auto;
-}
-
 
 /* Accordion/collapsible buttons + lists */
 
@@ -131,27 +71,22 @@ article.text-wrapper{
 .accordion::after {
   text-align: right;
   float: right;
-  content: "(+)";
+  content: " (+)";
 }
 .accordion.expanded::after {
   text-align: right;
   float: right;
-  content: " --";
+  content: "  --";
 }
-.collapsible,
 .accordion + ul {
   max-height: 0;
   overflow: hidden;
 }
-.collapsible.expanded,
 .accordion.expanded + ul {
   max-height: none;
 }
 
-
-
 /* Article grid */
-
 
 .level1 {
   display: grid;
@@ -159,7 +94,7 @@ article.text-wrapper{
   column-gap: 1rem;
   margin-bottom: 2rem;
   grid-auto-rows: min-content;
-  grid-template-columns: [content] 2fr [margin] 1fr; 
+  grid-template-columns: [content] 2fr [margin] 1fr;
 }
 .level1 * {
   grid-column: content;
@@ -173,14 +108,34 @@ article.text-wrapper{
   display: contents;
 }
 
-
 /* Sticky overlay for article grid */
 
 .overlay-grid {
   row-gap: 0;
   grid-auto-rows: minmax(3rem, min-content);
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
 }
 
+/* Sticky */
+/* https://stackoverflow.com/a/38994837 */
+.sticky {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.sticky::-webkit-scrollbar {
+  display: none;
+}
+.sticky {
+  overflow: auto;
+  position: sticky;
+  align-self: start;
+  max-height: 100vh;
+}
+.overlay-grid .sticky {
+  pointer-events: auto;
+}
 
 /* Table of Contents */
 
@@ -229,7 +184,6 @@ article.text-wrapper{
   display: initial;
 }
 
-
 /* Navigation Menus */
 
 .main-menu {
@@ -243,17 +197,20 @@ article.text-wrapper{
   display: inline-block;
   padding: 1rem 1rem;
 }
-.main-menu .icon::before{
+.main-menu .icon::before {
   display: none;
-
 }
-
+.main-menu li[aria-current="page"] {
+  background-color: var(--surface);
+}
+.main-menu [aria-expanded="false"] + ul {
+  display: none;
+}
 
 .horizontal {
   width: min-content;
   max-width: 14rem;
 }
-
 
 /* Icons */
 
@@ -261,7 +218,7 @@ article.text-wrapper{
   display: block;
   position: relative;
 }
-.icon.small { 
+.icon.small {
   height: 2rem;
   width: 2rem;
 }
@@ -287,63 +244,4 @@ article.text-wrapper{
 }
 .icon.scale-up-2x::before {
   background-size: 70%;
-}
-
-/* tooltip */
-
-.tooltip {
-  font-size: var(--font-size-xs);
-  line-height: var(--line-height-xs);
-}
-.tooltip [role="menuitem"]:hover,
-.tooltip [role="menuitem"]:focus,
-.tooltip [role="menuitem"]:active {
-  background-color: hsl(var(--hsl-base) / 1);
-}
-.tooltip [role="menuitem"] span {
-  background-color: hsl(var(--hsl-surface) / 1);
-  color: var(--text);
-  padding: 0.5rem 1rem;
-  position: absolute;
-  left: 150%;
-  top: 50%;
-  transform-origin: left;
-  --scale: 0;
-  opacity: 0;
-  transform: translateY(-50%) scale(var(--scale));
-  transition: opacity 0.15s ease, transform 0.15s ease;
-  z-index: 99;
-}
-.tooltip [role="menuitem"]:hover span, 
-.tooltip [role="menuitem"]:focus span, 
-.tooltip [role="menuitem"]:active span {
-  --scale: 1;
-  opacity: 1;
-}
-
-/* vertical nav-bar */
-
-/* inspired by: https://www.youtube.com/watch?v=6hW4YTVi3hc */
-.vertical {
-  border-top: var(--border-muted);
-}
-.vertical li {
-  padding: 0.5rem 0.5rem;
-}
-.vertical li[aria-current="page"] {
-  border-top: var(--border-default);
-  border-bottom: var(--border-default);
-  border-right: 0px;
-  background-color: var(--base);
-}
-.vertical li:not([aria-current="page"]) {
-}
-.vertical li:first-child[aria-current="page"] {
-}
-.vertical li:last-child[aria-current="page"] {
-}
-.vertical li.has-submenu {
-  padding-right: 0rem;
-  padding-left: 0rem;
-  display: flex;
 }

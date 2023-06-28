@@ -3,25 +3,25 @@
     "Book Antiqua", Georgia, serif;
   --font-family-headers: var(--font-family-body);
 
-  --font-size-xs: 0.8rem;     /* 12.8px */
-  --font-size-s: 1rem;        /* 16px */
-  --font-size-m: 1.25rem;     /* 20px */
-  --font-size-l: 1.75rem;     /* 28px */
-  --font-size-xl: 2rem;       /* 32px */
-  --font-size-xxl: 3rem;      /* 48px */
-  --font-size-xxxl: 5rem;     /* 80px */
+  --font-size-xs: 0.8rem; /* 12.8px */
+  --font-size-s: 1rem; /* 16px */
+  --font-size-m: 1.25rem; /* 20px */
+  --font-size-l: 1.75rem; /* 28px */
+  --font-size-xl: 2rem; /* 32px */
+  --font-size-xxl: 3rem; /* 48px */
+  --font-size-xxxl: 5rem; /* 80px */
 
   --font-weight-headers: 300;
   --font-weight-subheaders: 700;
 
-  --line-height-xs: 1.25;            /* x14 = 16px (2/4 line) */
-  --line-height-s: 1.5;             /* x18 = 24px (3/4 line) */
-  --line-height-m: 1.6;               /* x20 = 32px (1 line)   */
+  --line-height-xs: 1.25; /* x14 = 16px (2/4 line) */
+  --line-height-s: 1.5; /* x18 = 24px (3/4 line) */
+  --line-height-m: 1.6; /* x20 = 32px (1 line)   */
 
-  --line-height-l: 1.429;             /* x28 = 40px (5/4 lines) */
-  --line-height-xl: 1.5;              /* x32 = 48px (6/4 lines) */
-  --line-height-xxl: 1.167;           /* x48 = 56px (7/4 lines) */
-  --line-height-xxxl: 1.2;            /* x80 = 96px (3 lines) */
+  --line-height-l: 1.429; /* x28 = 40px (5/4 lines) */
+  --line-height-xl: 1.5; /* x32 = 48px (6/4 lines) */
+  --line-height-xxl: 1.167; /* x48 = 56px (7/4 lines) */
+  --line-height-xxxl: 1.2; /* x80 = 96px (3 lines) */
 
   --quarter-line-rem: 0.5rem;
   --half-line-rem: 1rem;
@@ -90,6 +90,7 @@ h1.banner-title {
   font-size: var(--font-size-xxl);
   line-height: var(--line-height-xxl);
   padding-top: calc(var(--padding-xxl) / 3);
+  padding-right: 1rem;
   padding-bottom: 0;
 }
 
@@ -140,11 +141,9 @@ abbr {
 */
 strong {
   /* compute font-size to reduce strong height by the height difference ratio */
-  --computedHeightRatio: calc( 
-    (var(--ascender-bold) - var(--ascender-regular)) 
-      / 
-    var(--em-square) 
-    );
+  --computedHeightRatio: calc(
+    (var(--ascender-bold) - var(--ascender-regular)) / var(--em-square)
+  );
   --computedFontRatio: calc(1 - var(--computedHeightRatio));
 
   /* font-size: calc(var(--computedFontRatio) * var(--font-size)); */

@@ -159,8 +159,12 @@ h2[data-number],
   || Objects
 \* ------------------------------------------ */
 
-.menu {
+.bordered-box {
   border: var(--border-default);
+}
+
+.padded-box {
+  padding: 1rem;
 }
 
 .to-be-named {
@@ -177,6 +181,14 @@ h2[data-number],
 
 .flow-container {
   max-width: var(--max-width);
+  border-left: var(--border-muted);
+  border-right: var(--border-muted);
+}
+
+.banner-top-bar,
+.banner-bottom-bar,
+article {
+  border-top: var(--border-muted);
 }
 
 .base {
@@ -194,11 +206,6 @@ h2[data-number],
   color: var(--text);
 }
 
-.to-be-named > * {
-  border: var(--border-muted);
-  border-bottom: 0px;
-}
-
 /* ------------------------------------------ *\
   || Layout
 \* ------------------------------------------ */
@@ -209,6 +216,7 @@ body {
 
 article {
   position: relative;
+  padding: 0 1rem;
 }
 
 /* ------------------------------------------ *\
