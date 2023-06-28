@@ -26,8 +26,8 @@ def insert_listing(listing_path, document_soup):
     listing_elem.clear()
 
     for listing in listing_soup:
-        list_item = document_soup.new_tag("li")
-        list_item.append(listing)
+        listing["role"] = "menuitem"
+        list_item = document_soup.new_tag("li").append(listing)
         listing_elem.append(list_item)
 
 

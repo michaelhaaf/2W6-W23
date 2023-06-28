@@ -9,6 +9,15 @@
 
 /* Boxes that contain text */
 
+/* MDN */
+.text-wrapper {
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  /* max-width: var(--max-width); */
+  /* padding-left: var(--gutter); */
+  /* padding-right: var(--gutter); */
+}
+
 article.text-wrapper{
   padding: 0 1rem;
 }
@@ -104,6 +113,7 @@ article.text-wrapper{
 }
 .level1 .margin {
   grid-column: margin;
+  justify-self: left;
 }
 /* NOTE: makes navigation to top of section impossible */
 .level1 :is(section, header, footer, aside, .abstract) {
@@ -122,8 +132,8 @@ article.text-wrapper{
 /* Table of Contents */
 
 .toc {
-  justify-self: start;
-  min-width: 14rem;
+  justify-self: center;
+  min-width: 50%;
   padding: 0.5rem 0;
 }
 .toc-title {

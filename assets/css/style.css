@@ -67,6 +67,10 @@ nav ol {
 \* ------------------------------------------ */
 
 :root {
+  --max-width: 1980px;
+}
+
+:root {
   --border-size: 1px;
   --border-muted: var(--border-size) solid hsl(var(--hsl-muted) / 0.5);
   --border-default: var(--border-size) solid var(--muted);
@@ -170,6 +174,10 @@ h2[data-number],
   || Containers
 \* ------------------------------------------ */
 
+.flow-container {
+  max-width: var(--max-width);
+}
+
 .base {
   background-color: var(--base);
   color: var(--text);
@@ -199,7 +207,6 @@ header[role="banner"]::before {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background-image: var(--banner-bg-url);
   background-size: var(--banner-bg-size);
   background-position: var(--banner-bg-position);
   rotate: var(--banner-bg-rotation);
@@ -230,18 +237,10 @@ nav[aria-label="course-content"] {
 
 body {
   width: 100%;
-  display: grid;
-  grid-template-columns: min-content auto;
-  grid-template-rows: auto;
-  grid-template-areas: 
-    "header header"
-    "course-nav main"
-    "footer footer";
 }
 
 article {
   position: relative;
-  border: var(--border-muted);
 }
 
 /* ------------------------------------------ *\
