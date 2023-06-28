@@ -34,8 +34,8 @@
     $endif$
   </head>
   <body class="base">
-    <header>
-      <figure style="background-image: var(--banner-bg-url);">
+    <header class="site-banner flow-container">
+      <figure class="">
         <footer>
           <small>
             <a href="https://www.guggenheim.org/artwork/movement/constructivism">Title</a>, by <a href="#">Author</a> (<a href="#">CC BY ND 4.0</a>)
@@ -43,22 +43,25 @@
         </footer>
       </figure>
       
-      <div class="flow-container">
-        <div class="title-logo">
+      <div class="banner-top-bar">
+        <div class="flex-row">
           <button
             type="button"
             id="baseliner-toggle"
+            aria-label="Secret Button"
             aria-hidden="True"
             class="icon large scale-up-2x"
             style="--icon: url(../images/favicon.svg)"
           ></button>
-          <h1 class="banner-title">User Interfaces</h1>
-          <small>
-              420-2W6 | Winter 2023 | as taught by
-              <a rel="author" href="https://github.com/michaelhaaf/2W6-W23">
-                Michael Haaf
-              </a>
-          </small>
+          <div>
+            <h1 class="banner-title">User Interfaces</h1>
+            <small>
+                420-2W6 | Winter 2023 | as taught by
+                <a rel="author" href="https://github.com/michaelhaaf/2W6-W23">
+                  Michael Haaf
+                </a>
+            </small>
+          </div>
         </div>
 
         <nav

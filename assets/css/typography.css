@@ -89,8 +89,8 @@ h6 {
 h1.banner-title {
   font-size: var(--font-size-xxl);
   line-height: var(--line-height-xxl);
-  padding-top: calc(var(--padding-xxl) / 6);
-  padding-bottom: calc(var(--padding-xxl) / 6);
+  padding-top: calc(var(--padding-xxl) / 3);
+  padding-bottom: 0;
 }
 
 h1 {
@@ -123,8 +123,8 @@ ol:not([role]) {
 
 small,
 figcaption {
-  font-size: var(--font-size-xxs);
-  line-height: var(--line-height-xxs);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
 }
 
 abbr {

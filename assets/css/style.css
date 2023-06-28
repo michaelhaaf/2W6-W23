@@ -198,42 +198,9 @@ h2[data-number],
   border-bottom: 0px;
 }
 
-header[role="banner"] {
-  position: relative;
-  padding-top: 12rem;
-}
-header[role="banner"]::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-size: var(--banner-bg-size);
-  background-position: var(--banner-bg-position);
-  rotate: var(--banner-bg-rotation);
-  filter: var(--banner-bg-filter);
-}
-
-
-
 /* ------------------------------------------ *\
   || Layout
 \* ------------------------------------------ */
-
-header[role="banner"] {
-  grid-area: header;
-}
-
-footer[role="contentinfo"]{
-  grid-area: footer;
-}
-
-main[role="main"] {
-  grid-area: main;
-}
-
-nav[aria-label="course-content"] {
-  grid-area: course-nav;
-}
 
 body {
   width: 100%;

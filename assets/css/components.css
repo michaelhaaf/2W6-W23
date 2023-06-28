@@ -1,13 +1,66 @@
+/* ------------------------------------------ *\
+  || Table of Contents
+\* ------------------------------------------ */
 
-/* Flexbox */
+/*
+* || Generic
+*   - flex, grid
+*
+* || Specific
+*   - banner-image
+*   - 
+*
+* /
+
+
+
+/* ------------------------------------------ *\
+  || Generic
+\* ------------------------------------------ */
 
 .flex-row {
   display: flex;
+  flex-flow: row nowrap;
   align-items: center;
 }
 
+/* ------------------------------------------ *\
+  || Specific
+\* ------------------------------------------ */
 
-/* Boxes that contain text */
+.site-banner figure {
+  padding-top: 13rem;
+  position: relative;
+}
+.site-banner figure::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: var(--banner-bg-url);
+  background-size: var(--banner-bg-size);
+  background-position: var(--banner-bg-position);
+  rotate: var(--banner-bg-rotation);
+  filter: var(--banner-bg-filter);
+}
+.site-banner footer {
+  text-align: right;
+  padding: 1rem;
+}
+
+.banner-top-bar {
+  display: flex;
+  align-items: center;
+}
+.banner-top-bar small {
+  display: block;
+}
+
+
+
+.main-menu {
+  display: flex;
+}
 
 /* MDN */
 .text-wrapper {
@@ -179,18 +232,22 @@ article.text-wrapper{
 
 /* Navigation Menus */
 
-.horizontal > ul {
+.main-menu {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: start;
+  margin: 0 auto 0 0;
 }
-.vertical > ul {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: start;
-  justify-content: start;
+.main-menu .icon {
+  display: inline-block;
+  padding: 1rem 1rem;
 }
+.main-menu .icon::before{
+  display: none;
+
+}
+
 
 .horizontal {
   width: min-content;
@@ -203,8 +260,6 @@ article.text-wrapper{
 .icon {
   display: block;
   position: relative;
-  height: 3rem;
-  width: 3rem;
 }
 .icon.small { 
   height: 2rem;
@@ -214,10 +269,7 @@ article.text-wrapper{
   height: 4rem;
   width: 4rem;
 }
-.has-submenu .icon {
-  height: 3rem;
-  width: 2rem;
-}
+
 .icon::before {
   content: "";
   position: absolute;
@@ -229,14 +281,7 @@ article.text-wrapper{
   background-color: transparent;
   background-size: 50%;
 }
-.has-submenu .icon:first-child::before {
-  background-size: 80%;
-  background-position: right;
-}
-.has-submenu .icon:nth-child(2)::before {
-  background-size: 60%;
-  background-position: center;
-}
+
 .icon.scale-up::before {
   background-size: 60%;
 }
