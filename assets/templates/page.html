@@ -1,435 +1,534 @@
 <!DOCTYPE html>
 <html lang="$lang$" xml:lang="$lang$" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <link
+      href="../assets/images/favicon.svg"
+      rel="icon"
+      sizes="any"
+      type="image/svg+xml"
+    />
+    <script defer="" src="../assets/js/main.js"></script>
+    <meta content="dark light" name="color-scheme" />
+    <meta charset="utf-8" />
+    <meta content="pandoc" name="generator" />
+    <meta
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+      name="viewport"
+    />
+    $for(author-meta)$
+    <meta content="$author-meta$" name="author" />
+    $endfor$ $if(date-meta)$
+    <meta content="$date-meta$" name="dcterms.date" />
+    $endif$ $if(keywords)$
+    <meta content="$for(keywords)$$keywords$$sep$, $endfor$" name="keywords" />
+    $endif$ $if(description-meta)$
+    <meta content="$description-meta$" name="description" />
+    $endif$
+    <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+    <style>
+      $styles.html()$
+    </style>
+    $for(css)$
+    <link href="$css$" rel="stylesheet" />
+    $endfor$ $for(header-includes)$ $header-includes$ $endfor$ $if(math)$ $math$
+    $endif$
+  </head>
 
-<head>
-  <link href="../assets/images/favicon.svg" rel="icon" sizes="any" type="image/svg+xml" />
-  <script defer="" src="../assets/js/main.js"></script>
-  <meta content="dark light" name="color-scheme" />
-  <meta charset="utf-8" />
-  <meta content="pandoc" name="generator" />
-  <meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport" />
-  $for(author-meta)$
-  <meta content="$author-meta$" name="author" />
-  $endfor$ $if(date-meta)$
-  <meta content="$date-meta$" name="dcterms.date" />
-  $endif$ $if(keywords)$
-  <meta content="$for(keywords)$$keywords$$sep$, $endfor$" name="keywords" />
-  $endif$ $if(description-meta)$
-  <meta content="$description-meta$" name="description" />
-  $endif$
-  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
-  <style>
-    $styles.html()$
-  </style>
-  $for(css)$
-  <link href="$css$" rel="stylesheet" />
-  $endfor$ $for(header-includes)$ $header-includes$ $endfor$ $if(math)$ $math$
-  $endif$
-</head>
-
-<body class="base">
-  <header class="site-banner flow-container">
-    <figure class="">
-      <footer>
-        <small>
-          <a href="https://www.guggenheim.org/artwork/movement/constructivism">Title</a>, by <a href="#">Author</a> (<a
-            href="#">CC BY ND 4.0</a>)
-        </small>
-      </footer>
-    </figure>
-
-    <div class="banner-top-bar">
-      <div class="flex-row">
-        <button type="button" id="baseliner-toggle" aria-label="Secret Button" aria-hidden="True"
-          class="icon large scale-up-2x" style="--icon: url(../images/favicon.svg)"></button>
-        <div>
-          <h1 class="banner-title">User Interfaces</h1>
+  <body class="base">
+    <header class="site-banner flow-container sticky">
+      <figure class="">
+        <footer>
           <small>
-            420-2W6 | Winter 2023 | as taught by
-            <a rel="author" href="https://github.com/michaelhaaf/2W6-W23">
-              Michael Haaf
-            </a>
+            <a href="https://www.guggenheim.org/artwork/movement/constructivism"
+              >Title</a
+            >, by <a href="#">Author</a> (<a href="#">CC BY ND 4.0</a>)
           </small>
-        </div>
-      </div>
+        </footer>
+      </figure>
 
-      <nav class="main-nav" aria-label="Main menu">
-        <ul class="main-menu" role="menubar">
-          <li>
-            <a aria-label="Link to Home" href="../pages/home.html" role="menuitem"
-              style="--icon: url(../images/home.svg)" class="icon">
-              <span role="tooltip"> Home </span>
-            </a>
-          </li>
-          <li>
-            <a aria-label="Link to Course Outline" href="../pages/course-outline.html" role="menuitem"
-              style="--icon: url(../images/outline.svg)" class="icon">
-              <span role="tooltip"> Course outline </span>
-            </a>
-          </li>
-          <li>
-            <a aria-label="Link to Calendar" href="../pages/calendar.html" role="menuitem" class="icon"
-              style="--icon: url(../images/calendar.svg)">
-              <span role="tooltip"> Calendar </span>
-            </a>
-          </li>
-          <li>
-            <a aria-label="Link to Lectures" href="../pages/lectures.html" role="menuitem"
-              aria-controls="lecture-listing" aria-haspopup="true" aria-expanded="false"
-              style="--icon: url(../images/lectures.svg)" class="icon">
-              <span> Lectures </span>
-            </a>
-            <ul id="lecture-listing" role="menu" aria-label="Lectures">
-              <li>
-                <a role="menuitem" href="../lectures/week01.html">
-                  week01.html
-                </a>
-              </li>
-              <li>
-                <a role="menuitem" href="../lectures/week02.html">
-                  week02.html
-                </a>
-              </li>
-              <li>
-                <a role="menuitem" href="../lectures/week03.html">
-                  week03.html
-                </a>
-              </li>
-              <li>
-                <a role="menuitem" href="../lectures/week04.html">
-                  week04.html
-                </a>
-              </li>
-              <li>
-                <a role="menuitem" href="../lectures/week05.html">
-                  week05.html
-                </a>
-              </li>
-              <li>
-                <a role="menuitem" href="../lectures/week06.html">
-                  week06.html
-                </a>
-              </li>
-              <li>
-                <a role="menuitem" href="../lectures/week07.html">
-                  week07.html
-                </a>
-              </li>
-              <li>
-                <a role="menuitem" href="../lectures/week09.html">
-                  week09.html
-                </a>
-              </li>
-              <li>
-                <a role="menuitem" href="../lectures/week10.html">
-                  week10.html
-                </a>
-              </li>
-              <li>
-                <a role="menuitem" href="../lectures/week11.html">
-                  week11.html
-                </a>
-              </li>
-              <li>
-                <a role="menuitem" href="../lectures/week12.html">
-                  week12.html
-                </a>
-              </li>
-              <li>
-                <a role="menuitem" href="../lectures/week13.html">
-                  week13.html
-                </a>
-              </li>
-              <li>
-                <a role="menuitem" href="../lectures/week14.html">
-                  week14.html
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a aria-label="Tutorials" aria-controls="tutorial-listing" aria-expanded="false" aria-haspopup="true"
-              href="../pages/tutorials.html" role="menuitem" style="--icon: url(../images/tutorials.svg)" class="icon">
-              <span role="tooltip"> Tutorials </span>
-            </a>
-            <ul id="tutorial-listing">
-              <li>
-                <a href="../pages/tutorials.html#week-01-exercises">
-                  <span class="toc-section-number"> 1.1 </span>
-                  Week 01 Exercises
-                </a>
-              </li>
-              <li>
-                <a href="../pages/tutorials.html#week-04-exercises">
-                  <span class="toc-section-number"> 1.2 </span>
-                  Week 04 Exercises
-                </a>
-              </li>
-              <li>
-                <a href="../pages/tutorials.html#css-foundations">
-                  <span class="toc-section-number"> 1.2.1 </span>
-                  CSS Foundations
-                </a>
-              </li>
-              <li>
-                <a href="../pages/tutorials.html#css-box-model">
-                  <span class="toc-section-number"> 1.2.2 </span>
-                  CSS Box Model
-                </a>
-              </li>
-              <li>
-                <a href="../pages/tutorials.html#css-typesetting-typography">
-                  <span class="toc-section-number"> 1.2.3 </span>
-                  CSS Typesetting &amp; Typography
-                </a>
-              </li>
-              <li>
-                <a href="../pages/tutorials.html#week-06-exercises">
-                  <span class="toc-section-number"> 1.3 </span>
-                  Week 06 Exercises
-                </a>
-              </li>
-              <li>
-                <a href="../pages/tutorials.html#css-flexbox">
-                  <span class="toc-section-number"> 1.3.1 </span>
-                  CSS Flexbox
-                </a>
-              </li>
-              <li>
-                <a href="../pages/tutorials.html#week-10-exercises">
-                  <span class="toc-section-number"> 1.4 </span>
-                  Week 10 Exercises
-                </a>
-              </li>
-              <li>
-                <a href="../pages/tutorials.html#css-grid">
-                  <span class="toc-section-number"> 1.4.1 </span>
-                  CSS Grid
-                </a>
-              </li>
-              <li>
-                <a href="../pages/tutorials.html#week-11-exercises">
-                  <span class="toc-section-number"> 1.5 </span>
-                  Week 11 Exercises
-                </a>
-              </li>
-              <li>
-                <a href="../pages/tutorials.html#week-15-tutorial">
-                  <span class="toc-section-number"> 1.6 </span>
-                  Week 15 Tutorial
-                </a>
-              </li>
-              <li>
-                <a href="../pages/tutorials.html#week-04-solutions">
-                  <span class="toc-section-number"> 2.1 </span>
-                  Week 04 Solutions
-                </a>
-              </li>
-              <li>
-                <a href="../pages/tutorials.html#css-foundations-1">
-                  <span class="toc-section-number"> 2.1.1 </span>
-                  CSS Foundations
-                </a>
-              </li>
-              <li>
-                <a href="../pages/tutorials.html#css-box-model-1">
-                  <span class="toc-section-number"> 2.1.2 </span>
-                  CSS Box Model
-                </a>
-              </li>
-              <li>
-                <a href="../pages/tutorials.html#css-typesetting-typography-1">
-                  <span class="toc-section-number"> 2.1.3 </span>
-                  CSS Typesetting &amp; Typography
-                </a>
-              </li>
-              <li>
-                <a href="../pages/tutorials.html#week-06-solutions">
-                  <span class="toc-section-number"> 2.2 </span>
-                  Week 06 Solutions
-                </a>
-              </li>
-              <li>
-                <a href="../pages/tutorials.html#css-flexbox-1">
-                  <span class="toc-section-number"> 2.2.1 </span>
-                  CSS Flexbox
-                </a>
-              </li>
-              <li>
-                <a href="../pages/tutorials.html#week-10-solutions">
-                  <span class="toc-section-number"> 2.3 </span>
-                  Week 10 Solutions
-                </a>
-              </li>
-              <li>
-                <a href="../pages/tutorials.html#css-grid-1">
-                  <span class="toc-section-number"> 2.3.1 </span>
-                  CSS Grid
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a aria-label="Link to Assignments" aria-controls="assignment-listing" aria-expanded="false"
-              aria-haspopup="true" href="../pages/assignments.html" role="menuitem"
-              style="--icon: url(../images/assignments.svg)" class="icon">
-              <span role="tooltip"> Assignments </span>
-            </a>
-            <ul id="assignment-listing">
-              <li>
-                <a href="../pages/assignments.html#milestone-1-2">
-                  Milestone 1 &amp; 2
-                </a>
-              </li>
-              <li>
-                <a href="../pages/assignments.html#lab-1"> Lab 1 </a>
-              </li>
-              <li>
-                <a href="../pages/assignments.html#lab-2"> Lab 2 </a>
-              </li>
-              <li>
-                <a href="../pages/assignments.html#lab-3"> Lab 3 </a>
-              </li>
-              <li>
-                <a href="../pages/assignments.html#lab-4"> Lab 4 </a>
-              </li>
-              <li>
-                <a href="../pages/assignments.html#lab-1-solution">
-                  Lab 1 Solution
-                </a>
-              </li>
-              <li>
-                <a href="../pages/assignments.html#lab-2-solution">
-                  Lab 2 Solution
-                </a>
-              </li>
-              <li>
-                <a href="../pages/assignments.html#lab-3-solution">
-                  Lab 3 Solution
-                </a>
-              </li>
-              <li>
-                <a href="../pages/assignments.html#lab-4-solution">
-                  Lab 4 Solution
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main class="base" role="main">
-    <article class="flow-container text-wrapper">
-      $for(include-before)$ $include-before$ $endfor$ $if(title)$
-      <header class="level1" id="title-block-header">
-        <h1>$title$</h1>
-        $if(subtitle)$
-        <p>$subtitle$</p>
-        $endif$ $for(author)$
-        <p>$author$</p>
-        $endfor$ $if(abstract)$
-        <div class="abstract">
-          <h2>$abstract-title$</h2>
-          $abstract$
+      <div class="banner-top-bar surface">
+        <div class="flex-row">
+          <button
+            type="button"
+            id="baseliner-toggle"
+            aria-label="Secret Button"
+            aria-hidden="True"
+            class="icon large scale-up-2x"
+            style="--icon: url(../images/favicon.svg)"
+          ></button>
+          <div>
+            <h1 class="banner-title">User Interfaces</h1>
+            <small>
+              420-2W6 | Winter 2023 | as taught by
+              <a rel="author" href="https://github.com/michaelhaaf/2W6-W23">
+                Michael Haaf
+              </a>
+            </small>
+          </div>
         </div>
-        $endif$ $if(date)$
-        <p>
-          Last update:
-          <time datetime="$datetime$"> $date$ </time>
-        </p>
-        $endif$
-        <hr />
-      </header>
-      $endif$
-      <section class="overlay-grid sticky-container level1">
-        <menu class="margin sticky">
-          <li>
-            <nav aria-label="Page Control" class="bordered-box">
-              <ul role="menubar" tabindex="-1">
+
+        <nav class="main-nav" aria-label="Main menu">
+          <ul class="main-menu" role="menubar">
+            <li>
+              <a
+                aria-label="Link to Home"
+                href="../pages/home.html"
+                role="menuitem"
+                style="--icon: url(../images/home.svg)"
+                class="icon"
+              >
+                <span class="strong"> Home </span>
+              </a>
+            </li>
+            <li>
+              <a
+                aria-label="Link to Course Outline"
+                href="../pages/course-outline.html"
+                role="menuitem"
+                style="--icon: url(../images/outline.svg)"
+                class="icon"
+              >
+                <span class="strong"> Course outline </span>
+              </a>
+            </li>
+            <li>
+              <a
+                aria-label="Link to Calendar"
+                href="../pages/calendar.html"
+                role="menuitem"
+                class="icon"
+                style="--icon: url(../images/calendar.svg)"
+              >
+                <span class="strong"> Calendar </span>
+              </a>
+            </li>
+            <li>
+              <a
+                aria-label="Link to Lectures"
+                href="../pages/lectures.html"
+                role="menuitem"
+                aria-controls="lecture-listing"
+                aria-haspopup="true"
+                aria-expanded="false"
+                style="--icon: url(../images/lectures.svg)"
+                class="icon"
+              >
+                <span class="strong"> Lectures </span>
+              </a>
+              <ul id="lecture-listing" role="menu" aria-label="Lectures">
                 <li>
-                  <button type="button" role="menuitem" aria-hidden="true" aria-label="Toggle theme"
-                    id="theme-toggle-icon" style="--icon: var(--theme-toggle-icon)"
-                    class="icon small scale-up"></button>
-                </li>
-                <li>
-                  <a href="#title-block-header" role="menuitem" style="
-                        --icon: url(../images/feather-icons/chevron-up.svg);
-                      " class="icon small">
-                    <span role="tooltip"> Scroll to beginning </span>
+                  <a role="menuitem" href="../lectures/week01.html">
+                    week01.html
                   </a>
                 </li>
                 <li>
-                  <a href="#site-footer" role="menuitem" style="
-                        --icon: url(../images/feather-icons/chevron-down.svg);
-                      " class="icon small">
-                    <span role="tooltip"> Scroll to end </span>
-                  </a>
-                </li>
-                $if(prev-page)$
-                <li>
-                  <a rel="prev" href="$prev-page$" role="menuitem" style="
-                        --icon: url(../images/feather-icons/chevron-left.svg);
-                      " class="icon small">
-                    <span role="tooltip"> Previous page </span>
-                  </a>
-                </li>
-                $endif$ $if(next-page)$
-                <li>
-                  <a rel="next" href="$next-page$" role="menuitem" style="
-                        --icon: url(../images/feather-icons/chevron-right.svg);
-                      " class="icon small">
-                    <span role="tooltip"> Next page </span>
-                  </a>
-                </li>
-                $endif$
-                <li>
-                  <a href="#" role="menuitem" style="--icon: url('../images/feather-icons/printer.svg')"
-                    class="icon small">
-                    <span role="tooltip"> View PDF </span>
+                  <a role="menuitem" href="../lectures/week02.html">
+                    week02.html
                   </a>
                 </li>
                 <li>
-                  <button type="button" aria-controls="margin-menu" aria-expanded="false" aria-hidden="true"
-                    aria-labelled-by="tutorial-tooltip" role="menuitem" style="
-                        --icon: url(../images/feather-icons/maximize-2.svg);
-                      " class="icon small">
-                    <span id="tutorial-tooltip" role="tooltip">
-                      Toggle margin menu
-                    </span>
-                  </button>
+                  <a role="menuitem" href="../lectures/week03.html">
+                    week03.html
+                  </a>
+                </li>
+                <li>
+                  <a role="menuitem" href="../lectures/week04.html">
+                    week04.html
+                  </a>
+                </li>
+                <li>
+                  <a role="menuitem" href="../lectures/week05.html">
+                    week05.html
+                  </a>
+                </li>
+                <li>
+                  <a role="menuitem" href="../lectures/week06.html">
+                    week06.html
+                  </a>
+                </li>
+                <li>
+                  <a role="menuitem" href="../lectures/week07.html">
+                    week07.html
+                  </a>
+                </li>
+                <li>
+                  <a role="menuitem" href="../lectures/week09.html">
+                    week09.html
+                  </a>
+                </li>
+                <li>
+                  <a role="menuitem" href="../lectures/week10.html">
+                    week10.html
+                  </a>
+                </li>
+                <li>
+                  <a role="menuitem" href="../lectures/week11.html">
+                    week11.html
+                  </a>
+                </li>
+                <li>
+                  <a role="menuitem" href="../lectures/week12.html">
+                    week12.html
+                  </a>
+                </li>
+                <li>
+                  <a role="menuitem" href="../lectures/week13.html">
+                    week13.html
+                  </a>
+                </li>
+                <li>
+                  <a role="menuitem" href="../lectures/week14.html">
+                    week14.html
+                  </a>
                 </li>
               </ul>
-            </nav>
-          </li>
+            </li>
+            <li>
+              <a
+                aria-label="Tutorials"
+                aria-controls="tutorial-listing"
+                aria-expanded="false"
+                aria-haspopup="true"
+                href="../pages/tutorials.html"
+                role="menuitem"
+                style="--icon: url(../images/tutorials.svg)"
+                class="icon"
+              >
+                <span class="strong"> Tutorials </span>
+              </a>
+              <ul id="tutorial-listing">
+                <li>
+                  <a href="../pages/tutorials.html#week-01-exercises">
+                    <span class="toc-section-number"> 1.1 </span>
+                    Week 01 Exercises
+                  </a>
+                </li>
+                <li>
+                  <a href="../pages/tutorials.html#week-04-exercises">
+                    <span class="toc-section-number"> 1.2 </span>
+                    Week 04 Exercises
+                  </a>
+                </li>
+                <li>
+                  <a href="../pages/tutorials.html#css-foundations">
+                    <span class="toc-section-number"> 1.2.1 </span>
+                    CSS Foundations
+                  </a>
+                </li>
+                <li>
+                  <a href="../pages/tutorials.html#css-box-model">
+                    <span class="toc-section-number"> 1.2.2 </span>
+                    CSS Box Model
+                  </a>
+                </li>
+                <li>
+                  <a href="../pages/tutorials.html#css-typesetting-typography">
+                    <span class="toc-section-number"> 1.2.3 </span>
+                    CSS Typesetting &amp; Typography
+                  </a>
+                </li>
+                <li>
+                  <a href="../pages/tutorials.html#week-06-exercises">
+                    <span class="toc-section-number"> 1.3 </span>
+                    Week 06 Exercises
+                  </a>
+                </li>
+                <li>
+                  <a href="../pages/tutorials.html#css-flexbox">
+                    <span class="toc-section-number"> 1.3.1 </span>
+                    CSS Flexbox
+                  </a>
+                </li>
+                <li>
+                  <a href="../pages/tutorials.html#week-10-exercises">
+                    <span class="toc-section-number"> 1.4 </span>
+                    Week 10 Exercises
+                  </a>
+                </li>
+                <li>
+                  <a href="../pages/tutorials.html#css-grid">
+                    <span class="toc-section-number"> 1.4.1 </span>
+                    CSS Grid
+                  </a>
+                </li>
+                <li>
+                  <a href="../pages/tutorials.html#week-11-exercises">
+                    <span class="toc-section-number"> 1.5 </span>
+                    Week 11 Exercises
+                  </a>
+                </li>
+                <li>
+                  <a href="../pages/tutorials.html#week-15-tutorial">
+                    <span class="toc-section-number"> 1.6 </span>
+                    Week 15 Tutorial
+                  </a>
+                </li>
+                <li>
+                  <a href="../pages/tutorials.html#week-04-solutions">
+                    <span class="toc-section-number"> 2.1 </span>
+                    Week 04 Solutions
+                  </a>
+                </li>
+                <li>
+                  <a href="../pages/tutorials.html#css-foundations-1">
+                    <span class="toc-section-number"> 2.1.1 </span>
+                    CSS Foundations
+                  </a>
+                </li>
+                <li>
+                  <a href="../pages/tutorials.html#css-box-model-1">
+                    <span class="toc-section-number"> 2.1.2 </span>
+                    CSS Box Model
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="../pages/tutorials.html#css-typesetting-typography-1"
+                  >
+                    <span class="toc-section-number"> 2.1.3 </span>
+                    CSS Typesetting &amp; Typography
+                  </a>
+                </li>
+                <li>
+                  <a href="../pages/tutorials.html#week-06-solutions">
+                    <span class="toc-section-number"> 2.2 </span>
+                    Week 06 Solutions
+                  </a>
+                </li>
+                <li>
+                  <a href="../pages/tutorials.html#css-flexbox-1">
+                    <span class="toc-section-number"> 2.2.1 </span>
+                    CSS Flexbox
+                  </a>
+                </li>
+                <li>
+                  <a href="../pages/tutorials.html#week-10-solutions">
+                    <span class="toc-section-number"> 2.3 </span>
+                    Week 10 Solutions
+                  </a>
+                </li>
+                <li>
+                  <a href="../pages/tutorials.html#css-grid-1">
+                    <span class="toc-section-number"> 2.3.1 </span>
+                    CSS Grid
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a
+                aria-label="Link to Assignments"
+                aria-controls="assignment-listing"
+                aria-expanded="false"
+                aria-haspopup="true"
+                href="../pages/assignments.html"
+                role="menuitem"
+                style="--icon: url(../images/assignments.svg)"
+                class="icon"
+              >
+                <span class="strong"> Assignments </span>
+              </a>
+              <ul id="assignment-listing">
+                <li>
+                  <a href="../pages/assignments.html#milestone-1-2">
+                    Milestone 1 &amp; 2
+                  </a>
+                </li>
+                <li>
+                  <a href="../pages/assignments.html#lab-1"> Lab 1 </a>
+                </li>
+                <li>
+                  <a href="../pages/assignments.html#lab-2"> Lab 2 </a>
+                </li>
+                <li>
+                  <a href="../pages/assignments.html#lab-3"> Lab 3 </a>
+                </li>
+                <li>
+                  <a href="../pages/assignments.html#lab-4"> Lab 4 </a>
+                </li>
+                <li>
+                  <a href="../pages/assignments.html#lab-1-solution">
+                    Lab 1 Solution
+                  </a>
+                </li>
+                <li>
+                  <a href="../pages/assignments.html#lab-2-solution">
+                    Lab 2 Solution
+                  </a>
+                </li>
+                <li>
+                  <a href="../pages/assignments.html#lab-3-solution">
+                    Lab 3 Solution
+                  </a>
+                </li>
+                <li>
+                  <a href="../pages/assignments.html#lab-4-solution">
+                    Lab 4 Solution
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-          $if(toc)$
-          <li>
-            <nav aria-label="Table of Contents" class="margin sticky toc bordered-box padded-box" id="$idprefix$TOC">
-              <button type="button" aria-expanded="true" aria-controls="TOC" class="accordion expanded toc-title">
-                Contents
-              </button>
-              $table-of-contents$
-            </nav>
-          </li>
+    <main class="base" role="main">
+      <article class="flow-container text-wrapper">
+        $for(include-before)$ $include-before$ $endfor$ $if(title)$
+        <header class="level1" id="title-block-header">
+          <h1>$title$</h1>
+          $if(subtitle)$
+          <p>$subtitle$</p>
+          $endif$ $for(author)$
+          <p>$author$</p>
+          $endfor$ $if(abstract)$
+          <div class="abstract">
+            <h2>$abstract-title$</h2>
+            $abstract$
+          </div>
+          $endif$ $if(date)$
+          <p>
+            Last update:
+            <time datetime="$datetime$"> $date$ </time>
+          </p>
           $endif$
-        </menu>
-      </section>
-      $body$ $for(include-after)$ $include-after$ $endfor$
-    </article>
-  </main>
-  <footer id="site-footer">
-    <small>
-      © 2023 Michael Haaf |
-      <a href="../pages/home.html#about-this-website"> About </a>
-      |
-      <a href="../pages/home.html#course-logistics"> Contact </a>
-      |
-      <a href="../pages/home.html#copyright"> Terms &amp; Conditions </a>
-    </small>
-  </footer>
-</body>
-<script src="http://files.keyes.ie/things/baseliner/baseliner-latest.min.js"></script>
+          <hr />
+        </header>
+        $endif$
+        <section class="overlay-grid sticky-container level1">
+          <menu class="margin sticky">
+            <li>
+              <nav aria-label="Page Control" class="bordered-box">
+                <ul class="page-menu" role="menubar" tabindex="-1">
+                  <li>
+                    <button
+                      type="button"
+                      role="menuitem"
+                      aria-hidden="true"
+                      aria-label="Toggle theme"
+                      id="theme-toggle-icon"
+                      style="--icon: var(--theme-toggle-icon)"
+                      class="icon small scale-up"
+                    ></button>
+                  </li>
+                  <li>
+                    <a
+                      href="#title-block-header"
+                      role="menuitem"
+                      style="
+                        --icon: url(../images/feather-icons/chevron-up.svg);
+                      "
+                      class="icon small"
+                    >
+                      <span role="tooltip"> Scroll to beginning </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#site-footer"
+                      role="menuitem"
+                      style="
+                        --icon: url(../images/feather-icons/chevron-down.svg);
+                      "
+                      class="icon small"
+                    >
+                      <span role="tooltip"> Scroll to end </span>
+                    </a>
+                  </li>
+                  $if(prev-page)$
+                  <li>
+                    <a
+                      rel="prev"
+                      href="$prev-page$"
+                      role="menuitem"
+                      style="
+                        --icon: url(../images/feather-icons/chevron-left.svg);
+                      "
+                      class="icon small"
+                    >
+                      <span role="tooltip"> Previous page </span>
+                    </a>
+                  </li>
+                  $endif$ $if(next-page)$
+                  <li>
+                    <a
+                      rel="next"
+                      href="$next-page$"
+                      role="menuitem"
+                      style="
+                        --icon: url(../images/feather-icons/chevron-right.svg);
+                      "
+                      class="icon small"
+                    >
+                      <span role="tooltip"> Next page </span>
+                    </a>
+                  </li>
+                  $endif$
+                  <li>
+                    <a
+                      href="#"
+                      role="menuitem"
+                      style="--icon: url('../images/feather-icons/printer.svg')"
+                      class="icon small"
+                    >
+                      <span role="tooltip"> View PDF </span>
+                    </a>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      aria-controls="margin-menu"
+                      aria-expanded="false"
+                      aria-hidden="true"
+                      aria-label="Toggle margin menu"
+                      role="menuitem"
+                      style="
+                        --icon: url(../images/feather-icons/maximize-2.svg);
+                      "
+                      class="icon small"
+                    >
+                      <span role="tooltip"> Toggle margin menu </span>
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+            </li>
 
+            $if(toc)$
+            <li>
+              <nav
+                aria-label="Table of Contents"
+                class="margin toc bordered-box padded-box"
+                id="$idprefix$TOC"
+              >
+                <button
+                  type="button"
+                  aria-expanded="true"
+                  aria-controls="TOC"
+                  class="accordion expanded toc-title"
+                >
+                  Contents
+                </button>
+                $table-of-contents$
+              </nav>
+            </li>
+            $endif$
+          </menu>
+        </section>
+        $body$ $for(include-after)$ $include-after$ $endfor$
+      </article>
+    </main>
+    <footer id="site-footer">
+      <small>
+        © 2023 Michael Haaf |
+        <a href="../pages/home.html#about-this-website"> About </a>
+        |
+        <a href="../pages/home.html#course-logistics"> Contact </a>
+        |
+        <a href="../pages/home.html#copyright"> Terms &amp; Conditions </a>
+      </small>
+    </footer>
+  </body>
+  <script src="http://files.keyes.ie/things/baseliner/baseliner-latest.min.js"></script>
 </html>

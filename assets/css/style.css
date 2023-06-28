@@ -189,6 +189,7 @@ h2[data-number],
 .banner-bottom-bar,
 article {
   border-top: var(--border-muted);
+  border-bottom: var(--border-muted);
 }
 
 .base {
@@ -197,7 +198,7 @@ article {
 }
 
 .surface {
-  background-color: hsl(var(--hsl-surface) / 0.9);
+  background-color: hsl(var(--hsl-base) / 0.8);
   color: var(--text);
 }
 

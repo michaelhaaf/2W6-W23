@@ -139,6 +139,7 @@ abbr {
 *
 * The font-specific constants are defined in @fonts.css; the formula below is general for any fonts with ascender height differences.
 */
+.strong,
 strong {
   /* compute font-size to reduce strong height by the height difference ratio */
   --computedHeightRatio: calc(
@@ -148,6 +149,7 @@ strong {
 
   /* font-size: calc(var(--computedFontRatio) * var(--font-size)); */
   font-size: calc(var(--computedFontRatio) * 1em);
+  font-weight: bold;
 }
 
 /* !!! 

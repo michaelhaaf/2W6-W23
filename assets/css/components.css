@@ -28,9 +28,14 @@
   || Specific
 \* ------------------------------------------ */
 
+/* site banner */
+
+.site-banner {
+  position: relative;
+  z-index: 1;
+}
 .site-banner figure {
   padding-top: 11rem;
-  position: relative;
 }
 .site-banner figure::before {
   content: "";
@@ -47,16 +52,16 @@
   text-align: right;
   padding: 1rem;
 }
-.site-banner small {
-  padding-bottom: 0.5rem;
-}
 
 .banner-top-bar {
+  position: relative;
   display: flex;
   align-items: center;
+  z-index: 2;
 }
 .banner-top-bar small {
   display: block;
+  padding-bottom: 0.5rem;
 }
 
 /* Accordion/collapsible buttons + lists */
@@ -68,21 +73,21 @@
   text-align: left;
   width: 100%;
 }
-.accordion::after {
+.accordion[aria-expanded="false"]::after {
   text-align: right;
   float: right;
   content: " (+)";
 }
-.accordion.expanded::after {
+.accordion[aria-expanded="true"]::after {
   text-align: right;
   float: right;
   content: "  --";
 }
-.accordion + ul {
+.accordion[aria-expanded="false"] + ul {
   max-height: 0;
   overflow: hidden;
 }
-.accordion.expanded + ul {
+.accordion[aria-expanded="true"] + ul {
   max-height: none;
 }
 
@@ -101,7 +106,7 @@
 }
 .level1 .margin {
   grid-column: margin;
-  justify-self: left;
+  justify-self: center;
 }
 /* NOTE: makes navigation to top of section impossible */
 .level1 :is(section, header, footer, aside, .abstract) {
@@ -116,6 +121,7 @@
   pointer-events: none;
   position: absolute;
   inset: 0;
+  padding: 1rem;
 }
 
 /* Sticky */
@@ -134,16 +140,15 @@
   max-height: 100vh;
 }
 .overlay-grid .sticky {
+  top: 6.5rem;
   pointer-events: auto;
+}
+.site-banner.sticky {
+  top: -15rem;
 }
 
 /* Table of Contents */
 
-.toc {
-  justify-self: center;
-  min-width: 50%;
-  padding: 0.5rem 0;
-}
 .toc-title {
   text-transform: uppercase;
   font-size: var(--font-size-m);
@@ -186,47 +191,59 @@
 
 /* Navigation Menus */
 
-.main-menu {
+[aria-expanded="false"] + ul {
+  display: none;
+}
+[aria-expanded="true"] + ul {
+  display: initial;
+}
+[role="tooltip"] {
+  display: none;
+}
+[role="menubar"] {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: start;
-  margin: 0 auto 0 0;
 }
-.main-menu .icon {
-  display: inline-block;
-  padding: 1rem 1rem;
-}
-.main-menu .icon::before {
-  display: none;
-}
-.main-menu li[aria-current="page"] {
-  background-color: var(--surface);
-}
-.main-menu [aria-expanded="false"] + ul {
-  display: none;
-}
-
-.horizontal {
-  width: min-content;
-  max-width: 14rem;
-}
-
-/* Icons */
-
-.icon {
-  display: block;
+[role="menuitem"] {
+  cursor: pointer;
   position: relative;
 }
-.icon.small {
+[role="menuitem"]:hover {
+  background-color: hsl(var(--hsl-text) / 0.5);
+  color: var(--base);
+}
+[role="menuitem"][aria-current="page"] {
+  background-color: hsl(var(--hsl-text) / 0.9);
+  color: var(--base);
+}
+[role="menuitem"].icon:hover::before {
+  filter: invert(100%);
+}
+
+.main-menu [role="menuitem"] {
+  display: inline-block;
+  padding: 1rem 1rem;
+  border-radius: 0.5rem;
+}
+.main-menu [role="menuitem"]::before {
+  display: none;
+}
+
+.page-menu [role="menuitem"] {
+  display: block;
   height: 2rem;
   width: 2rem;
+}
+
+.icon {
+  position: relative;
 }
 .icon.large {
   height: 4rem;
   width: 4rem;
 }
-
 .icon::before {
   content: "";
   position: absolute;
@@ -238,7 +255,6 @@
   background-color: transparent;
   background-size: 50%;
 }
-
 .icon.scale-up::before {
   background-size: 60%;
 }

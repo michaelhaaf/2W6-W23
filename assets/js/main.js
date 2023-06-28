@@ -52,14 +52,17 @@ themeToggleIcon.addEventListener("click", toggleTheme);
 //   });
 // }
 
-
 // implementation v3: combine v2 and v1
 // This kinda sucks if we're being honest, but it works well for now.
-let activeSection; let activeTocLink;
-let observerOptions; let observedSections;
+let activeSection;
+let activeTocLink;
+let observerOptions;
+let observedSections;
 
 const pageContent = document.querySelector("article");
-const allSections = pageContent.querySelectorAll("section.level1:not(.overlay-grid), section.level2, section.level3");
+const allSections = pageContent.querySelectorAll(
+  "section.level1:not(.overlay-grid), section.level2, section.level3"
+);
 const currentActiveSections = [];
 
 const pageToc = document.querySelector("nav.toc");
@@ -75,34 +78,35 @@ if (!pageToc) {
   observeSections = new IntersectionObserver(setActive, observerOptions);
   allSections.forEach((section) => observeSections.observe(section));
   activeSection = pageContent.querySelector("article > section");
-  activeTocLink = activeSection ? pageToc.querySelector(`#${activeSection.getAttribute('id')}`) : ""
+  activeTocLink = activeSection
+    ? pageToc.querySelector(`#${activeSection.getAttribute("id")}`)
+    : "";
 }
 
 function setActive(observedSections) {
-  observedSections
-    .forEach(section => {
-      const id = section.target.getAttribute('id');
-      const sectionTocLink = document.querySelector(`nav li a[href="#${id}"]`);
-      if (section.intersectionRatio > 0) { 
-        sectionTocLink.classList.add("semi-active");
-        currentActiveSections.push(section.target);
-      } else {
-        sectionTocLink.classList.remove("semi-active");
-        const index = currentActiveSections.indexOf(section.target);
-        if (index > -1) {
-          currentActiveSections.splice(index, 1);
-        }
+  observedSections.forEach((section) => {
+    const id = section.target.getAttribute("id");
+    const sectionTocLink = document.querySelector(`nav li a[href="#${id}"]`);
+    if (section.intersectionRatio > 0) {
+      sectionTocLink.classList.add("semi-active");
+      currentActiveSections.push(section.target);
+    } else {
+      sectionTocLink.classList.remove("semi-active");
+      const index = currentActiveSections.indexOf(section.target);
+      if (index > -1) {
+        currentActiveSections.splice(index, 1);
       }
-    });
+    }
+  });
   let minViewportDist = Number.MAX_VALUE;
   let closestSection = activeSection;
   let closestTocLink = activeTocLink;
-  allSections.forEach(section => {
-    const id = section.getAttribute('id');
+  allSections.forEach((section) => {
+    const id = section.getAttribute("id");
     const viewportDist = section.getBoundingClientRect().top;
     if (viewportDist > 0 && viewportDist < minViewportDist) {
-      closestSection = pageContent.querySelector(`section#${id}`)
-      closestTocLink = pageToc.querySelector(`a[href="#${id}"]`)
+      closestSection = pageContent.querySelector(`section#${id}`);
+      closestTocLink = pageToc.querySelector(`a[href="#${id}"]`);
       minViewportDist = viewportDist;
     }
   });
@@ -111,7 +115,6 @@ function setActive(observedSections) {
   activeSection = closestSection;
   activeTocLink = closestTocLink;
 }
-
 
 // Clickable dropdown:
 // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar_click
@@ -177,10 +180,10 @@ window.onclick = function (e) {
   }
 };
 
-// Set current page 
+// Set current page
 window.onload = function (e) {
-  let pathname = window.location.pathname
-  let basename = pathname.substring(pathname.lastIndexOf('/')+1)
+  let pathname = window.location.pathname;
+  let basename = pathname.substring(pathname.lastIndexOf("/") + 1);
   if (pathname.includes("lectures")) {
     basename = "lectures.html";
   } else if (pathname.includes("assignments")) {
@@ -189,40 +192,39 @@ window.onload = function (e) {
     basename = "tutorials.html";
   }
 
-  let currentPageTab = document.querySelector(`nav a[href$="${basename}"]`).parentElement;
-  setCurrent(currentPageTab);
+  let currentPage = document.querySelector(`nav a[href$="${basename}"]`);
+  setCurrent(currentPage);
 };
-
 
 // accordion pattern
 const accordions = Array.from(document.querySelectorAll(".accordion"));
-accordions.forEach(accordion => {
+accordions.forEach((accordion) => {
   accordion.addEventListener("click", expandCollapsible);
 });
 
 function expandCollapsible(event) {
   let elem = event.target;
-  let panel = elem.nextElementSibling;
-  elem.classList.toggle("expanded");
-  panel.classList.toggle("expanded");
+  elem.setAttribute(
+    "aria-expanded",
+    elem.getAttribute("aria-expanded") === "true" ? "false" : "true"
+  );
 }
 
-
 // baseliner
-const baselinerToggle = document.querySelector('#baseliner-toggle');
+const baselinerToggle = document.querySelector("#baseliner-toggle");
 
-// https://keyes.ie/things/baseliner/  
+// https://keyes.ie/things/baseliner/
 // This tool creates a bunch of divs, which can cause vertical overflow.
 // I had to add some jank to remove those elems. TODO refactor for brevity/clarity
-baselinerToggle.addEventListener('click', () => {
-  let baselinerElem = document.querySelector('#overlay-it');
-  let baselinerOverlay = document.querySelector('#baseline-overlay');
+baselinerToggle.addEventListener("click", () => {
+  let baselinerElem = document.querySelector("#overlay-it");
+  let baselinerOverlay = document.querySelector("#baseline-overlay");
   if (baselinerElem) {
-    document.body.removeChild(baselinerElem.parentElement)
+    document.body.removeChild(baselinerElem.parentElement);
     if (baselinerOverlay) {
-      document.body.removeChild(baselinerOverlay) 
+      document.body.removeChild(baselinerOverlay);
     }
   } else {
-    baseliner = new Baseliner({gridHeight: 32, gridOffset: 2});
-  } 
+    baseliner = new Baseliner({ gridHeight: 32, gridOffset: 12 });
+  }
 });
