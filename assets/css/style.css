@@ -36,7 +36,6 @@
 *     - https://cssguidelin.es/
 */
 
-
 /* ------------------------------------------ *\
   || Imports
 \* ------------------------------------------ */
@@ -103,7 +102,9 @@ html {
   font-size: 100%;
 }
 
-p, li, ol {
+p,
+li,
+ol {
   color: var(--subtle);
 }
 strong {
@@ -228,8 +229,9 @@ article {
 * (TODO)
 */
 @media print {
-
-  body, .base, .surface {
+  body,
+  .base,
+  .surface {
     background: #fff;
     color: #000;
     font-size: 8pt;
@@ -249,7 +251,9 @@ article {
     font-size: 10pt;
   }
 
-  h4,h5,h6 {
+  h4,
+  h5,
+  h6 {
     font-size: 8pt;
   }
 
@@ -258,10 +262,16 @@ article {
     background-color: #ccc;
   }
 
-  h1, h2, h3, h4, h5, h6, code, pre {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  code,
+  pre {
     color: #000;
     text-transform: none;
     page-break-after: avoid;
   }
-
 }
