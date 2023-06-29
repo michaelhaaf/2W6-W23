@@ -1,76 +1,8 @@
+/* et-book */
+@import url("../fonts/et-book/et-book.css");
+/* source code pro */
+@import url("../fonts/source-code-pro/source-code-pro.css");
 
-/* Font face imports 
-* Create "et-book" font-family: a webfont of the typeface used in Edward Tufte's books.
-* See https://github.com/edwardtufte/et-book for more information.
-* CSS adapted from https://github.com/edwardtufte/et-book/blob/gh-pages/et-book.css 
-*/
-
-/* Font-specific typographic constants */
-:root {
-  /* et-book font metrics, determined using FontForge https://fontforge.org/ */
-  --em-square: 2048;
-  --ascender-bold: 1921;
-  --ascender-regular: 1835;
-}
-
-@charset "UTF-8";
-@font-face {
-  font-family: "et-book";
-  src: url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
-  src: url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff")
-      format("woff"),
-    url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf")
-      format("truetype"),
-    url("../fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf")
-      format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "et-book";
-  src: url("../fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
-  src: url("../fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff")
-      format("woff"),
-    url("../fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf")
-      format("truetype"),
-    url("../fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf")
-      format("svg");
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "et-book";
-  src: url("../fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
-  src: url("../fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff")
-      format("woff"),
-    url("../fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf")
-      format("truetype"),
-    url("../fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf")
-      format("svg");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "et-book-roman-old-style";
-  src: url("../fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot");
-  src: url("../fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff")
-      format("woff"),
-    url("../fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf")
-      format("truetype"),
-    url("../fonts/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.svg#etbookromanosf")
-      format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+/* External */
+@import url('https://free.bboxtype.com/embedfonts/?family=FiraGO:300,300i,400,400i,700,700i');
+@import url('https://free.bboxtype.com/embedfonts/?family=FiraMono:400,500,700');

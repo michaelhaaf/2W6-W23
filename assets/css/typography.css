@@ -1,7 +1,11 @@
 :root {
-  --font-family-body: et-book, Palatino, "Palatino Linotype", "Palatino LT STD",
+  --font-family-serif: et-book, Palatino, "Palatino Linotype", "Palatino LT STD",
     "Book Antiqua", Georgia, serif;
-  --font-family-headers: var(--font-family-body);
+  --font-family-sans: "FiraGO", sans-serif;
+  --font-family-monospace: "Source Code Pro", "Fira Mono", monospace;
+
+  --font-family-body: var(--font-family-serif);
+  --font-family-headers: var(--font-family-serif);
 
   --font-size-xs: 0.8rem; /* 12.8px */
   --font-size-s: 1rem; /* 16px */

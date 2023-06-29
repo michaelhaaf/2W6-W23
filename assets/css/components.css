@@ -261,3 +261,42 @@
 .icon.scale-up-2x::before {
   background-size: 70%;
 }
+
+
+/* ------------------------------------------ *\
+  || Code block
+\* ------------------------------------------ */
+
+.sourceCode {
+  font-family: var(--font-family-monospace)
+}
+
+code span.al { color: var(--accent-gold); } /* Alert */
+code span.an { color: var(--accent-foam); font-weight: bold; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: var(--accent-red); } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: var(--accent-teal); } /* ControlFlow */
+code span.ch { color: var(--accent-red); } /* Char */
+code span.cn { color: var(--accent-red); font-weight: bold; } /* Constant */
+code span.co { color: var(--accent-foam); } /* Comment */
+code span.cv { color: var(--accent-foam); font-weight: bold; } /* CommentVar */
+code span.do { color: var(--accent-foam); } /* Documentation */
+code span.dt { color: var(--accent-teal); } /* DataType */
+code span.dv { color: var(--accent-teal); } /* DecVal */
+code span.er { color: var(--accent-red); } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: var(--subtle); } /* Float */
+code span.fu { color: var(--accent-violet); } /* Function */
+code span.im { } /* Import */
+code span.in { color: var(--accent-foam); font-weight: bold; } /* Information */
+code span.kw { color: var(--accent-violet); } /* Keyword */
+code span.op { color: var(--accent-violet); } /* Operator */
+code span.ot { color: var(--accent-gold); } /* Other */
+code span.pp { color: var(--accent-gold); font-weight: bold; } /* Preprocessor */
+code span.sc { color: var(--accent-red); } /* SpecialChar */
+code span.ss { color: var(--accent-orange); } /* SpecialString */
+code span.st { color: var(--accent-orange); } /* String */
+code span.va { } /* Variable */
+code span.vs { color: var(--accent-orange); } /* VerbatimString */
+code span.wa { color: var(--accent-foam); font-weight: bold; } /* Warning */
