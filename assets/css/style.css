@@ -125,15 +125,13 @@ hr {
   border-top: var(--border-default);
 }
 
-h2[data-number],
+h2[data-number] {
+  font-style: italic;
+}
 .abstract h2 {
   font-style: italic;
   border-bottom: var(--border-default);
   margin-bottom: calc(var(--padding-l) - var(--border-size));
-}
-
-.abstract {
-  font-style: italic;
 }
 
 /* ------------------------------------------ *\

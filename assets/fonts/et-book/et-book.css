@@ -4,7 +4,7 @@
   --ascender-bold: 1921;
   --ascender-regular: 1835;
 }
-@charset "UTF-8";
+
 @font-face {
   font-family: "et-book";
   src: url("./et-book-roman-line-figures/et-book-roman-line-figures.eot");
