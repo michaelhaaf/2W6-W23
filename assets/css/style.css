@@ -45,6 +45,7 @@
 @import "fonts.css";
 @import "typography.css";
 @import "components.css";
+@import "pandoc.css";
 
 /* ------------------------------------------ *\
   || Reset
