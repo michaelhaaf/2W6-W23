@@ -77,7 +77,7 @@ Sounds good. But there are other ways to make selectors **more specific**, which
 
 Let’s take a look at a few quick examples to visualize how specificity works. Consider the following HTML and CSS code:
 
-###### HTML{.sourceCode}
+
 ```html
 <!-- index.html -->
 
@@ -86,7 +86,7 @@ Let’s take a look at a few quick examples to visualize how specificity works. 
 </div>
 ```
 
-###### CSS{.sourceCode}
+
 ```css
 /* rule 1 */
 .subsection {
@@ -103,7 +103,7 @@ In the example above, both rules are using only class selectors, but rule 2 is m
 
 Now, let’s change things a little bit:
 
-###### HTML{.sourceCode}
+
 ```html
 <!-- index.html -->
 
@@ -112,7 +112,7 @@ Now, let’s change things a little bit:
 </div>
 ```
 
-###### CSS{.sourceCode}
+
 ```css
 /* rule 1 */
 #subsection {
@@ -129,7 +129,7 @@ In the example above, despite rule 2 having more class selectors than ID selecto
 
 Let’s consider one final example:
 
-###### HTML{.sourceCode}
+
 ```html
 <!-- index.html -->
 
@@ -140,7 +140,7 @@ Let’s consider one final example:
 </div>
 ```
 
-###### CSS{.sourceCode}
+
 ```css
 /* rule 1 */
 .list #subsection {
@@ -168,7 +168,7 @@ Inheritance refers to certain CSS properties that, when applied to an element, a
 
 The exception to this is when directly targeting an element, as this always beats inheritance:
 
-###### HTML{.sourceCode}
+
 ```html
 <!-- index.html -->
 
@@ -177,7 +177,7 @@ The exception to this is when directly targeting an element, as this always beat
 </div>
 ```
 
-###### CSS{.sourceCode}
+
 ```css
 /* styles.css */
 
@@ -202,7 +202,7 @@ The final factor, the end of the line, the tie-breaker of the tie-breaker. Let�
 
 Really simply, actually. Whichever rule was the last defined is the winner.
 
-###### CSS{.sourceCode}
+
 ```css
 /* styles.css */
 
@@ -223,7 +223,7 @@ But, you might ask, aren't there multiple ways to add CSS to an HTML Element? In
 
 Quick review: Inline CSS makes it possible to add styles directly to HTML elements:
 
-###### HTML{.sourceCode}
+
 ```html
 <body>
   <div style="color: white; background-color: black;">...</div>
@@ -254,7 +254,7 @@ Answer: neither. For all rules from each source, **when all other specificity is
 
 We can see examples of this below. First, an HTML file with two external `<link>` tags and one `<style>` tag. Pay attention to the order:
 
-###### HTML{.sourceCode}
+
 ```html
 <head>
   <link rel="stylesheet" href="style-file-1.css">    <!-- link to style-file-1.css -->
@@ -278,7 +278,7 @@ We can see examples of this below. First, an HTML file with two external `<link>
 
 Next, definitions for the .css files:
 
-###### CSS{.sourceCode}
+
 ```css
 /* style-file-1.css */
 div {
@@ -372,7 +372,7 @@ By using custom properties, instead of having to update every single instance of
 
 The syntax for declaring and accessing a custom property is really simple and not too different from how we write normal rule declarations:
 
-###### CSS{.sourceCode}
+
 ```css
 .error-modal {
   /* the '--' characters signify a custom property */
@@ -399,7 +399,7 @@ The `var()` function actually accepts **two** parameters. The first parameter we
 
 The second parameter is an optional fallback value: when a fallback value is provided in addition to a custom property, the fallback value will be used if the custom property is invalid or hasn't been declared yet. We can even pass in another custom property as a fallback, which can have its own fallback value as well!
 
-###### CSS{.sourceCode}
+
 ```css
 .fallback {
   --color-text: white;
@@ -419,7 +419,7 @@ Scope in CSS is somewhat similar in appearance to scope in C#: **all properties 
 
 In the example below, only the element with the cool-paragraph class would get styled with a red background since it's a descendant of the element where our custom property is declared:
 
-###### HTML{.sourceCode}
+
 ```html
 <div class='cool-div'>
   <p class='cool-p'>Check out my cool, red background!</p>
@@ -428,7 +428,7 @@ In the example below, only the element with the cool-paragraph class would get s
 <p class='cool-p'>I'm ALSO not in scope so I'm ALSO not cool (despite my class name!).</p>
 ```
 
-###### CSS{.sourceCode}
+
 ```css
 .cool-div {
   --main-bg: red;
@@ -457,13 +457,13 @@ This is essentially what is done in practise, with just a bit of extra fanciness
 [mdn-root]: https://developer.mozilla.org/en-US/docs/Web/CSS/:root
 [w3-root]: https://www.w3schools.com/cssref/sel_root.php
 
-###### HTML {.sourceCode}
+
 ```html
 <p class='cool-paragraph'>Lorem ipsum dolor sit amet.</p>
 <p class='exciting-paragraph'>Lorem ipsum dolor sit amet.</p>
 ```
 
-###### CSS {.sourceCode}
+
 ```css
 :root {
   --main-color: red;

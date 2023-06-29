@@ -82,7 +82,7 @@ The fonts available to the browser depend largely on the fonts installed in the 
 
 This is also known as a **font stack**:
 
-###### CSS{.sourceCode}
+
 
 ```css
 p {
@@ -96,7 +96,7 @@ p {
 
 **Pro tip:** Typographic properties (`color`, `font-size`, `font-family`, etc.) are **inherited** by descendent elements. This means we do not need to apply these styles to evrey single element in the HTML markup; instead we can apply them to a root element like the `<body>` and those properties are inherited by descendant elements (like `<p>`, `<a>`, etc.) automatically.
 
-###### CSS{.sourceCode}
+
 
 ```css
 body {
@@ -120,7 +120,7 @@ A popular location to get external fonts is [Google Fonts](https://fonts.google.
 
 Include the provided link in the head section of your HTML file, just like you would link a CSS Style sheet.
 
-###### HTML{.sourceCode}
+
 
 ```html
 <link
@@ -131,7 +131,7 @@ Include the provided link in the head section of your HTML file, just like you w
 
 Add the `font-family` property to your CSS. **Don't forget to add a fall-back font**.
 
-###### CSS{.sourceCode}
+
 
 ```css
 p {
@@ -192,7 +192,7 @@ Common values are:
 
 See [font-weight by MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight) web docs for more information.
 
-###### CSS{.sourceCode}
+
 
 ```css
 font-weight: bold;
@@ -245,7 +245,7 @@ In the example below the following font properties are set at the same time:
 - [`font-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) / [`line-height`](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height)
 - [`font-family`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family)
 
-###### CSS{.sourceCode}
+
 
 ```css
 body {

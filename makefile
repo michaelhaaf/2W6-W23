@@ -22,7 +22,6 @@ TUTORIAL_ZIPS := $(addsuffix .zip, $(TUTORIAL_DIRS))
 PAGE_TEMPLATE := ./assets/templates/page.html
 ASSIGNMENTS_TEMPLATE := ./assets/templates/assignments.html.backup
 TUTORIALS_TEMPLATE := ./assets/templates/tutorials.html.backup
-HIGHLIGHT_STYLE := ./assets/css/code-highlight.theme
 HTML_WRITER := ./assets/filters/separate-alt-figcaption.lua
 DATE_WRITER := ./assets/filters/last-updated.lua
 # Path relative to output
@@ -37,7 +36,6 @@ PANDOC_OPTIONS = --standalone \
 	--lua-filter=$(DATE_WRITER) \
 	--css $(PAGE_STYLE) \
 	--template $(PAGE_TEMPLATE) \
-	--highlight-style $(HIGHLIGHT_STYLE) \
 	--to $(HTML_WRITER)
 TREE_OPTIONS = -H . \
 							 -L 1 \

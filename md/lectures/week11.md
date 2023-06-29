@@ -208,7 +208,7 @@ That's not even to mention: what if we need a real layout? We can't make element
 
 There is one other `HTML` optimization worth knowing about. It's actually something that we have been using throughout this course without really acknowledging. Take a look at the [boilerplate](../pages/tutorials.html#week-01-exercises) code block below:
 
-###### HTML{.sourceCode}
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -307,7 +307,7 @@ You can see an example of each below.
 
 1. Increasing font size for devices with large screens using `min-width`:
 
-###### CSS{.sourceCode}
+
 ```css
 /* Some default style: */
 
@@ -330,7 +330,7 @@ html {
 
 2. Increase the padding between paragraphs when a page is viewed on a narrow device using `max-width`
 
-###### CSS{.sourceCode}
+
 ```css
 /* Some default style: */
 
@@ -359,7 +359,7 @@ article p {
 
 3. Increase the size of buttons on touchscreens using ["hover"][mdn-hover]:
 
-###### CSS{.sourceCode}
+
 ```css
 /* Some default style: */
 
@@ -432,7 +432,7 @@ Flexbox inherently allows for more precise control of how elements respond when 
 
 One way that Flexbox really shines is in combination with [media queries](#media-queries). Here is an example: 
 
-###### CSS{.sourceCode}
+
 ```css
 /* Say you have a flex container... */
 .flex-container {
@@ -472,7 +472,7 @@ Similar to Flexbox, Grids allow for more precise control of how elements respond
 
 A grid item can also become a grid container
 
-###### HTML{.sourceCode}
+
 ```html
 <div class="wrapper">
     <div class="box1">
@@ -486,7 +486,7 @@ A grid item can also become a grid container
 </div>
 ```
 
-###### CSS{.sourceCode}
+
 ```css
 .wrapper {
   display: grid;
@@ -517,7 +517,7 @@ Grid items can overlap inside their grid container without any problems.
 
 In the example below **.box2 overlaps on top of .box1** and **.box3 overlaps on top of .box2**.
 
-###### HTML{.sourceCode}
+
 ```html
 <div class="wrapper">
     <div class="box box1">One</div>
@@ -527,7 +527,7 @@ In the example below **.box2 overlaps on top of .box1** and **.box3 overlaps on 
 </div>
 ```
 
-###### CSS{.sourceCode}
+
 ```css
 .wrapper {
   display: grid;
@@ -566,7 +566,7 @@ Grid items can be layered/stacked by properly positioning them and assigning `z-
 
 Considering the previous example, we will place .box2 on top of .box1 **and** .box3 by setting it's `z-index` to 1.
 
-###### CSS{.sourceCode}
+
 ```css
 .box2 {
   grid-column: 1 / 3;
@@ -597,7 +597,7 @@ The order of value declaration of `grid-area` is as follows:
 
 **Syntax**
 
-###### CSS{.sourceCode}
+
 ```css
 grid-area: <row-start> / <column-star> / <row-end> / <column-end>
 ```
@@ -613,7 +613,7 @@ grid-area: <row-start> / <column-star> / <row-end> / <column-end>
 
 Example of `grid-area`:
 
-###### HTML{.sourceCode}
+
 ```html
 <div class="wrapper">
    <div class="box1">One</div>
@@ -625,7 +625,7 @@ Example of `grid-area`:
 
 
 
-###### CSS{.sourceCode}
+
 ```css
 .wrapper {
   display: grid;
@@ -662,7 +662,7 @@ In the example above we defining an area by specifying the lines that enclose th
 
 
 
-###### CSS{.sourceCode}
+
 ```css
 .box1 {
    grid-area: 1 / 1 / 4 / 2;
@@ -680,7 +680,7 @@ Consider the layout below with the following sections:
 - sidebar
 - main content
 
-###### CSS{.sourceCode}
+
 ```html
 <div class="wrapper">
     <header>Header</header>
@@ -696,7 +696,7 @@ Consider the layout below with the following sections:
 
 You can assign any name to a HTML element with the `grid-area`  property.
 
-###### CSS{.sourceCode}
+
 ```css
 header {
     grid-area: hd;
@@ -725,7 +725,7 @@ The `grid-template-areas` property defines a grid template by referencing the na
 - Each name must be separated by a whitespace.
 - A period signifies an empty cell. 
 
-###### CSS{.sourceCode}
+
 ```css
 .wrapper {
 	display: grid;
