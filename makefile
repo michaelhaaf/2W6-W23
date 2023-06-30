@@ -24,6 +24,7 @@ ASSIGNMENTS_TEMPLATE := ./assets/templates/assignments.html.backup
 TUTORIALS_TEMPLATE := ./assets/templates/tutorials.html.backup
 HTML_WRITER := ./assets/filters/separate-alt-figcaption.lua
 DATE_WRITER := ./assets/filters/last-updated.lua
+CODEBLOCK_WRITER := ./assets/filters/codeblock-lang-attr.lua
 # Path relative to output
 PAGE_STYLE := ../assets/css/style.css
 
@@ -34,6 +35,7 @@ PANDOC_OPTIONS = --standalone \
 	--section-divs \
 	--number-sections \
 	--lua-filter=$(DATE_WRITER) \
+	--lua-filter=$(CODEBLOCK_WRITER) \
 	--css $(PAGE_STYLE) \
 	--template $(PAGE_TEMPLATE) \
 	--to $(HTML_WRITER)

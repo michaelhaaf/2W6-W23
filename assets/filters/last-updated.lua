@@ -3,7 +3,7 @@
 --    But also, would love to have a hardcoded last-update date just in case
 --
 -- Solution:
---    Pandoc documentation snippet for setting the metadata date to current date: 
+--    Pandoc documentation snippet for setting the metadata date to current date:
 --      - https://pandoc.org/lua-filters.html#setting-the-date-in-the-metadata
 --    For manually setting the date, @kotatsuaki at stackoverflow shows how to use the pandoc API
 --      - https://stackoverflow.com/a/72666646

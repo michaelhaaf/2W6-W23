@@ -5,15 +5,19 @@
 div.sourceCode,
 pre:not(.sourceCode) {
   overflow-x: auto;
-  padding: 1rem 0;
-}
-pre:not(.numberLines) {
-  padding: 0 1rem;
 }
 
-code::after {
-  content: attr(class);
+div.sourceCode::before {
+  content: attr(data-language);
   text-transform: uppercase;
+  border-bottom: var(--border-default);
+  width: 100%;
+  display: block;
+  text-align: right;
+  padding: 0 1rem;
+}
+div.sourceCode {
+  border: var(--border-default);
 }
 
 .sourceCode {
