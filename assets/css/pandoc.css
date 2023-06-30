@@ -11,46 +11,169 @@ pre:not(.numberLines) {
   padding: 0 1rem;
 }
 
-code::after{
+code::after {
   content: attr(class);
   text-transform: uppercase;
 }
 
 .sourceCode {
   font-family: var(--font-family-monospace);
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-m);
 }
 
-div.sourceCode, pre:not(.sourceCode) { background: var(--overlay); }
-a.sourceLine::before { text-decoration: none; }
-code span.kw { color: var(--accent-violet); font-weight: normal; font-style: normal; } /* Keyword */
-code span.dt { color: var(--accent-violet); font-weight: normal; font-style: normal; } /* DataType */
-code span.dv { color: var(--accent-teal); font-weight: normal; font-style: normal; } /* DecVal */
-code span.bn { color: var(--accent-teal); font-weight: normal; font-style: normal; } /* BaseN */
-code span.fl { color: var(--accent-teal); font-weight: normal; font-style: normal; } /* Float */
-code span.ch { color: var(--accent-teal); font-weight: normal; font-style: normal; } /* Char */
-code span.st { color: var(--accent-teal); font-weight: normal; font-style: normal; } /* String */
-code span.co { color: var(--accent-foam); font-weight: normal; font-style: italic; } /* Comment */
-code span.ot { color: var(--accent-gold); font-weight: normal; font-style: normal; } /* Other */
-code span.al { color: var(--accent-red); font-weight: normal; font-style: normal; } /* Alert */
-code span.fu { color: var(--accent-gold); font-weight: normal; font-style: normal; } /* Function */
-code span.er { color: var(--accent-red); font-weight: normal; font-style: normal; } /* Error */
-code span.wa { color: var(--accent-orange); font-weight: normal; font-style: italic; } /* Warning */
-code span.cn { color: var(--accent-teal); font-weight: normal; font-style: normal; } /* Constant */
-code span.sc { color: var(--accent-red); font-weight: normal; font-style: normal; } /* SpecialChar */
-code span.vs { color: var(--accent-orange); font-weight: normal; font-style: normal; } /* VerbatimString */
-code span.ss { color: var(--accent-red); font-weight: normal; font-style: normal; } /* SpecialString */
-code span.im { color: var(--accent-orange); font-weight: normal; font-style: normal; } /* Import */
-code span.va { color: var(--accent-gold); font-weight: normal; font-style: normal; } /* Variable */
-code span.cf { color: var(--accent-violet); font-weight: normal; font-style: normal; } /* ControlFlow */
-code span.op { color: var(--accent-violet); font-weight: normal; font-style: normal; } /* Operator */
-code span.bu { color: var(--accent-orange); font-weight: normal; font-style: normal; } /* BuiltIn */
-code span.ex { color: var(--accent-orange); font-weight: normal; font-style: normal; } /* Extension */
-code span.pp { color: var(--accent-orange); font-weight: normal; font-style: normal; } /* Preprocessor */
-code span.at { color: var(--accent-orange); font-weight: normal; font-style: normal; } /* Attribute */
-code span.do { color: var(--accent-foam); font-weight: normal; font-style: italic; } /* Documentation */
-code span.an { color: var(--accent-foam); font-weight: normal; font-style: italic; } /* Annotation */
-code span.cv { color: var(--accent-foam); font-weight: normal; font-style: italic; } /* CommentVar */
-code span.in { color: var(--accent-foam); font-weight: normal; font-style: italic; } /* Information */
+div.sourceCode,
+pre:not(.sourceCode) {
+  background: var(--overlay);
+}
+a.sourceLine::before {
+  text-decoration: none;
+}
+code span.kw {
+  color: var(--accent-violet);
+  font-weight: normal;
+  font-style: normal;
+} /* Keyword */
+code span.dt {
+  color: var(--accent-violet);
+  font-weight: normal;
+  font-style: normal;
+} /* DataType */
+code span.dv {
+  color: var(--accent-teal);
+  font-weight: normal;
+  font-style: normal;
+} /* DecVal */
+code span.bn {
+  color: var(--accent-teal);
+  font-weight: normal;
+  font-style: normal;
+} /* BaseN */
+code span.fl {
+  color: var(--accent-teal);
+  font-weight: normal;
+  font-style: normal;
+} /* Float */
+code span.ch {
+  color: var(--accent-teal);
+  font-weight: normal;
+  font-style: normal;
+} /* Char */
+code span.st {
+  color: var(--accent-teal);
+  font-weight: normal;
+  font-style: normal;
+} /* String */
+code span.co {
+  color: var(--accent-foam);
+  font-weight: normal;
+  font-style: italic;
+} /* Comment */
+code span.ot {
+  color: var(--accent-gold);
+  font-weight: normal;
+  font-style: normal;
+} /* Other */
+code span.al {
+  color: var(--accent-red);
+  font-weight: normal;
+  font-style: normal;
+} /* Alert */
+code span.fu {
+  color: var(--accent-gold);
+  font-weight: normal;
+  font-style: normal;
+} /* Function */
+code span.er {
+  color: var(--accent-red);
+  font-weight: normal;
+  font-style: normal;
+} /* Error */
+code span.wa {
+  color: var(--accent-orange);
+  font-weight: normal;
+  font-style: italic;
+} /* Warning */
+code span.cn {
+  color: var(--accent-teal);
+  font-weight: normal;
+  font-style: normal;
+} /* Constant */
+code span.sc {
+  color: var(--accent-red);
+  font-weight: normal;
+  font-style: normal;
+} /* SpecialChar */
+code span.vs {
+  color: var(--accent-orange);
+  font-weight: normal;
+  font-style: normal;
+} /* VerbatimString */
+code span.ss {
+  color: var(--accent-red);
+  font-weight: normal;
+  font-style: normal;
+} /* SpecialString */
+code span.im {
+  color: var(--accent-orange);
+  font-weight: normal;
+  font-style: normal;
+} /* Import */
+code span.va {
+  color: var(--accent-gold);
+  font-weight: normal;
+  font-style: normal;
+} /* Variable */
+code span.cf {
+  color: var(--accent-violet);
+  font-weight: normal;
+  font-style: normal;
+} /* ControlFlow */
+code span.op {
+  color: var(--accent-violet);
+  font-weight: normal;
+  font-style: normal;
+} /* Operator */
+code span.bu {
+  color: var(--accent-orange);
+  font-weight: normal;
+  font-style: normal;
+} /* BuiltIn */
+code span.ex {
+  color: var(--accent-orange);
+  font-weight: normal;
+  font-style: normal;
+} /* Extension */
+code span.pp {
+  color: var(--accent-orange);
+  font-weight: normal;
+  font-style: normal;
+} /* Preprocessor */
+code span.at {
+  color: var(--accent-orange);
+  font-weight: normal;
+  font-style: normal;
+} /* Attribute */
+code span.do {
+  color: var(--accent-foam);
+  font-weight: normal;
+  font-style: italic;
+} /* Documentation */
+code span.an {
+  color: var(--accent-foam);
+  font-weight: normal;
+  font-style: italic;
+} /* Annotation */
+code span.cv {
+  color: var(--accent-foam);
+  font-weight: normal;
+  font-style: italic;
+} /* CommentVar */
+code span.in {
+  color: var(--accent-foam);
+  font-weight: normal;
+  font-style: italic;
+} /* Information */
 
 /* ------------------------------------------ *\
   || Everything else

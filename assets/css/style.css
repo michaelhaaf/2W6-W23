@@ -166,14 +166,6 @@ h2[data-number] {
   padding: 1rem;
 }
 
-.to-be-named {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  font-size: var(--font-size-xs);
-  line-height: var(--line-height-xs);
-}
-
 /* ------------------------------------------ *\
   || Containers
 \* ------------------------------------------ */
@@ -185,10 +177,15 @@ h2[data-number] {
 }
 
 .banner-top-bar,
-.banner-bottom-bar,
-article {
+.banner-bottom-bar {
   border-top: var(--border-muted);
   border-bottom: var(--border-muted);
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-m);
+}
+.banner-top-bar small {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
 }
 
 .base {
