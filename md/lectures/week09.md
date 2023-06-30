@@ -78,7 +78,7 @@ Sounds good. But there are other ways to make selectors **more specific**, which
 Let’s take a look at a few quick examples to visualize how specificity works. Consider the following HTML and CSS code:
 
 
-```html
+```html {.numberLines}
 <!-- index.html -->
 
 <div class="main">
@@ -87,7 +87,7 @@ Let’s take a look at a few quick examples to visualize how specificity works. 
 ```
 
 
-```css
+```css {.numberLines}
 /* rule 1 */
 .subsection {
   color: blue;
@@ -104,7 +104,7 @@ In the example above, both rules are using only class selectors, but rule 2 is m
 Now, let’s change things a little bit:
 
 
-```html
+```html {.numberLines}
 <!-- index.html -->
 
 <div class="main">
@@ -113,7 +113,7 @@ Now, let’s change things a little bit:
 ```
 
 
-```css
+```css {.numberLines}
 /* rule 1 */
 #subsection {
   color: blue;
@@ -130,7 +130,7 @@ In the example above, despite rule 2 having more class selectors than ID selecto
 Let’s consider one final example:
 
 
-```html
+```html {.numberLines}
 <!-- index.html -->
 
 <div class="main">
@@ -141,7 +141,7 @@ Let’s consider one final example:
 ```
 
 
-```css
+```css {.numberLines}
 /* rule 1 */
 .list #subsection {
   background-color: yellow;
@@ -169,7 +169,7 @@ Inheritance refers to certain CSS properties that, when applied to an element, a
 The exception to this is when directly targeting an element, as this always beats inheritance:
 
 
-```html
+```html {.numberLines}
 <!-- index.html -->
 
 <div id="parent">
@@ -178,7 +178,7 @@ The exception to this is when directly targeting an element, as this always beat
 ```
 
 
-```css
+```css {.numberLines}
 /* styles.css */
 
 #parent {
@@ -203,7 +203,7 @@ The final factor, the end of the line, the tie-breaker of the tie-breaker. Let�
 Really simply, actually. Whichever rule was the last defined is the winner.
 
 
-```css
+```css {.numberLines}
 /* styles.css */
 
 .alert {
@@ -224,7 +224,7 @@ But, you might ask, aren't there multiple ways to add CSS to an HTML Element? In
 Quick review: Inline CSS makes it possible to add styles directly to HTML elements:
 
 
-```html
+```html {.numberLines}
 <body>
   <div style="color: white; background-color: black;">...</div>
 </body>
@@ -255,7 +255,7 @@ Answer: neither. For all rules from each source, **when all other specificity is
 We can see examples of this below. First, an HTML file with two external `<link>` tags and one `<style>` tag. Pay attention to the order:
 
 
-```html
+```html {.numberLines}
 <head>
   <link rel="stylesheet" href="style-file-1.css">    <!-- link to style-file-1.css -->
   <style>                                                   /* internal CSS style tag */
@@ -279,7 +279,7 @@ We can see examples of this below. First, an HTML file with two external `<link>
 Next, definitions for the .css files:
 
 
-```css
+```css {.numberLines}
 /* style-file-1.css */
 div {
   color: black;
@@ -373,7 +373,7 @@ By using custom properties, instead of having to update every single instance of
 The syntax for declaring and accessing a custom property is really simple and not too different from how we write normal rule declarations:
 
 
-```css
+```css {.numberLines}
 .error-modal {
   /* the '--' characters signify a custom property */
   --color-error-text: red;          
@@ -400,7 +400,7 @@ The `var()` function actually accepts **two** parameters. The first parameter we
 The second parameter is an optional fallback value: when a fallback value is provided in addition to a custom property, the fallback value will be used if the custom property is invalid or hasn't been declared yet. We can even pass in another custom property as a fallback, which can have its own fallback value as well!
 
 
-```css
+```css {.numberLines}
 .fallback {
   --color-text: white;
   background-color: var(--undeclared-property, black);        /* What will the background-color be? */
@@ -420,7 +420,7 @@ Scope in CSS is somewhat similar in appearance to scope in C#: **all properties 
 In the example below, only the element with the cool-paragraph class would get styled with a red background since it's a descendant of the element where our custom property is declared:
 
 
-```html
+```html {.numberLines}
 <div class='cool-div'>
   <p class='cool-p'>Check out my cool, red background!</p>
 </div>
@@ -429,7 +429,7 @@ In the example below, only the element with the cool-paragraph class would get s
 ```
 
 
-```css
+```css {.numberLines}
 .cool-div {
   --main-bg: red;
 }
@@ -458,13 +458,13 @@ This is essentially what is done in practise, with just a bit of extra fanciness
 [w3-root]: https://www.w3schools.com/cssref/sel_root.php
 
 
-```html
+```html {.numberLines}
 <p class='cool-paragraph'>Lorem ipsum dolor sit amet.</p>
 <p class='exciting-paragraph'>Lorem ipsum dolor sit amet.</p>
 ```
 
 
-```css
+```css {.numberLines}
 :root {
   --main-color: red;
 }

@@ -84,7 +84,7 @@ This is also known as a **font stack**:
 
 
 
-```css
+```css {.numberLines}
 p {
   font-family: "Times New Roman", Times, serif;
 }
@@ -98,7 +98,7 @@ p {
 
 
 
-```css
+```css {.numberLines}
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -122,7 +122,7 @@ Include the provided link in the head section of your HTML file, just like you w
 
 
 
-```html
+```html {.numberLines}
 <link
   href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
   rel="stylesheet"
@@ -133,7 +133,7 @@ Add the `font-family` property to your CSS. **Don't forget to add a fall-back fo
 
 
 
-```css
+```css {.numberLines}
 p {
   font-family: "Roboto", sans-serif;
 }
@@ -194,7 +194,7 @@ See [font-weight by MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/font-w
 
 
 
-```css
+```css {.numberLines}
 font-weight: bold;
 
 font-weight: lighter;
@@ -247,7 +247,7 @@ In the example below the following font properties are set at the same time:
 
 
 
-```css
+```css {.numberLines}
 body {
   font: italic small-caps bold 16px/2 cursive;
 }

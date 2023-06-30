@@ -209,7 +209,7 @@ That's not even to mention: what if we need a real layout? We can't make element
 There is one other `HTML` optimization worth knowing about. It's actually something that we have been using throughout this course without really acknowledging. Take a look at the [boilerplate](../pages/tutorials.html#week-01-exercises) code block below:
 
 
-```html
+```html {.numberLines}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -308,7 +308,7 @@ You can see an example of each below.
 1. Increasing font size for devices with large screens using `min-width`:
 
 
-```css
+```css {.numberLines}
 /* Some default style: */
 
 html {
@@ -331,7 +331,7 @@ html {
 2. Increase the padding between paragraphs when a page is viewed on a narrow device using `max-width`
 
 
-```css
+```css {.numberLines}
 /* Some default style: */
 
 article p {
@@ -360,7 +360,7 @@ article p {
 3. Increase the size of buttons on touchscreens using ["hover"][mdn-hover]:
 
 
-```css
+```css {.numberLines}
 /* Some default style: */
 
 button {
@@ -433,7 +433,7 @@ Flexbox inherently allows for more precise control of how elements respond when 
 One way that Flexbox really shines is in combination with [media queries](#media-queries). Here is an example: 
 
 
-```css
+```css {.numberLines}
 /* Say you have a flex container... */
 .flex-container {
   display: flex;
@@ -473,7 +473,7 @@ Similar to Flexbox, Grids allow for more precise control of how elements respond
 A grid item can also become a grid container
 
 
-```html
+```html {.numberLines}
 <div class="wrapper">
     <div class="box1">
         <div class="nested">a</div>
@@ -487,7 +487,7 @@ A grid item can also become a grid container
 ```
 
 
-```css
+```css {.numberLines}
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -518,7 +518,7 @@ Grid items can overlap inside their grid container without any problems.
 In the example below **.box2 overlaps on top of .box1** and **.box3 overlaps on top of .box2**.
 
 
-```html
+```html {.numberLines}
 <div class="wrapper">
     <div class="box box1">One</div>
     <div class="box box2">Two</div>
@@ -528,7 +528,7 @@ In the example below **.box2 overlaps on top of .box1** and **.box3 overlaps on 
 ```
 
 
-```css
+```css {.numberLines}
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -567,7 +567,7 @@ Grid items can be layered/stacked by properly positioning them and assigning `z-
 Considering the previous example, we will place .box2 on top of .box1 **and** .box3 by setting it's `z-index` to 1.
 
 
-```css
+```css {.numberLines}
 .box2 {
   grid-column: 1 / 3;
   grid-row: 2 / 4;
@@ -598,7 +598,7 @@ The order of value declaration of `grid-area` is as follows:
 **Syntax**
 
 
-```css
+```css {.numberLines}
 grid-area: <row-start> / <column-star> / <row-end> / <column-end>
 ```
 
@@ -614,7 +614,7 @@ grid-area: <row-start> / <column-star> / <row-end> / <column-end>
 Example of `grid-area`:
 
 
-```html
+```html {.numberLines}
 <div class="wrapper">
    <div class="box1">One</div>
    <div class="box2">Two</div>
@@ -626,7 +626,7 @@ Example of `grid-area`:
 
 
 
-```css
+```css {.numberLines}
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -663,7 +663,7 @@ In the example above we defining an area by specifying the lines that enclose th
 
 
 
-```css
+```css {.numberLines}
 .box1 {
    grid-area: 1 / 1 / 4 / 2;
 }
@@ -681,7 +681,7 @@ Consider the layout below with the following sections:
 - main content
 
 
-```html
+```html {.numberLines}
 <div class="wrapper">
     <header>Header</header>
     <footer>Footer</footer>
@@ -697,7 +697,7 @@ Consider the layout below with the following sections:
 You can assign any name to a HTML element with the `grid-area`  property.
 
 
-```css
+```css {.numberLines}
 header {
     grid-area: hd;
 }
@@ -726,7 +726,7 @@ The `grid-template-areas` property defines a grid template by referencing the na
 - A period signifies an empty cell. 
 
 
-```css
+```css {.numberLines}
 .wrapper {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);

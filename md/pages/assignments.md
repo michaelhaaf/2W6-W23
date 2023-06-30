@@ -13,12 +13,10 @@ abstract: |
 [lab2zip]: ../assignments/lab2.zip
 [lab3zip]: ../assignments/lab3.zip
 [lab4zip]: ../assignments/lab4.zip
-
 [lab1solutions]: ../assignments/lab1.zip
 [lab2solutions]: ../assignments/lab2solution.zip
 [lab3solutions]: ../assignments/lab3solution.zip
 [lab4solutions]: ../assignments/lab4solution.zip
-
 [projectzip]: ../assignments/project.zip
 
 # Project
@@ -34,11 +32,11 @@ Instructions: [project.zip][projectzip]
 <pre id="project-listing" class="collapsible">
 </pre>
 
-# Labs 
+# Labs
 
 For each lab, all relevant files (instructions, starter assets, etc.) can be found by downloading the **.zip** file associated with that lab.
 
-You can also preview lab files in the browser by expanding the **(+) View files in browser** tab from each section. 
+You can also preview lab files in the browser by expanding the **(+) View files in browser** tab from each section.
 
 ## Lab 1
 
@@ -68,7 +66,6 @@ Instructions: [lab2.zip][lab2zip]
 
 ## Lab 3
 
-
 This lab tests your ability to create professional website layouts using strong HTML/CSS fundamentals, as well as intermediate techniques like Float and Flexbox.
 
 ### Crafting layouts with CSS Flexbox & Float
@@ -81,7 +78,6 @@ Instructions: [lab3.zip][lab3zip]
 </pre>
 
 ## Lab 4
-
 
 This lab builds upon everything we have learned so far to create a fascimile website from a design found online.
 

@@ -64,7 +64,7 @@ Typically, you’d want to let the height of these boxes be determined automatic
 It’s worth taking a look at what happens when we shrink an element’s width. Try opening the CodePen (click the "Edit on Codepen" button) and update the `.sidebar` rule to match the following:
 
 
-```css
+```css {.numberLines}
 .sidebar {
   width: 200px;                 /* Add this */
   height: 300px;
@@ -79,7 +79,7 @@ The sidebar element gets narrower, but the rest of the boxes stay in the same po
 The CSS float property gives us control over the horizontal position of an element. By “floating” the sidebar to the left, we’re telling the browser to align it to the left side of the page. Go ahead and float our sidebar with the following line:
 
 
-```css
+```css {.numberLines}
 .sidebar {
   float: left;                  /* Add this */
   width: 200px;
@@ -106,7 +106,7 @@ However, this doesn’t just align the sidebar — it also tells surrounding ele
 We are not constrained to floating elements to the left as in the above example. Try experimenting with the following properties as well:
 
 
-```css
+```css {.numberLines}
 /* styles for block-level elements */
 float: left;   /* left-aligned */
 float: right;   /* Right-aligned */
@@ -127,7 +127,7 @@ In our example, the sidebar's parent is `<div class='page'>`, which is as wide a
 If instead we had a fixed width for our `<div class='page'>` element, the floated boxes inside of this element will float to the far left of **its parent element**. Try inserting the code below into the CodePen we have been practising with. 
 
 
-```CSS
+```CSS {.numberLines}
 .page {
   width: 900px; /* Add this line */
   margin: 0 auto;
@@ -145,7 +145,7 @@ sophisticated website layouts. Here, we started with `.page` to center *everythi
 Let’s examine our current magazine-style float a little bit more by adding an explicit width to our `.content` block:
 
 
-```css
+```css {.numberLines}
 .content {
   width: 650px;                 /* Add this */
   height: 500px;
@@ -167,7 +167,7 @@ This kind of float behavior is nice for images (which we’ll see [later on](#fl
 Remember that assigning the `float` property **changes the default flow behavior, allowing horizontal flow, for just that element**. In order for other elements to ALSO have different/horizontal flow, we need to make THOSE elements have the `float` property set as well. Add one more line to the `.content` rule:
 
 
-```css
+```css {.numberLines}
 .content {
   float: left;            /* Add this line */
   width: 650px;
@@ -191,7 +191,7 @@ You probably noticed that our footer shows up in the top right, directly below `
 We can see this more clearly by adding a red border around our `.page` element:
 
 
-```css
+```css {.numberLines}
 .page {
   width: 900px;
   margin: 0 auto;
@@ -207,7 +207,7 @@ Notice how the border is only around the `.menu` and `.footer` elements. It’s 
 We can use the clear property to make our `.footer` drop down to the bottom of the page:
 
 
-```css
+```css {.numberLines}
 .footer {
   clear: both;            /* Add this */
   height: 200px;
@@ -229,7 +229,7 @@ Depending on the type of layout you’re trying to create, this is a perfectly a
 Watch what happens when we take the menu and footer out of the `.page` element. Change the `HTML` in the CodePen to match the following:
 
 
-```html
+```html {.numberLines}
   <div class='menu'>Menu</div>
   <div class='page'>
     <div class='sidebar'>Sidebar</div>
@@ -253,7 +253,7 @@ Clearing floats only fixes the height issue when there’s an element **inside**
 The solution is the [CSS overflow property](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow). The setting the property `overflow: hidden` on a container div tells the browser to **recognize the height of any floated elements within that container div**. This is how we can add a background color to our `.page` element and have it actually render:
 
 
-```css
+```css {.numberLines}
 .page {
   width: 900px;
   margin: 0 auto;
@@ -286,7 +286,7 @@ Our goal is to make the `.page` background fill the entire browser window, **wit
 Whenever we want to rearrange the boxes of our webpage, we can consider adding *another* box. That is, another `<div>`. This way, we can separate the background of our webpage from the `.page` element and control their properties separately. Putting a box around `.page` lets `.page` continue centering stuff while giving us a different `<div>` to define a background-color property. Change our `<body>` element to match the following:
 
 
-```html
+```html {.numberLines}
 <body>
   <div class='menu'>Menu</div>
 
@@ -304,7 +304,7 @@ Whenever we want to rearrange the boxes of our webpage, we can consider adding *
 Remember that the default block-rendering behavior is for elements to fill the width of their container. So, we should be able to move our `background-color` declaration to a `.container` rule to get a full-bleed background:
 
 
-```css
+```css {.numberLines}
 .page {
   width: 900px;
   margin: 0 auto;
@@ -332,7 +332,7 @@ So far, we've seen a sidebar layout, a fixed-width layout, and a full-bleed layo
 Next we're going to add three equal-width columns to our footer. Update the `<footer>` element, like so:
 
 
-```html
+```html {.numberLines}
 <div class='footer'>
   <div class='column'></div>
   <div class='column'></div>
@@ -343,7 +343,7 @@ Next we're going to add three equal-width columns to our footer. Update the `<fo
 We can style each of these columns just like we laid out the rest of our page. Add a new rule to styles.css:
 
 
-```css
+```css {.numberLines}
 .column {
   float: left;
   width: 31%;
@@ -367,7 +367,7 @@ Want a grid in the footer instead of 3 columns? No problem! When there isn't eno
 [grid-source]: https://www.internetingishard.com/html-and-css/clears/
 
 
-```html
+```html {.numberLines}
 <div class='footer'>
   <div class='column'></div>
   <div class='column'></div>
@@ -381,7 +381,7 @@ Want a grid in the footer instead of 3 columns? No problem! When there isn't eno
 Unfortunately, our footer background is too short. Fortunately, we already know how to fix that. Let's replace the footer's explicit height with another `overflow: hidden` so it can accommodate any number of grid items:
 
 
-```css
+```css {.numberLines}
 .footer {
   overflow: hidden;
   background-color: #D6E9FE;
@@ -407,7 +407,7 @@ There's two aspects to defining a web page layout. You have your overall page st
 The process for the latter is the same, it's just nested inside the former. Let's add some dummy content to our `.content` element so we have something to play with:
 
 
-```html
+```html {.numberLines}
 <div class='container'>
   <div class='page'>
     <div class='sidebar'></div>
@@ -440,7 +440,7 @@ The process for the latter is the same, it's just nested inside the former. Let'
 We've got an image and several paragraphs that we can style just like our structural divs. For example, let's create a magazine-style layout by floating the image and letting the text flow around it. Add a couple more rules to our stylesheet:
 
 
-```css
+```css {.numberLines}
 .content {
   padding: 20px;
 }
@@ -472,7 +472,7 @@ You'll find examples of nested layouts all over the place. For our final example
 Let's try creating this in our footer. In your favorite `.column` element, add the following:
 
 
-```html
+```html {.numberLines}
 <div class='column'>
   <div class='avatar'></div>
   <h3 class='username'>Bob Smith</h3>
@@ -485,7 +485,7 @@ Let's try creating this in our footer. In your favorite `.column` element, add t
 And the corresponding CSS rules:
 
 
-```css
+```css {.numberLines}
 .avatar {
   float: left;
   width: 60px;
