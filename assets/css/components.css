@@ -106,7 +106,7 @@
 }
 .level1 .margin {
   grid-column: margin;
-  justify-self: center;
+  justify-self: end;
 }
 /* NOTE: makes navigation to top of section impossible */
 .level1 :is(section, header, footer, aside, .abstract) {
@@ -121,7 +121,7 @@
   pointer-events: none;
   position: absolute;
   inset: 0;
-  padding: 1rem;
+  padding: 1rem 2rem;
 }
 
 /* Sticky */
