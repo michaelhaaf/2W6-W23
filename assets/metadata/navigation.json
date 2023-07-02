@@ -1,0 +1,189 @@
+{
+  "name": "2W6-W23",
+  "contents": [
+    {
+      "label": "About",
+      "name": "./about",
+      "contents": [
+        {
+          "label": "Calendar",
+          "name": "./about/calendar"
+        },
+        {
+          "label": "Course Outline",
+          "name": "./about/course-outline"
+        },
+        {
+          "label": "Syllabus",
+          "name": "./about/syllabus"
+        },
+        {
+          "label": "This Course",
+          "name": "./about/this-course"
+        },
+        {
+          "label": "This Site",
+          "name": "./about/this-site"
+        }
+      ]
+    },
+    {
+      "label": "Assignments",
+      "name": "./assignments",
+      "contents": [
+        {
+          "label": "Lab 1",
+          "name": "./assignments/lab-1"
+        },
+        {
+          "label": "Lab 1 Solution",
+          "name": "./assignments/lab-1-solution"
+        },
+        {
+          "label": "Lab 2",
+          "name": "./assignments/lab-2"
+        },
+        {
+          "label": "Lab 2 Solution",
+          "name": "./assignments/lab-2-solution"
+        },
+        {
+          "label": "Lab 3",
+          "name": "./assignments/lab-3"
+        },
+        {
+          "label": "Lab 3 Solution",
+          "name": "./assignments/lab-3-solution"
+        },
+        {
+          "label": "Lab 4",
+          "name": "./assignments/lab-4"
+        },
+        {
+          "label": "Lab 4 Solution",
+          "name": "./assignments/lab-4-solution"
+        },
+        {
+          "label": "Project",
+          "name": "./assignments/project"
+        }
+      ]
+    },
+    {
+      "label": "Lectures",
+      "name": "./lectures",
+      "contents": [
+        {
+          "label": "Week 01",
+          "name": "./lectures/week-01"
+        },
+        {
+          "label": "Week 02",
+          "name": "./lectures/week-02"
+        },
+        {
+          "label": "Week 03",
+          "name": "./lectures/week-03"
+        },
+        {
+          "label": "Week 04",
+          "name": "./lectures/week-04"
+        },
+        {
+          "label": "Week 05",
+          "name": "./lectures/week-05"
+        },
+        {
+          "label": "Week 06",
+          "name": "./lectures/week-06"
+        },
+        {
+          "label": "Week 07",
+          "name": "./lectures/week-07"
+        },
+        {
+          "label": "Week 09",
+          "name": "./lectures/week-09"
+        },
+        {
+          "label": "Week 10",
+          "name": "./lectures/week-10"
+        },
+        {
+          "label": "Week 11",
+          "name": "./lectures/week-11"
+        },
+        {
+          "label": "Week 12",
+          "name": "./lectures/week-12"
+        },
+        {
+          "label": "Week 13",
+          "name": "./lectures/week-13"
+        },
+        {
+          "label": "Week 14",
+          "name": "./lectures/week-14"
+        }
+      ]
+    },
+    {
+      "label": "Tutorials",
+      "name": "./tutorials",
+      "contents": [
+        {
+          "label": "Week 01 Boilerplate",
+          "name": "./tutorials/week-01-boilerplate"
+        },
+        {
+          "label": "Week 04 Box Model Exercises",
+          "name": "./tutorials/week-04-box-model-exercises"
+        },
+        {
+          "label": "Week 04 Box Model Solutions",
+          "name": "./tutorials/week-04-box-model-solutions"
+        },
+        {
+          "label": "Week 04 Foundations Exercises",
+          "name": "./tutorials/week-04-foundations-exercises"
+        },
+        {
+          "label": "Week 04 Foundations Solutions",
+          "name": "./tutorials/week-04-foundations-solutions"
+        },
+        {
+          "label": "Week 04 Styling Text Exercises",
+          "name": "./tutorials/week-04-styling-text-exercises"
+        },
+        {
+          "label": "Week 04 Styling Text Solutions",
+          "name": "./tutorials/week-04-styling-text-solutions"
+        },
+        {
+          "label": "Week 06 Flexbox Exercises",
+          "name": "./tutorials/week-06-flexbox-exercises"
+        },
+        {
+          "label": "Week 06 Flexbox Solutions",
+          "name": "./tutorials/week-06-flexbox-solutions"
+        },
+        {
+          "label": "Week 10 Grid Exercises",
+          "name": "./tutorials/week-10-grid-exercises"
+        },
+        {
+          "label": "Week 10 Grid Solutions",
+          "name": "./tutorials/week-10-grid-solutions"
+        },
+        {
+          "label": "Week 11 June Exercises",
+          "name": "./tutorials/week-11-june-exercises"
+        },
+        {
+          "label": "Week 15 Best Practises",
+          "name": "./tutorials/week-15-best-practises"
+        }
+      ]
+    }
+  ]
+}

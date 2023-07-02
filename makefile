@@ -20,8 +20,8 @@ TUTORIAL_ZIPS := $(addsuffix .zip, $(TUTORIAL_DIRS))
 
 # Path relative to makefile
 PAGE_TEMPLATE := ./assets/templates/page.html
-ASSIGNMENTS_TEMPLATE := ./assets/templates/assignments.html.backup
-TUTORIALS_TEMPLATE := ./assets/templates/tutorials.html.backup
+JQ_SCRIPT := ../assets/make/site-tree-labels.jq
+NAV_METADATA := ../assets/metadata/navigation.json
 HTML_WRITER := ./assets/filters/separate-alt-figcaption.lua
 DATE_WRITER := ./assets/filters/last-updated.lua
 CODEBLOCK_WRITER := ./assets/filters/codeblock-lang-attr.lua
@@ -39,15 +39,12 @@ PANDOC_OPTIONS = --standalone \
 	--css $(PAGE_STYLE) \
 	--template $(PAGE_TEMPLATE) \
 	--to $(HTML_WRITER)
-TREE_OPTIONS = -H . \
-							 -L 1 \
+TREE_OPTIONS = -I "_*" \
+							 -L 2 \
 							 --noreport \
-							 --si \
-							 -D \
-							 --charset utf-8 \
-							 --I index.html
-FIND_OPTIONS = -maxdepth 1 \
-							 -type d \
+							 -d \
+							 -f \
+							 -J 
 
 
 ## MAKE RULES
@@ -64,12 +61,8 @@ clean-parcel:
 	find . -depth -type d -name "node_modules" -exec rm -rf {} \;
 	find . -depth -type d -name ".parcel-cache" -exec rm -rf {} \;
 
-indices:
-	tree lectures -H ../lectures | htmlq "body p a" | grep html > ./assets/listings/lecture-listing.html
-	htmlq -f pages/tutorials.html "#TOC > ul > li > ul a" | sed 's/href="/href="..\/pages\/tutorials\.html/' | sed 's/ id=".*"//' > ./assets/listings/tutorial-listing.html
-	htmlq -f pages/assignments.html "#TOC > ul > li > ul a" | sed 's/href="/href="..\/pages\/assignments\.html/' | sed 's/ id=".*"//' > ./assets/listings/assignment-listing.html
-	./assets/build-scripts/generate-index-files assignments
-	./assets/build-scripts/generate-index-files tutorials
+navigation:
+	cd ./content && tree $(TREE_OPTIONS) | jq '.[] | .name |= "2W6-W23"' | jq -f $(JQ_SCRIPT) > $(NAV_METADATA)
 
 # Indebted to https://www.andrewheiss.com/blog/2020/01/10/makefile-subdirectory-zips/ for getting this approach right
 .SECONDEXPANSION:
