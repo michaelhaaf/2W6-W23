@@ -1,0 +1,18 @@
+<h1>$title$</h1>
+$if(subtitle)$
+<p>$subtitle$</p>
+$endif$ $for(author)$
+<p>$author$</p>
+$endfor$ $if(abstract)$
+<div class="abstract">
+  <h2>$abstract-title$</h2>
+  $abstract$
+</div>
+$endif$ $if(date)$
+<p>
+  Last update:
+  <time datetime="$datetime$"> $date$ </time>
+</p>
+$endif$
+$for(include-before)$ $include-before$ $endfor$
+<hr />

@@ -1,0 +1,34 @@
+<link
+  href="../assets/images/favicon.svg"
+  rel="icon"
+  sizes="any"
+  type="image/svg+xml"
+/>
+<link
+  rel="preload"
+  href="../assets/images/dark-theme/guggenheim-circles.jpg"
+  as="image"
+/>
+<script defer="" src="../assets/js/main.js"></script>
+<meta content="dark light" name="color-scheme" />
+<meta charset="utf-8" />
+<meta content="pandoc" name="generator" />
+<meta
+  content="width=device-width, initial-scale=1.0, user-scalable=yes"
+  name="viewport"
+/>
+$for(author-meta)$
+<meta content="$author-meta$" name="author" />
+$endfor$ $if(date-meta)$
+<meta content="$date-meta$" name="dcterms.date" />
+$endif$ $if(keywords)$
+<meta content="$for(keywords)$$keywords$$sep$, $endfor$" name="keywords" />
+$endif$ $if(description-meta)$
+<meta content="$description-meta$" name="description" />
+$endif$
+<title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+$for(css)$
+<link href="$css$" rel="stylesheet" />
+$endfor$ $for(header-includes)$ $header-includes$ $endfor$ $if(math)$ $math$
+$endif$
+
