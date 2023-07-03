@@ -23,6 +23,7 @@
 -- The sample.lua methods needed extra stringifying (the pandoc element nesting goes deep) 
 -- in order to ultimately result in a well-formatted html string.
 
+local pandoc = require("pandoc")
 local stringify = (require("pandoc.utils")).stringify
 
 -- Character escaping
@@ -229,6 +230,7 @@ local element_filter = {
 -- I agree with https://github.com/jgm/pandoc/issues/4737
 --    the title (additional descriptor) becomes alt
 --    the caption (bracketed text) becomes figcaption
+--  TODO should attr go in the figure instead of the img?
 function CaptionedImage(src, title, caption, attr)
   return '<figure>\n<img src="'
       .. escape(src, true)

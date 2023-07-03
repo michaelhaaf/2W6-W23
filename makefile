@@ -1,31 +1,30 @@
-## VARIABLES 
+### VARIABLES ###
+SHELL := /bin/bash -O globstar
 
-# Markdown source
-PAGES_MD := $(wildcard md/pages/*.md)
-LECTURES_MD := $(wildcard md/lectures/*.md)
-HOME_MD := ./md/pages/home.md
+# TODO idea: find content -type d  -> foreach dir wildcard the *.md
+SUBDIR := $(find content -type d)
 
-# HTML target
-LISTINGS_HTML := $(wildcard assets/listings/*.html)
-PAGES_HTML := $(PAGES_MD:md/pages/%.md=pages/%.html)
-LECTURES_HTML := $(LECTURES_MD:md/lectures/%.md=lectures/%.html)
+# TODO lots of debugging. Use `make debug`
 
-# subdir source
-ASSIGNMENT_DIRS := $(patsubst %/,%,$(wildcard assignments/*/))
-TUTORIAL_DIRS := $(patsubst %/,%,$(wildcard tutorials/*/))
-
+# Markdown source TODO learn how to glob properly in makefile
+SOURCE_MD := $(wildcard $(foreach subdir, $(SUBDIR), $(subdir)/*.md))
+# HTML target docs TODO learn how to match target/source structure (may need script tbh)
+TARGET_HTML := $(SOURCE_MD:content/about/calendar/%.md=docs/about/calendar/%.html)
+# Archive source TODO add tutorials as well
+SOURCE_ARCHIVE := $(patsubst %/,%,$(wildcard content/assignments/*/))
 # .zip target
-ASSIGNMENT_ZIPS := $(addsuffix .zip, $(ASSIGNMENT_DIRS))
-TUTORIAL_ZIPS := $(addsuffix .zip, $(TUTORIAL_DIRS))
+TARGET_ZIPS := $(addsuffix .zip, $(SOURCE_ARCHIVE))
+
+# HTML Template sources
 
 # Path relative to makefile
-PAGE_TEMPLATE := ./assets/templates/page.html
-JQ_SCRIPT := ../assets/make/site-tree-labels.jq
-NAV_METADATA := ../assets/metadata/navigation.json
-HTML_WRITER := ./assets/filters/separate-alt-figcaption.lua
-DATE_WRITER := ./assets/filters/last-updated.lua
-CODEBLOCK_WRITER := ./assets/filters/codeblock-lang-attr.lua
-# Path relative to output
+DATA_DIR := ./assets/pandoc/
+# Path relative to data_dir
+NAV_METADATA := ./metadata/navigation.json
+HTML_WRITER := ./filters/separate-alt-figcaption.lua
+DATE_WRITER := ./filters/last-updated.lua
+CODEBLOCK_WRITER := ./filters/codeblock-lang-attr.lua
+# Path relative to output TODO context-aware (make into pandoc variable)
 PAGE_STYLE := ../assets/css/style.css
 
 # Common options
@@ -49,55 +48,38 @@ TREE_OPTIONS = -I "_*" \
 
 ## MAKE RULES
 
-.PHONY: all clean indices clean-parcel
+.PHONY: all clean navigation clean-parcel debug
 
-all: $(ASSIGNMENT_ZIPS) $(TUTORIAL_ZIPS) $(PAGE_TEMPLATE) $(PAGES_HTML) $(LECTURES_HTML) 
+all: $(TARGET_ZIPS) $(SOURCE_MD) $(TARGET_HTML)
 
 clean:
-	rm lectures/*.html
-	rm pages/*.html
+	rm -rf docs/*
 
 clean-parcel:
 	find . -depth -type d -name "node_modules" -exec rm -rf {} \;
 	find . -depth -type d -name ".parcel-cache" -exec rm -rf {} \;
 
 navigation:
-	cd ./content && tree $(TREE_OPTIONS) | jq '.[] | .name |= "2W6-W23"' | jq -f $(JQ_SCRIPT) > $(NAV_METADATA)
+	cd ./content && tree $(TREE_OPTIONS) | \
+		jq '.[] | .name |= "2W6-W23"' | \
+		jq -f $(JQ_SCRIPT) > $(NAV_METADATA)
+
+debug:
+	@echo $(SOURCE_MD)
+	@echo $(TARGET_HTML)
+	@echo $(SOURCE_ARCHIVE)
+	@echo $(TARGET_ZIPS)
 
 # Indebted to https://www.andrewheiss.com/blog/2020/01/10/makefile-subdirectory-zips/ for getting this approach right
 .SECONDEXPANSION:
 
-$(ASSIGNMENT_ZIPS): %.zip : $$(shell find % -type f ! -path "%/.*")
-	tree lectures -H ../lectures | htmlq "body p a" | grep html > ./assets/listings/lecture-listing.html
-	htmlq -f pages/assignments.html "#TOC > ul > li > ul a" | sed 's/href="/href="..\/pages\/assignments\.html/' | sed 's/ id=".*"//' > ./assets/listings/assignment-listing.html
-	./assets/build-scripts/generate-index-files assignments
-	cd $(basename $@)/.. && zip -FSr $(notdir $@) $(notdir $(basename $*)) -x $(notdir $(basename $*))/.\*
+$(TARGET_ZIPS): %.zip : $$(shell find % -type f ! -path "%/.*")
+	cd $(basename $@)/.. && \
+		zip -FSr $(notdir $@) $(notdir $(basename $*)) -x $(notdir $(basename $*))/.\*
 
-$(TUTORIAL_ZIPS): %.zip : $$(shell find % -type f ! -path "%/.*")
-	tree lectures -H ../lectures | htmlq "body p a" | grep html > ./assets/listings/lecture-listing.html
-	htmlq -f pages/tutorials.html "#TOC > ul > li > ul a" | sed 's/href="/href="..\/pages\/tutorials\.html/' | sed 's/ id=".*"//' > ./assets/listings/tutorial-listing.html
-	./assets/build-scripts/generate-index-files tutorials
-	cd $(basename $@)/.. && zip -FSr $(notdir $@) $(notdir $(basename $*)) -x $(notdir $(basename $*))/.\*
+# TODO use data-dir? this is about html template updates
+# $(SOURCE_MD): %.html: $$(shell find assets/html/ -type f)
+# # touch $(SOURCE_MD)
 
-$(PAGE_TEMPLATE): %.html: $$(shell find assets/listings/ -type f)
-	cp $(PAGE_TEMPLATE) ./assets/templates/page.html.backup 
-	python ./assets/build-scripts/insert-listings.py --document template > $(PAGE_TEMPLATE) || cp ./assets/templates/page.html.backup ${PAGE_TEMPLATE}
-	touch $(PAGES_MD) $(LECTURES_MD)
-
-lectures/%.html: md/lectures/%.md
-	touch $(HOME_MD)
+$(TARGET_HTML): $(SOURCE_MD)
 	pandoc $(PANDOC_OPTIONS) -o $@ $<
-
-pages/%.html: md/pages/%.md
-	touch $(HOME_MD)
-	pandoc $(PANDOC_OPTIONS) -o $@ $<
-
-pages/assignments.html: md/pages/assignments.md
-	touch $(HOME_MD)
-	pandoc $(PANDOC_OPTIONS) -o $(ASSIGNMENTS_TEMPLATE) $<
-	python ./assets/build-scripts/insert-listings.py --document assignments > pages/assignments.html
-
-pages/tutorials.html: md/pages/tutorials.md
-	touch $(HOME_MD)
-	pandoc $(PANDOC_OPTIONS) -o $(TUTORIALS_TEMPLATE) $<
-	python ./assets/build-scripts/insert-listings.py --document tutorials > pages/tutorials.html
