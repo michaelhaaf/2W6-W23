@@ -1,19 +1,17 @@
 ### VARIABLES ###
 SHELL := /bin/bash -O globstar
 
-# TODO idea: find content -type d  -> foreach dir wildcard the *.md
-SUBDIR := $(find content -type d)
+SOURCE_DIRS:= $(shell find content -type d -not -path "_*")
 
-# TODO lots of debugging. Use `make debug`
-
-# Markdown source TODO learn how to glob properly in makefile
-SOURCE_MD := $(wildcard $(foreach subdir, $(SUBDIR), $(subdir)/*.md))
-# HTML target docs TODO learn how to match target/source structure (may need script tbh)
-TARGET_HTML := $(SOURCE_MD:content/about/calendar/%.md=docs/about/calendar/%.html)
+# Markdown source 
+SOURCE_MD := $(foreach dir, $(SOURCE_DIRS), $(wildcard $(dir)/*.md))
+# HTML target docs 
+TARGET_HTML := $(SOURCE_MD:content/%.md=docs/%.html)
 # Archive source TODO add tutorials as well
 SOURCE_ARCHIVE := $(patsubst %/,%,$(wildcard content/assignments/*/))
 # .zip target
 TARGET_ZIPS := $(addsuffix .zip, $(SOURCE_ARCHIVE))
+# TODO add normal source (actual files, symlink or something?)
 
 # HTML Template sources
 
@@ -67,8 +65,6 @@ navigation:
 debug:
 	@echo $(SOURCE_MD)
 	@echo $(TARGET_HTML)
-	@echo $(SOURCE_ARCHIVE)
-	@echo $(TARGET_ZIPS)
 
 # Indebted to https://www.andrewheiss.com/blog/2020/01/10/makefile-subdirectory-zips/ for getting this approach right
 .SECONDEXPANSION:
@@ -81,5 +77,6 @@ $(TARGET_ZIPS): %.zip : $$(shell find % -type f ! -path "%/.*")
 # $(SOURCE_MD): %.html: $$(shell find assets/html/ -type f)
 # # touch $(SOURCE_MD)
 
+# TODO add mkdir -p
 $(TARGET_HTML): $(SOURCE_MD)
 	pandoc $(PANDOC_OPTIONS) -o $@ $<
