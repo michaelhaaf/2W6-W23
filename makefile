@@ -22,7 +22,7 @@ DOCS_ASSETS   := $(ASSETS:assets/%=docs/%)
 
 .PHONY: all clean clean-parcel metadata debug
 
-all: $(CONTENT_ZIPS) $(DOCS) $(DOCS_HTML) $(DOCS_ASSETS)
+all: $(CONTENT_ZIPS) $(DOCS) $(DOCS_ASSETS) $(DOCS_HTML) 
 
 clean:
 	rm -rf docs/*
@@ -36,6 +36,10 @@ metadata:
 		jq -f '.[] | .name |= "2W6-W23"' | \
 		jq -f $(SCRIPTS_DIR)/pretty-uri-labels.jq > $(INDEX_METADATA)
 
+debug:
+	@echo $(DOCS_HTML)
+	@echo $(CONTENT_MD)
+
 # Indebted to https://www.andrewheiss.com/blog/2020/01/10/makefile-subdirectory-zips/ for getting this approach right
 .SECONDEXPANSION:
 
@@ -43,11 +47,11 @@ $(CONTENT_ZIPS): %.zip : $$(shell find % -type f ! -path "%/.*")
 	cd $(basename $@)/.. && \
 		zip -FSr $(notdir $@) $(notdir $(basename $*)) -x $(notdir $(basename $*))/.\*
 
-$(DOCS): $(CONTENT)
+$(DOCS): docs/% : $$(filter content/%, $(CONTENT))
 	mkdir -p $(dir $@) && cp $< $@
- 
-$(DOCS_HTML): $(CONTENT_MD)
-	pandoc $(PANDOC_OPTIONS) -o $@ $<
 
-$(DOCS_ASSETS): $(ASSETS)
+$(DOCS_ASSETS): docs/% : $$(filter assets/%, $(ASSETS))
 	mkdir -p $(dir $@) && cp $< $@
+
+$(DOCS_HTML): docs/%.html : $$(filter content/%.md, $(CONTENT_MD))
+	pandoc $(PANDOC_OPTIONS) -o $@ $<
