@@ -1,0 +1,11 @@
+{
+  "label": "Pandoc Partial Examples",
+  "contents": [
+    {"label": "Pandoc-Partials", "name": "Pandoc-Partials.html"},
+    {"label": "Version 1", "name": "index1.html"},
+    {"label": "Version 2", "name": "index2.html"},
+    {"label": "Version 3", "name": "index3.html", "contents": [
+      {"label": "Version 3.1", "name": "index3-1.html"}
+    ]}
+  ]
+}

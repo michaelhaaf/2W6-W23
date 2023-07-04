@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="$lang$" xml:lang="$lang$" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    ${site-meta.tmpl()}
+  </head>
+  <body> 
+    <header id="site-banner" class="site-banner flow-container">
+      ${site-banner.tmpl()}
+    </header>
+    <main class="base flow-container">
+      <header class="page-banner sticky-container">
+        <div class="banner-top-bar sticky">
+          ${site-logo.tmpl()}
+          ${site-nav.tmpl()}
+        </div>
+        <div class="banner-bottom-bar sticky">
+          ${site-search.tmpl()}
+          ${site-breadcrumb.tmpl()}
+        </div>
+      </header>
+      <article class="page-article">
+        <header class="level1">
+          ${listing-title-block.tmpl()}
+        </header>
+        $listing-body.tmpl()$ 
+      </article>
+      <footer class="page-footer flow-container">
+        ${page-footer.tmpl()}
+      </footer>
+    </main>
+    <footer id="site-footer" class="site-footer flow-container">
+      ${site-footer.tmpl()}
+    </footer>
+  </body>
+  <script src="http://files.keyes.ie/things/baseliner/baseliner-latest.min.js"></script>
+</html>

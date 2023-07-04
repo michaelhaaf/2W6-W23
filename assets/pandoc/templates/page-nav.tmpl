@@ -1,0 +1,95 @@
+<nav aria-label="Page Control" class="bordered-box">
+  <ul class="page-menu" role="menubar" tabindex="-1">
+    <li>
+      <button
+        type="button"
+        role="menuitem"
+        aria-hidden="true"
+        aria-label="Toggle theme"
+        id="theme-toggle-icon"
+        style="--icon: var(--theme-toggle-icon)"
+        class="icon small scale-up"
+      ></button>
+    </li>
+    <li>
+      <a
+        href="#title-block-header"
+        role="menuitem"
+        style="
+          --icon: url(../images/feather-icons/chevron-up.svg);
+        "
+        class="icon small"
+      >
+        <span role="tooltip"> Scroll to beginning </span>
+      </a>
+    </li>
+    <li>
+      <a
+        href="#site-footer"
+        role="menuitem"
+        style="
+          --icon: url(../images/feather-icons/chevron-down.svg);
+        "
+        class="icon small"
+      >
+        <span role="tooltip"> Scroll to end </span>
+      </a>
+    </li>
+    $if(prev-page)$
+    <li>
+      <a
+        rel="prev"
+        href="$prev-page$"
+        role="menuitem"
+        style="
+          --icon: url(../images/feather-icons/chevron-left.svg);
+        "
+        class="icon small"
+      >
+        <span role="tooltip"> Previous page </span>
+      </a>
+    </li>
+    $endif$ $if(next-page)$
+    <li>
+      <a
+        rel="next"
+        href="$next-page$"
+        role="menuitem"
+        style="
+          --icon: url(../images/feather-icons/chevron-right.svg);
+        "
+        class="icon small"
+      >
+        <span role="tooltip"> Next page </span>
+      </a>
+    </li>
+    $endif$
+    <li>
+      <a
+        href="#"
+        role="menuitem"
+        style="--icon: url('../images/feather-icons/printer.svg')"
+        class="icon small"
+      >
+        <span role="tooltip"> View PDF </span>
+      </a>
+    </li>
+    <li>
+      <button
+        type="button"
+        aria-controls="margin-menu"
+        aria-expanded="false"
+        aria-hidden="true"
+        aria-label="Toggle margin menu"
+        role="menuitem"
+        style="
+          --icon: url(../images/feather-icons/maximize-2.svg);
+        "
+        class="icon small"
+      >
+        <span role="tooltip"> Toggle margin menu </span>
+      </button>
+    </li>
+  </ul>
+</nav>
+

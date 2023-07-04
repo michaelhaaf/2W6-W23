@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* CSS class */
+.text-shadow {
+  text-shadow: 1px 1px 1px black;
+}
+
+h1,
+h2,
+h3, {
+  font-size: 1.3em;
+  color: #5599FF;
+  text-shadow: 1px 1px 2px black;
+}
+
+p,
+ul,
+ol,
+dl,
+address {
+  margin: 100px 200px;
+  font-size: 1.1em;
+}
+
+p, li, dd, dt, address {
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  cursor: none;
+}

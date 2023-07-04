@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <link
+      href="../assets/images/favicon.svg"
+      rel="icon"
+      sizes="any"
+      type="image/svg+xml"
+    />
+    <link
+      rel="preload"
+      href="../assets/images/dark-theme/guggenheim-circles.jpg"
+      as="image"
+    />
+    <meta content="dark light" name="color-scheme" />
+    <meta charset="utf-8" />
+    <meta content="pandoc" name="generator" />
+    <meta
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+      name="viewport"
+    />
+    <link href="/static/css/style.css" rel="stylesheet">
+    <script src="/static/js/main.js" defer></script>
+       <title>2W6-W23: Week 12 Lecture Notes</title>
+      
+  </head>
+  <body> 
+    <header id="site-banner" class="site-banner flow-container">
+      <figure style="--banner-bg-img: url()"> 
+        <footer>
+          <small>
+            <a href="https://www.guggenheim.org/artwork/movement/constructivism"
+              >Title</a
+            >, by <a href="#">Author</a> (<a href="#">CC BY ND 4.0</a>)
+          </small>
+        </footer>
+      </figure>    </header>
+    <main class="base flow-container">
+      <header class="page-banner sticky-container">
+        <div class="banner-top-bar sticky">
+          <div class="banner-top-bar surface">
+            <div class="flex-row">
+              <button
+                type="button"
+                id="baseliner-toggle"
+                aria-label="Secret Button"
+                aria-hidden="True"
+                class="icon large scale-up-2x"
+                style="--icon: url(../images/favicon.svg)"
+              ></button>
+              <div>
+                <h1 class="banner-title">User Interfaces</h1>
+                <small>
+                  420-2W6 | Winter 2023 | as taught by
+                  <a rel="author" href="https://github.com/michaelhaaf/2W6-W23">
+                    Michael Haaf
+                  </a>
+                </small>
+              </div>
+            </div>
+          </div>          <nav class="site-nav" aria-label="Site menu">
+                  <ul class="site-menu" role="menubar">
+                      </ul>
+                </nav>        </div>
+        <div class="banner-bottom-bar sticky">
+                            </div>
+      </header>
+      <article class="page-article">
+        <header class="level1">
+          <h1>2W6-W23: Week 12 Lecture Notes</h1>
+            <div class="abstract">
+            <h2>Intermediate User Interfaces: HTML Forms</h2>
+            <p>We will learn how to create and style HTML Forms, which
+            are ubiquitous on the web for entering data into a
+            website.</p>
+          </div>
+           
+          <hr />        </header>
+        <section class="level1 overlay-grid sticky-container">
+          <menu class="margin sticky">
+            <li><nav aria-label="Page Control" class="bordered-box">
+  <ul class="page-menu" role="menubar" tabindex="-1">
+    <li>
+      <button
+        type="button"
+        role="menuitem"
+        aria-hidden="true"
+        aria-label="Toggle theme"
+        id="theme-toggle-icon"
+        style="--icon: var(--theme-toggle-icon)"
+        class="icon small scale-up"
+      ></button>
+    </li>
+    <li>
+      <a
+        href="#title-block-header"
+        role="menuitem"
+        style="
+          --icon: url(../images/feather-icons/chevron-up.svg);
+        "
+        class="icon small"
+      >
+        <span role="tooltip"> Scroll to beginning </span>
+      </a>
+    </li>
+    <li>
+      <a
+        href="#site-footer"
+        role="menuitem"
+        style="
+          --icon: url(../images/feather-icons/chevron-down.svg);
+        "
+        class="icon small"
+      >
+        <span role="tooltip"> Scroll to end </span>
+      </a>
+    </li>
+        <li>
+      <a
+        rel="prev"
+        href="../lectures/week11.html"
+        role="menuitem"
+        style="
+          --icon: url(../images/feather-icons/chevron-left.svg);
+        "
+        class="icon small"
+      >
+        <span role="tooltip"> Previous page </span>
+      </a>
+    </li>
+         <li>
+      <a
+        rel="next"
+        href="../lectures/week13.html"
+        role="menuitem"
+        style="
+          --icon: url(../images/feather-icons/chevron-right.svg);
+        "
+        class="icon small"
+      >
+        <span role="tooltip"> Next page </span>
+      </a>
+    </li>
+        <li>
+      <a
+        href="#"
+        role="menuitem"
+        style="--icon: url('../images/feather-icons/printer.svg')"
+        class="icon small"
+      >
+        <span role="tooltip"> View PDF </span>
+      </a>
+    </li>
+    <li>
+      <button
+        type="button"
+        aria-controls="margin-menu"
+        aria-expanded="false"
+        aria-hidden="true"
+        aria-label="Toggle margin menu"
+        role="menuitem"
+        style="
+          --icon: url(../images/feather-icons/maximize-2.svg);
+        "
+        class="icon small"
+      >
+        <span role="tooltip"> Toggle margin menu </span>
+      </button>
+    </li>
+  </ul>
+</nav>
+</li>
+            <li><nav
+  aria-label="Table of Contents"
+  class="page-toc bordered-box padded-box"
+  id="TOC">
+  <button
+    type="button"
+    aria-expanded="true"
+    aria-controls="TOC"
+    class="accordion expanded toc-title">
+    Contents
+  </button>
+  <ul>
+  <li><a href="#lesson-overview" id="toc-lesson-overview"><span
+  class="toc-section-number">1</span> Lesson Overview</a></li>
+  <li><a href="#html-forms" id="toc-html-forms"><span
+  class="toc-section-number">2</span> HTML Forms</a>
+  <ul>
+  <li><a href="#the-form-element" id="toc-the-form-element"><span
+  class="toc-section-number">2.1</span> The <code>&lt;form&gt;</code>
+  Element</a></li>
+  <li><a href="#the-input-element" id="toc-the-input-element"><span
+  class="toc-section-number">2.2</span> The <code>&lt;input&gt;</code>
+  Element</a>
+  <ul>
+  <li><a href="#input-type" id="toc-input-type"><span
+  class="toc-section-number">2.2.1</span> <code>&lt;input&gt;</code>
+  Type</a></li>
+  <li><a href="#the-label-elements" id="toc-the-label-elements"><span
+  class="toc-section-number">2.2.2</span> The <code>&lt;label&gt;</code>
+  elements</a></li>
+  <li><a href="#input-size-interaction"
+  id="toc-input-size-interaction"><span
+  class="toc-section-number">2.2.3</span> <code>&lt;input&gt;</code>
+  size &amp; interaction</a></li>
+  </ul></li>
+  <li><a href="#the-textarea-element"
+  id="toc-the-textarea-element"><span
+  class="toc-section-number">2.3</span> The
+  <code>&lt;textarea&gt;</code> Element</a></li>
+  <li><a href="#placeholder-and-default-text"
+  id="toc-placeholder-and-default-text"><span
+  class="toc-section-number">2.4</span> Placeholder and default text</a>
+  <ul>
+  <li><a href="#the-select-element" id="toc-the-select-element"><span
+  class="toc-section-number">2.4.1</span> The
+  <code>&lt;select&gt;</code> element</a>
+  <ul>
+  <li><a href="#submission-with-input-typebutton"
+  id="toc-submission-with-input-typebutton"><span
+  class="toc-section-number">2.4.1.1</span> Submission with input
+  type=“button”</a></li>
+  <li><a href="#submission-with-button"
+  id="toc-submission-with-button"><span
+  class="toc-section-number">2.4.1.2</span> Submission with
+  button</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#built-in-form-validation"
+  id="toc-built-in-form-validation"><span
+  class="toc-section-number">2.5</span> Built-in form
+  validation</a></li>
+  </ul></li>
+  <li><a href="#knowledge-check" id="toc-knowledge-check"><span
+  class="toc-section-number">3</span> Knowledge Check</a></li>
+  <li><a href="#readings" id="toc-readings"><span
+  class="toc-section-number">4</span> Readings</a></li>
+  <li><a href="#exercises" id="toc-exercises"><span
+  class="toc-section-number">5</span> Exercises</a></li>
+  </ul>
+</nav></li>
+          </menu>
+        </section>
+        <section id="lesson-overview" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Lesson
+Overview</h1>
+<ul>
+<li>HTML Forms</li>
+</ul>
+<hr />
+</section>
+<section id="html-forms" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> HTML
+Forms</h1>
+<p>Forms<a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a> are the primary interactive
+component of websites. Forms allow users to enter data, which is
+generally sent to a web server for processing and storage, or used
+immediately on the browser to update the interface.</p>
+<p>We will not learn everything there is to know about forms in this
+class (particularly, we will not learn server-side nor client-side
+JavaScript for forms), but we will introduce them now since a few HTML
+Form elements are required for <a
+href="../pages/assignments.html#lab-4">Lab 4</a>.</p>
+<p>HTML forms are made primarily of 4 components:</p>
+<ol type="1">
+<li><strong>One</strong> <code>&lt;form&gt;</code> container element
+that <strong>wraps all form elements</strong>;</li>
+<li>One or more <code>&lt;input type=""&gt;</code> element where users
+<strong>enter data</strong> (e.g., <code>type=search</code> for a search
+bar, or <code>type=radio</code> to select one of many options)</li>
+<li>An <code>&lt;input type=submit&gt;</code> element <em>or</em> a
+<code>&lt;button&gt;</code> element for <strong>triggering the
+submission</strong>;</li>
+<li><code>&lt;label&gt;</code> elements that visually <em>identify</em>
+<code>&lt;input&gt;</code> elements</li>
+</ol>
+<p>Let’s look at a basic <code>&lt;form&gt;</code>:</p>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="bGVgKma" data-user="maujac" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+<span>See the Pen <a href="https://codepen.io/maujac/pen/bGVgKma">
+wk11-forms-ex1</a> by Mauricio Buschinelli
+(<a href="https://codepen.io/maujac"><span class="citation"
+data-cites="maujac">@maujac</span></a>) on
+<a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<p>A few notes about this form:</p>
+<ul>
+<li>The <code>&lt;form&gt;</code> is a <code>block</code> level element,
+<strong>however, its items are <code>inline</code>
+elements.</strong></li>
+<li>The <strong>labels must have the same name as their respective
+inputs</strong>;</li>
+<li>The <code>&lt;form&gt;</code> container and it’s children can be
+styled as usual via CSS;</li>
+<li>Notice the <code>focus</code> “glow” when an
+<code>&lt;input&gt;</code> is selected.</li>
+</ul>
+<p>Now we will look at each form component in a little more detail:</p>
+<section id="the-form-element" class="level2" data-number="2.1">
+<h2 data-number="2.1"><span class="header-section-number">2.1</span> The
+<code>&lt;form&gt;</code> Element</h2>
+<p>As mentioned, the <code>&lt;form&gt;</code> tag is used to create an
+HTML form for user input.</p>
+<p>The most important attributes of <code>&lt;form&gt;</code> is
+<code>action</code> , which defines the URL of where to send the
+data.</p>
+<p>The URL usually points to a server-site script which will parse the
+data (categorize it) and store it. In this course we will not look at
+server side processing.</p>
+<p>The next most important attribute of <code>&lt;form&gt;</code> is
+<code>method</code>: this attribute specifies the HTTP method to use
+when the form is submitted (<strong>GET</strong> or
+<strong>POST</strong>).</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Attribute</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a
+href="https://www.w3schools.com/tags/att_form_accept_charset.asp">accept-charset</a></td>
+<td><em>character_set</em></td>
+<td>Specifies the character encodings that are to be used for the form
+submission</td>
+</tr>
+<tr class="even">
+<td><a
+href="https://www.w3schools.com/tags/att_form_action.asp">action</a></td>
+<td><em>URL</em></td>
+<td>Specifies where to send the form-data when a form is submitted</td>
+</tr>
+<tr class="odd">
+<td><a
+href="https://www.w3schools.com/tags/att_form_autocomplete.asp">autocomplete</a></td>
+<td>on off</td>
+<td>Specifies whether a form should have autocomplete on or off</td>
+</tr>
+<tr class="even">
+<td><a
+href="https://www.w3schools.com/tags/att_form_enctype.asp">enctype</a></td>
+<td>application/x-www-form-urlencoded multipart/form-data
+text/plain</td>
+<td>Specifies how the form-data should be encoded when submitting it to
+the server (only for method=“post”)</td>
+</tr>
+<tr class="odd">
+<td><a
+href="https://www.w3schools.com/tags/att_form_method.asp">method</a></td>
+<td>get post</td>
+<td>Specifies the HTTP method to use when sending form-data</td>
+</tr>
+<tr class="even">
+<td><a
+href="https://www.w3schools.com/tags/att_form_name.asp">name</a></td>
+<td><em>text</em></td>
+<td>Specifies the name of a form</td>
+</tr>
+<tr class="odd">
+<td><a
+href="https://www.w3schools.com/tags/att_form_novalidate.asp">novalidate</a></td>
+<td>novalidate</td>
+<td>Specifies that the form should not be validated when submitted</td>
+</tr>
+<tr class="even">
+<td><a
+href="https://www.w3schools.com/tags/att_form_target.asp">target</a></td>
+<td>_blank _self _parent _top</td>
+<td>Specifies where to display the response that is received after
+submitting the form</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>With a <strong>GET method</strong> the data is submitted and visible
+in the URL bar (i.e. to the user). With a <strong>POST method</strong>,
+the data is encoded in the HTML request body and can be encrypted (with
+https).</p>
+</blockquote>
+<p><code>method</code> uses GET by default. <strong>Always use POST if
+the form data contains sensitive information.</strong> Ideally, encrypt
+the data in the request body by using an HTTPS certified URL.</p>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="poRWweL" data-user="maujac" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+<span>See the Pen <a href="https://codepen.io/maujac/pen/poRWweL"> forms
+- GET-search</a> by Mauricio Buschinelli
+(<a href="https://codepen.io/maujac"><span class="citation"
+data-cites="maujac">@maujac</span></a>) on
+<a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<p>You can find a complete description of <code>&lt;form&gt;</code>
+element attributes <a
+href="https://www.w3schools.com/tags/tag_form.asp">here</a>.</p>
+</section>
+<section id="the-input-element" class="level2" data-number="2.2">
+<h2 data-number="2.2"><span class="header-section-number">2.2</span> The
+<code>&lt;input&gt;</code> Element</h2>
+<p>The <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code>
+element</a> can be displayed in several ways, depending on the
+<code>type</code> attribute.</p>
+<p>By default the <code>type</code> attribute is “text”.</p>
+<blockquote>
+<p>The <code>&lt;input&gt;</code> element is very extensible and
+adaptable. There are dozens of properties available. We will only focus
+on a few.</p>
+<p>To learn more, visite the <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">MDN
+Web docs page on the <code>&lt;input&gt;</code> element.</a></p>
+</blockquote>
+<section id="input-type" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1"><span class="header-section-number">2.2.1</span>
+<code>&lt;input&gt;</code> Type</h3>
+<p>There are many values that <code>type=</code> can take, we will focus
+on the following:</p>
+<ul>
+<li>Radio Buttons</li>
+<li>E-mail</li>
+<li>Search</li>
+<li>Submit Button</li>
+</ul>
+<p>The input <code>type=</code> can take the following values:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a
+href="https://www.w3schools.com/tags/att_input_type_button.asp">button</a></td>
+<td>Defines a clickable button (mostly used with a JavaScript to
+activate a script)</td>
+</tr>
+<tr class="even">
+<td><a
+href="https://www.w3schools.com/tags/att_input_type_checkbox.asp">checkbox</a></td>
+<td>Defines a checkbox</td>
+</tr>
+<tr class="odd">
+<td><a
+href="https://www.w3schools.com/tags/att_input_type_color.asp">color</a></td>
+<td>Defines a color picker</td>
+</tr>
+<tr class="even">
+<td><a
+href="https://www.w3schools.com/tags/att_input_type_date.asp">date</a></td>
+<td>Defines a date control (year, month, day (no time))</td>
+</tr>
+<tr class="odd">
+<td><a
+href="https://www.w3schools.com/tags/att_input_type_datetime-local.asp">datetime-local</a></td>
+<td>Defines a date and time control (year, month, day, time (no
+timezone)</td>
+</tr>
+<tr class="even">
+<td><a
+href="https://www.w3schools.com/tags/att_input_type_email.asp">email</a></td>
+<td>Defines a field for an e-mail address</td>
+</tr>
+<tr class="odd">
+<td><a
+href="https://www.w3schools.com/tags/att_input_type_file.asp">file</a></td>
+<td>Defines a file-select field and a “Browse” button (for file
+uploads)</td>
+</tr>
+<tr class="even">
+<td><a
+href="https://www.w3schools.com/tags/att_input_type_hidden.asp">hidden</a></td>
+<td>Defines a hidden input field</td>
+</tr>
+<tr class="odd">
+<td><a
+href="https://www.w3schools.com/tags/att_input_type_image.asp">image</a></td>
+<td>Defines an image as the submit button</td>
+</tr>
+<tr class="even">
+<td><a
+href="https://www.w3schools.com/tags/att_input_type_month.asp">month</a></td>
+<td>Defines a month and year control (no timezone)</td>
+</tr>
+<tr class="odd">
+<td><a
+href="https://www.w3schools.com/tags/att_input_type_number.asp">number</a></td>
+<td>Defines a field for entering a number</td>
+</tr>
+<tr class="even">
+<td><a
+href="https://www.w3schools.com/tags/att_input_type_password.asp">password</a></td>
+<td>Defines a password field</td>
+</tr>
+<tr class="odd">
+<td><a
+href="https://www.w3schools.com/tags/att_input_type_radio.asp">radio</a></td>
+<td>Defines a radio button</td>
+</tr>
+<tr class="even">
+<td><a
+href="https://www.w3schools.com/tags/att_input_type_range.asp">range</a></td>
+<td>Defines a range control (like a slider control)</td>
+</tr>
+<tr class="odd">
+<td><a
+href="https://www.w3schools.com/tags/att_input_type_reset.asp">reset</a></td>
+<td>Defines a reset button</td>
+</tr>
+<tr class="even">
+<td><a
+href="https://www.w3schools.com/tags/att_input_type_search.asp">search</a></td>
+<td>Defines a text field for entering a search string</td>
+</tr>
+<tr class="odd">
+<td><a
+href="https://www.w3schools.com/tags/att_input_type_submit.asp">submit</a></td>
+<td>Defines a submit button</td>
+</tr>
+<tr class="even">
+<td><a
+href="https://www.w3schools.com/tags/att_input_type_tel.asp">tel</a></td>
+<td>Defines a field for entering a telephone number</td>
+</tr>
+<tr class="odd">
+<td><a
+href="https://www.w3schools.com/tags/att_input_type_text.asp">text</a></td>
+<td>Default. Defines a single-line text field</td>
+</tr>
+<tr class="even">
+<td><a
+href="https://www.w3schools.com/tags/att_input_type_time.asp">time</a></td>
+<td>Defines a control for entering a time (no timezone)</td>
+</tr>
+<tr class="odd">
+<td><a
+href="https://www.w3schools.com/tags/att_input_type_url.asp">url</a></td>
+<td>Defines a field for entering a URL</td>
+</tr>
+<tr class="even">
+<td><a
+href="https://www.w3schools.com/tags/att_input_type_week.asp">week</a></td>
+<td>Defines a week and year control (no timezone)</td>
+</tr>
+</tbody>
+</table>
+<p>Example of radio and email inputs:</p>
+<iframe height="300" scrolling="no" title="wk11-radio_email_search-ex2" src="https://codepen.io/maujac/embed/WNQRKpY?height=265&amp;theme-id=dark&amp;default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+See the Pen
+<a href='https://codepen.io/maujac/pen/WNQRKpY'>wk11-radio_email_search-ex2</a>
+by Mauricio Buschinelli (<a href='https://codepen.io/maujac'><span
+class="citation" data-cites="maujac">@maujac</span></a>) on
+<a href='https://codepen.io'>CodePen</a>.
+</iframe>
+</section>
+<section id="the-label-elements" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2"><span class="header-section-number">2.2.2</span>
+The <code>&lt;label&gt;</code> elements</h3>
+<p>The <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label"><code>&lt;label&gt;</code>
+element</a> associates a text caption with an <code>&lt;input&gt;</code>
+field.</p>
+<blockquote>
+<p>Associate the <code>&lt;label&gt;</code> with an
+<code>&lt;input&gt;</code> element by giving the
+<code>&lt;input&gt;</code> an <code>id</code> attribute.</p>
+<p>The <code>&lt;label&gt;</code> then needs a <code>for</code>
+attribute whose value is the same as the input’s <code>id</code>.</p>
+</blockquote>
+<p>Using <code>&lt;labels&gt;</code> for <code>&lt;inputs&gt;</code> has
+two major advantages and is mandatory in this course:</p>
+<ul>
+<li>Screen readers can read out the label when the user is focused on
+the form input.</li>
+<li>Clicking on the label will focus/activate the input.</li>
+</ul>
+</section>
+<section id="input-size-interaction" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3"><span class="header-section-number">2.2.3</span>
+<code>&lt;input&gt;</code> size &amp; interaction</h3>
+<p>The <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/size"><code>size</code>
+attribute</a> specifies how much of the input is shown. Has similar
+result as using CSS <code>width</code>, however, sizing is automatically
+adjusted to the input type.</p>
+<p>There are also properties that will limit the user interaction with
+the <code>&lt;input&gt;</code>:</p>
+<ul>
+<li><a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-disabled"><code>disabled</code></a>:
+Input value can’t be modified and is never sent with the rest of the
+form data. Typically rendered with a dimmer color</li>
+<li><a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-readonly"><code>readonly</code></a>:
+User cannot modify the input value but it is still sent with the rest of
+the form data.</li>
+</ul>
+<iframe height="300" scrolling="no" title="wk11-input-size" src="https://codepen.io/maujac/embed/oNBGWZP?height=265&amp;theme-id=dark&amp;default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+See the Pen
+<a href='https://codepen.io/maujac/pen/oNBGWZP'>wk11-input-size</a> by
+Mauricio Buschinelli (<a href='https://codepen.io/maujac'><span
+class="citation" data-cites="maujac">@maujac</span></a>) on
+<a href='https://codepen.io'>CodePen</a>.
+</iframe>
+</section>
+</section>
+<section id="the-textarea-element" class="level2" data-number="2.3">
+<h2 data-number="2.3"><span class="header-section-number">2.3</span> The
+<code>&lt;textarea&gt;</code> Element</h2>
+<p><a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">The
+<code>&lt;textare&gt;</code> element</a> provides a multi-line text
+field for larger messages:</p>
+<iframe height="300" scrolling="no" title="wk11-textarea-ex4" src="https://codepen.io/maujac/embed/yLYgRxx?height=265&amp;theme-id=dark&amp;default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+See the Pen
+<a href='https://codepen.io/maujac/pen/yLYgRxx'>wk11-textarea-ex4</a> by
+Mauricio Buschinelli (<a href='https://codepen.io/maujac'><span
+class="citation" data-cites="maujac">@maujac</span></a>) on
+<a href='https://codepen.io'>CodePen</a>.
+</iframe>
+</section>
+<section id="placeholder-and-default-text" class="level2"
+data-number="2.4">
+<h2 data-number="2.4"><span class="header-section-number">2.4</span>
+Placeholder and default text</h2>
+<p>To define the default value of an <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a>
+element you have to use the <code>value</code> attribute:</p>
+<figure class="full-width">
+<iframe height="300" scrolling="no" title="wk11-placeholder_defaults-ex5" src="https://codepen.io/maujac/embed/BaopGZP?height=265&amp;theme-id=dark&amp;default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+See the Pen
+<a href='https://codepen.io/maujac/pen/BaopGZP'>wk11-placeholder_defaults-ex5</a>
+by Mauricio Buschinelli (<a href='https://codepen.io/maujac'><span
+class="citation" data-cites="maujac">@maujac</span></a>) on
+<a href='https://codepen.io'>CodePen</a>.
+</iframe>
+</figure>
+<section id="the-select-element" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1"><span class="header-section-number">2.4.1</span>
+The <code>&lt;select&gt;</code> element</h3>
+<p>The <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code>
+element</a> is used to create a drop-down list of options.</p>
+<p>The <a
+href="https://www.w3schools.com/tags/tag_option.asp"><code>option</code></a>
+tags inside the <code>&lt;select&gt;</code> element define the available
+options in the drop-down list.</p>
+<iframe class="interactive tabbed-standard" src="https://interactive-examples.mdn.mozilla.net/pages/tabbed/select.html" title="MDN Web Docs Interactive Example" loading="lazy" width="100%" height="400">
+</iframe>
+<p>There are two ways of triggering a form submission:</p>
+<ul>
+<li>Immediately after an <code>&lt;input&gt;</code> of
+<code>type=button</code> is clicked inside a form;</li>
+<li>Immediately after a <code>&lt;button&gt;</code> element is clicked
+inside a form;</li>
+</ul>
+<p>As far as the form is concerned both methods are functionally the
+same.</p>
+<p>Depending on the browser and the <code>action</code> attribute of the
+<code>&lt;form&gt;</code>, the page might quickly refresh, which can be
+hard to notice.</p>
+<section id="submission-with-input-typebutton" class="level4"
+data-number="2.4.1.1">
+<h4 data-number="2.4.1.1"><span
+class="header-section-number">2.4.1.1</span> Submission with input
+type=“button”</h4>
+<p>The <code>&lt;input&gt;</code> element can be used as a button in
+order to submit the form. This happens automatically as soon as the
+button is clicked.</p>
+<iframe height="300" scrolling="no" title="wk11-input_button-ex3" src="https://codepen.io/maujac/embed/JjYEaLZ?height=265&amp;theme-id=dark&amp;default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+See the Pen
+<a href='https://codepen.io/maujac/pen/JjYEaLZ'>wk11-input_button-ex3</a>
+by Mauricio Buschinelli (<a href='https://codepen.io/maujac'><span
+class="citation" data-cites="maujac">@maujac</span></a>) on
+<a href='https://codepen.io'>CodePen</a>.
+</iframe>
+</section>
+<section id="submission-with-button" class="level4"
+data-number="2.4.1.2">
+<h4 data-number="2.4.1.2"><span
+class="header-section-number">2.4.1.2</span> Submission with button</h4>
+<p>The <a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button"><code>&lt;button&gt;</code></a>
+element can also be used to submit the form. The main difference between
+the <code>&lt;button&gt;</code> and the
+<code>&lt;input type="submit"&gt;</code> is that the
+<code>&lt;button&gt;</code> element can take other elements inside, such
+as icons or images.</p>
+<iframe height="300" scrolling="no" title="Searchbar demo" src="https://codepen.io/maujac/embed/QWjjjda?height=265&amp;theme-id=dark&amp;default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+See the Pen <a href='https://codepen.io/maujac/pen/QWjjjda'>Searchbar
+demo</a> by Mauricio Buschinelli
+(<a href='https://codepen.io/maujac'><span class="citation"
+data-cites="maujac">@maujac</span></a>) on
+<a href='https://codepen.io'>CodePen</a>.
+</iframe>
+</section>
+</section>
+</section>
+<section id="built-in-form-validation" class="level2" data-number="2.5">
+<h2 data-number="2.5"><span class="header-section-number">2.5</span>
+Built-in form validation</h2>
+<p>One of the most significant features of <a
+href="https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types">HTML5
+form controls</a> is the ability to validate most user data without
+relying onJavaScript.</p>
+<p>This is done by using validation attributes on
+<code>&lt;input&gt;</code> elements:</p>
+<ul>
+<li><code>required</code>: Specifies whether a form field needs to be
+filled in before the form can be submitted.</li>
+<li><code>minlength</code> and <code>maxlength</code>: Specifies the
+minimum and maximum length of textual data (strings)</li>
+<li><code>min</code> and <code>max</code>: Specifies the minimum and
+maximum values of numerical input types</li>
+<li><code>type</code>: Specifies whether the data needs to be a number,
+an email address, or some other specific preset type.</li>
+<li><code>pattern</code>: Specifies a <a
+href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular
+expression</a> that defines a pattern the entered data needs to follow
+(advanced).</li>
+<li><code>step</code>: Only useful on an <code>&lt;input&gt;</code> of
+<code>type=number</code>. Specified the increment amounts. Defaults to 1
+unit (integer).</li>
+</ul>
+<iframe height="300" scrolling="no" title="wk11-required-ex6" src="https://codepen.io/maujac/embed/OJyWaoB?height=265&amp;theme-id=dark&amp;default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+See the Pen
+<a href='https://codepen.io/maujac/pen/OJyWaoB'>wk11-required-ex6</a> by
+Mauricio Buschinelli (<a href='https://codepen.io/maujac'><span
+class="citation" data-cites="maujac">@maujac</span></a>) on
+<a href='https://codepen.io'>CodePen</a>.
+</iframe>
+<blockquote>
+<p>Note that <strong>data validation only happens once the
+<code>&lt;form&gt;</code> elements experiences a <code>submit</code>
+event.</strong></p>
+<p>The <code>submit</code> event is only triggered after the button’s
+click has been processed. See DOM Events for more.</p>
+</blockquote>
+<hr />
+</section>
+</section>
+<section id="knowledge-check" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span>
+Knowledge Check</h1>
+<p>Stay tuned for more information!</p>
+</section>
+<section id="readings" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span>
+Readings</h1>
+<ul>
+<li><a
+href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Basic_native_form_controls">Basic
+native form controls</a> by MDN web docs</li>
+<li><a
+href="https://www.smashingmagazine.com/2018/10/form-design-patterns-excerpt-a-registration-form/">Form
+Design Patterns Book Excerpt: A Registration Form</a> by Smashing
+Magazine</li>
+<li><a
+href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation">Client-side
+form validation</a> by MDN web docs</li>
+<li><a href="https://www.youtube.com/E5MEzC0prd4">Youtube
+tutorial</a></li>
+</ul>
+</section>
+<section id="exercises" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span>
+Exercises</h1>
+<p>(Not part of an assignment, just to study for Test 2) Complete the
+following exercises from W3C Schools:</p>
+<ol type="1">
+<li><a
+href="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_forms1">HTML
+Forms</a></li>
+<li><a
+href="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_form_elements1">Form
+Elements</a></li>
+<li><a
+href="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_form_input_types1">Input
+Types</a></li>
+<li><a
+href="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_form_attributes1">Form
+Attributes</a></li>
+</ol>
+</section>
+<aside id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>This section was adapted directly from <a
+href="https://maujac.github.io/2W6-UI/#/./wk11/forms">HTML Forms</a> by
+Mauricio Buschinelli from the Winter 2021 offering of this couse.<a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</aside> 
+        <footer class="level1">
+                  </footer>
+      </article>
+      <footer class="page-footer flow-container">
+              </footer>
+    </main>
+    <footer id="site-footer" class="site-footer flow-container">
+      <small>
+        © 2023 Michael Haaf
+      </small>    </footer>
+  </body>
+  <script src="http://files.keyes.ie/things/baseliner/baseliner-latest.min.js"></script>
+</html>

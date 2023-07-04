@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="$lang$" xml:lang="$lang$" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    ${site-meta.tmpl()}
+  </head>
+  <body> 
+    <header id="site-banner" class="site-banner flow-container">
+      ${site-banner.tmpl()}
+    </header>
+    <main class="base flow-container">
+      <header class="page-banner sticky-container">
+        <div class="banner-top-bar sticky">
+          ${site-logo.tmpl()}
+          ${site-nav.tmpl()}
+        </div>
+        <div class="banner-bottom-bar sticky">
+          ${site-search.tmpl()}
+          ${site-breadcrumb.tmpl()}
+        </div>
+      </header>
+      <article class="page-article">
+        <header class="level1">
+          ${article-title-block.tmpl()}
+        </header>
+        <section class="level1 overlay-grid sticky-container">
+          <menu class="margin sticky">
+            <li>${page-nav.tmpl()}</li>
+            <li>${page-toc.tmpl()}</li>
+          </menu>
+        </section>
+        $body$ 
+        <footer class="level1">
+          ${article-footer.tmpl()}
+        </footer>
+      </article>
+      <footer class="page-footer flow-container">
+        ${page-footer.tmpl()}
+      </footer>
+    </main>
+    <footer id="site-footer" class="site-footer flow-container">
+      ${site-footer.tmpl()}
+    </footer>
+  </body>
+  <script src="http://files.keyes.ie/things/baseliner/baseliner-latest.min.js"></script>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <link
+      href="../assets/images/favicon.svg"
+      rel="icon"
+      sizes="any"
+      type="image/svg+xml"
+    />
+    <link
+      rel="preload"
+      href="../assets/images/dark-theme/guggenheim-circles.jpg"
+      as="image"
+    />
+    <meta content="dark light" name="color-scheme" />
+    <meta charset="utf-8" />
+    <meta content="pandoc" name="generator" />
+    <meta
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+      name="viewport"
+    />
+    <link href="/static/css/style.css" rel="stylesheet">
+    <script src="/static/js/main.js" defer></script>
+     <meta content="2023-02-28" name="dcterms.date" />
+      <title>2W6-W23: Week 7 Lecture Notes</title>
+      
+  </head>
+  <body> 
+    <header id="site-banner" class="site-banner flow-container">
+      <figure style="--banner-bg-img: url()"> 
+        <footer>
+          <small>
+            <a href="https://www.guggenheim.org/artwork/movement/constructivism"
+              >Title</a
+            >, by <a href="#">Author</a> (<a href="#">CC BY ND 4.0</a>)
+          </small>
+        </footer>
+      </figure>    </header>
+    <main class="base flow-container">
+      <header class="page-banner sticky-container">
+        <div class="banner-top-bar sticky">
+          <div class="banner-top-bar surface">
+            <div class="flex-row">
+              <button
+                type="button"
+                id="baseliner-toggle"
+                aria-label="Secret Button"
+                aria-hidden="True"
+                class="icon large scale-up-2x"
+                style="--icon: url(../images/favicon.svg)"
+              ></button>
+              <div>
+                <h1 class="banner-title">User Interfaces</h1>
+                <small>
+                  420-2W6 | Winter 2023 | as taught by
+                  <a rel="author" href="https://github.com/michaelhaaf/2W6-W23">
+                    Michael Haaf
+                  </a>
+                </small>
+              </div>
+            </div>
+          </div>          <nav class="site-nav" aria-label="Site menu">
+                  <ul class="site-menu" role="menubar">
+                      </ul>
+                </nav>        </div>
+        <div class="banner-bottom-bar sticky">
+                            </div>
+      </header>
+      <article class="page-article">
+        <header class="level1">
+          <h1>2W6-W23: Week 7 Lecture Notes</h1>
+            <div class="abstract">
+            <h2>Intermediate Web Development: the Browser, Javascript,
+          and the DOM</h2>
+            <p>In first half of this program, we learned a ton of HTML
+            and CSS. You will continue to learn more about HTML and CSS
+            in this course and in your life – both are vast
+            subjects.</p>
+            <p>For now, let’s take a big picture break and return to
+            some of the other technologies used in web development. This
+            week, we are going to master using the browser for web
+            development. We are also going to learn the very basics of
+            Javascript in order to learn how HTML/CSS projects can be
+            given dynamic behavior.</p>
+          </div>
+           <p>
+            Last update:
+            <time datetime=""> 2023-02-28 </time>
+          </p>
+
+          <hr />        </header>
+        <section class="level1 overlay-grid sticky-container">
+          <menu class="margin sticky">
+            <li><nav aria-label="Page Control" class="bordered-box">
+  <ul class="page-menu" role="menubar" tabindex="-1">
+    <li>
+      <button
+        type="button"
+        role="menuitem"
+        aria-hidden="true"
+        aria-label="Toggle theme"
+        id="theme-toggle-icon"
+        style="--icon: var(--theme-toggle-icon)"
+        class="icon small scale-up"
+      ></button>
+    </li>
+    <li>
+      <a
+        href="#title-block-header"
+        role="menuitem"
+        style="
+          --icon: url(../images/feather-icons/chevron-up.svg);
+        "
+        class="icon small"
+      >
+        <span role="tooltip"> Scroll to beginning </span>
+      </a>
+    </li>
+    <li>
+      <a
+        href="#site-footer"
+        role="menuitem"
+        style="
+          --icon: url(../images/feather-icons/chevron-down.svg);
+        "
+        class="icon small"
+      >
+        <span role="tooltip"> Scroll to end </span>
+      </a>
+    </li>
+        <li>
+      <a
+        rel="prev"
+        href="../lectures/week06.html"
+        role="menuitem"
+        style="
+          --icon: url(../images/feather-icons/chevron-left.svg);
+        "
+        class="icon small"
+      >
+        <span role="tooltip"> Previous page </span>
+      </a>
+    </li>
+         <li>
+      <a
+        rel="next"
+        href="../lectures/week09.html"
+        role="menuitem"
+        style="
+          --icon: url(../images/feather-icons/chevron-right.svg);
+        "
+        class="icon small"
+      >
+        <span role="tooltip"> Next page </span>
+      </a>
+    </li>
+        <li>
+      <a
+        href="#"
+        role="menuitem"
+        style="--icon: url('../images/feather-icons/printer.svg')"
+        class="icon small"
+      >
+        <span role="tooltip"> View PDF </span>
+      </a>
+    </li>
+    <li>
+      <button
+        type="button"
+        aria-controls="margin-menu"
+        aria-expanded="false"
+        aria-hidden="true"
+        aria-label="Toggle margin menu"
+        role="menuitem"
+        style="
+          --icon: url(../images/feather-icons/maximize-2.svg);
+        "
+        class="icon small"
+      >
+        <span role="tooltip"> Toggle margin menu </span>
+      </button>
+    </li>
+  </ul>
+</nav>
+</li>
+            <li><nav
+  aria-label="Table of Contents"
+  class="page-toc bordered-box padded-box"
+  id="TOC">
+  <button
+    type="button"
+    aria-expanded="true"
+    aria-controls="TOC"
+    class="accordion expanded toc-title">
+    Contents
+  </button>
+  <ul>
+  <li><a href="#lesson-overview" id="toc-lesson-overview"><span
+  class="toc-section-number">1</span> Lesson Overview</a></li>
+  <li><a href="#browsers" id="toc-browsers"><span
+  class="toc-section-number">2</span> Browsers</a></li>
+  <li><a href="#javascript" id="toc-javascript"><span
+  class="toc-section-number">3</span> Javascript</a></li>
+  <li><a href="#the-dom" id="toc-the-dom"><span
+  class="toc-section-number">4</span> The DOM</a></li>
+  <li><a href="#skills-needed-for-lab-3"
+  id="toc-skills-needed-for-lab-3"><span
+  class="toc-section-number">5</span> Skills needed for Lab 3</a>
+  <ul>
+  <li><a href="#theme-toggling" id="toc-theme-toggling"><span
+  class="toc-section-number">5.1</span> Theme toggling</a></li>
+  <li><a href="#svg-icons" id="toc-svg-icons"><span
+  class="toc-section-number">5.2</span> SVG Icons</a></li>
+  </ul></li>
+  <li><a href="#knowledge-check" id="toc-knowledge-check"><span
+  class="toc-section-number">6</span> Knowledge Check</a></li>
+  <li><a href="#exercises" id="toc-exercises"><span
+  class="toc-section-number">7</span> Exercises</a></li>
+  </ul>
+</nav></li>
+          </menu>
+        </section>
+        <section id="lesson-overview" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Lesson
+Overview</h1>
+<ul>
+<li>Choosing a browser for web development</li>
+<li>Introduction to Javascript</li>
+<li>Introduction to the DOM</li>
+</ul>
+<hr />
+</section>
+<section id="browsers" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span>
+Browsers</h1>
+<p>A web browser is an integral part of a web developer’s toolkit. Not
+only does the browser render HTML and CSS, all modern browsers are
+essentially IDEs that contain a suite of tools for inspecting,
+modifying, and debugging HTML, CSS, and JavaScript.</p>
+<p>No matter which browser you use, the following tutorial (covered in
+class on Feb 28) will be useful to you: <a
+href="https://developer.chrome.com/docs/devtools/dom/">Chrome Developer
+Tools</a>.</p>
+<p>Due to <a
+href="https://en.wikipedia.org/wiki/Monopoly_(game)">circumstances
+beyond the scope of this course</a>, almost all modern browsers are
+based on Chromium – unless you use Firefox, the above tutorial will be
+directly relevant to your browser. Make sure you understand all of the
+techniques shown here!</p>
+<p>If you (like me) use Firefox, I currently do not have a tutorial
+available for you. You can pay close attention to my demonstrations in
+class to see where Firefox differs from Chromium-based browsers (the
+differences, for our purposes, are pretty small).</p>
+</section>
+<section id="javascript" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span>
+Javascript</h1>
+<p>More notes will appear here soon. For now (Wednesday Mar 1), check
+out <a
+href="https://www.theodinproject.com/lessons/foundations-fundamentals-part-1">this
+Odin Project tutorial</a> and <a
+href="https://www.theodinproject.com/lessons/foundations-fundamentals-part-2">the
+follow up tutorial</a> for the content we will be covering. This is more
+javascript than you need to know for this course – we will just be
+getting a taste. But feel free to explore more if you like!</p>
+</section>
+<section id="the-dom" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> The
+DOM</h1>
+<p>More notes will appear here soon. For now (Friday Mar 3), check out
+the following resources:</p>
+<ul>
+<li><a
+href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">MDN
+Web Docs: Introduction to the DOM</a> (Article)</li>
+</ul>
+<p>For this article, focus in particular on understanding the big
+picture: what is the difference between HTML and the DOM? What are the
+properties (things that are part of) and methods (behaviors) of the
+<code>document</code> and <code>window</code> objects? How can they be
+useful for finding other elements on your webpage? Try coding along with
+the <a
+href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#active_learning_a_dynamic_shopping_list">Active
+learning</a> portion of the article in particular to ge the hang of what
+Javascript is capable of.</p>
+<ul>
+<li><p><a href="https://www.youtube.com/watch?v=v7rSSy8CaYE">Web Dev
+Simplified: Learn DOM Traversal in 15 Minutes</a> (Youtube video)</p>
+<p>The most important methods to learn from this video are:</p>
+<ul>
+<li><code>getElementById(String id)</code>: returns the element which
+has the <code>id</code> provided as an argument</li>
+<li><code>getElementsByClassName(String className)</code>: returns a
+<code>NodeList</code> of elements which have the <code>className</code>
+in their list of classes</li>
+<li><code>querySelector(String cssSelector)</code>: returns the single
+element which matches the CSS selector provided</li>
+<li><code>querySelectorAll(String cssSelector)</code>: returns a
+<code>NodeList</code> of elements which match the CSS selector
+provided</li>
+</ul></li>
+<li><p><a href="https://www.youtube.com/watch?v=y17RuWkWdn8">Web Dev
+Simplified: Learn DOM Manipulation in 18 Minutes</a> (Youtube
+video)</p></li>
+</ul>
+</section>
+<section id="skills-needed-for-lab-3" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Skills
+needed for Lab 3</h1>
+<section id="theme-toggling" class="level2" data-number="5.1">
+<h2 data-number="5.1"><span class="header-section-number">5.1</span>
+Theme toggling</h2>
+<p>You should now be able to understand a bit better the theme toggling
+button we used in assignment 2: <a
+href="https://codepen.io/michaelhaaf/pen/gOdWqpN">CodePen link</a>. You
+can adapt this for the last parts of Lab 3 in order to add theme
+toggling behavior.</p>
+</section>
+<section id="svg-icons" class="level2" data-number="5.2">
+<h2 data-number="5.2"><span class="header-section-number">5.2</span> SVG
+Icons</h2>
+<p>One other thing I haven’t covered that you need for Lab 3: getting
+SVGs to use as icons, and changing their colour. More information to
+come soon.</p>
+</section>
+</section>
+<section id="knowledge-check" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span>
+Knowledge Check</h1>
+<p>Stay tuned for more information!</p>
+</section>
+<section id="exercises" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span>
+Exercises</h1>
+<p>Stay tuned for more information!</p>
+</section> 
+        <footer class="level1">
+                  </footer>
+      </article>
+      <footer class="page-footer flow-container">
+              </footer>
+    </main>
+    <footer id="site-footer" class="site-footer flow-container">
+      <small>
+        © 2023 Michael Haaf
+      </small>    </footer>
+  </body>
+  <script src="http://files.keyes.ie/things/baseliner/baseliner-latest.min.js"></script>
+</html>

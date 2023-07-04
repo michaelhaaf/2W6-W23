@@ -1,0 +1,292 @@
+/* ------------------------------------------ *\
+  || Source code
+\* ------------------------------------------ */
+
+div.sourceCode,
+pre:not(.sourceCode) {
+  overflow-x: auto;
+}
+
+div.sourceCode::before {
+  content: attr(data-language);
+  text-transform: uppercase;
+  border-bottom: var(--border-default);
+  width: 100%;
+  display: block;
+  text-align: right;
+  padding: 0 1rem;
+}
+div.sourceCode {
+  border: var(--border-default);
+}
+
+.sourceCode {
+  font-family: var(--font-family-monospace);
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-m);
+}
+
+div.sourceCode,
+pre:not(.sourceCode) {
+  background: var(--overlay);
+}
+a.sourceLine::before {
+  text-decoration: none;
+}
+code span.kw {
+  color: var(--accent-violet);
+  font-weight: normal;
+  font-style: normal;
+} /* Keyword */
+code span.dt {
+  color: var(--accent-violet);
+  font-weight: normal;
+  font-style: normal;
+} /* DataType */
+code span.dv {
+  color: var(--accent-teal);
+  font-weight: normal;
+  font-style: normal;
+} /* DecVal */
+code span.bn {
+  color: var(--accent-teal);
+  font-weight: normal;
+  font-style: normal;
+} /* BaseN */
+code span.fl {
+  color: var(--accent-teal);
+  font-weight: normal;
+  font-style: normal;
+} /* Float */
+code span.ch {
+  color: var(--accent-teal);
+  font-weight: normal;
+  font-style: normal;
+} /* Char */
+code span.st {
+  color: var(--accent-teal);
+  font-weight: normal;
+  font-style: normal;
+} /* String */
+code span.co {
+  color: var(--accent-foam);
+  font-weight: normal;
+  font-style: italic;
+} /* Comment */
+code span.ot {
+  color: var(--accent-gold);
+  font-weight: normal;
+  font-style: normal;
+} /* Other */
+code span.al {
+  color: var(--accent-red);
+  font-weight: normal;
+  font-style: normal;
+} /* Alert */
+code span.fu {
+  color: var(--accent-gold);
+  font-weight: normal;
+  font-style: normal;
+} /* Function */
+code span.er {
+  color: var(--accent-red);
+  font-weight: normal;
+  font-style: normal;
+} /* Error */
+code span.wa {
+  color: var(--accent-orange);
+  font-weight: normal;
+  font-style: italic;
+} /* Warning */
+code span.cn {
+  color: var(--accent-teal);
+  font-weight: normal;
+  font-style: normal;
+} /* Constant */
+code span.sc {
+  color: var(--accent-red);
+  font-weight: normal;
+  font-style: normal;
+} /* SpecialChar */
+code span.vs {
+  color: var(--accent-orange);
+  font-weight: normal;
+  font-style: normal;
+} /* VerbatimString */
+code span.ss {
+  color: var(--accent-red);
+  font-weight: normal;
+  font-style: normal;
+} /* SpecialString */
+code span.im {
+  color: var(--accent-orange);
+  font-weight: normal;
+  font-style: normal;
+} /* Import */
+code span.va {
+  color: var(--accent-gold);
+  font-weight: normal;
+  font-style: normal;
+} /* Variable */
+code span.cf {
+  color: var(--accent-violet);
+  font-weight: normal;
+  font-style: normal;
+} /* ControlFlow */
+code span.op {
+  color: var(--accent-violet);
+  font-weight: normal;
+  font-style: normal;
+} /* Operator */
+code span.bu {
+  color: var(--accent-orange);
+  font-weight: normal;
+  font-style: normal;
+} /* BuiltIn */
+code span.ex {
+  color: var(--accent-orange);
+  font-weight: normal;
+  font-style: normal;
+} /* Extension */
+code span.pp {
+  color: var(--accent-orange);
+  font-weight: normal;
+  font-style: normal;
+} /* Preprocessor */
+code span.at {
+  color: var(--accent-orange);
+  font-weight: normal;
+  font-style: normal;
+} /* Attribute */
+code span.do {
+  color: var(--accent-foam);
+  font-weight: normal;
+  font-style: italic;
+} /* Documentation */
+code span.an {
+  color: var(--accent-foam);
+  font-weight: normal;
+  font-style: italic;
+} /* Annotation */
+code span.cv {
+  color: var(--accent-foam);
+  font-weight: normal;
+  font-style: italic;
+} /* CommentVar */
+code span.in {
+  color: var(--accent-foam);
+  font-weight: normal;
+  font-style: italic;
+} /* Information */
+
+/* ------------------------------------------ *\
+  || Everything else
+\* ------------------------------------------ */
+
+.display.math {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+span.smallcaps {
+  font-variant: small-caps;
+}
+div.columns {
+  display: flex;
+  gap: min(4vw, 1.5em);
+}
+div.column {
+  flex: auto;
+  overflow-x: auto;
+}
+div.hanging-indent {
+  margin-left: 1.5em;
+  text-indent: -1.5em;
+}
+ul.task-list {
+  list-style: none;
+}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+
+code {
+  white-space: pre-wrap;
+}
+pre > code.sourceCode {
+  white-space: pre;
+  position: relative;
+}
+pre > code.sourceCode > span {
+  display: inline-block;
+  line-height: 1.25;
+}
+pre > code.sourceCode > span:empty {
+  height: 1.2em;
+}
+.sourceCode {
+  overflow: visible;
+}
+code.sourceCode > span {
+  color: inherit;
+  text-decoration: inherit;
+}
+div.sourceCode {
+  margin: 0;
+}
+pre.sourceCode {
+  margin: 0;
+}
+@media screen {
+  div.sourceCode {
+    overflow: auto;
+  }
+}
+@media print {
+  pre > code.sourceCode {
+    white-space: pre-wrap;
+  }
+  pre > code.sourceCode > span {
+    text-indent: -5em;
+    padding-left: 5em;
+  }
+}
+pre.numberSource code {
+  counter-reset: source-line 0;
+}
+pre.numberSource code > span {
+  position: relative;
+  left: -4em;
+  counter-increment: source-line;
+}
+pre.numberSource code > span > a:first-child::before {
+  content: counter(source-line);
+  position: relative;
+  left: -1em;
+  text-align: right;
+  vertical-align: baseline;
+  border: none;
+  display: inline-block;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 0 4px;
+  width: 4em;
+  color: var(--muted);
+}
+pre.numberSource {
+  margin-left: 3em;
+  border-left: 1px solid var(--muted);
+  padding-left: 4px;
+}
+
+@media screen {
+  pre > code.sourceCode > span > a:first-child::before {
+    text-decoration: underline;
+  }
+}

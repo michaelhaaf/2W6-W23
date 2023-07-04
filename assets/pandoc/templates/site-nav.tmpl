@@ -1,0 +1,27 @@
+<nav class="site-nav" aria-label="Site menu">
+  <ul class="site-menu" role="menubar">
+    ${for(contents)}
+    <li>
+      <a 
+        aria-label="${it.label}"
+        href="${it.name}"
+        role="menuitem"
+        ${if(it.current)} aria-current="page" ${endif}
+      >
+        <span class="strong">${it.label}</span>
+      </a>
+      ${if(it.contents)}
+      <ul role="menu" aria-label="${it.label} menu">
+        ${for(it.contents)}
+        <li>
+          <a role="menuitem" href="${it.name}" aria-label="${it.label}">
+            <span>${it.label}</span>
+          </a>
+        </li>
+        ${endfor}
+      </ul>
+      ${endif}
+    </li>
+    ${endfor}
+  </ul>
+</nav>
