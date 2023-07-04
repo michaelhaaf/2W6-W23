@@ -1,0 +1,280 @@
+/* ------------------------------------------ *\
+  || Table of Contents
+\* ------------------------------------------ */
+
+/* 
+* || Imports
+*
+* || Reset
+*
+* || Global
+*
+* || Themes 
+*
+* || Typography
+*
+* || Utilities
+*   - .hidden, .text-shadow, etc.
+*
+* || Objects
+*   - .nav links, buttons, and dropdowns
+*
+* || Containers
+*   - .header, .main, .footer, .aside--site, .aside--page
+*
+* || Layout
+*   - .page-container grid definition
+*
+* || Overrides
+*   - @media responsive design
+* 
+* || Acknowledgements:
+*   Resources used in creating this design cited inline.
+* 
+*   Document structure inspired by: 
+*     - https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing
+*     - https://cssguidelin.es/
+*/
+
+/* ------------------------------------------ *\
+  || Imports
+\* ------------------------------------------ */
+
+@import "reset.css";
+@import "themes.css";
+@import "fonts.css";
+@import "typography.css";
+@import "components.css";
+@import "pandoc.css";
+
+/* ------------------------------------------ *\
+  || Reset
+\* ------------------------------------------ */
+
+/* TODO: use roles for selection */
+nav a,
+nav a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+nav ul,
+nav ol {
+  list-style: none;
+}
+
+/* ------------------------------------------ *\
+  || Global
+\* ------------------------------------------ */
+
+:root {
+  --max-width: 1980px;
+}
+
+:root {
+  --border-size: 1px;
+  --border-muted: var(--border-size) solid hsl(var(--hsl-muted) / 0.5);
+  --border-default: var(--border-size) solid var(--muted);
+  --border-prominent: var(--border-size) solid var(--subtle);
+}
+
+/* https://css-tricks.com/standardizing-focus-styles-with-css-custom-properties/ */
+:is(a, button, input, textarea, summary) {
+  --outline-size: max(2px, 0.08em);
+  --outline-style: solid;
+  --outline-color: currentColor;
+}
+:is(.icon) {
+  --outline-offset: min(-2px, -0.08em);
+}
+:is(a, button, input, textarea, summary):focus {
+  outline: var(--outline-size) var(--outline-style) var(--outline-color);
+  outline-offset: var(--outline-offset, var(--outline-size));
+}
+
+/* ------------------------------------------ *\
+  || Themes
+\* ------------------------------------------ */
+
+/* ------------------------------------------ *\
+  || Typography
+\* ------------------------------------------ */
+
+html {
+  font-size: 100%;
+}
+
+p,
+li,
+ol {
+  color: var(--subtle);
+}
+strong {
+  color: var(--text);
+}
+
+a {
+  color: var(--accent-foam);
+}
+a:visited {
+  color: var(--accent-violet);
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border-top: var(--border-default);
+}
+
+h2[data-number],
+.abstract h2 {
+  font-style: italic;
+  border-bottom: var(--border-default);
+  margin-bottom: calc(var(--padding-l) - var(--border-size));
+}
+
+/* ------------------------------------------ *\
+  || Utilities
+\* ------------------------------------------ */
+
+.hidden {
+  /* !important required for this utility, I think it's appropriate */
+  display: none !important;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* ------------------------------------------ *\
+  || Objects
+\* ------------------------------------------ */
+
+.bordered-box {
+  border: var(--border-default);
+}
+
+.padded-box {
+  padding: 1rem;
+}
+
+/* ------------------------------------------ *\
+  || Containers
+\* ------------------------------------------ */
+
+.flow-container {
+  max-width: var(--max-width);
+  border-left: var(--border-muted);
+  border-right: var(--border-muted);
+}
+
+.banner-top-bar,
+.banner-bottom-bar {
+  border-top: var(--border-muted);
+  border-bottom: var(--border-muted);
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-m);
+}
+.banner-top-bar small {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+
+.base {
+  background-color: var(--base);
+  color: var(--text);
+}
+
+.surface {
+  background-color: hsl(var(--hsl-base) / 0.8);
+  color: var(--text);
+}
+
+.overlay {
+  background-color: var(--overlay);
+  color: var(--text);
+}
+
+/* ------------------------------------------ *\
+  || Layout
+\* ------------------------------------------ */
+
+body {
+  width: 100%;
+}
+
+article {
+  position: relative;
+  padding: 1rem 2rem;
+}
+
+/* ------------------------------------------ *\
+  || Code
+\* ------------------------------------------ */
+
+/* ------------------------------------------ *\
+  || Overrides
+\* ------------------------------------------ */
+
+/*
+* Remove redundancies for PDF printing
+*
+* Sources: 
+* - https://sympli.io/blog/a-quick-guide-to-css-for-printable-webpages
+* - https://www.slideshare.net/aardrian/making-your-site-printable
+*
+* (TODO)
+*/
+@media print {
+  body,
+  .base,
+  .surface {
+    background: #fff;
+    color: #000;
+    font-size: 8pt;
+    line-height: 150%;
+  }
+
+  h1 {
+    font-size: 14pt;
+    margin-top: 1em;
+  }
+
+  h2 {
+    font-size: 12pt;
+  }
+
+  h3 {
+    font-size: 10pt;
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-size: 8pt;
+  }
+
+  hr {
+    color: #ccc;
+    background-color: #ccc;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  code,
+  pre {
+    color: #000;
+    text-transform: none;
+    page-break-after: avoid;
+  }
+}

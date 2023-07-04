@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <link
+      href="../assets/images/favicon.svg"
+      rel="icon"
+      sizes="any"
+      type="image/svg+xml"
+    />
+    <link
+      rel="preload"
+      href="../assets/images/dark-theme/guggenheim-circles.jpg"
+      as="image"
+    />
+    <meta content="dark light" name="color-scheme" />
+    <meta charset="utf-8" />
+    <meta content="pandoc" name="generator" />
+    <meta
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+      name="viewport"
+    />
+    <link href="/static/css/style.css" rel="stylesheet">
+    <script src="/static/js/main.js" defer></script>
+       <title>2W6-W23: Calendar</title>
+      
+  </head>
+  <body> 
+    <header id="site-banner" class="site-banner flow-container">
+      <figure style="--banner-bg-img: url()"> 
+        <footer>
+          <small>
+            <a href="https://www.guggenheim.org/artwork/movement/constructivism"
+              >Title</a
+            >, by <a href="#">Author</a> (<a href="#">CC BY ND 4.0</a>)
+          </small>
+        </footer>
+      </figure>    </header>
+    <main class="base flow-container">
+      <header class="page-banner sticky-container">
+        <div class="banner-top-bar sticky">
+          <div class="banner-top-bar surface">
+            <div class="flex-row">
+              <button
+                type="button"
+                id="baseliner-toggle"
+                aria-label="Secret Button"
+                aria-hidden="True"
+                class="icon large scale-up-2x"
+                style="--icon: url(../images/favicon.svg)"
+              ></button>
+              <div>
+                <h1 class="banner-title">User Interfaces</h1>
+                <small>
+                  420-2W6 | Winter 2023 | as taught by
+                  <a rel="author" href="https://github.com/michaelhaaf/2W6-W23">
+                    Michael Haaf
+                  </a>
+                </small>
+              </div>
+            </div>
+          </div>          <nav class="site-nav" aria-label="Site menu">
+                  <ul class="site-menu" role="menubar">
+                      </ul>
+                </nav>        </div>
+        <div class="banner-bottom-bar sticky">
+                            </div>
+      </header>
+      <article class="page-article">
+        <header class="level1">
+          <h1>2W6-W23: Calendar</h1>
+            <div class="abstract">
+            <h2>Where to find course material</h2>
+            <p>This is the authoritative calendar for content covered in
+            this class. It is live, up-to-date, and retroactively
+            maintained to contain all of the
+            lecture/tuturial/reading/assignment/test material covered in
+            this course.</p>
+            <p>You can compare this calendar with the calendar from the
+            <a
+            href="../pages/course-outline.html#tentative-schedule">Course
+            Outline</a> to see where this course has deviated from the
+            original outline.</p>
+          </div>
+           
+          <hr />        </header>
+        <section class="level1 overlay-grid sticky-container">
+          <menu class="margin sticky">
+            <li><nav aria-label="Page Control" class="bordered-box">
+  <ul class="page-menu" role="menubar" tabindex="-1">
+    <li>
+      <button
+        type="button"
+        role="menuitem"
+        aria-hidden="true"
+        aria-label="Toggle theme"
+        id="theme-toggle-icon"
+        style="--icon: var(--theme-toggle-icon)"
+        class="icon small scale-up"
+      ></button>
+    </li>
+    <li>
+      <a
+        href="#title-block-header"
+        role="menuitem"
+        style="
+          --icon: url(../images/feather-icons/chevron-up.svg);
+        "
+        class="icon small"
+      >
+        <span role="tooltip"> Scroll to beginning </span>
+      </a>
+    </li>
+    <li>
+      <a
+        href="#site-footer"
+        role="menuitem"
+        style="
+          --icon: url(../images/feather-icons/chevron-down.svg);
+        "
+        class="icon small"
+      >
+        <span role="tooltip"> Scroll to end </span>
+      </a>
+    </li>
+        <li>
+      <a
+        rel="prev"
+        href="../pages/course-outline.html"
+        role="menuitem"
+        style="
+          --icon: url(../images/feather-icons/chevron-left.svg);
+        "
+        class="icon small"
+      >
+        <span role="tooltip"> Previous page </span>
+      </a>
+    </li>
+         <li>
+      <a
+        rel="next"
+        href="../lectures/week01.html"
+        role="menuitem"
+        style="
+          --icon: url(../images/feather-icons/chevron-right.svg);
+        "
+        class="icon small"
+      >
+        <span role="tooltip"> Next page </span>
+      </a>
+    </li>
+        <li>
+      <a
+        href="#"
+        role="menuitem"
+        style="--icon: url('../images/feather-icons/printer.svg')"
+        class="icon small"
+      >
+        <span role="tooltip"> View PDF </span>
+      </a>
+    </li>
+    <li>
+      <button
+        type="button"
+        aria-controls="margin-menu"
+        aria-expanded="false"
+        aria-hidden="true"
+        aria-label="Toggle margin menu"
+        role="menuitem"
+        style="
+          --icon: url(../images/feather-icons/maximize-2.svg);
+        "
+        class="icon small"
+      >
+        <span role="tooltip"> Toggle margin menu </span>
+      </button>
+    </li>
+  </ul>
+</nav>
+</li>
+            <li><nav
+  aria-label="Table of Contents"
+  class="page-toc bordered-box padded-box"
+  id="TOC">
+  <button
+    type="button"
+    aria-expanded="true"
+    aria-controls="TOC"
+    class="accordion expanded toc-title">
+    Contents
+  </button>
+  <ul>
+  <li><a href="#january" id="toc-january"><span
+  class="toc-section-number">1</span> January</a></li>
+  <li><a href="#february" id="toc-february"><span
+  class="toc-section-number">2</span> February</a></li>
+  <li><a href="#march" id="toc-march"><span
+  class="toc-section-number">3</span> March</a></li>
+  <li><a href="#april" id="toc-april"><span
+  class="toc-section-number">4</span> April</a></li>
+  <li><a href="#may" id="toc-may"><span
+  class="toc-section-number">5</span> May</a></li>
+  </ul>
+</nav></li>
+          </menu>
+        </section>
+        <section id="january" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span>
+January</h1>
+<table style="width:99%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 40%" />
+<col style="width: 46%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lectures</th>
+<th>Topics</th>
+<th>Activities/Assessments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="../lectures/week01.html" title="Week 1 Lecture notes">Week
+1</a></td>
+<td>Tools - VS Code <br> HTML - boilerplate HTML5, content elements <br>
+HTML - fundamentals, syntax, elements <br></td>
+<td><strong>Lab 1 (5%, due Jan 27):</strong> <a
+href="../pages/assignments.html#lab-1"
+title="Lab 1: worth 5%, due Jan 27">Creating a website</a> <br>
+Activity: <a href="../pages/tutorials.html#week-01-exercises"
+title="Completed Boilerplate HTML file, with all elements commented.">Writing
+HTML Boilerplate (.html)</a> <br></td>
+</tr>
+<tr class="even">
+<td><a href="../lectures/week02.html" title="Week 2 Lecture notes">Week
+2</a></td>
+<td>HTML - element attributes, document markup <br> HTML - normal flow,
+block vs inline elements <br> Tools - VS Code skills for efficient web
+development <br></td>
+<td>Tutorial: <a
+href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter"
+title="MDN: Marking up a Letter. Make sure you are familiar with all of the HTML elements covered in this tut.">Marking
+up a letter</a> <br> Activity: VS Code shortcuts, editting, Emmet <br> *
+<a href="https://www.youtube.com/watch?v=V8vizNQKtx0"
+title="Web Dev Simplified (YouTube): This video shows how to use &#39;Emmets&#39; in VS Code to generate HTML tags and boilerplate automatically.">Part
+1 (Youtube)</a> * <a href="https://www.youtube.com/watch?v=ifTF3ags0XI"
+title="Fireship (Youtube): This video contains a collection of generally helpful VS Code techniques for editting HTML files -- particularly for creating HTML tags from existing plaintext content using &#39;Wrap with Abbreviation&#39;.">Part
+2 (Youtube)</a></td>
+</tr>
+<tr class="odd">
+<td><a href="../lectures/week03.html" title="Week 3 Lecture notes">Week
+3</a></td>
+<td><p>HTML - semantic elements, website markup <br></p>
+<p>Tools - browser dev tools for CSS/DOM inspection <br> CSS - inline vs
+internal vs external <br> CSS - fundamentals, syntax, selectors
+<br></p></td>
+<td><strong>Lab 2 (10%, due Feb 16):</strong> <a
+href="../pages/assignments.html#lab-2"
+title="Lab 2: worth 10%, due Feb 16">Website layout and style</a> <br>
+<strong>Lab 2 SOLUTION:</strong> <a
+href="../pages/assignments.html#lab-2-solution"
+title="You can preview/download all solution files here.">solution
+directory</a> <br> Tutorial: <a
+href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure"
+title="MDN: Document and website structure. This is a very helpful tutorial for getting started on Lab2.">Document
+and Website Structure</a> <br> Activity: <a
+href="https://flukeout.github.io"
+title="CSS Diner: Pracise selecting CSS elements with this interactive tut. You should be able to finish at least the first 16 exercises by the end of week 3; feel free to try the rest as well, reading the instructions on the right hand side for tips.">CSS
+Diner</a> <br> Activity: How to use the Browser Dev Tools <br> * <a
+href="https://developer.chrome.com/docs/devtools/css/"
+title="Chrome Devtools: How to select/modify/understand CSS using your browser (instructions are similar, but different, for other browsers.)">Part
+1</a> * <a href="https://developer.chrome.com/docs/devtools/css/"
+title="Chrome Devtools: How to navigate the DOM using Google Chrome (instructions are similar, but different, for other browsers.)">Part
+2</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="february" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span>
+February</h1>
+<table style="width:99%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 40%" />
+<col style="width: 46%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lectures</th>
+<th>Topics</th>
+<th>Activities/Assessments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="../lectures/week04.html" title="Week 4 Lecture notes">Week
+4</a></td>
+<td>CSS - element properties: fonts, images, icons <br> CSS - layouts:
+the box model</td>
+<td>Tutorial: <a href="../pages/tutorials.html#week-04-exercises"
+title="Odin Project: CSS Foundations Exercises. There are 6 exercises total in this set. You should be able to complete them all with what you have learned during Week 3.">CSS
+Foundations Exercises</a> <br> Tutorial: <a
+href="../pages/tutorials.html#week-04-exercises"
+title="Odin Project: CSS Box Model Exercises. There are 2 exercises total in this set. You should be able to complete them all with what you have learned during Week 4.">CSS
+Box Model Exercises</a> <br> Tutorial: Typesetting a Homepage <a
+href="../pages/tutorials.html#week04-styling-text-exercises"
+title="MDN: Typesetting a homepage tutorial starter files.">(files)</a>
+<br> <a href="../lectures/week04.html#exercises">Week 4 Exercises</a>
+<br></td>
+</tr>
+<tr class="even">
+<td><a href="../lectures/week05.html" title="Week 5 Lecture notes">Week
+5</a></td>
+<td>CSS - layouts: the box model, floats <br></td>
+<td><a href="../lectures/week05.html#exercises">Week 5 Exercises</a>
+<br></td>
+</tr>
+<tr class="odd">
+<td><a href="../lectures/week06.html" title="Week 6 Lecture notes">Week
+6</a></td>
+<td>CSS - Flexbox <br></td>
+<td><strong>Lab 3 (12.5%, due Mar 17)</strong> <a
+href="../pages/assignments.html#lab-3"
+title="Lab 3: worth 12.5%, due Mar 17">Landing page</a> <br> <strong>Lab
+3 SOLUTION:</strong> <a href="../pages/assignments.html#lab-3-solution"
+title="You can preview/download all solution files here.">solution
+directory</a> <br> <a href="../lectures/week06.html#exercises">Week 6
+Exercises</a> <br></td>
+</tr>
+<tr class="even">
+<td><a href="../lectures/week07.html" title="Week 7 Lecture notes">Week
+7</a></td>
+<td>JavaScript - Manipulating the DOM, Dynamic styling</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="march" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span>
+March</h1>
+<table style="width:99%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 40%" />
+<col style="width: 46%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lectures</th>
+<th>Topics</th>
+<th>Activities/Assessments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><h5 id="study-break-march-6---10">STUDY BREAK (March 6 -
+10)</h5></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Week 8</td>
+<td>CSS - Finishing flexbox, test review, lab time</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><a href="../lectures/week09.html" title="Week 9 Lecture notes">Week
+9</a></td>
+<td>CSS - CSS mechanics, the Cascade, specificity <br> <strong>Test
+1</strong></td>
+<td><strong>Test 1 (15%. March 22)</strong> <br> <a
+href="../lectures/week09.html#exercises">Week 9 Exercises</a> <br> <a
+href="../lectures/week09.html#readings-and-resources">Week 9
+Readings</a> <br></td>
+</tr>
+<tr class="even">
+<td><a href="../lectures/week10.html" title="Week 10 Lecture notes">Week
+10</a></td>
+<td>CSS - Mastering 2D layouts with CSS Grid</td>
+<td><strong>Lab 4 (12.5%, due April 14)</strong>: <a
+href="../pages/assignments.html#lab-4"
+title="Lab 4: worth 12.5%, due April 14">Grid Layouts</a> <br>
+<strong>Lab 4 SOLUTION:</strong> <a
+href="../pages/assignments.html#lab-4-solution"
+title="You can preview/download all solution files here.">solution
+preview</a> <br> <a href="../lectures/week10.html#exercises">Week 10
+Exercises</a> <br> <a
+href="../lectures/week10.html#readings-and-resources">Week 10
+Readings</a> <br></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="april" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span>
+April</h1>
+<table style="width:99%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 40%" />
+<col style="width: 46%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lectures</th>
+<th>Topics</th>
+<th>Activities/Assessments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="../lectures/week11.html" title="Week 11 Lecture notes">Week
+11</a></td>
+<td>Intermediate CSS - June’s Guest Lecture, Responsive Design</td>
+<td><a href="../lectures/week11.html#exercises">Week 11 Exercises</a>
+<br> <a href="../lectures/week11.html#readings-and-resources">Week 11
+Readings</a> <br></td>
+</tr>
+<tr class="even">
+<td><a href="../lectures/week12.html" title="Week 12 Lecture notes">Week
+12</a></td>
+<td>Intermediate CSS - HTML Forms</td>
+<td><a href="../lectures/week12.html#exercises">Week 12 Exercises</a>
+<br> <a href="../lectures/week12.html#readings-and-resources">Week 12
+Readings</a> <br></td>
+</tr>
+<tr class="odd">
+<td><a href="../lectures/week13.html" title="Week 13 Lecture notes">Week
+13</a></td>
+<td>Intro to CMS (Content Management Systems)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="may" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span>
+May</h1>
+<table style="width:99%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 40%" />
+<col style="width: 46%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lectures</th>
+<th>Topics</th>
+<th>Activities/Assessments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="../lectures/week14.html" title="Week 14 Lecture notes">Week
+14</a></td>
+<td><strong>Test 2</strong> <br> Content Management Systems -
+Introduction to Wordpress <br> Intermediate CSS - Accessibility, Best
+Practises</td>
+<td><strong>Test 2 (15%, May 3)</strong> <br> <strong>Project P1 (15%,
+due end of classes):</strong> <a
+href="../pages/assignments.html#milestone-1-2"
+title="Project Milestone 1: worth 15%, due TBD">Instructions</a><br> <a
+href="../lectures/week14.html#readings-resources">Week 14
+Readings</a></td>
+</tr>
+<tr class="even">
+<td><a href="../lectures/week15.html" title="Week 15 Lecture notes">Week
+15</a></td>
+<td>Content Management Systems - Creating/Modifying a Wordpress CMS</td>
+<td><strong>Project P2 (15%, due end of exams):</strong> <a
+href="../pages/assignments.html#milestone-1-2"
+title="Project Milestone 2: worth 15%, due TBD">Instructions</a>
+<br></td>
+</tr>
+</tbody>
+</table>
+</section> 
+        <footer class="level1">
+                  </footer>
+      </article>
+      <footer class="page-footer flow-container">
+              </footer>
+    </main>
+    <footer id="site-footer" class="site-footer flow-container">
+      <small>
+        © 2023 Michael Haaf
+      </small>    </footer>
+  </body>
+  <script src="http://files.keyes.ie/things/baseliner/baseliner-latest.min.js"></script>
+</html>

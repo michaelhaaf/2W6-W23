@@ -1,0 +1,283 @@
+/* ===== Global Styles ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, roboto, oxygen,
+        cantarell, helvetica neue, ubuntu, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+svg,
+img {
+    /* svg and img tags are inline elements. This removes
+    the bottom spacing created for font descender. See url below
+    https://mor10.com/removing-white-space-image-elements-inline-elements-descenders/ */
+    display: block;
+}
+
+/* ===== Utility Classes ===== */
+
+.flx-away {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hide {
+    display: none;
+}
+
+.white {
+    fill: white;
+}
+
+/* ===== Sections ===== */
+
+#topnav {
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #232a34;
+    color: white;
+}
+
+#left {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+#left > * {
+    margin-right: 1rem;
+}
+
+.search {
+    display: flex;
+    flex: 1;
+    background: white;
+    padding: 0.65em 1em;
+    border-radius: 0.5em;
+}
+
+.search button,
+.search input {
+    background: inherit;
+    border: none;
+}
+
+.search input {
+    flex: 1;
+    font-size: 1rem;
+}
+
+.search i {
+    font-size: 1.2rem;
+    color: #5e5e5e;
+}
+
+#left svg {
+    border-radius: 0.5rem;
+}
+
+#right {
+    display: flex;
+    align-items: center;
+}
+
+#topnav a {
+    font-size: 1.1rem;
+}
+
+h1 {
+    font-size: inherit;
+}
+
+/* Hero */
+
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: black;
+}
+
+#hero video {
+    position: absolute;
+    object-fit: cover;
+    opacity: 70%;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-text {
+    color: white;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 1;
+    padding: 7rem 1rem;
+    max-width: 900px;
+}
+
+.hero-text > * {
+    margin-bottom: 1em;
+}
+
+.hero-text h2 {
+    font-size: 2.25rem;
+}
+
+.hero-text p,
+.hero-text span {
+    font-size: 0.8rem;
+    color: #bebebe;
+}
+
+.hero-text p span:first-child {
+    display: none;
+}
+
+#hero .search {
+    padding: 1.25rem;
+}
+
+#tabs {
+    background: white;
+    box-shadow: 0 1px 2px rgb(238, 237, 237);
+}
+
+#tabs ul {
+    text-align: center;
+    overflow-y: auto;
+    white-space: nowrap;
+}
+
+#tabs a {
+    padding: 1.1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #725e5e;
+}
+
+#tabs a:hover {
+    color: #0064f9;
+}
+
+#tabs li:nth-child(3) a {
+    border-bottom: #0064f9 solid 3px;
+    color: #0064f9;
+}
+
+#videos {
+    padding: 1.2rem 1rem;
+}
+
+#videos h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+#videos .flx-away {
+    padding-bottom: 0.75rem;
+}
+
+#grid {
+    display: grid;
+    gap: 1rem;
+}
+
+#grid a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#grid .play {
+    position: absolute;
+    width: 10%;
+}
+
+#grid .vid {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 594px) {
+    #right li:last-child {
+        display: none;
+    }
+
+    #right li:nth-last-child(2),
+    #right li:nth-last-child(3) {
+        display: block;
+    }
+
+    .join {
+        background: #05a081;
+        padding: 0.4em 1.4em;
+        border-radius: 0.3em;
+        font-weight: 600;
+    }
+
+    #right > li {
+        margin: 0 0.8rem;
+    }
+
+    #topnav a:hover {
+        opacity: 0.8;
+    }
+
+    .hero-text {
+        max-width: 650px;
+    }
+
+    #grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 1fr;
+    }
+
+    #grid .two-row {
+        grid-area: span 2;
+    }
+}
+
+@media screen and (min-width: 1076px) {
+    #left li:nth-child(2),
+    #right li:nth-child(1),
+    #right li:nth-child(2),
+    #right li:nth-child(3) {
+        display: block;
+    }
+
+    #grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #topnav form {
+        max-width: 650px;
+    }
+}

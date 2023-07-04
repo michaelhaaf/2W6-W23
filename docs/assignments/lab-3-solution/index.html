@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lab 3 Solution</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--SOLUTION: links to external CSS-->
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" id="layout-css" href="layouts.css" />
+
+    <!-- SOLUTION: Note that all three <link>s from google fonts are here.-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Take a close look at the googleapi URL: I have selected and included three font weights -->
+    <!-- This will force CSS to download the font specs for EACH weight. They will AUTOMATICALLY apply when I set font weight property -->
+    <!-- i.e. I can just say "font-weight: 600" or "font-weight: bold" and the correct font will download and be applied. -->
+
+
+    <script>
+      const layoutCssSheet = document.querySelector("#layout-css");
+      window.onload = (event) => {
+        layoutCssSheet.disabled = true;
+      };
+
+      function swapcss() {
+        layoutCssSheet.disabled
+          ? (layoutCssSheet.disabled = false)
+          : (layoutCssSheet.disabled = true);
+      }
+    </script>
+  </head>
+  <body>
+    <header class="page-header narrow-card flex-container">
+      <img src="images/logo.svg" role="img" alt="logo" />
+      <nav>
+        <ul class="nav-links flex-container">
+          <li>Home</li>
+          <li>Getting Started</li>
+          <li>Photos</li>
+          <li>Gear</li>
+          <li>Forum</li>
+        </ul>
+      </nav>
+      <img id="css-swapper" onclick="swapcss();" src="images/hamburger.svg" role="img" alt="hamburger" />
+    </header>
+    <section class="hero card flex-row flex-container">
+      <div class="flex-column flex-container">
+        <h1 class="page-title">We help you find the best animals</h1>
+        <p>
+          Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam
+          no suscipit quaerendum. At nam minimum ponderum. Est audiam animal
+          molestiae te. Ex duo eripuit mentitum.
+        </p>
+        <button class="btn">Learn More</button>
+      </div>
+      <img src="images/placeholder.png" alt="placeholder" />
+    </section>
+    <section class="guarantee card flex-column flex-container">
+      <h2>The Animal Guarantee</h2>
+      <div class="guarantee-grid flex-container">
+        <div>
+          <img src="images/stores.svg" role="img" alt="" />
+          <h3>Animal Stores</h3>
+          <p>
+            Eos tota dicunt democritum no. Has natum gubergren ne. Est viris
+            soleat sadipscing cu. Legere epicuri insolens eu nec, dicit virtute
+            urbanitas id nam, qui in habeo semper eligendi.
+          </p>
+        </div>
+        <div>
+          <img src="images/security.svg" alt="" />
+          <h3>Animal Security</h3>
+          <p>
+            Ne nam phaedrum consequat, adhuc aliquid ea pri, eum eligendi
+            incorrupte referrentur in. Vix ad senserit salutandi argumentum. Ei
+            eam definiebas reformidans, exerci persecuti no ius.
+          </p>
+        </div>
+        <div>
+          <img src="images/categorization.svg" alt="" />
+          <h3>Animal Categorization</h3>
+          <p>
+            Assum suavitate ea vel, vero erat doming cu cum. Zril ornatus sea
+            cu. Pro ex integre pertinax. Cu cum harum paulo legendos, mei et
+            quod enim mnesarchum, habeo affert laoreet sea ei.
+          </p>
+        </div>
+        <div>
+          <img src="images/communication.svg" alt="" />
+          <h3>Animal Communication</h3>
+          <p>
+            Assum suavitate ea vel, vero erat doming cu cum. Zril ornatus sea
+            cu. Pro ex integre pertinax. Cu cum harum paulo legendos, mei et
+            quod enim mnesarchum, habeo affert laoreet sea ei.
+          </p>
+        </div>
+        <div>
+          <img src="images/networks.svg" alt="" />
+          <h3>Animal Networks</h3>
+          <p>
+            Eos tota dicunt democritum no. Has natum gubergren ne. Est viris
+            soleat sadipscing cu. Legere epicuri insolens eu nec, dicit virtute
+            urbanitas id nam, qui in habeo semper eligendi.
+          </p>
+        </div>
+        <div>
+          <img src="images/storage.svg" alt="" />
+          <h3>Animal Storage</h3>
+          <p>
+            Ne nam phaedrum consequat, adhuc aliquid ea pri, eum eligendi
+            incorrupte referrentur in. Vix ad senserit salutandi argumentum. Ei
+            eam definiebas reformidans, exerci persecuti no ius
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="card flex-column flex-container">
+      <h2 class="card-title">We offer a comprehensive range of animals</h2>
+      <div class="gallery flex-container">
+        <figure>
+          <img src="images/placeholder.png" alt="placeholder" />
+          <figcaption>
+            <h3>Ad eos saepe lucilius</h3>
+            <p>
+              At eripuit signiferumque sea, vel ad mucius molestie, cu labitur.
+            </p>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/placeholder.png" alt="placeholder" />
+          <figcaption>
+            <h3>Ad eos saepe lucilius</h3>
+            <p>
+              At eripuit signiferumque sea, vel ad mucius molestie, cu labitur.
+            </p>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/placeholder.png" alt="placeholder" />
+          <figcaption>
+            <h3>Ad eos saepe lucilius</h3>
+            <p>
+              At eripuit signiferumque sea, vel ad mucius molestie, cu labitur.
+            </p>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/placeholder.png" alt="placeholder" />
+          <figcaption>
+            <h3>Ad eos saepe lucilius</h3>
+            <p>
+              At eripuit signiferumque sea, vel ad mucius molestie, cu labitur.
+            </p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="getting-started card flex-column flex-container">
+      <h2 class="card-title">Ready to get started?</h2>
+      <p>
+        Take control of your Animal Data today. Aliqua reprehenderit commodo ex
+        non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat
+        ullamco ut ea consectetur et est culpa et culpa duis.
+      </p>
+      <button class="btn">Get Started</button>
+    </section>
+    <footer class="page-footer narrow-card flex-container">
+      <p>© BrandName. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
