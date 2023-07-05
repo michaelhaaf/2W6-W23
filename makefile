@@ -62,7 +62,7 @@ $(METADATA): $(CONTENT)
 	@echo "Re-indexing..."
 	cd ./content && tree $(TREE_OPTIONS) | \
 		jq '.[] | .name |= "2W6-W23"' | \
-		jq -f "../$(SCRIPTS_DIR)/pretty-uri-labels.jq" > "../$(DATA_DIR)/$(INDEX_METADATA)"
+		jq -f "../$(SCRIPTS_DIR)/pretty-uri-labels.jq" > "../$(INDEX_METADATA)"
 	@echo "Done."
 
 $(DOCS): docs/% : $$(filter content/%, $(CONTENT))

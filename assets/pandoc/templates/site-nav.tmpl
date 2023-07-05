@@ -4,7 +4,7 @@
     <li>
       <a 
         aria-label="${it.label}"
-        href="${it.name}"
+        href="${it.href}"
         role="menuitem"
         ${if(it.current)} aria-current="page" ${endif}
       >
@@ -14,7 +14,7 @@
       <ul role="menu" aria-label="${it.label} menu">
         ${for(it.contents)}
         <li>
-          <a role="menuitem" href="${it.name}" aria-label="${it.label}">
+          <a role="menuitem" href="${it.href}" aria-label="${it.label}">
             <span>${it.label}</span>
           </a>
         </li>
