@@ -1,3 +1,4 @@
+<!-- Template structure derived from: https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/examples/disclosure-navigation-hybrid/ -->
 <nav class="disclosure-nav" aria-label="Site menu">
   <ul class="nav-menubar" role="menubar">
     ${for(contents)}
@@ -13,9 +14,13 @@
       ${if(it.contents)}
       <button
         type="button"
+        role="menuitem"
         aria-expanded="false"
         aria-controls="${it.name}-menu"
         aria-label="Expand ${it.label} menu"
+        aria-haspopup="menu"
+        style="--icon: url(/static/images/feather-icons/chevron-down.svg)"
+        class="icon scale-up"
       ></button>
       <ul id="${it.name}-menu" class="nav-menu" role="menu" aria-label="${it.label} Menu">
         ${for(it.contents)}
