@@ -14,10 +14,6 @@
           "name": "./about/course-outline"
         },
         {
-          "label": "Syllabus",
-          "name": "./about/syllabus"
-        },
-        {
           "label": "This Course",
           "name": "./about/this-course"
         },
