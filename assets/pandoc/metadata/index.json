@@ -4,180 +4,200 @@
     {
       "href": "/about",
       "label": "About",
-      "name": "./about",
+      "name": "about",
       "contents": [
         {
           "href": "/about/calendar",
           "label": "Calendar",
-          "name": "./about/calendar"
+          "name": "calendar",
+          "contents": null
         },
         {
           "href": "/about/course-outline",
           "label": "Course Outline",
-          "name": "./about/course-outline"
+          "name": "course-outline",
+          "contents": null
         },
         {
           "href": "/about/this-course",
           "label": "This Course",
-          "name": "./about/this-course"
+          "name": "this-course",
+          "contents": null
         },
         {
           "href": "/about/this-site",
           "label": "This Site",
-          "name": "./about/this-site"
+          "name": "this-site",
+          "contents": null
         }
       ]
     },
     {
       "href": "/assignments",
       "label": "Assignments",
-      "name": "./assignments",
+      "name": "assignments",
       "contents": [
         {
           "href": "/assignments/lab-1",
           "label": "Lab 1",
-          "name": "./assignments/lab-1"
+          "name": "lab-1",
+          "contents": null
         },
         {
           "href": "/assignments/lab-1-solution",
           "label": "Lab 1 Solution",
-          "name": "./assignments/lab-1-solution",
+          "name": "lab-1-solution",
           "contents": [
             {
               "href": "/assignments/lab-1-solution/images",
               "label": "Images",
-              "name": "./assignments/lab-1-solution/images"
+              "name": "images",
+              "contents": null
             }
           ]
         },
         {
           "href": "/assignments/lab-2",
           "label": "Lab 2",
-          "name": "./assignments/lab-2",
+          "name": "lab-2",
           "contents": [
             {
               "href": "/assignments/lab-2/css",
               "label": "Css",
-              "name": "./assignments/lab-2/css"
+              "name": "css",
+              "contents": null
             },
             {
               "href": "/assignments/lab-2/images",
               "label": "Images",
-              "name": "./assignments/lab-2/images"
+              "name": "images",
+              "contents": null
             }
           ]
         },
         {
           "href": "/assignments/lab-2-solution",
           "label": "Lab 2 Solution",
-          "name": "./assignments/lab-2-solution",
+          "name": "lab-2-solution",
           "contents": [
             {
               "href": "/assignments/lab-2-solution/css",
               "label": "Css",
-              "name": "./assignments/lab-2-solution/css"
+              "name": "css",
+              "contents": null
             },
             {
               "href": "/assignments/lab-2-solution/images",
               "label": "Images",
-              "name": "./assignments/lab-2-solution/images"
+              "name": "images",
+              "contents": null
             }
           ]
         },
         {
           "href": "/assignments/lab-3",
           "label": "Lab 3",
-          "name": "./assignments/lab-3",
+          "name": "lab-3",
           "contents": [
             {
               "href": "/assignments/lab-3/assets",
               "label": "Assets",
-              "name": "./assignments/lab-3/assets"
+              "name": "assets",
+              "contents": null
             }
           ]
         },
         {
           "href": "/assignments/lab-3-solution",
           "label": "Lab 3 Solution",
-          "name": "./assignments/lab-3-solution",
+          "name": "lab-3-solution",
           "contents": [
             {
               "href": "/assignments/lab-3-solution/images",
               "label": "Images",
-              "name": "./assignments/lab-3-solution/images"
+              "name": "images",
+              "contents": null
             }
           ]
         },
         {
           "href": "/assignments/lab-4",
           "label": "Lab 4",
-          "name": "./assignments/lab-4",
+          "name": "lab-4",
           "contents": [
             {
               "href": "/assignments/lab-4/layout-specifications",
               "label": "Layout Specifications",
-              "name": "./assignments/lab-4/layout-specifications"
+              "name": "layout-specifications",
+              "contents": null
             }
           ]
         },
         {
           "href": "/assignments/lab-4-solution",
           "label": "Lab 4 Solution",
-          "name": "./assignments/lab-4-solution",
+          "name": "lab-4-solution",
           "contents": [
             {
               "href": "/assignments/lab-4-solution/w21-solution",
               "label": "W21 Solution",
-              "name": "./assignments/lab-4-solution/w21-solution"
+              "name": "w21-solution",
+              "contents": null
             },
             {
               "href": "/assignments/lab-4-solution/w23-solution",
               "label": "W23 Solution",
-              "name": "./assignments/lab-4-solution/w23-solution"
+              "name": "w23-solution",
+              "contents": null
             }
           ]
         },
         {
           "href": "/assignments/project",
           "label": "Project",
-          "name": "./assignments/project"
+          "name": "project",
+          "contents": null
         }
       ]
     },
     {
       "href": "/lectures",
       "label": "Lectures",
-      "name": "./lectures",
+      "name": "lectures",
       "contents": [
         {
           "href": "/lectures/week-01",
           "label": "Week 01",
-          "name": "./lectures/week-01"
+          "name": "week-01",
+          "contents": null
         },
         {
           "href": "/lectures/week-02",
           "label": "Week 02",
-          "name": "./lectures/week-02"
+          "name": "week-02",
+          "contents": null
         },
         {
           "href": "/lectures/week-03",
           "label": "Week 03",
-          "name": "./lectures/week-03"
+          "name": "week-03",
+          "contents": null
         },
         {
           "href": "/lectures/week-04",
           "label": "Week 04",
-          "name": "./lectures/week-04",
+          "name": "week-04",
           "contents": [
             {
               "href": "/lectures/week-04/_resources",
               "label": "_resources",
-              "name": "./lectures/week-04/_resources",
+              "name": "_resources",
               "contents": [
                 {
                   "href": "/lectures/week-04/_resources/wk4",
                   "label": "Wk4",
-                  "name": "./lectures/week-04/_resources/wk4"
+                  "name": "wk4",
+                  "contents": null
                 }
               ]
             }
@@ -186,80 +206,89 @@
         {
           "href": "/lectures/week-05",
           "label": "Week 05",
-          "name": "./lectures/week-05",
+          "name": "week-05",
           "contents": [
             {
               "href": "/lectures/week-05/_resources",
               "label": "_resources",
-              "name": "./lectures/week-05/_resources"
+              "name": "_resources",
+              "contents": null
             }
           ]
         },
         {
           "href": "/lectures/week-06",
           "label": "Week 06",
-          "name": "./lectures/week-06"
+          "name": "week-06",
+          "contents": null
         },
         {
           "href": "/lectures/week-07",
           "label": "Week 07",
-          "name": "./lectures/week-07"
+          "name": "week-07",
+          "contents": null
         },
         {
           "href": "/lectures/week-09",
           "label": "Week 09",
-          "name": "./lectures/week-09",
+          "name": "week-09",
           "contents": [
             {
               "href": "/lectures/week-09/_resources",
               "label": "_resources",
-              "name": "./lectures/week-09/_resources"
+              "name": "_resources",
+              "contents": null
             }
           ]
         },
         {
           "href": "/lectures/week-10",
           "label": "Week 10",
-          "name": "./lectures/week-10"
+          "name": "week-10",
+          "contents": null
         },
         {
           "href": "/lectures/week-11",
           "label": "Week 11",
-          "name": "./lectures/week-11",
+          "name": "week-11",
           "contents": [
             {
               "href": "/lectures/week-11/_resources",
               "label": "_resources",
-              "name": "./lectures/week-11/_resources"
+              "name": "_resources",
+              "contents": null
             }
           ]
         },
         {
           "href": "/lectures/week-12",
           "label": "Week 12",
-          "name": "./lectures/week-12"
+          "name": "week-12",
+          "contents": null
         },
         {
           "href": "/lectures/week-13",
           "label": "Week 13",
-          "name": "./lectures/week-13",
+          "name": "week-13",
           "contents": [
             {
               "href": "/lectures/week-13/_resources",
               "label": "_resources",
-              "name": "./lectures/week-13/_resources"
+              "name": "_resources",
+              "contents": null
             }
           ]
         },
         {
           "href": "/lectures/week-14",
           "label": "Week 14",
-          "name": "./lectures/week-14",
+          "name": "week-14",
           "contents": [
             {
               "href": "/lectures/week-14/_resources",
               "label": "_resources",
-              "name": "./lectures/week-14/_resources"
+              "name": "_resources",
+              "contents": null
             }
           ]
         }
@@ -268,56 +297,61 @@
     {
       "href": "/tutorials",
       "label": "Tutorials",
-      "name": "./tutorials",
+      "name": "tutorials",
       "contents": [
         {
           "href": "/tutorials/week-01-boilerplate",
           "label": "Week 01 Boilerplate",
-          "name": "./tutorials/week-01-boilerplate"
+          "name": "week-01-boilerplate",
+          "contents": null
         },
         {
           "href": "/tutorials/week-04-box-model-exercises",
           "label": "Week 04 Box Model Exercises",
-          "name": "./tutorials/week-04-box-model-exercises",
+          "name": "week-04-box-model-exercises",
           "contents": [
             {
               "href": "/tutorials/week-04-box-model-exercises/01-margin-and-padding-1",
               "label": "01 Margin And Padding 1",
-              "name": "./tutorials/week-04-box-model-exercises/01-margin-and-padding-1"
+              "name": "01-margin-and-padding-1",
+              "contents": null
             },
             {
               "href": "/tutorials/week-04-box-model-exercises/02-margin-and-padding-2",
               "label": "02 Margin And Padding 2",
-              "name": "./tutorials/week-04-box-model-exercises/02-margin-and-padding-2"
+              "name": "02-margin-and-padding-2",
+              "contents": null
             }
           ]
         },
         {
           "href": "/tutorials/week-04-box-model-solutions",
           "label": "Week 04 Box Model Solutions",
-          "name": "./tutorials/week-04-box-model-solutions",
+          "name": "week-04-box-model-solutions",
           "contents": [
             {
               "href": "/tutorials/week-04-box-model-solutions/01-margin-and-padding-1",
               "label": "01 Margin And Padding 1",
-              "name": "./tutorials/week-04-box-model-solutions/01-margin-and-padding-1",
+              "name": "01-margin-and-padding-1",
               "contents": [
                 {
                   "href": "/tutorials/week-04-box-model-solutions/01-margin-and-padding-1/solution",
                   "label": "Solution",
-                  "name": "./tutorials/week-04-box-model-solutions/01-margin-and-padding-1/solution"
+                  "name": "solution",
+                  "contents": null
                 }
               ]
             },
             {
               "href": "/tutorials/week-04-box-model-solutions/02-margin-and-padding-2",
               "label": "02 Margin And Padding 2",
-              "name": "./tutorials/week-04-box-model-solutions/02-margin-and-padding-2",
+              "name": "02-margin-and-padding-2",
               "contents": [
                 {
                   "href": "/tutorials/week-04-box-model-solutions/02-margin-and-padding-2/solution",
                   "label": "Solution",
-                  "name": "./tutorials/week-04-box-model-solutions/02-margin-and-padding-2/solution"
+                  "name": "solution",
+                  "contents": null
                 }
               ]
             }
@@ -326,114 +360,126 @@
         {
           "href": "/tutorials/week-04-foundations-exercises",
           "label": "Week 04 Foundations Exercises",
-          "name": "./tutorials/week-04-foundations-exercises",
+          "name": "week-04-foundations-exercises",
           "contents": [
             {
               "href": "/tutorials/week-04-foundations-exercises/01-css-methods",
               "label": "01 Css Methods",
-              "name": "./tutorials/week-04-foundations-exercises/01-css-methods"
+              "name": "01-css-methods",
+              "contents": null
             },
             {
               "href": "/tutorials/week-04-foundations-exercises/02-class-id-selectors",
               "label": "02 Class Id Selectors",
-              "name": "./tutorials/week-04-foundations-exercises/02-class-id-selectors"
+              "name": "02-class-id-selectors",
+              "contents": null
             },
             {
               "href": "/tutorials/week-04-foundations-exercises/03-grouping-selectors",
               "label": "03 Grouping Selectors",
-              "name": "./tutorials/week-04-foundations-exercises/03-grouping-selectors"
+              "name": "03-grouping-selectors",
+              "contents": null
             },
             {
               "href": "/tutorials/week-04-foundations-exercises/04-chaining-selectors",
               "label": "04 Chaining Selectors",
-              "name": "./tutorials/week-04-foundations-exercises/04-chaining-selectors"
+              "name": "04-chaining-selectors",
+              "contents": null
             },
             {
               "href": "/tutorials/week-04-foundations-exercises/05-descendant-combinator",
               "label": "05 Descendant Combinator",
-              "name": "./tutorials/week-04-foundations-exercises/05-descendant-combinator"
+              "name": "05-descendant-combinator",
+              "contents": null
             },
             {
               "href": "/tutorials/week-04-foundations-exercises/06-cascade-fix",
               "label": "06 Cascade Fix",
-              "name": "./tutorials/week-04-foundations-exercises/06-cascade-fix"
+              "name": "06-cascade-fix",
+              "contents": null
             }
           ]
         },
         {
           "href": "/tutorials/week-04-foundations-solutions",
           "label": "Week 04 Foundations Solutions",
-          "name": "./tutorials/week-04-foundations-solutions",
+          "name": "week-04-foundations-solutions",
           "contents": [
             {
               "href": "/tutorials/week-04-foundations-solutions/01-css-methods",
               "label": "01 Css Methods",
-              "name": "./tutorials/week-04-foundations-solutions/01-css-methods",
+              "name": "01-css-methods",
               "contents": [
                 {
                   "href": "/tutorials/week-04-foundations-solutions/01-css-methods/solution",
                   "label": "Solution",
-                  "name": "./tutorials/week-04-foundations-solutions/01-css-methods/solution"
+                  "name": "solution",
+                  "contents": null
                 }
               ]
             },
             {
               "href": "/tutorials/week-04-foundations-solutions/02-class-id-selectors",
               "label": "02 Class Id Selectors",
-              "name": "./tutorials/week-04-foundations-solutions/02-class-id-selectors",
+              "name": "02-class-id-selectors",
               "contents": [
                 {
                   "href": "/tutorials/week-04-foundations-solutions/02-class-id-selectors/solution",
                   "label": "Solution",
-                  "name": "./tutorials/week-04-foundations-solutions/02-class-id-selectors/solution"
+                  "name": "solution",
+                  "contents": null
                 }
               ]
             },
             {
               "href": "/tutorials/week-04-foundations-solutions/03-grouping-selectors",
               "label": "03 Grouping Selectors",
-              "name": "./tutorials/week-04-foundations-solutions/03-grouping-selectors",
+              "name": "03-grouping-selectors",
               "contents": [
                 {
                   "href": "/tutorials/week-04-foundations-solutions/03-grouping-selectors/solution",
                   "label": "Solution",
-                  "name": "./tutorials/week-04-foundations-solutions/03-grouping-selectors/solution"
+                  "name": "solution",
+                  "contents": null
                 }
               ]
             },
             {
               "href": "/tutorials/week-04-foundations-solutions/04-chaining-selectors",
               "label": "04 Chaining Selectors",
-              "name": "./tutorials/week-04-foundations-solutions/04-chaining-selectors",
+              "name": "04-chaining-selectors",
               "contents": [
                 {
                   "href": "/tutorials/week-04-foundations-solutions/04-chaining-selectors/solution",
                   "label": "Solution",
-                  "name": "./tutorials/week-04-foundations-solutions/04-chaining-selectors/solution"
+                  "name": "solution",
+                  "contents": null
                 }
               ]
             },
             {
               "href": "/tutorials/week-04-foundations-solutions/05-descendant-combinator",
               "label": "05 Descendant Combinator",
-              "name": "./tutorials/week-04-foundations-solutions/05-descendant-combinator",
+              "name": "05-descendant-combinator",
               "contents": [
                 {
                   "href": "/tutorials/week-04-foundations-solutions/05-descendant-combinator/solution",
                   "label": "Solution",
-                  "name": "./tutorials/week-04-foundations-solutions/05-descendant-combinator/solution"
+                  "name": "solution",
+                  "contents": null
                 }
               ]
             },
             {
               "href": "/tutorials/week-04-foundations-solutions/06-cascade-fix",
               "label": "06 Cascade Fix",
-              "name": "./tutorials/week-04-foundations-solutions/06-cascade-fix",
+              "name": "06-cascade-fix",
               "contents": [
                 {
                   "href": "/tutorials/week-04-foundations-solutions/06-cascade-fix/solution",
                   "label": "Solution",
-                  "name": "./tutorials/week-04-foundations-solutions/06-cascade-fix/solution"
+                  "name": "solution",
+                  "contents": null
                 }
               ]
             }
@@ -442,57 +488,63 @@
         {
           "href": "/tutorials/week-04-styling-text-exercises",
           "label": "Week 04 Styling Text Exercises",
-          "name": "./tutorials/week-04-styling-text-exercises"
+          "name": "week-04-styling-text-exercises",
+          "contents": null
         },
         {
           "href": "/tutorials/week-04-styling-text-solutions",
           "label": "Week 04 Styling Text Solutions",
-          "name": "./tutorials/week-04-styling-text-solutions",
+          "name": "week-04-styling-text-solutions",
           "contents": [
             {
               "href": "/tutorials/week-04-styling-text-solutions/fonts",
               "label": "Fonts",
-              "name": "./tutorials/week-04-styling-text-solutions/fonts"
+              "name": "fonts",
+              "contents": null
             },
             {
               "href": "/tutorials/week-04-styling-text-solutions/original-font-files",
               "label": "Original Font Files",
-              "name": "./tutorials/week-04-styling-text-solutions/original-font-files",
+              "name": "original-font-files",
               "contents": [
                 {
                   "href": "/tutorials/week-04-styling-text-solutions/original-font-files/josefin-slab",
                   "label": "Josefin Slab",
-                  "name": "./tutorials/week-04-styling-text-solutions/original-font-files/josefin-slab"
+                  "name": "josefin-slab",
+                  "contents": null
                 },
                 {
                   "href": "/tutorials/week-04-styling-text-solutions/original-font-files/Lovato_Light-Webfont",
                   "label": "Lovato_light Webfont",
-                  "name": "./tutorials/week-04-styling-text-solutions/original-font-files/Lovato_Light-Webfont",
+                  "name": "Lovato_Light-Webfont",
                   "contents": [
                     {
                       "href": "/tutorials/week-04-styling-text-solutions/original-font-files/Lovato_Light-Webfont/Licenses",
                       "label": "Licenses",
-                      "name": "./tutorials/week-04-styling-text-solutions/original-font-files/Lovato_Light-Webfont/Licenses"
+                      "name": "Licenses",
+                      "contents": null
                     },
                     {
                       "href": "/tutorials/week-04-styling-text-solutions/original-font-files/Lovato_Light-Webfont/Reference",
                       "label": "Reference",
-                      "name": "./tutorials/week-04-styling-text-solutions/original-font-files/Lovato_Light-Webfont/Reference"
+                      "name": "Reference",
+                      "contents": null
                     },
                     {
                       "href": "/tutorials/week-04-styling-text-solutions/original-font-files/Lovato_Light-Webfont/Webfonts",
                       "label": "Webfonts",
-                      "name": "./tutorials/week-04-styling-text-solutions/original-font-files/Lovato_Light-Webfont/Webfonts",
+                      "name": "Webfonts",
                       "contents": [
                         {
                           "href": "/tutorials/week-04-styling-text-solutions/original-font-files/Lovato_Light-Webfont/Webfonts/lovato_light_macroman",
                           "label": "Lovato_light_macroman",
-                          "name": "./tutorials/week-04-styling-text-solutions/original-font-files/Lovato_Light-Webfont/Webfonts/lovato_light_macroman",
+                          "name": "lovato_light_macroman",
                           "contents": [
                             {
                               "href": "/tutorials/week-04-styling-text-solutions/original-font-files/Lovato_Light-Webfont/Webfonts/lovato_light_macroman/specimen_files",
                               "label": "Specimen_files",
-                              "name": "./tutorials/week-04-styling-text-solutions/original-font-files/Lovato_Light-Webfont/Webfonts/lovato_light_macroman/specimen_files"
+                              "name": "specimen_files",
+                              "contents": null
                             }
                           ]
                         }
@@ -503,12 +555,13 @@
                 {
                   "href": "/tutorials/week-04-styling-text-solutions/original-font-files/webfontkit-20160419-074110",
                   "label": "Webfontkit 20160419 074110",
-                  "name": "./tutorials/week-04-styling-text-solutions/original-font-files/webfontkit-20160419-074110",
+                  "name": "webfontkit-20160419-074110",
                   "contents": [
                     {
                       "href": "/tutorials/week-04-styling-text-solutions/original-font-files/webfontkit-20160419-074110/specimen_files",
                       "label": "Specimen_files",
-                      "name": "./tutorials/week-04-styling-text-solutions/original-font-files/webfontkit-20160419-074110/specimen_files"
+                      "name": "specimen_files",
+                      "contents": null
                     }
                   ]
                 }
@@ -519,138 +572,152 @@
         {
           "href": "/tutorials/week-06-flexbox-exercises",
           "label": "Week 06 Flexbox Exercises",
-          "name": "./tutorials/week-06-flexbox-exercises",
+          "name": "week-06-flexbox-exercises",
           "contents": [
             {
               "href": "/tutorials/week-06-flexbox-exercises/01-flex-center",
               "label": "01 Flex Center",
-              "name": "./tutorials/week-06-flexbox-exercises/01-flex-center"
+              "name": "01-flex-center",
+              "contents": null
             },
             {
               "href": "/tutorials/week-06-flexbox-exercises/02-flex-header",
               "label": "02 Flex Header",
-              "name": "./tutorials/week-06-flexbox-exercises/02-flex-header"
+              "name": "02-flex-header",
+              "contents": null
             },
             {
               "href": "/tutorials/week-06-flexbox-exercises/03-flex-header-2",
               "label": "03 Flex Header 2",
-              "name": "./tutorials/week-06-flexbox-exercises/03-flex-header-2"
+              "name": "03-flex-header-2",
+              "contents": null
             },
             {
               "href": "/tutorials/week-06-flexbox-exercises/04-flex-information",
               "label": "04 Flex Information",
-              "name": "./tutorials/week-06-flexbox-exercises/04-flex-information",
+              "name": "04-flex-information",
               "contents": [
                 {
                   "href": "/tutorials/week-06-flexbox-exercises/04-flex-information/images",
                   "label": "Images",
-                  "name": "./tutorials/week-06-flexbox-exercises/04-flex-information/images"
+                  "name": "images",
+                  "contents": null
                 }
               ]
             },
             {
               "href": "/tutorials/week-06-flexbox-exercises/05-flex-modal",
               "label": "05 Flex Modal",
-              "name": "./tutorials/week-06-flexbox-exercises/05-flex-modal"
+              "name": "05-flex-modal",
+              "contents": null
             },
             {
               "href": "/tutorials/week-06-flexbox-exercises/06-flex-layout",
               "label": "06 Flex Layout",
-              "name": "./tutorials/week-06-flexbox-exercises/06-flex-layout"
+              "name": "06-flex-layout",
+              "contents": null
             },
             {
               "href": "/tutorials/week-06-flexbox-exercises/07-flex-layout-2",
               "label": "07 Flex Layout 2",
-              "name": "./tutorials/week-06-flexbox-exercises/07-flex-layout-2"
+              "name": "07-flex-layout-2",
+              "contents": null
             }
           ]
         },
         {
           "href": "/tutorials/week-06-flexbox-solutions",
           "label": "Week 06 Flexbox Solutions",
-          "name": "./tutorials/week-06-flexbox-solutions",
+          "name": "week-06-flexbox-solutions",
           "contents": [
             {
               "href": "/tutorials/week-06-flexbox-solutions/01-flex-center",
               "label": "01 Flex Center",
-              "name": "./tutorials/week-06-flexbox-solutions/01-flex-center",
+              "name": "01-flex-center",
               "contents": [
                 {
                   "href": "/tutorials/week-06-flexbox-solutions/01-flex-center/solution",
                   "label": "Solution",
-                  "name": "./tutorials/week-06-flexbox-solutions/01-flex-center/solution"
+                  "name": "solution",
+                  "contents": null
                 }
               ]
             },
             {
               "href": "/tutorials/week-06-flexbox-solutions/02-flex-header",
               "label": "02 Flex Header",
-              "name": "./tutorials/week-06-flexbox-solutions/02-flex-header",
+              "name": "02-flex-header",
               "contents": [
                 {
                   "href": "/tutorials/week-06-flexbox-solutions/02-flex-header/solution",
                   "label": "Solution",
-                  "name": "./tutorials/week-06-flexbox-solutions/02-flex-header/solution"
+                  "name": "solution",
+                  "contents": null
                 }
               ]
             },
             {
               "href": "/tutorials/week-06-flexbox-solutions/03-flex-header-2",
               "label": "03 Flex Header 2",
-              "name": "./tutorials/week-06-flexbox-solutions/03-flex-header-2",
+              "name": "03-flex-header-2",
               "contents": [
                 {
                   "href": "/tutorials/week-06-flexbox-solutions/03-flex-header-2/solution",
                   "label": "Solution",
-                  "name": "./tutorials/week-06-flexbox-solutions/03-flex-header-2/solution"
+                  "name": "solution",
+                  "contents": null
                 }
               ]
             },
             {
               "href": "/tutorials/week-06-flexbox-solutions/04-flex-information",
               "label": "04 Flex Information",
-              "name": "./tutorials/week-06-flexbox-solutions/04-flex-information",
+              "name": "04-flex-information",
               "contents": [
                 {
                   "href": "/tutorials/week-06-flexbox-solutions/04-flex-information/solution",
                   "label": "Solution",
-                  "name": "./tutorials/week-06-flexbox-solutions/04-flex-information/solution"
+                  "name": "solution",
+                  "contents": null
                 }
               ]
             },
             {
               "href": "/tutorials/week-06-flexbox-solutions/05-flex-modal",
               "label": "05 Flex Modal",
-              "name": "./tutorials/week-06-flexbox-solutions/05-flex-modal",
+              "name": "05-flex-modal",
               "contents": [
                 {
                   "href": "/tutorials/week-06-flexbox-solutions/05-flex-modal/solution",
                   "label": "Solution",
-                  "name": "./tutorials/week-06-flexbox-solutions/05-flex-modal/solution"
+                  "name": "solution",
+                  "contents": null
                 }
               ]
             },
             {
               "href": "/tutorials/week-06-flexbox-solutions/06-flex-layout",
               "label": "06 Flex Layout",
-              "name": "./tutorials/week-06-flexbox-solutions/06-flex-layout",
+              "name": "06-flex-layout",
               "contents": [
                 {
                   "href": "/tutorials/week-06-flexbox-solutions/06-flex-layout/solution",
                   "label": "Solution",
-                  "name": "./tutorials/week-06-flexbox-solutions/06-flex-layout/solution"
+                  "name": "solution",
+                  "contents": null
                 }
               ]
             },
             {
               "href": "/tutorials/week-06-flexbox-solutions/07-flex-layout-2",
               "label": "07 Flex Layout 2",
-              "name": "./tutorials/week-06-flexbox-solutions/07-flex-layout-2",
+              "name": "07-flex-layout-2",
               "contents": [
                 {
                   "href": "/tutorials/week-06-flexbox-solutions/07-flex-layout-2/solution",
                   "label": "Solution",
-                  "name": "./tutorials/week-06-flexbox-solutions/07-flex-layout-2/solution"
+                  "name": "solution",
+                  "contents": null
                 }
               ]
             }
@@ -659,63 +726,69 @@
         {
           "href": "/tutorials/week-10-grid-exercises",
           "label": "Week 10 Grid Exercises",
-          "name": "./tutorials/week-10-grid-exercises",
+          "name": "week-10-grid-exercises",
           "contents": [
             {
               "href": "/tutorials/week-10-grid-exercises/01-grid-layout-1",
               "label": "01 Grid Layout 1",
-              "name": "./tutorials/week-10-grid-exercises/01-grid-layout-1"
+              "name": "01-grid-layout-1",
+              "contents": null
             },
             {
               "href": "/tutorials/week-10-grid-exercises/02-grid-layout-2",
               "label": "02 Grid Layout 2",
-              "name": "./tutorials/week-10-grid-exercises/02-grid-layout-2"
+              "name": "02-grid-layout-2",
+              "contents": null
             },
             {
               "href": "/tutorials/week-10-grid-exercises/03-grid-layout-3",
               "label": "03 Grid Layout 3",
-              "name": "./tutorials/week-10-grid-exercises/03-grid-layout-3"
+              "name": "03-grid-layout-3",
+              "contents": null
             }
           ]
         },
         {
           "href": "/tutorials/week-10-grid-solutions",
           "label": "Week 10 Grid Solutions",
-          "name": "./tutorials/week-10-grid-solutions",
+          "name": "week-10-grid-solutions",
           "contents": [
             {
               "href": "/tutorials/week-10-grid-solutions/01-grid-layout-1",
               "label": "01 Grid Layout 1",
-              "name": "./tutorials/week-10-grid-solutions/01-grid-layout-1",
+              "name": "01-grid-layout-1",
               "contents": [
                 {
                   "href": "/tutorials/week-10-grid-solutions/01-grid-layout-1/solution",
                   "label": "Solution",
-                  "name": "./tutorials/week-10-grid-solutions/01-grid-layout-1/solution"
+                  "name": "solution",
+                  "contents": null
                 }
               ]
             },
             {
               "href": "/tutorials/week-10-grid-solutions/02-grid-layout-2",
               "label": "02 Grid Layout 2",
-              "name": "./tutorials/week-10-grid-solutions/02-grid-layout-2",
+              "name": "02-grid-layout-2",
               "contents": [
                 {
                   "href": "/tutorials/week-10-grid-solutions/02-grid-layout-2/solution",
                   "label": "Solution",
-                  "name": "./tutorials/week-10-grid-solutions/02-grid-layout-2/solution"
+                  "name": "solution",
+                  "contents": null
                 }
               ]
             },
             {
               "href": "/tutorials/week-10-grid-solutions/03-grid-layout-3",
               "label": "03 Grid Layout 3",
-              "name": "./tutorials/week-10-grid-solutions/03-grid-layout-3",
+              "name": "03-grid-layout-3",
               "contents": [
                 {
                   "href": "/tutorials/week-10-grid-solutions/03-grid-layout-3/solution",
                   "label": "Solution",
-                  "name": "./tutorials/week-10-grid-solutions/03-grid-layout-3/solution"
+                  "name": "solution",
+                  "contents": null
                 }
               ]
             }
@@ -724,29 +797,32 @@
         {
           "href": "/tutorials/week-11-june-exercises",
           "label": "Week 11 June Exercises",
-          "name": "./tutorials/week-11-june-exercises",
+          "name": "week-11-june-exercises",
           "contents": [
             {
               "href": "/tutorials/week-11-june-exercises/img",
               "label": "Img",
-              "name": "./tutorials/week-11-june-exercises/img"
+              "name": "img",
+              "contents": null
             },
             {
               "href": "/tutorials/week-11-june-exercises/sup",
               "label": "Sup",
-              "name": "./tutorials/week-11-june-exercises/sup"
+              "name": "sup",
+              "contents": null
             }
           ]
         },
         {
           "href": "/tutorials/week-15-best-practises",
           "label": "Week 15 Best Practises",
-          "name": "./tutorials/week-15-best-practises",
+          "name": "week-15-best-practises",
           "contents": [
             {
               "href": "/tutorials/week-15-best-practises/assets",
               "label": "Assets",
-              "name": "./tutorials/week-15-best-practises/assets"
+              "name": "assets",
+              "contents": null
             }
           ]
         }

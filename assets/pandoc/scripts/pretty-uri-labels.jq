@@ -18,7 +18,7 @@ walk(
     if type=="object"
       then del(.type)
     elif type=="array"
-      then map({href: (.name | rel_to_abs) } + {label: (.name | uri_to_label)} + .)
+      then map({href: (.name | rel_to_abs)} + {label: (.name | uri_to_label)} + {name: (.name | basename)} + {contents: .contents})
     else
       .
     end

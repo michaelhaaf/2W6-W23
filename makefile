@@ -34,7 +34,10 @@ clean-parcel:
 	find . -depth -type d -name "node_modules" -exec rm -rf {} \;
 	find . -depth -type d -name ".parcel-cache" -exec rm -rf {} \;
 
-metadata: $(METADATA)
+trigger:
+	touch ./content/index.html
+
+metadata: trigger $(METADATA)
 
 docs: $(DOCS)
 

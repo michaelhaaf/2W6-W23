@@ -1,5 +1,5 @@
-<nav class="site-nav" aria-label="Site menu">
-  <ul class="site-menu" role="menubar">
+<nav class="disclosure-nav" aria-label="Site menu">
+  <ul class="nav-menubar" role="menubar">
     ${for(contents)}
     <li>
       <a 
@@ -11,7 +11,13 @@
         <span class="strong">${it.label}</span>
       </a>
       ${if(it.contents)}
-      <ul role="menu" aria-label="${it.label} menu">
+      <button
+        type="button"
+        aria-expanded="false"
+        aria-controls="${it.name}-menu"
+        aria-label="Expand ${it.label} menu"
+      ></button>
+      <ul id="${it.name}-menu" class="nav-menu" role="menu" aria-label="${it.label} Menu">
         ${for(it.contents)}
         <li>
           <a role="menuitem" href="${it.href}" aria-label="${it.label}">
