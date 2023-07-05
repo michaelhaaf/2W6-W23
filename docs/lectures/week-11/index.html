@@ -58,8 +58,8 @@
                 </small>
               </div>
             </div>
-          </div>          <nav class="site-nav" aria-label="Site menu">
-                  <ul class="site-menu" role="menubar">
+          </div>          <nav class="disclosure-nav" aria-label="Site menu">
+                  <ul class="nav-menubar" role="menubar">
                         <li>
                       <a 
                         aria-label="About"
@@ -69,7 +69,13 @@
                       >
                         <span class="strong">About</span>
                       </a>
-                            <ul role="menu" aria-label="About menu">
+                            <button
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="about-menu"
+                        aria-label="Expand About menu"
+                      ></button>
+                      <ul id="about-menu" class="nav-menu" role="menu" aria-label="About Menu">
                                 <li>
                           <a role="menuitem" href="/about/calendar" aria-label="Calendar">
                             <span>Calendar</span>
@@ -104,7 +110,13 @@
                       >
                         <span class="strong">Assignments</span>
                       </a>
-                            <ul role="menu" aria-label="Assignments menu">
+                            <button
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="assignments-menu"
+                        aria-label="Expand Assignments menu"
+                      ></button>
+                      <ul id="assignments-menu" class="nav-menu" role="menu" aria-label="Assignments Menu">
                                 <li>
                           <a role="menuitem" href="/assignments/lab-1" aria-label="Lab
                 1">
@@ -169,7 +181,13 @@
                       >
                         <span class="strong">Lectures</span>
                       </a>
-                            <ul role="menu" aria-label="Lectures menu">
+                            <button
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="lectures-menu"
+                        aria-label="Expand Lectures menu"
+                      ></button>
+                      <ul id="lectures-menu" class="nav-menu" role="menu" aria-label="Lectures Menu">
                                 <li>
                           <a role="menuitem" href="/lectures/week-01" aria-label="Week
                 01">
@@ -259,7 +277,13 @@
                       >
                         <span class="strong">Tutorials</span>
                       </a>
-                            <ul role="menu" aria-label="Tutorials menu">
+                            <button
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="tutorials-menu"
+                        aria-label="Expand Tutorials menu"
+                      ></button>
+                      <ul id="tutorials-menu" class="nav-menu" role="menu" aria-label="Tutorials Menu">
                                 <li>
                           <a role="menuitem" href="/tutorials/week-01-boilerplate" aria-label="Week
                 01 Boilerplate">
@@ -363,7 +387,7 @@
           </div>
            <p>
             Last update:
-            <time datetime="Wed Jul 5 01:46:30 2023"> Wednesday, July
+            <time datetime="Wed Jul 5 13:51:49 2023"> Wednesday, July
           05, 2023 </time>
           </p>
 
