@@ -117,12 +117,16 @@ function setActive(observedSections) {
 }
 
 // Clickable dropdown:
-// https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar_click
-
-const dropbtns = Array.from(document.querySelectorAll(".dropbtn"));
-const dropdowns = Array.from(document.querySelectorAll(".dropdown"));
-dropbtns.forEach((btn) => {
-  btn.addEventListener("click", toggleDropdown);
+// https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/examples/disclosure-navigation-hybrid/ (sort of)
+const dropdownBtns = Array.from(document.querySelectorAll("button[aria-controls][aria-expanded]"));
+const dropdownMenus = dropdownBtns.map(btn => btn.parentElement.querySelector("ul[role=menu]"));
+const dropdowns = new Map(dropdownBtns.map(
+  function(btn, index) {
+    return [btn, dropdownMenus[index]];
+  })
+);
+dropdownBtns.forEach((btn) => {
+  btn.addEventListener('click', toggleDropdown);
 });
 
 function toggleVisible(elem) {
@@ -161,22 +165,27 @@ function setCurrent(elem) {
   elem.setAttribute("aria-current", "page");
 }
 
+function toggleAttribute(elem, attribute) {
+  let currentValue = elem.getAttribute(attribute);
+  let newValue = currentValue === "true" ? "false" : "true";
+  console.log(elem);
+  console.log("currentValue: " + currentValue + "... newValue: " + newValue);
+  elem.setAttribute(attribute, newValue);
+}
+
 function toggleDropdown(event) {
   event.stopPropagation();
-  let dropbtn = event.currentTarget;
-  let activeDropdown = dropbtn.nextElementSibling;
-
-  dropdowns
-    .filter((dropdown) => dropdown !== activeDropdown)
-    .forEach((dropdown) => hide(dropdown));
-
-  toggleVisible(activeDropdown);
+  const activeDropdownBtn = event.currentTarget;
+  dropdownBtns
+    .filter(btn => btn !== activeDropdownBtn)
+    .forEach((btn) => btn.setAttribute("aria-expanded", "false"));
+  toggleAttribute(activeDropdownBtn, "aria-expanded");
 }
 
 // Close the dropdowns if the user clicks outside of them
 window.onclick = function (e) {
-  if (!e.target.matches(".dropbtn") && !e.target.matches(".dropdown")) {
-    dropdowns.forEach((dropdown) => hide(dropdown));
+  if (!e.target.matches("button[aria-expanded][aria-controls]") && !e.target.matches("ul[role=menu]")) {
+    dropdownBtns.forEach((btn) => btn.setAttribute("aria-expanded", "false"));
   }
 };
 
