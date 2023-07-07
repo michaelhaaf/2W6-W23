@@ -26,7 +26,7 @@ METADATA      := $(filter assets/pandoc/metadata/%, $(PANDOC))
 
 .PHONY: all clean clean-parcel watch trigger metadata debug metadata docs docs_static docs_html
 
-all: $(CONTENT_ZIPS) $(METADATA) $(DOCS) $(DOCS_STATIC) $(DOCS_HTML) 
+all: $(CONTENT_ZIPS) $(DOCS) $(DOCS_STATIC) $(DOCS_HTML) 
 
 clean:
 	rm -rf docs/*
@@ -42,10 +42,12 @@ watch:
   	inotifywait -qre close_write ./content/ ./assets/; \
   done
 
-trigger:
-	touch ./content/index.html
-
-metadata: trigger $(METADATA)
+metadata: 
+	@echo "Re-indexing..."
+	@cd ./content && tree $(TREE_OPTIONS) | \
+		jq '.[] | .name |= "2W6-W23"' | \
+		jq -f "../$(SCRIPTS_DIR)/pretty-uri-labels.jq" > "../$(INDEX_METADATA)"
+	@echo "Done."
 
 docs: $(DOCS)
 
@@ -66,14 +68,6 @@ $(CONTENT_ZIPS): %.zip : $$(shell find % -type f ! -path "%/.*")
 	@echo "Re-archiving..." $@
 	@cd $(basename $@)/.. && \
 		zip -FSr $(notdir $@) $(notdir $(basename $*)) -x $(notdir $(basename $*))/.\*
-	@echo "Done."
-
-$(METADATA): $(CONTENT)
-	@echo "CHANGES TO:" $?
-	@echo "Re-indexing..."
-	@cd ./content && tree $(TREE_OPTIONS) | \
-		jq '.[] | .name |= "2W6-W23"' | \
-		jq -f "../$(SCRIPTS_DIR)/pretty-uri-labels.jq" > "../$(INDEX_METADATA)"
 	@echo "Done."
 
 $(DOCS): docs/% : $$(filter content/%, $(CONTENT))
