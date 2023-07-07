@@ -39,7 +39,7 @@ clean-parcel:
 watch:
 	while true; do \
   	$(MAKE) $(WATCHMAKE); \
-  	inotifywait -qre close_write .; \
+  	inotifywait -qre close_write ./content/ ./assets/; \
   done
 
 trigger:
