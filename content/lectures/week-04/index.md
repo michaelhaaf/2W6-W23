@@ -63,14 +63,14 @@ Broadly speaking, the generic families have the following properties:
 
 ![Figure from Mark Womack: [What Font Should I Use?][womack-source]][womack-img]
 
-[womack-img]: ../assets/content/wk4/serif-vs-sans-serif.png "A Serif font has serifs (extra strokes) drawn on the edges of the letter, while a Sans-serif font does not."
+[womack-img]: serif-vs-sans-serif.png "A Serif font has serifs (extra strokes) drawn on the edges of the letter, while a Sans-serif font does not."
 [womack-source]: https://drmarkwomack.com/a-writing-handbook/style/typography/
 
 - Fonts in the `monospace` family force all letters to take the same amount of horizontal space, independent of the width of the strokes defining the letter.
 
 ![Figure from Wikipedia: [Typeface][wiki-typeface]][mono-img]
 
-[mono-img]: ../assets/content/wk4/Proportional-vs-monospace.jpg "A Serif font has serifs drawn on the "
+[mono-img]: Proportional-vs-monospace.jpg "A Serif font has serifs drawn on the "
 
 **Proportional** fonts are the opposite of `monospace` fonts: letters that are narrow take less horizontal space than letters that are wide. Fonts in the the `serif` and `sans-serif` families are typically proportional fonts.
 
@@ -116,7 +116,7 @@ Fortunately, there are techniques that allow us to include **external fonts** in
 
 A popular location to get external fonts is [Google Fonts](https://fonts.google.com/):
 
-![Gif: step-by step for choosing a google font to add to a project.](../assets/content/wk4/add_google_font.gif "On Google Fonts, font families and properties can be selected and configured before downloading or embedding on your webpage."){.full-width}
+![Gif: step-by step for choosing a google font to add to a project.](add_google_font.gif "On Google Fonts, font families and properties can be selected and configured before downloading or embedding on your webpage."){.full-width}
 
 Include the provided link in the head section of your HTML file, just like you would link a CSS Style sheet.
 
@@ -319,7 +319,7 @@ The below diagram shows these layers:
 
 ![Figure from MDN: [The Box Model][bm-source]][bm-img]
 
-[bm-img]: ../assets/content/wk4/box-model.png
+[bm-img]: box-model.png
 [bm-source]: https://www.kirupa.com/html5/viewport_device_document_size.html
 
 ## Margins, padding, and borders

@@ -2,8 +2,8 @@
 title: "2W6-W23: Week 5 Lecture Notes"
 date: 2023-02-19
 toc-title: "Lecture navigation"
-prev-page: "../lectures/week04.html"
-next-page: "../lectures/week06.html"
+prev-page: "/lectures/week-04"
+next-page: "/lectures/week-06"
 abstract-title: "Intro to Layouts and Floats in CSS"
 abstract: |
   Last week, we learned a large set of CSS properties for applying styles to text, image, and other content elements.
@@ -35,7 +35,7 @@ limiting us to a single-column layout.
 
 ![Figure from Interneting is Hard: [Floats][flow-source]][flow-img]
 
-[flow-img]: ../assets/content/wk5/iih-vertical-horizontal-stacking.png  "Vertical (single-column) flow is the default behavior of HTML box elements. CSS Floats allow for block elements to be placed in a horizontal (side-by-side) flow."
+[flow-img]: iih-vertical-horizontal-stacking.png  "Vertical (single-column) flow is the default behavior of HTML box elements. CSS Floats allow for block elements to be placed in a horizontal (side-by-side) flow."
 [flow-source]: https://www.internetingishard.com/html-and-css/floats/
 
 “Floats” let you put block-level elements side-by-side instead of on top of each other. This is a big deal. It lets us build all sorts of layouts, including sidebars, multi-column pages, grids, and magazine-style articles with text flowing around an image. This is where we finally start creating real web pages.
@@ -97,8 +97,8 @@ However, this doesn’t just align the sidebar — it also tells surrounding ele
 ![The same layout with `float: left` property added.][float-img]
 </div>
 
-[float-img]: ../assets/content/wk5/iih-width-float.png  "ajlkwdja"
-[nofloat-img]: ../assets/content/wk5/iih-width-nofloat.png  "ajlkwdja"
+[float-img]: iih-width-float.png  "ajlkwdja"
+[nofloat-img]: iih-width-nofloat.png  "ajlkwdja"
 [float-source]: https://www.internetingishard.com/html-and-css/floats/
 
 **Try changing the CodePen above** until you can see the results shown in these figures!
@@ -182,7 +182,7 @@ This gives us true control over the horizontal alignment of our block boxes. Try
 You probably noticed that our footer shows up in the top right, directly below .menu. That’s because floated boxes are removed from the normal flow of the page. The height of our floated elements don’t contribute to the vertical position of the footer, so it simply sticks itself below the last element that wasn’t floated.
 ![Figure from Interneting is Hard: [Floats][layouts-source]][layouts-img]
 
-[layouts-img]: ../assets/content/wk5/iih-float-layout-combinations.png  "Changing the value of the `float` property for the `.sidebar` and `content` elements allows us at least four different distinct and useful layout combinations."
+[layouts-img]: iih-float-layout-combinations.png  "Changing the value of the `float` property for the `.sidebar` and `content` elements allows us at least four different distinct and useful layout combinations."
 [layouts-source]: https://www.internetingishard.com/html-and-css/floats/
 
 
@@ -221,7 +221,7 @@ If you added a red border around the `.page` element (see previous section CodeP
 
 ![Figure from Interneting is Hard: [Floats][clear-source]][clear-img]
 
-[clear-img]: ../assets/content/wk5/iih-clear.png "Using the `clear` property on an element allows it to stack underneath clearing elements, returning the document to normal vertical flow."
+[clear-img]: iih-clear.png "Using the `clear` property on an element allows it to stack underneath clearing elements, returning the document to normal vertical flow."
 [clear-source]: https://www.internetingishard.com/html-and-css/clears/
 
 Depending on the type of layout you’re trying to create, this is a perfectly acceptable solution. We could stop here, but we’re going to explore float behavior more by transforming our page into a [full-bleed layout](#full-bleed-layout) that has background colors filling the entire browser window.
@@ -247,7 +247,7 @@ Clearing floats only fixes the height issue when there’s an element **inside**
 
 ![Figure from Interneting is Hard: [Floats][overflow-source]][overflow-img]
 
-[overflow-img]: ../assets/content/wk5/iih-overflow.png "There are two properties for addressing block-height issues with float-based layouts: `clear` and `overflow`."
+[overflow-img]: iih-overflow.png "There are two properties for addressing block-height issues with float-based layouts: `clear` and `overflow`."
 [overflow-source]: https://www.internetingishard.com/html-and-css/clears/
 
 The solution is the [CSS overflow property](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow). The setting the property `overflow: hidden` on a container div tells the browser to **recognize the height of any floated elements within that container div**. This is how we can add a background color to our `.page` element and have it actually render:
@@ -276,7 +276,7 @@ In a few of the previous sections, the term [Full-bleed](https://www.joshwcomeau
 
 ![Figure from Interneting is Hard: [Floats][fullbleed-source]][fullbleed-img]
 
-[fullbleed-img]: ../assets/content/wk5/iih-full-bleed-layout.png
+[fullbleed-img]: iih-full-bleed-layout.png
 [fullbleed-source]: https://www.internetingishard.com/html-and-css/clears/
 
 The full-bleed layout can be attained using the following techniques:
@@ -326,7 +326,7 @@ So far, we've seen a sidebar layout, a fixed-width layout, and a full-bleed layo
 
 ![Figure from Interneting is Hard: [Floats][equalwidth-source]][equalwidth-img]
 
-[equalwidth-img]: ../assets/content/wk5/iih-equal-columns.png
+[equalwidth-img]: iih-equal-columns.png
 [equalwidth-source]: https://www.internetingishard.com/html-and-css/clears/
 
 Next we're going to add three equal-width columns to our footer. Update the `<footer>` element, like so:
@@ -363,7 +363,7 @@ Want a grid in the footer instead of 3 columns? No problem! When there isn't eno
 
 ![Figure from Interneting is Hard: [Floats][grid-source]][grid-img]
 
-[grid-img]: ../assets/content/wk5/iih-grids.png
+[grid-img]: iih-grids.png
 [grid-source]: https://www.internetingishard.com/html-and-css/clears/
 
 
@@ -401,7 +401,7 @@ There's two aspects to defining a web page layout. You have your overall page st
 
 ![Figure from Interneting is Hard: [Floats][content-source]][content-img]
 
-[content-img]: ../assets/content/wk5/iih-content-floats.png
+[content-img]: iih-content-floats.png
 [content-source]: https://www.internetingishard.com/html-and-css/clears/
 
 The process for the latter is the same, it's just nested inside the former. Let's add some dummy content to our `.content` element so we have something to play with:
@@ -466,7 +466,7 @@ You'll find examples of nested layouts all over the place. For our final example
 
 ![Figure from Interneting is Hard: [Floats][hidden-overflow-source]][hidden-overflow-img]
 
-[hidden-overflow-img]: ../assets/content/wk5/iih-hidden-overflow.png
+[hidden-overflow-img]: iih-hidden-overflow.png
 [hidden-overflow-source]: https://www.internetingishard.com/html-and-css/clears/
 
 Let's try creating this in our footer. In your favorite `.column` element, add the following:
@@ -511,7 +511,7 @@ Web pages showing with hidden overflow (text left-aligned) and without hidden ov
 
 ![Setting `overflow: hidden`  Figure from Interneting is Hard: [Floats][hidden-overflow-2source]][hidden-overflow-2img]
 
-[hidden-overflow-2img]: ../assets/content/wk5/iih-hidden-overflow-2.png
+[hidden-overflow-2img]: iih-hidden-overflow-2.png
 [hidden-overflow-2source]: https://www.internetingishard.com/html-and-css/clears/
 
 In other words, `overflow: hidden` prevents magazine-style overflow by ensuring that the `.comment` content DOES NOT overflow underneath the floated image.

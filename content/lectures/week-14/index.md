@@ -115,5 +115,5 @@ Stay tuned for more information!
 
 
 [webdev2023]: https://www.youtube.com/watch?v=u72H_zZzkcw
-[subs-timestamps]: ../assets/content/wk14/subs-with-timestamps.txt
-[subs-raw]: ../assets/content/wk14/subs-without-timestamps.txt
+[subs-timestamps]: subs-with-timestamps.txt
+[subs-raw]: subs-without-timestamps.txt

@@ -49,10 +49,10 @@ It's one thing to know in theory what Responsive web design is. Let's see some e
 
 It turns out, our lab work so far this semester is a good starting point. We already have a few examples to work with:
 
-[lab1-eg]: ../assets/videos/wk11/lab1-eg.webm "Lab 1 demonstrates surprisingly strong responsive traits, realigning images (which are inline elements by default) and resizing text appropriately in response to increased zoom." 
-[lab2-eg]: ../assets/videos/wk11/lab2-eg.webm "Lab 2 shows how horizontal scrollbars are introduced when CSS layout forces the page layout to be wider than the viewport width" 
-[lab3-eg]: ../assets/videos/wk11/lab3-eg.webm "Lab 3 shows that information can even be LOST when CSS layouts force the page width to be wider than the viewport width. Lab 3 also shows how Flexbox row-wrap does adjust elegantly to decreased viewport width, automatically restacking its flex-items." 
-[lab4-eg]: ../assets/videos/wk11/lab4-eg.webm "Lab 4 shows that with careful CSS choices, our elements and our layout can be perfeclty responsive, even when that layout is complex." 
+[lab1-eg]: lab1-eg.webm "Lab 1 demonstrates surprisingly strong responsive traits, realigning images (which are inline elements by default) and resizing text appropriately in response to increased zoom." 
+[lab2-eg]: lab2-eg.webm "Lab 2 shows how horizontal scrollbars are introduced when CSS layout forces the page layout to be wider than the viewport width" 
+[lab3-eg]: lab3-eg.webm "Lab 3 shows that information can even be LOST when CSS layouts force the page width to be wider than the viewport width. Lab 3 also shows how Flexbox row-wrap does adjust elegantly to decreased viewport width, automatically restacking its flex-items." 
+[lab4-eg]: lab4-eg.webm "Lab 4 shows that with careful CSS choices, our elements and our layout can be perfeclty responsive, even when that layout is complex." 
 
 ### Bad examples:
 
@@ -151,7 +151,7 @@ There are many public websites today which make use of only minimal CSS and are 
 
 ![In his *Science of Logic (1816)*, Hegel explains the relationship between parent and child objects in `HTML` user interfaces. Note that the article is completely readable anywhere between 2000px and 300px (most device widths), but for wider displays, the text starts to become too long.][responsive-html-eg]
 
-[responsive-html-eg]: ../assets/videos/wk11/responsive-html-eg.webm "When webpages written without layout CSS are subject to different devices widths, HTML automatically adjusts the size of all elements to fit the screen." 
+[responsive-html-eg]: responsive-html-eg.webm "When webpages written without layout CSS are subject to different devices widths, HTML automatically adjusts the size of all elements to fit the screen." 
 
 The default responsive behavior of HTML is a great starting point for any website: all elements only take up the inherent height of their actual content, and their widths adjust automatically to viewport widths. 
 

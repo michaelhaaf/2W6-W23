@@ -2,8 +2,8 @@
 title: '2W6-W23: Week 2 Lecture Notes'
 date: 2023-02-07
 toc-title: "Lecture navigation"
-prev-page: "../lectures/week01.html"
-next-page: "../lectures/week03.html"
+prev-page: "/lectures/week-01"
+next-page: "/lectures/week-03"
 abstract-title: "HTML Fundamentals"
 abstract: |
   Lesson summary.

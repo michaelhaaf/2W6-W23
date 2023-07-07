@@ -339,7 +339,7 @@ To see this in action, try using a [Specificity Calculator][specificity-calculat
 
 ![Figure: sample specificity calculations using Keegan Street's [online specificity calculator][specificity-calculator]. The selectors above are organized in order from most specific to least specific selector. Note that the specificity score is given here using only 3 numbers; it is common to use either 3, 4, or 5 numbers to define the specificity score depending on the context.][eg-calc]
 
-[eg-calc]: ../assets/content/wk9/specificity-calc.png
+[eg-calc]: specificity-calc.png
 
 We can see that even using **16** `<div>` selectors (that is: a `<div>` inside a `<div>` inside a `<div>`... 16 times!) at once results in a **less specific** selector than having just one `class` in the selector.
 
@@ -351,7 +351,7 @@ For example, here is the Firefox Inspector viewing an element on this course web
 
 ![Figure: Here we can see how the Table of Contents items in this website can be given an `active` color by taking advantage of CSS specificity. Take a look at the `<a>` element that has the class `active`. Since the selector `.nav a.active:link` is more specific than `.nav a:link`, the `color` property is updated to use `var(--accent-red)` instead of `var(--subtle)`.][style-pane]
 
-[style-pane]: ../assets/content/wk9/style-pane.png
+[style-pane]: style-pane.png
 
 We can see in the figure that table of contents `<a>` elements that have the `.active` classhave a **more-specific** rule defining their `color` than other table of content `<a>` elements.
 

@@ -2,8 +2,8 @@
 title: '2W6-W23: Week 1 Lecture Notes'
 date: 2023-02-07
 toc-title: "Lecture navigation"
-next-page: "../lectures/week02.html"
-prev-page: "../pages/calendar.html"
+next-page: "/lectures/week-02"
+prev-page: "/about/calendar"
 abstract-title: "Introduction to User Interface Development"
 abstract: |
   Lesson summary.

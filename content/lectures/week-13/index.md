@@ -104,12 +104,12 @@ With a more powerful machine (either for a higher monthly cost, or hosted at hom
 
 [Project Milestone Instructions Link](../pages/assignments.html#milestone-1-2)
 
-[all-slides]: ../assets/content/wk13/larry-slides.pdf
-[cms]: ../assets/content/wk13/cms-introduction.pdf
-[installation]: ../assets/content/wk13/wordpress-folder-structure.pdf
-[troubleshooting]:../assets/content/wk13/troubleshooting-resetting.pdf
-[frontend-backend]: ../assets/content/wk13/front-end-back-end.pdf
-[byethost]:../assets/content/wk13/setting-up-byethost.pdf
-[filezilla]:../assets/content/wk13/filezilla.pdf
-[wordpress-server]:../assets/content/wk13/wordpress-install-on-server.pdf
-[wordpress-configure]:../assets/content/wk13/configure-wordpress.pdf
+[all-slides]: larry-slides.pdf
+[cms]: cms-introduction.pdf
+[installation]: wordpress-folder-structure.pdf
+[troubleshooting]:troubleshooting-resetting.pdf
+[frontend-backend]: front-end-back-end.pdf
+[byethost]:setting-up-byethost.pdf
+[filezilla]:filezilla.pdf
+[wordpress-server]:wordpress-install-on-server.pdf
+[wordpress-configure]:configure-wordpress.pdf

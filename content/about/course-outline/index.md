@@ -262,5 +262,3 @@ My JAC Communities / Academic Council / Curriculum Validation Committee
 
 **For link to interactive tutorial on how to cite sources correctly:
 http://citeit.ccdmd.qc.ca**
-
-#################### 
