@@ -281,7 +281,6 @@ pre.numberSource code > span > a:first-child::before {
 }
 pre.numberSource {
   margin-left: 3em;
-  border-left: 1px solid var(--muted);
   padding-left: 4px;
 }
 

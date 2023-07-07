@@ -187,34 +187,13 @@
           "href": "/lectures/week-04",
           "label": "Week 04",
           "name": "week-04",
-          "contents": [
-            {
-              "href": "/lectures/week-04/_resources",
-              "label": "_resources",
-              "name": "_resources",
-              "contents": [
-                {
-                  "href": "/lectures/week-04/_resources/wk4",
-                  "label": "Wk4",
-                  "name": "wk4",
-                  "contents": null
-                }
-              ]
-            }
-          ]
+          "contents": null
         },
         {
           "href": "/lectures/week-05",
           "label": "Week 05",
           "name": "week-05",
-          "contents": [
-            {
-              "href": "/lectures/week-05/_resources",
-              "label": "_resources",
-              "name": "_resources",
-              "contents": null
-            }
-          ]
+          "contents": null
         },
         {
           "href": "/lectures/week-06",
@@ -232,14 +211,7 @@
           "href": "/lectures/week-09",
           "label": "Week 09",
           "name": "week-09",
-          "contents": [
-            {
-              "href": "/lectures/week-09/_resources",
-              "label": "_resources",
-              "name": "_resources",
-              "contents": null
-            }
-          ]
+          "contents": null
         },
         {
           "href": "/lectures/week-10",
@@ -251,14 +223,7 @@
           "href": "/lectures/week-11",
           "label": "Week 11",
           "name": "week-11",
-          "contents": [
-            {
-              "href": "/lectures/week-11/_resources",
-              "label": "_resources",
-              "name": "_resources",
-              "contents": null
-            }
-          ]
+          "contents": null
         },
         {
           "href": "/lectures/week-12",
@@ -270,27 +235,13 @@
           "href": "/lectures/week-13",
           "label": "Week 13",
           "name": "week-13",
-          "contents": [
-            {
-              "href": "/lectures/week-13/_resources",
-              "label": "_resources",
-              "name": "_resources",
-              "contents": null
-            }
-          ]
+          "contents": null
         },
         {
           "href": "/lectures/week-14",
           "label": "Week 14",
           "name": "week-14",
-          "contents": [
-            {
-              "href": "/lectures/week-14/_resources",
-              "label": "_resources",
-              "name": "_resources",
-              "contents": null
-            }
-          ]
+          "contents": null
         }
       ]
     },

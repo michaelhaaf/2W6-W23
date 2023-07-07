@@ -1,0 +1,27 @@
+{
+  "name": "ssg",
+  "version": "0.1.0",
+  "description": "",
+  "private": true,
+  "keywords": [],
+  "main": "assets/static/js/main.js",
+  "scripts": {
+    "dev": "webpack serve --open --config=webpack.config.dev.js",
+    "prod": "webpack --config=webpack.config.prod.js"
+  },
+  "targets": {
+    "default": {
+      "distDir": "./docs/static/"
+    }
+  },
+  "devDependencies": {
+    "cssnano": "^6.0.1",
+    "postcss": "^8.4.25",
+    "postcss-cli": "^10.1.0",
+    "prettier": "3.0.0",
+    "sharp-cli": "^4.1.1",
+    "webpack": "latest",
+    "webpack-cli": "latest",
+    "webpack-merge": "latest"
+  }
+}

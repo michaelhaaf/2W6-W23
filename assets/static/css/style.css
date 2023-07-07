@@ -184,6 +184,7 @@ code:not(.sourceCode) {
   max-width: var(--max-width);
   border-left: var(--border-muted);
   border-right: var(--border-muted);
+  margin: 0 auto;
 }
 
 .banner-top-bar,
