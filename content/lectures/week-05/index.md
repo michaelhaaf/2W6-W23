@@ -180,6 +180,7 @@ When you float multiple elements in the same direction, they’ll stack horizont
 
 This gives us true control over the horizontal alignment of our block boxes. Try playing with the float values for both `.sidebar` and `.content,` and you’ll find that we already have a couple of distinct layouts at our disposal:
 You probably noticed that our footer shows up in the top right, directly below .menu. That’s because floated boxes are removed from the normal flow of the page. The height of our floated elements don’t contribute to the vertical position of the footer, so it simply sticks itself below the last element that wasn’t floated.
+
 ![Figure from Interneting is Hard: [Floats][layouts-source]][layouts-img]
 
 [layouts-img]: iih-float-layout-combinations.png  "Changing the value of the `float` property for the `.sidebar` and `content` elements allows us at least four different distinct and useful layout combinations."

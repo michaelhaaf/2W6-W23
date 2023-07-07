@@ -199,22 +199,31 @@ code:not(.sourceCode) {
   line-height: var(--line-height-xs);
 }
 
+.body {
+  background-color: var(--base);
+  color: var(--text);
+  z-index: 0;
+}
+
 .base {
   background-color: var(--base);
   color: var(--text);
   z-index: 1;
+  box-shadow: var(--shadow-elevation-low);
 }
 
 .surface {
   background-color: hsl(var(--hsl-base) / 0.9);
   color: var(--text);
   z-index: 2;
+  box-shadow: var(--shadow-elevation-medium);
 }
 
 .overlay {
   background-color: var(--overlay);
   color: var(--text);
   z-index: 3;
+  box-shadow: var(--shadow-elevation-high);
 }
 
 /* ------------------------------------------ *\

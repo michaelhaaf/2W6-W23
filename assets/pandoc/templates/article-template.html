@@ -3,11 +3,11 @@
   <head>
     ${site-meta.tmpl()}
   </head>
-  <body class="base"> 
-    <header id="site-banner" class="site-banner flow-container">
+  <body class="body"> 
+    <header id="site-banner" class="base site-banner flow-container">
       ${site-banner.tmpl()}
     </header>
-    <main class="flow-container sticky-container">
+    <main class="base flow-container sticky-container">
       <header class="page-banner sticky surface">
         <div class="banner-top-bar">
           ${site-logo.tmpl()}
@@ -33,11 +33,11 @@
           ${article-footer.tmpl()}
         </footer>
       </article>
-      <footer class="page-footer flow-container">
+      <footer class="page-footer">
         ${page-footer.tmpl()}
       </footer>
     </main>
-    <footer id="site-footer" class="site-footer flow-container">
+    <footer id="site-footer" class="base site-footer flow-container">
       ${site-footer.tmpl()}
     </footer>
   </body>
