@@ -83,6 +83,9 @@ nav ol {
   --outline-style: solid;
   --outline-color: currentColor;
 }
+[role=menuitem] {
+  --outline-offset: min(-2px, -0.08em);
+}
 :is(a, button, input, textarea, summary):focus {
   outline: var(--outline-size) var(--outline-style) var(--outline-color);
   outline-offset: var(--outline-offset, var(--outline-size));
@@ -127,6 +130,18 @@ h2[data-number],
   font-style: italic;
   border-bottom: var(--border-default);
   margin-bottom: calc(var(--padding-l) - var(--border-size));
+}
+
+figure {
+  text-align: right;
+}
+
+code:not(.sourceCode) {
+  font-family: var(--font-family-monospace);
+  font-size: 0.8em;
+  background-color: var(--overlay);
+  padding: 0 0.25em;
+
 }
 
 /* ------------------------------------------ *\
@@ -186,16 +201,19 @@ h2[data-number],
 .base {
   background-color: var(--base);
   color: var(--text);
+  z-index: 1;
 }
 
 .surface {
-  background-color: hsl(var(--hsl-base) / 0.8);
+  background-color: hsl(var(--hsl-base) / 0.9);
   color: var(--text);
+  z-index: 2;
 }
 
 .overlay {
   background-color: var(--overlay);
   color: var(--text);
+  z-index: 3;
 }
 
 /* ------------------------------------------ *\

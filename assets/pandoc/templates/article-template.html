@@ -3,17 +3,17 @@
   <head>
     ${site-meta.tmpl()}
   </head>
-  <body> 
+  <body class="base"> 
     <header id="site-banner" class="site-banner flow-container">
       ${site-banner.tmpl()}
     </header>
-    <main class="base flow-container">
-      <header class="page-banner sticky-container">
-        <div class="banner-top-bar sticky">
+    <main class="flow-container sticky-container">
+      <header class="page-banner sticky surface">
+        <div class="banner-top-bar">
           ${site-logo.tmpl()}
           ${site-nav.tmpl()}
         </div>
-        <div class="banner-bottom-bar sticky">
+        <div class="banner-bottom-bar">
           ${site-search.tmpl()}
           ${site-breadcrumb.tmpl()}
         </div>
@@ -22,8 +22,8 @@
         <header class="level1">
           ${article-title-block.tmpl()}
         </header>
-        <section class="level1 overlay-grid sticky-container">
-          <menu class="margin sticky">
+        <section class="level1 overlay-grid">
+          <menu class="margin sticky surface">
             <li>${page-nav.tmpl()}</li>
             <li>${page-toc.tmpl()}</li>
           </menu>

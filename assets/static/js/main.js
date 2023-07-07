@@ -118,7 +118,7 @@ function setActive(observedSections) {
 
 // Clickable dropdown:
 // https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/examples/disclosure-navigation-hybrid/ (sort of)
-const dropdownBtns = Array.from(document.querySelectorAll("button[aria-controls][aria-expanded]"));
+const dropdownBtns = Array.from(document.querySelectorAll(".disclosure-nav button[aria-controls][aria-expanded]"));
 const dropdownMenus = dropdownBtns.map(btn => btn.parentElement.querySelector("ul[role=menu]"));
 const dropdowns = new Map(dropdownBtns.map(
   function(btn, index) {
@@ -168,8 +168,6 @@ function setCurrent(elem) {
 function toggleAttribute(elem, attribute) {
   let currentValue = elem.getAttribute(attribute);
   let newValue = currentValue === "true" ? "false" : "true";
-  console.log(elem);
-  console.log("currentValue: " + currentValue + "... newValue: " + newValue);
   elem.setAttribute(attribute, newValue);
 }
 
@@ -189,22 +187,6 @@ window.onclick = function (e) {
   }
 };
 
-// Set current page
-window.onload = function (e) {
-  let pathname = window.location.pathname;
-  let basename = pathname.substring(pathname.lastIndexOf("/") + 1);
-  if (pathname.includes("lectures")) {
-    basename = "lectures.html";
-  } else if (pathname.includes("assignments")) {
-    basename = "assignments.html";
-  } else if (pathname.includes("tutorials")) {
-    basename = "tutorials.html";
-  }
-
-  let currentPage = document.querySelector(`nav a[href$="${basename}"]`);
-  setCurrent(currentPage);
-};
-
 // accordion pattern
 const accordions = Array.from(document.querySelectorAll(".accordion"));
 accordions.forEach((accordion) => {
@@ -213,10 +195,7 @@ accordions.forEach((accordion) => {
 
 function expandCollapsible(event) {
   let elem = event.target;
-  elem.setAttribute(
-    "aria-expanded",
-    elem.getAttribute("aria-expanded") === "true" ? "false" : "true"
-  );
+  toggleAttribute(elem, "aria-expanded");
 }
 
 // baseliner
