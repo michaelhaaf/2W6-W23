@@ -83,9 +83,6 @@ nav ol {
   --outline-style: solid;
   --outline-color: currentColor;
 }
-:is(.icon) {
-  --outline-offset: min(-2px, -0.08em);
-}
 :is(a, button, input, textarea, summary):focus {
   outline: var(--outline-size) var(--outline-style) var(--outline-color);
   outline-offset: var(--outline-offset, var(--outline-size));

@@ -210,9 +210,8 @@
 }
 [role="menubar"] li {
   display: flex;
-  align-items: center;
+  align-items: stretch;
 }
-
 [role="menuitem"] {
   cursor: pointer;
   position: relative;
@@ -232,6 +231,9 @@
 .disclosure-nav [role="menuitem"] {
   display: inline-block;
   padding: 1rem 1rem;
+}
+.disclosure-nav button {
+  border-right: var(--border-muted);
 }
 
 .page-menu [role="menuitem"] {
