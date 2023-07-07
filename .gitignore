@@ -3,3 +3,4 @@
 **/.parcel-cache/
 **/package-lock.json
 **/*.backup
+docs/*
