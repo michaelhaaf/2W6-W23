@@ -7,7 +7,6 @@
         aria-label="${it.label}"
         href="${it.href}"
         role="menuitem"
-        ${if(it.current)} aria-current="page" ${endif}
       >
         <span class="strong">${it.label}</span>
       </a>
@@ -22,7 +21,7 @@
         style="--icon: url(/static/images/feather-icons/chevron-down.svg)"
         class="icon scale-up"
       ></button>
-      <ul id="${it.name}-menu" class="nav-menu" role="menu" aria-label="${it.label} Menu">
+      <ul id="${it.name}-menu" class="nav-menu overlay" role="menu" aria-label="${it.label} Menu">
         ${for(it.contents)}
         <li>
           <a role="menuitem" href="${it.href}" aria-label="${it.label}">
