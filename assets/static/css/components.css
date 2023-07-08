@@ -144,6 +144,7 @@
   top: 0;
   pointer-events: auto;
   overflow: visible;
+  box-shadow: var(--shadow-elevation-medium);
 }
 menu.sticky {
   top: 6.5rem;
