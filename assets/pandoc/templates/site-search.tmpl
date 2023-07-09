@@ -1,0 +1,16 @@
+<form id="site-search-form" action="/search" role="search" class="search" aria-orientation="horizontal">
+  <label id="search-label" class="visually-hidden" for="search-input">Search site</label>
+  <input 
+    id="search-input" type="search" aria-label="search text" placeholder="    "
+    role="combobox" autocomplete="off" name="q" required="" value=""
+    aria-expanded="false" aria-controls="search-menu" aria-labelledby="search-label"
+  > 
+  <button 
+    type="submit" class="small icon scale-up"
+    style="--icon: url(/static/images/feather-icons/search.svg);"  
+  >
+    <span role="tooltip"> Search </span>
+  </button>
+  <menu>
+  </menu>
+</form> 

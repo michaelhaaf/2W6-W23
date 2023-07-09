@@ -1,14 +1,22 @@
 <nav aria-label="Breadcrumb" class="breadcrumb">
-  <ol aria-orientation="horizontal">
+  <ol aria-orientation="horizontal" role="tree">
+    <li>
+      <a 
+        href="/sitemap/" role="treeitem" class="small icon scale-up"
+        style="--icon: url(/static/images/feather-icons/folder.svg);"
+      >
+        <span role="tooltip">Link to sitemap</span>
+      </a>
+    </li>
     ${for(currentPage.ancestors)}
     <li>
-      <a href="${it.href}">
+      <a href="${it.href}" role="treeitem">
         ${it.label}
       </a>
     </li>
     ${endfor}
     <li>
-      <a href="${currentPage.href}" aria-current="page">
+      <a href="${currentPage.href}" role="treeitem" aria-current="page">
         ${currentPage.label}
       </a>
     </li>
