@@ -84,6 +84,6 @@ $(DOCS_STATIC): docs/% : $$(filter assets/%, $(STATIC))
 
 $(DOCS_HTML): docs/%.html : $$(filter content/%.md, $(CONTENT_MD)) $(PANDOC)
 	@echo "CHANGES TO:" $?
-	@echo "Re-building..." $<
-	@pandoc $(PANDOC_OPTIONS) -o $@ $<
+	@echo "Re-building..." $< ", target..." $@
+	@pandoc $(PANDOC_OPTIONS) --metadata-file=<(echo $@ | jq -R -f ${SCRIPTS_DIR}/breadcrumbs.jq) -o $@ $<
 	@echo "Done."

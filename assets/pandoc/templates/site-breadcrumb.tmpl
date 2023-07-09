@@ -1,0 +1,16 @@
+<nav aria-label="Breadcrumb" class="breadcrumb">
+  <ol aria-orientation="horizontal">
+    ${for(currentPage.ancestors)}
+    <li>
+      <a href="${it.href}">
+        ${it.label}
+      </a>
+    </li>
+    ${endfor}
+    <li>
+      <a href="${currentPage.href}" aria-current="page">
+        ${currentPage.label}
+      </a>
+    </li>
+  </ol>
+</nav>

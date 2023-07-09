@@ -18,9 +18,17 @@
   || Generic
 \* ------------------------------------------ */
 
+[aria-orientation="horizontal"],
 .flex-row {
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
+}
+
+[aria-orientation="vertical"],
+.flex-column {
+  display: flex;
+  flex-flow: column nowrap;
   align-items: center;
 }
 
@@ -282,4 +290,18 @@ menu.sticky {
 }
 .icon.scale-up-2x::before {
   background-size: 70%;
+}
+
+
+/* Breadcrumb */
+/* https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/ */
+
+nav.breadcrumb li + li::before {
+  font-family: var(--font-family-monospace);
+  display: inline-block;
+  margin: 0 0.25em;
+  content: ">";
+}
+
+nav.breadcrumb [aria-current="page"] {
 }
