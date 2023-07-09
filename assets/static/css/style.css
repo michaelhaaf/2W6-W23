@@ -51,10 +51,21 @@
   || Reset
 \* ------------------------------------------ */
 
+/* Baseline for default links: https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/ */
+a {
+  text-decoration: none;
+}
+a:hover {
+  /* Relatively sized thickness and offset */
+  text-decoration-line: underline;
+  text-decoration-thickness: max(0.08em, 1px);
+  text-underline-offset: 0.15em;
+}
+
+
 /* TODO: use roles for selection */
 nav a,
 nav a:visited {
-  text-decoration: none;
   color: inherit;
 }
 nav ul,

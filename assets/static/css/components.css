@@ -308,9 +308,11 @@ nav.breadcrumb li + li::before {
   margin: 0 0.25em 0 0.5em;
   content: ">";
 }
+nav.breadcrumb {
+  font-style: italic;
+}
 nav.breadcrumb [aria-current="page"] {
-  font-size: 0.8em;
-  font-weight: 700;
+  font-style: normal;
 }
 
 .search {

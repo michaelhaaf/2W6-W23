@@ -127,14 +127,6 @@ q {
 /* } */
 /**/
 
-/* Baseline for default links: https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/ */
-a:not([class]) {
-  /* Relatively sized thickness and offset */
-  text-decoration-thickness: max(0.08em, 1px);
-  text-underline-offset: 0.15em;
-}
-
-
 button {
   border: 1px solid transparent;
 }
