@@ -2,6 +2,13 @@
 <html lang="$lang$" xml:lang="$lang$" xmlns="http://www.w3.org/1999/xhtml">
   <head>
     ${site-meta.tmpl()}
+    <link href="/_pagefind/pagefind-us.css" rel="stylesheet">
+    <script src="/_pagefind/pagefind-ui.js" type="text/javascript"></script>
+    <script defer>
+      window.addEventListener("DOMContentLoaded", (event) => {
+        new PagefindUI({ element: "#search" });
+      });
+    </script>
   </head>
   <body class="body"> 
     <header id="site-banner" class="base site-banner flow-container">
@@ -17,6 +24,7 @@
           ${site-breadcrumb.tmpl()}
           ${site-search.tmpl()}
         </div>
+        <div id="search"></div>
       </header>
       <article class="page-article base">
         <header class="level1">

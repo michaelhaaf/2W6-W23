@@ -92,7 +92,7 @@ h6 {
   text-wrap: balance;
 }
 
-h1.banner-title {
+.banner-title {
   font-size: var(--font-size-xxl);
   line-height: var(--line-height-xxl);
   padding-top: calc(var(--padding-xxl) / 3);

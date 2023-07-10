@@ -27,6 +27,7 @@
     "webpack-merge": "latest"
   },
   "dependencies": {
-    "flexsearch": "^0.7.31"
+    "flexsearch": "^0.7.31",
+    "pagefind": "^0.12.0"
   }
 }
