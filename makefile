@@ -24,9 +24,9 @@ METADATA      := $(filter assets/pandoc/metadata/%, $(PANDOC))
 
 ## MAKE RULES
 
-.PHONY: all clean clean-parcel watch trigger metadata debug metadata docs docs_static docs_html
+.PHONY: all clean clean-parcel watch trigger metadata debug metadata docs docs_static docs_html search_index
 
-all: $(CONTENT_ZIPS) $(DOCS) $(DOCS_STATIC) $(DOCS_HTML) 
+all: $(CONTENT_ZIPS) $(DOCS) $(DOCS_STATIC) $(DOCS_HTML) search_index
 
 clean:
 	rm -rf docs/*
@@ -87,3 +87,6 @@ $(DOCS_HTML): docs/%.html : $$(filter content/%.md, $(CONTENT_MD)) $(PANDOC)
 	@echo "Re-building..." $< ", target..." $@
 	@pandoc $(PANDOC_OPTIONS) --metadata-file=<(echo $@ | jq -R -f ${SCRIPTS_DIR}/breadcrumbs.jq) -o $@ $<
 	@echo "Done."
+
+search_index: $(DOCS_HTML)
+	@pagefind --source docs
