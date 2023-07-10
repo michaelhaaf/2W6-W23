@@ -2,8 +2,9 @@
 title: "2W6-W23: Week 9 Lecture Notes"
 date: 2023-03-27
 toc-title: "Lecture navigation"
-prev-page: "../lectures/week07.html"
-next-page: "../lectures/week10.html"
+prev-page: "/lectures/week-07"
+next-page: "/lectures/week-10"
+lang: "en"
 abstract-title: "Cascading StyleSheets: What is the 'Cascade' of CSS?"
 abstract: |
   We have yet to learn in concrete detail a very important mechanic of CSS: when two styles contradict, how does the browser determine which style to apply?

@@ -2,8 +2,9 @@
 title: "2W6-W23: Week 10 Lecture Notes"
 date: 2023-03-31
 toc-title: "Lecture navigation"
-prev-page: "../lectures/week09.html"
-next-page: "../lectures/week11.html"
+prev-page: "/lectures/week-09"
+next-page: "/lectures/week-11"
+lang: "en"
 abstract-title: "Intermediate CSS: Mastering Layouts with CSS Grid"
 abstract: |
   We are now reaching a point in our CSS skills that we can create almost any layout or structure that we can envision.

@@ -1,8 +1,8 @@
 ---
 title: "2W6-W23: Calendar"
 toc-title: "Page navigation"
-prev-page: "../pages/course-outline.html"
-next-page: "../lectures/week01.html"
+prev-page: "/about/course-outline"
+next-page: "/about/this-site"
 lang: "en"
 abstract-title: "Where to find course material"
 abstract: |

@@ -4,6 +4,7 @@ date: 2023-02-07
 toc-title: "Lecture navigation"
 prev-page: "/lectures/week-01"
 next-page: "/lectures/week-03"
+lang: "en"
 abstract-title: "HTML Fundamentals"
 abstract: |
   Lesson summary.

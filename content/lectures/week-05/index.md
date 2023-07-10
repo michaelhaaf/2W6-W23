@@ -4,6 +4,7 @@ date: 2023-02-19
 toc-title: "Lecture navigation"
 prev-page: "/lectures/week-04"
 next-page: "/lectures/week-06"
+lang: "en"
 abstract-title: "Intro to Layouts and Floats in CSS"
 abstract: |
   Last week, we learned a large set of CSS properties for applying styles to text, image, and other content elements.

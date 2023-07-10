@@ -1,8 +1,8 @@
 ---
 title: "2W6-W23: Course Outline"
 toc-title: "Page navigation"
-prev-page: "../pages/home.html"
-next-page: "../pages/calendar.html"
+prev-page: "/about/this-course"
+next-page: "/about/calendar"
 lang: "en"
 abstract-title: "User Interfaces -- Computer Science Technology 420.B0"
 abstract: |

@@ -1,7 +1,8 @@
 ---
 title: "2W6-W23: Home"
 toc-title: "Page navigation"
-next-page: "../pages/course-outline.html"
+next-page: "/about/course-outline"
+prev-page: "/about/this-site"
 lang: "en"
 abstract-title: "Introduction to Web Development"
 abstract: |

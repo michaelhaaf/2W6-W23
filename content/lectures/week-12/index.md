@@ -1,8 +1,9 @@
 ---
 title: "2W6-W23: Week 12 Lecture Notes"
 toc-title: "Lecture navigation"
-prev-page: "../lectures/week11.html"
-next-page: "../lectures/week13.html"
+prev-page: "/lectures/week-11"
+next-page: "/lectures/week-13"
+lang: "en"
 abstract-title: "Intermediate User Interfaces: HTML Forms"
 abstract: |
   We will learn how to create and style HTML Forms, which are ubiquitous on the web for entering data into a website.

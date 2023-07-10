@@ -1,8 +1,9 @@
 ---
 title: "2W6-W23: Week 13 Lecture Notes"
 toc-title: "Lecture navigation"
-prev-page: "../lectures/week12.html"
-next-page: "../lectures/week14.html"
+prev-page: "/lectures/week-12"
+next-page: "/lectures/week-14"
+lang: "en"
 abstract-title: "Introduction to CMS"
 abstract: |
     So far we have been learning about the mechanics of manually creating websites and website designs.

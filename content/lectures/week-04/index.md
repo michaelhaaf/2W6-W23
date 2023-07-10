@@ -2,8 +2,9 @@
 title: "2W6-W23: Week 4 Lecture Notes"
 date: 2023-03-26
 toc-title: "Lecture navigation"
-prev-page: "../lectures/week03.html"
-next-page: "../lectures/week05.html"
+prev-page: "/lectures/week-03"
+next-page: "/lectures/week-05"
+lang: "en"
 abstract-title: "Styling HTML content with CSS"
 abstract: |
   Last week, we learned the fundamentals of CSS; in particular: how CSS is inserted into HTML files, how CSS is used to select HTML elements, and how to inspect CSS properties and make changes using Browser Development tools. 

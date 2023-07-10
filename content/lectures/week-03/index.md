@@ -2,8 +2,9 @@
 title: '2W6-W23: Week 3 Lecture Notes'
 date: 2023-02-07
 toc-title: "Lecture navigation"
-prev-page: "../lectures/week02.html"
-next-page: "../lectures/week04.html"
+prev-page: "/lectures/week-02"
+next-page: "/lectures/week-04"
+lang: "en"
 abstract-title: "CSS Fundamentals"
 abstract: |
   Lesson summary.

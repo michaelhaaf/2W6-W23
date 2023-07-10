@@ -4,6 +4,7 @@ date: 2023-02-07
 toc-title: "Lecture navigation"
 next-page: "/lectures/week-02"
 prev-page: "/about/calendar"
+lang: "en"
 abstract-title: "Introduction to User Interface Development"
 abstract: |
   Lesson summary.
