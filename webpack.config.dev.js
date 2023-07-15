@@ -8,7 +8,7 @@ module.exports = merge(commonConfig, {
   devServer: {
     static: path.resolve(__dirname, "docs"),
     compress: true,
-    port: 8080,
+    port: 8181,
     open: true,
   },
 });
