@@ -62,7 +62,6 @@ a:hover {
   text-underline-offset: 0.15em;
 }
 
-
 /* TODO: use roles for selection */
 nav a,
 nav a:visited {
@@ -79,9 +78,7 @@ nav ol {
 
 :root {
   --max-width: 1980px;
-}
 
-:root {
   --border-size: 1px;
   --border-muted: var(--border-size) solid hsl(var(--hsl-muted) / 0.5);
   --border-default: var(--border-size) solid var(--muted);
@@ -94,10 +91,13 @@ nav ol {
   --outline-style: solid;
   --outline-color: currentColor;
 }
-[role=menuitem] {
+[role="menuitem"] {
   --outline-offset: min(-2px, -0.08em);
 }
 :is(a, button, input, textarea, summary):focus {
+  outline: none;
+}
+:is(a, button, input, textarea, summary):focus-visible {
   outline: var(--outline-size) var(--outline-style) var(--outline-color);
   outline-offset: var(--outline-offset, var(--outline-size));
 }
@@ -177,6 +177,11 @@ mark {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+.highlight {
+  background-color: var(--surface);
+  color: var(--accent-red);
 }
 
 /* ------------------------------------------ *\

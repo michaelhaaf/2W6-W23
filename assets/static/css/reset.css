@@ -114,19 +114,6 @@ q {
   quotes: none;
 }
 
-/* 
-   This style will force hyperlinks to take the color of the body text. Useful when you do not have a theme color for hyperlinks definined in your requirements.
-   This style can be overwritten by more specific styles for different sections of your website later in this CSS file.
-*/
-
-/* a { */
-/*   color: inherit; */
-/* } */
-/* a:hover { */
-/*   filter: brightness(1.5); */
-/* } */
-/**/
-
 button {
   border: 1px solid transparent;
 }
