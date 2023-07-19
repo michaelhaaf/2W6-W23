@@ -1,6 +1,6 @@
 // https://garden.bradwoods.io/notes/javascript/web-api/intersection-observer/table-of-contents
 
-const observerController = (() => {
+const sectionObserver = (() => {
   // TODO: these should be a dependency, not a responsibility, of this module
   // (i.e. specify WHAT to observe in the index.js not in the module)
   const links = document.querySelectorAll(".toc a");
@@ -49,4 +49,4 @@ const observerController = (() => {
   return { init };
 })();
 
-export { observerController };
+export { sectionObserver };

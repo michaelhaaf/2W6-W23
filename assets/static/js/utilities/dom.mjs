@@ -1,4 +1,4 @@
-const domController = () => {
+const dom = (() => {
   const hide = (elem) => {
     if (!elem.classList.contains("visually-hidden")) {
       elem.classList.add("visually-hidden");
@@ -20,12 +20,12 @@ const domController = () => {
   };
 
   const toggleAttribute = (elem, attribute) => {
-    let currentValue = elem.getAttribute(attribute);
-    let newValue = currentValue === "true" ? "false" : "true";
+    const currentValue = elem.getAttribute(attribute);
+    const newValue = currentValue === "true" ? "false" : "true";
     elem.setAttribute(attribute, newValue);
   };
 
   return { hide, show, toggleVisible, toggleClass, toggleAttribute };
-};
+})();
 
-export { domController };
+export { dom };
