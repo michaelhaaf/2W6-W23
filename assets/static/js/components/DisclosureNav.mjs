@@ -1,4 +1,4 @@
-import { dom } from "../utilities/index.js";
+import { DOM } from "../utilities/index.js";
 
 /*
  *   This content is adapted from the www.w3.org Disclosure Navigation pattern.
@@ -9,13 +9,11 @@ import { dom } from "../utilities/index.js";
  *   Supplemental JS for the disclosure menu keyboard behavior
  */
 
-const disclosureNav = (baseNode) => {
-  let _openIndex = null;
-  let _useArrowKeys = true;
-  const _baseNode = baseNode;
-  const _controlledNodes = [];
-  const _topLevelNodes = [
-    ..._baseNode.querySelectorAll(
+const DisclosureNav = (baseNode) => {
+  let openIndex = null;
+  const controlledNodes = [];
+  const topLevelNodes = [
+    ...baseNode.querySelectorAll(
       "a[role=menuitem], button[aria-controls][aria-expanded]",
     ),
   ];
@@ -50,98 +48,82 @@ const disclosureNav = (baseNode) => {
   };
 
   const onBlur = (event) => {
-    let menuContainsFocus = _baseNode.contains(event.relatedTarget);
-    if (!menuContainsFocus && _openIndex !== null) {
-      toggleExpand(_openIndex, false);
+    let menuContainsFocus = baseNode.contains(event.relatedTarget);
+    if (!menuContainsFocus && openIndex !== null) {
+      toggleExpand(openIndex, false);
     }
   };
 
   const onButtonClick = (event) => {
     let button = event.target;
-    let buttonIndex = _topLevelNodes.indexOf(button);
+    let buttonIndex = topLevelNodes.indexOf(button);
     let buttonExpanded = button.getAttribute("aria-expanded") === "true";
     toggleExpand(buttonIndex, !buttonExpanded);
   };
 
   const onButtonKeyDown = (event) => {
-    let targetButtonIndex = _topLevelNodes.indexOf(document.activeElement);
+    let targetButtonIndex = topLevelNodes.indexOf(document.activeElement);
     if (event.key === "Escape") {
-      toggleExpand(_openIndex, false);
-    } else if (
-      _useArrowKeys &&
-      _openIndex === targetButtonIndex &&
-      event.key === "ArrowDown"
-    ) {
+      toggleExpand(openIndex, false);
+    } else if (openIndex === targetButtonIndex && event.key === "ArrowDown") {
       event.preventDefault();
-      _controlledNodes[_openIndex].querySelector("a").focus();
-    } else if (_useArrowKeys) {
-      controlFocusByKey(event, _topLevelNodes, targetButtonIndex);
+      controlledNodes[openIndex].querySelector("a").focus();
+    } else {
+      controlFocusByKey(event, topLevelNodes, targetButtonIndex);
     }
   };
 
   const onLinkKeyDown = (event) => {
-    let targetLinkIndex = _topLevelNodes.indexOf(document.activeElement);
-    if (_useArrowKeys) {
-      controlFocusByKey(event, _topLevelNodes, targetLinkIndex);
-    }
+    let targetLinkIndex = topLevelNodes.indexOf(document.activeElement);
+    controlFocusByKey(event, topLevelNodes, targetLinkIndex);
   };
 
   const onMenuKeyDown = (event) => {
-    if (_openIndex === null) {
+    if (openIndex === null) {
       return;
     }
     let menuLinks = Array.prototype.slice.call(
-      _controlledNodes[_openIndex].querySelectorAll("a"),
+      controlledNodes[openIndex].querySelectorAll("a"),
     );
     let currentIndex = menuLinks.indexOf(document.activeElement);
     // close on escape
     if (event.key === "Escape") {
-      _topLevelNodes[_openIndex].focus();
-      toggleExpand(_openIndex, false);
+      topLevelNodes[openIndex].focus();
+      toggleExpand(openIndex, false);
     }
     // handle arrow key navigation within menu links, if set
-    else if (_useArrowKeys) {
+    else {
       controlFocusByKey(event, menuLinks, currentIndex);
     }
   };
 
   const toggleExpand = (index, expanded) => {
-    // close open menu, if applicable
-    if (_openIndex !== index) {
-      toggleExpand(_openIndex, false);
+    if (openIndex !== index) {
+      toggleExpand(openIndex, false);
     }
-    // handle menu at called index
-    if (_topLevelNodes[index]) {
-      _openIndex = expanded ? index : null;
-      _topLevelNodes[index].setAttribute("aria-expanded", expanded);
-      toggleMenu(_controlledNodes[index], expanded);
+    if (topLevelNodes[index]) {
+      openIndex = expanded ? index : null;
+      topLevelNodes[index].setAttribute("aria-expanded", expanded);
+      toggleMenu(controlledNodes[index], expanded);
     }
   };
 
   const toggleMenu = (domNode, show) => {
-    show ? dom.show(domNode) : dom.hide(domNode);
+    show ? DOM.show(domNode) : DOM.hide(domNode);
   };
 
-  const updateKeyControls = (useArrowKeys) => {
-    _useArrowKeys = useArrowKeys;
-  };
-
-  const _bindEvents = () => {
-    _baseNode.addEventListener("focusout", onBlur.bind(this));
-    _topLevelNodes.forEach((node) => {
-      // handle button + menu
+  const bindEvents = () => {
+    baseNode.addEventListener("focusout", onBlur.bind(this));
+    topLevelNodes.forEach((node) => {
       if (
         node.tagName.toLowerCase() === "button" &&
         node.hasAttribute("aria-controls")
       ) {
         const menu = node.parentNode.querySelector("ul");
         if (menu) {
-          // save ref controlled menu
-          _controlledNodes.push(menu);
-          // collapse menus
+          controlledNodes.push(menu);
           node.setAttribute("aria-expanded", "false");
           toggleMenu(menu, false);
-          // attach event listeners
           menu.addEventListener("keydown", onMenuKeyDown.bind(this));
           node.addEventListener("click", onButtonClick.bind(this));
           node.addEventListener("keydown", onButtonKeyDown.bind(this));
@@ -149,15 +131,13 @@ const disclosureNav = (baseNode) => {
       }
       // handle links
       else {
-        _controlledNodes.push(null);
+        controlledNodes.push(null);
         node.addEventListener("keydown", onLinkKeyDown.bind(this));
       }
     });
   };
 
-  _bindEvents();
-
-  return { updateKeyControls };
+  bindEvents();
 };
 
-export { disclosureNav };
+export default DisclosureNav;

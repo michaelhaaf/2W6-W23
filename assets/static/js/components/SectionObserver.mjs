@@ -1,10 +1,7 @@
 // https://garden.bradwoods.io/notes/javascript/web-api/intersection-observer/table-of-contents
-
-const sectionObserver = (() => {
-  // TODO: these should be a dependency, not a responsibility, of this module
-  // (i.e. specify WHAT to observe in the index.js not in the module)
-  const links = document.querySelectorAll(".toc a");
-  const sections = document.querySelectorAll("section");
+const SectionObserver = (sectionNode, tocNode) => {
+  const links = tocNode.querySelectorAll("a");
+  const sections = sectionNode.querySelectorAll("section");
   const options = {
     root: null,
     rootMargin: "-50% 0px",
@@ -47,6 +44,6 @@ const sectionObserver = (() => {
   };
 
   return { init };
-})();
+};
 
-export { sectionObserver };
+export default SectionObserver;

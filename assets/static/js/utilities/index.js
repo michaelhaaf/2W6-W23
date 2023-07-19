@@ -1,2 +1,2 @@
-export { storage } from "./storage.mjs";
-export { dom } from "./dom.mjs";
+export { default as DOM } from "./DOM.mjs";
+export { default as Storage } from "./Storage.mjs";

@@ -1,4 +1,4 @@
-export { accordion } from "./accordion.mjs";
-export { disclosureNav } from "./disclosureNav.mjs";
-export { sectionObserver } from "./sectionObserver.mjs";
-export { themeController } from "./themeController.mjs";
+export { default as Accordion } from "./Accordion.mjs";
+export { default as DisclosureNav } from "./DisclosureNav.mjs";
+export { default as SectionObserver } from "./SectionObserver.mjs";
+export { default as ThemeController } from "./ThemeController.mjs";
