@@ -1,4 +1,4 @@
-/* This is an aggressive univeral reset, inspired by the Meyer Reset 
+/* This is an aggressive universal reset, inspired by the Meyer Reset 
    https://meyerweb.com/eric/tools/css/reset/ 
    This set of rules sets sane defaults for font behavior. It also resets all browser default box model properties -- a consequence is that you must add padding/border/margin to every element. I think it's nice, because it forces you to be conscious of the style of each element you use. 
 */
@@ -24,13 +24,13 @@
   box-sizing: inherit;
 }
 
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
 html {
   box-sizing: border-box;
   min-height: 100%;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
 }
 
 /* From the Meyer Reset: 
@@ -67,13 +67,13 @@ video {
 }
 
 /* 
-   To make navigation bars, we are often reseting the default list style (so list items do not have dots or numbering)
+   To make navigation bars, we are often resetting the default list style (so list items do not have dots or numbering)
    However, in body/article/section text, it is often useful to keep the default list-style (you'll often just end up re-introducing the default by CSS)
    Rather than reset ALL list styles, we can keep the nice browser defaults and only reset lists that we mark with the "role" attribute in our markup (e.g. nav lists)
    Inspiration: https://andy-bell.co.uk/a-modern-css-reset/ 
 */
-ul[role="navigation"],
-ol[role="navigation"] {
+[role="navigation"] ol ,
+[role="navigation"] ul {
   list-style: none;
 }
 
