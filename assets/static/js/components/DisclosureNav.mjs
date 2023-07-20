@@ -14,7 +14,7 @@ const DisclosureNav = (baseNode) => {
   const controlledNodes = [];
   const topLevelNodes = [
     ...baseNode.querySelectorAll(
-      "a[role=menuitem], button[aria-controls][aria-expanded]",
+      "button[aria-controls][aria-expanded]",
     ),
   ];
 
