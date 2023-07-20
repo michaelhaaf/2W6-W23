@@ -10,6 +10,7 @@
   line-height: var(--line-height-m);
   font-weight: normal;
   padding-left: 0em;
+  list-style: none;
 }
 .toc li ul,
 .toc li ol {
@@ -29,4 +30,8 @@
 }
 .toc li > a.semi-active:not(:only-child)::after {
   content: " --";
+}
+.toc a,
+.toc a:visited {
+  color: inherit;
 }

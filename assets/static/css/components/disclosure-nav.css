@@ -20,3 +20,18 @@
 .nav-menu [role="menuitem"] {
   width: 100%;
 }
+.disclosure-nav a,
+.disclosure-nav a:visited {
+  color: inherit;
+}
+.disclosure-nav ul,
+.disclosure-nav ol {
+  list-style: none;
+}
+.disclosure-nav [role="menuitem"]:hover {
+  background-color: hsl(var(--hsl-text) / 0.9);
+  color: var(--base);
+}
+.disclosure-nav [role="menuitem"].icon:hover::before {
+  filter: invert(100%);
+}

@@ -56,20 +56,17 @@ a {
   text-decoration: none;
 }
 a:hover {
-  /* Relatively sized thickness and offset */
   text-decoration-line: underline;
   text-decoration-thickness: max(0.08em, 1px);
   text-underline-offset: 0.15em;
 }
 
-/* TODO: use roles for selection */
-nav a,
-nav a:visited {
-  color: inherit;
-}
-nav ul,
-nav ol {
-  list-style: none;
+*,
+*::before,
+*::after {
+  -webkit-transition-duration: 0.33s;
+  -moz-transition-duration: 0.33s;
+  transition-duration: 0.33s;
 }
 
 /* ------------------------------------------ *\

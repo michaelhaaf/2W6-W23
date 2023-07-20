@@ -5,12 +5,12 @@
 
 :root,
 :root[data-theme="light"] {
-  --banner-bg-url: url("../images/dark-theme/guggenheim-circles.jpg");
+  --banner-bg-url: url("/static/images/dark-theme/guggenheim-circles.jpg");
   --banner-bg-size: cover;
   --banner-bg-rotation: 0deg;
   --banner-bg-position: 0% +7.5%;
   --banner-bg-filter: invert(100%) hue-rotate(90deg);
-  --theme-toggle-icon: url("../images/light-theme/theme-toggle-icon.svg");
+  --theme-toggle-icon: url("/static/images/light-theme/theme-toggle-icon.svg");
 
   --hue-fg: 255deg;
   --hue-bg: 30deg;
@@ -66,10 +66,10 @@
 :root[data-theme="dark"] {
   --banner-bg-size: cover;
   --banner-bg-rotation: 0deg;
-  --banner-bg-url: url("../images/dark-theme/guggenheim-circles.jpg");
+  --banner-bg-url: url("/static/images/dark-theme/guggenheim-circles.jpg");
   --banner-bg-position: 0 +62.5%;
   --banner-bg-filter: brightness(50%);
-  --theme-toggle-icon: url("../images/dark-theme/theme-toggle-icon.svg");
+  --theme-toggle-icon: url("/static/images/dark-theme/theme-toggle-icon.svg");
 
   --hue-fg: 245deg;
   --hue-bg: 245deg;
