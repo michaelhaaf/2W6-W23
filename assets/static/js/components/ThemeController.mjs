@@ -23,7 +23,6 @@ const ThemeController = () => {
   };
 
   const getStoredTheme = () => {
-    console.log(localStorage);
     return Storage.getItem(STORAGE_KEY);
   };
 
@@ -38,13 +37,9 @@ const ThemeController = () => {
   const init = () => {
     const defaultTheme = getDefaultTheme();
     const storedTheme = getStoredTheme();
-    console.log("default: " + defaultTheme);
-    console.log("stored: " + storedTheme);
     if (storedTheme) {
-      console.log(`${storedTheme} stored in local storage, applying.`);
       applyTheme(storedTheme);
     } else {
-      console.log(`No stored theme, applying default.`); 
       applyTheme(defaultTheme);
       setStoredTheme(defaultTheme);
     }

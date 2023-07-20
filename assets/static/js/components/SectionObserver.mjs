@@ -1,7 +1,7 @@
 // https://garden.bradwoods.io/notes/javascript/web-api/intersection-observer/table-of-contents
 const SectionObserver = (sectionNode, tocNode) => {
   const links = tocNode.querySelectorAll("a");
-  const sections = sectionNode.querySelectorAll("section");
+  const sections = sectionNode.querySelectorAll("section[data-number]");
   const options = {
     root: null,
     rootMargin: "-50% 0px",
