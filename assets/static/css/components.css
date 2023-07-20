@@ -1,21 +1,17 @@
 /* ------------------------------------------ *\
-  || Table of Contents
+  || Imports
 \* ------------------------------------------ */
 
-/*
-* || Generic
-*   - flex, grid
-*
-* || Specific
-*   - banner-image
-*   - 
-*
-* /
-
-
+@import "components/article-grid.css";
+@import "components/breadcrumb.css";
+@import "components/accordion.css";
+@import "components/disclosure-nav.css";
+@import "components/icon.css";
+@import "components/toc.css";
+@import "components/site-banner.css";
 
 /* ------------------------------------------ *\
-  || Generic
+  || Aria
 \* ------------------------------------------ */
 
 [aria-orientation="horizontal"],
@@ -32,186 +28,9 @@
   align-items: center;
 }
 
-/* ------------------------------------------ *\
-  || Specific
-\* ------------------------------------------ */
-
-/* site banner */
-
-.site-banner {
-  position: relative;
-}
-.site-banner figure {
-  padding-top: 11rem;
-}
-.site-banner figure::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-image: var(--banner-bg-url);
-  background-size: var(--banner-bg-size);
-  background-position: var(--banner-bg-position);
-  rotate: var(--banner-bg-rotation);
-  filter: var(--banner-bg-filter);
-}
-.site-banner footer {
-  text-align: right;
-  padding: 1rem;
-}
-
-.banner-top-bar,
-.banner-bottom-bar {
-  display: flex;
-  align-items: center;
-}
-.banner-bottom-bar {
-  justify-content: space-between;
-  padding: 0 2rem;
-}
-.banner-top-bar small {
-  display: block;
-  padding-bottom: 0.5rem;
-}
-
-/* Accordion/collapsible buttons + lists */
-
-.accordion {
-  outline: none;
-  border: none;
-  cursor: pointer;
-  text-align: left;
-  width: 100%;
-}
-.accordion[aria-expanded="false"]::after {
-  text-align: right;
-  float: right;
-  content: " (+)";
-}
-.accordion[aria-expanded="true"]::after {
-  text-align: right;
-  float: right;
-  content: "  --";
-}
-.accordion[aria-expanded="false"] + ul {
-  max-height: 0;
-  overflow: hidden;
-}
-.accordion[aria-expanded="true"] + ul {
-  max-height: none;
-}
-
-/* Article grid */
-
-.level1 {
-  display: grid;
-  row-gap: 2rem;
-  column-gap: 1rem;
-  margin-bottom: 2rem;
-  grid-auto-rows: min-content;
-  grid-template-columns: [content] 2fr [margin] 1fr;
-}
-.level1 * {
-  grid-column: content;
-}
-.level1 .margin {
-  grid-column: margin;
-  justify-self: end;
-}
-/* NOTE: makes navigation to top of section impossible */
-.level1 :is(section, header, footer, aside, .abstract) {
-  display: contents;
-}
-
-/* Sticky overlay for article grid */
-
-.overlay-grid {
-  row-gap: 0;
-  grid-auto-rows: minmax(3rem, min-content);
-  pointer-events: none;
-  position: absolute;
-  inset: 1rem 0;
-  padding: 1rem 2rem;
-}
-
-/* Sticky */
-.sticky-container {
-  position: relative;
-}
-
-/* https://stackoverflow.com/a/38994837 */
-.sticky {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.sticky::-webkit-scrollbar {
-  display: none;
-}
-.sticky {
-  overflow: auto;
-  position: sticky;
-  align-self: start;
-  max-height: 100vh;
-}
-.page-banner.sticky {
-  top: 0;
-  pointer-events: auto;
-  overflow: visible;
-}
-menu.sticky {
-  top: 10rem;
-  pointer-events: auto;
-}
-
-/* Table of Contents */
-
-.toc-title {
-  text-transform: uppercase;
-  font-size: var(--font-size-m);
-  line-height: var(--line-height-m);
-  font-weight: var(--font-weight-subheaders);
-}
-.toc ul,
-.toc ol {
-  font-size: var(--font-size-m);
-  line-height: var(--line-height-m);
-  font-weight: normal;
-  padding-left: 0em;
-}
-.toc li ul,
-.toc li ol {
-  font-size: var(--font-size-s);
-  line-height: var(--line-height-s);
-}
-.toc li li ul,
-.toc li li ol {
-  font-size: var(--font-size-xs);
-  line-height: var(--line-height-xs);
-}
-.toc-section-number {
-  color: var(--muted);
-}
-.toc li > a:not(:only-child)::after {
-  content: "(+)";
-}
-.toc li > a.semi-active:not(:only-child)::after {
-  content: " --";
-}
-.toc li > ul {
-  display: none;
-}
-.toc a.expanded,
-.toc a.semi-active + ul {
-  display: initial;
-}
-
-/* Tooltips */
-
 [role="tooltip"] {
   display: none;
 }
-
-/* Navigation Menus */
 
 [aria-expanded="false"] + ul {
   display: none;
@@ -238,83 +57,4 @@ menu.sticky {
 }
 [role="menuitem"].icon:hover::before {
   filter: invert(100%);
-}
-
-.disclosure-nav [role="menuitem"] {
-  display: inline-block;
-  padding: 1rem 1rem;
-}
-.disclosure-nav button {
-  border-right: var(--border-muted);
-}
-.disclosure-nav [role="menu"] {
-  position: relative;
-}
-
-.nav-menubar[role="menubar"] {
-  position: relative;
-}
-.nav-menu[role="menu"]{
-  position: absolute;
-  top: 100%;
-  left: 0%;
-  width: 100%;
-}
-.nav-menu [role="menuitem"] {
-  width: 100%;
-}
-
-.search .icon,
-.breadcrumb .icon,
-.page-menu [role="menuitem"] {
-  display: block;
-  height: 2rem;
-  width: 2rem;
-}
-
-.icon {
-  position: relative;
-}
-.icon.large {
-  height: 4rem;
-  width: 4rem;
-}
-.icon::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  filter: var(--svg-filter-base);
-  background-image: var(--icon);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: transparent;
-  background-size: 50%;
-}
-.icon.scale-up::before {
-  background-size: 60%;
-}
-.icon.scale-up-2x::before {
-  background-size: 70%;
-}
-
-
-/* Breadcrumb */
-/* https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/ */
-
-nav.breadcrumb li + li::before {
-  font-family: var(--font-family-monospace);
-  font-size: 0.8em;
-  display: inline-block;
-  margin: 0 0.25em 0 0.5em;
-  content: ">";
-}
-nav.breadcrumb {
-  font-style: italic;
-}
-nav.breadcrumb [aria-current="page"] {
-  font-style: normal;
-}
-
-.search {
-  background-color: var(--base);
 }

@@ -184,6 +184,34 @@ mark {
   color: var(--accent-red);
 }
 
+/* Sticky */
+.sticky-container {
+  position: relative;
+}
+/* https://stackoverflow.com/a/38994837 */
+.sticky {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.sticky::-webkit-scrollbar {
+  display: none;
+}
+.sticky {
+  overflow: auto;
+  position: sticky;
+  align-self: start;
+  max-height: 100vh;
+}
+.page-banner.sticky {
+  top: 0;
+  pointer-events: auto;
+  overflow: visible;
+}
+menu.sticky {
+  top: 10rem;
+  pointer-events: auto;
+}
+
 /* ------------------------------------------ *\
   || Objects
 \* ------------------------------------------ */
@@ -218,6 +246,21 @@ mark {
   font-size: var(--font-size-xs);
   line-height: var(--line-height-xs);
 }
+.banner-top-bar,
+.banner-bottom-bar {
+  display: flex;
+  align-items: center;
+}
+.banner-bottom-bar {
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+.banner-top-bar small {
+  display: block;
+  padding-bottom: 0.5rem;
+}
+
+
 
 .body {
   background-color: var(--base);

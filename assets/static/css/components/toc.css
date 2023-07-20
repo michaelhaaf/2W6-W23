@@ -1,0 +1,32 @@
+.toc-title {
+  text-transform: uppercase;
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-m);
+  font-weight: var(--font-weight-subheaders);
+}
+.toc ul,
+.toc ol {
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-m);
+  font-weight: normal;
+  padding-left: 0em;
+}
+.toc li ul,
+.toc li ol {
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-s);
+}
+.toc li li ul,
+.toc li li ol {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-xs);
+}
+.toc-section-number {
+  color: var(--muted);
+}
+.toc li > a:not(:only-child)::after {
+  content: "(+)";
+}
+.toc li > a.semi-active:not(:only-child)::after {
+  content: " --";
+}

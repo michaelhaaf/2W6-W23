@@ -1,0 +1,24 @@
+.accordion {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+.accordion[aria-expanded="false"]::after {
+  text-align: right;
+  float: right;
+  content: " (+)";
+}
+.accordion[aria-expanded="true"]::after {
+  text-align: right;
+  float: right;
+  content: "  --";
+}
+.accordion[aria-expanded="false"] + ul {
+  max-height: 0;
+  overflow: hidden;
+}
+.accordion[aria-expanded="true"] + ul {
+  max-height: none;
+}

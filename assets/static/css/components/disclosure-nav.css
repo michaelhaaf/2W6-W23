@@ -1,0 +1,22 @@
+.disclosure-nav [role="menuitem"] {
+  display: inline-block;
+  padding: 1rem 1rem;
+}
+.disclosure-nav button {
+  border-right: var(--border-muted);
+}
+.disclosure-nav [role="menu"] {
+  position: relative;
+}
+.nav-menubar[role="menubar"] {
+  position: relative;
+}
+.nav-menu[role="menu"]{
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+}
+.nav-menu [role="menuitem"] {
+  width: 100%;
+}

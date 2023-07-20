@@ -1,0 +1,28 @@
+.level1 {
+  display: grid;
+  row-gap: 2rem;
+  column-gap: 1rem;
+  margin-bottom: 2rem;
+  grid-auto-rows: min-content;
+  grid-template-columns: [content] 2fr [margin] 1fr;
+}
+.level1 * {
+  grid-column: content;
+}
+.level1 .margin {
+  grid-column: margin;
+  justify-self: end;
+}
+/* NOTE: makes navigation to top of section impossible */
+.level1 :is(section, header, footer, aside, .abstract) {
+  display: contents;
+}
+
+.overlay-grid {
+  row-gap: 0;
+  grid-auto-rows: minmax(3rem, min-content);
+  pointer-events: none;
+  position: absolute;
+  inset: 1rem 0;
+  padding: 1rem 2rem;
+}

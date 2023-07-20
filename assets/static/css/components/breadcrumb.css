@@ -1,0 +1,15 @@
+/* Breadcrumb */
+/* https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/ */
+nav.breadcrumb li + li::before {
+  font-family: var(--font-family-monospace);
+  font-size: 0.8em;
+  display: inline-block;
+  margin: 0 0.5em 0 0.5em;
+  content: "/";
+}
+nav.breadcrumb {
+  font-style: italic;
+}
+nav.breadcrumb [aria-current="page"] {
+  font-style: normal;
+}

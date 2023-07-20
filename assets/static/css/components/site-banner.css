@@ -1,0 +1,21 @@
+.site-banner {
+  position: relative;
+}
+.site-banner figure {
+  padding-top: 11rem;
+}
+.site-banner figure::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: var(--banner-bg-url);
+  background-size: var(--banner-bg-size);
+  background-position: var(--banner-bg-position);
+  rotate: var(--banner-bg-rotation);
+  filter: var(--banner-bg-filter);
+}
+.site-banner footer {
+  text-align: right;
+  padding: 1rem;
+}

@@ -1,0 +1,32 @@
+.icon {
+  position: relative;
+}
+.icon.large {
+  height: 4rem;
+  width: 4rem;
+}
+.icon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  filter: var(--svg-filter-base);
+  background-image: var(--icon);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  background-size: 50%;
+}
+.icon.scale-up::before {
+  background-size: 60%;
+}
+.icon.scale-up-2x::before {
+  background-size: 70%;
+}
+
+.search .icon,
+.breadcrumb .icon,
+.page-menu [role="menuitem"] {
+  display: block;
+  height: 2rem;
+  width: 2rem;
+}
